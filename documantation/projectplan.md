@@ -15,7 +15,7 @@ Niemand die deelneemt in het RoadIt project heeft een duidelijk overzicht van de
 ### Doel van het project
 
 Men kan een werf selecteren waarbij de datasets – of een selectie ervan – worden gearchiveerd en gerapporteerd (Figuur 1). Hiervoor wordt een app ontwikkeld die toelaat een rapport te genereren met resultaten (detail of generalistisch) van een bepaalde werf per toegangsniveau tot het archiveringssysteem. Op basis van dit rapport kunnen de verwerkte hoeveelheden gecontroleerd worden om in een volgende stap over te gaan tot de betaling van de uitgevoerde werken.
-![Figuur 1](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig1.png)
+![Figuur 1](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig1.PNG)
 
 ### Methodologie
 
@@ -51,10 +51,10 @@ De actoren zullen de verzamelde gegevens van verscheidene bedrijven en fases in 
 - De user kan ???
 
 ## Mockups
-![Figuur 2](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig2.png)
-![Figuur 3](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig3.png)
-![Figuur 4](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig4.png)
-![Figuur 5](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig5.png)
+![Figuur 2](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig2.PNG)
+![Figuur 3](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig3.PNG)
+![Figuur 4](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig4.PNG)
+![Figuur 5](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig5.PNG)
 
 ## Links
 
