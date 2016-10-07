@@ -1,6 +1,5 @@
-# Projectplan
-
-RoadIt: werfgegevens
+# Projectplan RoadIt
+*Robbroeckx Samme, Pauchet Jelle en Boen Matthias*
 
 ----
 
@@ -11,13 +10,14 @@ RoadIt: werfgegevens
 ## Projectomschrijving
 ### Probleemstelling
 
-Er werken verscheidene partijen mee op een stuk asfalt te leggen. Een duidelijke en snelle communicatie tussen verschillende bedrijven is echter niet makkelijk. Dat maakt dat elke partij niet steeds volledig op de hoogte is van de stand van zaken. Elk bedrijf houd echter op zijn eigen manier data bij van hun deel van het proces. De data is achteraf ook niet makkelijk noch centraal bereikbaar. Daardoor kunnen de onderzoekers van UA geen globale trends ontdekken die kunnen leiden tot een betere wegeninfrastructuur.
+Er werken verscheidene partijen mee bij het leggen van asfalt. Een duidelijke en snelle communicatie tussen verschillende bedrijven is echter niet makkelijk. Daardoor is elke partij niet steeds volledig op de hoogte is van de stand van zaken. Elk bedrijf houd op zijn eigen manier data bij van hun deel van het proces. De data is achteraf ook niet makkelijk noch centraal bereikbaar. Daardoor kunnen de onderzoekers van UA geen globale trends ontdekken die kunnen leiden tot een betere wegeninfrastructuur.
 
 ### Doel van het project
 
 Men kan een werf selecteren waarbij de datasets – of een selectie ervan – vertaald word in een duidelijk rapport (Figuur 1). Hiervoor wordt een app ontwikkeld die toelaat een rapport te genereren met resultaten (detail of generalistisch) van een bepaalde werf per toegangsniveau tot de database.
 
-![Figuur 1](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig1.png)
+> ![Figuur 1](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig1.PNG)
+> Figuur 1
 
 ### Methodologie
 
@@ -59,36 +59,43 @@ De actoren zullen de verzamelde gegevens van verscheidene bedrijven en fases in 
  - administratieve gegevens van een asfaltbatche uit de asfaltcentrale
  - administratieve gegevens van een asfalttransport en de actuele locatie
  - alle gegevens omtrent de spreidmachine, walsen en de kwaliteitscontrole
- 
+
 #### Asfaltproducent
 - Makkelijk en overal de volgende data kunnen raadplegen
  - de benodigde hoeveelheid asfalt per dag
  - alle gegevens van de asfaltcentrale
  - alle gegevens van het asfalttransport
  - conformiteit asfaltmengsels en steekproeven van de kwaliteitscontrole
- 
+
 #### Transporteurs
-- Makkelijk en overal kunnen raadplegen van alle data omtrent het transport 
+- Makkelijk en overal kunnen raadplegen van alle data omtrent het transport
 
 #### Aannemer
-- Makkelijk en overal kunnen raadplegen van alle de data exclusief de specifieke gegevens van de asfaltcentrale 
- 
+- Makkelijk en overal kunnen raadplegen van alle de data exclusief de specifieke gegevens van de asfaltcentrale
+
 #### Copro
 - Makkelijk en overal de volgende data kunnen raadplegen
  - de benodigde hoeveelheid asfalt per dag
  - alle gegevens van de asfaltcentrale
  - logistieke gegevens van het transport
  - controleproeven van de kwaliteitscontrole
- 
+
 #### UA/OCW
 - Makkelijk en overal kunnen raadplegen alle data
 
 ## Mockups
 
-![Figuur 2](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig2.png)
-![Figuur 3](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig3.png)
-![Figuur 4](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig4.png)
-![Figuur 5](https://github.com/JellePauchet/RoadIt/tree/master/documantation/img/projectplanFig5.png)
+> ![Figuur 2](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig2.PNG)
+> Figuur 2
+
+> ![Figuur 3](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig3.PNG)
+> Figuur 3
+
+> ![Figuur 4](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig4.PNG)
+> Figuur 4
+
+> ![Figuur 5](https://raw.githubusercontent.com/JellePauchet/RoadIt/master/documantation/img/projectplanFig5.PNG)
+> Figuur 5
 
 ## Links
 
