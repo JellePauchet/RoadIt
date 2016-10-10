@@ -60,9 +60,9 @@ De actoren zullen de verzamelde gegevens van verscheidene bedrijven en fases in 
  - administratieve gegevens van een asfalttransport en de actuele locatie
  - alle gegevens omtrent de spreidmachine, walsen en de kwaliteitscontrole
 
-As principal, I want to consult administrative data of an asfaltbatch form an asfalt mix plant in an easy manner and everywhere.
-As principal, I want to consult administrative data of an asfalttransport and it's location in an easy manner and everywhere.
-As principal, I want to consult all data on finicher, compactor and the qualitycontrol in an easy manner and everywhere.
+- As principal, I want to consult administrative data of an asphaltbatch form an asfalt mix plant in an easy manner and everywhere.
+- As principal, I want to consult administrative data of an asphalttransport and its location in an easy manner and everywhere.
+- As principal, I want to consult all data on finicher, compactor and the qualitycontrol in an easy manner and everywhere.
 
 
 #### Asfaltproducent
@@ -72,10 +72,10 @@ As principal, I want to consult all data on finicher, compactor and the qualityc
  - alle gegevens van het asfalttransport
  - conformiteit asfaltmengsels en steekproeven van de kwaliteitscontrole
  
-As an asfaltproducent, I want to consult the daily required amount of asfalt in an easy manner and everywhere.
-As an asfaltproducent, I want to consult all data of the asfaltmix plant in an easy manner and everywhere.
-As an asfaltproducent, I want to consult all data of an asfalttransport in an easy manner and everywhere.
-As an asfaltproducent, I want to consult compliance mixtures and see samples of Copro in an easy manner and everywhere.
+- As an asphaltproducent, I want to consult the daily required amount of asfalt in an easy manner and everywhere.
+- As an asphaltproducent, I want to consult all data of the asphaltmix plant in an easy manner and everywhere.
+- As an asphaltproducent, I want to consult all data of an asphalttransport in an easy manner and everywhere.
+- As an asphaltproducent, I want to consult compliance mixtures and see samples of Copro in an easy manner and everywhere.
 
 #### Transporteurs
 - Makkelijk en overal kunnen raadplegen van alle data omtrent het transport
@@ -85,7 +85,7 @@ As an transporter, I want to consult all data about the transport in an easy man
 #### Aannemer
 - Makkelijk en overal kunnen raadplegen van alle de data exclusief de specifieke gegevens van de asfaltcentrale
 
-As an contractor, I want to consult all data exclusive the technical data of the asfaltbatch in an easy manner and everywhere.
+As an contractor, I want to consult all data exclusive the technical data of the asphaltbatch in an easy manner and everywhere.
 
 #### Copro
 - Makkelijk en overal de volgende data kunnen raadplegen
@@ -94,8 +94,8 @@ As an contractor, I want to consult all data exclusive the technical data of the
  - logistieke gegevens van het transport
  - controleproeven van de kwaliteitscontrole
  
-As Copro, I want to consult the daily required amount of asfalt in an easy manner and everywhere.
-As Copro, I want to consult all data of the asfalt mix plant in an easy manner and everywhere.
+As Copro, I want to consult the daily required amount of asphalt in an easy manner and everywhere.
+As Copro, I want to consult all data of the asphalt mix plant in an easy manner and everywhere.
 As Copro, I want to consult the logistics data of transport in an easy manner and everywhere.
 As Copro, I want to consult the samples made by us in an easy manner and everywhere.
 
