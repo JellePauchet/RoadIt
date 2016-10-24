@@ -15996,13 +15996,15 @@ namespace RoadIt.Models
         /// <param name="name">Initial value of the Name property.</param>
         /// <param name="password">Initial value of the Password property.</param>
         /// <param name="roleId">Initial value of the RoleId property.</param>
-        public static User CreateUser(global::System.Int32 userId, global::System.String name, global::System.String password, global::System.Int32 roleId)
+        /// <param name="email">Initial value of the Email property.</param>
+        public static User CreateUser(global::System.Int32 userId, global::System.String name, global::System.String password, global::System.Int32 roleId, global::System.String email)
         {
             User user = new User();
             user.UserId = userId;
             user.Name = name;
             user.Password = password;
             user.RoleId = roleId;
+            user.Email = email;
             return user;
         }
 
@@ -16108,6 +16110,30 @@ namespace RoadIt.Models
         private global::System.Int32 _RoleId;
         partial void OnRoleIdChanging(global::System.Int32 value);
         partial void OnRoleIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
 
         #endregion
 

@@ -12,3 +12,10 @@ C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\bin\Entit
 C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
 C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
 C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\RoadIt.dll
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\RoadIt.pdb
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\EntityFramework.dll
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\EntityFramework.xml
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
