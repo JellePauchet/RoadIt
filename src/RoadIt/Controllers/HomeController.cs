@@ -8,16 +8,18 @@ namespace RoadIt.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string txtInput)
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
-
             return View();
         }
 
-        public ActionResult About()
+        /*[HttpPost]
+        public ActionResult Form(string txtInput)
         {
-            return View();
-        }
+            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            ViewData["test"] = txtInput;
+            return View("Index");
+        }*/
     }
 }
