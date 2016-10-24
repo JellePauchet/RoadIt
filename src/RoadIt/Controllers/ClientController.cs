@@ -30,7 +30,11 @@ namespace RoadIt.Controllers
 
             foreach (var item in entities.Clients)
             {
-                table += "<tr><td>" + TempData["RoadSection"] + "</td><td><a href=" + item.MixtureName + ">download</a></td><td><a href=" + item.TechnicalDataSheet + ">download</a></td><td><a href=" + item.MixtureChange + ">download</a></td></tr>";
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    table += "<tr><td>" + Session["roadID"] + "</td><td><a href=" + item.MixtureName + ">download</a></td><td><a href=" + item.TechnicalDataSheet + ">download</a></td><td><a href=" + item.MixtureChange + ">download</a></td></tr>";
+                }
+                
             }
 
             table += "</table><br />";
@@ -46,7 +50,10 @@ namespace RoadIt.Controllers
 
             foreach (var item in entities.Clients)
             {
-                table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + "</td><td>" + item.RealArrivalTime + "</td></tr>";
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + "</td><td>" + item.RealArrivalTime + "</td></tr>";
+                }
             }
 
             table += "</table><br />";
@@ -62,7 +69,10 @@ namespace RoadIt.Controllers
 
             foreach (var item in entities.Clients)
             {
-                table += "<tr><td>" + item.FinisherSpeed + "</td><td>" + item.Width + "</td><td>" + item.AngleLeft + "</td><td>" + item.AngleRight + "</td><td>" + item.ThicknessLeft + "</td><td>" + item.ThicknessMiddel + "</td><td>" + item.ThicknessRight + "</td><td>" + item.TranverseSlope + "</td><td>" + item.StopLocation + "</td><td>" + item.StopTime + "</td><td>" + item.Precipation + "</td><td>" + item.Temp + "</td><td>" + item.WindSpeed + "</td><td>" + item.AirHumidity + "</td><td>" + item.AsphaltTempAfterFinisherIrScanOrThermo + "</td><td><a href=" + item.QrCodeCompactor + ">link</a></td><td>" + item.GPSFinisher + "</td><td>" + item.GPSCompactor + "</td></tr>";
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    table += "<tr><td>" + item.FinisherSpeed + "</td><td>" + item.Width + "</td><td>" + item.AngleLeft + "</td><td>" + item.AngleRight + "</td><td>" + item.ThicknessLeft + "</td><td>" + item.ThicknessMiddel + "</td><td>" + item.ThicknessRight + "</td><td>" + item.TranverseSlope + "</td><td>" + item.StopLocation + "</td><td>" + item.StopTime + "</td><td>" + item.Precipation + "</td><td>" + item.Temp + "</td><td>" + item.WindSpeed + "</td><td>" + item.AirHumidity + "</td><td>" + item.AsphaltTempAfterFinisherIrScanOrThermo + "</td><td><a href=" + item.QrCodeCompactor + ">link</a></td><td>" + item.GPSFinisher + "</td><td>" + item.GPSCompactor + "</td></tr>";
+                }
             }
 
             table += "</table><br />";
@@ -78,7 +88,10 @@ namespace RoadIt.Controllers
 
             foreach (var item in entities.Clients)
             {
-                table += "<tr><td><a href=" + item.ComplianceMixture + ">download</a></td><td><a href=" + item.SamplesCopro + ">download</a></td><td>" + item.AsphaltTempAfterFinisherIrScanOrThermo + "</td><td>" + item.Temp + "</td><td><a href=" + item.DensityOfField + ">download</a></td><td><a href=" + item.Cores + ">download</a></td><td><a href=" + item.LengthwiseFlatness + ">download</a></td><td><a href=" + item.Skidresistance + ">download</a></td><td><a href=" + item.Iri + ">download</a></td><td><a href=" + item.ExtraTestsAskedBijClient + ">download</a></td></tr>";
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    table += "<tr><td><a href=" + item.ComplianceMixture + ">download</a></td><td><a href=" + item.SamplesCopro + ">download</a></td><td>" + item.AsphaltTempAfterFinisherIrScanOrThermo + "</td><td>" + item.Temp + "</td><td><a href=" + item.DensityOfField + ">download</a></td><td><a href=" + item.Cores + ">download</a></td><td><a href=" + item.LengthwiseFlatness + ">download</a></td><td><a href=" + item.Skidresistance + ">download</a></td><td><a href=" + item.Iri + ">download</a></td><td><a href=" + item.ExtraTestsAskedBijClient + ">download</a></td></tr>";
+                }
             }
 
             table += "</table><br />";

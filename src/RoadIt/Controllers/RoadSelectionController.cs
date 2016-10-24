@@ -20,7 +20,7 @@ namespace RoadIt.Controllers
         [HttpPost]
         public ActionResult SelectSection(int RoadSectionId) 
         {
-            ViewData["roadID"] = RoadSectionId;
+            Session["roadID"] = RoadSectionId;
             return View("Index");
         }
 

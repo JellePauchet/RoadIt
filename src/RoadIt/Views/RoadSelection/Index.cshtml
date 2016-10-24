@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Index";
+    Session["roadID"] = null;
 }
 
 <h2>Roadsection</h2>
@@ -10,7 +11,4 @@
 @using (Html.BeginForm("SelectSection", "RoadSelection", FormMethod.Post))
 {
     @Html.Raw(Session["SelectList"].ToString())
-}
-
-@ViewData["roadID"]
-       
+}  
