@@ -7,5 +7,10 @@
     Choose a roadsection from the list.
 </p>
 
-@Html.Raw(ViewData["SelectList"].ToString());
+@using (Html.BeginForm("SelectSection", "RoadSelection", FormMethod.Post))
+{
+    @Html.Raw(Session["SelectList"].ToString())
+}
+
+@ViewData["roadID"]
        

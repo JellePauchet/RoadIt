@@ -12,14 +12,23 @@ namespace RoadIt.Controllers
         public ActionResult Index()
         {
             var entities = new RoadItEntities();
-            ViewData["SelectList"] = GenerateSelectList(entities); 
+            Session["SelectList"] = GenerateSelectList(entities); 
             return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult SelectSection(int RoadSectionId) 
+        {
+            ViewData["roadID"] = RoadSectionId;
+            return View("Index");
         }
 
         public string GenerateSelectList(RoadItEntities entities)
         {
             var DataList = new List<int>();
             DataList.Add(0);
+
             var option = "<select id='RoadSectionId' name='RoadSectionId'>";
             foreach (var item in entities.RoadSections)
             {
@@ -30,7 +39,7 @@ namespace RoadIt.Controllers
                     option += "<option value=" + item.RoadId + ">" + item.RoadId + ", " + item.RoadDescription + "</option>";
                 }
             }
-            option += "</select><asp:button Text='Submit' runat='server' OnClick='Submit'/>";
+            option += "</select><input type='submit' Text='Submit'/>";
 
             return option;
         }
