@@ -1,0 +1,7 @@
+c:\users\samme\documents\visual studio 2010\Projects\RoadIt\RoadIt\bin\RoadIt.dll
+c:\users\samme\documents\visual studio 2010\Projects\RoadIt\RoadIt\bin\RoadIt.pdb
+c:\users\samme\documents\visual studio 2010\Projects\RoadIt\RoadIt\bin\EntityFramework.dll
+c:\users\samme\documents\visual studio 2010\Projects\RoadIt\RoadIt\bin\EntityFramework.xml
+c:\users\samme\documents\visual studio 2010\Projects\RoadIt\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
+c:\users\samme\documents\visual studio 2010\Projects\RoadIt\RoadIt\obj\Debug\RoadIt.dll
+c:\users\samme\documents\visual studio 2010\Projects\RoadIt\RoadIt\obj\Debug\RoadIt.pdb
