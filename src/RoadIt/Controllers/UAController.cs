@@ -10,7 +10,7 @@ namespace RoadIt.Controllers
     public class UAController : Controller
     {
         //
-        // GET: /Client/
+        // GET: /UA/
 
         public ActionResult Index()
         {
