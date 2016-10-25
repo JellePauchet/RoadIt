@@ -1,9 +1,7 @@
 C:\RoadIt\src\RoadIt\bin\RoadIt.dll
 C:\RoadIt\src\RoadIt\bin\RoadIt.pdb
 C:\RoadIt\src\RoadIt\bin\EntityFramework.dll
-C:\RoadIt\src\RoadIt\bin\System.Web.Mvc.dll
 C:\RoadIt\src\RoadIt\bin\EntityFramework.xml
-C:\RoadIt\src\RoadIt\bin\System.Web.Mvc.xml
 C:\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
 C:\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
 C:\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb

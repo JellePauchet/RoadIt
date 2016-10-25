@@ -21,6 +21,7 @@ namespace RoadIt.Controllers
         public ActionResult SelectSection(int RoadSectionId) 
         {
             Session["roadID"] = RoadSectionId;
+<<<<<<< HEAD
             var roleId = Convert.ToInt32(Session["RoleId"]);
             var pageRef = "";
             switch (roleId)
@@ -45,6 +46,9 @@ namespace RoadIt.Controllers
                     break;
             }
             return RedirectToAction("Index",pageRef);
+=======
+            return RedirectToAction("Index","UA");
+>>>>>>> cd36851cba3c43700fd5d7f9615a1d7ce5cef4ad
         }
 
         public string GenerateSelectList(RoadItEntities entities)
