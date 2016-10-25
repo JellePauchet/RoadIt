@@ -17,6 +17,9 @@ namespace RoadIt.Controllers
         {
             entities = new RoadItEntities();
             ViewBag.Error = Session["error"];
+
+            //ViewData["password"] = ("test").GetHashCode().ToString();
+
             return View();
         }
 
@@ -28,6 +31,7 @@ namespace RoadIt.Controllers
             var PasswordList = new List<string>();
             var NameList = new List<string>();
             var RoleIDList = new List<int>();
+
             foreach (var item in entities.Users)
             {
                 MailList.Add(item.Email.ToString());
@@ -35,11 +39,12 @@ namespace RoadIt.Controllers
                 NameList.Add(item.Name.ToString());
                 RoleIDList.Add(item.RoleId);
             }
+
             for (var i = 0; i < MailList.Count; i++ )
             {
                 if (MailList[i] == email.ToString())
                 {
-                    if (PasswordList[i].ToString() == password.ToString())
+                    if (PasswordList[i].ToString() == password.GetHashCode().ToString())
                     {
                         
                         Session["email"] = email;
