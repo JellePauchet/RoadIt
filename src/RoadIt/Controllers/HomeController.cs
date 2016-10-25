@@ -10,7 +10,7 @@ namespace RoadIt.Controllers
     {
         public ActionResult Index(string txtInput)
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            ViewBag.Message = "RoadIt";
             return View();
         }
 
@@ -21,5 +21,6 @@ namespace RoadIt.Controllers
             ViewData["test"] = txtInput;
             return View("Index");
         }*/
+
     }
 }
