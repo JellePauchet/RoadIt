@@ -8,10 +8,14 @@ namespace RoadIt.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(string txtInput)
+        public ActionResult Index()
         {
             ViewBag.Message = "RoadIt";
-            Session["Username"] = "Login";
+            if (Session["Username"] == null)
+            {
+                Session["Username"] = "Login";
+            }
+            
             return View();
         }
 
