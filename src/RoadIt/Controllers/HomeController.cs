@@ -11,6 +11,7 @@ namespace RoadIt.Controllers
         public ActionResult Index(string txtInput)
         {
             ViewBag.Message = "RoadIt";
+            Session["Username"] = "Login";
             return View();
         }
 
