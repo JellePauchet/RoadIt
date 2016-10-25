@@ -43,7 +43,7 @@ namespace RoadIt.Controllers
                         
                         Session["email"] = email;
                         Session["password"] = password;
-                        Session["Username"] = NameList[i].ToString();
+                        Session["Username"] = NameList[i].ToString() + " - LogOut";
                         return RedirectToAction("Index", "RoadSelection");
                     }
                     else
@@ -54,6 +54,13 @@ namespace RoadIt.Controllers
                 }
             }
             Session["error"] = "Wrong email";
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Logout() 
+        {
+            Session.Clear();
+            Session["Username"] = "Login";
             return RedirectToAction("Index");
         }
     }

@@ -24,9 +24,30 @@
 				<div class="collapse navbar-collapse navHeaderCollapse">			
 					<ul class="nav navbar-nav navbar-right">					
 						<li><a href="/Home">Home</a></li>
-                        <li><a href="/RoadSelection">RoadSelection</a></li>
-						<li><a href="/Client">Report</a></li>
-						<li><a href="#contact" data-toggle="modal">@Session["Username"]</a></li>						
+                        <li><a href="@{
+                                            
+                                            if(Session["Username"] == "Login" )
+                                            {
+                                               Session["RoadSelection"] = "#contact"; 
+                                            }
+                                            else
+                                            {
+                                                Session["RoadSelection"] = "RoadSelection/Index";
+                                            }
+          
+						                }@Session["RoadSelection"]" data-toggle="modal">RoadSelection</a></li>
+						<li><a href="   @{
+                                            
+                                            if(Session["Username"] == "Login" )
+                                            {
+                                               Session["toggle"] = "#contact"; 
+                                            }
+                                            else
+                                            {
+                                                Session["toggle"] = "Login/Logout";
+                                            }
+          
+						                }@Session["toggle"]" data-toggle="modal">@Session["Username"]</a></li>						
 					</ul>			
 				</div>
 			</div>
