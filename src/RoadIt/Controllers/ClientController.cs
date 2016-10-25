@@ -15,18 +15,10 @@ namespace RoadIt.Controllers
         public ActionResult Index()
         {
             var entities = new RoadItEntities();
-            if (Session["RoleId"].ToString() == "1")
-            {
-                ViewBag.error = "";
-                ViewData["Table1"] = GenerateTable1(entities);
-                ViewData["Table2"] = GenerateTable2(entities);
-                ViewData["Table3"] = GenerateTable3(entities);
-                ViewData["Table4"] = GenerateTable4(entities);
-            }
-            else
-            {
-                ViewBag.error = "You have no authorities to view this page";
-            }
+            ViewData["Table1"] = GenerateTable1(entities);
+            ViewData["Table2"] = GenerateTable2(entities);
+            ViewData["Table3"] = GenerateTable3(entities);
+            ViewData["Table4"] = GenerateTable4(entities);
             return View();
         }
 
