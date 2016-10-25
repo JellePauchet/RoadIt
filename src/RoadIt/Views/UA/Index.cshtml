@@ -5,11 +5,19 @@
 }
 
 <h2>UA</h2>
-
-
-@Html.Raw(ViewData["Planning"].ToString())
-@Html.Raw(ViewData["AsphaltMixPlant"].ToString())
-@Html.Raw(ViewData["Truck"].ToString())
-@Html.Raw(ViewData["Finisher"].ToString())
-@Html.Raw(ViewData["Compactor"].ToString())
-@Html.Raw(ViewData["QualityControl"].ToString())
+@{
+    if (Session["RoleId"].ToString() == "6")
+    {
+        @Html.Raw(ViewData["Planning"].ToString())
+        @Html.Raw(ViewData["AsphaltMixPlant"].ToString())
+        @Html.Raw(ViewData["Truck"].ToString())
+        @Html.Raw(ViewData["Finisher"].ToString())
+        @Html.Raw(ViewData["Compactor"].ToString())
+        @Html.Raw(ViewData["QualityControl"].ToString())
+    }
+    else
+    {
+        ViewBag.error = "You are not authorized to view this page";
+        @ViewBag.error
+    } 
+} 

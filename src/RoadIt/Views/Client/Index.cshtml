@@ -3,9 +3,20 @@
 }
 
 <h2>Client Report</h2>
+@{
+    if (Session["RoleId"].ToString() == "1")
+    {
+        @Html.Raw(ViewData["Table1"].ToString())
+        @Html.Raw(ViewData["Table2"].ToString())
+        @Html.Raw(ViewData["Table3"].ToString())
+        @Html.Raw(ViewData["Table4"].ToString())
+    }
+    else
+    {
+        ViewBag.error = "You are not authorized to view this page";
+        @ViewBag.error
+    }    
+        
+}
 
-@ViewBag.error
-@Html.Raw(ViewData["Table1"].ToString())
-@Html.Raw(ViewData["Table2"].ToString())
-@Html.Raw(ViewData["Table3"].ToString())
-@Html.Raw(ViewData["Table4"].ToString())
+
