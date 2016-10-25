@@ -1,7 +1,19 @@
 ﻿@model RoadIt.Models.Transporter
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Transporter report";
 }
 
-<h2>Index</h2>
+<h2>Transporter report</h2>
+@{
+    if (Session["RoleId"].ToString() == "3")
+    {
+        @Html.Raw(ViewData["Truck"].ToString())
+        @Html.Raw(ViewData["Compactor"].ToString())
+    }
+    else
+    {
+        ViewBag.error = "You are not authorized to view this page";
+        @ViewBag.error
+    } 
+} 

@@ -64,10 +64,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AsphaltProducerController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\ContractorController.cs" />
+    <Compile Include="Controllers\CoproController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RoadSelectionController.cs" />
+    <Compile Include="Controllers\TransporterController.cs" />
     <Compile Include="Controllers\UAController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,6 +170,13 @@
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <Content Include="Views\UA\Index.cshtml" />
+    <Content Include="Views\AsphaltProducer\Index.cshtml" />
+    <Content Include="Views\Contractor\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Copro\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Transporter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

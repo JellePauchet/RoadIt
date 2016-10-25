@@ -1,7 +1,22 @@
 ﻿@model RoadIt.Models.AsphaltProcucer
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "AsphaltProcucer report";
 }
 
-<h2>Index</h2>
+<h2>AsphaltProcucer report</h2>
+@{
+    if (Session["RoleId"].ToString() == "2")
+    {
+        @Html.Raw(ViewData["Planning"].ToString())
+        @Html.Raw(ViewData["AsphaltMixPlant"].ToString())
+        @Html.Raw(ViewData["Truck"].ToString())
+        @Html.Raw(ViewData["Compactor"].ToString())
+        @Html.Raw(ViewData["QualityControl"].ToString())
+    }
+    else
+    {
+        ViewBag.error = "You are not authorized to view this page";
+        @ViewBag.error
+    } 
+} 
