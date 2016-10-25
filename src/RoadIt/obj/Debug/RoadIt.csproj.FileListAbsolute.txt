@@ -12,6 +12,7 @@ C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\bin\Entit
 C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
 C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
 C:\Users\Samme\Documents\Visual Studio 2010\Projects\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
+<<<<<<< HEAD
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\RoadIt.dll
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\RoadIt.pdb
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\EntityFramework.dll
@@ -20,3 +21,12 @@ E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\R
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\Models\RoadItDB.Designer.cs
+=======
+C:\Users\Matthias\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\bin\RoadIt.dll
+C:\Users\Matthias\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\bin\RoadIt.pdb
+C:\Users\Matthias\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\bin\EntityFramework.dll
+C:\Users\Matthias\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\bin\EntityFramework.xml
+C:\Users\Matthias\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
+C:\Users\Matthias\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
+C:\Users\Matthias\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
+>>>>>>> c41b63ede24a9ad19c78236f09bb7adda8d8659e
