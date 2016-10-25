@@ -1811,13 +1811,11 @@
           <EntitySet Name="Projects" EntityType="RoadItEntitiesModel.Project" />
           <EntitySet Name="QualityControls" EntityType="RoadItEntitiesModel.QualityControl" />
           <EntitySet Name="RoadSections" EntityType="RoadItEntitiesModel.RoadSection" />
-          <EntitySet Name="Roles" EntityType="RoadItEntitiesModel.Role" />
           <EntitySet Name="Silos" EntityType="RoadItEntitiesModel.Silo" />
           <EntitySet Name="SpeedFinishers" EntityType="RoadItEntitiesModel.SpeedFinisher" />
           <EntitySet Name="Temps" EntityType="RoadItEntitiesModel.Temp" />
           <EntitySet Name="Transports" EntityType="RoadItEntitiesModel.Transport" />
           <EntitySet Name="TransportTemps" EntityType="RoadItEntitiesModel.TransportTemp" />
-          <EntitySet Name="Users" EntityType="RoadItEntitiesModel.User" />
           <EntitySet Name="Widths" EntityType="RoadItEntitiesModel.Width" />
           <EntitySet Name="Winds" EntityType="RoadItEntitiesModel.Wind" />
           <EntitySet Name="AsphaltProcucers" EntityType="RoadItEntitiesModel.AsphaltProcucer" />
@@ -1938,13 +1936,15 @@
             <End Role="Project" EntitySet="Projects" />
             <End Role="RoadSection" EntitySet="RoadSections" />
           </AssociationSet>
-          <AssociationSet Name="Users_ibfk_1" Association="RoadItEntitiesModel.Users_ibfk_1">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="Users" EntitySet="Users" />
-          </AssociationSet>
           <AssociationSet Name="Transport_ibfk_7" Association="RoadItEntitiesModel.Transport_ibfk_7">
             <End Role="TransportTemp" EntitySet="TransportTemps" />
             <End Role="Transport" EntitySet="Transports" />
+          </AssociationSet>
+          <EntitySet Name="Roles" EntityType="RoadItEntitiesModel.Role" />
+          <EntitySet Name="Users" EntityType="RoadItEntitiesModel.Users" />
+          <AssociationSet Name="Users_ibfk_1" Association="RoadItEntitiesModel.Users_ibfk_1">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="User" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="ActualPosition">
@@ -2198,14 +2198,6 @@
           <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Project" Relationship="RoadItEntitiesModel.RoadSection_ibfk_1" FromRole="RoadSection" ToRole="Project" />
         </EntityType>
-        <EntityType Name="Role">
-          <Key>
-            <PropertyRef Name="RoleId" />
-          </Key>
-          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="Users" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="Roles" ToRole="Users" />
-        </EntityType>
         <EntityType Name="Silo">
           <Key>
             <PropertyRef Name="SiloId" />
@@ -2277,17 +2269,6 @@
           <Property Name="ActualTempId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Temp" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Transports" Relationship="RoadItEntitiesModel.Transport_ibfk_7" FromRole="TransportTemp" ToRole="Transport" />
-        </EntityType>
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="UserId" />
-          </Key>
-          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="RoleId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Role" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="Users" ToRole="Roles" />
-          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Width">
           <Key>
@@ -3265,18 +3246,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="Users_ibfk_1">
-          <End Role="Roles" Type="RoadItEntitiesModel.Role" Multiplicity="1" />
-          <End Role="Users" Type="RoadItEntitiesModel.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="RoleId" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="Transport_ibfk_7">
           <End Role="TransportTemp" Type="RoadItEntitiesModel.TransportTemp" Multiplicity="1" />
           <End Role="Transport" Type="RoadItEntitiesModel.Transport" Multiplicity="*" />
@@ -3286,6 +3255,37 @@
             </Principal>
             <Dependent Role="Transport">
               <PropertyRef Name="ActualTempId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Type="Int32" Name="RoleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Users" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="Role" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="RoleId" Nullable="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Role" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="User" ToRole="Role" />
+        </EntityType>
+        <Association Name="Users_ibfk_1">
+          <End Type="RoadItEntitiesModel.Role" Role="Role" Multiplicity="1" />
+          <End Type="RoadItEntitiesModel.Users" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="RoleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3529,14 +3529,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="RoadItEntitiesModel.Role">
-              <MappingFragment StoreEntitySet="Roles">
-                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Silos">
             <EntityTypeMapping TypeName="RoadItEntitiesModel.Silo">
               <MappingFragment StoreEntitySet="Silo">
@@ -3595,17 +3587,6 @@
               <MappingFragment StoreEntitySet="TransportTemp">
                 <ScalarProperty Name="ActualTempId" ColumnName="ActualTempId" />
                 <ScalarProperty Name="Temp" ColumnName="Temp" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="RoadItEntitiesModel.User">
-              <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3961,7 +3942,26 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="RoadItEntitiesModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="RoadItEntitiesModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
@@ -3975,13 +3975,13 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="RoadItDB" ZoomLevel="82">
+      <Diagram Name="RoadItDB" ZoomLevel="74">
         <EntityTypeShape EntityType="RoadItEntitiesModel.ActualPosition" Width="1.5" PointX="3" PointY="9" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.ActualPositionReturn" Width="1.5" PointX="3" PointY="11.375" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.Aggragation" Width="1.5" PointX="3" PointY="21.5" Height="1.9802864583333317" IsExpanded="true" />
@@ -4005,13 +4005,11 @@
         <EntityTypeShape EntityType="RoadItEntitiesModel.Project" Width="1.5" PointX="5.25" PointY="8.625" Height="2.1725878906250031" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.QualityControl" Width="1.5" PointX="7.5" PointY="16.5" Height="3.1340950520833317" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.RoadSection" Width="1.5" PointX="7.5" PointY="20.375" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="RoadItEntitiesModel.Role" Width="1.5" PointX="7.75" PointY="8" Height="1.5956835937499951" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.Silo" Width="1.5" PointX="5.25" PointY="26.375" Height="4.0956022135416674" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.SpeedFinisher" Width="1.5" PointX="0.75" PointY="17.5" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.Temp" Width="1.5" PointX="0.75" PointY="19.875" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.Transport" Width="1.5" PointX="5.25" PointY="2" Height="5.2494108072916674" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.TransportTemp" Width="1.5" PointX="3" PointY="18.375" Height="1.595683593749996" IsExpanded="true" />
-        <EntityTypeShape EntityType="RoadItEntitiesModel.User" Width="1.5" PointX="10" PointY="7.75" Height="1.9802864583333246" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.Width" Width="1.5" PointX="0.75" PointY="22.25" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.Wind" Width="1.5" PointX="0.75" PointY="24.625" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="RoadItEntitiesModel.AsphaltProcucer" Width="1.5" PointX="9.75" PointY="10.625" Height="10.82615234375001" IsExpanded="true" />
@@ -4036,8 +4034,8 @@
         </AssociationConnector>
         <AssociationConnector Association="RoadItEntitiesModel.Silo_ibfk_2" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="22.490143229166666" />
-          <ConnectorPoint PointX="6" PointY="22.490143229166666" />
-          <ConnectorPoint PointX="6" PointY="26.375" />
+          <ConnectorPoint PointX="5.593748" PointY="22.490143229166666" />
+          <ConnectorPoint PointX="5.593748" PointY="26.375" />
         </AssociationConnector>
         <AssociationConnector Association="RoadItEntitiesModel.Finisher_ibfk_7" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="4.672841796875" />
@@ -4054,8 +4052,10 @@
         </AssociationConnector>
         <AssociationConnector Association="RoadItEntitiesModel.Silo_ibfk_1" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="25.281247500000006" />
-          <ConnectorPoint PointX="5.5937475" PointY="25.281247500000006" />
-          <ConnectorPoint PointX="5.5937475" PointY="26.375" />
+          <ConnectorPoint PointX="5.5104146666666667" PointY="25.281247500000006" />
+          <ConnectorPoint PointX="5.6770813333333328" PointY="25.281247500000006" />
+          <ConnectorPoint PointX="6" PointY="25.281247500000006" />
+          <ConnectorPoint PointX="6" PointY="26.375" />
         </AssociationConnector>
         <AssociationConnector Association="RoadItEntitiesModel.Finisher_ibfk_8" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="9.7511528461538468" />
@@ -4066,11 +4066,11 @@
           <ConnectorPoint PointX="3" PointY="3.2426688984375058" />
         </AssociationConnector>
         <AssociationConnector Association="RoadItEntitiesModel.BatchList_ibfk_1" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="10.2278857421875" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="10.2278857421875" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="10.2278857421875" />
-          <ConnectorPoint PointX="7.59375" PointY="10.2278857421875" />
-          <ConnectorPoint PointX="7.59375" PointY="5.9321907552083317" />
+          <ConnectorPoint PointX="6.75" PointY="9.55324215820313" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="9.55324215820313" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="9.55324215820313" />
+          <ConnectorPoint PointX="8.2734375" PointY="9.55324215820313" />
+          <ConnectorPoint PointX="8.2734375" PointY="5.9321907552083317" />
         </AssociationConnector>
         <AssociationConnector Association="RoadItEntitiesModel.BatchList_ibfk_2" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="26.376152846153843" />
@@ -4202,17 +4202,19 @@
           <ConnectorPoint PointX="7.208333333333333" PointY="21.268992513020834" />
           <ConnectorPoint PointX="7.5" PointY="21.268992513020834" />
         </AssociationConnector>
-        <AssociationConnector Association="RoadItEntitiesModel.Users_ibfk_1" ManuallyRouted="false">
-          <ConnectorPoint PointX="9.25" PointY="8.797841796874998" />
-          <ConnectorPoint PointX="10" PointY="8.797841796874998" />
-        </AssociationConnector>
         <AssociationConnector Association="RoadItEntitiesModel.Transport_ibfk_7" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="18.407306692307689" />
           <ConnectorPoint PointX="4.90625" PointY="18.001056692307689" />
           <ConnectorPoint PointX="4.90625" PointY="5.2965077545572887" />
           <ConnectorPoint PointX="5.25" PointY="5.2965077545572887" />
         </AssociationConnector>
-      </Diagram>
+        <EntityTypeShape EntityType="RoadItEntitiesModel.Role" Width="1.5" PointX="9.625" PointY="7.125" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="RoadItEntitiesModel.Users" Width="1.5" PointX="11.875" PointY="6.75" Height="2.172587890624996" />
+        <AssociationConnector Association="RoadItEntitiesModel.Users_ibfk_1" >
+          <ConnectorPoint PointX="11.125" PointY="7.922841796874998" />
+          <ConnectorPoint PointX="11.875" PointY="7.922841796874998" />
+        </AssociationConnector>
+        </Diagram>
     </Diagrams>
   </Designer>
 </edmx:Edmx>

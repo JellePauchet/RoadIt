@@ -235,14 +235,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Roles">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Role">
-        <MappingFragment StoreEntitySet="Roles">
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Silos">
       <EntityTypeMapping TypeName="RoadItEntitiesModel.Silo">
         <MappingFragment StoreEntitySet="Silo">
@@ -301,17 +293,6 @@
         <MappingFragment StoreEntitySet="TransportTemp">
           <ScalarProperty Name="ActualTempId" ColumnName="ActualTempId" />
           <ScalarProperty Name="Temp" ColumnName="Temp" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.User">
-        <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -664,6 +645,25 @@
           <ScalarProperty Name="Skidresistance" ColumnName="Skidresistance" />
           <ScalarProperty Name="Iri" ColumnName="Iri" />
           <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="RoadItEntitiesModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="RoadItEntitiesModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RoadIt.Models.RoadItEntities" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EWoQEqJopA4K3M6lMDaQ1MQBU5JAXFFEAOkABhTADUs=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.ActualPosition" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAKAAAAAACAAAAAAggAAABAQAAAAAAQAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.ActualPositionReturn" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQCAAADEAAAAAAEAgAAAAACAAAACAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Aggragation" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FlGAAIAgEAAAFAAAAAgAAAAAAEAAAAAAQAAAAGAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.AirHumidity" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAgAAAACAAAgQAAAAAAAAIAAAAABQgQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Angle" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAkAAAAAAAhAAAAAAAEFCADQAAAAAQg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.AsphaltMixPlant" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAFABIAAAgEAAACEAGABBAgAIABAgAAAAAgIAEAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.AsphaltProcucer" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>11/X9vrL9B2/BxPTeMM2Xplt689eHDYSQReOyPHmy4E=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.AsphaltTemp" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAABIAAAAGAEQAAAAAoCACAAAAAAAAAwAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.BatchList" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQEABAAAAAAChAkAAAGYQABAEAAgAAAARAEIAgCgg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Bituman" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAQBgAFAAAMAAAQAAAAAACAAAAAgQCQAEAAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Client" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>jx9G1mUP5CO7NTMWHm3a3n3445tDJD6HZCOv6aV2y7w=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.ColorCode" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAALAEgAAAEgAACCAAAgAAAAAAAAAAAACgAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Compactor" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgADBAAgBKAAkECRCKAAAAACCEQBgABAIAJAQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Composition" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wB8AAEgAIAEAEBDSUMAAAAAIIYAUCAAAAAIAgACAgIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Contractor" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAhAECAAGAAABAAAAgAAEAAACAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.ContractorView" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>nx9H1nUP5Ce+MfMWHu/73vn/c59rIH6HZTOv6bV22rw=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Copro" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>x1/Q9O7IdBm7FhPTeEAWQhl4qctWHDYQQAeCwOHkwYE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.ETA" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBAAJAAAAAAAAAAABAAAAAgICAAAAAAAEAAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.ETAReturn" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kQgAAAAAgAAAAAAAAAEAAAAAAgQAAAAAAAAACAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Finisher" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hhJCEAAIDBMwEVGABFHKQEhQQoDRABKEIGqF0AlAgiQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.LayerThickness" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAiAAAwAAAABAAAAEEAAIAEBCADQAAQAAQg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.ListFillerRecup" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEADAAAAAEBAAAAAAIAAAAEAAAAAAAAAACAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.LocationAndTimeSpan" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAIAAAQAAAAAABAAAAIAAACIAgAACQBAAAAASA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Planning" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAIAAQAAAUBAAAAAGIAGFAAAAiIEAQAAAAEIGAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Project" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAABAAAAAAAQARAIAAgAAAAgAAAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.QualityControl" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQUUEEAYAAQICByAAEImAEIJgIAAiCABAIIQaQACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.RoadSection" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAABBCBAAAAAWAQABAAAAgAAQABAgAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Role" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACIAAAAAABAAIAAAIAQAAAAAQAAEAAAAAAAQAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Silo" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAcGJAMBijDwCRQAAGA4EAKAMAGAoQIAQAAMBAggA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.SpeedFinisher" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAAEAAAAABAAAAAADAIAAAAAAAAIEAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Temp" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAEMFAAAAAAAgAAAAAAgAAAAEAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Transport" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kRhSkBQDQAQOUAMAEAMgSggVCg5OABQAQFXMEZAiC4A=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Transporter" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kQhDghADwAQOAAMCEIMgTggFQgwKABQCQBGMCJAiCoA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.TransportTemp" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAQgAAABAAAAAAAEgAAAAAgAgBAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.UA" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>31/H9v/P9D+/N/PXfu//3vn/+99fPH6XZTev6fX2270=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.User" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAIAASAAAFAINAAEIAwQCAEAQAAGAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Width" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAQAAAAAAEBAQAQAAAAAAKAAAAAAAwA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadIt.Models.Wind" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAICQAAAAABAACBAAAAIAAAAIAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

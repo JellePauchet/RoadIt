@@ -11,27 +11,12 @@ namespace RoadIt.Controllers
     {
         //
         // GET: /Login/
-        RoadItEntities entities;
 
         public ActionResult Index()
         {
-            entities = new RoadItEntities();
+            var entities = new RoadItEntities();
+            
             return View();
         }
-
-        [HttpPost]
-        public Boolean checkLogin(string email, string password)
-        {
-            var UserList = new List<string>();
-            foreach (var item in entities.Users.Name)
-            {
-                UserList.Add(item.ToString());
-            }
-            Session["email"] = email;
-            Session["password"] = password;
-            
-            return (true);
-        }
-
     }
 }

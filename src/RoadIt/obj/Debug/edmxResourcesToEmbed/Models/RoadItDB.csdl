@@ -24,13 +24,11 @@
     <EntitySet Name="Projects" EntityType="RoadItEntitiesModel.Project" />
     <EntitySet Name="QualityControls" EntityType="RoadItEntitiesModel.QualityControl" />
     <EntitySet Name="RoadSections" EntityType="RoadItEntitiesModel.RoadSection" />
-    <EntitySet Name="Roles" EntityType="RoadItEntitiesModel.Role" />
     <EntitySet Name="Silos" EntityType="RoadItEntitiesModel.Silo" />
     <EntitySet Name="SpeedFinishers" EntityType="RoadItEntitiesModel.SpeedFinisher" />
     <EntitySet Name="Temps" EntityType="RoadItEntitiesModel.Temp" />
     <EntitySet Name="Transports" EntityType="RoadItEntitiesModel.Transport" />
     <EntitySet Name="TransportTemps" EntityType="RoadItEntitiesModel.TransportTemp" />
-    <EntitySet Name="Users" EntityType="RoadItEntitiesModel.User" />
     <EntitySet Name="Widths" EntityType="RoadItEntitiesModel.Width" />
     <EntitySet Name="Winds" EntityType="RoadItEntitiesModel.Wind" />
     <EntitySet Name="AsphaltProcucers" EntityType="RoadItEntitiesModel.AsphaltProcucer" />
@@ -151,13 +149,15 @@
       <End Role="Project" EntitySet="Projects" />
       <End Role="RoadSection" EntitySet="RoadSections" />
     </AssociationSet>
-    <AssociationSet Name="Users_ibfk_1" Association="RoadItEntitiesModel.Users_ibfk_1">
-      <End Role="Roles" EntitySet="Roles" />
-      <End Role="Users" EntitySet="Users" />
-    </AssociationSet>
     <AssociationSet Name="Transport_ibfk_7" Association="RoadItEntitiesModel.Transport_ibfk_7">
       <End Role="TransportTemp" EntitySet="TransportTemps" />
       <End Role="Transport" EntitySet="Transports" />
+    </AssociationSet>
+    <EntitySet Name="Roles" EntityType="RoadItEntitiesModel.Role" />
+    <EntitySet Name="Users" EntityType="RoadItEntitiesModel.Users" />
+    <AssociationSet Name="Users_ibfk_1" Association="RoadItEntitiesModel.Users_ibfk_1">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="ActualPosition">
@@ -411,14 +411,6 @@
     <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Project" Relationship="RoadItEntitiesModel.RoadSection_ibfk_1" FromRole="RoadSection" ToRole="Project" />
   </EntityType>
-  <EntityType Name="Role">
-    <Key>
-      <PropertyRef Name="RoleId" />
-    </Key>
-    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Users" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="Roles" ToRole="Users" />
-  </EntityType>
   <EntityType Name="Silo">
     <Key>
       <PropertyRef Name="SiloId" />
@@ -490,17 +482,6 @@
     <Property Name="ActualTempId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Temp" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Transports" Relationship="RoadItEntitiesModel.Transport_ibfk_7" FromRole="TransportTemp" ToRole="Transport" />
-  </EntityType>
-  <EntityType Name="User">
-    <Key>
-      <PropertyRef Name="UserId" />
-    </Key>
-    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="Password" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="RoleId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Role" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="Users" ToRole="Roles" />
-    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Width">
     <Key>
@@ -1478,18 +1459,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Users_ibfk_1">
-    <End Role="Roles" Type="RoadItEntitiesModel.Role" Multiplicity="1" />
-    <End Role="Users" Type="RoadItEntitiesModel.User" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Roles">
-        <PropertyRef Name="RoleId" />
-      </Principal>
-      <Dependent Role="Users">
-        <PropertyRef Name="RoleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="Transport_ibfk_7">
     <End Role="TransportTemp" Type="RoadItEntitiesModel.TransportTemp" Multiplicity="1" />
     <End Role="Transport" Type="RoadItEntitiesModel.Transport" Multiplicity="*" />
@@ -1499,6 +1468,37 @@
       </Principal>
       <Dependent Role="Transport">
         <PropertyRef Name="ActualTempId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Type="Int32" Name="RoleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="RoleId" Nullable="false" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Role" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <Association Name="Users_ibfk_1">
+    <End Type="RoadItEntitiesModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="RoadItEntitiesModel.Users" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

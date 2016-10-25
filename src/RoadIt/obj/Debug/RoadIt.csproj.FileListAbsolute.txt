@@ -19,3 +19,4 @@ E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\EntityF
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
 E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
+E:\libraries\documents\4_school\cloud applications\RoadIt\src\RoadIt\bin\Models\RoadItDB.Designer.cs

@@ -47,8 +47,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Planning_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "Planning", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Planning), true)]
 [assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "QualityControl_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "QualityControl", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.QualityControl), true)]
 [assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "RoadSection_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "RoadSection", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.RoadSection), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Users_ibfk_1", "Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Role), "Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.User), true)]
 [assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Transport_ibfk_7", "TransportTemp", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.TransportTemp), "Transport", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Transport), true)]
+[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Users_ibfk_1", "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Role), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Users), true)]
 
 #endregion
 
@@ -471,22 +471,6 @@ namespace RoadIt.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Role> Roles
-        {
-            get
-            {
-                if ((_Roles == null))
-                {
-                    _Roles = base.CreateObjectSet<Role>("Roles");
-                }
-                return _Roles;
-            }
-        }
-        private ObjectSet<Role> _Roles;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<Silo> Silos
         {
             get
@@ -563,22 +547,6 @@ namespace RoadIt.Models
             }
         }
         private ObjectSet<TransportTemp> _TransportTemps;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<User> Users
-        {
-            get
-            {
-                if ((_Users == null))
-                {
-                    _Users = base.CreateObjectSet<User>("Users");
-                }
-                return _Users;
-            }
-        }
-        private ObjectSet<User> _Users;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -707,6 +675,38 @@ namespace RoadIt.Models
             }
         }
         private ObjectSet<UA> _UAs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Role> Roles
+        {
+            get
+            {
+                if ((_Roles == null))
+                {
+                    _Roles = base.CreateObjectSet<Role>("Roles");
+                }
+                return _Roles;
+            }
+        }
+        private ObjectSet<Role> _Roles;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Users> Users
+        {
+            get
+            {
+                if ((_Users == null))
+                {
+                    _Users = base.CreateObjectSet<Users>("Users");
+                }
+                return _Users;
+            }
+        }
+        private ObjectSet<Users> _Users;
 
         #endregion
 
@@ -897,14 +897,6 @@ namespace RoadIt.Models
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Roles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToRoles(Role role)
-        {
-            base.AddObject("Roles", role);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the Silos EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToSilos(Silo silo)
@@ -942,14 +934,6 @@ namespace RoadIt.Models
         public void AddToTransportTemps(TransportTemp transportTemp)
         {
             base.AddObject("TransportTemps", transportTemp);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Users EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToUsers(User user)
-        {
-            base.AddObject("Users", user);
         }
     
         /// <summary>
@@ -1014,6 +998,22 @@ namespace RoadIt.Models
         public void AddToUAs(UA uA)
         {
             base.AddObject("UAs", uA);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Roles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToRoles(Role role)
+        {
+            base.AddObject("Roles", role);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Users EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToUsers(Users users)
+        {
+            base.AddObject("Users", users);
         }
 
         #endregion
@@ -11407,18 +11407,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Users_ibfk_1", "Users")]
-        public EntityCollection<User> Users
+        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Users_ibfk_1", "User")]
+        public EntityCollection<Users> Users
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User>("RoadItEntitiesModel.Users_ibfk_1", "Users");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Users>("RoadItEntitiesModel.Users_ibfk_1", "User");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User>("RoadItEntitiesModel.Users_ibfk_1", "Users", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Users>("RoadItEntitiesModel.Users_ibfk_1", "User", value);
                 }
             }
         }
@@ -15982,30 +15982,30 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="User")]
+    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Users")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class User : EntityObject
+    public partial class Users : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new User object.
+        /// Create a new Users object.
         /// </summary>
         /// <param name="userId">Initial value of the UserId property.</param>
         /// <param name="name">Initial value of the Name property.</param>
         /// <param name="password">Initial value of the Password property.</param>
         /// <param name="roleId">Initial value of the RoleId property.</param>
         /// <param name="email">Initial value of the Email property.</param>
-        public static User CreateUser(global::System.Int32 userId, global::System.String name, global::System.String password, global::System.Int32 roleId, global::System.String email)
+        public static Users CreateUsers(global::System.Int32 userId, global::System.String name, global::System.String password, global::System.Int32 roleId, global::System.String email)
         {
-            User user = new User();
-            user.UserId = userId;
-            user.Name = name;
-            user.Password = password;
-            user.RoleId = roleId;
-            user.Email = email;
-            return user;
+            Users users = new Users();
+            users.UserId = userId;
+            users.Name = name;
+            users.Password = password;
+            users.RoleId = roleId;
+            users.Email = email;
+            return users;
         }
 
         #endregion
@@ -16146,16 +16146,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Users_ibfk_1", "Roles")]
+        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Users_ibfk_1", "Role")]
         public Role Role
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Roles").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Roles").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role").Value = value;
             }
         }
         /// <summary>
@@ -16167,13 +16167,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Roles");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Roles", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role", value);
                 }
             }
         }
