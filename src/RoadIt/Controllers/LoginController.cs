@@ -27,13 +27,14 @@ namespace RoadIt.Controllers
             var MailList = new List<string>();
             var PasswordList = new List<string>();
             var NameList = new List<string>();
+            var RoleIDList = new List<int>();
             foreach (var item in entities.Users)
             {
                 MailList.Add(item.Email.ToString());
                 PasswordList.Add(item.Password.ToString());
                 NameList.Add(item.Name.ToString());
+                RoleIDList.Add(item.RoleId);
             }
-            Console.WriteLine("het werkt");
             for (var i = 0; i < MailList.Count; i++ )
             {
                 if (MailList[i] == email.ToString())
@@ -44,16 +45,17 @@ namespace RoadIt.Controllers
                         Session["email"] = email;
                         Session["password"] = password;
                         Session["Username"] = NameList[i].ToString() + " - LogOut";
+                        Session["RoleId"] = RoleIDList[i];
                         return RedirectToAction("Index", "RoadSelection");
                     }
                     else
                     {
-                        Session["error"] = "Wrong password";
+                        Session["error"] = "The given email or password is wrong";
                         return RedirectToAction("Index", "Login");
                     }
                 }
             }
-            Session["error"] = "Wrong email";
+            Session["error"] = "The given email or password is wrong";
             return RedirectToAction("Index");
         }
 
