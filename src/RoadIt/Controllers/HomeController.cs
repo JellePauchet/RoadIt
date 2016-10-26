@@ -14,6 +14,9 @@ namespace RoadIt.Controllers
             if (Session["Username"] == null)
             {
                 Session["Username"] = "Login";
+                Session["email"] = "";
+                Session["password"] = "";
+                Session["RoleId"] = "";
             }
             
             return View();

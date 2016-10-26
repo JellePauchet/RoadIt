@@ -14,17 +14,18 @@ namespace RoadIt.Controllers
 
         public ActionResult Index()
         {
-            var entities = new RoadItEntities();
-            if (Session["RoleId"].ToString() == "3")
+            try
             {
+                var entities = new RoadItEntities();
                 ViewData["Truck"] = GenerateTableTruck(entities);
                 ViewData["Compactor"] = GenerateTableCompactor(entities);
+                return View();
             }
-            else
+            catch
             {
-                ViewBag.error = "You have no authorities to view this page";
+                ViewBag.error = "You are not authorized to view this page";
+                return View();
             }
-            return View();
         }
 
         public string GenerateTableTruck(RoadItEntities entities)//RoadId nog toevoegen aan view
