@@ -6,6 +6,7 @@
 @{
     if (Session["RoleId"].ToString() == "1")
     {
+        <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
         @Html.Raw(ViewData["AsphaltMixPlant"].ToString())
         @Html.Raw(ViewData["Truck"].ToString())
         @Html.Raw(ViewData["Finisher"].ToString())

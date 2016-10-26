@@ -31,14 +31,14 @@ namespace RoadIt.Controllers
         public string GenerateTableTruck(RoadItEntities entities)//RoadId nog toevoegen aan view
         {
             var table = "<h3>Transport</h3>";
-            table += "<table class='table table-bordered table-hover table-inverse'><tr>";
-            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th><th>Location Transport (every 30 sec)</th><th>ETA</th><th>Arrival time at site</th><th>Time and location of attachment to finisher</th><th>Deattachment finisher position</th><th>Deattachment finisher time</th><th>Actual position(GPS) (return)</th><th>ETA* (return)</th><th>Arrival at plant</th><th>Unforeseen stop ( > 10 min)</th></tr>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th><th>Location Transport (every 30 sec)</th><th>ETA</th><th>Arrival time at site</th><th>Time and location of attachment to finisher</th><th>Time and location of deattachment finisher</th><th>Actual position(GPS) (return)</th><th>ETA* (return)</th><th>Arrival at plant</th><th>Unforeseen stop ( > 10 min)</th></tr>";
 
-            foreach (var item in entities.Transporters)
+            foreach (var item in entities.Truckers)
             {
-                if ("4" == Session["roadID"].ToString())
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
-                    table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + "</td><td>" + item.ETA + "</td><td>" + item.RealArrivalTime + "</td><td>" + "tabel vergeten in DB te plaatsen" + "</td><td>" + item.DeattachmentFinisherPosition + "</td><td>" + item.DeattachmentFinisherTime + "</td><td>" + item.ActualPositionReturn + "</td><td>" + item.ETAReturn + "</td><td>" + item.ArrivalAtPlant + "</td><td>" + item.UnforseenStop + "</td></tr>";
+                    table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + " " + item.ActualPositionTimeStamp + "</td><td>" + item.ETA + " " + item.ETATimeStamp + "</td><td>" + item.RealArrivalTime + "</td><td>" + item.AttachmentToFinisherPosition + " " + item.AttachmentToFinisherTime + "</td><td>" + item.DeattachmentFinisherPosition + " " + item.DeattachmentFinisherTime + "</td><td>" + item.ActualPositionReturn + " " + item.ActualPositionReturnTimeStamp + "</td><td>" + item.ETAReturn + " " + item.ETAReturnTimeStamp + "</td><td>" + item.ArrivalAtPlant + "</td><td>" + item.UnforseenStopLocation + " " + item.UnforseenStopTime + " " + item.UnforseenStopTimeStamp + "</td></tr>";
                 }
             }
 
@@ -51,14 +51,14 @@ namespace RoadIt.Controllers
         public string GenerateTableCompactor(RoadItEntities entities)// ID niet in view
         {
             var table = "<h3>Compactor</h3>";
-            table += "<table class='table table-bordered table-hover table-inverse'><tr>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
             table += "<th>Compactor QR code</th></tr>";
 
-            foreach (var item in entities.Transporters)
+            foreach (var item in entities.Truckers)
             {
-                if ("4" == Session["roadID"].ToString())
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
-                    table += "<tr><td><a href=" + "geen toegang maar wel recht op (view)" + ">link</a></tr>";
+                    table += "<tr><td><a href=" + item.QrCodeCompactor + ">link</a></tr>";
                 }
             }
 

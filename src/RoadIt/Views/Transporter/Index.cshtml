@@ -1,4 +1,4 @@
-﻿@model RoadIt.Models.Transporter
+﻿@model RoadIt.Models.Truck
 
 @{
     ViewBag.Title = "Transporter report";
@@ -8,6 +8,7 @@
 @{
     if (Session["RoleId"].ToString() == "3")
     {
+        <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
         @Html.Raw(ViewData["Truck"].ToString())
         @Html.Raw(ViewData["Compactor"].ToString())
     }

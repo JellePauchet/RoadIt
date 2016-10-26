@@ -27,33 +27,32 @@
     <EntitySet Name="Roles" EntityType="RoadItEntitiesModel.Store.Roles" store:Type="Tables" Schema="sammegf117_roadit" />
     <EntitySet Name="Silo" EntityType="RoadItEntitiesModel.Store.Silo" store:Type="Tables" Schema="sammegf117_roadit" />
     <EntitySet Name="SpeedFinisher" EntityType="RoadItEntitiesModel.Store.SpeedFinisher" store:Type="Tables" Schema="sammegf117_roadit" />
-    <EntitySet Name="Temp" EntityType="RoadItEntitiesModel.Store.Temp" store:Type="Tables" Schema="sammegf117_roadit" />
-    <EntitySet Name="Transport" EntityType="RoadItEntitiesModel.Store.Transport" store:Type="Tables" Schema="sammegf117_roadit" />
-    <EntitySet Name="TransportTemp" EntityType="RoadItEntitiesModel.Store.TransportTemp" store:Type="Tables" Schema="sammegf117_roadit" />
+    <EntitySet Name="Truck" EntityType="RoadItEntitiesModel.Store.Truck" store:Type="Tables" Schema="sammegf117_roadit" />
+    <EntitySet Name="TruckTemp" EntityType="RoadItEntitiesModel.Store.TruckTemp" store:Type="Tables" Schema="sammegf117_roadit" />
+    <EntitySet Name="UnforseenStop" EntityType="RoadItEntitiesModel.Store.UnforseenStop" store:Type="Tables" Schema="sammegf117_roadit" />
     <EntitySet Name="Users" EntityType="RoadItEntitiesModel.Store.Users" store:Type="Tables" Schema="sammegf117_roadit" />
+    <EntitySet Name="WeatherTemp" EntityType="RoadItEntitiesModel.Store.WeatherTemp" store:Type="Tables" Schema="sammegf117_roadit" />
     <EntitySet Name="Width" EntityType="RoadItEntitiesModel.Store.Width" store:Type="Tables" Schema="sammegf117_roadit" />
     <EntitySet Name="Wind" EntityType="RoadItEntitiesModel.Store.Wind" store:Type="Tables" Schema="sammegf117_roadit" />
     <EntitySet Name="AsphaltProcucer" EntityType="RoadItEntitiesModel.Store.AsphaltProcucer" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="AsphaltProcucer">
       <DefiningQuery>SELECT
+      `AsphaltProcucer`.`RoadId`, 
+      `AsphaltProcucer`.`RoadDescription`, 
       `AsphaltProcucer`.`TonPerDay`, 
       `AsphaltProcucer`.`TechnicalDataSheet`, 
       `AsphaltProcucer`.`MixtureName`, 
       `AsphaltProcucer`.`TypeOfAggregates`, 
       `AsphaltProcucer`.`MixtureChange`, 
-      `AsphaltProcucer`.`CentralId`, 
-      `AsphaltProcucer`.`AggregationId`, 
       `AsphaltProcucer`.`AggragationMaxTemp`, 
       `AsphaltProcucer`.`AggragationMinTemp`, 
       `AsphaltProcucer`.`AggragationTimeStamp`, 
-      `AsphaltProcucer`.`BitumenId`, 
       `AsphaltProcucer`.`BitumenMaxTemp`, 
       `AsphaltProcucer`.`BitumenMinTemp`, 
       `AsphaltProcucer`.`BitumenTimeStamp`, 
-      `AsphaltProcucer`.`ListRecupFillerId`, 
       `AsphaltProcucer`.`FillerRecup`, 
+      `AsphaltProcucer`.`FillerRecupTimeStamp`, 
       `AsphaltProcucer`.`MixingTemp`, 
       `AsphaltProcucer`.`MixingTime`, 
-      `AsphaltProcucer`.`RealCompositionId`, 
       `AsphaltProcucer`.`MassOfAggregationBunker1`, 
       `AsphaltProcucer`.`MassOfAggregationBunker2`, 
       `AsphaltProcucer`.`MassOfAggregationBunker3`, 
@@ -68,21 +67,25 @@
       `AsphaltProcucer`.`TruckLicensPlate`, 
       `AsphaltProcucer`.`DepartureTime`, 
       `AsphaltProcucer`.`MassTruck`, 
-      `AsphaltProcucer`.`ActualPositionId`, 
       `AsphaltProcucer`.`ActualPosition`, 
-      `AsphaltProcucer`.`ETAId`, 
+      `AsphaltProcucer`.`ActualPositionTimeStamp`, 
       `AsphaltProcucer`.`ETA`, 
+      `AsphaltProcucer`.`ETATimeStamp`, 
       `AsphaltProcucer`.`RealArrivalTime`, 
       `AsphaltProcucer`.`DeattachmentFinisherTime`, 
       `AsphaltProcucer`.`DeattachmentFinisherPosition`, 
-      `AsphaltProcucer`.`ActualPositionReturnId`, 
-      `AsphaltProcucer`.`ActualPositionReturn`, 
-      `AsphaltProcucer`.`ETAReturnId`, 
-      `AsphaltProcucer`.`ETAReturn`, 
-      `AsphaltProcucer`.`ArrivalAtPlant`, 
-      `AsphaltProcucer`.`UnforseenStop`, 
-      `AsphaltProcucer`.`ActualTempId`, 
+      `AsphaltProcucer`.`AttachmentToFinisherTime`, 
+      `AsphaltProcucer`.`AttachmentToFinisherPosition`, 
       `AsphaltProcucer`.`Temp`, 
+      `AsphaltProcucer`.`TempTruckTimeStamp`, 
+      `AsphaltProcucer`.`ActualPositionReturn`, 
+      `AsphaltProcucer`.`ActualPositionReturnTimeStamp`, 
+      `AsphaltProcucer`.`ETAReturn`, 
+      `AsphaltProcucer`.`ETAReturnTimeStamp`, 
+      `AsphaltProcucer`.`ArrivalAtPlant`, 
+      `AsphaltProcucer`.`UnforseenStopLocation`, 
+      `AsphaltProcucer`.`UnforseenStopTime`, 
+      `AsphaltProcucer`.`UnforseenStopTimeStamp`, 
       `AsphaltProcucer`.`QrCodeCompactor`, 
       `AsphaltProcucer`.`SamplesCopro`, 
       `AsphaltProcucer`.`ComplianceMixture`
@@ -98,36 +101,32 @@
       `Client`.`TruckLicensPlate`, 
       `Client`.`DepartureTime`, 
       `Client`.`MassTruck`, 
-      `Client`.`ActualPositionId`, 
       `Client`.`ActualPosition`, 
-      `Client`.`ETAId`, 
+      `Client`.`ActualPositionTimeStamp`, 
       `Client`.`ETA`, 
+      `Client`.`ETATimeStamp`, 
       `Client`.`RealArrivalTime`, 
-      `Client`.`SpeedId`, 
       `Client`.`FinisherSpeed`, 
-      `Client`.`AngleId`, 
+      `Client`.`SpeedFinisherTimeStamp`, 
       `Client`.`AngleLeft`, 
       `Client`.`AngleRight`, 
-      `Client`.`WidthId`, 
       `Client`.`Width`, 
-      `Client`.`ThicknessLayerId`, 
       `Client`.`ThicknessLeft`, 
       `Client`.`ThicknessMiddel`, 
       `Client`.`ThicknessRight`, 
       `Client`.`TranverseSlope`, 
-      `Client`.`LocationAndTimeSpanId`, 
       `Client`.`StopLocation`, 
       `Client`.`StopTime`, 
+      `Client`.`StopTimeStamp`, 
       `Client`.`Precipation`, 
-      `Client`.`TempId`, 
-      `Client`.`Temp`, 
-      `Client`.`WindId`, 
+      `Client`.`TempWeather`, 
+      `Client`.`WeatherTempTimeStamp`, 
       `Client`.`WindSpeed`, 
-      `Client`.`AirHumidityId`, 
+      `Client`.`WindTimeStamp`, 
       `Client`.`AirHumidity`, 
+      `Client`.`AirHumidityTimeStamp`, 
       `Client`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
       `Client`.`QrCodeCompactor`, 
-      `Client`.`ColorCodeId`, 
       `Client`.`GPSFinisher`, 
       `Client`.`GPSCompactor`, 
       `Client`.`ComplianceMixture`, 
@@ -140,90 +139,91 @@
       `Client`.`ExtraTestsAskedBijClient`
       FROM `Client` AS `Client`</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="ContractorView" EntityType="RoadItEntitiesModel.Store.ContractorView" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="ContractorView">
+    <EntitySet Name="ContractorVieuw" EntityType="RoadItEntitiesModel.Store.ContractorVieuw" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="ContractorVieuw">
       <DefiningQuery>SELECT
-      `ContractorView`.`LayerThickness`, 
-      `ContractorView`.`Surface`, 
-      `ContractorView`.`TonPerDay`, 
-      `ContractorView`.`TechnicalDataSheet`, 
-      `ContractorView`.`MixtureName`, 
-      `ContractorView`.`TruckLicensPlate`, 
-      `ContractorView`.`DepartureTime`, 
-      `ContractorView`.`MassTruck`, 
-      `ContractorView`.`ActualPositionId`, 
-      `ContractorView`.`ActualPosition`, 
-      `ContractorView`.`ETAId`, 
-      `ContractorView`.`ETA`, 
-      `ContractorView`.`RealArrivalTime`, 
-      `ContractorView`.`DeattachmentFinisherTime`, 
-      `ContractorView`.`DeattachmentFinisherPosition`, 
-      `ContractorView`.`ActualPositionReturnId`, 
-      `ContractorView`.`ActualPositionReturn`, 
-      `ContractorView`.`ETAReturnId`, 
-      `ContractorView`.`ETAReturn`, 
-      `ContractorView`.`ArrivalAtPlant`, 
-      `ContractorView`.`UnforseenStop`, 
-      `ContractorView`.`FinisherId`, 
-      `ContractorView`.`SpeedId`, 
-      `ContractorView`.`FinisherSpeed`, 
-      `ContractorView`.`AngleId`, 
-      `ContractorView`.`AngleLeft`, 
-      `ContractorView`.`AngleRight`, 
-      `ContractorView`.`WidthId`, 
-      `ContractorView`.`Width`, 
-      `ContractorView`.`ThicknessLayerId`, 
-      `ContractorView`.`ThicknessLeft`, 
-      `ContractorView`.`ThicknessMiddel`, 
-      `ContractorView`.`ThicknessRight`, 
-      `ContractorView`.`TranverseSlope`, 
-      `ContractorView`.`LocationAndTimeSpanId`, 
-      `ContractorView`.`StopLocation`, 
-      `ContractorView`.`StopTime`, 
-      `ContractorView`.`Precipation`, 
-      `ContractorView`.`TempId`, 
-      `ContractorView`.`Temp`, 
-      `ContractorView`.`WindId`, 
-      `ContractorView`.`WindSpeed`, 
-      `ContractorView`.`AirHumidityId`, 
-      `ContractorView`.`AirHumidity`, 
-      `ContractorView`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
-      `ContractorView`.`ComplianceMixture`, 
-      `ContractorView`.`SamplesCopro`, 
-      `ContractorView`.`DensityOfField`, 
-      `ContractorView`.`Cores`, 
-      `ContractorView`.`LengthwiseFlatness`, 
-      `ContractorView`.`Skidresistance`, 
-      `ContractorView`.`Iri`, 
-      `ContractorView`.`ExtraTestsAskedBijClient`, 
-      `ContractorView`.`QrCodeCompactor`, 
-      `ContractorView`.`NumberOfRollerCompactorPassages`, 
-      `ContractorView`.`LocationOfVibration`, 
-      `ContractorView`.`ColorCodeId`, 
-      `ContractorView`.`GPSFinisher`, 
-      `ContractorView`.`GPSCompactor`, 
-      `ContractorView`.`SpeedOfRollerCompactor`
-      FROM `ContractorView` AS `ContractorView`</DefiningQuery>
+      `ContractorVieuw`.`RoadId`, 
+      `ContractorVieuw`.`RoadDescription`, 
+      `ContractorVieuw`.`LayerThickness`, 
+      `ContractorVieuw`.`Surface`, 
+      `ContractorVieuw`.`TonPerDay`, 
+      `ContractorVieuw`.`TechnicalDataSheet`, 
+      `ContractorVieuw`.`MixtureName`, 
+      `ContractorVieuw`.`TruckLicensPlate`, 
+      `ContractorVieuw`.`DepartureTime`, 
+      `ContractorVieuw`.`MassTruck`, 
+      `ContractorVieuw`.`ActualPosition`, 
+      `ContractorVieuw`.`ActualPositionTimeStamp`, 
+      `ContractorVieuw`.`ETA`, 
+      `ContractorVieuw`.`ETATimeStamp`, 
+      `ContractorVieuw`.`RealArrivalTime`, 
+      `ContractorVieuw`.`DeattachmentFinisherTime`, 
+      `ContractorVieuw`.`DeattachmentFinisherPosition`, 
+      `ContractorVieuw`.`AttachmentToFinisherTime`, 
+      `ContractorVieuw`.`AttachmentToFinisherPosition`, 
+      `ContractorVieuw`.`Temp`, 
+      `ContractorVieuw`.`TempTruckTimeStamp`, 
+      `ContractorVieuw`.`ActualPositionReturn`, 
+      `ContractorVieuw`.`ActualPositionReturnTimeStamp`, 
+      `ContractorVieuw`.`ETAReturn`, 
+      `ContractorVieuw`.`ETAReturnTimeStamp`, 
+      `ContractorVieuw`.`ArrivalAtPlant`, 
+      `ContractorVieuw`.`UnforseenStopLocation`, 
+      `ContractorVieuw`.`UnforseenStopTime`, 
+      `ContractorVieuw`.`UnforseenStopTimeStamp`, 
+      `ContractorVieuw`.`FinisherSpeed`, 
+      `ContractorVieuw`.`SpeedFinisherTimeStamp`, 
+      `ContractorVieuw`.`AngleLeft`, 
+      `ContractorVieuw`.`AngleRight`, 
+      `ContractorVieuw`.`Width`, 
+      `ContractorVieuw`.`ThicknessLeft`, 
+      `ContractorVieuw`.`ThicknessMiddel`, 
+      `ContractorVieuw`.`ThicknessRight`, 
+      `ContractorVieuw`.`TranverseSlope`, 
+      `ContractorVieuw`.`StopLocation`, 
+      `ContractorVieuw`.`StopTime`, 
+      `ContractorVieuw`.`StopTimeStamp`, 
+      `ContractorVieuw`.`Precipation`, 
+      `ContractorVieuw`.`TempWeather`, 
+      `ContractorVieuw`.`WeatherTempTimeStamp`, 
+      `ContractorVieuw`.`WindSpeed`, 
+      `ContractorVieuw`.`WindTimeStamp`, 
+      `ContractorVieuw`.`AirHumidity`, 
+      `ContractorVieuw`.`AirHumidityTimeStamp`, 
+      `ContractorVieuw`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
+      `ContractorVieuw`.`QrCodeCompactor`, 
+      `ContractorVieuw`.`NumberOfRollerCompactorPassages`, 
+      `ContractorVieuw`.`LocationOfVibration`, 
+      `ContractorVieuw`.`GPSFinisher`, 
+      `ContractorVieuw`.`GPSCompactor`, 
+      `ContractorVieuw`.`SpeedOfRollerCompactor`, 
+      `ContractorVieuw`.`ComplianceMixture`, 
+      `ContractorVieuw`.`SamplesCopro`, 
+      `ContractorVieuw`.`DensityOfField`, 
+      `ContractorVieuw`.`Cores`, 
+      `ContractorVieuw`.`LengthwiseFlatness`, 
+      `ContractorVieuw`.`Skidresistance`, 
+      `ContractorVieuw`.`Iri`, 
+      `ContractorVieuw`.`ExtraTestsAskedBijClient`
+      FROM `ContractorVieuw` AS `ContractorVieuw`</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Copro" EntityType="RoadItEntitiesModel.Store.Copro" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Copro">
       <DefiningQuery>SELECT
+      `Copro`.`RoadId`, 
+      `Copro`.`RoadDescription`, 
       `Copro`.`TechnicalDataSheet`, 
       `Copro`.`MixtureName`, 
       `Copro`.`TypeOfAggregates`, 
       `Copro`.`MixtureChange`, 
-      `Copro`.`CentralId`, 
-      `Copro`.`AggregationId`, 
       `Copro`.`AggragationMaxTemp`, 
       `Copro`.`AggragationMinTemp`, 
       `Copro`.`AggragationTimeStamp`, 
-      `Copro`.`BitumenId`, 
       `Copro`.`BitumenMaxTemp`, 
       `Copro`.`BitumenMinTemp`, 
       `Copro`.`BitumenTimeStamp`, 
-      `Copro`.`ListRecupFillerId`, 
       `Copro`.`FillerRecup`, 
+      `Copro`.`FillerRecupTimeStamp`, 
       `Copro`.`MixingTemp`, 
       `Copro`.`MixingTime`, 
-      `Copro`.`RealCompositionId`, 
       `Copro`.`MassOfAggregationBunker1`, 
       `Copro`.`MassOfAggregationBunker2`, 
       `Copro`.`MassOfAggregationBunker3`, 
@@ -238,36 +238,44 @@
       `Copro`.`TruckLicensPlate`, 
       `Copro`.`DepartureTime`, 
       `Copro`.`MassTruck`, 
-      `Copro`.`ActualTempId`, 
       `Copro`.`Temp`, 
-      `Copro`.`FinisherId`, 
+      `Copro`.`TempTruckTimeStamp`, 
       `Copro`.`QrCodeCompactor`, 
       `Copro`.`SamplesCopro`, 
       `Copro`.`ExtraTestsAskedBijClient`
       FROM `Copro` AS `Copro`</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="Transporter" EntityType="RoadItEntitiesModel.Store.Transporter" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Transporter">
+    <EntitySet Name="Trucker" EntityType="RoadItEntitiesModel.Store.Trucker" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Trucker">
       <DefiningQuery>SELECT
-      `Transporter`.`TruckLicensPlate`, 
-      `Transporter`.`DepartureTime`, 
-      `Transporter`.`MassTruck`, 
-      `Transporter`.`ActualPositionId`, 
-      `Transporter`.`ActualPosition`, 
-      `Transporter`.`ETAId`, 
-      `Transporter`.`ETA`, 
-      `Transporter`.`RealArrivalTime`, 
-      `Transporter`.`DeattachmentFinisherTime`, 
-      `Transporter`.`DeattachmentFinisherPosition`, 
-      `Transporter`.`ActualPositionReturnId`, 
-      `Transporter`.`ActualPositionReturn`, 
-      `Transporter`.`ETAReturnId`, 
-      `Transporter`.`ETAReturn`, 
-      `Transporter`.`ArrivalAtPlant`, 
-      `Transporter`.`UnforseenStop`
-      FROM `Transporter` AS `Transporter`</DefiningQuery>
+      `Trucker`.`RoadId`, 
+      `Trucker`.`RoadDescription`, 
+      `Trucker`.`TruckLicensPlate`, 
+      `Trucker`.`DepartureTime`, 
+      `Trucker`.`MassTruck`, 
+      `Trucker`.`ActualPosition`, 
+      `Trucker`.`ActualPositionTimeStamp`, 
+      `Trucker`.`ETA`, 
+      `Trucker`.`ETATimeStamp`, 
+      `Trucker`.`RealArrivalTime`, 
+      `Trucker`.`DeattachmentFinisherTime`, 
+      `Trucker`.`DeattachmentFinisherPosition`, 
+      `Trucker`.`AttachmentToFinisherTime`, 
+      `Trucker`.`AttachmentToFinisherPosition`, 
+      `Trucker`.`ActualPositionReturn`, 
+      `Trucker`.`ActualPositionReturnTimeStamp`, 
+      `Trucker`.`ETAReturn`, 
+      `Trucker`.`ETAReturnTimeStamp`, 
+      `Trucker`.`ArrivalAtPlant`, 
+      `Trucker`.`UnforseenStopLocation`, 
+      `Trucker`.`UnforseenStopTime`, 
+      `Trucker`.`UnforseenStopTimeStamp`, 
+      `Trucker`.`QrCodeCompactor`
+      FROM `Trucker` AS `Trucker`</DefiningQuery>
     </EntitySet>
     <EntitySet Name="UA" EntityType="RoadItEntitiesModel.Store.UA" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="UA">
       <DefiningQuery>SELECT
+      `UA`.`RoadId`, 
+      `UA`.`RoadDescription`, 
       `UA`.`LayerThickness`, 
       `UA`.`Surface`, 
       `UA`.`TonPerDay`, 
@@ -275,20 +283,16 @@
       `UA`.`MixtureName`, 
       `UA`.`TypeOfAggregates`, 
       `UA`.`MixtureChange`, 
-      `UA`.`CentralId`, 
-      `UA`.`AggregationId`, 
       `UA`.`AggragationMaxTemp`, 
       `UA`.`AggragationMinTemp`, 
       `UA`.`AggragationTimeStamp`, 
-      `UA`.`BitumenId`, 
       `UA`.`BitumenMaxTemp`, 
       `UA`.`BitumenMinTemp`, 
       `UA`.`BitumenTimeStamp`, 
-      `UA`.`ListRecupFillerId`, 
       `UA`.`FillerRecup`, 
+      `UA`.`FillerRecupTimeStamp`, 
       `UA`.`MixingTemp`, 
       `UA`.`MixingTime`, 
-      `UA`.`RealCompositionId`, 
       `UA`.`MassOfAggregationBunker1`, 
       `UA`.`MassOfAggregationBunker2`, 
       `UA`.`MassOfAggregationBunker3`, 
@@ -303,47 +307,48 @@
       `UA`.`TruckLicensPlate`, 
       `UA`.`DepartureTime`, 
       `UA`.`MassTruck`, 
-      `UA`.`ActualPositionId`, 
       `UA`.`ActualPosition`, 
-      `UA`.`ETAId`, 
+      `UA`.`ActualPositionTimeStamp`, 
       `UA`.`ETA`, 
+      `UA`.`ETATimeStamp`, 
       `UA`.`RealArrivalTime`, 
       `UA`.`DeattachmentFinisherTime`, 
       `UA`.`DeattachmentFinisherPosition`, 
-      `UA`.`ActualPositionReturnId`, 
+      `UA`.`AttachmentToFinisherTime`, 
+      `UA`.`AttachmentToFinisherPosition`, 
+      `UA`.`Temp`, 
+      `UA`.`TempTruckTimeStamp`, 
       `UA`.`ActualPositionReturn`, 
-      `UA`.`ETAReturnId`, 
+      `UA`.`ActualPositionReturnTimeStamp`, 
       `UA`.`ETAReturn`, 
+      `UA`.`ETAReturnTimeStamp`, 
       `UA`.`ArrivalAtPlant`, 
-      `UA`.`UnforseenStop`, 
-      `UA`.`FinisherId`, 
-      `UA`.`SpeedId`, 
+      `UA`.`UnforseenStopLocation`, 
+      `UA`.`UnforseenStopTime`, 
+      `UA`.`UnforseenStopTimeStamp`, 
       `UA`.`FinisherSpeed`, 
-      `UA`.`AngleId`, 
+      `UA`.`SpeedFinisherTimeStamp`, 
       `UA`.`AngleLeft`, 
       `UA`.`AngleRight`, 
-      `UA`.`WidthId`, 
       `UA`.`Width`, 
-      `UA`.`ThicknessLayerId`, 
       `UA`.`ThicknessLeft`, 
       `UA`.`ThicknessMiddel`, 
       `UA`.`ThicknessRight`, 
       `UA`.`TranverseSlope`, 
-      `UA`.`LocationAndTimeSpanId`, 
       `UA`.`StopLocation`, 
       `UA`.`StopTime`, 
+      `UA`.`StopTimeStamp`, 
       `UA`.`Precipation`, 
-      `UA`.`TempId`, 
-      `UA`.`Temp`, 
-      `UA`.`WindId`, 
+      `UA`.`TempWeather`, 
+      `UA`.`WeatherTempTimeStamp`, 
       `UA`.`WindSpeed`, 
-      `UA`.`AirHumidityId`, 
+      `UA`.`WindTimeStamp`, 
       `UA`.`AirHumidity`, 
+      `UA`.`AirHumidityTimeStamp`, 
       `UA`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
       `UA`.`QrCodeCompactor`, 
       `UA`.`NumberOfRollerCompactorPassages`, 
       `UA`.`LocationOfVibration`, 
-      `UA`.`ColorCodeId`, 
       `UA`.`GPSFinisher`, 
       `UA`.`GPSCompactor`, 
       `UA`.`SpeedOfRollerCompactor`, 
@@ -366,7 +371,11 @@
       <End Role="BatchList" EntitySet="BatchList" />
     </AssociationSet>
     <AssociationSet Name="BatchList_ibfk_3" Association="RoadItEntitiesModel.Store.BatchList_ibfk_3">
-      <End Role="Transport" EntitySet="Transport" />
+      <End Role="Truck" EntitySet="Truck" />
+      <End Role="BatchList" EntitySet="BatchList" />
+    </AssociationSet>
+    <AssociationSet Name="BatchList_ibfk_4" Association="RoadItEntitiesModel.Store.BatchList_ibfk_4">
+      <End Role="Finisher" EntitySet="Finisher" />
       <End Role="BatchList" EntitySet="BatchList" />
     </AssociationSet>
     <AssociationSet Name="Compactor_ibfk_1" Association="RoadItEntitiesModel.Store.Compactor_ibfk_1">
@@ -398,7 +407,7 @@
       <End Role="Finisher" EntitySet="Finisher" />
     </AssociationSet>
     <AssociationSet Name="Finisher_ibfk_5" Association="RoadItEntitiesModel.Store.Finisher_ibfk_5">
-      <End Role="Temp" EntitySet="Temp" />
+      <End Role="WeatherTemp" EntitySet="WeatherTemp" />
       <End Role="Finisher" EntitySet="Finisher" />
     </AssociationSet>
     <AssociationSet Name="Finisher_ibfk_6" Association="RoadItEntitiesModel.Store.Finisher_ibfk_6">
@@ -449,29 +458,29 @@
       <End Role="Composition" EntitySet="Composition" />
       <End Role="Silo" EntitySet="Silo" />
     </AssociationSet>
-    <AssociationSet Name="Transport_ibfk_2" Association="RoadItEntitiesModel.Store.Transport_ibfk_2">
-      <End Role="Finisher" EntitySet="Finisher" />
-      <End Role="Transport" EntitySet="Transport" />
-    </AssociationSet>
-    <AssociationSet Name="Transport_ibfk_3" Association="RoadItEntitiesModel.Store.Transport_ibfk_3">
+    <AssociationSet Name="Truck_ibfk_3" Association="RoadItEntitiesModel.Store.Truck_ibfk_3">
       <End Role="ActualPosition" EntitySet="ActualPosition" />
-      <End Role="Transport" EntitySet="Transport" />
+      <End Role="Truck" EntitySet="Truck" />
     </AssociationSet>
-    <AssociationSet Name="Transport_ibfk_4" Association="RoadItEntitiesModel.Store.Transport_ibfk_4">
+    <AssociationSet Name="Truck_ibfk_4" Association="RoadItEntitiesModel.Store.Truck_ibfk_4">
       <End Role="ETA" EntitySet="ETA" />
-      <End Role="Transport" EntitySet="Transport" />
+      <End Role="Truck" EntitySet="Truck" />
     </AssociationSet>
-    <AssociationSet Name="Transport_ibfk_5" Association="RoadItEntitiesModel.Store.Transport_ibfk_5">
+    <AssociationSet Name="Truck_ibfk_5" Association="RoadItEntitiesModel.Store.Truck_ibfk_5">
       <End Role="ActualPositionReturn" EntitySet="ActualPositionReturn" />
-      <End Role="Transport" EntitySet="Transport" />
+      <End Role="Truck" EntitySet="Truck" />
     </AssociationSet>
-    <AssociationSet Name="Transport_ibfk_6" Association="RoadItEntitiesModel.Store.Transport_ibfk_6">
+    <AssociationSet Name="Truck_ibfk_6" Association="RoadItEntitiesModel.Store.Truck_ibfk_6">
       <End Role="ETAReturn" EntitySet="ETAReturn" />
-      <End Role="Transport" EntitySet="Transport" />
+      <End Role="Truck" EntitySet="Truck" />
     </AssociationSet>
-    <AssociationSet Name="Transport_ibfk_7" Association="RoadItEntitiesModel.Store.Transport_ibfk_7">
-      <End Role="TransportTemp" EntitySet="TransportTemp" />
-      <End Role="Transport" EntitySet="Transport" />
+    <AssociationSet Name="Truck_ibfk_7" Association="RoadItEntitiesModel.Store.Truck_ibfk_7">
+      <End Role="TruckTemp" EntitySet="TruckTemp" />
+      <End Role="Truck" EntitySet="Truck" />
+    </AssociationSet>
+    <AssociationSet Name="Truck_ibfk_8" Association="RoadItEntitiesModel.Store.Truck_ibfk_8">
+      <End Role="UnforseenStop" EntitySet="UnforseenStop" />
+      <End Role="Truck" EntitySet="Truck" />
     </AssociationSet>
     <AssociationSet Name="Users_ibfk_1" Association="RoadItEntitiesModel.Store.Users_ibfk_1">
       <End Role="Roles" EntitySet="Roles" />
@@ -484,6 +493,7 @@
     </Key>
     <Property Name="ActualPositionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="ActualPositionReturn">
     <Key>
@@ -491,6 +501,7 @@
     </Key>
     <Property Name="ActualPositionReturnId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Aggragation">
     <Key>
@@ -507,6 +518,7 @@
     </Key>
     <Property Name="AirHumidityId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="AirHumidity" Type="int" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Angle">
     <Key>
@@ -532,7 +544,8 @@
     </Key>
     <Property Name="AsphaltTempId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="GPS" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="Temp" Type="int" Nullable="false" />
+    <Property Name="TempAsphalt" Type="int" Nullable="false" />
+    <Property Name="AsphaltTempTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="BatchList">
     <Key>
@@ -541,7 +554,8 @@
     <Property Name="BatchId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ProjectId" Type="int" Nullable="false" />
     <Property Name="SiloId" Type="int" Nullable="false" />
-    <Property Name="TransportId" Type="int" Nullable="false" />
+    <Property Name="TruckId" Type="int" Nullable="false" />
+    <Property Name="FinisherId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Bitumen">
     <Key>
@@ -600,6 +614,7 @@
     </Key>
     <Property Name="ETAId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ETA" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="ETAReturn">
     <Key>
@@ -607,6 +622,7 @@
     </Key>
     <Property Name="ETAReturnId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ETA" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETAReturnTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Finisher">
     <Key>
@@ -641,6 +657,7 @@
     </Key>
     <Property Name="ListFillerRecupId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="FillerRecup" Type="int" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="LocationAndTimeSpan">
     <Key>
@@ -649,6 +666,7 @@
     <Property Name="LocationAndTimeSpanId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="StopLocation" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="StopTime" Type="time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Planning">
     <Key>
@@ -717,40 +735,45 @@
     </Key>
     <Property Name="SpeedId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Speed" Type="int" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
-  <EntityType Name="Temp">
+  <EntityType Name="Truck">
     <Key>
-      <PropertyRef Name="TempId" />
+      <PropertyRef Name="TruckId" />
     </Key>
-    <Property Name="TempId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Temp" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Transport">
-    <Key>
-      <PropertyRef Name="TransportId" />
-    </Key>
-    <Property Name="TransportId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="FinisherId" Type="int" Nullable="false" />
+    <Property Name="TruckId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
     <Property Name="ActualPositionId" Type="int" Nullable="false" />
     <Property Name="ETAId" Type="int" Nullable="false" />
-    <Property Name="ActualTempId" Type="int" Nullable="false" />
+    <Property Name="TruckTempId" Type="int" Nullable="false" />
     <Property Name="RealArrivalTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="ActualPositionReturnId" Type="int" Nullable="false" />
     <Property Name="ETAReturnId" Type="int" Nullable="false" />
     <Property Name="ArrivalAtPlant" Type="timestamp" Nullable="false" />
-    <Property Name="UnforseenStop" Type="int" Nullable="false" />
+    <Property Name="UnforseenStopId" Type="int" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="timestamp" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
   </EntityType>
-  <EntityType Name="TransportTemp">
+  <EntityType Name="TruckTemp">
     <Key>
-      <PropertyRef Name="ActualTempId" />
+      <PropertyRef Name="TruckTempId" />
     </Key>
-    <Property Name="ActualTempId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TruckTempId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Temp" Type="int" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="UnforseenStop">
+    <Key>
+      <PropertyRef Name="UnforseenStopId" />
+    </Key>
+    <Property Name="UnforseenStopId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StopLocation" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="StopTime" Type="time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -761,6 +784,14 @@
     <Property Name="Password" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="RoleId" Type="int" Nullable="false" />
     <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WeatherTemp">
+    <Key>
+      <PropertyRef Name="TempId" />
+    </Key>
+    <Property Name="TempId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TempWeather" Type="int" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Width">
     <Key>
@@ -775,31 +806,30 @@
     </Key>
     <Property Name="WindId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="WindSpeed" Type="int" Nullable="false" />
+    <Property Name="WindTimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.AsphaltProcucer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
   <EntityType Name="AsphaltProcucer">
     <Key>
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="TonPerDay" />
       <PropertyRef Name="TechnicalDataSheet" />
       <PropertyRef Name="MixtureName" />
       <PropertyRef Name="TypeOfAggregates" />
       <PropertyRef Name="MixtureChange" />
-      <PropertyRef Name="CentralId" />
-      <PropertyRef Name="AggregationId" />
       <PropertyRef Name="AggragationMaxTemp" />
       <PropertyRef Name="AggragationMinTemp" />
       <PropertyRef Name="AggragationTimeStamp" />
-      <PropertyRef Name="BitumenId" />
       <PropertyRef Name="BitumenMaxTemp" />
       <PropertyRef Name="BitumenMinTemp" />
       <PropertyRef Name="BitumenTimeStamp" />
-      <PropertyRef Name="ListRecupFillerId" />
       <PropertyRef Name="FillerRecup" />
+      <PropertyRef Name="FillerRecupTimeStamp" />
       <PropertyRef Name="MixingTemp" />
       <PropertyRef Name="MixingTime" />
-      <PropertyRef Name="RealCompositionId" />
       <PropertyRef Name="MassOfAggregationBunker1" />
       <PropertyRef Name="MassOfAggregationBunker2" />
       <PropertyRef Name="MassOfAggregationBunker3" />
@@ -814,44 +844,46 @@
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPositionId" />
       <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ETAId" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="RealArrivalTime" />
       <PropertyRef Name="DeattachmentFinisherTime" />
       <PropertyRef Name="DeattachmentFinisherPosition" />
-      <PropertyRef Name="ActualPositionReturnId" />
-      <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ETAReturnId" />
-      <PropertyRef Name="ETAReturn" />
-      <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStop" />
-      <PropertyRef Name="ActualTempId" />
+      <PropertyRef Name="AttachmentToFinisherTime" />
+      <PropertyRef Name="AttachmentToFinisherPosition" />
       <PropertyRef Name="Temp" />
+      <PropertyRef Name="TempTruckTimeStamp" />
+      <PropertyRef Name="ActualPositionReturn" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
+      <PropertyRef Name="ETAReturn" />
+      <PropertyRef Name="ETAReturnTimeStamp" />
+      <PropertyRef Name="ArrivalAtPlant" />
+      <PropertyRef Name="UnforseenStopLocation" />
+      <PropertyRef Name="UnforseenStopTime" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
       <PropertyRef Name="QrCodeCompactor" />
       <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="ComplianceMixture" />
     </Key>
+    <Property Name="RoadId" Type="int" Nullable="false" />
+    <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="TonPerDay" Type="int" Nullable="false" />
     <Property Name="TechnicalDataSheet" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="TypeOfAggregates" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="MixtureChange" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="CentralId" Type="int" Nullable="false" />
-    <Property Name="AggregationId" Type="int" Nullable="false" />
     <Property Name="AggragationMaxTemp" Type="int" Nullable="false" />
     <Property Name="AggragationMinTemp" Type="int" Nullable="false" />
     <Property Name="AggragationTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="BitumenId" Type="int" Nullable="false" />
     <Property Name="BitumenMaxTemp" Type="int" Nullable="false" />
     <Property Name="BitumenMinTemp" Type="int" Nullable="false" />
     <Property Name="BitumenTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="ListRecupFillerId" Type="int" Nullable="false" />
     <Property Name="FillerRecup" Type="int" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="MixingTemp" Type="int" Nullable="false" />
     <Property Name="MixingTime" Type="time" Nullable="false" />
-    <Property Name="RealCompositionId" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker1" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker2" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker3" Type="int" Nullable="false" />
@@ -866,21 +898,25 @@
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
-    <Property Name="ActualPositionId" Type="int" Nullable="false" />
     <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETA" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="RealArrivalTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ActualPositionReturnId" Type="int" Nullable="false" />
-    <Property Name="ActualPositionReturn" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAReturnId" Type="int" Nullable="false" />
-    <Property Name="ETAReturn" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ArrivalAtPlant" Type="timestamp" Nullable="false" />
-    <Property Name="UnforseenStop" Type="int" Nullable="false" />
-    <Property Name="ActualTempId" Type="int" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="timestamp" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="Temp" Type="int" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="ActualPositionReturn" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="ETAReturn" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETAReturnTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="ArrivalAtPlant" Type="timestamp" Nullable="false" />
+    <Property Name="UnforseenStopLocation" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="UnforseenStopTime" Type="time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="SamplesCopro" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="ComplianceMixture" Type="varchar" Nullable="false" MaxLength="255" />
@@ -898,36 +934,32 @@
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPositionId" />
       <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ETAId" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="RealArrivalTime" />
-      <PropertyRef Name="SpeedId" />
       <PropertyRef Name="FinisherSpeed" />
-      <PropertyRef Name="AngleId" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
       <PropertyRef Name="AngleLeft" />
       <PropertyRef Name="AngleRight" />
-      <PropertyRef Name="WidthId" />
       <PropertyRef Name="Width" />
-      <PropertyRef Name="ThicknessLayerId" />
       <PropertyRef Name="ThicknessLeft" />
       <PropertyRef Name="ThicknessMiddel" />
       <PropertyRef Name="ThicknessRight" />
       <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="LocationAndTimeSpanId" />
       <PropertyRef Name="StopLocation" />
       <PropertyRef Name="StopTime" />
+      <PropertyRef Name="StopTimeStamp" />
       <PropertyRef Name="Precipation" />
-      <PropertyRef Name="TempId" />
-      <PropertyRef Name="Temp" />
-      <PropertyRef Name="WindId" />
+      <PropertyRef Name="TempWeather" />
+      <PropertyRef Name="WeatherTempTimeStamp" />
       <PropertyRef Name="WindSpeed" />
-      <PropertyRef Name="AirHumidityId" />
+      <PropertyRef Name="WindTimeStamp" />
       <PropertyRef Name="AirHumidity" />
+      <PropertyRef Name="AirHumidityTimeStamp" />
       <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
       <PropertyRef Name="QrCodeCompactor" />
-      <PropertyRef Name="ColorCodeId" />
       <PropertyRef Name="GPSFinisher" />
       <PropertyRef Name="GPSCompactor" />
       <PropertyRef Name="ComplianceMixture" />
@@ -947,36 +979,32 @@
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
-    <Property Name="ActualPositionId" Type="int" Nullable="false" />
     <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETA" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="RealArrivalTime" Type="timestamp" Nullable="false" />
-    <Property Name="SpeedId" Type="int" Nullable="false" />
     <Property Name="FinisherSpeed" Type="int" Nullable="false" />
-    <Property Name="AngleId" Type="int" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AngleLeft" Type="int" Nullable="false" />
     <Property Name="AngleRight" Type="int" Nullable="false" />
-    <Property Name="WidthId" Type="int" Nullable="false" />
     <Property Name="Width" Type="int" Nullable="false" />
-    <Property Name="ThicknessLayerId" Type="int" Nullable="false" />
     <Property Name="ThicknessLeft" Type="int" Nullable="false" />
     <Property Name="ThicknessMiddel" Type="int" Nullable="false" />
     <Property Name="ThicknessRight" Type="int" Nullable="false" />
     <Property Name="TranverseSlope" Type="int" Nullable="false" />
-    <Property Name="LocationAndTimeSpanId" Type="int" Nullable="false" />
     <Property Name="StopLocation" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="StopTime" Type="time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="Precipation" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TempId" Type="int" Nullable="false" />
-    <Property Name="Temp" Type="int" Nullable="false" />
-    <Property Name="WindId" Type="int" Nullable="false" />
+    <Property Name="TempWeather" Type="int" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="WindSpeed" Type="int" Nullable="false" />
-    <Property Name="AirHumidityId" Type="int" Nullable="false" />
+    <Property Name="WindTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AirHumidity" Type="int" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ColorCodeId" Type="int" Nullable="false" />
     <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="GPSCompactor" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="ComplianceMixture" Type="varchar" Nullable="false" MaxLength="255" />
@@ -989,10 +1017,12 @@
     <Property Name="ExtraTestsAskedBijClient" Type="varchar" Nullable="false" MaxLength="255" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'def.sammegf117_roadit.ContractorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'def.sammegf117_roadit.ContractorVieuw' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
-  <EntityType Name="ContractorView">
+  <EntityType Name="ContractorVieuw">
     <Key>
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="LayerThickness" />
       <PropertyRef Name="Surface" />
       <PropertyRef Name="TonPerDay" />
@@ -1001,43 +1031,51 @@
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPositionId" />
       <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ETAId" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="RealArrivalTime" />
       <PropertyRef Name="DeattachmentFinisherTime" />
       <PropertyRef Name="DeattachmentFinisherPosition" />
-      <PropertyRef Name="ActualPositionReturnId" />
+      <PropertyRef Name="AttachmentToFinisherTime" />
+      <PropertyRef Name="AttachmentToFinisherPosition" />
+      <PropertyRef Name="Temp" />
+      <PropertyRef Name="TempTruckTimeStamp" />
       <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ETAReturnId" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
       <PropertyRef Name="ETAReturn" />
+      <PropertyRef Name="ETAReturnTimeStamp" />
       <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStop" />
-      <PropertyRef Name="FinisherId" />
-      <PropertyRef Name="SpeedId" />
+      <PropertyRef Name="UnforseenStopLocation" />
+      <PropertyRef Name="UnforseenStopTime" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
       <PropertyRef Name="FinisherSpeed" />
-      <PropertyRef Name="AngleId" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
       <PropertyRef Name="AngleLeft" />
       <PropertyRef Name="AngleRight" />
-      <PropertyRef Name="WidthId" />
       <PropertyRef Name="Width" />
-      <PropertyRef Name="ThicknessLayerId" />
       <PropertyRef Name="ThicknessLeft" />
       <PropertyRef Name="ThicknessMiddel" />
       <PropertyRef Name="ThicknessRight" />
       <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="LocationAndTimeSpanId" />
       <PropertyRef Name="StopLocation" />
       <PropertyRef Name="StopTime" />
+      <PropertyRef Name="StopTimeStamp" />
       <PropertyRef Name="Precipation" />
-      <PropertyRef Name="TempId" />
-      <PropertyRef Name="Temp" />
-      <PropertyRef Name="WindId" />
+      <PropertyRef Name="TempWeather" />
+      <PropertyRef Name="WeatherTempTimeStamp" />
       <PropertyRef Name="WindSpeed" />
-      <PropertyRef Name="AirHumidityId" />
+      <PropertyRef Name="WindTimeStamp" />
       <PropertyRef Name="AirHumidity" />
+      <PropertyRef Name="AirHumidityTimeStamp" />
       <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
+      <PropertyRef Name="QrCodeCompactor" />
+      <PropertyRef Name="NumberOfRollerCompactorPassages" />
+      <PropertyRef Name="LocationOfVibration" />
+      <PropertyRef Name="GPSFinisher" />
+      <PropertyRef Name="GPSCompactor" />
+      <PropertyRef Name="SpeedOfRollerCompactor" />
       <PropertyRef Name="ComplianceMixture" />
       <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="DensityOfField" />
@@ -1046,14 +1084,9 @@
       <PropertyRef Name="Skidresistance" />
       <PropertyRef Name="Iri" />
       <PropertyRef Name="ExtraTestsAskedBijClient" />
-      <PropertyRef Name="QrCodeCompactor" />
-      <PropertyRef Name="NumberOfRollerCompactorPassages" />
-      <PropertyRef Name="LocationOfVibration" />
-      <PropertyRef Name="ColorCodeId" />
-      <PropertyRef Name="GPSFinisher" />
-      <PropertyRef Name="GPSCompactor" />
-      <PropertyRef Name="SpeedOfRollerCompactor" />
     </Key>
+    <Property Name="RoadId" Type="int" Nullable="false" />
+    <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="LayerThickness" Type="int" Nullable="false" />
     <Property Name="Surface" Type="int" Nullable="false" />
     <Property Name="TonPerDay" Type="int" Nullable="false" />
@@ -1062,43 +1095,51 @@
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
-    <Property Name="ActualPositionId" Type="int" Nullable="false" />
     <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETA" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="RealArrivalTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ActualPositionReturnId" Type="int" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="timestamp" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Temp" Type="int" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ActualPositionReturn" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAReturnId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETAReturn" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETAReturnTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ArrivalAtPlant" Type="timestamp" Nullable="false" />
-    <Property Name="UnforseenStop" Type="int" Nullable="false" />
-    <Property Name="FinisherId" Type="int" Nullable="false" />
-    <Property Name="SpeedId" Type="int" Nullable="false" />
+    <Property Name="UnforseenStopLocation" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="UnforseenStopTime" Type="time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="FinisherSpeed" Type="int" Nullable="false" />
-    <Property Name="AngleId" Type="int" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AngleLeft" Type="int" Nullable="false" />
     <Property Name="AngleRight" Type="int" Nullable="false" />
-    <Property Name="WidthId" Type="int" Nullable="false" />
     <Property Name="Width" Type="int" Nullable="false" />
-    <Property Name="ThicknessLayerId" Type="int" Nullable="false" />
     <Property Name="ThicknessLeft" Type="int" Nullable="false" />
     <Property Name="ThicknessMiddel" Type="int" Nullable="false" />
     <Property Name="ThicknessRight" Type="int" Nullable="false" />
     <Property Name="TranverseSlope" Type="int" Nullable="false" />
-    <Property Name="LocationAndTimeSpanId" Type="int" Nullable="false" />
     <Property Name="StopLocation" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="StopTime" Type="time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="Precipation" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TempId" Type="int" Nullable="false" />
-    <Property Name="Temp" Type="int" Nullable="false" />
-    <Property Name="WindId" Type="int" Nullable="false" />
+    <Property Name="TempWeather" Type="int" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="WindSpeed" Type="int" Nullable="false" />
-    <Property Name="AirHumidityId" Type="int" Nullable="false" />
+    <Property Name="WindTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AirHumidity" Type="int" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="NumberOfRollerCompactorPassages" Type="int" Nullable="false" />
+    <Property Name="LocationOfVibration" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="GPSCompactor" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="SpeedOfRollerCompactor" Type="int" Nullable="false" />
     <Property Name="ComplianceMixture" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="SamplesCopro" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DensityOfField" Type="varchar" Nullable="false" MaxLength="255" />
@@ -1107,37 +1148,28 @@
     <Property Name="Skidresistance" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="Iri" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="ExtraTestsAskedBijClient" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="NumberOfRollerCompactorPassages" Type="int" Nullable="false" />
-    <Property Name="LocationOfVibration" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ColorCodeId" Type="int" Nullable="false" />
-    <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="GPSCompactor" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="SpeedOfRollerCompactor" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.Copro' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
   <EntityType Name="Copro">
     <Key>
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="TechnicalDataSheet" />
       <PropertyRef Name="MixtureName" />
       <PropertyRef Name="TypeOfAggregates" />
       <PropertyRef Name="MixtureChange" />
-      <PropertyRef Name="CentralId" />
-      <PropertyRef Name="AggregationId" />
       <PropertyRef Name="AggragationMaxTemp" />
       <PropertyRef Name="AggragationMinTemp" />
       <PropertyRef Name="AggragationTimeStamp" />
-      <PropertyRef Name="BitumenId" />
       <PropertyRef Name="BitumenMaxTemp" />
       <PropertyRef Name="BitumenMinTemp" />
       <PropertyRef Name="BitumenTimeStamp" />
-      <PropertyRef Name="ListRecupFillerId" />
       <PropertyRef Name="FillerRecup" />
+      <PropertyRef Name="FillerRecupTimeStamp" />
       <PropertyRef Name="MixingTemp" />
       <PropertyRef Name="MixingTime" />
-      <PropertyRef Name="RealCompositionId" />
       <PropertyRef Name="MassOfAggregationBunker1" />
       <PropertyRef Name="MassOfAggregationBunker2" />
       <PropertyRef Name="MassOfAggregationBunker3" />
@@ -1152,31 +1184,28 @@
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualTempId" />
       <PropertyRef Name="Temp" />
-      <PropertyRef Name="FinisherId" />
+      <PropertyRef Name="TempTruckTimeStamp" />
       <PropertyRef Name="QrCodeCompactor" />
       <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="ExtraTestsAskedBijClient" />
     </Key>
+    <Property Name="RoadId" Type="int" Nullable="false" />
+    <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="TechnicalDataSheet" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="TypeOfAggregates" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="MixtureChange" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="CentralId" Type="int" Nullable="false" />
-    <Property Name="AggregationId" Type="int" Nullable="false" />
     <Property Name="AggragationMaxTemp" Type="int" Nullable="false" />
     <Property Name="AggragationMinTemp" Type="int" Nullable="false" />
     <Property Name="AggragationTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="BitumenId" Type="int" Nullable="false" />
     <Property Name="BitumenMaxTemp" Type="int" Nullable="false" />
     <Property Name="BitumenMinTemp" Type="int" Nullable="false" />
     <Property Name="BitumenTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="ListRecupFillerId" Type="int" Nullable="false" />
     <Property Name="FillerRecup" Type="int" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="MixingTemp" Type="int" Nullable="false" />
     <Property Name="MixingTime" Type="time" Nullable="false" />
-    <Property Name="RealCompositionId" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker1" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker2" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker3" Type="int" Nullable="false" />
@@ -1191,57 +1220,72 @@
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
-    <Property Name="ActualTempId" Type="int" Nullable="false" />
     <Property Name="Temp" Type="int" Nullable="false" />
-    <Property Name="FinisherId" Type="int" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="SamplesCopro" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="ExtraTestsAskedBijClient" Type="varchar" Nullable="false" MaxLength="255" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'def.sammegf117_roadit.Transporter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'def.sammegf117_roadit.Trucker' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
-  <EntityType Name="Transporter">
+  <EntityType Name="Trucker">
     <Key>
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPositionId" />
       <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ETAId" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="RealArrivalTime" />
       <PropertyRef Name="DeattachmentFinisherTime" />
       <PropertyRef Name="DeattachmentFinisherPosition" />
-      <PropertyRef Name="ActualPositionReturnId" />
+      <PropertyRef Name="AttachmentToFinisherTime" />
+      <PropertyRef Name="AttachmentToFinisherPosition" />
       <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ETAReturnId" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
       <PropertyRef Name="ETAReturn" />
+      <PropertyRef Name="ETAReturnTimeStamp" />
       <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStop" />
+      <PropertyRef Name="UnforseenStopLocation" />
+      <PropertyRef Name="UnforseenStopTime" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
+      <PropertyRef Name="QrCodeCompactor" />
     </Key>
+    <Property Name="RoadId" Type="int" Nullable="false" />
+    <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
-    <Property Name="ActualPositionId" Type="int" Nullable="false" />
     <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETA" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="RealArrivalTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ActualPositionReturnId" Type="int" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="timestamp" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="ActualPositionReturn" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAReturnId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETAReturn" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETAReturnTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ArrivalAtPlant" Type="timestamp" Nullable="false" />
-    <Property Name="UnforseenStop" Type="int" Nullable="false" />
+    <Property Name="UnforseenStopLocation" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="UnforseenStopTime" Type="time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
   </EntityType>
   <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.UA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
   <EntityType Name="UA">
     <Key>
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="LayerThickness" />
       <PropertyRef Name="Surface" />
       <PropertyRef Name="TonPerDay" />
@@ -1249,20 +1293,16 @@
       <PropertyRef Name="MixtureName" />
       <PropertyRef Name="TypeOfAggregates" />
       <PropertyRef Name="MixtureChange" />
-      <PropertyRef Name="CentralId" />
-      <PropertyRef Name="AggregationId" />
       <PropertyRef Name="AggragationMaxTemp" />
       <PropertyRef Name="AggragationMinTemp" />
       <PropertyRef Name="AggragationTimeStamp" />
-      <PropertyRef Name="BitumenId" />
       <PropertyRef Name="BitumenMaxTemp" />
       <PropertyRef Name="BitumenMinTemp" />
       <PropertyRef Name="BitumenTimeStamp" />
-      <PropertyRef Name="ListRecupFillerId" />
       <PropertyRef Name="FillerRecup" />
+      <PropertyRef Name="FillerRecupTimeStamp" />
       <PropertyRef Name="MixingTemp" />
       <PropertyRef Name="MixingTime" />
-      <PropertyRef Name="RealCompositionId" />
       <PropertyRef Name="MassOfAggregationBunker1" />
       <PropertyRef Name="MassOfAggregationBunker2" />
       <PropertyRef Name="MassOfAggregationBunker3" />
@@ -1277,47 +1317,48 @@
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPositionId" />
       <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ETAId" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="RealArrivalTime" />
       <PropertyRef Name="DeattachmentFinisherTime" />
       <PropertyRef Name="DeattachmentFinisherPosition" />
-      <PropertyRef Name="ActualPositionReturnId" />
+      <PropertyRef Name="AttachmentToFinisherTime" />
+      <PropertyRef Name="AttachmentToFinisherPosition" />
+      <PropertyRef Name="Temp" />
+      <PropertyRef Name="TempTruckTimeStamp" />
       <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ETAReturnId" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
       <PropertyRef Name="ETAReturn" />
+      <PropertyRef Name="ETAReturnTimeStamp" />
       <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStop" />
-      <PropertyRef Name="FinisherId" />
-      <PropertyRef Name="SpeedId" />
+      <PropertyRef Name="UnforseenStopLocation" />
+      <PropertyRef Name="UnforseenStopTime" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
       <PropertyRef Name="FinisherSpeed" />
-      <PropertyRef Name="AngleId" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
       <PropertyRef Name="AngleLeft" />
       <PropertyRef Name="AngleRight" />
-      <PropertyRef Name="WidthId" />
       <PropertyRef Name="Width" />
-      <PropertyRef Name="ThicknessLayerId" />
       <PropertyRef Name="ThicknessLeft" />
       <PropertyRef Name="ThicknessMiddel" />
       <PropertyRef Name="ThicknessRight" />
       <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="LocationAndTimeSpanId" />
       <PropertyRef Name="StopLocation" />
       <PropertyRef Name="StopTime" />
+      <PropertyRef Name="StopTimeStamp" />
       <PropertyRef Name="Precipation" />
-      <PropertyRef Name="TempId" />
-      <PropertyRef Name="Temp" />
-      <PropertyRef Name="WindId" />
+      <PropertyRef Name="TempWeather" />
+      <PropertyRef Name="WeatherTempTimeStamp" />
       <PropertyRef Name="WindSpeed" />
-      <PropertyRef Name="AirHumidityId" />
+      <PropertyRef Name="WindTimeStamp" />
       <PropertyRef Name="AirHumidity" />
+      <PropertyRef Name="AirHumidityTimeStamp" />
       <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
       <PropertyRef Name="QrCodeCompactor" />
       <PropertyRef Name="NumberOfRollerCompactorPassages" />
       <PropertyRef Name="LocationOfVibration" />
-      <PropertyRef Name="ColorCodeId" />
       <PropertyRef Name="GPSFinisher" />
       <PropertyRef Name="GPSCompactor" />
       <PropertyRef Name="SpeedOfRollerCompactor" />
@@ -1330,6 +1371,8 @@
       <PropertyRef Name="Iri" />
       <PropertyRef Name="ExtraTestsAskedBijClient" />
     </Key>
+    <Property Name="RoadId" Type="int" Nullable="false" />
+    <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="LayerThickness" Type="int" Nullable="false" />
     <Property Name="Surface" Type="int" Nullable="false" />
     <Property Name="TonPerDay" Type="int" Nullable="false" />
@@ -1337,20 +1380,16 @@
     <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="TypeOfAggregates" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="MixtureChange" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="CentralId" Type="int" Nullable="false" />
-    <Property Name="AggregationId" Type="int" Nullable="false" />
     <Property Name="AggragationMaxTemp" Type="int" Nullable="false" />
     <Property Name="AggragationMinTemp" Type="int" Nullable="false" />
     <Property Name="AggragationTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="BitumenId" Type="int" Nullable="false" />
     <Property Name="BitumenMaxTemp" Type="int" Nullable="false" />
     <Property Name="BitumenMinTemp" Type="int" Nullable="false" />
     <Property Name="BitumenTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="ListRecupFillerId" Type="int" Nullable="false" />
     <Property Name="FillerRecup" Type="int" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="MixingTemp" Type="int" Nullable="false" />
     <Property Name="MixingTime" Type="time" Nullable="false" />
-    <Property Name="RealCompositionId" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker1" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker2" Type="int" Nullable="false" />
     <Property Name="MassOfAggregationBunker3" Type="int" Nullable="false" />
@@ -1365,47 +1404,48 @@
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
-    <Property Name="ActualPositionId" Type="int" Nullable="false" />
     <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETA" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="RealArrivalTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherTime" Type="timestamp" Nullable="false" />
     <Property Name="DeattachmentFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ActualPositionReturnId" Type="int" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="timestamp" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Temp" Type="int" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ActualPositionReturn" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ETAReturnId" Type="int" Nullable="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ETAReturn" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ETAReturnTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="ArrivalAtPlant" Type="timestamp" Nullable="false" />
-    <Property Name="UnforseenStop" Type="int" Nullable="false" />
-    <Property Name="FinisherId" Type="int" Nullable="false" />
-    <Property Name="SpeedId" Type="int" Nullable="false" />
+    <Property Name="UnforseenStopLocation" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="UnforseenStopTime" Type="time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="FinisherSpeed" Type="int" Nullable="false" />
-    <Property Name="AngleId" Type="int" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AngleLeft" Type="int" Nullable="false" />
     <Property Name="AngleRight" Type="int" Nullable="false" />
-    <Property Name="WidthId" Type="int" Nullable="false" />
     <Property Name="Width" Type="int" Nullable="false" />
-    <Property Name="ThicknessLayerId" Type="int" Nullable="false" />
     <Property Name="ThicknessLeft" Type="int" Nullable="false" />
     <Property Name="ThicknessMiddel" Type="int" Nullable="false" />
     <Property Name="ThicknessRight" Type="int" Nullable="false" />
     <Property Name="TranverseSlope" Type="int" Nullable="false" />
-    <Property Name="LocationAndTimeSpanId" Type="int" Nullable="false" />
     <Property Name="StopLocation" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="StopTime" Type="time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="Precipation" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TempId" Type="int" Nullable="false" />
-    <Property Name="Temp" Type="int" Nullable="false" />
-    <Property Name="WindId" Type="int" Nullable="false" />
+    <Property Name="TempWeather" Type="int" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="WindSpeed" Type="int" Nullable="false" />
-    <Property Name="AirHumidityId" Type="int" Nullable="false" />
+    <Property Name="WindTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AirHumidity" Type="int" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="NumberOfRollerCompactorPassages" Type="int" Nullable="false" />
     <Property Name="LocationOfVibration" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ColorCodeId" Type="int" Nullable="false" />
     <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="GPSCompactor" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="SpeedOfRollerCompactor" Type="int" Nullable="false" />
@@ -1443,14 +1483,26 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="BatchList_ibfk_3">
-    <End Role="Transport" Type="RoadItEntitiesModel.Store.Transport" Multiplicity="1" />
+    <End Role="Truck" Type="RoadItEntitiesModel.Store.Truck" Multiplicity="1" />
     <End Role="BatchList" Type="RoadItEntitiesModel.Store.BatchList" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Transport">
-        <PropertyRef Name="TransportId" />
+      <Principal Role="Truck">
+        <PropertyRef Name="TruckId" />
       </Principal>
       <Dependent Role="BatchList">
-        <PropertyRef Name="TransportId" />
+        <PropertyRef Name="TruckId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BatchList_ibfk_4">
+    <End Role="Finisher" Type="RoadItEntitiesModel.Store.Finisher" Multiplicity="1" />
+    <End Role="BatchList" Type="RoadItEntitiesModel.Store.BatchList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Finisher">
+        <PropertyRef Name="FinicherId" />
+      </Principal>
+      <Dependent Role="BatchList">
+        <PropertyRef Name="FinisherId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1539,10 +1591,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Finisher_ibfk_5">
-    <End Role="Temp" Type="RoadItEntitiesModel.Store.Temp" Multiplicity="1" />
+    <End Role="WeatherTemp" Type="RoadItEntitiesModel.Store.WeatherTemp" Multiplicity="1" />
     <End Role="Finisher" Type="RoadItEntitiesModel.Store.Finisher" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Temp">
+      <Principal Role="WeatherTemp">
         <PropertyRef Name="TempId" />
       </Principal>
       <Dependent Role="Finisher">
@@ -1694,75 +1746,75 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Transport_ibfk_2">
-    <End Role="Finisher" Type="RoadItEntitiesModel.Store.Finisher" Multiplicity="1" />
-    <End Role="Transport" Type="RoadItEntitiesModel.Store.Transport" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Finisher">
-        <PropertyRef Name="FinicherId" />
-      </Principal>
-      <Dependent Role="Transport">
-        <PropertyRef Name="FinisherId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Transport_ibfk_3">
+  <Association Name="Truck_ibfk_3">
     <End Role="ActualPosition" Type="RoadItEntitiesModel.Store.ActualPosition" Multiplicity="1" />
-    <End Role="Transport" Type="RoadItEntitiesModel.Store.Transport" Multiplicity="*" />
+    <End Role="Truck" Type="RoadItEntitiesModel.Store.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActualPosition">
         <PropertyRef Name="ActualPositionId" />
       </Principal>
-      <Dependent Role="Transport">
+      <Dependent Role="Truck">
         <PropertyRef Name="ActualPositionId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Transport_ibfk_4">
+  <Association Name="Truck_ibfk_4">
     <End Role="ETA" Type="RoadItEntitiesModel.Store.ETA" Multiplicity="1" />
-    <End Role="Transport" Type="RoadItEntitiesModel.Store.Transport" Multiplicity="*" />
+    <End Role="Truck" Type="RoadItEntitiesModel.Store.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ETA">
         <PropertyRef Name="ETAId" />
       </Principal>
-      <Dependent Role="Transport">
+      <Dependent Role="Truck">
         <PropertyRef Name="ETAId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Transport_ibfk_5">
+  <Association Name="Truck_ibfk_5">
     <End Role="ActualPositionReturn" Type="RoadItEntitiesModel.Store.ActualPositionReturn" Multiplicity="1" />
-    <End Role="Transport" Type="RoadItEntitiesModel.Store.Transport" Multiplicity="*" />
+    <End Role="Truck" Type="RoadItEntitiesModel.Store.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActualPositionReturn">
         <PropertyRef Name="ActualPositionReturnId" />
       </Principal>
-      <Dependent Role="Transport">
+      <Dependent Role="Truck">
         <PropertyRef Name="ActualPositionReturnId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Transport_ibfk_6">
+  <Association Name="Truck_ibfk_6">
     <End Role="ETAReturn" Type="RoadItEntitiesModel.Store.ETAReturn" Multiplicity="1" />
-    <End Role="Transport" Type="RoadItEntitiesModel.Store.Transport" Multiplicity="*" />
+    <End Role="Truck" Type="RoadItEntitiesModel.Store.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ETAReturn">
         <PropertyRef Name="ETAReturnId" />
       </Principal>
-      <Dependent Role="Transport">
+      <Dependent Role="Truck">
         <PropertyRef Name="ETAReturnId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Transport_ibfk_7">
-    <End Role="TransportTemp" Type="RoadItEntitiesModel.Store.TransportTemp" Multiplicity="1" />
-    <End Role="Transport" Type="RoadItEntitiesModel.Store.Transport" Multiplicity="*" />
+  <Association Name="Truck_ibfk_7">
+    <End Role="TruckTemp" Type="RoadItEntitiesModel.Store.TruckTemp" Multiplicity="1" />
+    <End Role="Truck" Type="RoadItEntitiesModel.Store.Truck" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="TransportTemp">
-        <PropertyRef Name="ActualTempId" />
+      <Principal Role="TruckTemp">
+        <PropertyRef Name="TruckTempId" />
       </Principal>
-      <Dependent Role="Transport">
-        <PropertyRef Name="ActualTempId" />
+      <Dependent Role="Truck">
+        <PropertyRef Name="TruckTempId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Truck_ibfk_8">
+    <End Role="UnforseenStop" Type="RoadItEntitiesModel.Store.UnforseenStop" Multiplicity="1" />
+    <End Role="Truck" Type="RoadItEntitiesModel.Store.Truck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnforseenStop">
+        <PropertyRef Name="UnforseenStopId" />
+      </Principal>
+      <Dependent Role="Truck">
+        <PropertyRef Name="UnforseenStopId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
