@@ -62,7 +62,7 @@ namespace RoadIt.Controllers
                     option += "<option value=" + item.RoadId + ">" + item.RoadId + ", " + item.RoadDescription + "</option>";
                 }
             }
-            option += "</select><input type='submit' Text='Submit'/>";
+            option += "</select><br><br><input type='submit' Text='Submit'/>";
 
             return option;
         }
