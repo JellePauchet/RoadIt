@@ -4,13 +4,19 @@
 }
 
 <h2>Roadsection</h2>
-<p>
-    Choose a roadsection from the list.
-</p>
 
-@using (Html.BeginForm("SelectSection", "RoadSelection", FormMethod.Post))
-{
-    @Html.Raw(Session["SelectList"].ToString())
-}  
-
-@Session["roadID"]
+@{
+    if (Session["RoleId"].ToString() == "")
+    {
+        ViewBag.error = "You are not authorized to view this page";
+        @ViewBag.error
+    }
+    else
+    {
+        <p>Choose a roadsection from the list.</p>
+        using (Html.BeginForm("SelectSection", "RoadSelection", FormMethod.Post))
+        {
+            @Html.Raw(Session["SelectList"].ToString())
+        }  
+    }
+ }

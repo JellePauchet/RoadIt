@@ -14,13 +14,21 @@ namespace RoadIt.Controllers
 
         public ActionResult Index()
         {
-            var entities = new RoadItEntities();
-            ViewData["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
-            ViewData["Truck"] = GenerateTableTruck(entities);
-            ViewData["Finisher"] = GenerateTableFinisher(entities);
-            ViewData["Compactor"] = GenerateTableCompactor(entities);
-            ViewData["QualityControl"] = GenerateTableQualityControl(entities);
-            return View();
+            try
+            {
+                var entities = new RoadItEntities();
+                ViewData["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
+                ViewData["Truck"] = GenerateTableTruck(entities);
+                ViewData["Finisher"] = GenerateTableFinisher(entities);
+                ViewData["Compactor"] = GenerateTableCompactor(entities);
+                ViewData["QualityControl"] = GenerateTableQualityControl(entities);
+                return View();
+            }
+            catch
+            {
+                ViewBag.error = "You are not authorized to view this page"; 
+                return View();
+            }
         }
             
 
