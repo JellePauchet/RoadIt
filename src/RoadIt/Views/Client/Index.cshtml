@@ -6,10 +6,11 @@
 @{
     if (Session["RoleId"].ToString() == "1")
     {
-        @Html.Raw(ViewData["Table1"].ToString())
-        @Html.Raw(ViewData["Table2"].ToString())
-        @Html.Raw(ViewData["Table3"].ToString())
-        @Html.Raw(ViewData["Table4"].ToString())
+        @Html.Raw(ViewData["AsphaltMixPlant"].ToString())
+        @Html.Raw(ViewData["Truck"].ToString())
+        @Html.Raw(ViewData["Finisher"].ToString())
+        @Html.Raw(ViewData["Compactor"].ToString())
+        @Html.Raw(ViewData["QualityControl"].ToString())
     }
     else
     {
