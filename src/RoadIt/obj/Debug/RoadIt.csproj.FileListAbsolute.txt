@@ -5,5 +5,3 @@ C:\RoadIt\src\RoadIt\bin\EntityFramework.xml
 C:\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
 C:\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
 C:\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
-C:\RoadIt\src\RoadIt\bin\System.Web.Mvc.dll
-C:\RoadIt\src\RoadIt\bin\System.Web.Mvc.xml
