@@ -33,7 +33,7 @@ namespace RoadIt.Controllers
 
         public string GenerateTablePlanning(RoadItEntities entities) //RoadId nog toevoegen aan view
         {
-            var table = "<p>We moeten eerst de view van AsphaltProcucers (zelfde als bij UA) aanpassen voor we verschillende roadsections kunnen tonen. Momenteel kan enkel 4 omdat die hardcoded is in UAController.cs. Lees zeker eerst de comments in UAController.cs voor je de views opnieuw maakt, er zijn nog dingen die ontbreken aan de database die je best eerst fixt om dubbel werk te voorkomen.</p><h3>Planning</h3>";
+            var table = "<h3>Planning</h3>";
             table += "<table class='table table-bordered table-hover table-inverse'>";
             table += "<tr><th>Estimated amount of asphalt per 24 hours (ton) per asphalt type</th></tr>";
 
