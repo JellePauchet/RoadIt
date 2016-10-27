@@ -9,18 +9,26 @@
 @{
     if (Session["RoleId"].ToString() == "4")
     {
-        <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
-        @Html.Raw(ViewData["Planning"].ToString())
-        @Html.Raw(ViewData["AsphaltMixPlant"].ToString())
-        @Html.Raw(ViewData["Truck"].ToString())
-        @Html.Raw(ViewData["Finisher"].ToString())
-        @Html.Raw(ViewData["Compactor"].ToString())
-        @Html.Raw(ViewData["QualityControl"].ToString())
+        if(Session["RoadId"].ToString() != "")
+        {
+            <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
+            @Html.Raw(ViewData["Planning"].ToString())
+            @Html.Raw(ViewData["AsphaltMixPlant"].ToString())
+            @Html.Raw(ViewData["Truck"].ToString())
+            @Html.Raw(ViewData["Finisher"].ToString())
+            @Html.Raw(ViewData["Compactor"].ToString())
+            @Html.Raw(ViewData["QualityControl"].ToString())
+        }
+        else
+        {
+            ViewBag.error = "Choose first a roadsection";
+            @ViewBag.error
+        }
     }
     else
     {
         ViewBag.error = "You are not authorized to view this page";
         @ViewBag.error
-    }    
-        
-}
+    }
+
+    }
