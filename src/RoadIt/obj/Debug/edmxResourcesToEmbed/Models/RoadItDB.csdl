@@ -1,166 +1,166 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="RoadItEntitiesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-  <EntityContainer Name="RoadItEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ActualPositions" EntityType="RoadItEntitiesModel.ActualPosition" />
-    <EntitySet Name="ActualPositionReturns" EntityType="RoadItEntitiesModel.ActualPositionReturn" />
-    <EntitySet Name="Aggragations" EntityType="RoadItEntitiesModel.Aggragation" />
-    <EntitySet Name="AirHumidities" EntityType="RoadItEntitiesModel.AirHumidity" />
-    <EntitySet Name="Angles" EntityType="RoadItEntitiesModel.Angle" />
-    <EntitySet Name="AsphaltMixPlants" EntityType="RoadItEntitiesModel.AsphaltMixPlant" />
-    <EntitySet Name="AsphaltTemps" EntityType="RoadItEntitiesModel.AsphaltTemp" />
-    <EntitySet Name="BatchLists" EntityType="RoadItEntitiesModel.BatchList" />
-    <EntitySet Name="Bitumen" EntityType="RoadItEntitiesModel.Bituman" />
-    <EntitySet Name="ColorCodes" EntityType="RoadItEntitiesModel.ColorCode" />
-    <EntitySet Name="Compactors" EntityType="RoadItEntitiesModel.Compactor" />
-    <EntitySet Name="Compositions" EntityType="RoadItEntitiesModel.Composition" />
-    <EntitySet Name="Contractors" EntityType="RoadItEntitiesModel.Contractor" />
-    <EntitySet Name="ETAs" EntityType="RoadItEntitiesModel.ETA" />
-    <EntitySet Name="ETAReturns" EntityType="RoadItEntitiesModel.ETAReturn" />
-    <EntitySet Name="Finishers" EntityType="RoadItEntitiesModel.Finisher" />
-    <EntitySet Name="LayerThicknesses" EntityType="RoadItEntitiesModel.LayerThickness" />
-    <EntitySet Name="ListFillerRecups" EntityType="RoadItEntitiesModel.ListFillerRecup" />
-    <EntitySet Name="LocationAndTimeSpans" EntityType="RoadItEntitiesModel.LocationAndTimeSpan" />
-    <EntitySet Name="Plannings" EntityType="RoadItEntitiesModel.Planning" />
-    <EntitySet Name="Projects" EntityType="RoadItEntitiesModel.Project" />
-    <EntitySet Name="QualityControls" EntityType="RoadItEntitiesModel.QualityControl" />
-    <EntitySet Name="RoadSections" EntityType="RoadItEntitiesModel.RoadSection" />
-    <EntitySet Name="Silos" EntityType="RoadItEntitiesModel.Silo" />
-    <EntitySet Name="SpeedFinishers" EntityType="RoadItEntitiesModel.SpeedFinisher" />
-    <EntitySet Name="Winds" EntityType="RoadItEntitiesModel.Wind" />
-    <AssociationSet Name="Silo_ibfk_2" Association="RoadItEntitiesModel.Silo_ibfk_2">
-      <End Role="Aggragation" EntitySet="Aggragations" />
-      <End Role="Silo" EntitySet="Silos" />
-    </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_7" Association="RoadItEntitiesModel.Finisher_ibfk_7">
-      <End Role="AirHumidity" EntitySet="AirHumidities" />
-      <End Role="Finisher" EntitySet="Finishers" />
-    </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_2" Association="RoadItEntitiesModel.Finisher_ibfk_2">
-      <End Role="Angle" EntitySet="Angles" />
-      <End Role="Finisher" EntitySet="Finishers" />
-    </AssociationSet>
-    <AssociationSet Name="Silo_ibfk_1" Association="RoadItEntitiesModel.Silo_ibfk_1">
-      <End Role="AsphaltMixPlant" EntitySet="AsphaltMixPlants" />
-      <End Role="Silo" EntitySet="Silos" />
-    </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_8" Association="RoadItEntitiesModel.Finisher_ibfk_8">
-      <End Role="AsphaltTemp" EntitySet="AsphaltTemps" />
-      <End Role="Finisher" EntitySet="Finishers" />
-    </AssociationSet>
-    <AssociationSet Name="BatchList_ibfk_1" Association="RoadItEntitiesModel.BatchList_ibfk_1">
-      <End Role="Project" EntitySet="Projects" />
-      <End Role="BatchList" EntitySet="BatchLists" />
-    </AssociationSet>
-    <AssociationSet Name="BatchList_ibfk_2" Association="RoadItEntitiesModel.BatchList_ibfk_2">
-      <End Role="Silo" EntitySet="Silos" />
-      <End Role="BatchList" EntitySet="BatchLists" />
-    </AssociationSet>
-    <AssociationSet Name="Compactor_ibfk_2" Association="RoadItEntitiesModel.Compactor_ibfk_2">
-      <End Role="BatchList" EntitySet="BatchLists" />
-      <End Role="Compactor" EntitySet="Compactors" />
-    </AssociationSet>
-    <AssociationSet Name="Silo_ibfk_3" Association="RoadItEntitiesModel.Silo_ibfk_3">
-      <End Role="Bitumen" EntitySet="Bitumen" />
-      <End Role="Silo" EntitySet="Silos" />
-    </AssociationSet>
-    <AssociationSet Name="Compactor_ibfk_1" Association="RoadItEntitiesModel.Compactor_ibfk_1">
-      <End Role="ColorCode" EntitySet="ColorCodes" />
-      <End Role="Compactor" EntitySet="Compactors" />
-    </AssociationSet>
-    <AssociationSet Name="Silo_ibfk_5" Association="RoadItEntitiesModel.Silo_ibfk_5">
-      <End Role="Composition" EntitySet="Compositions" />
-      <End Role="Silo" EntitySet="Silos" />
-    </AssociationSet>
-    <AssociationSet Name="Contractor_ibfk_1" Association="RoadItEntitiesModel.Contractor_ibfk_1">
-      <End Role="Project" EntitySet="Projects" />
-      <End Role="Contractor" EntitySet="Contractors" />
-    </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_1" Association="RoadItEntitiesModel.Finisher_ibfk_1">
-      <End Role="SpeedFinisher" EntitySet="SpeedFinishers" />
-      <End Role="Finisher" EntitySet="Finishers" />
-    </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_3" Association="RoadItEntitiesModel.Finisher_ibfk_3">
-      <End Role="LayerThickness" EntitySet="LayerThicknesses" />
-      <End Role="Finisher" EntitySet="Finishers" />
-    </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_4" Association="RoadItEntitiesModel.Finisher_ibfk_4">
-      <End Role="LocationAndTimeSpan" EntitySet="LocationAndTimeSpans" />
-      <End Role="Finisher" EntitySet="Finishers" />
-    </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_6" Association="RoadItEntitiesModel.Finisher_ibfk_6">
-      <End Role="Wind" EntitySet="Winds" />
-      <End Role="Finisher" EntitySet="Finishers" />
-    </AssociationSet>
-    <AssociationSet Name="Silo_ibfk_4" Association="RoadItEntitiesModel.Silo_ibfk_4">
-      <End Role="ListFillerRecup" EntitySet="ListFillerRecups" />
-      <End Role="Silo" EntitySet="Silos" />
-    </AssociationSet>
-    <AssociationSet Name="Planning_ibfk_1" Association="RoadItEntitiesModel.Planning_ibfk_1">
-      <End Role="Project" EntitySet="Projects" />
-      <End Role="Planning" EntitySet="Plannings" />
-    </AssociationSet>
-    <AssociationSet Name="QualityControl_ibfk_1" Association="RoadItEntitiesModel.QualityControl_ibfk_1">
-      <End Role="Project" EntitySet="Projects" />
-      <End Role="QualityControl" EntitySet="QualityControls" />
-    </AssociationSet>
-    <AssociationSet Name="RoadSection_ibfk_1" Association="RoadItEntitiesModel.RoadSection_ibfk_1">
-      <End Role="Project" EntitySet="Projects" />
-      <End Role="RoadSection" EntitySet="RoadSections" />
-    </AssociationSet>
-    <EntitySet Name="Roles" EntityType="RoadItEntitiesModel.Role" />
-    <EntitySet Name="Users" EntityType="RoadItEntitiesModel.Users" />
-    <AssociationSet Name="Users_ibfk_1" Association="RoadItEntitiesModel.Users_ibfk_1">
-      <End Role="Role" EntitySet="Roles" />
-      <End Role="User" EntitySet="Users" />
-    </AssociationSet>
-    <AssociationSet Name="BatchList_ibfk_4" Association="RoadItEntitiesModel.BatchList_ibfk_4">
-      <End Role="Finisher" EntitySet="Finishers" />
-      <End Role="BatchList" EntitySet="BatchLists" />
-    </AssociationSet>
-    <EntitySet Name="Trucks" EntityType="RoadItEntitiesModel.Truck" />
-    <EntitySet Name="TruckTemps" EntityType="RoadItEntitiesModel.TruckTemp" />
-    <EntitySet Name="UnforseenStops" EntityType="RoadItEntitiesModel.UnforseenStop" />
-    <EntitySet Name="WeatherTemps" EntityType="RoadItEntitiesModel.WeatherTemp" />
-    <EntitySet Name="Widths" EntityType="RoadItEntitiesModel.Width" />
-    <EntitySet Name="AsphaltProcucers" EntityType="RoadItEntitiesModel.AsphaltProcucer" />
-    <EntitySet Name="Clients" EntityType="RoadItEntitiesModel.Client" />
-    <EntitySet Name="ContractorVieuws" EntityType="RoadItEntitiesModel.ContractorVieuw" />
-    <EntitySet Name="Coproes" EntityType="RoadItEntitiesModel.Copro" />
-    <EntitySet Name="Truckers" EntityType="RoadItEntitiesModel.Trucker" />
-    <EntitySet Name="UAs" EntityType="RoadItEntitiesModel.UA" />
-    <AssociationSet Name="Truck_ibfk_3" Association="RoadItEntitiesModel.Truck_ibfk_3">
+<Schema Namespace="roaditModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="roaditEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ActualPositions" EntityType="roaditModel.ActualPosition" />
+    <EntitySet Name="ActualPositionReturns" EntityType="roaditModel.ActualPositionReturn" />
+    <EntitySet Name="Aggragations" EntityType="roaditModel.Aggragation" />
+    <EntitySet Name="AirHumidities" EntityType="roaditModel.AirHumidity" />
+    <EntitySet Name="Angles" EntityType="roaditModel.Angle" />
+    <EntitySet Name="AsphaltMixPlants" EntityType="roaditModel.AsphaltMixPlant" />
+    <EntitySet Name="AsphaltTemps" EntityType="roaditModel.AsphaltTemp" />
+    <EntitySet Name="BatchLists" EntityType="roaditModel.BatchList" />
+    <EntitySet Name="Bitumen" EntityType="roaditModel.Bituman" />
+    <EntitySet Name="ColorCodes" EntityType="roaditModel.ColorCode" />
+    <EntitySet Name="Compactors" EntityType="roaditModel.Compactor" />
+    <EntitySet Name="Compositions" EntityType="roaditModel.Composition" />
+    <EntitySet Name="Contractors" EntityType="roaditModel.Contractor" />
+    <EntitySet Name="ETAs" EntityType="roaditModel.ETA" />
+    <EntitySet Name="ETAReturns" EntityType="roaditModel.ETAReturn" />
+    <EntitySet Name="Finishers" EntityType="roaditModel.Finisher" />
+    <EntitySet Name="LayerThicknesses" EntityType="roaditModel.LayerThickness" />
+    <EntitySet Name="ListFillerRecups" EntityType="roaditModel.ListFillerRecup" />
+    <EntitySet Name="LocationAndTimeSpans" EntityType="roaditModel.LocationAndTimeSpan" />
+    <EntitySet Name="Plannings" EntityType="roaditModel.Planning" />
+    <EntitySet Name="Projects" EntityType="roaditModel.Project" />
+    <EntitySet Name="QualityControls" EntityType="roaditModel.QualityControl" />
+    <EntitySet Name="RoadSections" EntityType="roaditModel.RoadSection" />
+    <EntitySet Name="Roles" EntityType="roaditModel.Role" />
+    <EntitySet Name="Silos" EntityType="roaditModel.Silo" />
+    <EntitySet Name="SpeedFinishers" EntityType="roaditModel.SpeedFinisher" />
+    <EntitySet Name="Trucks" EntityType="roaditModel.Truck" />
+    <EntitySet Name="TruckTemps" EntityType="roaditModel.TruckTemp" />
+    <EntitySet Name="UnforseenStops" EntityType="roaditModel.UnforseenStop" />
+    <EntitySet Name="Users" EntityType="roaditModel.User" />
+    <EntitySet Name="WeatherTemps" EntityType="roaditModel.WeatherTemp" />
+    <EntitySet Name="Widths" EntityType="roaditModel.Width" />
+    <EntitySet Name="Winds" EntityType="roaditModel.Wind" />
+    <EntitySet Name="AsphaltProcucers" EntityType="roaditModel.AsphaltProcucer" />
+    <EntitySet Name="Clients" EntityType="roaditModel.Client" />
+    <EntitySet Name="ContractorVieuws" EntityType="roaditModel.ContractorVieuw" />
+    <EntitySet Name="Coproes" EntityType="roaditModel.Copro" />
+    <EntitySet Name="Truckers" EntityType="roaditModel.Trucker" />
+    <EntitySet Name="UAs" EntityType="roaditModel.UA" />
+    <AssociationSet Name="Truck_ibfk_3" Association="roaditModel.Truck_ibfk_3">
       <End Role="ActualPosition" EntitySet="ActualPositions" />
       <End Role="Truck" EntitySet="Trucks" />
     </AssociationSet>
-    <AssociationSet Name="Truck_ibfk_5" Association="RoadItEntitiesModel.Truck_ibfk_5">
+    <AssociationSet Name="Truck_ibfk_5" Association="roaditModel.Truck_ibfk_5">
       <End Role="ActualPositionReturn" EntitySet="ActualPositionReturns" />
       <End Role="Truck" EntitySet="Trucks" />
     </AssociationSet>
-    <AssociationSet Name="BatchList_ibfk_3" Association="RoadItEntitiesModel.BatchList_ibfk_3">
+    <AssociationSet Name="Silo_ibfk_2" Association="roaditModel.Silo_ibfk_2">
+      <End Role="Aggragation" EntitySet="Aggragations" />
+      <End Role="Silo" EntitySet="Silos" />
+    </AssociationSet>
+    <AssociationSet Name="Finisher_ibfk_7" Association="roaditModel.Finisher_ibfk_7">
+      <End Role="AirHumidity" EntitySet="AirHumidities" />
+      <End Role="Finisher" EntitySet="Finishers" />
+    </AssociationSet>
+    <AssociationSet Name="Finisher_ibfk_2" Association="roaditModel.Finisher_ibfk_2">
+      <End Role="Angle" EntitySet="Angles" />
+      <End Role="Finisher" EntitySet="Finishers" />
+    </AssociationSet>
+    <AssociationSet Name="Silo_ibfk_1" Association="roaditModel.Silo_ibfk_1">
+      <End Role="AsphaltMixPlant" EntitySet="AsphaltMixPlants" />
+      <End Role="Silo" EntitySet="Silos" />
+    </AssociationSet>
+    <AssociationSet Name="Finisher_ibfk_8" Association="roaditModel.Finisher_ibfk_8">
+      <End Role="AsphaltTemp" EntitySet="AsphaltTemps" />
+      <End Role="Finisher" EntitySet="Finishers" />
+    </AssociationSet>
+    <AssociationSet Name="BatchList_ibfk_1" Association="roaditModel.BatchList_ibfk_1">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="BatchList" EntitySet="BatchLists" />
+    </AssociationSet>
+    <AssociationSet Name="BatchList_ibfk_2" Association="roaditModel.BatchList_ibfk_2">
+      <End Role="Silo" EntitySet="Silos" />
+      <End Role="BatchList" EntitySet="BatchLists" />
+    </AssociationSet>
+    <AssociationSet Name="BatchList_ibfk_3" Association="roaditModel.BatchList_ibfk_3">
       <End Role="Truck" EntitySet="Trucks" />
       <End Role="BatchList" EntitySet="BatchLists" />
     </AssociationSet>
-    <AssociationSet Name="Truck_ibfk_4" Association="RoadItEntitiesModel.Truck_ibfk_4">
+    <AssociationSet Name="BatchList_ibfk_4" Association="roaditModel.BatchList_ibfk_4">
+      <End Role="Finisher" EntitySet="Finishers" />
+      <End Role="BatchList" EntitySet="BatchLists" />
+    </AssociationSet>
+    <AssociationSet Name="Compactor_ibfk_2" Association="roaditModel.Compactor_ibfk_2">
+      <End Role="BatchList" EntitySet="BatchLists" />
+      <End Role="Compactor" EntitySet="Compactors" />
+    </AssociationSet>
+    <AssociationSet Name="Silo_ibfk_3" Association="roaditModel.Silo_ibfk_3">
+      <End Role="Bitumen" EntitySet="Bitumen" />
+      <End Role="Silo" EntitySet="Silos" />
+    </AssociationSet>
+    <AssociationSet Name="Compactor_ibfk_1" Association="roaditModel.Compactor_ibfk_1">
+      <End Role="ColorCode" EntitySet="ColorCodes" />
+      <End Role="Compactor" EntitySet="Compactors" />
+    </AssociationSet>
+    <AssociationSet Name="Silo_ibfk_5" Association="roaditModel.Silo_ibfk_5">
+      <End Role="Composition" EntitySet="Compositions" />
+      <End Role="Silo" EntitySet="Silos" />
+    </AssociationSet>
+    <AssociationSet Name="Contractor_ibfk_1" Association="roaditModel.Contractor_ibfk_1">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Contractor" EntitySet="Contractors" />
+    </AssociationSet>
+    <AssociationSet Name="Truck_ibfk_4" Association="roaditModel.Truck_ibfk_4">
       <End Role="ETA" EntitySet="ETAs" />
       <End Role="Truck" EntitySet="Trucks" />
     </AssociationSet>
-    <AssociationSet Name="Truck_ibfk_6" Association="RoadItEntitiesModel.Truck_ibfk_6">
+    <AssociationSet Name="Truck_ibfk_6" Association="roaditModel.Truck_ibfk_6">
       <End Role="ETAReturn" EntitySet="ETAReturns" />
       <End Role="Truck" EntitySet="Trucks" />
     </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_5" Association="RoadItEntitiesModel.Finisher_ibfk_5">
+    <AssociationSet Name="Finisher_ibfk_1" Association="roaditModel.Finisher_ibfk_1">
+      <End Role="SpeedFinisher" EntitySet="SpeedFinishers" />
+      <End Role="Finisher" EntitySet="Finishers" />
+    </AssociationSet>
+    <AssociationSet Name="Finisher_ibfk_3" Association="roaditModel.Finisher_ibfk_3">
+      <End Role="LayerThickness" EntitySet="LayerThicknesses" />
+      <End Role="Finisher" EntitySet="Finishers" />
+    </AssociationSet>
+    <AssociationSet Name="Finisher_ibfk_4" Association="roaditModel.Finisher_ibfk_4">
+      <End Role="LocationAndTimeSpan" EntitySet="LocationAndTimeSpans" />
+      <End Role="Finisher" EntitySet="Finishers" />
+    </AssociationSet>
+    <AssociationSet Name="Finisher_ibfk_5" Association="roaditModel.Finisher_ibfk_5">
       <End Role="WeatherTemp" EntitySet="WeatherTemps" />
       <End Role="Finisher" EntitySet="Finishers" />
     </AssociationSet>
-    <AssociationSet Name="Finisher_ibfk_9" Association="RoadItEntitiesModel.Finisher_ibfk_9">
+    <AssociationSet Name="Finisher_ibfk_6" Association="roaditModel.Finisher_ibfk_6">
+      <End Role="Wind" EntitySet="Winds" />
+      <End Role="Finisher" EntitySet="Finishers" />
+    </AssociationSet>
+    <AssociationSet Name="Finisher_ibfk_9" Association="roaditModel.Finisher_ibfk_9">
       <End Role="Width" EntitySet="Widths" />
       <End Role="Finisher" EntitySet="Finishers" />
     </AssociationSet>
-    <AssociationSet Name="Truck_ibfk_7" Association="RoadItEntitiesModel.Truck_ibfk_7">
+    <AssociationSet Name="Silo_ibfk_4" Association="roaditModel.Silo_ibfk_4">
+      <End Role="ListFillerRecup" EntitySet="ListFillerRecups" />
+      <End Role="Silo" EntitySet="Silos" />
+    </AssociationSet>
+    <AssociationSet Name="Planning_ibfk_1" Association="roaditModel.Planning_ibfk_1">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Planning" EntitySet="Plannings" />
+    </AssociationSet>
+    <AssociationSet Name="QualityControl_ibfk_1" Association="roaditModel.QualityControl_ibfk_1">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="QualityControl" EntitySet="QualityControls" />
+    </AssociationSet>
+    <AssociationSet Name="RoadSection_ibfk_1" Association="roaditModel.RoadSection_ibfk_1">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="RoadSection" EntitySet="RoadSections" />
+    </AssociationSet>
+    <AssociationSet Name="Users_ibfk_1" Association="roaditModel.Users_ibfk_1">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="Truck_ibfk_7" Association="roaditModel.Truck_ibfk_7">
       <End Role="TruckTemp" EntitySet="TruckTemps" />
       <End Role="Truck" EntitySet="Trucks" />
     </AssociationSet>
-    <AssociationSet Name="Truck_ibfk_8" Association="RoadItEntitiesModel.Truck_ibfk_8">
+    <AssociationSet Name="Truck_ibfk_8" Association="roaditModel.Truck_ibfk_8">
       <End Role="UnforseenStop" EntitySet="UnforseenStops" />
       <End Role="Truck" EntitySet="Trucks" />
     </AssociationSet>
@@ -171,17 +171,17 @@
     </Key>
     <Property Name="ActualPositionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ActualPosition1" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Type="DateTime" Name="ActualPositionTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Trucks" Relationship="RoadItEntitiesModel.Truck_ibfk_3" FromRole="ActualPosition" ToRole="Truck" />
+    <Property Name="ActualPositionTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Trucks" Relationship="roaditModel.Truck_ibfk_3" FromRole="ActualPosition" ToRole="Truck" />
   </EntityType>
   <EntityType Name="ActualPositionReturn">
     <Key>
       <PropertyRef Name="ActualPositionReturnId" />
     </Key>
     <Property Name="ActualPositionReturnId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ActualPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Type="DateTime" Name="ActualPositionReturnTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Trucks" Relationship="RoadItEntitiesModel.Truck_ibfk_5" FromRole="ActualPositionReturn" ToRole="Truck" />
+    <Property Name="ActualPositionReturn1" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Trucks" Relationship="roaditModel.Truck_ibfk_5" FromRole="ActualPositionReturn" ToRole="Truck" />
   </EntityType>
   <EntityType Name="Aggragation">
     <Key>
@@ -190,8 +190,8 @@
     <Property Name="AggragationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="AggragationMaxTemp" Type="Int32" Nullable="false" />
     <Property Name="AggragationMinTemp" Type="Int32" Nullable="false" />
-    <Property Name="AggragationTimeStamp" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="Silos" Relationship="RoadItEntitiesModel.Silo_ibfk_2" FromRole="Aggragation" ToRole="Silo" />
+    <Property Name="AggragationTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Silos" Relationship="roaditModel.Silo_ibfk_2" FromRole="Aggragation" ToRole="Silo" />
   </EntityType>
   <EntityType Name="AirHumidity">
     <Key>
@@ -199,17 +199,18 @@
     </Key>
     <Property Name="AirHumidityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="AirHumidity1" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_7" FromRole="AirHumidity" ToRole="Finisher" />
-    <Property Type="DateTime" Name="AirHumidityTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AirHumidityTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_7" FromRole="AirHumidity" ToRole="Finisher" />
   </EntityType>
   <EntityType Name="Angle">
     <Key>
       <PropertyRef Name="AngleId" />
     </Key>
     <Property Name="AngleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Left" Type="Int32" Nullable="false" />
-    <Property Name="Right" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_2" FromRole="Angle" ToRole="Finisher" />
+    <Property Name="LeftAngle" Type="Int32" Nullable="false" />
+    <Property Name="RightAngle" Type="Int32" Nullable="false" />
+    <Property Name="AngleTimestamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_2" FromRole="Angle" ToRole="Finisher" />
   </EntityType>
   <EntityType Name="AsphaltMixPlant">
     <Key>
@@ -220,7 +221,8 @@
     <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="TypeOfAggregates" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="MixtureChange" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Silos" Relationship="RoadItEntitiesModel.Silo_ibfk_1" FromRole="AsphaltMixPlant" ToRole="Silo" />
+    <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Silos" Relationship="roaditModel.Silo_ibfk_1" FromRole="AsphaltMixPlant" ToRole="Silo" />
   </EntityType>
   <EntityType Name="AsphaltTemp">
     <Key>
@@ -228,9 +230,9 @@
     </Key>
     <Property Name="AsphaltTempId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="GPS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_8" FromRole="AsphaltTemp" ToRole="Finisher" />
-    <Property Type="Int32" Name="TempAsphalt" Nullable="false" />
-    <Property Type="DateTime" Name="AsphaltTempTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TempAsphalt" Type="Int32" Nullable="false" />
+    <Property Name="AsphaltTempTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_8" FromRole="AsphaltTemp" ToRole="Finisher" />
   </EntityType>
   <EntityType Name="BatchList">
     <Key>
@@ -239,23 +241,24 @@
     <Property Name="BatchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProjectId" Type="Int32" Nullable="false" />
     <Property Name="SiloId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Project" Relationship="RoadItEntitiesModel.BatchList_ibfk_1" FromRole="BatchList" ToRole="Project" />
-    <NavigationProperty Name="Silo" Relationship="RoadItEntitiesModel.BatchList_ibfk_2" FromRole="BatchList" ToRole="Silo" />
-    <NavigationProperty Name="Compactors" Relationship="RoadItEntitiesModel.Compactor_ibfk_2" FromRole="BatchList" ToRole="Compactor" />
-    <Property Type="Int32" Name="TruckId" Nullable="false" />
-    <Property Type="Int32" Name="FinisherId" Nullable="false" />
-    <NavigationProperty Name="Finisher" Relationship="RoadItEntitiesModel.BatchList_ibfk_4" FromRole="BatchList" ToRole="Finisher" />
-    <NavigationProperty Name="Truck" Relationship="RoadItEntitiesModel.BatchList_ibfk_3" FromRole="BatchList" ToRole="Truck" />
+    <Property Name="TruckId" Type="Int32" Nullable="false" />
+    <Property Name="FinisherId" Type="Int32" Nullable="false" />
+    <Property Name="BatchListTimeStamp" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Project" Relationship="roaditModel.BatchList_ibfk_1" FromRole="BatchList" ToRole="Project" />
+    <NavigationProperty Name="Silo" Relationship="roaditModel.BatchList_ibfk_2" FromRole="BatchList" ToRole="Silo" />
+    <NavigationProperty Name="Truck" Relationship="roaditModel.BatchList_ibfk_3" FromRole="BatchList" ToRole="Truck" />
+    <NavigationProperty Name="Finisher" Relationship="roaditModel.BatchList_ibfk_4" FromRole="BatchList" ToRole="Finisher" />
+    <NavigationProperty Name="Compactors" Relationship="roaditModel.Compactor_ibfk_2" FromRole="BatchList" ToRole="Compactor" />
   </EntityType>
   <EntityType Name="Bituman">
     <Key>
       <PropertyRef Name="BitumenId" />
     </Key>
     <Property Name="BitumenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="BitumenTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="BitumenTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BitumenMinTemp" Type="Int32" Nullable="false" />
     <Property Name="BitumenMaxTemp" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Silos" Relationship="RoadItEntitiesModel.Silo_ibfk_3" FromRole="Bitumen" ToRole="Silo" />
+    <NavigationProperty Name="Silos" Relationship="roaditModel.Silo_ibfk_3" FromRole="Bitumen" ToRole="Silo" />
   </EntityType>
   <EntityType Name="ColorCode">
     <Key>
@@ -264,7 +267,8 @@
     <Property Name="ColorCodeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="GPSFinisher" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="GPSCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Compactors" Relationship="RoadItEntitiesModel.Compactor_ibfk_1" FromRole="ColorCode" ToRole="Compactor" />
+    <Property Name="ColorCodeTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Compactors" Relationship="roaditModel.Compactor_ibfk_1" FromRole="ColorCode" ToRole="Compactor" />
   </EntityType>
   <EntityType Name="Compactor">
     <Key>
@@ -277,8 +281,9 @@
     <Property Name="LocationOfVibration" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="ColorCodeId" Type="Int32" Nullable="false" />
     <Property Name="SpeedOfRollerCompactor" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="BatchList" Relationship="RoadItEntitiesModel.Compactor_ibfk_2" FromRole="Compactor" ToRole="BatchList" />
-    <NavigationProperty Name="ColorCode" Relationship="RoadItEntitiesModel.Compactor_ibfk_1" FromRole="Compactor" ToRole="ColorCode" />
+    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="BatchList" Relationship="roaditModel.Compactor_ibfk_2" FromRole="Compactor" ToRole="BatchList" />
+    <NavigationProperty Name="ColorCode" Relationship="roaditModel.Compactor_ibfk_1" FromRole="Compactor" ToRole="ColorCode" />
   </EntityType>
   <EntityType Name="Composition">
     <Key>
@@ -294,7 +299,8 @@
     <Property Name="Filler" Type="Int32" Nullable="false" />
     <Property Name="Bitumen" Type="Int32" Nullable="false" />
     <Property Name="AdditivesKg" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Silos" Relationship="RoadItEntitiesModel.Silo_ibfk_5" FromRole="Composition" ToRole="Silo" />
+    <Property Name="CompositionTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Silos" Relationship="roaditModel.Silo_ibfk_5" FromRole="Composition" ToRole="Silo" />
   </EntityType>
   <EntityType Name="Contractor">
     <Key>
@@ -302,25 +308,26 @@
     </Key>
     <Property Name="ContractorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProjectId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Project" Relationship="RoadItEntitiesModel.Contractor_ibfk_1" FromRole="Contractor" ToRole="Project" />
+    <Property Name="ContractorTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Project" Relationship="roaditModel.Contractor_ibfk_1" FromRole="Contractor" ToRole="Project" />
   </EntityType>
   <EntityType Name="ETA">
     <Key>
       <PropertyRef Name="ETAId" />
     </Key>
     <Property Name="ETAId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ETA1" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Type="DateTime" Name="ETATimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Trucks" Relationship="RoadItEntitiesModel.Truck_ibfk_4" FromRole="ETA" ToRole="Truck" />
+    <Property Name="ETA1" Type="Time" Nullable="false" />
+    <Property Name="ETATimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Trucks" Relationship="roaditModel.Truck_ibfk_4" FromRole="ETA" ToRole="Truck" />
   </EntityType>
   <EntityType Name="ETAReturn">
     <Key>
       <PropertyRef Name="ETAReturnId" />
     </Key>
     <Property Name="ETAReturnId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ETA" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Type="DateTime" Name="ETAReturnTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Trucks" Relationship="RoadItEntitiesModel.Truck_ibfk_6" FromRole="ETAReturn" ToRole="Truck" />
+    <Property Name="ETAReturn1" Type="Time" Nullable="false" />
+    <Property Name="ETAReturnTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Trucks" Relationship="roaditModel.Truck_ibfk_6" FromRole="ETAReturn" ToRole="Truck" />
   </EntityType>
   <EntityType Name="Finisher">
     <Key>
@@ -339,26 +346,28 @@
     <Property Name="AirHumidityId" Type="Int32" Nullable="false" />
     <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="AsphaltTempId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="AirHumidity" Relationship="RoadItEntitiesModel.Finisher_ibfk_7" FromRole="Finisher" ToRole="AirHumidity" />
-    <NavigationProperty Name="Angle" Relationship="RoadItEntitiesModel.Finisher_ibfk_2" FromRole="Finisher" ToRole="Angle" />
-    <NavigationProperty Name="AsphaltTemp" Relationship="RoadItEntitiesModel.Finisher_ibfk_8" FromRole="Finisher" ToRole="AsphaltTemp" />
-    <NavigationProperty Name="SpeedFinisher" Relationship="RoadItEntitiesModel.Finisher_ibfk_1" FromRole="Finisher" ToRole="SpeedFinisher" />
-    <NavigationProperty Name="LayerThickness" Relationship="RoadItEntitiesModel.Finisher_ibfk_3" FromRole="Finisher" ToRole="LayerThickness" />
-    <NavigationProperty Name="LocationAndTimeSpan" Relationship="RoadItEntitiesModel.Finisher_ibfk_4" FromRole="Finisher" ToRole="LocationAndTimeSpan" />
-    <NavigationProperty Name="Wind" Relationship="RoadItEntitiesModel.Finisher_ibfk_6" FromRole="Finisher" ToRole="Wind" />
-    <NavigationProperty Name="BatchLists" Relationship="RoadItEntitiesModel.BatchList_ibfk_4" FromRole="Finisher" ToRole="BatchList" />
-    <NavigationProperty Name="WeatherTemp" Relationship="RoadItEntitiesModel.Finisher_ibfk_5" FromRole="Finisher" ToRole="WeatherTemp" />
-    <NavigationProperty Name="Width" Relationship="RoadItEntitiesModel.Finisher_ibfk_9" FromRole="Finisher" ToRole="Width" />
+    <Property Name="FinisherTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="AirHumidity" Relationship="roaditModel.Finisher_ibfk_7" FromRole="Finisher" ToRole="AirHumidity" />
+    <NavigationProperty Name="Angle" Relationship="roaditModel.Finisher_ibfk_2" FromRole="Finisher" ToRole="Angle" />
+    <NavigationProperty Name="AsphaltTemp" Relationship="roaditModel.Finisher_ibfk_8" FromRole="Finisher" ToRole="AsphaltTemp" />
+    <NavigationProperty Name="BatchLists" Relationship="roaditModel.BatchList_ibfk_4" FromRole="Finisher" ToRole="BatchList" />
+    <NavigationProperty Name="SpeedFinisher" Relationship="roaditModel.Finisher_ibfk_1" FromRole="Finisher" ToRole="SpeedFinisher" />
+    <NavigationProperty Name="LayerThickness" Relationship="roaditModel.Finisher_ibfk_3" FromRole="Finisher" ToRole="LayerThickness" />
+    <NavigationProperty Name="LocationAndTimeSpan" Relationship="roaditModel.Finisher_ibfk_4" FromRole="Finisher" ToRole="LocationAndTimeSpan" />
+    <NavigationProperty Name="WeatherTemp" Relationship="roaditModel.Finisher_ibfk_5" FromRole="Finisher" ToRole="WeatherTemp" />
+    <NavigationProperty Name="Wind" Relationship="roaditModel.Finisher_ibfk_6" FromRole="Finisher" ToRole="Wind" />
+    <NavigationProperty Name="Width" Relationship="roaditModel.Finisher_ibfk_9" FromRole="Finisher" ToRole="Width" />
   </EntityType>
   <EntityType Name="LayerThickness">
     <Key>
       <PropertyRef Name="LayerThicknessId" />
     </Key>
     <Property Name="LayerThicknessId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Left" Type="Int32" Nullable="false" />
-    <Property Name="Middel" Type="Int32" Nullable="false" />
-    <Property Name="Right" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_3" FromRole="LayerThickness" ToRole="Finisher" />
+    <Property Name="LeftTickness" Type="Int32" Nullable="false" />
+    <Property Name="MiddelThickness" Type="Int32" Nullable="false" />
+    <Property Name="RightThickness" Type="Int32" Nullable="false" />
+    <Property Name="ThicknessTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_3" FromRole="LayerThickness" ToRole="Finisher" />
   </EntityType>
   <EntityType Name="ListFillerRecup">
     <Key>
@@ -366,18 +375,18 @@
     </Key>
     <Property Name="ListFillerRecupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FillerRecup" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Silos" Relationship="RoadItEntitiesModel.Silo_ibfk_4" FromRole="ListFillerRecup" ToRole="Silo" />
-    <Property Type="DateTime" Name="FillerRecupTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FillerRecupTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Silos" Relationship="roaditModel.Silo_ibfk_4" FromRole="ListFillerRecup" ToRole="Silo" />
   </EntityType>
   <EntityType Name="LocationAndTimeSpan">
     <Key>
       <PropertyRef Name="LocationAndTimeSpanId" />
     </Key>
     <Property Name="LocationAndTimeSpanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="StopLocation" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="StopTime" Type="Time" Nullable="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_4" FromRole="LocationAndTimeSpan" ToRole="Finisher" />
-    <Property Type="DateTime" Name="StopTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StopLocationLTS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeLTS" Type="Time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_4" FromRole="LocationAndTimeSpan" ToRole="Finisher" />
   </EntityType>
   <EntityType Name="Planning">
     <Key>
@@ -388,18 +397,20 @@
     <Property Name="Surface" Type="Int32" Nullable="false" />
     <Property Name="TonPerDay" Type="Int32" Nullable="false" />
     <Property Name="ProjectId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Project" Relationship="RoadItEntitiesModel.Planning_ibfk_1" FromRole="Planning" ToRole="Project" />
+    <Property Name="PlanningTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Project" Relationship="roaditModel.Planning_ibfk_1" FromRole="Planning" ToRole="Project" />
   </EntityType>
   <EntityType Name="Project">
     <Key>
       <PropertyRef Name="ProjectId" />
     </Key>
     <Property Name="ProjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="BatchLists" Relationship="RoadItEntitiesModel.BatchList_ibfk_1" FromRole="Project" ToRole="BatchList" />
-    <NavigationProperty Name="Contractors" Relationship="RoadItEntitiesModel.Contractor_ibfk_1" FromRole="Project" ToRole="Contractor" />
-    <NavigationProperty Name="Plannings" Relationship="RoadItEntitiesModel.Planning_ibfk_1" FromRole="Project" ToRole="Planning" />
-    <NavigationProperty Name="QualityControls" Relationship="RoadItEntitiesModel.QualityControl_ibfk_1" FromRole="Project" ToRole="QualityControl" />
-    <NavigationProperty Name="RoadSections" Relationship="RoadItEntitiesModel.RoadSection_ibfk_1" FromRole="Project" ToRole="RoadSection" />
+    <Property Name="ProjectTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="BatchLists" Relationship="roaditModel.BatchList_ibfk_1" FromRole="Project" ToRole="BatchList" />
+    <NavigationProperty Name="Contractors" Relationship="roaditModel.Contractor_ibfk_1" FromRole="Project" ToRole="Contractor" />
+    <NavigationProperty Name="Plannings" Relationship="roaditModel.Planning_ibfk_1" FromRole="Project" ToRole="Planning" />
+    <NavigationProperty Name="QualityControls" Relationship="roaditModel.QualityControl_ibfk_1" FromRole="Project" ToRole="QualityControl" />
+    <NavigationProperty Name="RoadSections" Relationship="roaditModel.RoadSection_ibfk_1" FromRole="Project" ToRole="RoadSection" />
   </EntityType>
   <EntityType Name="QualityControl">
     <Key>
@@ -415,7 +426,8 @@
     <Property Name="Iri" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="ExtraTestsAskedBijClient" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="ProjectId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Project" Relationship="RoadItEntitiesModel.QualityControl_ibfk_1" FromRole="QualityControl" ToRole="Project" />
+    <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Project" Relationship="roaditModel.QualityControl_ibfk_1" FromRole="QualityControl" ToRole="Project" />
   </EntityType>
   <EntityType Name="RoadSection">
     <Key>
@@ -424,7 +436,16 @@
     <Property Name="RoadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProjectId" Type="Int32" Nullable="false" />
     <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Project" Relationship="RoadItEntitiesModel.RoadSection_ibfk_1" FromRole="RoadSection" ToRole="Project" />
+    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Project" Relationship="roaditModel.RoadSection_ibfk_1" FromRole="RoadSection" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Users" Relationship="roaditModel.Users_ibfk_1" FromRole="Roles" ToRole="Users" />
   </EntityType>
   <EntityType Name="Silo">
     <Key>
@@ -440,12 +461,13 @@
     <Property Name="RealCompositionId" Type="Int32" Nullable="false" />
     <Property Name="TempSilo" Type="Int32" Nullable="false" />
     <Property Name="AnalysisComposition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Aggragation" Relationship="RoadItEntitiesModel.Silo_ibfk_2" FromRole="Silo" ToRole="Aggragation" />
-    <NavigationProperty Name="AsphaltMixPlant" Relationship="RoadItEntitiesModel.Silo_ibfk_1" FromRole="Silo" ToRole="AsphaltMixPlant" />
-    <NavigationProperty Name="BatchLists" Relationship="RoadItEntitiesModel.BatchList_ibfk_2" FromRole="Silo" ToRole="BatchList" />
-    <NavigationProperty Name="Bituman" Relationship="RoadItEntitiesModel.Silo_ibfk_3" FromRole="Silo" ToRole="Bitumen" />
-    <NavigationProperty Name="Composition" Relationship="RoadItEntitiesModel.Silo_ibfk_5" FromRole="Silo" ToRole="Composition" />
-    <NavigationProperty Name="ListFillerRecup" Relationship="RoadItEntitiesModel.Silo_ibfk_4" FromRole="Silo" ToRole="ListFillerRecup" />
+    <Property Name="SiloTimpStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Aggragation" Relationship="roaditModel.Silo_ibfk_2" FromRole="Silo" ToRole="Aggragation" />
+    <NavigationProperty Name="AsphaltMixPlant" Relationship="roaditModel.Silo_ibfk_1" FromRole="Silo" ToRole="AsphaltMixPlant" />
+    <NavigationProperty Name="BatchLists" Relationship="roaditModel.BatchList_ibfk_2" FromRole="Silo" ToRole="BatchList" />
+    <NavigationProperty Name="Bituman" Relationship="roaditModel.Silo_ibfk_3" FromRole="Silo" ToRole="Bitumen" />
+    <NavigationProperty Name="Composition" Relationship="roaditModel.Silo_ibfk_5" FromRole="Silo" ToRole="Composition" />
+    <NavigationProperty Name="ListFillerRecup" Relationship="roaditModel.Silo_ibfk_4" FromRole="Silo" ToRole="ListFillerRecup" />
   </EntityType>
   <EntityType Name="SpeedFinisher">
     <Key>
@@ -453,8 +475,85 @@
     </Key>
     <Property Name="SpeedId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Speed" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_1" FromRole="SpeedFinisher" ToRole="Finisher" />
-    <Property Type="DateTime" Name="SpeedFinisherTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SpeedFinisherTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_1" FromRole="SpeedFinisher" ToRole="Finisher" />
+  </EntityType>
+  <EntityType Name="Truck">
+    <Key>
+      <PropertyRef Name="TruckId" />
+    </Key>
+    <Property Name="TruckId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
+    <Property Name="MassTruck" Type="Int32" Nullable="false" />
+    <Property Name="ActualPositionId" Type="Int32" Nullable="false" />
+    <Property Name="ETAId" Type="Int32" Nullable="false" />
+    <Property Name="TruckTempId" Type="Int32" Nullable="false" />
+    <Property Name="RealArrivalTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionReturnId" Type="Int32" Nullable="false" />
+    <Property Name="ETAReturnId" Type="Int32" Nullable="false" />
+    <Property Name="ArrivalAtPlant" Type="DateTime" Nullable="false" />
+    <Property Name="UnforseenStopId" Type="Int32" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="ActualPosition" Relationship="roaditModel.Truck_ibfk_3" FromRole="Truck" ToRole="ActualPosition" />
+    <NavigationProperty Name="ActualPositionReturn" Relationship="roaditModel.Truck_ibfk_5" FromRole="Truck" ToRole="ActualPositionReturn" />
+    <NavigationProperty Name="BatchLists" Relationship="roaditModel.BatchList_ibfk_3" FromRole="Truck" ToRole="BatchList" />
+    <NavigationProperty Name="ETA" Relationship="roaditModel.Truck_ibfk_4" FromRole="Truck" ToRole="ETA" />
+    <NavigationProperty Name="ETAReturn" Relationship="roaditModel.Truck_ibfk_6" FromRole="Truck" ToRole="ETAReturn" />
+    <NavigationProperty Name="TruckTemp" Relationship="roaditModel.Truck_ibfk_7" FromRole="Truck" ToRole="TruckTemp" />
+    <NavigationProperty Name="UnforseenStop" Relationship="roaditModel.Truck_ibfk_8" FromRole="Truck" ToRole="UnforseenStop" />
+  </EntityType>
+  <EntityType Name="TruckTemp">
+    <Key>
+      <PropertyRef Name="TruckTempId" />
+    </Key>
+    <Property Name="TruckTempId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Temp" Type="Int32" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Trucks" Relationship="roaditModel.Truck_ibfk_7" FromRole="TruckTemp" ToRole="Truck" />
+  </EntityType>
+  <EntityType Name="UnforseenStop">
+    <Key>
+      <PropertyRef Name="UnforseenStopId" />
+    </Key>
+    <Property Name="UnforseenStopId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StopLocationUnforseenStop" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeUnforseenStop" Type="Time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Trucks" Relationship="roaditModel.Truck_ibfk_8" FromRole="UnforseenStop" ToRole="Truck" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Role" Relationship="roaditModel.Users_ibfk_1" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="WeatherTemp">
+    <Key>
+      <PropertyRef Name="TempId" />
+    </Key>
+    <Property Name="TempId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TempWeather" Type="Int32" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_5" FromRole="WeatherTemp" ToRole="Finisher" />
+  </EntityType>
+  <EntityType Name="Width">
+    <Key>
+      <PropertyRef Name="WidthId" />
+    </Key>
+    <Property Name="WidthId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Width1" Type="Int32" Nullable="false" />
+    <Property Name="WidthTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_9" FromRole="Width" ToRole="Finisher" />
   </EntityType>
   <EntityType Name="Wind">
     <Key>
@@ -462,375 +561,54 @@
     </Key>
     <Property Name="WindId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="WindSpeed" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_6" FromRole="Wind" ToRole="Finisher" />
-    <Property Type="DateTime" Name="WindTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-  </EntityType>
-  <Association Name="Silo_ibfk_2">
-    <End Role="Aggragation" Type="RoadItEntitiesModel.Aggragation" Multiplicity="1" />
-    <End Role="Silo" Type="RoadItEntitiesModel.Silo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Aggragation">
-        <PropertyRef Name="AggragationId" />
-      </Principal>
-      <Dependent Role="Silo">
-        <PropertyRef Name="AggregationId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Finisher_ibfk_7">
-    <End Role="AirHumidity" Type="RoadItEntitiesModel.AirHumidity" Multiplicity="1" />
-    <End Role="Finisher" Type="RoadItEntitiesModel.Finisher" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AirHumidity">
-        <PropertyRef Name="AirHumidityId" />
-      </Principal>
-      <Dependent Role="Finisher">
-        <PropertyRef Name="AirHumidityId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Finisher_ibfk_2">
-    <End Role="Angle" Type="RoadItEntitiesModel.Angle" Multiplicity="1" />
-    <End Role="Finisher" Type="RoadItEntitiesModel.Finisher" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Angle">
-        <PropertyRef Name="AngleId" />
-      </Principal>
-      <Dependent Role="Finisher">
-        <PropertyRef Name="AngleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Silo_ibfk_1">
-    <End Role="AsphaltMixPlant" Type="RoadItEntitiesModel.AsphaltMixPlant" Multiplicity="1" />
-    <End Role="Silo" Type="RoadItEntitiesModel.Silo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AsphaltMixPlant">
-        <PropertyRef Name="CentralId" />
-      </Principal>
-      <Dependent Role="Silo">
-        <PropertyRef Name="CentralId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Finisher_ibfk_8">
-    <End Role="AsphaltTemp" Type="RoadItEntitiesModel.AsphaltTemp" Multiplicity="1" />
-    <End Role="Finisher" Type="RoadItEntitiesModel.Finisher" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AsphaltTemp">
-        <PropertyRef Name="AsphaltTempId" />
-      </Principal>
-      <Dependent Role="Finisher">
-        <PropertyRef Name="AsphaltTempId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="BatchList_ibfk_1">
-    <End Role="Project" Type="RoadItEntitiesModel.Project" Multiplicity="1" />
-    <End Role="BatchList" Type="RoadItEntitiesModel.BatchList" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Project">
-        <PropertyRef Name="ProjectId" />
-      </Principal>
-      <Dependent Role="BatchList">
-        <PropertyRef Name="ProjectId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="BatchList_ibfk_2">
-    <End Role="Silo" Type="RoadItEntitiesModel.Silo" Multiplicity="1" />
-    <End Role="BatchList" Type="RoadItEntitiesModel.BatchList" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Silo">
-        <PropertyRef Name="SiloId" />
-      </Principal>
-      <Dependent Role="BatchList">
-        <PropertyRef Name="SiloId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Compactor_ibfk_2">
-    <End Role="BatchList" Type="RoadItEntitiesModel.BatchList" Multiplicity="1" />
-    <End Role="Compactor" Type="RoadItEntitiesModel.Compactor" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="BatchList">
-        <PropertyRef Name="BatchId" />
-      </Principal>
-      <Dependent Role="Compactor">
-        <PropertyRef Name="BatchId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Silo_ibfk_3">
-    <End Role="Bitumen" Type="RoadItEntitiesModel.Bituman" Multiplicity="1" />
-    <End Role="Silo" Type="RoadItEntitiesModel.Silo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Bitumen">
-        <PropertyRef Name="BitumenId" />
-      </Principal>
-      <Dependent Role="Silo">
-        <PropertyRef Name="BitumenId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Compactor_ibfk_1">
-    <End Role="ColorCode" Type="RoadItEntitiesModel.ColorCode" Multiplicity="1" />
-    <End Role="Compactor" Type="RoadItEntitiesModel.Compactor" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ColorCode">
-        <PropertyRef Name="ColorCodeID" />
-      </Principal>
-      <Dependent Role="Compactor">
-        <PropertyRef Name="ColorCodeId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Silo_ibfk_5">
-    <End Role="Composition" Type="RoadItEntitiesModel.Composition" Multiplicity="1" />
-    <End Role="Silo" Type="RoadItEntitiesModel.Silo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Composition">
-        <PropertyRef Name="RealCompositionId" />
-      </Principal>
-      <Dependent Role="Silo">
-        <PropertyRef Name="RealCompositionId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Contractor_ibfk_1">
-    <End Role="Project" Type="RoadItEntitiesModel.Project" Multiplicity="1" />
-    <End Role="Contractor" Type="RoadItEntitiesModel.Contractor" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Project">
-        <PropertyRef Name="ProjectId" />
-      </Principal>
-      <Dependent Role="Contractor">
-        <PropertyRef Name="ProjectId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Finisher_ibfk_1">
-    <End Role="SpeedFinisher" Type="RoadItEntitiesModel.SpeedFinisher" Multiplicity="1" />
-    <End Role="Finisher" Type="RoadItEntitiesModel.Finisher" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SpeedFinisher">
-        <PropertyRef Name="SpeedId" />
-      </Principal>
-      <Dependent Role="Finisher">
-        <PropertyRef Name="SpeedId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Finisher_ibfk_3">
-    <End Role="LayerThickness" Type="RoadItEntitiesModel.LayerThickness" Multiplicity="1" />
-    <End Role="Finisher" Type="RoadItEntitiesModel.Finisher" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LayerThickness">
-        <PropertyRef Name="LayerThicknessId" />
-      </Principal>
-      <Dependent Role="Finisher">
-        <PropertyRef Name="ThicknessLayerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Finisher_ibfk_4">
-    <End Role="LocationAndTimeSpan" Type="RoadItEntitiesModel.LocationAndTimeSpan" Multiplicity="1" />
-    <End Role="Finisher" Type="RoadItEntitiesModel.Finisher" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LocationAndTimeSpan">
-        <PropertyRef Name="LocationAndTimeSpanId" />
-      </Principal>
-      <Dependent Role="Finisher">
-        <PropertyRef Name="LocationAndTimeSpanId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Finisher_ibfk_6">
-    <End Role="Wind" Type="RoadItEntitiesModel.Wind" Multiplicity="1" />
-    <End Role="Finisher" Type="RoadItEntitiesModel.Finisher" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Wind">
-        <PropertyRef Name="WindId" />
-      </Principal>
-      <Dependent Role="Finisher">
-        <PropertyRef Name="WindId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Silo_ibfk_4">
-    <End Role="ListFillerRecup" Type="RoadItEntitiesModel.ListFillerRecup" Multiplicity="1" />
-    <End Role="Silo" Type="RoadItEntitiesModel.Silo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ListFillerRecup">
-        <PropertyRef Name="ListFillerRecupId" />
-      </Principal>
-      <Dependent Role="Silo">
-        <PropertyRef Name="ListRecupFillerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Planning_ibfk_1">
-    <End Role="Project" Type="RoadItEntitiesModel.Project" Multiplicity="1" />
-    <End Role="Planning" Type="RoadItEntitiesModel.Planning" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Project">
-        <PropertyRef Name="ProjectId" />
-      </Principal>
-      <Dependent Role="Planning">
-        <PropertyRef Name="ProjectId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="QualityControl_ibfk_1">
-    <End Role="Project" Type="RoadItEntitiesModel.Project" Multiplicity="1" />
-    <End Role="QualityControl" Type="RoadItEntitiesModel.QualityControl" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Project">
-        <PropertyRef Name="ProjectId" />
-      </Principal>
-      <Dependent Role="QualityControl">
-        <PropertyRef Name="ProjectId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="RoadSection_ibfk_1">
-    <End Role="Project" Type="RoadItEntitiesModel.Project" Multiplicity="1" />
-    <End Role="RoadSection" Type="RoadItEntitiesModel.RoadSection" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Project">
-        <PropertyRef Name="ProjectId" />
-      </Principal>
-      <Dependent Role="RoadSection">
-        <PropertyRef Name="ProjectId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="Role">
-    <Key>
-      <PropertyRef Name="RoleId" />
-    </Key>
-    <Property Type="Int32" Name="RoleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Users" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="Role" ToRole="User" />
-  </EntityType>
-  <EntityType Name="Users">
-    <Key>
-      <PropertyRef Name="UserId" />
-    </Key>
-    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Password" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="RoleId" Nullable="false" />
-    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Role" Relationship="RoadItEntitiesModel.Users_ibfk_1" FromRole="User" ToRole="Role" />
-  </EntityType>
-  <Association Name="Users_ibfk_1">
-    <End Type="RoadItEntitiesModel.Role" Role="Role" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Users" Role="User" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Role">
-        <PropertyRef Name="RoleId" />
-      </Principal>
-      <Dependent Role="User">
-        <PropertyRef Name="RoleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="BatchList_ibfk_4">
-    <End Type="RoadItEntitiesModel.Finisher" Role="Finisher" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.BatchList" Role="BatchList" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Finisher">
-        <PropertyRef Name="FinicherId" />
-      </Principal>
-      <Dependent Role="BatchList">
-        <PropertyRef Name="FinisherId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="Truck">
-    <Key>
-      <PropertyRef Name="TruckId" />
-    </Key>
-    <Property Type="Int32" Name="TruckId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
-    <Property Type="Int32" Name="MassTruck" Nullable="false" />
-    <Property Type="Int32" Name="ActualPositionId" Nullable="false" />
-    <Property Type="Int32" Name="ETAId" Nullable="false" />
-    <Property Type="Int32" Name="TruckTempId" Nullable="false" />
-    <Property Type="DateTime" Name="RealArrivalTime" Nullable="false" />
-    <Property Type="DateTime" Name="DeattachmentFinisherTime" Nullable="false" />
-    <Property Type="String" Name="DeattachmentFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="ActualPositionReturnId" Nullable="false" />
-    <Property Type="Int32" Name="ETAReturnId" Nullable="false" />
-    <Property Type="DateTime" Name="ArrivalAtPlant" Nullable="false" />
-    <Property Type="Int32" Name="UnforseenStopId" Nullable="false" />
-    <Property Type="DateTime" Name="AttachmentToFinisherTime" Nullable="false" />
-    <Property Type="String" Name="AttachmentToFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="ActualPosition" Relationship="RoadItEntitiesModel.Truck_ibfk_3" FromRole="Truck" ToRole="ActualPosition" />
-    <NavigationProperty Name="ActualPositionReturn" Relationship="RoadItEntitiesModel.Truck_ibfk_5" FromRole="Truck" ToRole="ActualPositionReturn" />
-    <NavigationProperty Name="BatchLists" Relationship="RoadItEntitiesModel.BatchList_ibfk_3" FromRole="Truck" ToRole="BatchList" />
-    <NavigationProperty Name="ETA" Relationship="RoadItEntitiesModel.Truck_ibfk_4" FromRole="Truck" ToRole="ETA" />
-    <NavigationProperty Name="ETAReturn" Relationship="RoadItEntitiesModel.Truck_ibfk_6" FromRole="Truck" ToRole="ETAReturn" />
-    <NavigationProperty Name="TruckTemp" Relationship="RoadItEntitiesModel.Truck_ibfk_7" FromRole="Truck" ToRole="TruckTemp" />
-    <NavigationProperty Name="UnforseenStop" Relationship="RoadItEntitiesModel.Truck_ibfk_8" FromRole="Truck" ToRole="UnforseenStop" />
-  </EntityType>
-  <EntityType Name="TruckTemp">
-    <Key>
-      <PropertyRef Name="TruckTempId" />
-    </Key>
-    <Property Type="Int32" Name="TruckTempId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="Temp" Nullable="false" />
-    <Property Type="DateTime" Name="TempTruckTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Trucks" Relationship="RoadItEntitiesModel.Truck_ibfk_7" FromRole="TruckTemp" ToRole="Truck" />
-  </EntityType>
-  <EntityType Name="UnforseenStop">
-    <Key>
-      <PropertyRef Name="UnforseenStopId" />
-    </Key>
-    <Property Type="Int32" Name="UnforseenStopId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="StopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="StopTime" Nullable="false" />
-    <Property Type="DateTime" Name="UnforseenStopTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Trucks" Relationship="RoadItEntitiesModel.Truck_ibfk_8" FromRole="UnforseenStop" ToRole="Truck" />
-  </EntityType>
-  <EntityType Name="WeatherTemp">
-    <Key>
-      <PropertyRef Name="TempId" />
-    </Key>
-    <Property Type="Int32" Name="TempId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="TempWeather" Nullable="false" />
-    <Property Type="DateTime" Name="WeatherTempTimeStamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_5" FromRole="WeatherTemp" ToRole="Finisher" />
-  </EntityType>
-  <EntityType Name="Width">
-    <Key>
-      <PropertyRef Name="WidthId" />
-    </Key>
-    <Property Type="Int32" Name="WidthId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="Width1" Nullable="false" />
-    <NavigationProperty Name="Finishers" Relationship="RoadItEntitiesModel.Finisher_ibfk_9" FromRole="Width" ToRole="Finisher" />
+    <Property Name="WindTimeStamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Finishers" Relationship="roaditModel.Finisher_ibfk_6" FromRole="Wind" ToRole="Finisher" />
   </EntityType>
   <EntityType Name="AsphaltProcucer">
     <Key>
+      <PropertyRef Name="TonPerDay" />
+      <PropertyRef Name="TruckLicensPlate" />
+      <PropertyRef Name="DepartureTime" />
+      <PropertyRef Name="MassTruck" />
+      <PropertyRef Name="RealArrivalTime" />
+      <PropertyRef Name="DeattachmentFinisherTime" />
+      <PropertyRef Name="DeattachmentFinisherPosition" />
+      <PropertyRef Name="ArrivalAtPlant" />
+      <PropertyRef Name="AttachmentToFinisherTime" />
+      <PropertyRef Name="AttachmentToFinisherPosition" />
+      <PropertyRef Name="TruckTimeStamp" />
+      <PropertyRef Name="Temp" />
+      <PropertyRef Name="TempTruckTimeStamp" />
+      <PropertyRef Name="StopLocationUnforseenStop" />
+      <PropertyRef Name="StopTimeUnforseenStop" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
+      <PropertyRef Name="ActualPosition" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
+      <PropertyRef Name="ActualPositionReturn" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
+      <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
+      <PropertyRef Name="ETAReturn" />
+      <PropertyRef Name="ETAReturnTimeStamp" />
+      <PropertyRef Name="QrCodeCompactor" />
+      <PropertyRef Name="ComplianceMixture" />
+      <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="RoadId" />
       <PropertyRef Name="RoadDescription" />
-      <PropertyRef Name="TonPerDay" />
-      <PropertyRef Name="TechnicalDataSheet" />
+      <PropertyRef Name="RoadSectionTimeStamp" />
       <PropertyRef Name="MixtureName" />
+      <PropertyRef Name="TechnicalDataSheet" />
       <PropertyRef Name="TypeOfAggregates" />
       <PropertyRef Name="MixtureChange" />
+      <PropertyRef Name="AsphaltMixPlantTimestamp" />
       <PropertyRef Name="AggragationMaxTemp" />
       <PropertyRef Name="AggragationMinTemp" />
       <PropertyRef Name="AggragationTimeStamp" />
-      <PropertyRef Name="BitumenMaxTemp" />
-      <PropertyRef Name="BitumenMinTemp" />
       <PropertyRef Name="BitumenTimeStamp" />
+      <PropertyRef Name="BitumenMinTemp" />
+      <PropertyRef Name="BitumenMaxTemp" />
       <PropertyRef Name="FillerRecup" />
       <PropertyRef Name="FillerRecupTimeStamp" />
-      <PropertyRef Name="MixingTemp" />
-      <PropertyRef Name="MixingTime" />
       <PropertyRef Name="MassOfAggregationBunker1" />
       <PropertyRef Name="MassOfAggregationBunker2" />
       <PropertyRef Name="MassOfAggregationBunker3" />
@@ -840,126 +618,120 @@
       <PropertyRef Name="Filler" />
       <PropertyRef Name="Bitumen" />
       <PropertyRef Name="AdditivesKg" />
+      <PropertyRef Name="CompositionTimeStamp" />
+      <PropertyRef Name="MixingTemp" />
+      <PropertyRef Name="MixingTime" />
       <PropertyRef Name="TempSilo" />
       <PropertyRef Name="AnalysisComposition" />
-      <PropertyRef Name="TruckLicensPlate" />
-      <PropertyRef Name="DepartureTime" />
-      <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ActualPositionTimeStamp" />
-      <PropertyRef Name="ETA" />
-      <PropertyRef Name="ETATimeStamp" />
-      <PropertyRef Name="RealArrivalTime" />
-      <PropertyRef Name="DeattachmentFinisherTime" />
-      <PropertyRef Name="DeattachmentFinisherPosition" />
-      <PropertyRef Name="AttachmentToFinisherTime" />
-      <PropertyRef Name="AttachmentToFinisherPosition" />
-      <PropertyRef Name="Temp" />
-      <PropertyRef Name="TempTruckTimeStamp" />
-      <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ActualPositionReturnTimeStamp" />
-      <PropertyRef Name="ETAReturn" />
-      <PropertyRef Name="ETAReturnTimeStamp" />
-      <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStopLocation" />
-      <PropertyRef Name="UnforseenStopTime" />
-      <PropertyRef Name="UnforseenStopTimeStamp" />
-      <PropertyRef Name="QrCodeCompactor" />
-      <PropertyRef Name="SamplesCopro" />
-      <PropertyRef Name="ComplianceMixture" />
+      <PropertyRef Name="SiloTimpStamp" />
+      <PropertyRef Name="PlanningTimeStamp" />
+      <PropertyRef Name="CompactorTimeStamp" />
+      <PropertyRef Name="QualtityTimeStamp" />
     </Key>
-    <Property Type="Int32" Name="RoadId" Nullable="false" />
-    <Property Type="String" Name="RoadDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="TonPerDay" Nullable="false" />
-    <Property Type="String" Name="TechnicalDataSheet" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TypeOfAggregates" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureChange" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="AggragationMaxTemp" Nullable="false" />
-    <Property Type="Int32" Name="AggragationMinTemp" Nullable="false" />
-    <Property Type="DateTime" Name="AggragationTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="BitumenMaxTemp" Nullable="false" />
-    <Property Type="Int32" Name="BitumenMinTemp" Nullable="false" />
-    <Property Type="DateTime" Name="BitumenTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="FillerRecup" Nullable="false" />
-    <Property Type="DateTime" Name="FillerRecupTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="MixingTemp" Nullable="false" />
-    <Property Type="Time" Name="MixingTime" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker1" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker2" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker3" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker4" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker5" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker6" Nullable="false" />
-    <Property Type="Int32" Name="Filler" Nullable="false" />
-    <Property Type="Int32" Name="Bitumen" Nullable="false" />
-    <Property Type="Int32" Name="AdditivesKg" Nullable="false" />
-    <Property Type="Int32" Name="TempSilo" Nullable="false" />
-    <Property Type="String" Name="AnalysisComposition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
-    <Property Type="Int32" Name="MassTruck" Nullable="false" />
-    <Property Type="String" Name="ActualPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETA" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETATimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="RealArrivalTime" Nullable="false" />
-    <Property Type="DateTime" Name="DeattachmentFinisherTime" Nullable="false" />
-    <Property Type="String" Name="DeattachmentFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="AttachmentToFinisherTime" Nullable="false" />
-    <Property Type="String" Name="AttachmentToFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="Temp" Nullable="false" />
-    <Property Type="DateTime" Name="TempTruckTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ActualPositionReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionReturnTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETAReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETAReturnTimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="ArrivalAtPlant" Nullable="false" />
-    <Property Type="String" Name="UnforseenStopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="UnforseenStopTime" Nullable="false" />
-    <Property Type="DateTime" Name="UnforseenStopTimeStamp" Nullable="false" />
-    <Property Type="String" Name="QrCodeCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SamplesCopro" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ComplianceMixture" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TonPerDay" Type="Int32" Nullable="false" />
+    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
+    <Property Name="MassTruck" Type="Int32" Nullable="false" />
+    <Property Name="RealArrivalTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ArrivalAtPlant" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Temp" Type="Int32" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="StopLocationUnforseenStop" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeUnforseenStop" Type="Time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPositionReturn" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETA" Type="Time" Nullable="false" />
+    <Property Name="ETATimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETAReturn" Type="Time" Nullable="false" />
+    <Property Name="ETAReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ComplianceMixture" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SamplesCopro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadId" Type="Int32" Nullable="false" />
+    <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TypeOfAggregates" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="MixtureChange" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" />
+    <Property Name="AggragationMaxTemp" Type="Int32" Nullable="false" />
+    <Property Name="AggragationMinTemp" Type="Int32" Nullable="false" />
+    <Property Name="AggragationTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="BitumenTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="BitumenMinTemp" Type="Int32" Nullable="false" />
+    <Property Name="BitumenMaxTemp" Type="Int32" Nullable="false" />
+    <Property Name="FillerRecup" Type="Int32" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MassOfAggregationBunker1" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker2" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker3" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker4" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker5" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker6" Type="Int32" Nullable="false" />
+    <Property Name="Filler" Type="Int32" Nullable="false" />
+    <Property Name="Bitumen" Type="Int32" Nullable="false" />
+    <Property Name="AdditivesKg" Type="Int32" Nullable="false" />
+    <Property Name="CompositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MixingTemp" Type="Int32" Nullable="false" />
+    <Property Name="MixingTime" Type="Time" Nullable="false" />
+    <Property Name="TempSilo" Type="Int32" Nullable="false" />
+    <Property Name="AnalysisComposition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SiloTimpStamp" Type="DateTime" Nullable="false" />
+    <Property Name="PlanningTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" />
   </EntityType>
   <EntityType Name="Client">
     <Key>
-      <PropertyRef Name="RoadId" />
-      <PropertyRef Name="RoadDescription" />
-      <PropertyRef Name="TechnicalDataSheet" />
       <PropertyRef Name="MixtureName" />
+      <PropertyRef Name="TechnicalDataSheet" />
       <PropertyRef Name="MixtureChange" />
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
+      <PropertyRef Name="RealArrivalTime" />
       <PropertyRef Name="ActualPosition" />
       <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ETA" />
       <PropertyRef Name="ETATimeStamp" />
-      <PropertyRef Name="RealArrivalTime" />
-      <PropertyRef Name="FinisherSpeed" />
-      <PropertyRef Name="SpeedFinisherTimeStamp" />
-      <PropertyRef Name="AngleLeft" />
-      <PropertyRef Name="AngleRight" />
-      <PropertyRef Name="Width" />
-      <PropertyRef Name="ThicknessLeft" />
-      <PropertyRef Name="ThicknessMiddel" />
-      <PropertyRef Name="ThicknessRight" />
-      <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="StopLocation" />
-      <PropertyRef Name="StopTime" />
-      <PropertyRef Name="StopTimeStamp" />
       <PropertyRef Name="Precipation" />
+      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
+      <PropertyRef Name="FinisherTimeStamp" />
+      <PropertyRef Name="LeftTickness" />
+      <PropertyRef Name="MiddelThickness" />
+      <PropertyRef Name="RightThickness" />
+      <PropertyRef Name="ThicknessTimeStamp" />
       <PropertyRef Name="TempWeather" />
       <PropertyRef Name="WeatherTempTimeStamp" />
+      <PropertyRef Name="Width" />
+      <PropertyRef Name="WidthTimeStamp" />
       <PropertyRef Name="WindSpeed" />
       <PropertyRef Name="WindTimeStamp" />
       <PropertyRef Name="AirHumidity" />
       <PropertyRef Name="AirHumidityTimeStamp" />
-      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
-      <PropertyRef Name="QrCodeCompactor" />
-      <PropertyRef Name="GPSFinisher" />
+      <PropertyRef Name="LeftAngle" />
+      <PropertyRef Name="RightAngle" />
+      <PropertyRef Name="AngleTimestamp" />
+      <PropertyRef Name="Speed" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
+      <PropertyRef Name="StopLocationLTS" />
+      <PropertyRef Name="StopTimeLTS" />
+      <PropertyRef Name="StopTimeStamp" />
+      <PropertyRef Name="GPS" />
+      <PropertyRef Name="TempAsphalt" />
+      <PropertyRef Name="AsphaltTempTimeStamp" />
       <PropertyRef Name="GPSCompactor" />
+      <PropertyRef Name="ColorCodeTimeStamp" />
+      <PropertyRef Name="QrCodeCompactor" />
       <PropertyRef Name="ComplianceMixture" />
       <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="DensityOfField" />
@@ -968,109 +740,140 @@
       <PropertyRef Name="Skidresistance" />
       <PropertyRef Name="Iri" />
       <PropertyRef Name="ExtraTestsAskedBijClient" />
+      <PropertyRef Name="QualtityTimeStamp" />
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
+      <PropertyRef Name="RoadSectionTimeStamp" />
+      <PropertyRef Name="AsphaltMixPlantTimestamp" />
+      <PropertyRef Name="TruckTimeStamp" />
+      <PropertyRef Name="CompactorTimeStamp" />
+      <PropertyRef Name="TranverseSlope" />
+      <PropertyRef Name="GPSFinisher" />
     </Key>
-    <Property Type="Int32" Name="RoadId" Nullable="false" />
-    <Property Type="String" Name="RoadDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TechnicalDataSheet" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureChange" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
-    <Property Type="Int32" Name="MassTruck" Nullable="false" />
-    <Property Type="String" Name="ActualPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETA" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETATimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="RealArrivalTime" Nullable="false" />
-    <Property Type="Int32" Name="FinisherSpeed" Nullable="false" />
-    <Property Type="DateTime" Name="SpeedFinisherTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="AngleLeft" Nullable="false" />
-    <Property Type="Int32" Name="AngleRight" Nullable="false" />
-    <Property Type="Int32" Name="Width" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessLeft" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessMiddel" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessRight" Nullable="false" />
-    <Property Type="Int32" Name="TranverseSlope" Nullable="false" />
-    <Property Type="String" Name="StopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="StopTime" Nullable="false" />
-    <Property Type="DateTime" Name="StopTimeStamp" Nullable="false" />
-    <Property Type="String" Name="Precipation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="TempWeather" Nullable="false" />
-    <Property Type="DateTime" Name="WeatherTempTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="WindSpeed" Nullable="false" />
-    <Property Type="DateTime" Name="WindTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="AirHumidity" Nullable="false" />
-    <Property Type="DateTime" Name="AirHumidityTimeStamp" Nullable="false" />
-    <Property Type="String" Name="AsphaltTempAfterFinisherIrScanOrThermo" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="QrCodeCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="GPSFinisher" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="GPSCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ComplianceMixture" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SamplesCopro" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="DensityOfField" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Cores" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="LengthwiseFlatness" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Skidresistance" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Iri" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ExtraTestsAskedBijClient" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="MixtureChange" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
+    <Property Name="MassTruck" Type="Int32" Nullable="false" />
+    <Property Name="RealArrivalTime" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETA" Type="Time" Nullable="false" />
+    <Property Name="ETATimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Precipation" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="FinisherTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="LeftTickness" Type="Int32" Nullable="false" />
+    <Property Name="MiddelThickness" Type="Int32" Nullable="false" />
+    <Property Name="RightThickness" Type="Int32" Nullable="false" />
+    <Property Name="ThicknessTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TempWeather" Type="Int32" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="WidthTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="WindSpeed" Type="Int32" Nullable="false" />
+    <Property Name="WindTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="AirHumidity" Type="Int32" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="LeftAngle" Type="Int32" Nullable="false" />
+    <Property Name="RightAngle" Type="Int32" Nullable="false" />
+    <Property Name="AngleTimestamp" Type="DateTime" Nullable="false" />
+    <Property Name="Speed" Type="Int32" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="StopLocationLTS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeLTS" Type="Time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="GPS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TempAsphalt" Type="Int32" Nullable="false" />
+    <Property Name="AsphaltTempTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="GPSCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ColorCodeTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ComplianceMixture" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SamplesCopro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DensityOfField" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Cores" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="LengthwiseFlatness" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Skidresistance" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Iri" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ExtraTestsAskedBijClient" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="RoadId" Type="Int32" Nullable="false" />
+    <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" />
+    <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TranverseSlope" Type="Int32" Nullable="false" />
+    <Property Name="GPSFinisher" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
   </EntityType>
   <EntityType Name="ContractorVieuw">
     <Key>
-      <PropertyRef Name="RoadId" />
-      <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="LayerThickness" />
       <PropertyRef Name="Surface" />
       <PropertyRef Name="TonPerDay" />
-      <PropertyRef Name="TechnicalDataSheet" />
+      <PropertyRef Name="PlanningTimeStamp" />
       <PropertyRef Name="MixtureName" />
+      <PropertyRef Name="TechnicalDataSheet" />
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ActualPositionTimeStamp" />
-      <PropertyRef Name="ETA" />
-      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="RealArrivalTime" />
       <PropertyRef Name="DeattachmentFinisherTime" />
       <PropertyRef Name="DeattachmentFinisherPosition" />
+      <PropertyRef Name="ArrivalAtPlant" />
       <PropertyRef Name="AttachmentToFinisherTime" />
       <PropertyRef Name="AttachmentToFinisherPosition" />
+      <PropertyRef Name="TruckTimeStamp" />
       <PropertyRef Name="Temp" />
       <PropertyRef Name="TempTruckTimeStamp" />
+      <PropertyRef Name="StopLocationUnforseenStop" />
+      <PropertyRef Name="StopTimeUnforseenStop" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
+      <PropertyRef Name="ActualPosition" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ActualPositionReturn" />
       <PropertyRef Name="ActualPositionReturnTimeStamp" />
+      <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="ETAReturn" />
       <PropertyRef Name="ETAReturnTimeStamp" />
-      <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStopLocation" />
-      <PropertyRef Name="UnforseenStopTime" />
-      <PropertyRef Name="UnforseenStopTimeStamp" />
-      <PropertyRef Name="FinisherSpeed" />
-      <PropertyRef Name="SpeedFinisherTimeStamp" />
-      <PropertyRef Name="AngleLeft" />
-      <PropertyRef Name="AngleRight" />
-      <PropertyRef Name="Width" />
-      <PropertyRef Name="ThicknessLeft" />
-      <PropertyRef Name="ThicknessMiddel" />
-      <PropertyRef Name="ThicknessRight" />
       <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="StopLocation" />
-      <PropertyRef Name="StopTime" />
-      <PropertyRef Name="StopTimeStamp" />
       <PropertyRef Name="Precipation" />
+      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
+      <PropertyRef Name="FinisherTimeStamp" />
+      <PropertyRef Name="LeftTickness" />
+      <PropertyRef Name="MiddelThickness" />
+      <PropertyRef Name="RightThickness" />
+      <PropertyRef Name="ThicknessTimeStamp" />
       <PropertyRef Name="TempWeather" />
       <PropertyRef Name="WeatherTempTimeStamp" />
+      <PropertyRef Name="Width" />
+      <PropertyRef Name="WidthTimeStamp" />
       <PropertyRef Name="WindSpeed" />
       <PropertyRef Name="WindTimeStamp" />
       <PropertyRef Name="AirHumidity" />
       <PropertyRef Name="AirHumidityTimeStamp" />
-      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
+      <PropertyRef Name="LeftAngle" />
+      <PropertyRef Name="RightAngle" />
+      <PropertyRef Name="AngleTimestamp" />
+      <PropertyRef Name="Speed" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
+      <PropertyRef Name="StopLocationLTS" />
+      <PropertyRef Name="StopTimeLTS" />
+      <PropertyRef Name="StopTimeStamp" />
+      <PropertyRef Name="GPS" />
+      <PropertyRef Name="TempAsphalt" />
+      <PropertyRef Name="AsphaltTempTimeStamp" />
+      <PropertyRef Name="GPSFinisher" />
+      <PropertyRef Name="GPSCompactor" />
+      <PropertyRef Name="ColorCodeTimeStamp" />
       <PropertyRef Name="QrCodeCompactor" />
       <PropertyRef Name="NumberOfRollerCompactorPassages" />
       <PropertyRef Name="LocationOfVibration" />
-      <PropertyRef Name="GPSFinisher" />
-      <PropertyRef Name="GPSCompactor" />
       <PropertyRef Name="SpeedOfRollerCompactor" />
+      <PropertyRef Name="CompactorTimeStamp" />
       <PropertyRef Name="ComplianceMixture" />
       <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="DensityOfField" />
@@ -1079,89 +882,103 @@
       <PropertyRef Name="Skidresistance" />
       <PropertyRef Name="Iri" />
       <PropertyRef Name="ExtraTestsAskedBijClient" />
+      <PropertyRef Name="QualtityTimeStamp" />
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
+      <PropertyRef Name="RoadSectionTimeStamp" />
+      <PropertyRef Name="AsphaltMixPlantTimestamp" />
     </Key>
-    <Property Type="Int32" Name="RoadId" Nullable="false" />
-    <Property Type="String" Name="RoadDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="LayerThickness" Nullable="false" />
-    <Property Type="Int32" Name="Surface" Nullable="false" />
-    <Property Type="Int32" Name="TonPerDay" Nullable="false" />
-    <Property Type="String" Name="TechnicalDataSheet" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
-    <Property Type="Int32" Name="MassTruck" Nullable="false" />
-    <Property Type="String" Name="ActualPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETA" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETATimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="RealArrivalTime" Nullable="false" />
-    <Property Type="DateTime" Name="DeattachmentFinisherTime" Nullable="false" />
-    <Property Type="String" Name="DeattachmentFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="AttachmentToFinisherTime" Nullable="false" />
-    <Property Type="String" Name="AttachmentToFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="Temp" Nullable="false" />
-    <Property Type="DateTime" Name="TempTruckTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ActualPositionReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionReturnTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETAReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETAReturnTimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="ArrivalAtPlant" Nullable="false" />
-    <Property Type="String" Name="UnforseenStopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="UnforseenStopTime" Nullable="false" />
-    <Property Type="DateTime" Name="UnforseenStopTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="FinisherSpeed" Nullable="false" />
-    <Property Type="DateTime" Name="SpeedFinisherTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="AngleLeft" Nullable="false" />
-    <Property Type="Int32" Name="AngleRight" Nullable="false" />
-    <Property Type="Int32" Name="Width" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessLeft" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessMiddel" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessRight" Nullable="false" />
-    <Property Type="Int32" Name="TranverseSlope" Nullable="false" />
-    <Property Type="String" Name="StopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="StopTime" Nullable="false" />
-    <Property Type="DateTime" Name="StopTimeStamp" Nullable="false" />
-    <Property Type="String" Name="Precipation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="TempWeather" Nullable="false" />
-    <Property Type="DateTime" Name="WeatherTempTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="WindSpeed" Nullable="false" />
-    <Property Type="DateTime" Name="WindTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="AirHumidity" Nullable="false" />
-    <Property Type="DateTime" Name="AirHumidityTimeStamp" Nullable="false" />
-    <Property Type="String" Name="AsphaltTempAfterFinisherIrScanOrThermo" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="QrCodeCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="NumberOfRollerCompactorPassages" Nullable="false" />
-    <Property Type="String" Name="LocationOfVibration" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="GPSFinisher" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="GPSCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="SpeedOfRollerCompactor" Nullable="false" />
-    <Property Type="String" Name="ComplianceMixture" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SamplesCopro" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="DensityOfField" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Cores" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="LengthwiseFlatness" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Skidresistance" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Iri" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ExtraTestsAskedBijClient" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LayerThickness" Type="Int32" Nullable="false" />
+    <Property Name="Surface" Type="Int32" Nullable="false" />
+    <Property Name="TonPerDay" Type="Int32" Nullable="false" />
+    <Property Name="PlanningTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
+    <Property Name="MassTruck" Type="Int32" Nullable="false" />
+    <Property Name="RealArrivalTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ArrivalAtPlant" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Temp" Type="Int32" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="StopLocationUnforseenStop" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeUnforseenStop" Type="Time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPositionReturn" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETA" Type="Time" Nullable="false" />
+    <Property Name="ETATimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETAReturn" Type="Time" Nullable="false" />
+    <Property Name="ETAReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TranverseSlope" Type="Int32" Nullable="false" />
+    <Property Name="Precipation" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="FinisherTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="LeftTickness" Type="Int32" Nullable="false" />
+    <Property Name="MiddelThickness" Type="Int32" Nullable="false" />
+    <Property Name="RightThickness" Type="Int32" Nullable="false" />
+    <Property Name="ThicknessTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TempWeather" Type="Int32" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="WidthTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="WindSpeed" Type="Int32" Nullable="false" />
+    <Property Name="WindTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="AirHumidity" Type="Int32" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="LeftAngle" Type="Int32" Nullable="false" />
+    <Property Name="RightAngle" Type="Int32" Nullable="false" />
+    <Property Name="AngleTimestamp" Type="DateTime" Nullable="false" />
+    <Property Name="Speed" Type="Int32" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="StopLocationLTS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeLTS" Type="Time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="GPS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TempAsphalt" Type="Int32" Nullable="false" />
+    <Property Name="AsphaltTempTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="GPSFinisher" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="GPSCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ColorCodeTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="NumberOfRollerCompactorPassages" Type="Int32" Nullable="false" />
+    <Property Name="LocationOfVibration" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SpeedOfRollerCompactor" Type="Int32" Nullable="false" />
+    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ComplianceMixture" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SamplesCopro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DensityOfField" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Cores" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="LengthwiseFlatness" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Skidresistance" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Iri" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ExtraTestsAskedBijClient" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="RoadId" Type="Int32" Nullable="false" />
+    <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" />
   </EntityType>
   <EntityType Name="Copro">
     <Key>
-      <PropertyRef Name="RoadId" />
-      <PropertyRef Name="RoadDescription" />
-      <PropertyRef Name="TechnicalDataSheet" />
-      <PropertyRef Name="MixtureName" />
       <PropertyRef Name="TypeOfAggregates" />
       <PropertyRef Name="MixtureChange" />
+      <PropertyRef Name="AsphaltMixPlantTimestamp" />
       <PropertyRef Name="AggragationMaxTemp" />
       <PropertyRef Name="AggragationMinTemp" />
       <PropertyRef Name="AggragationTimeStamp" />
-      <PropertyRef Name="BitumenMaxTemp" />
-      <PropertyRef Name="BitumenMinTemp" />
       <PropertyRef Name="BitumenTimeStamp" />
+      <PropertyRef Name="BitumenMinTemp" />
+      <PropertyRef Name="BitumenMaxTemp" />
       <PropertyRef Name="FillerRecup" />
       <PropertyRef Name="FillerRecupTimeStamp" />
-      <PropertyRef Name="MixingTemp" />
-      <PropertyRef Name="MixingTime" />
       <PropertyRef Name="MassOfAggregationBunker1" />
       <PropertyRef Name="MassOfAggregationBunker2" />
       <PropertyRef Name="MassOfAggregationBunker3" />
@@ -1171,8 +988,12 @@
       <PropertyRef Name="Filler" />
       <PropertyRef Name="Bitumen" />
       <PropertyRef Name="AdditivesKg" />
+      <PropertyRef Name="CompositionTimeStamp" />
+      <PropertyRef Name="MixingTemp" />
+      <PropertyRef Name="MixingTime" />
       <PropertyRef Name="TempSilo" />
       <PropertyRef Name="AnalysisComposition" />
+      <PropertyRef Name="SiloTimpStamp" />
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
@@ -1181,114 +1002,147 @@
       <PropertyRef Name="QrCodeCompactor" />
       <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="ExtraTestsAskedBijClient" />
+      <PropertyRef Name="QualtityTimeStamp" />
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
+      <PropertyRef Name="RoadSectionTimeStamp" />
+      <PropertyRef Name="CompactorTimeStamp" />
+      <PropertyRef Name="MixtureName" />
+      <PropertyRef Name="TechnicalDataSheet" />
+      <PropertyRef Name="TruckTimeStamp" />
     </Key>
-    <Property Type="Int32" Name="RoadId" Nullable="false" />
-    <Property Type="String" Name="RoadDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TechnicalDataSheet" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TypeOfAggregates" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureChange" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="AggragationMaxTemp" Nullable="false" />
-    <Property Type="Int32" Name="AggragationMinTemp" Nullable="false" />
-    <Property Type="DateTime" Name="AggragationTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="BitumenMaxTemp" Nullable="false" />
-    <Property Type="Int32" Name="BitumenMinTemp" Nullable="false" />
-    <Property Type="DateTime" Name="BitumenTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="FillerRecup" Nullable="false" />
-    <Property Type="DateTime" Name="FillerRecupTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="MixingTemp" Nullable="false" />
-    <Property Type="Time" Name="MixingTime" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker1" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker2" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker3" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker4" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker5" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker6" Nullable="false" />
-    <Property Type="Int32" Name="Filler" Nullable="false" />
-    <Property Type="Int32" Name="Bitumen" Nullable="false" />
-    <Property Type="Int32" Name="AdditivesKg" Nullable="false" />
-    <Property Type="Int32" Name="TempSilo" Nullable="false" />
-    <Property Type="String" Name="AnalysisComposition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
-    <Property Type="Int32" Name="MassTruck" Nullable="false" />
-    <Property Type="Int32" Name="Temp" Nullable="false" />
-    <Property Type="DateTime" Name="TempTruckTimeStamp" Nullable="false" />
-    <Property Type="String" Name="QrCodeCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SamplesCopro" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ExtraTestsAskedBijClient" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TypeOfAggregates" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="MixtureChange" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" />
+    <Property Name="AggragationMaxTemp" Type="Int32" Nullable="false" />
+    <Property Name="AggragationMinTemp" Type="Int32" Nullable="false" />
+    <Property Name="AggragationTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="BitumenTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="BitumenMinTemp" Type="Int32" Nullable="false" />
+    <Property Name="BitumenMaxTemp" Type="Int32" Nullable="false" />
+    <Property Name="FillerRecup" Type="Int32" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MassOfAggregationBunker1" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker2" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker3" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker4" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker5" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker6" Type="Int32" Nullable="false" />
+    <Property Name="Filler" Type="Int32" Nullable="false" />
+    <Property Name="Bitumen" Type="Int32" Nullable="false" />
+    <Property Name="AdditivesKg" Type="Int32" Nullable="false" />
+    <Property Name="CompositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MixingTemp" Type="Int32" Nullable="false" />
+    <Property Name="MixingTime" Type="Time" Nullable="false" />
+    <Property Name="TempSilo" Type="Int32" Nullable="false" />
+    <Property Name="AnalysisComposition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SiloTimpStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
+    <Property Name="MassTruck" Type="Int32" Nullable="false" />
+    <Property Name="Temp" Type="Int32" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SamplesCopro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ExtraTestsAskedBijClient" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="RoadId" Type="Int32" Nullable="false" />
+    <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Type="DateTime" Name="TruckTimeStamp" Nullable="false" />
   </EntityType>
   <EntityType Name="Trucker">
     <Key>
-      <PropertyRef Name="RoadId" />
-      <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ActualPositionTimeStamp" />
-      <PropertyRef Name="ETA" />
-      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="RealArrivalTime" />
       <PropertyRef Name="DeattachmentFinisherTime" />
       <PropertyRef Name="DeattachmentFinisherPosition" />
+      <PropertyRef Name="ArrivalAtPlant" />
       <PropertyRef Name="AttachmentToFinisherTime" />
       <PropertyRef Name="AttachmentToFinisherPosition" />
+      <PropertyRef Name="TruckTimeStamp" />
+      <PropertyRef Name="StopLocationUnforseenStop" />
+      <PropertyRef Name="StopTimeUnforseenStop" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
+      <PropertyRef Name="ActualPosition" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
       <PropertyRef Name="ActualPositionReturn" />
       <PropertyRef Name="ActualPositionReturnTimeStamp" />
+      <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
       <PropertyRef Name="ETAReturn" />
       <PropertyRef Name="ETAReturnTimeStamp" />
-      <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStopLocation" />
-      <PropertyRef Name="UnforseenStopTime" />
-      <PropertyRef Name="UnforseenStopTimeStamp" />
       <PropertyRef Name="QrCodeCompactor" />
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
+      <PropertyRef Name="RoadSectionTimeStamp" />
+      <PropertyRef Name="CompactorTimeStamp" />
     </Key>
-    <Property Type="Int32" Name="RoadId" Nullable="false" />
-    <Property Type="String" Name="RoadDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
-    <Property Type="Int32" Name="MassTruck" Nullable="false" />
-    <Property Type="String" Name="ActualPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETA" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETATimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="RealArrivalTime" Nullable="false" />
-    <Property Type="DateTime" Name="DeattachmentFinisherTime" Nullable="false" />
-    <Property Type="String" Name="DeattachmentFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="AttachmentToFinisherTime" Nullable="false" />
-    <Property Type="String" Name="AttachmentToFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ActualPositionReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionReturnTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETAReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETAReturnTimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="ArrivalAtPlant" Nullable="false" />
-    <Property Type="String" Name="UnforseenStopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="UnforseenStopTime" Nullable="false" />
-    <Property Type="DateTime" Name="UnforseenStopTimeStamp" Nullable="false" />
-    <Property Type="String" Name="QrCodeCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
+    <Property Name="MassTruck" Type="Int32" Nullable="false" />
+    <Property Name="RealArrivalTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ArrivalAtPlant" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="StopLocationUnforseenStop" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeUnforseenStop" Type="Time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPositionReturn" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETA" Type="Time" Nullable="false" />
+    <Property Name="ETATimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETAReturn" Type="Time" Nullable="false" />
+    <Property Name="ETAReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadId" Type="Int32" Nullable="false" />
+    <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
   </EntityType>
   <EntityType Name="UA">
     <Key>
-      <PropertyRef Name="RoadId" />
-      <PropertyRef Name="RoadDescription" />
-      <PropertyRef Name="LayerThickness" />
-      <PropertyRef Name="Surface" />
-      <PropertyRef Name="TonPerDay" />
-      <PropertyRef Name="TechnicalDataSheet" />
-      <PropertyRef Name="MixtureName" />
-      <PropertyRef Name="TypeOfAggregates" />
-      <PropertyRef Name="MixtureChange" />
+      <PropertyRef Name="ActualPosition" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
+      <PropertyRef Name="ActualPositionReturn" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
       <PropertyRef Name="AggragationMaxTemp" />
       <PropertyRef Name="AggragationMinTemp" />
       <PropertyRef Name="AggragationTimeStamp" />
-      <PropertyRef Name="BitumenMaxTemp" />
-      <PropertyRef Name="BitumenMinTemp" />
+      <PropertyRef Name="AirHumidity" />
+      <PropertyRef Name="AirHumidityTimeStamp" />
+      <PropertyRef Name="LeftAngle" />
+      <PropertyRef Name="RightAngle" />
+      <PropertyRef Name="AngleTimestamp" />
+      <PropertyRef Name="MixtureName" />
+      <PropertyRef Name="TechnicalDataSheet" />
+      <PropertyRef Name="TypeOfAggregates" />
+      <PropertyRef Name="MixtureChange" />
+      <PropertyRef Name="AsphaltMixPlantTimestamp" />
+      <PropertyRef Name="GPS" />
+      <PropertyRef Name="TempAsphalt" />
+      <PropertyRef Name="AsphaltTempTimeStamp" />
       <PropertyRef Name="BitumenTimeStamp" />
-      <PropertyRef Name="FillerRecup" />
-      <PropertyRef Name="FillerRecupTimeStamp" />
-      <PropertyRef Name="MixingTemp" />
-      <PropertyRef Name="MixingTime" />
+      <PropertyRef Name="BitumenMinTemp" />
+      <PropertyRef Name="BitumenMaxTemp" />
+      <PropertyRef Name="GPSFinisher" />
+      <PropertyRef Name="GPSCompactor" />
+      <PropertyRef Name="ColorCodeTimeStamp" />
+      <PropertyRef Name="QrCodeCompactor" />
+      <PropertyRef Name="NumberOfRollerCompactorPassages" />
+      <PropertyRef Name="LocationOfVibration" />
+      <PropertyRef Name="SpeedOfRollerCompactor" />
+      <PropertyRef Name="CompactorTimeStamp" />
       <PropertyRef Name="MassOfAggregationBunker1" />
       <PropertyRef Name="MassOfAggregationBunker2" />
       <PropertyRef Name="MassOfAggregationBunker3" />
@@ -1298,56 +1152,28 @@
       <PropertyRef Name="Filler" />
       <PropertyRef Name="Bitumen" />
       <PropertyRef Name="AdditivesKg" />
-      <PropertyRef Name="TempSilo" />
-      <PropertyRef Name="AnalysisComposition" />
-      <PropertyRef Name="TruckLicensPlate" />
-      <PropertyRef Name="DepartureTime" />
-      <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ActualPositionTimeStamp" />
+      <PropertyRef Name="CompositionTimeStamp" />
       <PropertyRef Name="ETA" />
       <PropertyRef Name="ETATimeStamp" />
-      <PropertyRef Name="RealArrivalTime" />
-      <PropertyRef Name="DeattachmentFinisherTime" />
-      <PropertyRef Name="DeattachmentFinisherPosition" />
-      <PropertyRef Name="AttachmentToFinisherTime" />
-      <PropertyRef Name="AttachmentToFinisherPosition" />
-      <PropertyRef Name="Temp" />
-      <PropertyRef Name="TempTruckTimeStamp" />
-      <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ActualPositionReturnTimeStamp" />
       <PropertyRef Name="ETAReturn" />
       <PropertyRef Name="ETAReturnTimeStamp" />
-      <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="UnforseenStopLocation" />
-      <PropertyRef Name="UnforseenStopTime" />
-      <PropertyRef Name="UnforseenStopTimeStamp" />
-      <PropertyRef Name="FinisherSpeed" />
-      <PropertyRef Name="SpeedFinisherTimeStamp" />
-      <PropertyRef Name="AngleLeft" />
-      <PropertyRef Name="AngleRight" />
-      <PropertyRef Name="Width" />
-      <PropertyRef Name="ThicknessLeft" />
-      <PropertyRef Name="ThicknessMiddel" />
-      <PropertyRef Name="ThicknessRight" />
       <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="StopLocation" />
-      <PropertyRef Name="StopTime" />
-      <PropertyRef Name="StopTimeStamp" />
       <PropertyRef Name="Precipation" />
-      <PropertyRef Name="TempWeather" />
-      <PropertyRef Name="WeatherTempTimeStamp" />
-      <PropertyRef Name="WindSpeed" />
-      <PropertyRef Name="WindTimeStamp" />
-      <PropertyRef Name="AirHumidity" />
-      <PropertyRef Name="AirHumidityTimeStamp" />
       <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
-      <PropertyRef Name="QrCodeCompactor" />
-      <PropertyRef Name="NumberOfRollerCompactorPassages" />
-      <PropertyRef Name="LocationOfVibration" />
-      <PropertyRef Name="GPSFinisher" />
-      <PropertyRef Name="GPSCompactor" />
-      <PropertyRef Name="SpeedOfRollerCompactor" />
+      <PropertyRef Name="FinisherTimeStamp" />
+      <PropertyRef Name="LeftTickness" />
+      <PropertyRef Name="MiddelThickness" />
+      <PropertyRef Name="RightThickness" />
+      <PropertyRef Name="ThicknessTimeStamp" />
+      <PropertyRef Name="FillerRecup" />
+      <PropertyRef Name="FillerRecupTimeStamp" />
+      <PropertyRef Name="StopLocationLTS" />
+      <PropertyRef Name="StopTimeLTS" />
+      <PropertyRef Name="StopTimeStamp" />
+      <PropertyRef Name="LayerThickness" />
+      <PropertyRef Name="Surface" />
+      <PropertyRef Name="TonPerDay" />
+      <PropertyRef Name="PlanningTimeStamp" />
       <PropertyRef Name="ComplianceMixture" />
       <PropertyRef Name="SamplesCopro" />
       <PropertyRef Name="DensityOfField" />
@@ -1356,97 +1182,145 @@
       <PropertyRef Name="Skidresistance" />
       <PropertyRef Name="Iri" />
       <PropertyRef Name="ExtraTestsAskedBijClient" />
+      <PropertyRef Name="QualtityTimeStamp" />
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
+      <PropertyRef Name="RoadSectionTimeStamp" />
+      <PropertyRef Name="MixingTemp" />
+      <PropertyRef Name="MixingTime" />
+      <PropertyRef Name="TempSilo" />
+      <PropertyRef Name="AnalysisComposition" />
+      <PropertyRef Name="SiloTimpStamp" />
+      <PropertyRef Name="Speed" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
+      <PropertyRef Name="TruckLicensPlate" />
+      <PropertyRef Name="DepartureTime" />
+      <PropertyRef Name="MassTruck" />
+      <PropertyRef Name="RealArrivalTime" />
+      <PropertyRef Name="DeattachmentFinisherTime" />
+      <PropertyRef Name="DeattachmentFinisherPosition" />
+      <PropertyRef Name="ArrivalAtPlant" />
+      <PropertyRef Name="AttachmentToFinisherTime" />
+      <PropertyRef Name="AttachmentToFinisherPosition" />
+      <PropertyRef Name="TruckTimeStamp" />
+      <PropertyRef Name="Temp" />
+      <PropertyRef Name="TempTruckTimeStamp" />
+      <PropertyRef Name="StopLocationUnforseenStop" />
+      <PropertyRef Name="StopTimeUnforseenStop" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
+      <PropertyRef Name="TempWeather" />
+      <PropertyRef Name="WeatherTempTimeStamp" />
+      <PropertyRef Name="Width" />
+      <PropertyRef Name="WidthTimeStamp" />
+      <PropertyRef Name="WindSpeed" />
+      <PropertyRef Name="WindTimeStamp" />
     </Key>
-    <Property Type="Int32" Name="RoadId" Nullable="false" />
-    <Property Type="String" Name="RoadDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="LayerThickness" Nullable="false" />
-    <Property Type="Int32" Name="Surface" Nullable="false" />
-    <Property Type="Int32" Name="TonPerDay" Nullable="false" />
-    <Property Type="String" Name="TechnicalDataSheet" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TypeOfAggregates" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="MixtureChange" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="AggragationMaxTemp" Nullable="false" />
-    <Property Type="Int32" Name="AggragationMinTemp" Nullable="false" />
-    <Property Type="DateTime" Name="AggragationTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="BitumenMaxTemp" Nullable="false" />
-    <Property Type="Int32" Name="BitumenMinTemp" Nullable="false" />
-    <Property Type="DateTime" Name="BitumenTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="FillerRecup" Nullable="false" />
-    <Property Type="DateTime" Name="FillerRecupTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="MixingTemp" Nullable="false" />
-    <Property Type="Time" Name="MixingTime" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker1" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker2" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker3" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker4" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker5" Nullable="false" />
-    <Property Type="Int32" Name="MassOfAggregationBunker6" Nullable="false" />
-    <Property Type="Int32" Name="Filler" Nullable="false" />
-    <Property Type="Int32" Name="Bitumen" Nullable="false" />
-    <Property Type="Int32" Name="AdditivesKg" Nullable="false" />
-    <Property Type="Int32" Name="TempSilo" Nullable="false" />
-    <Property Type="String" Name="AnalysisComposition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
-    <Property Type="Int32" Name="MassTruck" Nullable="false" />
-    <Property Type="String" Name="ActualPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETA" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETATimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="RealArrivalTime" Nullable="false" />
-    <Property Type="DateTime" Name="DeattachmentFinisherTime" Nullable="false" />
-    <Property Type="String" Name="DeattachmentFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="AttachmentToFinisherTime" Nullable="false" />
-    <Property Type="String" Name="AttachmentToFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="Temp" Nullable="false" />
-    <Property Type="DateTime" Name="TempTruckTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ActualPositionReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ActualPositionReturnTimeStamp" Nullable="false" />
-    <Property Type="String" Name="ETAReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="ETAReturnTimeStamp" Nullable="false" />
-    <Property Type="DateTime" Name="ArrivalAtPlant" Nullable="false" />
-    <Property Type="String" Name="UnforseenStopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="UnforseenStopTime" Nullable="false" />
-    <Property Type="DateTime" Name="UnforseenStopTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="FinisherSpeed" Nullable="false" />
-    <Property Type="DateTime" Name="SpeedFinisherTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="AngleLeft" Nullable="false" />
-    <Property Type="Int32" Name="AngleRight" Nullable="false" />
-    <Property Type="Int32" Name="Width" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessLeft" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessMiddel" Nullable="false" />
-    <Property Type="Int32" Name="ThicknessRight" Nullable="false" />
-    <Property Type="Int32" Name="TranverseSlope" Nullable="false" />
-    <Property Type="String" Name="StopLocation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Time" Name="StopTime" Nullable="false" />
-    <Property Type="DateTime" Name="StopTimeStamp" Nullable="false" />
-    <Property Type="String" Name="Precipation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="TempWeather" Nullable="false" />
-    <Property Type="DateTime" Name="WeatherTempTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="WindSpeed" Nullable="false" />
-    <Property Type="DateTime" Name="WindTimeStamp" Nullable="false" />
-    <Property Type="Int32" Name="AirHumidity" Nullable="false" />
-    <Property Type="DateTime" Name="AirHumidityTimeStamp" Nullable="false" />
-    <Property Type="String" Name="AsphaltTempAfterFinisherIrScanOrThermo" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="QrCodeCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="NumberOfRollerCompactorPassages" Nullable="false" />
-    <Property Type="String" Name="LocationOfVibration" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="GPSFinisher" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="GPSCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="SpeedOfRollerCompactor" Nullable="false" />
-    <Property Type="String" Name="ComplianceMixture" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SamplesCopro" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="DensityOfField" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Cores" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="LengthwiseFlatness" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Skidresistance" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Iri" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ExtraTestsAskedBijClient" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ActualPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ActualPositionReturn" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="AggragationMaxTemp" Type="Int32" Nullable="false" />
+    <Property Name="AggragationMinTemp" Type="Int32" Nullable="false" />
+    <Property Name="AggragationTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="AirHumidity" Type="Int32" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="LeftAngle" Type="Int32" Nullable="false" />
+    <Property Name="RightAngle" Type="Int32" Nullable="false" />
+    <Property Name="AngleTimestamp" Type="DateTime" Nullable="false" />
+    <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TypeOfAggregates" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="MixtureChange" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" />
+    <Property Name="GPS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TempAsphalt" Type="Int32" Nullable="false" />
+    <Property Name="AsphaltTempTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="BitumenTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="BitumenMinTemp" Type="Int32" Nullable="false" />
+    <Property Name="BitumenMaxTemp" Type="Int32" Nullable="false" />
+    <Property Name="GPSFinisher" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="GPSCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ColorCodeTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="NumberOfRollerCompactorPassages" Type="Int32" Nullable="false" />
+    <Property Name="LocationOfVibration" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SpeedOfRollerCompactor" Type="Int32" Nullable="false" />
+    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MassOfAggregationBunker1" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker2" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker3" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker4" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker5" Type="Int32" Nullable="false" />
+    <Property Name="MassOfAggregationBunker6" Type="Int32" Nullable="false" />
+    <Property Name="Filler" Type="Int32" Nullable="false" />
+    <Property Name="Bitumen" Type="Int32" Nullable="false" />
+    <Property Name="AdditivesKg" Type="Int32" Nullable="false" />
+    <Property Name="CompositionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETA" Type="Time" Nullable="false" />
+    <Property Name="ETATimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ETAReturn" Type="Time" Nullable="false" />
+    <Property Name="ETAReturnTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TranverseSlope" Type="Int32" Nullable="false" />
+    <Property Name="Precipation" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="FinisherTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="LeftTickness" Type="Int32" Nullable="false" />
+    <Property Name="MiddelThickness" Type="Int32" Nullable="false" />
+    <Property Name="RightThickness" Type="Int32" Nullable="false" />
+    <Property Name="ThicknessTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="FillerRecup" Type="Int32" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="StopLocationLTS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeLTS" Type="Time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="LayerThickness" Type="Int32" Nullable="false" />
+    <Property Name="Surface" Type="Int32" Nullable="false" />
+    <Property Name="TonPerDay" Type="Int32" Nullable="false" />
+    <Property Name="PlanningTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="ComplianceMixture" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SamplesCopro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DensityOfField" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Cores" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="LengthwiseFlatness" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Skidresistance" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Iri" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ExtraTestsAskedBijClient" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="RoadId" Type="Int32" Nullable="false" />
+    <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MixingTemp" Type="Int32" Nullable="false" />
+    <Property Name="MixingTime" Type="Time" Nullable="false" />
+    <Property Name="TempSilo" Type="Int32" Nullable="false" />
+    <Property Name="AnalysisComposition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="SiloTimpStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Speed" Type="Int32" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
+    <Property Name="MassTruck" Type="Int32" Nullable="false" />
+    <Property Name="RealArrivalTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="DeattachmentFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ArrivalAtPlant" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherTime" Type="DateTime" Nullable="false" />
+    <Property Name="AttachmentToFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Temp" Type="Int32" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="StopLocationUnforseenStop" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StopTimeUnforseenStop" Type="Time" Nullable="false" />
+    <Property Name="UnforseenStopTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TempWeather" Type="Int32" Nullable="false" />
+    <Property Name="WeatherTempTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="WidthTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="WindSpeed" Type="Int32" Nullable="false" />
+    <Property Name="WindTimeStamp" Type="DateTime" Nullable="false" />
   </EntityType>
   <Association Name="Truck_ibfk_3">
-    <End Type="RoadItEntitiesModel.ActualPosition" Role="ActualPosition" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Truck" Role="Truck" Multiplicity="*" />
+    <End Role="ActualPosition" Type="roaditModel.ActualPosition" Multiplicity="1" />
+    <End Role="Truck" Type="roaditModel.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActualPosition">
         <PropertyRef Name="ActualPositionId" />
@@ -1457,8 +1331,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Truck_ibfk_5">
-    <End Type="RoadItEntitiesModel.ActualPositionReturn" Role="ActualPositionReturn" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Truck" Role="Truck" Multiplicity="*" />
+    <End Role="ActualPositionReturn" Type="roaditModel.ActualPositionReturn" Multiplicity="1" />
+    <End Role="Truck" Type="roaditModel.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActualPositionReturn">
         <PropertyRef Name="ActualPositionReturnId" />
@@ -1468,9 +1342,93 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Silo_ibfk_2">
+    <End Role="Aggragation" Type="roaditModel.Aggragation" Multiplicity="1" />
+    <End Role="Silo" Type="roaditModel.Silo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aggragation">
+        <PropertyRef Name="AggragationId" />
+      </Principal>
+      <Dependent Role="Silo">
+        <PropertyRef Name="AggregationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Finisher_ibfk_7">
+    <End Role="AirHumidity" Type="roaditModel.AirHumidity" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AirHumidity">
+        <PropertyRef Name="AirHumidityId" />
+      </Principal>
+      <Dependent Role="Finisher">
+        <PropertyRef Name="AirHumidityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Finisher_ibfk_2">
+    <End Role="Angle" Type="roaditModel.Angle" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Angle">
+        <PropertyRef Name="AngleId" />
+      </Principal>
+      <Dependent Role="Finisher">
+        <PropertyRef Name="AngleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Silo_ibfk_1">
+    <End Role="AsphaltMixPlant" Type="roaditModel.AsphaltMixPlant" Multiplicity="1" />
+    <End Role="Silo" Type="roaditModel.Silo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsphaltMixPlant">
+        <PropertyRef Name="CentralId" />
+      </Principal>
+      <Dependent Role="Silo">
+        <PropertyRef Name="CentralId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Finisher_ibfk_8">
+    <End Role="AsphaltTemp" Type="roaditModel.AsphaltTemp" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsphaltTemp">
+        <PropertyRef Name="AsphaltTempId" />
+      </Principal>
+      <Dependent Role="Finisher">
+        <PropertyRef Name="AsphaltTempId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BatchList_ibfk_1">
+    <End Role="Project" Type="roaditModel.Project" Multiplicity="1" />
+    <End Role="BatchList" Type="roaditModel.BatchList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="BatchList">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BatchList_ibfk_2">
+    <End Role="Silo" Type="roaditModel.Silo" Multiplicity="1" />
+    <End Role="BatchList" Type="roaditModel.BatchList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Silo">
+        <PropertyRef Name="SiloId" />
+      </Principal>
+      <Dependent Role="BatchList">
+        <PropertyRef Name="SiloId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="BatchList_ibfk_3">
-    <End Type="RoadItEntitiesModel.Truck" Role="Truck" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.BatchList" Role="BatchList" Multiplicity="*" />
+    <End Role="Truck" Type="roaditModel.Truck" Multiplicity="1" />
+    <End Role="BatchList" Type="roaditModel.BatchList" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Truck">
         <PropertyRef Name="TruckId" />
@@ -1480,9 +1438,81 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="BatchList_ibfk_4">
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="1" />
+    <End Role="BatchList" Type="roaditModel.BatchList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Finisher">
+        <PropertyRef Name="FinicherId" />
+      </Principal>
+      <Dependent Role="BatchList">
+        <PropertyRef Name="FinisherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Compactor_ibfk_2">
+    <End Role="BatchList" Type="roaditModel.BatchList" Multiplicity="1" />
+    <End Role="Compactor" Type="roaditModel.Compactor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BatchList">
+        <PropertyRef Name="BatchId" />
+      </Principal>
+      <Dependent Role="Compactor">
+        <PropertyRef Name="BatchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Silo_ibfk_3">
+    <End Role="Bitumen" Type="roaditModel.Bituman" Multiplicity="1" />
+    <End Role="Silo" Type="roaditModel.Silo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bitumen">
+        <PropertyRef Name="BitumenId" />
+      </Principal>
+      <Dependent Role="Silo">
+        <PropertyRef Name="BitumenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Compactor_ibfk_1">
+    <End Role="ColorCode" Type="roaditModel.ColorCode" Multiplicity="1" />
+    <End Role="Compactor" Type="roaditModel.Compactor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ColorCode">
+        <PropertyRef Name="ColorCodeID" />
+      </Principal>
+      <Dependent Role="Compactor">
+        <PropertyRef Name="ColorCodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Silo_ibfk_5">
+    <End Role="Composition" Type="roaditModel.Composition" Multiplicity="1" />
+    <End Role="Silo" Type="roaditModel.Silo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Composition">
+        <PropertyRef Name="RealCompositionId" />
+      </Principal>
+      <Dependent Role="Silo">
+        <PropertyRef Name="RealCompositionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Contractor_ibfk_1">
+    <End Role="Project" Type="roaditModel.Project" Multiplicity="1" />
+    <End Role="Contractor" Type="roaditModel.Contractor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="Contractor">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Truck_ibfk_4">
-    <End Type="RoadItEntitiesModel.ETA" Role="ETA" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Truck" Role="Truck" Multiplicity="*" />
+    <End Role="ETA" Type="roaditModel.ETA" Multiplicity="1" />
+    <End Role="Truck" Type="roaditModel.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ETA">
         <PropertyRef Name="ETAId" />
@@ -1493,8 +1523,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Truck_ibfk_6">
-    <End Type="RoadItEntitiesModel.ETAReturn" Role="ETAReturn" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Truck" Role="Truck" Multiplicity="*" />
+    <End Role="ETAReturn" Type="roaditModel.ETAReturn" Multiplicity="1" />
+    <End Role="Truck" Type="roaditModel.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ETAReturn">
         <PropertyRef Name="ETAReturnId" />
@@ -1504,9 +1534,45 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Finisher_ibfk_1">
+    <End Role="SpeedFinisher" Type="roaditModel.SpeedFinisher" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SpeedFinisher">
+        <PropertyRef Name="SpeedId" />
+      </Principal>
+      <Dependent Role="Finisher">
+        <PropertyRef Name="SpeedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Finisher_ibfk_3">
+    <End Role="LayerThickness" Type="roaditModel.LayerThickness" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LayerThickness">
+        <PropertyRef Name="LayerThicknessId" />
+      </Principal>
+      <Dependent Role="Finisher">
+        <PropertyRef Name="ThicknessLayerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Finisher_ibfk_4">
+    <End Role="LocationAndTimeSpan" Type="roaditModel.LocationAndTimeSpan" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocationAndTimeSpan">
+        <PropertyRef Name="LocationAndTimeSpanId" />
+      </Principal>
+      <Dependent Role="Finisher">
+        <PropertyRef Name="LocationAndTimeSpanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Finisher_ibfk_5">
-    <End Type="RoadItEntitiesModel.WeatherTemp" Role="WeatherTemp" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Finisher" Role="Finisher" Multiplicity="*" />
+    <End Role="WeatherTemp" Type="roaditModel.WeatherTemp" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="WeatherTemp">
         <PropertyRef Name="TempId" />
@@ -1516,9 +1582,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Finisher_ibfk_6">
+    <End Role="Wind" Type="roaditModel.Wind" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wind">
+        <PropertyRef Name="WindId" />
+      </Principal>
+      <Dependent Role="Finisher">
+        <PropertyRef Name="WindId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Finisher_ibfk_9">
-    <End Type="RoadItEntitiesModel.Width" Role="Width" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Finisher" Role="Finisher" Multiplicity="*" />
+    <End Role="Width" Type="roaditModel.Width" Multiplicity="1" />
+    <End Role="Finisher" Type="roaditModel.Finisher" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Width">
         <PropertyRef Name="WidthId" />
@@ -1528,9 +1606,69 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Silo_ibfk_4">
+    <End Role="ListFillerRecup" Type="roaditModel.ListFillerRecup" Multiplicity="1" />
+    <End Role="Silo" Type="roaditModel.Silo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListFillerRecup">
+        <PropertyRef Name="ListFillerRecupId" />
+      </Principal>
+      <Dependent Role="Silo">
+        <PropertyRef Name="ListRecupFillerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Planning_ibfk_1">
+    <End Role="Project" Type="roaditModel.Project" Multiplicity="1" />
+    <End Role="Planning" Type="roaditModel.Planning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="Planning">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="QualityControl_ibfk_1">
+    <End Role="Project" Type="roaditModel.Project" Multiplicity="1" />
+    <End Role="QualityControl" Type="roaditModel.QualityControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="QualityControl">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RoadSection_ibfk_1">
+    <End Role="Project" Type="roaditModel.Project" Multiplicity="1" />
+    <End Role="RoadSection" Type="roaditModel.RoadSection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="RoadSection">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Users_ibfk_1">
+    <End Role="Roles" Type="roaditModel.Role" Multiplicity="1" />
+    <End Role="Users" Type="roaditModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Truck_ibfk_7">
-    <End Type="RoadItEntitiesModel.TruckTemp" Role="TruckTemp" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Truck" Role="Truck" Multiplicity="*" />
+    <End Role="TruckTemp" Type="roaditModel.TruckTemp" Multiplicity="1" />
+    <End Role="Truck" Type="roaditModel.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TruckTemp">
         <PropertyRef Name="TruckTempId" />
@@ -1541,8 +1679,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Truck_ibfk_8">
-    <End Type="RoadItEntitiesModel.UnforseenStop" Role="UnforseenStop" Multiplicity="1" />
-    <End Type="RoadItEntitiesModel.Truck" Role="Truck" Multiplicity="*" />
+    <End Role="UnforseenStop" Type="roaditModel.UnforseenStop" Multiplicity="1" />
+    <End Role="Truck" Type="roaditModel.Truck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UnforseenStop">
         <PropertyRef Name="UnforseenStopId" />

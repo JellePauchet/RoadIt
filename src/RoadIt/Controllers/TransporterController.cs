@@ -16,9 +16,9 @@ namespace RoadIt.Controllers
         {
             try
             {
-                var entities = new RoadItEntities();
-                ViewData["Truck"] = GenerateTableTruck(entities);
-                ViewData["Compactor"] = GenerateTableCompactor(entities);
+                var entities = new roaditEntities();
+                Session["Truck"] = GenerateTableTruck(entities);
+                Session["Compactor"] = GenerateTableCompactor(entities);
                 return View();
             }
             catch
@@ -28,7 +28,7 @@ namespace RoadIt.Controllers
             }
         }
 
-        public string GenerateTableTruck(RoadItEntities entities)//RoadId nog toevoegen aan view
+        public string GenerateTableTruck(roaditEntities entities)//RoadId nog toevoegen aan view
         {
             var table = "<h3>Transport</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
@@ -38,7 +38,10 @@ namespace RoadIt.Controllers
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
-                    table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + " " + item.ActualPositionTimeStamp + "</td><td>" + item.ETA + " " + item.ETATimeStamp + "</td><td>" + item.RealArrivalTime + "</td><td>" + item.AttachmentToFinisherPosition + " " + item.AttachmentToFinisherTime + "</td><td>" + item.DeattachmentFinisherPosition + " " + item.DeattachmentFinisherTime + "</td><td>" + item.ActualPositionReturn + " " + item.ActualPositionReturnTimeStamp + "</td><td>" + item.ETAReturn + " " + item.ETAReturnTimeStamp + "</td><td>" + item.ArrivalAtPlant + "</td><td>" + item.UnforseenStopLocation + " " + item.UnforseenStopTime + " " + item.UnforseenStopTimeStamp + "</td></tr>";
+                    if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    { 
+                        table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + " " + item.ActualPositionTimeStamp + "</td><td>" + item.ETA + " " + item.ETATimeStamp + "</td><td>" + item.RealArrivalTime + "</td><td>" + item.AttachmentToFinisherPosition + " " + item.AttachmentToFinisherTime + "</td><td>" + item.DeattachmentFinisherPosition + " " + item.DeattachmentFinisherTime + "</td><td>" + item.ActualPositionReturn + " " + item.ActualPositionReturnTimeStamp + "</td><td>" + item.ETAReturn + " " + item.ETAReturnTimeStamp + "</td><td>" + item.ArrivalAtPlant + "</td><td>" + item.StopLocationUnforseenStop + " " + item.StopTimeUnforseenStop + " " + item.UnforseenStopTimeStamp + "</td></tr>";
+                    }
                 }
             }
 
@@ -48,7 +51,7 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableCompactor(RoadItEntities entities)// ID niet in view
+        public string GenerateTableCompactor(roaditEntities entities)// ID niet in view
         {
             var table = "<h3>Compactor</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
@@ -58,7 +61,10 @@ namespace RoadIt.Controllers
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
-                    table += "<tr><td><a href=" + item.QrCodeCompactor + ">link</a></tr>";
+                    if (DateTime.Parse(item.CompactorTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.CompactorTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td><a href=" + item.QrCodeCompactor + ">link</a></tr>";
+                    }
                 }
             }
 

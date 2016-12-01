@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="RoadItEntitiesModelStoreContainer" CdmEntityContainer="RoadItEntities">
+  <EntityContainerMapping StorageEntityContainer="roaditModelStoreContainer" CdmEntityContainer="roaditEntities">
     <EntitySetMapping Name="ActualPositions">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.ActualPosition">
+      <EntityTypeMapping TypeName="roaditModel.ActualPosition">
         <MappingFragment StoreEntitySet="ActualPosition">
-          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
           <ScalarProperty Name="ActualPositionId" ColumnName="ActualPositionId" />
           <ScalarProperty Name="ActualPosition1" ColumnName="ActualPosition" />
+          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ActualPositionReturns">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.ActualPositionReturn">
+      <EntityTypeMapping TypeName="roaditModel.ActualPositionReturn">
         <MappingFragment StoreEntitySet="ActualPositionReturn">
-          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
           <ScalarProperty Name="ActualPositionReturnId" ColumnName="ActualPositionReturnId" />
-          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
+          <ScalarProperty Name="ActualPositionReturn1" ColumnName="ActualPositionReturn" />
+          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Aggragations">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Aggragation">
+      <EntityTypeMapping TypeName="roaditModel.Aggragation">
         <MappingFragment StoreEntitySet="Aggragation">
           <ScalarProperty Name="AggragationId" ColumnName="AggragationId" />
           <ScalarProperty Name="AggragationMaxTemp" ColumnName="AggragationMaxTemp" />
@@ -30,57 +30,60 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AirHumidities">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.AirHumidity">
+      <EntityTypeMapping TypeName="roaditModel.AirHumidity">
         <MappingFragment StoreEntitySet="AirHumidity">
-          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
           <ScalarProperty Name="AirHumidityId" ColumnName="AirHumidityId" />
           <ScalarProperty Name="AirHumidity1" ColumnName="AirHumidity" />
+          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Angles">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Angle">
+      <EntityTypeMapping TypeName="roaditModel.Angle">
         <MappingFragment StoreEntitySet="Angle">
           <ScalarProperty Name="AngleId" ColumnName="AngleId" />
-          <ScalarProperty Name="Left" ColumnName="Left" />
-          <ScalarProperty Name="Right" ColumnName="Right" />
+          <ScalarProperty Name="LeftAngle" ColumnName="LeftAngle" />
+          <ScalarProperty Name="RightAngle" ColumnName="RightAngle" />
+          <ScalarProperty Name="AngleTimestamp" ColumnName="AngleTimestamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AsphaltMixPlants">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.AsphaltMixPlant">
+      <EntityTypeMapping TypeName="roaditModel.AsphaltMixPlant">
         <MappingFragment StoreEntitySet="AsphaltMixPlant">
           <ScalarProperty Name="CentralId" ColumnName="CentralId" />
           <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
           <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
           <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
           <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
+          <ScalarProperty Name="AsphaltMixPlantTimestamp" ColumnName="AsphaltMixPlantTimestamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AsphaltTemps">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.AsphaltTemp">
+      <EntityTypeMapping TypeName="roaditModel.AsphaltTemp">
         <MappingFragment StoreEntitySet="AsphaltTemp">
-          <ScalarProperty Name="AsphaltTempTimeStamp" ColumnName="AsphaltTempTimeStamp" />
-          <ScalarProperty Name="TempAsphalt" ColumnName="TempAsphalt" />
           <ScalarProperty Name="AsphaltTempId" ColumnName="AsphaltTempId" />
           <ScalarProperty Name="GPS" ColumnName="GPS" />
+          <ScalarProperty Name="TempAsphalt" ColumnName="TempAsphalt" />
+          <ScalarProperty Name="AsphaltTempTimeStamp" ColumnName="AsphaltTempTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BatchLists">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.BatchList">
+      <EntityTypeMapping TypeName="roaditModel.BatchList">
         <MappingFragment StoreEntitySet="BatchList">
-          <ScalarProperty Name="FinisherId" ColumnName="FinisherId" />
-          <ScalarProperty Name="TruckId" ColumnName="TruckId" />
           <ScalarProperty Name="BatchId" ColumnName="BatchId" />
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
           <ScalarProperty Name="SiloId" ColumnName="SiloId" />
+          <ScalarProperty Name="TruckId" ColumnName="TruckId" />
+          <ScalarProperty Name="FinisherId" ColumnName="FinisherId" />
+          <ScalarProperty Name="BatchListTimeStamp" ColumnName="BatchListTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Bitumen">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Bituman">
+      <EntityTypeMapping TypeName="roaditModel.Bituman">
         <MappingFragment StoreEntitySet="Bitumen">
           <ScalarProperty Name="BitumenId" ColumnName="BitumenId" />
           <ScalarProperty Name="BitumenTimeStamp" ColumnName="BitumenTimeStamp" />
@@ -90,16 +93,17 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ColorCodes">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.ColorCode">
+      <EntityTypeMapping TypeName="roaditModel.ColorCode">
         <MappingFragment StoreEntitySet="ColorCode">
           <ScalarProperty Name="ColorCodeID" ColumnName="ColorCodeID" />
           <ScalarProperty Name="GPSFinisher" ColumnName="GPSFinisher" />
           <ScalarProperty Name="GPSCompactor" ColumnName="GPSCompactor" />
+          <ScalarProperty Name="ColorCodeTimeStamp" ColumnName="ColorCodeTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Compactors">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Compactor">
+      <EntityTypeMapping TypeName="roaditModel.Compactor">
         <MappingFragment StoreEntitySet="Compactor">
           <ScalarProperty Name="CompactorId" ColumnName="CompactorId" />
           <ScalarProperty Name="BatchId" ColumnName="BatchId" />
@@ -108,11 +112,12 @@
           <ScalarProperty Name="LocationOfVibration" ColumnName="LocationOfVibration" />
           <ScalarProperty Name="ColorCodeId" ColumnName="ColorCodeId" />
           <ScalarProperty Name="SpeedOfRollerCompactor" ColumnName="SpeedOfRollerCompactor" />
+          <ScalarProperty Name="CompactorTimeStamp" ColumnName="CompactorTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Compositions">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Composition">
+      <EntityTypeMapping TypeName="roaditModel.Composition">
         <MappingFragment StoreEntitySet="Composition">
           <ScalarProperty Name="RealCompositionId" ColumnName="RealCompositionId" />
           <ScalarProperty Name="MassOfAggregationBunker1" ColumnName="MassOfAggregationBunker1" />
@@ -124,37 +129,39 @@
           <ScalarProperty Name="Filler" ColumnName="Filler" />
           <ScalarProperty Name="Bitumen" ColumnName="Bitumen" />
           <ScalarProperty Name="AdditivesKg" ColumnName="AdditivesKg" />
+          <ScalarProperty Name="CompositionTimeStamp" ColumnName="CompositionTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Contractors">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Contractor">
+      <EntityTypeMapping TypeName="roaditModel.Contractor">
         <MappingFragment StoreEntitySet="Contractor">
           <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ContractorTimeStamp" ColumnName="ContractorTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ETAs">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.ETA">
+      <EntityTypeMapping TypeName="roaditModel.ETA">
         <MappingFragment StoreEntitySet="ETA">
-          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
           <ScalarProperty Name="ETAId" ColumnName="ETAId" />
           <ScalarProperty Name="ETA1" ColumnName="ETA" />
+          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ETAReturns">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.ETAReturn">
+      <EntityTypeMapping TypeName="roaditModel.ETAReturn">
         <MappingFragment StoreEntitySet="ETAReturn">
-          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
           <ScalarProperty Name="ETAReturnId" ColumnName="ETAReturnId" />
-          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETAReturn1" ColumnName="ETAReturn" />
+          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Finishers">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Finisher">
+      <EntityTypeMapping TypeName="roaditModel.Finisher">
         <MappingFragment StoreEntitySet="Finisher">
           <ScalarProperty Name="FinicherId" ColumnName="FinicherId" />
           <ScalarProperty Name="SpeedId" ColumnName="SpeedId" />
@@ -169,58 +176,62 @@
           <ScalarProperty Name="AirHumidityId" ColumnName="AirHumidityId" />
           <ScalarProperty Name="AsphaltTempAfterFinisherIrScanOrThermo" ColumnName="AsphaltTempAfterFinisherIrScanOrThermo" />
           <ScalarProperty Name="AsphaltTempId" ColumnName="AsphaltTempId" />
+          <ScalarProperty Name="FinisherTimeStamp" ColumnName="FinisherTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LayerThicknesses">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.LayerThickness">
+      <EntityTypeMapping TypeName="roaditModel.LayerThickness">
         <MappingFragment StoreEntitySet="LayerThickness">
           <ScalarProperty Name="LayerThicknessId" ColumnName="LayerThicknessId" />
-          <ScalarProperty Name="Left" ColumnName="Left" />
-          <ScalarProperty Name="Middel" ColumnName="Middel" />
-          <ScalarProperty Name="Right" ColumnName="Right" />
+          <ScalarProperty Name="LeftTickness" ColumnName="LeftTickness" />
+          <ScalarProperty Name="MiddelThickness" ColumnName="MiddelThickness" />
+          <ScalarProperty Name="RightThickness" ColumnName="RightThickness" />
+          <ScalarProperty Name="ThicknessTimeStamp" ColumnName="ThicknessTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ListFillerRecups">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.ListFillerRecup">
+      <EntityTypeMapping TypeName="roaditModel.ListFillerRecup">
         <MappingFragment StoreEntitySet="ListFillerRecup">
-          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
           <ScalarProperty Name="ListFillerRecupId" ColumnName="ListFillerRecupId" />
           <ScalarProperty Name="FillerRecup" ColumnName="FillerRecup" />
+          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LocationAndTimeSpans">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.LocationAndTimeSpan">
+      <EntityTypeMapping TypeName="roaditModel.LocationAndTimeSpan">
         <MappingFragment StoreEntitySet="LocationAndTimeSpan">
-          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
           <ScalarProperty Name="LocationAndTimeSpanId" ColumnName="LocationAndTimeSpanId" />
-          <ScalarProperty Name="StopLocation" ColumnName="StopLocation" />
-          <ScalarProperty Name="StopTime" ColumnName="StopTime" />
+          <ScalarProperty Name="StopLocationLTS" ColumnName="StopLocationLTS" />
+          <ScalarProperty Name="StopTimeLTS" ColumnName="StopTimeLTS" />
+          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Plannings">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Planning">
+      <EntityTypeMapping TypeName="roaditModel.Planning">
         <MappingFragment StoreEntitySet="Planning">
           <ScalarProperty Name="PlanningId" ColumnName="PlanningId" />
           <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
           <ScalarProperty Name="Surface" ColumnName="Surface" />
           <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="PlanningTimeStamp" ColumnName="PlanningTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Projects">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Project">
+      <EntityTypeMapping TypeName="roaditModel.Project">
         <MappingFragment StoreEntitySet="Project">
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectTimeStamp" ColumnName="ProjectTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="QualityControls">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.QualityControl">
+      <EntityTypeMapping TypeName="roaditModel.QualityControl">
         <MappingFragment StoreEntitySet="QualityControl">
           <ScalarProperty Name="ControlId" ColumnName="ControlId" />
           <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
@@ -232,20 +243,30 @@
           <ScalarProperty Name="Iri" ColumnName="Iri" />
           <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="QualtityTimeStamp" ColumnName="QualtityTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RoadSections">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.RoadSection">
+      <EntityTypeMapping TypeName="roaditModel.RoadSection">
         <MappingFragment StoreEntitySet="RoadSection">
           <ScalarProperty Name="RoadId" ColumnName="RoadId" />
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
           <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="RoadSectionTimeStamp" ColumnName="RoadSectionTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="roaditModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Silos">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Silo">
+      <EntityTypeMapping TypeName="roaditModel.Silo">
         <MappingFragment StoreEntitySet="Silo">
           <ScalarProperty Name="SiloId" ColumnName="SiloId" />
           <ScalarProperty Name="CentralId" ColumnName="CentralId" />
@@ -257,441 +278,497 @@
           <ScalarProperty Name="RealCompositionId" ColumnName="RealCompositionId" />
           <ScalarProperty Name="TempSilo" ColumnName="TempSilo" />
           <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />
+          <ScalarProperty Name="SiloTimpStamp" ColumnName="SiloTimpStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SpeedFinishers">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.SpeedFinisher">
+      <EntityTypeMapping TypeName="roaditModel.SpeedFinisher">
         <MappingFragment StoreEntitySet="SpeedFinisher">
-          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
           <ScalarProperty Name="SpeedId" ColumnName="SpeedId" />
           <ScalarProperty Name="Speed" ColumnName="Speed" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Winds">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Wind">
-        <MappingFragment StoreEntitySet="Wind">
-          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
-          <ScalarProperty Name="WindId" ColumnName="WindId" />
-          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Roles">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Role">
-        <MappingFragment StoreEntitySet="Roles">
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Users">
-        <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Trucks">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Truck">
+      <EntityTypeMapping TypeName="roaditModel.Truck">
         <MappingFragment StoreEntitySet="Truck">
-          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
-          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
-          <ScalarProperty Name="UnforseenStopId" ColumnName="UnforseenStopId" />
-          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
-          <ScalarProperty Name="ETAReturnId" ColumnName="ETAReturnId" />
-          <ScalarProperty Name="ActualPositionReturnId" ColumnName="ActualPositionReturnId" />
-          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
-          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
-          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
-          <ScalarProperty Name="TruckTempId" ColumnName="TruckTempId" />
-          <ScalarProperty Name="ETAId" ColumnName="ETAId" />
-          <ScalarProperty Name="ActualPositionId" ColumnName="ActualPositionId" />
-          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
-          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
-          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
           <ScalarProperty Name="TruckId" ColumnName="TruckId" />
+          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
+          <ScalarProperty Name="ActualPositionId" ColumnName="ActualPositionId" />
+          <ScalarProperty Name="ETAId" ColumnName="ETAId" />
+          <ScalarProperty Name="TruckTempId" ColumnName="TruckTempId" />
+          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
+          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
+          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
+          <ScalarProperty Name="ActualPositionReturnId" ColumnName="ActualPositionReturnId" />
+          <ScalarProperty Name="ETAReturnId" ColumnName="ETAReturnId" />
+          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
+          <ScalarProperty Name="UnforseenStopId" ColumnName="UnforseenStopId" />
+          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
+          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
+          <ScalarProperty Name="TruckTimeStamp" ColumnName="TruckTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TruckTemps">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.TruckTemp">
+      <EntityTypeMapping TypeName="roaditModel.TruckTemp">
         <MappingFragment StoreEntitySet="TruckTemp">
-          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
-          <ScalarProperty Name="Temp" ColumnName="Temp" />
           <ScalarProperty Name="TruckTempId" ColumnName="TruckTempId" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UnforseenStops">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.UnforseenStop">
+      <EntityTypeMapping TypeName="roaditModel.UnforseenStop">
         <MappingFragment StoreEntitySet="UnforseenStop">
-          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
-          <ScalarProperty Name="StopTime" ColumnName="StopTime" />
-          <ScalarProperty Name="StopLocation" ColumnName="StopLocation" />
           <ScalarProperty Name="UnforseenStopId" ColumnName="UnforseenStopId" />
+          <ScalarProperty Name="StopLocationUnforseenStop" ColumnName="StopLocationUnforseenStop" />
+          <ScalarProperty Name="StopTimeUnforseenStop" ColumnName="StopTimeUnforseenStop" />
+          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="roaditModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WeatherTemps">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.WeatherTemp">
+      <EntityTypeMapping TypeName="roaditModel.WeatherTemp">
         <MappingFragment StoreEntitySet="WeatherTemp">
-          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
-          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
           <ScalarProperty Name="TempId" ColumnName="TempId" />
+          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
+          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Widths">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Width">
+      <EntityTypeMapping TypeName="roaditModel.Width">
         <MappingFragment StoreEntitySet="Width">
-          <ScalarProperty Name="Width1" ColumnName="Width" />
           <ScalarProperty Name="WidthId" ColumnName="WidthId" />
+          <ScalarProperty Name="Width1" ColumnName="Width" />
+          <ScalarProperty Name="WidthTimeStamp" ColumnName="WidthTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Winds">
+      <EntityTypeMapping TypeName="roaditModel.Wind">
+        <MappingFragment StoreEntitySet="Wind">
+          <ScalarProperty Name="WindId" ColumnName="WindId" />
+          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
+          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AsphaltProcucers">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.AsphaltProcucer">
+      <EntityTypeMapping TypeName="roaditModel.AsphaltProcucer">
         <MappingFragment StoreEntitySet="AsphaltProcucer">
+          <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
+          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
+          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
+          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
+          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
+          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
+          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
+          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
+          <ScalarProperty Name="TruckTimeStamp" ColumnName="TruckTimeStamp" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
+          <ScalarProperty Name="StopLocationUnforseenStop" ColumnName="StopLocationUnforseenStop" />
+          <ScalarProperty Name="StopTimeUnforseenStop" ColumnName="StopTimeUnforseenStop" />
+          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
+          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
+          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
+          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
+          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
+          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
+          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
+          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
           <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
           <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
-          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
-          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
-          <ScalarProperty Name="UnforseenStopTime" ColumnName="UnforseenStopTime" />
-          <ScalarProperty Name="UnforseenStopLocation" ColumnName="UnforseenStopLocation" />
-          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
-          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
-          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
-          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
-          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
-          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
-          <ScalarProperty Name="Temp" ColumnName="Temp" />
-          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
-          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
-          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
-          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
-          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
-          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
-          <ScalarProperty Name="ETA" ColumnName="ETA" />
-          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
-          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
-          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
-          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
-          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
-          <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />
-          <ScalarProperty Name="TempSilo" ColumnName="TempSilo" />
-          <ScalarProperty Name="AdditivesKg" ColumnName="AdditivesKg" />
-          <ScalarProperty Name="Bitumen" ColumnName="Bitumen" />
-          <ScalarProperty Name="Filler" ColumnName="Filler" />
-          <ScalarProperty Name="MassOfAggregationBunker6" ColumnName="MassOfAggregationBunker6" />
-          <ScalarProperty Name="MassOfAggregationBunker5" ColumnName="MassOfAggregationBunker5" />
-          <ScalarProperty Name="MassOfAggregationBunker4" ColumnName="MassOfAggregationBunker4" />
-          <ScalarProperty Name="MassOfAggregationBunker3" ColumnName="MassOfAggregationBunker3" />
-          <ScalarProperty Name="MassOfAggregationBunker2" ColumnName="MassOfAggregationBunker2" />
-          <ScalarProperty Name="MassOfAggregationBunker1" ColumnName="MassOfAggregationBunker1" />
-          <ScalarProperty Name="MixingTime" ColumnName="MixingTime" />
-          <ScalarProperty Name="MixingTemp" ColumnName="MixingTemp" />
-          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
-          <ScalarProperty Name="FillerRecup" ColumnName="FillerRecup" />
+          <ScalarProperty Name="RoadId" ColumnName="RoadId" />
+          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="RoadSectionTimeStamp" ColumnName="RoadSectionTimeStamp" />
+          <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
+          <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
+          <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
+          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
+          <ScalarProperty Name="AsphaltMixPlantTimestamp" ColumnName="AsphaltMixPlantTimestamp" />
+          <ScalarProperty Name="AggragationMaxTemp" ColumnName="AggragationMaxTemp" />
+          <ScalarProperty Name="AggragationMinTemp" ColumnName="AggragationMinTemp" />
+          <ScalarProperty Name="AggragationTimeStamp" ColumnName="AggragationTimeStamp" />
           <ScalarProperty Name="BitumenTimeStamp" ColumnName="BitumenTimeStamp" />
           <ScalarProperty Name="BitumenMinTemp" ColumnName="BitumenMinTemp" />
           <ScalarProperty Name="BitumenMaxTemp" ColumnName="BitumenMaxTemp" />
-          <ScalarProperty Name="AggragationTimeStamp" ColumnName="AggragationTimeStamp" />
-          <ScalarProperty Name="AggragationMinTemp" ColumnName="AggragationMinTemp" />
-          <ScalarProperty Name="AggragationMaxTemp" ColumnName="AggragationMaxTemp" />
-          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
-          <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
-          <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
-          <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
-          <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
-          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
-          <ScalarProperty Name="RoadId" ColumnName="RoadId" />
+          <ScalarProperty Name="FillerRecup" ColumnName="FillerRecup" />
+          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
+          <ScalarProperty Name="MassOfAggregationBunker1" ColumnName="MassOfAggregationBunker1" />
+          <ScalarProperty Name="MassOfAggregationBunker2" ColumnName="MassOfAggregationBunker2" />
+          <ScalarProperty Name="MassOfAggregationBunker3" ColumnName="MassOfAggregationBunker3" />
+          <ScalarProperty Name="MassOfAggregationBunker4" ColumnName="MassOfAggregationBunker4" />
+          <ScalarProperty Name="MassOfAggregationBunker5" ColumnName="MassOfAggregationBunker5" />
+          <ScalarProperty Name="MassOfAggregationBunker6" ColumnName="MassOfAggregationBunker6" />
+          <ScalarProperty Name="Filler" ColumnName="Filler" />
+          <ScalarProperty Name="Bitumen" ColumnName="Bitumen" />
+          <ScalarProperty Name="AdditivesKg" ColumnName="AdditivesKg" />
+          <ScalarProperty Name="CompositionTimeStamp" ColumnName="CompositionTimeStamp" />
+          <ScalarProperty Name="MixingTemp" ColumnName="MixingTemp" />
+          <ScalarProperty Name="MixingTime" ColumnName="MixingTime" />
+          <ScalarProperty Name="TempSilo" ColumnName="TempSilo" />
+          <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />
+          <ScalarProperty Name="SiloTimpStamp" ColumnName="SiloTimpStamp" />
+          <ScalarProperty Name="PlanningTimeStamp" ColumnName="PlanningTimeStamp" />
+          <ScalarProperty Name="CompactorTimeStamp" ColumnName="CompactorTimeStamp" />
+          <ScalarProperty Name="QualtityTimeStamp" ColumnName="QualtityTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Clients">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Client">
+      <EntityTypeMapping TypeName="roaditModel.Client">
         <MappingFragment StoreEntitySet="Client">
-          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
-          <ScalarProperty Name="Iri" ColumnName="Iri" />
-          <ScalarProperty Name="Skidresistance" ColumnName="Skidresistance" />
-          <ScalarProperty Name="LengthwiseFlatness" ColumnName="LengthwiseFlatness" />
-          <ScalarProperty Name="Cores" ColumnName="Cores" />
-          <ScalarProperty Name="DensityOfField" ColumnName="DensityOfField" />
-          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
-          <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
-          <ScalarProperty Name="GPSCompactor" ColumnName="GPSCompactor" />
-          <ScalarProperty Name="GPSFinisher" ColumnName="GPSFinisher" />
-          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
-          <ScalarProperty Name="AsphaltTempAfterFinisherIrScanOrThermo" ColumnName="AsphaltTempAfterFinisherIrScanOrThermo" />
-          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
-          <ScalarProperty Name="AirHumidity" ColumnName="AirHumidity" />
-          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
-          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
-          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
-          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
-          <ScalarProperty Name="Precipation" ColumnName="Precipation" />
-          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
-          <ScalarProperty Name="StopTime" ColumnName="StopTime" />
-          <ScalarProperty Name="StopLocation" ColumnName="StopLocation" />
-          <ScalarProperty Name="TranverseSlope" ColumnName="TranverseSlope" />
-          <ScalarProperty Name="ThicknessRight" ColumnName="ThicknessRight" />
-          <ScalarProperty Name="ThicknessMiddel" ColumnName="ThicknessMiddel" />
-          <ScalarProperty Name="ThicknessLeft" ColumnName="ThicknessLeft" />
-          <ScalarProperty Name="Width" ColumnName="Width" />
-          <ScalarProperty Name="AngleRight" ColumnName="AngleRight" />
-          <ScalarProperty Name="AngleLeft" ColumnName="AngleLeft" />
-          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
-          <ScalarProperty Name="FinisherSpeed" ColumnName="FinisherSpeed" />
-          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
-          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
-          <ScalarProperty Name="ETA" ColumnName="ETA" />
-          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
-          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
-          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
-          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
-          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
-          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
           <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
           <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
-          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
+          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
+          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
+          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
+          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
+          <ScalarProperty Name="Precipation" ColumnName="Precipation" />
+          <ScalarProperty Name="AsphaltTempAfterFinisherIrScanOrThermo" ColumnName="AsphaltTempAfterFinisherIrScanOrThermo" />
+          <ScalarProperty Name="FinisherTimeStamp" ColumnName="FinisherTimeStamp" />
+          <ScalarProperty Name="LeftTickness" ColumnName="LeftTickness" />
+          <ScalarProperty Name="MiddelThickness" ColumnName="MiddelThickness" />
+          <ScalarProperty Name="RightThickness" ColumnName="RightThickness" />
+          <ScalarProperty Name="ThicknessTimeStamp" ColumnName="ThicknessTimeStamp" />
+          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
+          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="WidthTimeStamp" ColumnName="WidthTimeStamp" />
+          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
+          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
+          <ScalarProperty Name="AirHumidity" ColumnName="AirHumidity" />
+          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
+          <ScalarProperty Name="LeftAngle" ColumnName="LeftAngle" />
+          <ScalarProperty Name="RightAngle" ColumnName="RightAngle" />
+          <ScalarProperty Name="AngleTimestamp" ColumnName="AngleTimestamp" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
+          <ScalarProperty Name="StopLocationLTS" ColumnName="StopLocationLTS" />
+          <ScalarProperty Name="StopTimeLTS" ColumnName="StopTimeLTS" />
+          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
+          <ScalarProperty Name="GPS" ColumnName="GPS" />
+          <ScalarProperty Name="TempAsphalt" ColumnName="TempAsphalt" />
+          <ScalarProperty Name="AsphaltTempTimeStamp" ColumnName="AsphaltTempTimeStamp" />
+          <ScalarProperty Name="GPSCompactor" ColumnName="GPSCompactor" />
+          <ScalarProperty Name="ColorCodeTimeStamp" ColumnName="ColorCodeTimeStamp" />
+          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
+          <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
+          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
+          <ScalarProperty Name="DensityOfField" ColumnName="DensityOfField" />
+          <ScalarProperty Name="Cores" ColumnName="Cores" />
+          <ScalarProperty Name="LengthwiseFlatness" ColumnName="LengthwiseFlatness" />
+          <ScalarProperty Name="Skidresistance" ColumnName="Skidresistance" />
+          <ScalarProperty Name="Iri" ColumnName="Iri" />
+          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
+          <ScalarProperty Name="QualtityTimeStamp" ColumnName="QualtityTimeStamp" />
           <ScalarProperty Name="RoadId" ColumnName="RoadId" />
+          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="RoadSectionTimeStamp" ColumnName="RoadSectionTimeStamp" />
+          <ScalarProperty Name="AsphaltMixPlantTimestamp" ColumnName="AsphaltMixPlantTimestamp" />
+          <ScalarProperty Name="TruckTimeStamp" ColumnName="TruckTimeStamp" />
+          <ScalarProperty Name="CompactorTimeStamp" ColumnName="CompactorTimeStamp" />
+          <ScalarProperty Name="TranverseSlope" ColumnName="TranverseSlope" />
+          <ScalarProperty Name="GPSFinisher" ColumnName="GPSFinisher" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ContractorVieuws">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.ContractorVieuw">
+      <EntityTypeMapping TypeName="roaditModel.ContractorVieuw">
         <MappingFragment StoreEntitySet="ContractorVieuw">
-          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
-          <ScalarProperty Name="Iri" ColumnName="Iri" />
-          <ScalarProperty Name="Skidresistance" ColumnName="Skidresistance" />
-          <ScalarProperty Name="LengthwiseFlatness" ColumnName="LengthwiseFlatness" />
-          <ScalarProperty Name="Cores" ColumnName="Cores" />
-          <ScalarProperty Name="DensityOfField" ColumnName="DensityOfField" />
-          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
-          <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
-          <ScalarProperty Name="SpeedOfRollerCompactor" ColumnName="SpeedOfRollerCompactor" />
-          <ScalarProperty Name="GPSCompactor" ColumnName="GPSCompactor" />
-          <ScalarProperty Name="GPSFinisher" ColumnName="GPSFinisher" />
-          <ScalarProperty Name="LocationOfVibration" ColumnName="LocationOfVibration" />
-          <ScalarProperty Name="NumberOfRollerCompactorPassages" ColumnName="NumberOfRollerCompactorPassages" />
-          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
-          <ScalarProperty Name="AsphaltTempAfterFinisherIrScanOrThermo" ColumnName="AsphaltTempAfterFinisherIrScanOrThermo" />
-          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
-          <ScalarProperty Name="AirHumidity" ColumnName="AirHumidity" />
-          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
-          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
-          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
-          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
-          <ScalarProperty Name="Precipation" ColumnName="Precipation" />
-          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
-          <ScalarProperty Name="StopTime" ColumnName="StopTime" />
-          <ScalarProperty Name="StopLocation" ColumnName="StopLocation" />
-          <ScalarProperty Name="TranverseSlope" ColumnName="TranverseSlope" />
-          <ScalarProperty Name="ThicknessRight" ColumnName="ThicknessRight" />
-          <ScalarProperty Name="ThicknessMiddel" ColumnName="ThicknessMiddel" />
-          <ScalarProperty Name="ThicknessLeft" ColumnName="ThicknessLeft" />
-          <ScalarProperty Name="Width" ColumnName="Width" />
-          <ScalarProperty Name="AngleRight" ColumnName="AngleRight" />
-          <ScalarProperty Name="AngleLeft" ColumnName="AngleLeft" />
-          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
-          <ScalarProperty Name="FinisherSpeed" ColumnName="FinisherSpeed" />
-          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
-          <ScalarProperty Name="UnforseenStopTime" ColumnName="UnforseenStopTime" />
-          <ScalarProperty Name="UnforseenStopLocation" ColumnName="UnforseenStopLocation" />
-          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
-          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
-          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
-          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
-          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
-          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
-          <ScalarProperty Name="Temp" ColumnName="Temp" />
-          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
-          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
-          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
-          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
-          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
-          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
-          <ScalarProperty Name="ETA" ColumnName="ETA" />
-          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
-          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
-          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
-          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
-          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="Surface" ColumnName="Surface" />
+          <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
+          <ScalarProperty Name="PlanningTimeStamp" ColumnName="PlanningTimeStamp" />
           <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
           <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
-          <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
-          <ScalarProperty Name="Surface" ColumnName="Surface" />
-          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
-          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
+          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
+          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
+          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
+          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
+          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
+          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
+          <ScalarProperty Name="TruckTimeStamp" ColumnName="TruckTimeStamp" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
+          <ScalarProperty Name="StopLocationUnforseenStop" ColumnName="StopLocationUnforseenStop" />
+          <ScalarProperty Name="StopTimeUnforseenStop" ColumnName="StopTimeUnforseenStop" />
+          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
+          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
+          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
+          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
+          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
+          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
+          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
+          <ScalarProperty Name="TranverseSlope" ColumnName="TranverseSlope" />
+          <ScalarProperty Name="Precipation" ColumnName="Precipation" />
+          <ScalarProperty Name="AsphaltTempAfterFinisherIrScanOrThermo" ColumnName="AsphaltTempAfterFinisherIrScanOrThermo" />
+          <ScalarProperty Name="FinisherTimeStamp" ColumnName="FinisherTimeStamp" />
+          <ScalarProperty Name="LeftTickness" ColumnName="LeftTickness" />
+          <ScalarProperty Name="MiddelThickness" ColumnName="MiddelThickness" />
+          <ScalarProperty Name="RightThickness" ColumnName="RightThickness" />
+          <ScalarProperty Name="ThicknessTimeStamp" ColumnName="ThicknessTimeStamp" />
+          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
+          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="WidthTimeStamp" ColumnName="WidthTimeStamp" />
+          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
+          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
+          <ScalarProperty Name="AirHumidity" ColumnName="AirHumidity" />
+          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
+          <ScalarProperty Name="LeftAngle" ColumnName="LeftAngle" />
+          <ScalarProperty Name="RightAngle" ColumnName="RightAngle" />
+          <ScalarProperty Name="AngleTimestamp" ColumnName="AngleTimestamp" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
+          <ScalarProperty Name="StopLocationLTS" ColumnName="StopLocationLTS" />
+          <ScalarProperty Name="StopTimeLTS" ColumnName="StopTimeLTS" />
+          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
+          <ScalarProperty Name="GPS" ColumnName="GPS" />
+          <ScalarProperty Name="TempAsphalt" ColumnName="TempAsphalt" />
+          <ScalarProperty Name="AsphaltTempTimeStamp" ColumnName="AsphaltTempTimeStamp" />
+          <ScalarProperty Name="GPSFinisher" ColumnName="GPSFinisher" />
+          <ScalarProperty Name="GPSCompactor" ColumnName="GPSCompactor" />
+          <ScalarProperty Name="ColorCodeTimeStamp" ColumnName="ColorCodeTimeStamp" />
+          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
+          <ScalarProperty Name="NumberOfRollerCompactorPassages" ColumnName="NumberOfRollerCompactorPassages" />
+          <ScalarProperty Name="LocationOfVibration" ColumnName="LocationOfVibration" />
+          <ScalarProperty Name="SpeedOfRollerCompactor" ColumnName="SpeedOfRollerCompactor" />
+          <ScalarProperty Name="CompactorTimeStamp" ColumnName="CompactorTimeStamp" />
+          <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
+          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
+          <ScalarProperty Name="DensityOfField" ColumnName="DensityOfField" />
+          <ScalarProperty Name="Cores" ColumnName="Cores" />
+          <ScalarProperty Name="LengthwiseFlatness" ColumnName="LengthwiseFlatness" />
+          <ScalarProperty Name="Skidresistance" ColumnName="Skidresistance" />
+          <ScalarProperty Name="Iri" ColumnName="Iri" />
+          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
+          <ScalarProperty Name="QualtityTimeStamp" ColumnName="QualtityTimeStamp" />
           <ScalarProperty Name="RoadId" ColumnName="RoadId" />
+          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="RoadSectionTimeStamp" ColumnName="RoadSectionTimeStamp" />
+          <ScalarProperty Name="AsphaltMixPlantTimestamp" ColumnName="AsphaltMixPlantTimestamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Coproes">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Copro">
+      <EntityTypeMapping TypeName="roaditModel.Copro">
         <MappingFragment StoreEntitySet="Copro">
-          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
-          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
-          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
-          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
-          <ScalarProperty Name="Temp" ColumnName="Temp" />
-          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
-          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
-          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
-          <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />
-          <ScalarProperty Name="TempSilo" ColumnName="TempSilo" />
-          <ScalarProperty Name="AdditivesKg" ColumnName="AdditivesKg" />
-          <ScalarProperty Name="Bitumen" ColumnName="Bitumen" />
-          <ScalarProperty Name="Filler" ColumnName="Filler" />
-          <ScalarProperty Name="MassOfAggregationBunker6" ColumnName="MassOfAggregationBunker6" />
-          <ScalarProperty Name="MassOfAggregationBunker5" ColumnName="MassOfAggregationBunker5" />
-          <ScalarProperty Name="MassOfAggregationBunker4" ColumnName="MassOfAggregationBunker4" />
-          <ScalarProperty Name="MassOfAggregationBunker3" ColumnName="MassOfAggregationBunker3" />
-          <ScalarProperty Name="MassOfAggregationBunker2" ColumnName="MassOfAggregationBunker2" />
-          <ScalarProperty Name="MassOfAggregationBunker1" ColumnName="MassOfAggregationBunker1" />
-          <ScalarProperty Name="MixingTime" ColumnName="MixingTime" />
-          <ScalarProperty Name="MixingTemp" ColumnName="MixingTemp" />
-          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
-          <ScalarProperty Name="FillerRecup" ColumnName="FillerRecup" />
+          <ScalarProperty Name="TruckTimeStamp" ColumnName="TruckTimeStamp" />
+          <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
+          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
+          <ScalarProperty Name="AsphaltMixPlantTimestamp" ColumnName="AsphaltMixPlantTimestamp" />
+          <ScalarProperty Name="AggragationMaxTemp" ColumnName="AggragationMaxTemp" />
+          <ScalarProperty Name="AggragationMinTemp" ColumnName="AggragationMinTemp" />
+          <ScalarProperty Name="AggragationTimeStamp" ColumnName="AggragationTimeStamp" />
           <ScalarProperty Name="BitumenTimeStamp" ColumnName="BitumenTimeStamp" />
           <ScalarProperty Name="BitumenMinTemp" ColumnName="BitumenMinTemp" />
           <ScalarProperty Name="BitumenMaxTemp" ColumnName="BitumenMaxTemp" />
-          <ScalarProperty Name="AggragationTimeStamp" ColumnName="AggragationTimeStamp" />
-          <ScalarProperty Name="AggragationMinTemp" ColumnName="AggragationMinTemp" />
-          <ScalarProperty Name="AggragationMaxTemp" ColumnName="AggragationMaxTemp" />
-          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
-          <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
+          <ScalarProperty Name="FillerRecup" ColumnName="FillerRecup" />
+          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
+          <ScalarProperty Name="MassOfAggregationBunker1" ColumnName="MassOfAggregationBunker1" />
+          <ScalarProperty Name="MassOfAggregationBunker2" ColumnName="MassOfAggregationBunker2" />
+          <ScalarProperty Name="MassOfAggregationBunker3" ColumnName="MassOfAggregationBunker3" />
+          <ScalarProperty Name="MassOfAggregationBunker4" ColumnName="MassOfAggregationBunker4" />
+          <ScalarProperty Name="MassOfAggregationBunker5" ColumnName="MassOfAggregationBunker5" />
+          <ScalarProperty Name="MassOfAggregationBunker6" ColumnName="MassOfAggregationBunker6" />
+          <ScalarProperty Name="Filler" ColumnName="Filler" />
+          <ScalarProperty Name="Bitumen" ColumnName="Bitumen" />
+          <ScalarProperty Name="AdditivesKg" ColumnName="AdditivesKg" />
+          <ScalarProperty Name="CompositionTimeStamp" ColumnName="CompositionTimeStamp" />
+          <ScalarProperty Name="MixingTemp" ColumnName="MixingTemp" />
+          <ScalarProperty Name="MixingTime" ColumnName="MixingTime" />
+          <ScalarProperty Name="TempSilo" ColumnName="TempSilo" />
+          <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />
+          <ScalarProperty Name="SiloTimpStamp" ColumnName="SiloTimpStamp" />
+          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
+          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
+          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
+          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
+          <ScalarProperty Name="QualtityTimeStamp" ColumnName="QualtityTimeStamp" />
+          <ScalarProperty Name="RoadId" ColumnName="RoadId" />
+          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="RoadSectionTimeStamp" ColumnName="RoadSectionTimeStamp" />
+          <ScalarProperty Name="CompactorTimeStamp" ColumnName="CompactorTimeStamp" />
           <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
           <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
-          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
-          <ScalarProperty Name="RoadId" ColumnName="RoadId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Truckers">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.Trucker">
+      <EntityTypeMapping TypeName="roaditModel.Trucker">
         <MappingFragment StoreEntitySet="Trucker">
-          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
-          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
-          <ScalarProperty Name="UnforseenStopTime" ColumnName="UnforseenStopTime" />
-          <ScalarProperty Name="UnforseenStopLocation" ColumnName="UnforseenStopLocation" />
-          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
-          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
-          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
-          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
-          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
-          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
-          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
-          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
-          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
-          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
-          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
-          <ScalarProperty Name="ETA" ColumnName="ETA" />
-          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
-          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
-          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
-          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
           <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
-          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
+          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
+          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
+          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
+          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
+          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
+          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
+          <ScalarProperty Name="TruckTimeStamp" ColumnName="TruckTimeStamp" />
+          <ScalarProperty Name="StopLocationUnforseenStop" ColumnName="StopLocationUnforseenStop" />
+          <ScalarProperty Name="StopTimeUnforseenStop" ColumnName="StopTimeUnforseenStop" />
+          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
+          <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
+          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
+          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
+          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
+          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
+          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
+          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
           <ScalarProperty Name="RoadId" ColumnName="RoadId" />
+          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="RoadSectionTimeStamp" ColumnName="RoadSectionTimeStamp" />
+          <ScalarProperty Name="CompactorTimeStamp" ColumnName="CompactorTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UAs">
-      <EntityTypeMapping TypeName="RoadItEntitiesModel.UA">
+      <EntityTypeMapping TypeName="roaditModel.UA">
         <MappingFragment StoreEntitySet="UA">
-          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
-          <ScalarProperty Name="Iri" ColumnName="Iri" />
-          <ScalarProperty Name="Skidresistance" ColumnName="Skidresistance" />
-          <ScalarProperty Name="LengthwiseFlatness" ColumnName="LengthwiseFlatness" />
-          <ScalarProperty Name="Cores" ColumnName="Cores" />
-          <ScalarProperty Name="DensityOfField" ColumnName="DensityOfField" />
-          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
-          <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
-          <ScalarProperty Name="SpeedOfRollerCompactor" ColumnName="SpeedOfRollerCompactor" />
-          <ScalarProperty Name="GPSCompactor" ColumnName="GPSCompactor" />
-          <ScalarProperty Name="GPSFinisher" ColumnName="GPSFinisher" />
-          <ScalarProperty Name="LocationOfVibration" ColumnName="LocationOfVibration" />
-          <ScalarProperty Name="NumberOfRollerCompactorPassages" ColumnName="NumberOfRollerCompactorPassages" />
-          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
-          <ScalarProperty Name="AsphaltTempAfterFinisherIrScanOrThermo" ColumnName="AsphaltTempAfterFinisherIrScanOrThermo" />
-          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
-          <ScalarProperty Name="AirHumidity" ColumnName="AirHumidity" />
-          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
-          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
-          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
-          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
-          <ScalarProperty Name="Precipation" ColumnName="Precipation" />
-          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
-          <ScalarProperty Name="StopTime" ColumnName="StopTime" />
-          <ScalarProperty Name="StopLocation" ColumnName="StopLocation" />
-          <ScalarProperty Name="TranverseSlope" ColumnName="TranverseSlope" />
-          <ScalarProperty Name="ThicknessRight" ColumnName="ThicknessRight" />
-          <ScalarProperty Name="ThicknessMiddel" ColumnName="ThicknessMiddel" />
-          <ScalarProperty Name="ThicknessLeft" ColumnName="ThicknessLeft" />
-          <ScalarProperty Name="Width" ColumnName="Width" />
-          <ScalarProperty Name="AngleRight" ColumnName="AngleRight" />
-          <ScalarProperty Name="AngleLeft" ColumnName="AngleLeft" />
-          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
-          <ScalarProperty Name="FinisherSpeed" ColumnName="FinisherSpeed" />
-          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
-          <ScalarProperty Name="UnforseenStopTime" ColumnName="UnforseenStopTime" />
-          <ScalarProperty Name="UnforseenStopLocation" ColumnName="UnforseenStopLocation" />
-          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
-          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
-          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
-          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
-          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
-          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
-          <ScalarProperty Name="Temp" ColumnName="Temp" />
-          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
-          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
-          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
-          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
-          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
-          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
-          <ScalarProperty Name="ETA" ColumnName="ETA" />
-          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
           <ScalarProperty Name="ActualPosition" ColumnName="ActualPosition" />
-          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
-          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
-          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
-          <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />
-          <ScalarProperty Name="TempSilo" ColumnName="TempSilo" />
-          <ScalarProperty Name="AdditivesKg" ColumnName="AdditivesKg" />
-          <ScalarProperty Name="Bitumen" ColumnName="Bitumen" />
-          <ScalarProperty Name="Filler" ColumnName="Filler" />
-          <ScalarProperty Name="MassOfAggregationBunker6" ColumnName="MassOfAggregationBunker6" />
-          <ScalarProperty Name="MassOfAggregationBunker5" ColumnName="MassOfAggregationBunker5" />
-          <ScalarProperty Name="MassOfAggregationBunker4" ColumnName="MassOfAggregationBunker4" />
-          <ScalarProperty Name="MassOfAggregationBunker3" ColumnName="MassOfAggregationBunker3" />
-          <ScalarProperty Name="MassOfAggregationBunker2" ColumnName="MassOfAggregationBunker2" />
-          <ScalarProperty Name="MassOfAggregationBunker1" ColumnName="MassOfAggregationBunker1" />
-          <ScalarProperty Name="MixingTime" ColumnName="MixingTime" />
-          <ScalarProperty Name="MixingTemp" ColumnName="MixingTemp" />
-          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
-          <ScalarProperty Name="FillerRecup" ColumnName="FillerRecup" />
+          <ScalarProperty Name="ActualPositionTimeStamp" ColumnName="ActualPositionTimeStamp" />
+          <ScalarProperty Name="ActualPositionReturn" ColumnName="ActualPositionReturn" />
+          <ScalarProperty Name="ActualPositionReturnTimeStamp" ColumnName="ActualPositionReturnTimeStamp" />
+          <ScalarProperty Name="AggragationMaxTemp" ColumnName="AggragationMaxTemp" />
+          <ScalarProperty Name="AggragationMinTemp" ColumnName="AggragationMinTemp" />
+          <ScalarProperty Name="AggragationTimeStamp" ColumnName="AggragationTimeStamp" />
+          <ScalarProperty Name="AirHumidity" ColumnName="AirHumidity" />
+          <ScalarProperty Name="AirHumidityTimeStamp" ColumnName="AirHumidityTimeStamp" />
+          <ScalarProperty Name="LeftAngle" ColumnName="LeftAngle" />
+          <ScalarProperty Name="RightAngle" ColumnName="RightAngle" />
+          <ScalarProperty Name="AngleTimestamp" ColumnName="AngleTimestamp" />
+          <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
+          <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
+          <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
+          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
+          <ScalarProperty Name="AsphaltMixPlantTimestamp" ColumnName="AsphaltMixPlantTimestamp" />
+          <ScalarProperty Name="GPS" ColumnName="GPS" />
+          <ScalarProperty Name="TempAsphalt" ColumnName="TempAsphalt" />
+          <ScalarProperty Name="AsphaltTempTimeStamp" ColumnName="AsphaltTempTimeStamp" />
           <ScalarProperty Name="BitumenTimeStamp" ColumnName="BitumenTimeStamp" />
           <ScalarProperty Name="BitumenMinTemp" ColumnName="BitumenMinTemp" />
           <ScalarProperty Name="BitumenMaxTemp" ColumnName="BitumenMaxTemp" />
-          <ScalarProperty Name="AggragationTimeStamp" ColumnName="AggragationTimeStamp" />
-          <ScalarProperty Name="AggragationMinTemp" ColumnName="AggragationMinTemp" />
-          <ScalarProperty Name="AggragationMaxTemp" ColumnName="AggragationMaxTemp" />
-          <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
-          <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
-          <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
-          <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
-          <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
-          <ScalarProperty Name="Surface" ColumnName="Surface" />
+          <ScalarProperty Name="GPSFinisher" ColumnName="GPSFinisher" />
+          <ScalarProperty Name="GPSCompactor" ColumnName="GPSCompactor" />
+          <ScalarProperty Name="ColorCodeTimeStamp" ColumnName="ColorCodeTimeStamp" />
+          <ScalarProperty Name="QrCodeCompactor" ColumnName="QrCodeCompactor" />
+          <ScalarProperty Name="NumberOfRollerCompactorPassages" ColumnName="NumberOfRollerCompactorPassages" />
+          <ScalarProperty Name="LocationOfVibration" ColumnName="LocationOfVibration" />
+          <ScalarProperty Name="SpeedOfRollerCompactor" ColumnName="SpeedOfRollerCompactor" />
+          <ScalarProperty Name="CompactorTimeStamp" ColumnName="CompactorTimeStamp" />
+          <ScalarProperty Name="MassOfAggregationBunker1" ColumnName="MassOfAggregationBunker1" />
+          <ScalarProperty Name="MassOfAggregationBunker2" ColumnName="MassOfAggregationBunker2" />
+          <ScalarProperty Name="MassOfAggregationBunker3" ColumnName="MassOfAggregationBunker3" />
+          <ScalarProperty Name="MassOfAggregationBunker4" ColumnName="MassOfAggregationBunker4" />
+          <ScalarProperty Name="MassOfAggregationBunker5" ColumnName="MassOfAggregationBunker5" />
+          <ScalarProperty Name="MassOfAggregationBunker6" ColumnName="MassOfAggregationBunker6" />
+          <ScalarProperty Name="Filler" ColumnName="Filler" />
+          <ScalarProperty Name="Bitumen" ColumnName="Bitumen" />
+          <ScalarProperty Name="AdditivesKg" ColumnName="AdditivesKg" />
+          <ScalarProperty Name="CompositionTimeStamp" ColumnName="CompositionTimeStamp" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETATimeStamp" ColumnName="ETATimeStamp" />
+          <ScalarProperty Name="ETAReturn" ColumnName="ETAReturn" />
+          <ScalarProperty Name="ETAReturnTimeStamp" ColumnName="ETAReturnTimeStamp" />
+          <ScalarProperty Name="TranverseSlope" ColumnName="TranverseSlope" />
+          <ScalarProperty Name="Precipation" ColumnName="Precipation" />
+          <ScalarProperty Name="AsphaltTempAfterFinisherIrScanOrThermo" ColumnName="AsphaltTempAfterFinisherIrScanOrThermo" />
+          <ScalarProperty Name="FinisherTimeStamp" ColumnName="FinisherTimeStamp" />
+          <ScalarProperty Name="LeftTickness" ColumnName="LeftTickness" />
+          <ScalarProperty Name="MiddelThickness" ColumnName="MiddelThickness" />
+          <ScalarProperty Name="RightThickness" ColumnName="RightThickness" />
+          <ScalarProperty Name="ThicknessTimeStamp" ColumnName="ThicknessTimeStamp" />
+          <ScalarProperty Name="FillerRecup" ColumnName="FillerRecup" />
+          <ScalarProperty Name="FillerRecupTimeStamp" ColumnName="FillerRecupTimeStamp" />
+          <ScalarProperty Name="StopLocationLTS" ColumnName="StopLocationLTS" />
+          <ScalarProperty Name="StopTimeLTS" ColumnName="StopTimeLTS" />
+          <ScalarProperty Name="StopTimeStamp" ColumnName="StopTimeStamp" />
           <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
-          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="Surface" ColumnName="Surface" />
+          <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
+          <ScalarProperty Name="PlanningTimeStamp" ColumnName="PlanningTimeStamp" />
+          <ScalarProperty Name="ComplianceMixture" ColumnName="ComplianceMixture" />
+          <ScalarProperty Name="SamplesCopro" ColumnName="SamplesCopro" />
+          <ScalarProperty Name="DensityOfField" ColumnName="DensityOfField" />
+          <ScalarProperty Name="Cores" ColumnName="Cores" />
+          <ScalarProperty Name="LengthwiseFlatness" ColumnName="LengthwiseFlatness" />
+          <ScalarProperty Name="Skidresistance" ColumnName="Skidresistance" />
+          <ScalarProperty Name="Iri" ColumnName="Iri" />
+          <ScalarProperty Name="ExtraTestsAskedBijClient" ColumnName="ExtraTestsAskedBijClient" />
+          <ScalarProperty Name="QualtityTimeStamp" ColumnName="QualtityTimeStamp" />
           <ScalarProperty Name="RoadId" ColumnName="RoadId" />
+          <ScalarProperty Name="RoadDescription" ColumnName="RoadDescription" />
+          <ScalarProperty Name="RoadSectionTimeStamp" ColumnName="RoadSectionTimeStamp" />
+          <ScalarProperty Name="MixingTemp" ColumnName="MixingTemp" />
+          <ScalarProperty Name="MixingTime" ColumnName="MixingTime" />
+          <ScalarProperty Name="TempSilo" ColumnName="TempSilo" />
+          <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />
+          <ScalarProperty Name="SiloTimpStamp" ColumnName="SiloTimpStamp" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="SpeedFinisherTimeStamp" ColumnName="SpeedFinisherTimeStamp" />
+          <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
+          <ScalarProperty Name="RealArrivalTime" ColumnName="RealArrivalTime" />
+          <ScalarProperty Name="DeattachmentFinisherTime" ColumnName="DeattachmentFinisherTime" />
+          <ScalarProperty Name="DeattachmentFinisherPosition" ColumnName="DeattachmentFinisherPosition" />
+          <ScalarProperty Name="ArrivalAtPlant" ColumnName="ArrivalAtPlant" />
+          <ScalarProperty Name="AttachmentToFinisherTime" ColumnName="AttachmentToFinisherTime" />
+          <ScalarProperty Name="AttachmentToFinisherPosition" ColumnName="AttachmentToFinisherPosition" />
+          <ScalarProperty Name="TruckTimeStamp" ColumnName="TruckTimeStamp" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="TempTruckTimeStamp" ColumnName="TempTruckTimeStamp" />
+          <ScalarProperty Name="StopLocationUnforseenStop" ColumnName="StopLocationUnforseenStop" />
+          <ScalarProperty Name="StopTimeUnforseenStop" ColumnName="StopTimeUnforseenStop" />
+          <ScalarProperty Name="UnforseenStopTimeStamp" ColumnName="UnforseenStopTimeStamp" />
+          <ScalarProperty Name="TempWeather" ColumnName="TempWeather" />
+          <ScalarProperty Name="WeatherTempTimeStamp" ColumnName="WeatherTempTimeStamp" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="WidthTimeStamp" ColumnName="WidthTimeStamp" />
+          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
+          <ScalarProperty Name="WindTimeStamp" ColumnName="WindTimeStamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

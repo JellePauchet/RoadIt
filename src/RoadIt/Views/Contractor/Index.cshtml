@@ -12,12 +12,12 @@
         if(Session["RoadId"].ToString() != "")
         {
             <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
-            @Html.Raw(ViewData["Planning"].ToString())
-            @Html.Raw(ViewData["AsphaltMixPlant"].ToString())
-            @Html.Raw(ViewData["Truck"].ToString())
-            @Html.Raw(ViewData["Finisher"].ToString())
-            @Html.Raw(ViewData["Compactor"].ToString())
-            @Html.Raw(ViewData["QualityControl"].ToString())
+            @Html.Raw(Session["Planning"].ToString())
+            @Html.Raw(Session["AsphaltMixPlant"].ToString())
+            @Html.Raw(Session["Truck"].ToString())
+            @Html.Raw(Session["Finisher"].ToString())
+            @Html.Raw(Session["Compactor"].ToString())
+            @Html.Raw(Session["QualityControl"].ToString())
         }
         else
         {

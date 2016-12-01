@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "RoadSelection";
     Session["roadID"] = null;
 }
 
@@ -13,7 +13,6 @@
     }
     else
     {
-        <p>Choose a roadsection from the list.</p>
         using (Html.BeginForm("SelectSection", "RoadSelection", FormMethod.Post))
         {
             @Html.Raw(Session["SelectList"].ToString())

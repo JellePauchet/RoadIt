@@ -12,13 +12,13 @@ namespace RoadIt.Controllers
         //
         // GET: /Login/
 
-        RoadItEntities entities;
+        roaditEntities entities;
         public ActionResult Index()
         {
-            entities = new RoadItEntities();
+            entities = new roaditEntities();
             ViewBag.Error = Session["error"];
 
-            //ViewData["password"] = ("test").GetHashCode().ToString();
+            //Session["password"] = ("test").GetHashCode().ToString();
 
             return View();
         }
@@ -26,7 +26,7 @@ namespace RoadIt.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
-            entities = new RoadItEntities();
+            entities = new roaditEntities();
             var MailList = new List<string>();
             var PasswordList = new List<string>();
             var NameList = new List<string>();
@@ -53,11 +53,11 @@ namespace RoadIt.Controllers
                         Session["RoleId"] = RoleIDList[i];
                         return RedirectToAction("Index", "RoadSelection");
                     }
-                    else
+                    /*else
                     {
                         Session["error"] = "The given email or password is wrong";
                         return RedirectToAction("Index", "Login");
-                    }
+                    }*/
                 }
             }
             Session["error"] = "The given email or password is wrong";

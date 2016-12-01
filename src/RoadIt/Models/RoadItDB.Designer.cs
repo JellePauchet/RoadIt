@@ -19,37 +19,37 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Silo_ibfk_2", "Aggragation", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Aggragation), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_7", "AirHumidity", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.AirHumidity), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_2", "Angle", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Angle), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Silo_ibfk_1", "AsphaltMixPlant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.AsphaltMixPlant), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_8", "AsphaltTemp", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.AsphaltTemp), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "BatchList_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "BatchList_ibfk_2", "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Silo), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Compactor_ibfk_2", "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.BatchList), "Compactor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Compactor), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Silo_ibfk_3", "Bitumen", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Bituman), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Compactor_ibfk_1", "ColorCode", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ColorCode), "Compactor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Compactor), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Silo_ibfk_5", "Composition", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Composition), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Contractor_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "Contractor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Contractor), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_1", "SpeedFinisher", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.SpeedFinisher), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_3", "LayerThickness", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.LayerThickness), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_4", "LocationAndTimeSpan", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.LocationAndTimeSpan), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_6", "Wind", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Wind), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Silo_ibfk_4", "ListFillerRecup", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ListFillerRecup), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Planning_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "Planning", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Planning), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "QualityControl_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "QualityControl", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.QualityControl), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "RoadSection_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "RoadSection", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.RoadSection), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Users_ibfk_1", "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Role), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Users), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "BatchList_ibfk_4", "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Finisher), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Truck_ibfk_3", "ActualPosition", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ActualPosition), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Truck_ibfk_5", "ActualPositionReturn", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ActualPositionReturn), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "BatchList_ibfk_3", "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Truck), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Truck_ibfk_4", "ETA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ETA), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Truck_ibfk_6", "ETAReturn", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ETAReturn), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_5", "WeatherTemp", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.WeatherTemp), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Finisher_ibfk_9", "Width", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Width), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Truck_ibfk_7", "TruckTemp", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.TruckTemp), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
-[assembly: EdmRelationshipAttribute("RoadItEntitiesModel", "Truck_ibfk_8", "UnforseenStop", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.UnforseenStop), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Truck_ibfk_3", "ActualPosition", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ActualPosition), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Truck_ibfk_5", "ActualPositionReturn", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ActualPositionReturn), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Silo_ibfk_2", "Aggragation", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Aggragation), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_7", "AirHumidity", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.AirHumidity), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_2", "Angle", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Angle), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Silo_ibfk_1", "AsphaltMixPlant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.AsphaltMixPlant), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_8", "AsphaltTemp", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.AsphaltTemp), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "BatchList_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "BatchList_ibfk_2", "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Silo), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "BatchList_ibfk_3", "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Truck), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "BatchList_ibfk_4", "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Finisher), "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.BatchList), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Compactor_ibfk_2", "BatchList", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.BatchList), "Compactor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Compactor), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Silo_ibfk_3", "Bitumen", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Bituman), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Compactor_ibfk_1", "ColorCode", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ColorCode), "Compactor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Compactor), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Silo_ibfk_5", "Composition", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Composition), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Contractor_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "Contractor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Contractor), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Truck_ibfk_4", "ETA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ETA), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Truck_ibfk_6", "ETAReturn", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ETAReturn), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_1", "SpeedFinisher", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.SpeedFinisher), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_3", "LayerThickness", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.LayerThickness), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_4", "LocationAndTimeSpan", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.LocationAndTimeSpan), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_5", "WeatherTemp", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.WeatherTemp), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_6", "Wind", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Wind), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Finisher_ibfk_9", "Width", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Width), "Finisher", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Finisher), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Silo_ibfk_4", "ListFillerRecup", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.ListFillerRecup), "Silo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Silo), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Planning_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "Planning", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Planning), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "QualityControl_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "QualityControl", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.QualityControl), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "RoadSection_ibfk_1", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Project), "RoadSection", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.RoadSection), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Users_ibfk_1", "Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.Role), "Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.User), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Truck_ibfk_7", "TruckTemp", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.TruckTemp), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
+[assembly: EdmRelationshipAttribute("roaditModel", "Truck_ibfk_8", "UnforseenStop", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(RoadIt.Models.UnforseenStop), "Truck", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(RoadIt.Models.Truck), true)]
 
 #endregion
 
@@ -60,32 +60,32 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class RoadItEntities : ObjectContext
+    public partial class roaditEntities : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new RoadItEntities object using the connection string found in the 'RoadItEntities' section of the application configuration file.
+        /// Initializes a new roaditEntities object using the connection string found in the 'roaditEntities' section of the application configuration file.
         /// </summary>
-        public RoadItEntities() : base("name=RoadItEntities", "RoadItEntities")
+        public roaditEntities() : base("name=roaditEntities", "roaditEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new RoadItEntities object.
+        /// Initialize a new roaditEntities object.
         /// </summary>
-        public RoadItEntities(string connectionString) : base(connectionString, "RoadItEntities")
+        public roaditEntities(string connectionString) : base(connectionString, "roaditEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new RoadItEntities object.
+        /// Initialize a new roaditEntities object.
         /// </summary>
-        public RoadItEntities(EntityConnection connection) : base(connection, "RoadItEntities")
+        public roaditEntities(EntityConnection connection) : base(connection, "roaditEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -472,6 +472,22 @@ namespace RoadIt.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Role> Roles
+        {
+            get
+            {
+                if ((_Roles == null))
+                {
+                    _Roles = base.CreateObjectSet<Role>("Roles");
+                }
+                return _Roles;
+            }
+        }
+        private ObjectSet<Role> _Roles;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Silo> Silos
         {
             get
@@ -500,54 +516,6 @@ namespace RoadIt.Models
             }
         }
         private ObjectSet<SpeedFinisher> _SpeedFinishers;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Wind> Winds
-        {
-            get
-            {
-                if ((_Winds == null))
-                {
-                    _Winds = base.CreateObjectSet<Wind>("Winds");
-                }
-                return _Winds;
-            }
-        }
-        private ObjectSet<Wind> _Winds;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Role> Roles
-        {
-            get
-            {
-                if ((_Roles == null))
-                {
-                    _Roles = base.CreateObjectSet<Role>("Roles");
-                }
-                return _Roles;
-            }
-        }
-        private ObjectSet<Role> _Roles;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Users> Users
-        {
-            get
-            {
-                if ((_Users == null))
-                {
-                    _Users = base.CreateObjectSet<Users>("Users");
-                }
-                return _Users;
-            }
-        }
-        private ObjectSet<Users> _Users;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -600,6 +568,22 @@ namespace RoadIt.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<User> Users
+        {
+            get
+            {
+                if ((_Users == null))
+                {
+                    _Users = base.CreateObjectSet<User>("Users");
+                }
+                return _Users;
+            }
+        }
+        private ObjectSet<User> _Users;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<WeatherTemp> WeatherTemps
         {
             get
@@ -628,6 +612,22 @@ namespace RoadIt.Models
             }
         }
         private ObjectSet<Width> _Widths;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Wind> Winds
+        {
+            get
+            {
+                if ((_Winds == null))
+                {
+                    _Winds = base.CreateObjectSet<Wind>("Winds");
+                }
+                return _Winds;
+            }
+        }
+        private ObjectSet<Wind> _Winds;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -914,6 +914,14 @@ namespace RoadIt.Models
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the Roles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToRoles(Role role)
+        {
+            base.AddObject("Roles", role);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the Silos EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToSilos(Silo silo)
@@ -927,30 +935,6 @@ namespace RoadIt.Models
         public void AddToSpeedFinishers(SpeedFinisher speedFinisher)
         {
             base.AddObject("SpeedFinishers", speedFinisher);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Winds EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToWinds(Wind wind)
-        {
-            base.AddObject("Winds", wind);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Roles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToRoles(Role role)
-        {
-            base.AddObject("Roles", role);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Users EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToUsers(Users users)
-        {
-            base.AddObject("Users", users);
         }
     
         /// <summary>
@@ -978,6 +962,14 @@ namespace RoadIt.Models
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the Users EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToUsers(User user)
+        {
+            base.AddObject("Users", user);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the WeatherTemps EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToWeatherTemps(WeatherTemp weatherTemp)
@@ -991,6 +983,14 @@ namespace RoadIt.Models
         public void AddToWidths(Width width)
         {
             base.AddObject("Widths", width);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Winds EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToWinds(Wind wind)
+        {
+            base.AddObject("Winds", wind);
         }
     
         /// <summary>
@@ -1052,7 +1052,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="ActualPosition")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ActualPosition")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ActualPosition : EntityObject
@@ -1164,18 +1164,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_3", "Truck")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_3", "Truck")]
         public EntityCollection<Truck> Trucks
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_3", "Truck");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("roaditModel.Truck_ibfk_3", "Truck");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_3", "Truck", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("roaditModel.Truck_ibfk_3", "Truck", value);
                 }
             }
         }
@@ -1187,7 +1187,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="ActualPositionReturn")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ActualPositionReturn")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ActualPositionReturn : EntityObject
@@ -1198,13 +1198,13 @@ namespace RoadIt.Models
         /// Create a new ActualPositionReturn object.
         /// </summary>
         /// <param name="actualPositionReturnId">Initial value of the ActualPositionReturnId property.</param>
-        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
+        /// <param name="actualPositionReturn1">Initial value of the ActualPositionReturn1 property.</param>
         /// <param name="actualPositionReturnTimeStamp">Initial value of the ActualPositionReturnTimeStamp property.</param>
-        public static ActualPositionReturn CreateActualPositionReturn(global::System.Int32 actualPositionReturnId, global::System.String actualPosition, global::System.DateTime actualPositionReturnTimeStamp)
+        public static ActualPositionReturn CreateActualPositionReturn(global::System.Int32 actualPositionReturnId, global::System.String actualPositionReturn1, global::System.DateTime actualPositionReturnTimeStamp)
         {
             ActualPositionReturn actualPositionReturn = new ActualPositionReturn();
             actualPositionReturn.ActualPositionReturnId = actualPositionReturnId;
-            actualPositionReturn.ActualPosition = actualPosition;
+            actualPositionReturn.ActualPositionReturn1 = actualPositionReturn1;
             actualPositionReturn.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
             return actualPositionReturn;
         }
@@ -1245,24 +1245,24 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ActualPosition
+        public global::System.String ActualPositionReturn1
         {
             get
             {
-                return _ActualPosition;
+                return _ActualPositionReturn1;
             }
             set
             {
-                OnActualPositionChanging(value);
-                ReportPropertyChanging("ActualPosition");
-                _ActualPosition = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("ActualPosition");
-                OnActualPositionChanged();
+                OnActualPositionReturn1Changing(value);
+                ReportPropertyChanging("ActualPositionReturn1");
+                _ActualPositionReturn1 = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("ActualPositionReturn1");
+                OnActualPositionReturn1Changed();
             }
         }
-        private global::System.String _ActualPosition;
-        partial void OnActualPositionChanging(global::System.String value);
-        partial void OnActualPositionChanged();
+        private global::System.String _ActualPositionReturn1;
+        partial void OnActualPositionReturn1Changing(global::System.String value);
+        partial void OnActualPositionReturn1Changed();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1299,18 +1299,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_5", "Truck")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_5", "Truck")]
         public EntityCollection<Truck> Trucks
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_5", "Truck");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("roaditModel.Truck_ibfk_5", "Truck");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_5", "Truck", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("roaditModel.Truck_ibfk_5", "Truck", value);
                 }
             }
         }
@@ -1322,7 +1322,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Aggragation")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Aggragation")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Aggragation : EntityObject
@@ -1460,18 +1460,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_2", "Silo")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_2", "Silo")]
         public EntityCollection<Silo> Silos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_2", "Silo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("roaditModel.Silo_ibfk_2", "Silo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_2", "Silo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("roaditModel.Silo_ibfk_2", "Silo", value);
                 }
             }
         }
@@ -1483,7 +1483,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="AirHumidity")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="AirHumidity")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class AirHumidity : EntityObject
@@ -1595,18 +1595,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_7", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_7", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_7", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_7", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_7", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_7", "Finisher", value);
                 }
             }
         }
@@ -1618,7 +1618,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Angle")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Angle")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Angle : EntityObject
@@ -1629,14 +1629,16 @@ namespace RoadIt.Models
         /// Create a new Angle object.
         /// </summary>
         /// <param name="angleId">Initial value of the AngleId property.</param>
-        /// <param name="left">Initial value of the Left property.</param>
-        /// <param name="right">Initial value of the Right property.</param>
-        public static Angle CreateAngle(global::System.Int32 angleId, global::System.Int32 left, global::System.Int32 right)
+        /// <param name="leftAngle">Initial value of the LeftAngle property.</param>
+        /// <param name="rightAngle">Initial value of the RightAngle property.</param>
+        /// <param name="angleTimestamp">Initial value of the AngleTimestamp property.</param>
+        public static Angle CreateAngle(global::System.Int32 angleId, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp)
         {
             Angle angle = new Angle();
             angle.AngleId = angleId;
-            angle.Left = left;
-            angle.Right = right;
+            angle.LeftAngle = leftAngle;
+            angle.RightAngle = rightAngle;
+            angle.AngleTimestamp = angleTimestamp;
             return angle;
         }
 
@@ -1676,48 +1678,72 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Left
+        public global::System.Int32 LeftAngle
         {
             get
             {
-                return _Left;
+                return _LeftAngle;
             }
             set
             {
-                OnLeftChanging(value);
-                ReportPropertyChanging("Left");
-                _Left = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Left");
-                OnLeftChanged();
+                OnLeftAngleChanging(value);
+                ReportPropertyChanging("LeftAngle");
+                _LeftAngle = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LeftAngle");
+                OnLeftAngleChanged();
             }
         }
-        private global::System.Int32 _Left;
-        partial void OnLeftChanging(global::System.Int32 value);
-        partial void OnLeftChanged();
+        private global::System.Int32 _LeftAngle;
+        partial void OnLeftAngleChanging(global::System.Int32 value);
+        partial void OnLeftAngleChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Right
+        public global::System.Int32 RightAngle
         {
             get
             {
-                return _Right;
+                return _RightAngle;
             }
             set
             {
-                OnRightChanging(value);
-                ReportPropertyChanging("Right");
-                _Right = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Right");
-                OnRightChanged();
+                OnRightAngleChanging(value);
+                ReportPropertyChanging("RightAngle");
+                _RightAngle = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RightAngle");
+                OnRightAngleChanged();
             }
         }
-        private global::System.Int32 _Right;
-        partial void OnRightChanging(global::System.Int32 value);
-        partial void OnRightChanged();
+        private global::System.Int32 _RightAngle;
+        partial void OnRightAngleChanging(global::System.Int32 value);
+        partial void OnRightAngleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AngleTimestamp
+        {
+            get
+            {
+                return _AngleTimestamp;
+            }
+            set
+            {
+                OnAngleTimestampChanging(value);
+                ReportPropertyChanging("AngleTimestamp");
+                _AngleTimestamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AngleTimestamp");
+                OnAngleTimestampChanged();
+            }
+        }
+        private global::System.DateTime _AngleTimestamp;
+        partial void OnAngleTimestampChanging(global::System.DateTime value);
+        partial void OnAngleTimestampChanged();
 
         #endregion
 
@@ -1730,18 +1756,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_2", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_2", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_2", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_2", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_2", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_2", "Finisher", value);
                 }
             }
         }
@@ -1753,7 +1779,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="AsphaltMixPlant")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="AsphaltMixPlant")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class AsphaltMixPlant : EntityObject
@@ -1768,7 +1794,8 @@ namespace RoadIt.Models
         /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
         /// <param name="typeOfAggregates">Initial value of the TypeOfAggregates property.</param>
         /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
-        public static AsphaltMixPlant CreateAsphaltMixPlant(global::System.Int32 centralId, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange)
+        /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
+        public static AsphaltMixPlant CreateAsphaltMixPlant(global::System.Int32 centralId, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp)
         {
             AsphaltMixPlant asphaltMixPlant = new AsphaltMixPlant();
             asphaltMixPlant.CentralId = centralId;
@@ -1776,6 +1803,7 @@ namespace RoadIt.Models
             asphaltMixPlant.TechnicalDataSheet = technicalDataSheet;
             asphaltMixPlant.TypeOfAggregates = typeOfAggregates;
             asphaltMixPlant.MixtureChange = mixtureChange;
+            asphaltMixPlant.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
             return asphaltMixPlant;
         }
 
@@ -1905,6 +1933,30 @@ namespace RoadIt.Models
         private global::System.String _MixtureChange;
         partial void OnMixtureChangeChanging(global::System.String value);
         partial void OnMixtureChangeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltMixPlantTimestamp
+        {
+            get
+            {
+                return _AsphaltMixPlantTimestamp;
+            }
+            set
+            {
+                OnAsphaltMixPlantTimestampChanging(value);
+                ReportPropertyChanging("AsphaltMixPlantTimestamp");
+                _AsphaltMixPlantTimestamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AsphaltMixPlantTimestamp");
+                OnAsphaltMixPlantTimestampChanged();
+            }
+        }
+        private global::System.DateTime _AsphaltMixPlantTimestamp;
+        partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
+        partial void OnAsphaltMixPlantTimestampChanged();
 
         #endregion
 
@@ -1917,18 +1969,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_1", "Silo")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_1", "Silo")]
         public EntityCollection<Silo> Silos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_1", "Silo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("roaditModel.Silo_ibfk_1", "Silo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_1", "Silo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("roaditModel.Silo_ibfk_1", "Silo", value);
                 }
             }
         }
@@ -1940,7 +1992,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="AsphaltProcucer")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="AsphaltProcucer")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class AsphaltProcucer : EntityObject
@@ -1950,23 +2002,49 @@ namespace RoadIt.Models
         /// <summary>
         /// Create a new AsphaltProcucer object.
         /// </summary>
+        /// <param name="tonPerDay">Initial value of the TonPerDay property.</param>
+        /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
+        /// <param name="departureTime">Initial value of the DepartureTime property.</param>
+        /// <param name="massTruck">Initial value of the MassTruck property.</param>
+        /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
+        /// <param name="deattachmentFinisherTime">Initial value of the DeattachmentFinisherTime property.</param>
+        /// <param name="deattachmentFinisherPosition">Initial value of the DeattachmentFinisherPosition property.</param>
+        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
+        /// <param name="attachmentToFinisherTime">Initial value of the AttachmentToFinisherTime property.</param>
+        /// <param name="attachmentToFinisherPosition">Initial value of the AttachmentToFinisherPosition property.</param>
+        /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
+        /// <param name="temp">Initial value of the Temp property.</param>
+        /// <param name="tempTruckTimeStamp">Initial value of the TempTruckTimeStamp property.</param>
+        /// <param name="stopLocationUnforseenStop">Initial value of the StopLocationUnforseenStop property.</param>
+        /// <param name="stopTimeUnforseenStop">Initial value of the StopTimeUnforseenStop property.</param>
+        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
+        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
+        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
+        /// <param name="actualPositionReturn">Initial value of the ActualPositionReturn property.</param>
+        /// <param name="actualPositionReturnTimeStamp">Initial value of the ActualPositionReturnTimeStamp property.</param>
+        /// <param name="eTA">Initial value of the ETA property.</param>
+        /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
+        /// <param name="eTAReturn">Initial value of the ETAReturn property.</param>
+        /// <param name="eTAReturnTimeStamp">Initial value of the ETAReturnTimeStamp property.</param>
+        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
+        /// <param name="complianceMixture">Initial value of the ComplianceMixture property.</param>
+        /// <param name="samplesCopro">Initial value of the SamplesCopro property.</param>
         /// <param name="roadId">Initial value of the RoadId property.</param>
         /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
-        /// <param name="tonPerDay">Initial value of the TonPerDay property.</param>
-        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
+        /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
         /// <param name="mixtureName">Initial value of the MixtureName property.</param>
+        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
         /// <param name="typeOfAggregates">Initial value of the TypeOfAggregates property.</param>
         /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
+        /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
         /// <param name="aggragationMaxTemp">Initial value of the AggragationMaxTemp property.</param>
         /// <param name="aggragationMinTemp">Initial value of the AggragationMinTemp property.</param>
         /// <param name="aggragationTimeStamp">Initial value of the AggragationTimeStamp property.</param>
-        /// <param name="bitumenMaxTemp">Initial value of the BitumenMaxTemp property.</param>
-        /// <param name="bitumenMinTemp">Initial value of the BitumenMinTemp property.</param>
         /// <param name="bitumenTimeStamp">Initial value of the BitumenTimeStamp property.</param>
+        /// <param name="bitumenMinTemp">Initial value of the BitumenMinTemp property.</param>
+        /// <param name="bitumenMaxTemp">Initial value of the BitumenMaxTemp property.</param>
         /// <param name="fillerRecup">Initial value of the FillerRecup property.</param>
         /// <param name="fillerRecupTimeStamp">Initial value of the FillerRecupTimeStamp property.</param>
-        /// <param name="mixingTemp">Initial value of the MixingTemp property.</param>
-        /// <param name="mixingTime">Initial value of the MixingTime property.</param>
         /// <param name="massOfAggregationBunker1">Initial value of the MassOfAggregationBunker1 property.</param>
         /// <param name="massOfAggregationBunker2">Initial value of the MassOfAggregationBunker2 property.</param>
         /// <param name="massOfAggregationBunker3">Initial value of the MassOfAggregationBunker3 property.</param>
@@ -1976,53 +2054,61 @@ namespace RoadIt.Models
         /// <param name="filler">Initial value of the Filler property.</param>
         /// <param name="bitumen">Initial value of the Bitumen property.</param>
         /// <param name="additivesKg">Initial value of the AdditivesKg property.</param>
+        /// <param name="compositionTimeStamp">Initial value of the CompositionTimeStamp property.</param>
+        /// <param name="mixingTemp">Initial value of the MixingTemp property.</param>
+        /// <param name="mixingTime">Initial value of the MixingTime property.</param>
         /// <param name="tempSilo">Initial value of the TempSilo property.</param>
         /// <param name="analysisComposition">Initial value of the AnalysisComposition property.</param>
-        /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
-        /// <param name="departureTime">Initial value of the DepartureTime property.</param>
-        /// <param name="massTruck">Initial value of the MassTruck property.</param>
-        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
-        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
-        /// <param name="eTA">Initial value of the ETA property.</param>
-        /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
-        /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
-        /// <param name="deattachmentFinisherTime">Initial value of the DeattachmentFinisherTime property.</param>
-        /// <param name="deattachmentFinisherPosition">Initial value of the DeattachmentFinisherPosition property.</param>
-        /// <param name="attachmentToFinisherTime">Initial value of the AttachmentToFinisherTime property.</param>
-        /// <param name="attachmentToFinisherPosition">Initial value of the AttachmentToFinisherPosition property.</param>
-        /// <param name="temp">Initial value of the Temp property.</param>
-        /// <param name="tempTruckTimeStamp">Initial value of the TempTruckTimeStamp property.</param>
-        /// <param name="actualPositionReturn">Initial value of the ActualPositionReturn property.</param>
-        /// <param name="actualPositionReturnTimeStamp">Initial value of the ActualPositionReturnTimeStamp property.</param>
-        /// <param name="eTAReturn">Initial value of the ETAReturn property.</param>
-        /// <param name="eTAReturnTimeStamp">Initial value of the ETAReturnTimeStamp property.</param>
-        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
-        /// <param name="unforseenStopLocation">Initial value of the UnforseenStopLocation property.</param>
-        /// <param name="unforseenStopTime">Initial value of the UnforseenStopTime property.</param>
-        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
-        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
-        /// <param name="samplesCopro">Initial value of the SamplesCopro property.</param>
-        /// <param name="complianceMixture">Initial value of the ComplianceMixture property.</param>
-        public static AsphaltProcucer CreateAsphaltProcucer(global::System.Int32 roadId, global::System.String roadDescription, global::System.Int32 tonPerDay, global::System.String technicalDataSheet, global::System.String mixtureName, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.Int32 bitumenMaxTemp, global::System.Int32 bitumenMinTemp, global::System.DateTime bitumenTimeStamp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String eTA, global::System.DateTime eTATimeStamp, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.String eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.DateTime arrivalAtPlant, global::System.String unforseenStopLocation, global::System.TimeSpan unforseenStopTime, global::System.DateTime unforseenStopTimeStamp, global::System.String qrCodeCompactor, global::System.String samplesCopro, global::System.String complianceMixture)
+        /// <param name="siloTimpStamp">Initial value of the SiloTimpStamp property.</param>
+        /// <param name="planningTimeStamp">Initial value of the PlanningTimeStamp property.</param>
+        /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
+        /// <param name="qualtityTimeStamp">Initial value of the QualtityTimeStamp property.</param>
+        public static AsphaltProcucer CreateAsphaltProcucer(global::System.Int32 tonPerDay, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.DateTime planningTimeStamp, global::System.DateTime compactorTimeStamp, global::System.DateTime qualtityTimeStamp)
         {
             AsphaltProcucer asphaltProcucer = new AsphaltProcucer();
+            asphaltProcucer.TonPerDay = tonPerDay;
+            asphaltProcucer.TruckLicensPlate = truckLicensPlate;
+            asphaltProcucer.DepartureTime = departureTime;
+            asphaltProcucer.MassTruck = massTruck;
+            asphaltProcucer.RealArrivalTime = realArrivalTime;
+            asphaltProcucer.DeattachmentFinisherTime = deattachmentFinisherTime;
+            asphaltProcucer.DeattachmentFinisherPosition = deattachmentFinisherPosition;
+            asphaltProcucer.ArrivalAtPlant = arrivalAtPlant;
+            asphaltProcucer.AttachmentToFinisherTime = attachmentToFinisherTime;
+            asphaltProcucer.AttachmentToFinisherPosition = attachmentToFinisherPosition;
+            asphaltProcucer.TruckTimeStamp = truckTimeStamp;
+            asphaltProcucer.Temp = temp;
+            asphaltProcucer.TempTruckTimeStamp = tempTruckTimeStamp;
+            asphaltProcucer.StopLocationUnforseenStop = stopLocationUnforseenStop;
+            asphaltProcucer.StopTimeUnforseenStop = stopTimeUnforseenStop;
+            asphaltProcucer.UnforseenStopTimeStamp = unforseenStopTimeStamp;
+            asphaltProcucer.ActualPosition = actualPosition;
+            asphaltProcucer.ActualPositionTimeStamp = actualPositionTimeStamp;
+            asphaltProcucer.ActualPositionReturn = actualPositionReturn;
+            asphaltProcucer.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
+            asphaltProcucer.ETA = eTA;
+            asphaltProcucer.ETATimeStamp = eTATimeStamp;
+            asphaltProcucer.ETAReturn = eTAReturn;
+            asphaltProcucer.ETAReturnTimeStamp = eTAReturnTimeStamp;
+            asphaltProcucer.QrCodeCompactor = qrCodeCompactor;
+            asphaltProcucer.ComplianceMixture = complianceMixture;
+            asphaltProcucer.SamplesCopro = samplesCopro;
             asphaltProcucer.RoadId = roadId;
             asphaltProcucer.RoadDescription = roadDescription;
-            asphaltProcucer.TonPerDay = tonPerDay;
-            asphaltProcucer.TechnicalDataSheet = technicalDataSheet;
+            asphaltProcucer.RoadSectionTimeStamp = roadSectionTimeStamp;
             asphaltProcucer.MixtureName = mixtureName;
+            asphaltProcucer.TechnicalDataSheet = technicalDataSheet;
             asphaltProcucer.TypeOfAggregates = typeOfAggregates;
             asphaltProcucer.MixtureChange = mixtureChange;
+            asphaltProcucer.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
             asphaltProcucer.AggragationMaxTemp = aggragationMaxTemp;
             asphaltProcucer.AggragationMinTemp = aggragationMinTemp;
             asphaltProcucer.AggragationTimeStamp = aggragationTimeStamp;
-            asphaltProcucer.BitumenMaxTemp = bitumenMaxTemp;
-            asphaltProcucer.BitumenMinTemp = bitumenMinTemp;
             asphaltProcucer.BitumenTimeStamp = bitumenTimeStamp;
+            asphaltProcucer.BitumenMinTemp = bitumenMinTemp;
+            asphaltProcucer.BitumenMaxTemp = bitumenMaxTemp;
             asphaltProcucer.FillerRecup = fillerRecup;
             asphaltProcucer.FillerRecupTimeStamp = fillerRecupTimeStamp;
-            asphaltProcucer.MixingTemp = mixingTemp;
-            asphaltProcucer.MixingTime = mixingTime;
             asphaltProcucer.MassOfAggregationBunker1 = massOfAggregationBunker1;
             asphaltProcucer.MassOfAggregationBunker2 = massOfAggregationBunker2;
             asphaltProcucer.MassOfAggregationBunker3 = massOfAggregationBunker3;
@@ -2032,39 +2118,750 @@ namespace RoadIt.Models
             asphaltProcucer.Filler = filler;
             asphaltProcucer.Bitumen = bitumen;
             asphaltProcucer.AdditivesKg = additivesKg;
+            asphaltProcucer.CompositionTimeStamp = compositionTimeStamp;
+            asphaltProcucer.MixingTemp = mixingTemp;
+            asphaltProcucer.MixingTime = mixingTime;
             asphaltProcucer.TempSilo = tempSilo;
             asphaltProcucer.AnalysisComposition = analysisComposition;
-            asphaltProcucer.TruckLicensPlate = truckLicensPlate;
-            asphaltProcucer.DepartureTime = departureTime;
-            asphaltProcucer.MassTruck = massTruck;
-            asphaltProcucer.ActualPosition = actualPosition;
-            asphaltProcucer.ActualPositionTimeStamp = actualPositionTimeStamp;
-            asphaltProcucer.ETA = eTA;
-            asphaltProcucer.ETATimeStamp = eTATimeStamp;
-            asphaltProcucer.RealArrivalTime = realArrivalTime;
-            asphaltProcucer.DeattachmentFinisherTime = deattachmentFinisherTime;
-            asphaltProcucer.DeattachmentFinisherPosition = deattachmentFinisherPosition;
-            asphaltProcucer.AttachmentToFinisherTime = attachmentToFinisherTime;
-            asphaltProcucer.AttachmentToFinisherPosition = attachmentToFinisherPosition;
-            asphaltProcucer.Temp = temp;
-            asphaltProcucer.TempTruckTimeStamp = tempTruckTimeStamp;
-            asphaltProcucer.ActualPositionReturn = actualPositionReturn;
-            asphaltProcucer.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
-            asphaltProcucer.ETAReturn = eTAReturn;
-            asphaltProcucer.ETAReturnTimeStamp = eTAReturnTimeStamp;
-            asphaltProcucer.ArrivalAtPlant = arrivalAtPlant;
-            asphaltProcucer.UnforseenStopLocation = unforseenStopLocation;
-            asphaltProcucer.UnforseenStopTime = unforseenStopTime;
-            asphaltProcucer.UnforseenStopTimeStamp = unforseenStopTimeStamp;
-            asphaltProcucer.QrCodeCompactor = qrCodeCompactor;
-            asphaltProcucer.SamplesCopro = samplesCopro;
-            asphaltProcucer.ComplianceMixture = complianceMixture;
+            asphaltProcucer.SiloTimpStamp = siloTimpStamp;
+            asphaltProcucer.PlanningTimeStamp = planningTimeStamp;
+            asphaltProcucer.CompactorTimeStamp = compactorTimeStamp;
+            asphaltProcucer.QualtityTimeStamp = qualtityTimeStamp;
             return asphaltProcucer;
         }
 
         #endregion
 
         #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TonPerDay
+        {
+            get
+            {
+                return _TonPerDay;
+            }
+            set
+            {
+                if (_TonPerDay != value)
+                {
+                    OnTonPerDayChanging(value);
+                    ReportPropertyChanging("TonPerDay");
+                    _TonPerDay = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TonPerDay");
+                    OnTonPerDayChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TonPerDay;
+        partial void OnTonPerDayChanging(global::System.Int32 value);
+        partial void OnTonPerDayChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TruckLicensPlate
+        {
+            get
+            {
+                return _TruckLicensPlate;
+            }
+            set
+            {
+                if (_TruckLicensPlate != value)
+                {
+                    OnTruckLicensPlateChanging(value);
+                    ReportPropertyChanging("TruckLicensPlate");
+                    _TruckLicensPlate = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TruckLicensPlate");
+                    OnTruckLicensPlateChanged();
+                }
+            }
+        }
+        private global::System.String _TruckLicensPlate;
+        partial void OnTruckLicensPlateChanging(global::System.String value);
+        partial void OnTruckLicensPlateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DepartureTime
+        {
+            get
+            {
+                return _DepartureTime;
+            }
+            set
+            {
+                if (_DepartureTime != value)
+                {
+                    OnDepartureTimeChanging(value);
+                    ReportPropertyChanging("DepartureTime");
+                    _DepartureTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("DepartureTime");
+                    OnDepartureTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _DepartureTime;
+        partial void OnDepartureTimeChanging(global::System.DateTime value);
+        partial void OnDepartureTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 MassTruck
+        {
+            get
+            {
+                return _MassTruck;
+            }
+            set
+            {
+                if (_MassTruck != value)
+                {
+                    OnMassTruckChanging(value);
+                    ReportPropertyChanging("MassTruck");
+                    _MassTruck = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MassTruck");
+                    OnMassTruckChanged();
+                }
+            }
+        }
+        private global::System.Int32 _MassTruck;
+        partial void OnMassTruckChanging(global::System.Int32 value);
+        partial void OnMassTruckChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime RealArrivalTime
+        {
+            get
+            {
+                return _RealArrivalTime;
+            }
+            set
+            {
+                if (_RealArrivalTime != value)
+                {
+                    OnRealArrivalTimeChanging(value);
+                    ReportPropertyChanging("RealArrivalTime");
+                    _RealArrivalTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RealArrivalTime");
+                    OnRealArrivalTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _RealArrivalTime;
+        partial void OnRealArrivalTimeChanging(global::System.DateTime value);
+        partial void OnRealArrivalTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DeattachmentFinisherTime
+        {
+            get
+            {
+                return _DeattachmentFinisherTime;
+            }
+            set
+            {
+                if (_DeattachmentFinisherTime != value)
+                {
+                    OnDeattachmentFinisherTimeChanging(value);
+                    ReportPropertyChanging("DeattachmentFinisherTime");
+                    _DeattachmentFinisherTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("DeattachmentFinisherTime");
+                    OnDeattachmentFinisherTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _DeattachmentFinisherTime;
+        partial void OnDeattachmentFinisherTimeChanging(global::System.DateTime value);
+        partial void OnDeattachmentFinisherTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String DeattachmentFinisherPosition
+        {
+            get
+            {
+                return _DeattachmentFinisherPosition;
+            }
+            set
+            {
+                if (_DeattachmentFinisherPosition != value)
+                {
+                    OnDeattachmentFinisherPositionChanging(value);
+                    ReportPropertyChanging("DeattachmentFinisherPosition");
+                    _DeattachmentFinisherPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("DeattachmentFinisherPosition");
+                    OnDeattachmentFinisherPositionChanged();
+                }
+            }
+        }
+        private global::System.String _DeattachmentFinisherPosition;
+        partial void OnDeattachmentFinisherPositionChanging(global::System.String value);
+        partial void OnDeattachmentFinisherPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ArrivalAtPlant
+        {
+            get
+            {
+                return _ArrivalAtPlant;
+            }
+            set
+            {
+                if (_ArrivalAtPlant != value)
+                {
+                    OnArrivalAtPlantChanging(value);
+                    ReportPropertyChanging("ArrivalAtPlant");
+                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ArrivalAtPlant");
+                    OnArrivalAtPlantChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ArrivalAtPlant;
+        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
+        partial void OnArrivalAtPlantChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AttachmentToFinisherTime
+        {
+            get
+            {
+                return _AttachmentToFinisherTime;
+            }
+            set
+            {
+                if (_AttachmentToFinisherTime != value)
+                {
+                    OnAttachmentToFinisherTimeChanging(value);
+                    ReportPropertyChanging("AttachmentToFinisherTime");
+                    _AttachmentToFinisherTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AttachmentToFinisherTime");
+                    OnAttachmentToFinisherTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AttachmentToFinisherTime;
+        partial void OnAttachmentToFinisherTimeChanging(global::System.DateTime value);
+        partial void OnAttachmentToFinisherTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AttachmentToFinisherPosition
+        {
+            get
+            {
+                return _AttachmentToFinisherPosition;
+            }
+            set
+            {
+                if (_AttachmentToFinisherPosition != value)
+                {
+                    OnAttachmentToFinisherPositionChanging(value);
+                    ReportPropertyChanging("AttachmentToFinisherPosition");
+                    _AttachmentToFinisherPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("AttachmentToFinisherPosition");
+                    OnAttachmentToFinisherPositionChanged();
+                }
+            }
+        }
+        private global::System.String _AttachmentToFinisherPosition;
+        partial void OnAttachmentToFinisherPositionChanging(global::System.String value);
+        partial void OnAttachmentToFinisherPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TruckTimeStamp
+        {
+            get
+            {
+                return _TruckTimeStamp;
+            }
+            set
+            {
+                if (_TruckTimeStamp != value)
+                {
+                    OnTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TruckTimeStamp");
+                    _TruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TruckTimeStamp");
+                    OnTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TruckTimeStamp;
+        partial void OnTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTruckTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Temp
+        {
+            get
+            {
+                return _Temp;
+            }
+            set
+            {
+                if (_Temp != value)
+                {
+                    OnTempChanging(value);
+                    ReportPropertyChanging("Temp");
+                    _Temp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Temp");
+                    OnTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Temp;
+        partial void OnTempChanging(global::System.Int32 value);
+        partial void OnTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TempTruckTimeStamp
+        {
+            get
+            {
+                return _TempTruckTimeStamp;
+            }
+            set
+            {
+                if (_TempTruckTimeStamp != value)
+                {
+                    OnTempTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TempTruckTimeStamp");
+                    _TempTruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TempTruckTimeStamp");
+                    OnTempTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TempTruckTimeStamp;
+        partial void OnTempTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTempTruckTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StopLocationUnforseenStop
+        {
+            get
+            {
+                return _StopLocationUnforseenStop;
+            }
+            set
+            {
+                if (_StopLocationUnforseenStop != value)
+                {
+                    OnStopLocationUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopLocationUnforseenStop");
+                    _StopLocationUnforseenStop = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("StopLocationUnforseenStop");
+                    OnStopLocationUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.String _StopLocationUnforseenStop;
+        partial void OnStopLocationUnforseenStopChanging(global::System.String value);
+        partial void OnStopLocationUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan StopTimeUnforseenStop
+        {
+            get
+            {
+                return _StopTimeUnforseenStop;
+            }
+            set
+            {
+                if (_StopTimeUnforseenStop != value)
+                {
+                    OnStopTimeUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopTimeUnforseenStop");
+                    _StopTimeUnforseenStop = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeUnforseenStop");
+                    OnStopTimeUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _StopTimeUnforseenStop;
+        partial void OnStopTimeUnforseenStopChanging(global::System.TimeSpan value);
+        partial void OnStopTimeUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime UnforseenStopTimeStamp
+        {
+            get
+            {
+                return _UnforseenStopTimeStamp;
+            }
+            set
+            {
+                if (_UnforseenStopTimeStamp != value)
+                {
+                    OnUnforseenStopTimeStampChanging(value);
+                    ReportPropertyChanging("UnforseenStopTimeStamp");
+                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("UnforseenStopTimeStamp");
+                    OnUnforseenStopTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _UnforseenStopTimeStamp;
+        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
+        partial void OnUnforseenStopTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ActualPosition
+        {
+            get
+            {
+                return _ActualPosition;
+            }
+            set
+            {
+                if (_ActualPosition != value)
+                {
+                    OnActualPositionChanging(value);
+                    ReportPropertyChanging("ActualPosition");
+                    _ActualPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ActualPosition");
+                    OnActualPositionChanged();
+                }
+            }
+        }
+        private global::System.String _ActualPosition;
+        partial void OnActualPositionChanging(global::System.String value);
+        partial void OnActualPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ActualPositionTimeStamp
+        {
+            get
+            {
+                return _ActualPositionTimeStamp;
+            }
+            set
+            {
+                if (_ActualPositionTimeStamp != value)
+                {
+                    OnActualPositionTimeStampChanging(value);
+                    ReportPropertyChanging("ActualPositionTimeStamp");
+                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ActualPositionTimeStamp");
+                    OnActualPositionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ActualPositionTimeStamp;
+        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
+        partial void OnActualPositionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ActualPositionReturn
+        {
+            get
+            {
+                return _ActualPositionReturn;
+            }
+            set
+            {
+                if (_ActualPositionReturn != value)
+                {
+                    OnActualPositionReturnChanging(value);
+                    ReportPropertyChanging("ActualPositionReturn");
+                    _ActualPositionReturn = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ActualPositionReturn");
+                    OnActualPositionReturnChanged();
+                }
+            }
+        }
+        private global::System.String _ActualPositionReturn;
+        partial void OnActualPositionReturnChanging(global::System.String value);
+        partial void OnActualPositionReturnChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ActualPositionReturnTimeStamp
+        {
+            get
+            {
+                return _ActualPositionReturnTimeStamp;
+            }
+            set
+            {
+                if (_ActualPositionReturnTimeStamp != value)
+                {
+                    OnActualPositionReturnTimeStampChanging(value);
+                    ReportPropertyChanging("ActualPositionReturnTimeStamp");
+                    _ActualPositionReturnTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ActualPositionReturnTimeStamp");
+                    OnActualPositionReturnTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ActualPositionReturnTimeStamp;
+        partial void OnActualPositionReturnTimeStampChanging(global::System.DateTime value);
+        partial void OnActualPositionReturnTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan ETA
+        {
+            get
+            {
+                return _ETA;
+            }
+            set
+            {
+                if (_ETA != value)
+                {
+                    OnETAChanging(value);
+                    ReportPropertyChanging("ETA");
+                    _ETA = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETA");
+                    OnETAChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _ETA;
+        partial void OnETAChanging(global::System.TimeSpan value);
+        partial void OnETAChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ETATimeStamp
+        {
+            get
+            {
+                return _ETATimeStamp;
+            }
+            set
+            {
+                if (_ETATimeStamp != value)
+                {
+                    OnETATimeStampChanging(value);
+                    ReportPropertyChanging("ETATimeStamp");
+                    _ETATimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETATimeStamp");
+                    OnETATimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ETATimeStamp;
+        partial void OnETATimeStampChanging(global::System.DateTime value);
+        partial void OnETATimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan ETAReturn
+        {
+            get
+            {
+                return _ETAReturn;
+            }
+            set
+            {
+                if (_ETAReturn != value)
+                {
+                    OnETAReturnChanging(value);
+                    ReportPropertyChanging("ETAReturn");
+                    _ETAReturn = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETAReturn");
+                    OnETAReturnChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _ETAReturn;
+        partial void OnETAReturnChanging(global::System.TimeSpan value);
+        partial void OnETAReturnChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ETAReturnTimeStamp
+        {
+            get
+            {
+                return _ETAReturnTimeStamp;
+            }
+            set
+            {
+                if (_ETAReturnTimeStamp != value)
+                {
+                    OnETAReturnTimeStampChanging(value);
+                    ReportPropertyChanging("ETAReturnTimeStamp");
+                    _ETAReturnTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETAReturnTimeStamp");
+                    OnETAReturnTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ETAReturnTimeStamp;
+        partial void OnETAReturnTimeStampChanging(global::System.DateTime value);
+        partial void OnETAReturnTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String QrCodeCompactor
+        {
+            get
+            {
+                return _QrCodeCompactor;
+            }
+            set
+            {
+                if (_QrCodeCompactor != value)
+                {
+                    OnQrCodeCompactorChanging(value);
+                    ReportPropertyChanging("QrCodeCompactor");
+                    _QrCodeCompactor = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("QrCodeCompactor");
+                    OnQrCodeCompactorChanged();
+                }
+            }
+        }
+        private global::System.String _QrCodeCompactor;
+        partial void OnQrCodeCompactorChanging(global::System.String value);
+        partial void OnQrCodeCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ComplianceMixture
+        {
+            get
+            {
+                return _ComplianceMixture;
+            }
+            set
+            {
+                if (_ComplianceMixture != value)
+                {
+                    OnComplianceMixtureChanging(value);
+                    ReportPropertyChanging("ComplianceMixture");
+                    _ComplianceMixture = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ComplianceMixture");
+                    OnComplianceMixtureChanged();
+                }
+            }
+        }
+        private global::System.String _ComplianceMixture;
+        partial void OnComplianceMixtureChanging(global::System.String value);
+        partial void OnComplianceMixtureChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String SamplesCopro
+        {
+            get
+            {
+                return _SamplesCopro;
+            }
+            set
+            {
+                if (_SamplesCopro != value)
+                {
+                    OnSamplesCoproChanging(value);
+                    ReportPropertyChanging("SamplesCopro");
+                    _SamplesCopro = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("SamplesCopro");
+                    OnSamplesCoproChanged();
+                }
+            }
+        }
+        private global::System.String _SamplesCopro;
+        partial void OnSamplesCoproChanging(global::System.String value);
+        partial void OnSamplesCoproChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2125,54 +2922,27 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 TonPerDay
+        public global::System.DateTime RoadSectionTimeStamp
         {
             get
             {
-                return _TonPerDay;
+                return _RoadSectionTimeStamp;
             }
             set
             {
-                if (_TonPerDay != value)
+                if (_RoadSectionTimeStamp != value)
                 {
-                    OnTonPerDayChanging(value);
-                    ReportPropertyChanging("TonPerDay");
-                    _TonPerDay = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("TonPerDay");
-                    OnTonPerDayChanged();
+                    OnRoadSectionTimeStampChanging(value);
+                    ReportPropertyChanging("RoadSectionTimeStamp");
+                    _RoadSectionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadSectionTimeStamp");
+                    OnRoadSectionTimeStampChanged();
                 }
             }
         }
-        private global::System.Int32 _TonPerDay;
-        partial void OnTonPerDayChanging(global::System.Int32 value);
-        partial void OnTonPerDayChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String TechnicalDataSheet
-        {
-            get
-            {
-                return _TechnicalDataSheet;
-            }
-            set
-            {
-                if (_TechnicalDataSheet != value)
-                {
-                    OnTechnicalDataSheetChanging(value);
-                    ReportPropertyChanging("TechnicalDataSheet");
-                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TechnicalDataSheet");
-                    OnTechnicalDataSheetChanged();
-                }
-            }
-        }
-        private global::System.String _TechnicalDataSheet;
-        partial void OnTechnicalDataSheetChanging(global::System.String value);
-        partial void OnTechnicalDataSheetChanged();
+        private global::System.DateTime _RoadSectionTimeStamp;
+        partial void OnRoadSectionTimeStampChanging(global::System.DateTime value);
+        partial void OnRoadSectionTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2200,6 +2970,33 @@ namespace RoadIt.Models
         private global::System.String _MixtureName;
         partial void OnMixtureNameChanging(global::System.String value);
         partial void OnMixtureNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TechnicalDataSheet
+        {
+            get
+            {
+                return _TechnicalDataSheet;
+            }
+            set
+            {
+                if (_TechnicalDataSheet != value)
+                {
+                    OnTechnicalDataSheetChanging(value);
+                    ReportPropertyChanging("TechnicalDataSheet");
+                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TechnicalDataSheet");
+                    OnTechnicalDataSheetChanged();
+                }
+            }
+        }
+        private global::System.String _TechnicalDataSheet;
+        partial void OnTechnicalDataSheetChanging(global::System.String value);
+        partial void OnTechnicalDataSheetChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2254,6 +3051,33 @@ namespace RoadIt.Models
         private global::System.String _MixtureChange;
         partial void OnMixtureChangeChanging(global::System.String value);
         partial void OnMixtureChangeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltMixPlantTimestamp
+        {
+            get
+            {
+                return _AsphaltMixPlantTimestamp;
+            }
+            set
+            {
+                if (_AsphaltMixPlantTimestamp != value)
+                {
+                    OnAsphaltMixPlantTimestampChanging(value);
+                    ReportPropertyChanging("AsphaltMixPlantTimestamp");
+                    _AsphaltMixPlantTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltMixPlantTimestamp");
+                    OnAsphaltMixPlantTimestampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AsphaltMixPlantTimestamp;
+        partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
+        partial void OnAsphaltMixPlantTimestampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2341,27 +3165,27 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 BitumenMaxTemp
+        public global::System.DateTime BitumenTimeStamp
         {
             get
             {
-                return _BitumenMaxTemp;
+                return _BitumenTimeStamp;
             }
             set
             {
-                if (_BitumenMaxTemp != value)
+                if (_BitumenTimeStamp != value)
                 {
-                    OnBitumenMaxTempChanging(value);
-                    ReportPropertyChanging("BitumenMaxTemp");
-                    _BitumenMaxTemp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("BitumenMaxTemp");
-                    OnBitumenMaxTempChanged();
+                    OnBitumenTimeStampChanging(value);
+                    ReportPropertyChanging("BitumenTimeStamp");
+                    _BitumenTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BitumenTimeStamp");
+                    OnBitumenTimeStampChanged();
                 }
             }
         }
-        private global::System.Int32 _BitumenMaxTemp;
-        partial void OnBitumenMaxTempChanging(global::System.Int32 value);
-        partial void OnBitumenMaxTempChanged();
+        private global::System.DateTime _BitumenTimeStamp;
+        partial void OnBitumenTimeStampChanging(global::System.DateTime value);
+        partial void OnBitumenTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2395,27 +3219,27 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime BitumenTimeStamp
+        public global::System.Int32 BitumenMaxTemp
         {
             get
             {
-                return _BitumenTimeStamp;
+                return _BitumenMaxTemp;
             }
             set
             {
-                if (_BitumenTimeStamp != value)
+                if (_BitumenMaxTemp != value)
                 {
-                    OnBitumenTimeStampChanging(value);
-                    ReportPropertyChanging("BitumenTimeStamp");
-                    _BitumenTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("BitumenTimeStamp");
-                    OnBitumenTimeStampChanged();
+                    OnBitumenMaxTempChanging(value);
+                    ReportPropertyChanging("BitumenMaxTemp");
+                    _BitumenMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BitumenMaxTemp");
+                    OnBitumenMaxTempChanged();
                 }
             }
         }
-        private global::System.DateTime _BitumenTimeStamp;
-        partial void OnBitumenTimeStampChanging(global::System.DateTime value);
-        partial void OnBitumenTimeStampChanged();
+        private global::System.Int32 _BitumenMaxTemp;
+        partial void OnBitumenMaxTempChanging(global::System.Int32 value);
+        partial void OnBitumenMaxTempChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2470,60 +3294,6 @@ namespace RoadIt.Models
         private global::System.DateTime _FillerRecupTimeStamp;
         partial void OnFillerRecupTimeStampChanging(global::System.DateTime value);
         partial void OnFillerRecupTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 MixingTemp
-        {
-            get
-            {
-                return _MixingTemp;
-            }
-            set
-            {
-                if (_MixingTemp != value)
-                {
-                    OnMixingTempChanging(value);
-                    ReportPropertyChanging("MixingTemp");
-                    _MixingTemp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MixingTemp");
-                    OnMixingTempChanged();
-                }
-            }
-        }
-        private global::System.Int32 _MixingTemp;
-        partial void OnMixingTempChanging(global::System.Int32 value);
-        partial void OnMixingTempChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan MixingTime
-        {
-            get
-            {
-                return _MixingTime;
-            }
-            set
-            {
-                if (_MixingTime != value)
-                {
-                    OnMixingTimeChanging(value);
-                    ReportPropertyChanging("MixingTime");
-                    _MixingTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MixingTime");
-                    OnMixingTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _MixingTime;
-        partial void OnMixingTimeChanging(global::System.TimeSpan value);
-        partial void OnMixingTimeChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2773,6 +3543,87 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.DateTime CompositionTimeStamp
+        {
+            get
+            {
+                return _CompositionTimeStamp;
+            }
+            set
+            {
+                if (_CompositionTimeStamp != value)
+                {
+                    OnCompositionTimeStampChanging(value);
+                    ReportPropertyChanging("CompositionTimeStamp");
+                    _CompositionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompositionTimeStamp");
+                    OnCompositionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _CompositionTimeStamp;
+        partial void OnCompositionTimeStampChanging(global::System.DateTime value);
+        partial void OnCompositionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 MixingTemp
+        {
+            get
+            {
+                return _MixingTemp;
+            }
+            set
+            {
+                if (_MixingTemp != value)
+                {
+                    OnMixingTempChanging(value);
+                    ReportPropertyChanging("MixingTemp");
+                    _MixingTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MixingTemp");
+                    OnMixingTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _MixingTemp;
+        partial void OnMixingTempChanging(global::System.Int32 value);
+        partial void OnMixingTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan MixingTime
+        {
+            get
+            {
+                return _MixingTime;
+            }
+            set
+            {
+                if (_MixingTime != value)
+                {
+                    OnMixingTimeChanging(value);
+                    ReportPropertyChanging("MixingTime");
+                    _MixingTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MixingTime");
+                    OnMixingTimeChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _MixingTime;
+        partial void OnMixingTimeChanging(global::System.TimeSpan value);
+        partial void OnMixingTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.Int32 TempSilo
         {
             get
@@ -2827,675 +3678,108 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String TruckLicensPlate
+        public global::System.DateTime SiloTimpStamp
         {
             get
             {
-                return _TruckLicensPlate;
+                return _SiloTimpStamp;
             }
             set
             {
-                if (_TruckLicensPlate != value)
+                if (_SiloTimpStamp != value)
                 {
-                    OnTruckLicensPlateChanging(value);
-                    ReportPropertyChanging("TruckLicensPlate");
-                    _TruckLicensPlate = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TruckLicensPlate");
-                    OnTruckLicensPlateChanged();
+                    OnSiloTimpStampChanging(value);
+                    ReportPropertyChanging("SiloTimpStamp");
+                    _SiloTimpStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SiloTimpStamp");
+                    OnSiloTimpStampChanged();
                 }
             }
         }
-        private global::System.String _TruckLicensPlate;
-        partial void OnTruckLicensPlateChanging(global::System.String value);
-        partial void OnTruckLicensPlateChanged();
+        private global::System.DateTime _SiloTimpStamp;
+        partial void OnSiloTimpStampChanging(global::System.DateTime value);
+        partial void OnSiloTimpStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime DepartureTime
+        public global::System.DateTime PlanningTimeStamp
         {
             get
             {
-                return _DepartureTime;
+                return _PlanningTimeStamp;
             }
             set
             {
-                if (_DepartureTime != value)
+                if (_PlanningTimeStamp != value)
                 {
-                    OnDepartureTimeChanging(value);
-                    ReportPropertyChanging("DepartureTime");
-                    _DepartureTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("DepartureTime");
-                    OnDepartureTimeChanged();
+                    OnPlanningTimeStampChanging(value);
+                    ReportPropertyChanging("PlanningTimeStamp");
+                    _PlanningTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("PlanningTimeStamp");
+                    OnPlanningTimeStampChanged();
                 }
             }
         }
-        private global::System.DateTime _DepartureTime;
-        partial void OnDepartureTimeChanging(global::System.DateTime value);
-        partial void OnDepartureTimeChanged();
+        private global::System.DateTime _PlanningTimeStamp;
+        partial void OnPlanningTimeStampChanging(global::System.DateTime value);
+        partial void OnPlanningTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 MassTruck
+        public global::System.DateTime CompactorTimeStamp
         {
             get
             {
-                return _MassTruck;
+                return _CompactorTimeStamp;
             }
             set
             {
-                if (_MassTruck != value)
+                if (_CompactorTimeStamp != value)
                 {
-                    OnMassTruckChanging(value);
-                    ReportPropertyChanging("MassTruck");
-                    _MassTruck = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MassTruck");
-                    OnMassTruckChanged();
+                    OnCompactorTimeStampChanging(value);
+                    ReportPropertyChanging("CompactorTimeStamp");
+                    _CompactorTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompactorTimeStamp");
+                    OnCompactorTimeStampChanged();
                 }
             }
         }
-        private global::System.Int32 _MassTruck;
-        partial void OnMassTruckChanging(global::System.Int32 value);
-        partial void OnMassTruckChanged();
+        private global::System.DateTime _CompactorTimeStamp;
+        partial void OnCompactorTimeStampChanging(global::System.DateTime value);
+        partial void OnCompactorTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ActualPosition
+        public global::System.DateTime QualtityTimeStamp
         {
             get
             {
-                return _ActualPosition;
+                return _QualtityTimeStamp;
             }
             set
             {
-                if (_ActualPosition != value)
+                if (_QualtityTimeStamp != value)
                 {
-                    OnActualPositionChanging(value);
-                    ReportPropertyChanging("ActualPosition");
-                    _ActualPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ActualPosition");
-                    OnActualPositionChanged();
+                    OnQualtityTimeStampChanging(value);
+                    ReportPropertyChanging("QualtityTimeStamp");
+                    _QualtityTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("QualtityTimeStamp");
+                    OnQualtityTimeStampChanged();
                 }
             }
         }
-        private global::System.String _ActualPosition;
-        partial void OnActualPositionChanging(global::System.String value);
-        partial void OnActualPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ActualPositionTimeStamp
-        {
-            get
-            {
-                return _ActualPositionTimeStamp;
-            }
-            set
-            {
-                if (_ActualPositionTimeStamp != value)
-                {
-                    OnActualPositionTimeStampChanging(value);
-                    ReportPropertyChanging("ActualPositionTimeStamp");
-                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ActualPositionTimeStamp");
-                    OnActualPositionTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ActualPositionTimeStamp;
-        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
-        partial void OnActualPositionTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ETA
-        {
-            get
-            {
-                return _ETA;
-            }
-            set
-            {
-                if (_ETA != value)
-                {
-                    OnETAChanging(value);
-                    ReportPropertyChanging("ETA");
-                    _ETA = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ETA");
-                    OnETAChanged();
-                }
-            }
-        }
-        private global::System.String _ETA;
-        partial void OnETAChanging(global::System.String value);
-        partial void OnETAChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ETATimeStamp
-        {
-            get
-            {
-                return _ETATimeStamp;
-            }
-            set
-            {
-                if (_ETATimeStamp != value)
-                {
-                    OnETATimeStampChanging(value);
-                    ReportPropertyChanging("ETATimeStamp");
-                    _ETATimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ETATimeStamp");
-                    OnETATimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ETATimeStamp;
-        partial void OnETATimeStampChanging(global::System.DateTime value);
-        partial void OnETATimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime RealArrivalTime
-        {
-            get
-            {
-                return _RealArrivalTime;
-            }
-            set
-            {
-                if (_RealArrivalTime != value)
-                {
-                    OnRealArrivalTimeChanging(value);
-                    ReportPropertyChanging("RealArrivalTime");
-                    _RealArrivalTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RealArrivalTime");
-                    OnRealArrivalTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _RealArrivalTime;
-        partial void OnRealArrivalTimeChanging(global::System.DateTime value);
-        partial void OnRealArrivalTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime DeattachmentFinisherTime
-        {
-            get
-            {
-                return _DeattachmentFinisherTime;
-            }
-            set
-            {
-                if (_DeattachmentFinisherTime != value)
-                {
-                    OnDeattachmentFinisherTimeChanging(value);
-                    ReportPropertyChanging("DeattachmentFinisherTime");
-                    _DeattachmentFinisherTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("DeattachmentFinisherTime");
-                    OnDeattachmentFinisherTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _DeattachmentFinisherTime;
-        partial void OnDeattachmentFinisherTimeChanging(global::System.DateTime value);
-        partial void OnDeattachmentFinisherTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String DeattachmentFinisherPosition
-        {
-            get
-            {
-                return _DeattachmentFinisherPosition;
-            }
-            set
-            {
-                if (_DeattachmentFinisherPosition != value)
-                {
-                    OnDeattachmentFinisherPositionChanging(value);
-                    ReportPropertyChanging("DeattachmentFinisherPosition");
-                    _DeattachmentFinisherPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("DeattachmentFinisherPosition");
-                    OnDeattachmentFinisherPositionChanged();
-                }
-            }
-        }
-        private global::System.String _DeattachmentFinisherPosition;
-        partial void OnDeattachmentFinisherPositionChanging(global::System.String value);
-        partial void OnDeattachmentFinisherPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime AttachmentToFinisherTime
-        {
-            get
-            {
-                return _AttachmentToFinisherTime;
-            }
-            set
-            {
-                if (_AttachmentToFinisherTime != value)
-                {
-                    OnAttachmentToFinisherTimeChanging(value);
-                    ReportPropertyChanging("AttachmentToFinisherTime");
-                    _AttachmentToFinisherTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AttachmentToFinisherTime");
-                    OnAttachmentToFinisherTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _AttachmentToFinisherTime;
-        partial void OnAttachmentToFinisherTimeChanging(global::System.DateTime value);
-        partial void OnAttachmentToFinisherTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String AttachmentToFinisherPosition
-        {
-            get
-            {
-                return _AttachmentToFinisherPosition;
-            }
-            set
-            {
-                if (_AttachmentToFinisherPosition != value)
-                {
-                    OnAttachmentToFinisherPositionChanging(value);
-                    ReportPropertyChanging("AttachmentToFinisherPosition");
-                    _AttachmentToFinisherPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("AttachmentToFinisherPosition");
-                    OnAttachmentToFinisherPositionChanged();
-                }
-            }
-        }
-        private global::System.String _AttachmentToFinisherPosition;
-        partial void OnAttachmentToFinisherPositionChanging(global::System.String value);
-        partial void OnAttachmentToFinisherPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Temp
-        {
-            get
-            {
-                return _Temp;
-            }
-            set
-            {
-                if (_Temp != value)
-                {
-                    OnTempChanging(value);
-                    ReportPropertyChanging("Temp");
-                    _Temp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Temp");
-                    OnTempChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Temp;
-        partial void OnTempChanging(global::System.Int32 value);
-        partial void OnTempChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime TempTruckTimeStamp
-        {
-            get
-            {
-                return _TempTruckTimeStamp;
-            }
-            set
-            {
-                if (_TempTruckTimeStamp != value)
-                {
-                    OnTempTruckTimeStampChanging(value);
-                    ReportPropertyChanging("TempTruckTimeStamp");
-                    _TempTruckTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("TempTruckTimeStamp");
-                    OnTempTruckTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _TempTruckTimeStamp;
-        partial void OnTempTruckTimeStampChanging(global::System.DateTime value);
-        partial void OnTempTruckTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ActualPositionReturn
-        {
-            get
-            {
-                return _ActualPositionReturn;
-            }
-            set
-            {
-                if (_ActualPositionReturn != value)
-                {
-                    OnActualPositionReturnChanging(value);
-                    ReportPropertyChanging("ActualPositionReturn");
-                    _ActualPositionReturn = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ActualPositionReturn");
-                    OnActualPositionReturnChanged();
-                }
-            }
-        }
-        private global::System.String _ActualPositionReturn;
-        partial void OnActualPositionReturnChanging(global::System.String value);
-        partial void OnActualPositionReturnChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ActualPositionReturnTimeStamp
-        {
-            get
-            {
-                return _ActualPositionReturnTimeStamp;
-            }
-            set
-            {
-                if (_ActualPositionReturnTimeStamp != value)
-                {
-                    OnActualPositionReturnTimeStampChanging(value);
-                    ReportPropertyChanging("ActualPositionReturnTimeStamp");
-                    _ActualPositionReturnTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ActualPositionReturnTimeStamp");
-                    OnActualPositionReturnTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ActualPositionReturnTimeStamp;
-        partial void OnActualPositionReturnTimeStampChanging(global::System.DateTime value);
-        partial void OnActualPositionReturnTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ETAReturn
-        {
-            get
-            {
-                return _ETAReturn;
-            }
-            set
-            {
-                if (_ETAReturn != value)
-                {
-                    OnETAReturnChanging(value);
-                    ReportPropertyChanging("ETAReturn");
-                    _ETAReturn = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ETAReturn");
-                    OnETAReturnChanged();
-                }
-            }
-        }
-        private global::System.String _ETAReturn;
-        partial void OnETAReturnChanging(global::System.String value);
-        partial void OnETAReturnChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ETAReturnTimeStamp
-        {
-            get
-            {
-                return _ETAReturnTimeStamp;
-            }
-            set
-            {
-                if (_ETAReturnTimeStamp != value)
-                {
-                    OnETAReturnTimeStampChanging(value);
-                    ReportPropertyChanging("ETAReturnTimeStamp");
-                    _ETAReturnTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ETAReturnTimeStamp");
-                    OnETAReturnTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ETAReturnTimeStamp;
-        partial void OnETAReturnTimeStampChanging(global::System.DateTime value);
-        partial void OnETAReturnTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ArrivalAtPlant
-        {
-            get
-            {
-                return _ArrivalAtPlant;
-            }
-            set
-            {
-                if (_ArrivalAtPlant != value)
-                {
-                    OnArrivalAtPlantChanging(value);
-                    ReportPropertyChanging("ArrivalAtPlant");
-                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ArrivalAtPlant");
-                    OnArrivalAtPlantChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ArrivalAtPlant;
-        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
-        partial void OnArrivalAtPlantChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String UnforseenStopLocation
-        {
-            get
-            {
-                return _UnforseenStopLocation;
-            }
-            set
-            {
-                if (_UnforseenStopLocation != value)
-                {
-                    OnUnforseenStopLocationChanging(value);
-                    ReportPropertyChanging("UnforseenStopLocation");
-                    _UnforseenStopLocation = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("UnforseenStopLocation");
-                    OnUnforseenStopLocationChanged();
-                }
-            }
-        }
-        private global::System.String _UnforseenStopLocation;
-        partial void OnUnforseenStopLocationChanging(global::System.String value);
-        partial void OnUnforseenStopLocationChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan UnforseenStopTime
-        {
-            get
-            {
-                return _UnforseenStopTime;
-            }
-            set
-            {
-                if (_UnforseenStopTime != value)
-                {
-                    OnUnforseenStopTimeChanging(value);
-                    ReportPropertyChanging("UnforseenStopTime");
-                    _UnforseenStopTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTime");
-                    OnUnforseenStopTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _UnforseenStopTime;
-        partial void OnUnforseenStopTimeChanging(global::System.TimeSpan value);
-        partial void OnUnforseenStopTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime UnforseenStopTimeStamp
-        {
-            get
-            {
-                return _UnforseenStopTimeStamp;
-            }
-            set
-            {
-                if (_UnforseenStopTimeStamp != value)
-                {
-                    OnUnforseenStopTimeStampChanging(value);
-                    ReportPropertyChanging("UnforseenStopTimeStamp");
-                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTimeStamp");
-                    OnUnforseenStopTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _UnforseenStopTimeStamp;
-        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
-        partial void OnUnforseenStopTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String QrCodeCompactor
-        {
-            get
-            {
-                return _QrCodeCompactor;
-            }
-            set
-            {
-                if (_QrCodeCompactor != value)
-                {
-                    OnQrCodeCompactorChanging(value);
-                    ReportPropertyChanging("QrCodeCompactor");
-                    _QrCodeCompactor = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("QrCodeCompactor");
-                    OnQrCodeCompactorChanged();
-                }
-            }
-        }
-        private global::System.String _QrCodeCompactor;
-        partial void OnQrCodeCompactorChanging(global::System.String value);
-        partial void OnQrCodeCompactorChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String SamplesCopro
-        {
-            get
-            {
-                return _SamplesCopro;
-            }
-            set
-            {
-                if (_SamplesCopro != value)
-                {
-                    OnSamplesCoproChanging(value);
-                    ReportPropertyChanging("SamplesCopro");
-                    _SamplesCopro = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("SamplesCopro");
-                    OnSamplesCoproChanged();
-                }
-            }
-        }
-        private global::System.String _SamplesCopro;
-        partial void OnSamplesCoproChanging(global::System.String value);
-        partial void OnSamplesCoproChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ComplianceMixture
-        {
-            get
-            {
-                return _ComplianceMixture;
-            }
-            set
-            {
-                if (_ComplianceMixture != value)
-                {
-                    OnComplianceMixtureChanging(value);
-                    ReportPropertyChanging("ComplianceMixture");
-                    _ComplianceMixture = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ComplianceMixture");
-                    OnComplianceMixtureChanged();
-                }
-            }
-        }
-        private global::System.String _ComplianceMixture;
-        partial void OnComplianceMixtureChanging(global::System.String value);
-        partial void OnComplianceMixtureChanged();
+        private global::System.DateTime _QualtityTimeStamp;
+        partial void OnQualtityTimeStampChanging(global::System.DateTime value);
+        partial void OnQualtityTimeStampChanged();
 
         #endregion
 
@@ -3505,7 +3789,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="AsphaltTemp")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="AsphaltTemp")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class AsphaltTemp : EntityObject
@@ -3643,18 +3927,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_8", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_8", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_8", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_8", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_8", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_8", "Finisher", value);
                 }
             }
         }
@@ -3666,7 +3950,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="BatchList")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="BatchList")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class BatchList : EntityObject
@@ -3818,6 +4102,30 @@ namespace RoadIt.Models
         private global::System.Int32 _FinisherId;
         partial void OnFinisherIdChanging(global::System.Int32 value);
         partial void OnFinisherIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> BatchListTimeStamp
+        {
+            get
+            {
+                return _BatchListTimeStamp;
+            }
+            set
+            {
+                OnBatchListTimeStampChanging(value);
+                ReportPropertyChanging("BatchListTimeStamp");
+                _BatchListTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BatchListTimeStamp");
+                OnBatchListTimeStampChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _BatchListTimeStamp;
+        partial void OnBatchListTimeStampChanging(Nullable<global::System.DateTime> value);
+        partial void OnBatchListTimeStampChanged();
 
         #endregion
 
@@ -3830,16 +4138,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_1", "Project")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_1", "Project")]
         public Project Project
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.BatchList_ibfk_1", "Project").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.BatchList_ibfk_1", "Project").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.BatchList_ibfk_1", "Project").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.BatchList_ibfk_1", "Project").Value = value;
             }
         }
         /// <summary>
@@ -3851,13 +4159,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.BatchList_ibfk_1", "Project");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.BatchList_ibfk_1", "Project");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("RoadItEntitiesModel.BatchList_ibfk_1", "Project", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("roaditModel.BatchList_ibfk_1", "Project", value);
                 }
             }
         }
@@ -3868,16 +4176,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_2", "Silo")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_2", "Silo")]
         public Silo Silo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Silo>("RoadItEntitiesModel.BatchList_ibfk_2", "Silo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Silo>("roaditModel.BatchList_ibfk_2", "Silo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Silo>("RoadItEntitiesModel.BatchList_ibfk_2", "Silo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Silo>("roaditModel.BatchList_ibfk_2", "Silo").Value = value;
             }
         }
         /// <summary>
@@ -3889,13 +4197,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Silo>("RoadItEntitiesModel.BatchList_ibfk_2", "Silo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Silo>("roaditModel.BatchList_ibfk_2", "Silo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Silo>("RoadItEntitiesModel.BatchList_ibfk_2", "Silo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Silo>("roaditModel.BatchList_ibfk_2", "Silo", value);
                 }
             }
         }
@@ -3906,76 +4214,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Compactor_ibfk_2", "Compactor")]
-        public EntityCollection<Compactor> Compactors
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Compactor>("RoadItEntitiesModel.Compactor_ibfk_2", "Compactor");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Compactor>("RoadItEntitiesModel.Compactor_ibfk_2", "Compactor", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_4", "Finisher")]
-        public Finisher Finisher
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Finisher>("RoadItEntitiesModel.BatchList_ibfk_4", "Finisher").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Finisher>("RoadItEntitiesModel.BatchList_ibfk_4", "Finisher").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Finisher> FinisherReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Finisher>("RoadItEntitiesModel.BatchList_ibfk_4", "Finisher");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Finisher>("RoadItEntitiesModel.BatchList_ibfk_4", "Finisher", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_3", "Truck")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_3", "Truck")]
         public Truck Truck
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Truck>("RoadItEntitiesModel.BatchList_ibfk_3", "Truck").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Truck>("roaditModel.BatchList_ibfk_3", "Truck").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Truck>("RoadItEntitiesModel.BatchList_ibfk_3", "Truck").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Truck>("roaditModel.BatchList_ibfk_3", "Truck").Value = value;
             }
         }
         /// <summary>
@@ -3987,13 +4235,73 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Truck>("RoadItEntitiesModel.BatchList_ibfk_3", "Truck");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Truck>("roaditModel.BatchList_ibfk_3", "Truck");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Truck>("RoadItEntitiesModel.BatchList_ibfk_3", "Truck", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Truck>("roaditModel.BatchList_ibfk_3", "Truck", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_4", "Finisher")]
+        public Finisher Finisher
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Finisher>("roaditModel.BatchList_ibfk_4", "Finisher").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Finisher>("roaditModel.BatchList_ibfk_4", "Finisher").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Finisher> FinisherReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Finisher>("roaditModel.BatchList_ibfk_4", "Finisher");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Finisher>("roaditModel.BatchList_ibfk_4", "Finisher", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Compactor_ibfk_2", "Compactor")]
+        public EntityCollection<Compactor> Compactors
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Compactor>("roaditModel.Compactor_ibfk_2", "Compactor");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Compactor>("roaditModel.Compactor_ibfk_2", "Compactor", value);
                 }
             }
         }
@@ -4005,7 +4313,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Bituman")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Bituman")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Bituman : EntityObject
@@ -4143,18 +4451,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_3", "Silo")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_3", "Silo")]
         public EntityCollection<Silo> Silos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_3", "Silo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("roaditModel.Silo_ibfk_3", "Silo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_3", "Silo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("roaditModel.Silo_ibfk_3", "Silo", value);
                 }
             }
         }
@@ -4166,7 +4474,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Client")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Client")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Client : EntityObject
@@ -4176,42 +4484,46 @@ namespace RoadIt.Models
         /// <summary>
         /// Create a new Client object.
         /// </summary>
-        /// <param name="roadId">Initial value of the RoadId property.</param>
-        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
-        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
         /// <param name="mixtureName">Initial value of the MixtureName property.</param>
+        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
         /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
         /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
         /// <param name="departureTime">Initial value of the DepartureTime property.</param>
         /// <param name="massTruck">Initial value of the MassTruck property.</param>
+        /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
         /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
         /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
         /// <param name="eTA">Initial value of the ETA property.</param>
         /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
-        /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
-        /// <param name="finisherSpeed">Initial value of the FinisherSpeed property.</param>
-        /// <param name="speedFinisherTimeStamp">Initial value of the SpeedFinisherTimeStamp property.</param>
-        /// <param name="angleLeft">Initial value of the AngleLeft property.</param>
-        /// <param name="angleRight">Initial value of the AngleRight property.</param>
-        /// <param name="width">Initial value of the Width property.</param>
-        /// <param name="thicknessLeft">Initial value of the ThicknessLeft property.</param>
-        /// <param name="thicknessMiddel">Initial value of the ThicknessMiddel property.</param>
-        /// <param name="thicknessRight">Initial value of the ThicknessRight property.</param>
-        /// <param name="tranverseSlope">Initial value of the TranverseSlope property.</param>
-        /// <param name="stopLocation">Initial value of the StopLocation property.</param>
-        /// <param name="stopTime">Initial value of the StopTime property.</param>
-        /// <param name="stopTimeStamp">Initial value of the StopTimeStamp property.</param>
         /// <param name="precipation">Initial value of the Precipation property.</param>
+        /// <param name="asphaltTempAfterFinisherIrScanOrThermo">Initial value of the AsphaltTempAfterFinisherIrScanOrThermo property.</param>
+        /// <param name="finisherTimeStamp">Initial value of the FinisherTimeStamp property.</param>
+        /// <param name="leftTickness">Initial value of the LeftTickness property.</param>
+        /// <param name="middelThickness">Initial value of the MiddelThickness property.</param>
+        /// <param name="rightThickness">Initial value of the RightThickness property.</param>
+        /// <param name="thicknessTimeStamp">Initial value of the ThicknessTimeStamp property.</param>
         /// <param name="tempWeather">Initial value of the TempWeather property.</param>
         /// <param name="weatherTempTimeStamp">Initial value of the WeatherTempTimeStamp property.</param>
+        /// <param name="width">Initial value of the Width property.</param>
+        /// <param name="widthTimeStamp">Initial value of the WidthTimeStamp property.</param>
         /// <param name="windSpeed">Initial value of the WindSpeed property.</param>
         /// <param name="windTimeStamp">Initial value of the WindTimeStamp property.</param>
         /// <param name="airHumidity">Initial value of the AirHumidity property.</param>
         /// <param name="airHumidityTimeStamp">Initial value of the AirHumidityTimeStamp property.</param>
-        /// <param name="asphaltTempAfterFinisherIrScanOrThermo">Initial value of the AsphaltTempAfterFinisherIrScanOrThermo property.</param>
-        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
-        /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
+        /// <param name="leftAngle">Initial value of the LeftAngle property.</param>
+        /// <param name="rightAngle">Initial value of the RightAngle property.</param>
+        /// <param name="angleTimestamp">Initial value of the AngleTimestamp property.</param>
+        /// <param name="speed">Initial value of the Speed property.</param>
+        /// <param name="speedFinisherTimeStamp">Initial value of the SpeedFinisherTimeStamp property.</param>
+        /// <param name="stopLocationLTS">Initial value of the StopLocationLTS property.</param>
+        /// <param name="stopTimeLTS">Initial value of the StopTimeLTS property.</param>
+        /// <param name="stopTimeStamp">Initial value of the StopTimeStamp property.</param>
+        /// <param name="gPS">Initial value of the GPS property.</param>
+        /// <param name="tempAsphalt">Initial value of the TempAsphalt property.</param>
+        /// <param name="asphaltTempTimeStamp">Initial value of the AsphaltTempTimeStamp property.</param>
         /// <param name="gPSCompactor">Initial value of the GPSCompactor property.</param>
+        /// <param name="colorCodeTimeStamp">Initial value of the ColorCodeTimeStamp property.</param>
+        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
         /// <param name="complianceMixture">Initial value of the ComplianceMixture property.</param>
         /// <param name="samplesCopro">Initial value of the SamplesCopro property.</param>
         /// <param name="densityOfField">Initial value of the DensityOfField property.</param>
@@ -4220,45 +4532,58 @@ namespace RoadIt.Models
         /// <param name="skidresistance">Initial value of the Skidresistance property.</param>
         /// <param name="iri">Initial value of the Iri property.</param>
         /// <param name="extraTestsAskedBijClient">Initial value of the ExtraTestsAskedBijClient property.</param>
-        public static Client CreateClient(global::System.Int32 roadId, global::System.String roadDescription, global::System.String technicalDataSheet, global::System.String mixtureName, global::System.String mixtureChange, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String eTA, global::System.DateTime eTATimeStamp, global::System.DateTime realArrivalTime, global::System.Int32 finisherSpeed, global::System.DateTime speedFinisherTimeStamp, global::System.Int32 angleLeft, global::System.Int32 angleRight, global::System.Int32 width, global::System.Int32 thicknessLeft, global::System.Int32 thicknessMiddel, global::System.Int32 thicknessRight, global::System.Int32 tranverseSlope, global::System.String stopLocation, global::System.TimeSpan stopTime, global::System.DateTime stopTimeStamp, global::System.String precipation, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.String qrCodeCompactor, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient)
+        /// <param name="qualtityTimeStamp">Initial value of the QualtityTimeStamp property.</param>
+        /// <param name="roadId">Initial value of the RoadId property.</param>
+        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
+        /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
+        /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
+        /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
+        /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
+        /// <param name="tranverseSlope">Initial value of the TranverseSlope property.</param>
+        /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
+        public static Client CreateClient(global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String mixtureChange, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.DateTime truckTimeStamp, global::System.DateTime compactorTimeStamp, global::System.Int32 tranverseSlope, global::System.String gPSFinisher)
         {
             Client client = new Client();
-            client.RoadId = roadId;
-            client.RoadDescription = roadDescription;
-            client.TechnicalDataSheet = technicalDataSheet;
             client.MixtureName = mixtureName;
+            client.TechnicalDataSheet = technicalDataSheet;
             client.MixtureChange = mixtureChange;
             client.TruckLicensPlate = truckLicensPlate;
             client.DepartureTime = departureTime;
             client.MassTruck = massTruck;
+            client.RealArrivalTime = realArrivalTime;
             client.ActualPosition = actualPosition;
             client.ActualPositionTimeStamp = actualPositionTimeStamp;
             client.ETA = eTA;
             client.ETATimeStamp = eTATimeStamp;
-            client.RealArrivalTime = realArrivalTime;
-            client.FinisherSpeed = finisherSpeed;
-            client.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
-            client.AngleLeft = angleLeft;
-            client.AngleRight = angleRight;
-            client.Width = width;
-            client.ThicknessLeft = thicknessLeft;
-            client.ThicknessMiddel = thicknessMiddel;
-            client.ThicknessRight = thicknessRight;
-            client.TranverseSlope = tranverseSlope;
-            client.StopLocation = stopLocation;
-            client.StopTime = stopTime;
-            client.StopTimeStamp = stopTimeStamp;
             client.Precipation = precipation;
+            client.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
+            client.FinisherTimeStamp = finisherTimeStamp;
+            client.LeftTickness = leftTickness;
+            client.MiddelThickness = middelThickness;
+            client.RightThickness = rightThickness;
+            client.ThicknessTimeStamp = thicknessTimeStamp;
             client.TempWeather = tempWeather;
             client.WeatherTempTimeStamp = weatherTempTimeStamp;
+            client.Width = width;
+            client.WidthTimeStamp = widthTimeStamp;
             client.WindSpeed = windSpeed;
             client.WindTimeStamp = windTimeStamp;
             client.AirHumidity = airHumidity;
             client.AirHumidityTimeStamp = airHumidityTimeStamp;
-            client.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
-            client.QrCodeCompactor = qrCodeCompactor;
-            client.GPSFinisher = gPSFinisher;
+            client.LeftAngle = leftAngle;
+            client.RightAngle = rightAngle;
+            client.AngleTimestamp = angleTimestamp;
+            client.Speed = speed;
+            client.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
+            client.StopLocationLTS = stopLocationLTS;
+            client.StopTimeLTS = stopTimeLTS;
+            client.StopTimeStamp = stopTimeStamp;
+            client.GPS = gPS;
+            client.TempAsphalt = tempAsphalt;
+            client.AsphaltTempTimeStamp = asphaltTempTimeStamp;
             client.GPSCompactor = gPSCompactor;
+            client.ColorCodeTimeStamp = colorCodeTimeStamp;
+            client.QrCodeCompactor = qrCodeCompactor;
             client.ComplianceMixture = complianceMixture;
             client.SamplesCopro = samplesCopro;
             client.DensityOfField = densityOfField;
@@ -4267,93 +4592,21 @@ namespace RoadIt.Models
             client.Skidresistance = skidresistance;
             client.Iri = iri;
             client.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
+            client.QualtityTimeStamp = qualtityTimeStamp;
+            client.RoadId = roadId;
+            client.RoadDescription = roadDescription;
+            client.RoadSectionTimeStamp = roadSectionTimeStamp;
+            client.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
+            client.TruckTimeStamp = truckTimeStamp;
+            client.CompactorTimeStamp = compactorTimeStamp;
+            client.TranverseSlope = tranverseSlope;
+            client.GPSFinisher = gPSFinisher;
             return client;
         }
 
         #endregion
 
         #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 RoadId
-        {
-            get
-            {
-                return _RoadId;
-            }
-            set
-            {
-                if (_RoadId != value)
-                {
-                    OnRoadIdChanging(value);
-                    ReportPropertyChanging("RoadId");
-                    _RoadId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RoadId");
-                    OnRoadIdChanged();
-                }
-            }
-        }
-        private global::System.Int32 _RoadId;
-        partial void OnRoadIdChanging(global::System.Int32 value);
-        partial void OnRoadIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String RoadDescription
-        {
-            get
-            {
-                return _RoadDescription;
-            }
-            set
-            {
-                if (_RoadDescription != value)
-                {
-                    OnRoadDescriptionChanging(value);
-                    ReportPropertyChanging("RoadDescription");
-                    _RoadDescription = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("RoadDescription");
-                    OnRoadDescriptionChanged();
-                }
-            }
-        }
-        private global::System.String _RoadDescription;
-        partial void OnRoadDescriptionChanging(global::System.String value);
-        partial void OnRoadDescriptionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String TechnicalDataSheet
-        {
-            get
-            {
-                return _TechnicalDataSheet;
-            }
-            set
-            {
-                if (_TechnicalDataSheet != value)
-                {
-                    OnTechnicalDataSheetChanging(value);
-                    ReportPropertyChanging("TechnicalDataSheet");
-                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TechnicalDataSheet");
-                    OnTechnicalDataSheetChanged();
-                }
-            }
-        }
-        private global::System.String _TechnicalDataSheet;
-        partial void OnTechnicalDataSheetChanging(global::System.String value);
-        partial void OnTechnicalDataSheetChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4381,6 +4634,33 @@ namespace RoadIt.Models
         private global::System.String _MixtureName;
         partial void OnMixtureNameChanging(global::System.String value);
         partial void OnMixtureNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TechnicalDataSheet
+        {
+            get
+            {
+                return _TechnicalDataSheet;
+            }
+            set
+            {
+                if (_TechnicalDataSheet != value)
+                {
+                    OnTechnicalDataSheetChanging(value);
+                    ReportPropertyChanging("TechnicalDataSheet");
+                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TechnicalDataSheet");
+                    OnTechnicalDataSheetChanged();
+                }
+            }
+        }
+        private global::System.String _TechnicalDataSheet;
+        partial void OnTechnicalDataSheetChanging(global::System.String value);
+        partial void OnTechnicalDataSheetChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4495,6 +4775,33 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.DateTime RealArrivalTime
+        {
+            get
+            {
+                return _RealArrivalTime;
+            }
+            set
+            {
+                if (_RealArrivalTime != value)
+                {
+                    OnRealArrivalTimeChanging(value);
+                    ReportPropertyChanging("RealArrivalTime");
+                    _RealArrivalTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RealArrivalTime");
+                    OnRealArrivalTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _RealArrivalTime;
+        partial void OnRealArrivalTimeChanging(global::System.DateTime value);
+        partial void OnRealArrivalTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.String ActualPosition
         {
             get
@@ -4549,7 +4856,7 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ETA
+        public global::System.TimeSpan ETA
         {
             get
             {
@@ -4561,14 +4868,14 @@ namespace RoadIt.Models
                 {
                     OnETAChanging(value);
                     ReportPropertyChanging("ETA");
-                    _ETA = StructuralObject.SetValidValue(value, false);
+                    _ETA = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("ETA");
                     OnETAChanged();
                 }
             }
         }
-        private global::System.String _ETA;
-        partial void OnETAChanging(global::System.String value);
+        private global::System.TimeSpan _ETA;
+        partial void OnETAChanging(global::System.TimeSpan value);
         partial void OnETAChanged();
     
         /// <summary>
@@ -4603,357 +4910,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime RealArrivalTime
-        {
-            get
-            {
-                return _RealArrivalTime;
-            }
-            set
-            {
-                if (_RealArrivalTime != value)
-                {
-                    OnRealArrivalTimeChanging(value);
-                    ReportPropertyChanging("RealArrivalTime");
-                    _RealArrivalTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RealArrivalTime");
-                    OnRealArrivalTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _RealArrivalTime;
-        partial void OnRealArrivalTimeChanging(global::System.DateTime value);
-        partial void OnRealArrivalTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 FinisherSpeed
-        {
-            get
-            {
-                return _FinisherSpeed;
-            }
-            set
-            {
-                if (_FinisherSpeed != value)
-                {
-                    OnFinisherSpeedChanging(value);
-                    ReportPropertyChanging("FinisherSpeed");
-                    _FinisherSpeed = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("FinisherSpeed");
-                    OnFinisherSpeedChanged();
-                }
-            }
-        }
-        private global::System.Int32 _FinisherSpeed;
-        partial void OnFinisherSpeedChanging(global::System.Int32 value);
-        partial void OnFinisherSpeedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime SpeedFinisherTimeStamp
-        {
-            get
-            {
-                return _SpeedFinisherTimeStamp;
-            }
-            set
-            {
-                if (_SpeedFinisherTimeStamp != value)
-                {
-                    OnSpeedFinisherTimeStampChanging(value);
-                    ReportPropertyChanging("SpeedFinisherTimeStamp");
-                    _SpeedFinisherTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("SpeedFinisherTimeStamp");
-                    OnSpeedFinisherTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _SpeedFinisherTimeStamp;
-        partial void OnSpeedFinisherTimeStampChanging(global::System.DateTime value);
-        partial void OnSpeedFinisherTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AngleLeft
-        {
-            get
-            {
-                return _AngleLeft;
-            }
-            set
-            {
-                if (_AngleLeft != value)
-                {
-                    OnAngleLeftChanging(value);
-                    ReportPropertyChanging("AngleLeft");
-                    _AngleLeft = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AngleLeft");
-                    OnAngleLeftChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AngleLeft;
-        partial void OnAngleLeftChanging(global::System.Int32 value);
-        partial void OnAngleLeftChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AngleRight
-        {
-            get
-            {
-                return _AngleRight;
-            }
-            set
-            {
-                if (_AngleRight != value)
-                {
-                    OnAngleRightChanging(value);
-                    ReportPropertyChanging("AngleRight");
-                    _AngleRight = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AngleRight");
-                    OnAngleRightChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AngleRight;
-        partial void OnAngleRightChanging(global::System.Int32 value);
-        partial void OnAngleRightChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Width
-        {
-            get
-            {
-                return _Width;
-            }
-            set
-            {
-                if (_Width != value)
-                {
-                    OnWidthChanging(value);
-                    ReportPropertyChanging("Width");
-                    _Width = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Width");
-                    OnWidthChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Width;
-        partial void OnWidthChanging(global::System.Int32 value);
-        partial void OnWidthChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessLeft
-        {
-            get
-            {
-                return _ThicknessLeft;
-            }
-            set
-            {
-                if (_ThicknessLeft != value)
-                {
-                    OnThicknessLeftChanging(value);
-                    ReportPropertyChanging("ThicknessLeft");
-                    _ThicknessLeft = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessLeft");
-                    OnThicknessLeftChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessLeft;
-        partial void OnThicknessLeftChanging(global::System.Int32 value);
-        partial void OnThicknessLeftChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessMiddel
-        {
-            get
-            {
-                return _ThicknessMiddel;
-            }
-            set
-            {
-                if (_ThicknessMiddel != value)
-                {
-                    OnThicknessMiddelChanging(value);
-                    ReportPropertyChanging("ThicknessMiddel");
-                    _ThicknessMiddel = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessMiddel");
-                    OnThicknessMiddelChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessMiddel;
-        partial void OnThicknessMiddelChanging(global::System.Int32 value);
-        partial void OnThicknessMiddelChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessRight
-        {
-            get
-            {
-                return _ThicknessRight;
-            }
-            set
-            {
-                if (_ThicknessRight != value)
-                {
-                    OnThicknessRightChanging(value);
-                    ReportPropertyChanging("ThicknessRight");
-                    _ThicknessRight = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessRight");
-                    OnThicknessRightChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessRight;
-        partial void OnThicknessRightChanging(global::System.Int32 value);
-        partial void OnThicknessRightChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 TranverseSlope
-        {
-            get
-            {
-                return _TranverseSlope;
-            }
-            set
-            {
-                if (_TranverseSlope != value)
-                {
-                    OnTranverseSlopeChanging(value);
-                    ReportPropertyChanging("TranverseSlope");
-                    _TranverseSlope = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("TranverseSlope");
-                    OnTranverseSlopeChanged();
-                }
-            }
-        }
-        private global::System.Int32 _TranverseSlope;
-        partial void OnTranverseSlopeChanging(global::System.Int32 value);
-        partial void OnTranverseSlopeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String StopLocation
-        {
-            get
-            {
-                return _StopLocation;
-            }
-            set
-            {
-                if (_StopLocation != value)
-                {
-                    OnStopLocationChanging(value);
-                    ReportPropertyChanging("StopLocation");
-                    _StopLocation = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("StopLocation");
-                    OnStopLocationChanged();
-                }
-            }
-        }
-        private global::System.String _StopLocation;
-        partial void OnStopLocationChanging(global::System.String value);
-        partial void OnStopLocationChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan StopTime
-        {
-            get
-            {
-                return _StopTime;
-            }
-            set
-            {
-                if (_StopTime != value)
-                {
-                    OnStopTimeChanging(value);
-                    ReportPropertyChanging("StopTime");
-                    _StopTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("StopTime");
-                    OnStopTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _StopTime;
-        partial void OnStopTimeChanging(global::System.TimeSpan value);
-        partial void OnStopTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime StopTimeStamp
-        {
-            get
-            {
-                return _StopTimeStamp;
-            }
-            set
-            {
-                if (_StopTimeStamp != value)
-                {
-                    OnStopTimeStampChanging(value);
-                    ReportPropertyChanging("StopTimeStamp");
-                    _StopTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("StopTimeStamp");
-                    OnStopTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _StopTimeStamp;
-        partial void OnStopTimeStampChanging(global::System.DateTime value);
-        partial void OnStopTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String Precipation
         {
             get
@@ -4975,6 +4931,168 @@ namespace RoadIt.Models
         private global::System.String _Precipation;
         partial void OnPrecipationChanging(global::System.String value);
         partial void OnPrecipationChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AsphaltTempAfterFinisherIrScanOrThermo
+        {
+            get
+            {
+                return _AsphaltTempAfterFinisherIrScanOrThermo;
+            }
+            set
+            {
+                if (_AsphaltTempAfterFinisherIrScanOrThermo != value)
+                {
+                    OnAsphaltTempAfterFinisherIrScanOrThermoChanging(value);
+                    ReportPropertyChanging("AsphaltTempAfterFinisherIrScanOrThermo");
+                    _AsphaltTempAfterFinisherIrScanOrThermo = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("AsphaltTempAfterFinisherIrScanOrThermo");
+                    OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+                }
+            }
+        }
+        private global::System.String _AsphaltTempAfterFinisherIrScanOrThermo;
+        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanging(global::System.String value);
+        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FinisherTimeStamp
+        {
+            get
+            {
+                return _FinisherTimeStamp;
+            }
+            set
+            {
+                if (_FinisherTimeStamp != value)
+                {
+                    OnFinisherTimeStampChanging(value);
+                    ReportPropertyChanging("FinisherTimeStamp");
+                    _FinisherTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FinisherTimeStamp");
+                    OnFinisherTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _FinisherTimeStamp;
+        partial void OnFinisherTimeStampChanging(global::System.DateTime value);
+        partial void OnFinisherTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 LeftTickness
+        {
+            get
+            {
+                return _LeftTickness;
+            }
+            set
+            {
+                if (_LeftTickness != value)
+                {
+                    OnLeftTicknessChanging(value);
+                    ReportPropertyChanging("LeftTickness");
+                    _LeftTickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("LeftTickness");
+                    OnLeftTicknessChanged();
+                }
+            }
+        }
+        private global::System.Int32 _LeftTickness;
+        partial void OnLeftTicknessChanging(global::System.Int32 value);
+        partial void OnLeftTicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 MiddelThickness
+        {
+            get
+            {
+                return _MiddelThickness;
+            }
+            set
+            {
+                if (_MiddelThickness != value)
+                {
+                    OnMiddelThicknessChanging(value);
+                    ReportPropertyChanging("MiddelThickness");
+                    _MiddelThickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MiddelThickness");
+                    OnMiddelThicknessChanged();
+                }
+            }
+        }
+        private global::System.Int32 _MiddelThickness;
+        partial void OnMiddelThicknessChanging(global::System.Int32 value);
+        partial void OnMiddelThicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RightThickness
+        {
+            get
+            {
+                return _RightThickness;
+            }
+            set
+            {
+                if (_RightThickness != value)
+                {
+                    OnRightThicknessChanging(value);
+                    ReportPropertyChanging("RightThickness");
+                    _RightThickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RightThickness");
+                    OnRightThicknessChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RightThickness;
+        partial void OnRightThicknessChanging(global::System.Int32 value);
+        partial void OnRightThicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ThicknessTimeStamp
+        {
+            get
+            {
+                return _ThicknessTimeStamp;
+            }
+            set
+            {
+                if (_ThicknessTimeStamp != value)
+                {
+                    OnThicknessTimeStampChanging(value);
+                    ReportPropertyChanging("ThicknessTimeStamp");
+                    _ThicknessTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ThicknessTimeStamp");
+                    OnThicknessTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ThicknessTimeStamp;
+        partial void OnThicknessTimeStampChanging(global::System.DateTime value);
+        partial void OnThicknessTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5029,6 +5147,60 @@ namespace RoadIt.Models
         private global::System.DateTime _WeatherTempTimeStamp;
         partial void OnWeatherTempTimeStampChanging(global::System.DateTime value);
         partial void OnWeatherTempTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Width
+        {
+            get
+            {
+                return _Width;
+            }
+            set
+            {
+                if (_Width != value)
+                {
+                    OnWidthChanging(value);
+                    ReportPropertyChanging("Width");
+                    _Width = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Width");
+                    OnWidthChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Width;
+        partial void OnWidthChanging(global::System.Int32 value);
+        partial void OnWidthChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime WidthTimeStamp
+        {
+            get
+            {
+                return _WidthTimeStamp;
+            }
+            set
+            {
+                if (_WidthTimeStamp != value)
+                {
+                    OnWidthTimeStampChanging(value);
+                    ReportPropertyChanging("WidthTimeStamp");
+                    _WidthTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("WidthTimeStamp");
+                    OnWidthTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _WidthTimeStamp;
+        partial void OnWidthTimeStampChanging(global::System.DateTime value);
+        partial void OnWidthTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5143,81 +5315,297 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String AsphaltTempAfterFinisherIrScanOrThermo
+        public global::System.Int32 LeftAngle
         {
             get
             {
-                return _AsphaltTempAfterFinisherIrScanOrThermo;
+                return _LeftAngle;
             }
             set
             {
-                if (_AsphaltTempAfterFinisherIrScanOrThermo != value)
+                if (_LeftAngle != value)
                 {
-                    OnAsphaltTempAfterFinisherIrScanOrThermoChanging(value);
-                    ReportPropertyChanging("AsphaltTempAfterFinisherIrScanOrThermo");
-                    _AsphaltTempAfterFinisherIrScanOrThermo = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("AsphaltTempAfterFinisherIrScanOrThermo");
-                    OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+                    OnLeftAngleChanging(value);
+                    ReportPropertyChanging("LeftAngle");
+                    _LeftAngle = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("LeftAngle");
+                    OnLeftAngleChanged();
                 }
             }
         }
-        private global::System.String _AsphaltTempAfterFinisherIrScanOrThermo;
-        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanging(global::System.String value);
-        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+        private global::System.Int32 _LeftAngle;
+        partial void OnLeftAngleChanging(global::System.Int32 value);
+        partial void OnLeftAngleChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String QrCodeCompactor
+        public global::System.Int32 RightAngle
         {
             get
             {
-                return _QrCodeCompactor;
+                return _RightAngle;
             }
             set
             {
-                if (_QrCodeCompactor != value)
+                if (_RightAngle != value)
                 {
-                    OnQrCodeCompactorChanging(value);
-                    ReportPropertyChanging("QrCodeCompactor");
-                    _QrCodeCompactor = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("QrCodeCompactor");
-                    OnQrCodeCompactorChanged();
+                    OnRightAngleChanging(value);
+                    ReportPropertyChanging("RightAngle");
+                    _RightAngle = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RightAngle");
+                    OnRightAngleChanged();
                 }
             }
         }
-        private global::System.String _QrCodeCompactor;
-        partial void OnQrCodeCompactorChanging(global::System.String value);
-        partial void OnQrCodeCompactorChanged();
+        private global::System.Int32 _RightAngle;
+        partial void OnRightAngleChanging(global::System.Int32 value);
+        partial void OnRightAngleChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String GPSFinisher
+        public global::System.DateTime AngleTimestamp
         {
             get
             {
-                return _GPSFinisher;
+                return _AngleTimestamp;
             }
             set
             {
-                if (_GPSFinisher != value)
+                if (_AngleTimestamp != value)
                 {
-                    OnGPSFinisherChanging(value);
-                    ReportPropertyChanging("GPSFinisher");
-                    _GPSFinisher = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("GPSFinisher");
-                    OnGPSFinisherChanged();
+                    OnAngleTimestampChanging(value);
+                    ReportPropertyChanging("AngleTimestamp");
+                    _AngleTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AngleTimestamp");
+                    OnAngleTimestampChanged();
                 }
             }
         }
-        private global::System.String _GPSFinisher;
-        partial void OnGPSFinisherChanging(global::System.String value);
-        partial void OnGPSFinisherChanged();
+        private global::System.DateTime _AngleTimestamp;
+        partial void OnAngleTimestampChanging(global::System.DateTime value);
+        partial void OnAngleTimestampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Speed
+        {
+            get
+            {
+                return _Speed;
+            }
+            set
+            {
+                if (_Speed != value)
+                {
+                    OnSpeedChanging(value);
+                    ReportPropertyChanging("Speed");
+                    _Speed = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Speed");
+                    OnSpeedChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Speed;
+        partial void OnSpeedChanging(global::System.Int32 value);
+        partial void OnSpeedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime SpeedFinisherTimeStamp
+        {
+            get
+            {
+                return _SpeedFinisherTimeStamp;
+            }
+            set
+            {
+                if (_SpeedFinisherTimeStamp != value)
+                {
+                    OnSpeedFinisherTimeStampChanging(value);
+                    ReportPropertyChanging("SpeedFinisherTimeStamp");
+                    _SpeedFinisherTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SpeedFinisherTimeStamp");
+                    OnSpeedFinisherTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _SpeedFinisherTimeStamp;
+        partial void OnSpeedFinisherTimeStampChanging(global::System.DateTime value);
+        partial void OnSpeedFinisherTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StopLocationLTS
+        {
+            get
+            {
+                return _StopLocationLTS;
+            }
+            set
+            {
+                if (_StopLocationLTS != value)
+                {
+                    OnStopLocationLTSChanging(value);
+                    ReportPropertyChanging("StopLocationLTS");
+                    _StopLocationLTS = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("StopLocationLTS");
+                    OnStopLocationLTSChanged();
+                }
+            }
+        }
+        private global::System.String _StopLocationLTS;
+        partial void OnStopLocationLTSChanging(global::System.String value);
+        partial void OnStopLocationLTSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan StopTimeLTS
+        {
+            get
+            {
+                return _StopTimeLTS;
+            }
+            set
+            {
+                if (_StopTimeLTS != value)
+                {
+                    OnStopTimeLTSChanging(value);
+                    ReportPropertyChanging("StopTimeLTS");
+                    _StopTimeLTS = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeLTS");
+                    OnStopTimeLTSChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _StopTimeLTS;
+        partial void OnStopTimeLTSChanging(global::System.TimeSpan value);
+        partial void OnStopTimeLTSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime StopTimeStamp
+        {
+            get
+            {
+                return _StopTimeStamp;
+            }
+            set
+            {
+                if (_StopTimeStamp != value)
+                {
+                    OnStopTimeStampChanging(value);
+                    ReportPropertyChanging("StopTimeStamp");
+                    _StopTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeStamp");
+                    OnStopTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _StopTimeStamp;
+        partial void OnStopTimeStampChanging(global::System.DateTime value);
+        partial void OnStopTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String GPS
+        {
+            get
+            {
+                return _GPS;
+            }
+            set
+            {
+                if (_GPS != value)
+                {
+                    OnGPSChanging(value);
+                    ReportPropertyChanging("GPS");
+                    _GPS = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPS");
+                    OnGPSChanged();
+                }
+            }
+        }
+        private global::System.String _GPS;
+        partial void OnGPSChanging(global::System.String value);
+        partial void OnGPSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TempAsphalt
+        {
+            get
+            {
+                return _TempAsphalt;
+            }
+            set
+            {
+                if (_TempAsphalt != value)
+                {
+                    OnTempAsphaltChanging(value);
+                    ReportPropertyChanging("TempAsphalt");
+                    _TempAsphalt = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TempAsphalt");
+                    OnTempAsphaltChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TempAsphalt;
+        partial void OnTempAsphaltChanging(global::System.Int32 value);
+        partial void OnTempAsphaltChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltTempTimeStamp
+        {
+            get
+            {
+                return _AsphaltTempTimeStamp;
+            }
+            set
+            {
+                if (_AsphaltTempTimeStamp != value)
+                {
+                    OnAsphaltTempTimeStampChanging(value);
+                    ReportPropertyChanging("AsphaltTempTimeStamp");
+                    _AsphaltTempTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltTempTimeStamp");
+                    OnAsphaltTempTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AsphaltTempTimeStamp;
+        partial void OnAsphaltTempTimeStampChanging(global::System.DateTime value);
+        partial void OnAsphaltTempTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5245,6 +5633,60 @@ namespace RoadIt.Models
         private global::System.String _GPSCompactor;
         partial void OnGPSCompactorChanging(global::System.String value);
         partial void OnGPSCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ColorCodeTimeStamp
+        {
+            get
+            {
+                return _ColorCodeTimeStamp;
+            }
+            set
+            {
+                if (_ColorCodeTimeStamp != value)
+                {
+                    OnColorCodeTimeStampChanging(value);
+                    ReportPropertyChanging("ColorCodeTimeStamp");
+                    _ColorCodeTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ColorCodeTimeStamp");
+                    OnColorCodeTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ColorCodeTimeStamp;
+        partial void OnColorCodeTimeStampChanging(global::System.DateTime value);
+        partial void OnColorCodeTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String QrCodeCompactor
+        {
+            get
+            {
+                return _QrCodeCompactor;
+            }
+            set
+            {
+                if (_QrCodeCompactor != value)
+                {
+                    OnQrCodeCompactorChanging(value);
+                    ReportPropertyChanging("QrCodeCompactor");
+                    _QrCodeCompactor = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("QrCodeCompactor");
+                    OnQrCodeCompactorChanged();
+                }
+            }
+        }
+        private global::System.String _QrCodeCompactor;
+        partial void OnQrCodeCompactorChanging(global::System.String value);
+        partial void OnQrCodeCompactorChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5461,6 +5903,249 @@ namespace RoadIt.Models
         private global::System.String _ExtraTestsAskedBijClient;
         partial void OnExtraTestsAskedBijClientChanging(global::System.String value);
         partial void OnExtraTestsAskedBijClientChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime QualtityTimeStamp
+        {
+            get
+            {
+                return _QualtityTimeStamp;
+            }
+            set
+            {
+                if (_QualtityTimeStamp != value)
+                {
+                    OnQualtityTimeStampChanging(value);
+                    ReportPropertyChanging("QualtityTimeStamp");
+                    _QualtityTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("QualtityTimeStamp");
+                    OnQualtityTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _QualtityTimeStamp;
+        partial void OnQualtityTimeStampChanging(global::System.DateTime value);
+        partial void OnQualtityTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RoadId
+        {
+            get
+            {
+                return _RoadId;
+            }
+            set
+            {
+                if (_RoadId != value)
+                {
+                    OnRoadIdChanging(value);
+                    ReportPropertyChanging("RoadId");
+                    _RoadId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadId");
+                    OnRoadIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RoadId;
+        partial void OnRoadIdChanging(global::System.Int32 value);
+        partial void OnRoadIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RoadDescription
+        {
+            get
+            {
+                return _RoadDescription;
+            }
+            set
+            {
+                if (_RoadDescription != value)
+                {
+                    OnRoadDescriptionChanging(value);
+                    ReportPropertyChanging("RoadDescription");
+                    _RoadDescription = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("RoadDescription");
+                    OnRoadDescriptionChanged();
+                }
+            }
+        }
+        private global::System.String _RoadDescription;
+        partial void OnRoadDescriptionChanging(global::System.String value);
+        partial void OnRoadDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime RoadSectionTimeStamp
+        {
+            get
+            {
+                return _RoadSectionTimeStamp;
+            }
+            set
+            {
+                if (_RoadSectionTimeStamp != value)
+                {
+                    OnRoadSectionTimeStampChanging(value);
+                    ReportPropertyChanging("RoadSectionTimeStamp");
+                    _RoadSectionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadSectionTimeStamp");
+                    OnRoadSectionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _RoadSectionTimeStamp;
+        partial void OnRoadSectionTimeStampChanging(global::System.DateTime value);
+        partial void OnRoadSectionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltMixPlantTimestamp
+        {
+            get
+            {
+                return _AsphaltMixPlantTimestamp;
+            }
+            set
+            {
+                if (_AsphaltMixPlantTimestamp != value)
+                {
+                    OnAsphaltMixPlantTimestampChanging(value);
+                    ReportPropertyChanging("AsphaltMixPlantTimestamp");
+                    _AsphaltMixPlantTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltMixPlantTimestamp");
+                    OnAsphaltMixPlantTimestampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AsphaltMixPlantTimestamp;
+        partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
+        partial void OnAsphaltMixPlantTimestampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TruckTimeStamp
+        {
+            get
+            {
+                return _TruckTimeStamp;
+            }
+            set
+            {
+                if (_TruckTimeStamp != value)
+                {
+                    OnTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TruckTimeStamp");
+                    _TruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TruckTimeStamp");
+                    OnTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TruckTimeStamp;
+        partial void OnTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTruckTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CompactorTimeStamp
+        {
+            get
+            {
+                return _CompactorTimeStamp;
+            }
+            set
+            {
+                if (_CompactorTimeStamp != value)
+                {
+                    OnCompactorTimeStampChanging(value);
+                    ReportPropertyChanging("CompactorTimeStamp");
+                    _CompactorTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompactorTimeStamp");
+                    OnCompactorTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _CompactorTimeStamp;
+        partial void OnCompactorTimeStampChanging(global::System.DateTime value);
+        partial void OnCompactorTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TranverseSlope
+        {
+            get
+            {
+                return _TranverseSlope;
+            }
+            set
+            {
+                if (_TranverseSlope != value)
+                {
+                    OnTranverseSlopeChanging(value);
+                    ReportPropertyChanging("TranverseSlope");
+                    _TranverseSlope = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TranverseSlope");
+                    OnTranverseSlopeChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TranverseSlope;
+        partial void OnTranverseSlopeChanging(global::System.Int32 value);
+        partial void OnTranverseSlopeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String GPSFinisher
+        {
+            get
+            {
+                return _GPSFinisher;
+            }
+            set
+            {
+                if (_GPSFinisher != value)
+                {
+                    OnGPSFinisherChanging(value);
+                    ReportPropertyChanging("GPSFinisher");
+                    _GPSFinisher = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPSFinisher");
+                    OnGPSFinisherChanged();
+                }
+            }
+        }
+        private global::System.String _GPSFinisher;
+        partial void OnGPSFinisherChanging(global::System.String value);
+        partial void OnGPSFinisherChanged();
 
         #endregion
 
@@ -5470,7 +6155,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="ColorCode")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ColorCode")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ColorCode : EntityObject
@@ -5483,12 +6168,14 @@ namespace RoadIt.Models
         /// <param name="colorCodeID">Initial value of the ColorCodeID property.</param>
         /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
         /// <param name="gPSCompactor">Initial value of the GPSCompactor property.</param>
-        public static ColorCode CreateColorCode(global::System.Int32 colorCodeID, global::System.String gPSFinisher, global::System.String gPSCompactor)
+        /// <param name="colorCodeTimeStamp">Initial value of the ColorCodeTimeStamp property.</param>
+        public static ColorCode CreateColorCode(global::System.Int32 colorCodeID, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp)
         {
             ColorCode colorCode = new ColorCode();
             colorCode.ColorCodeID = colorCodeID;
             colorCode.GPSFinisher = gPSFinisher;
             colorCode.GPSCompactor = gPSCompactor;
+            colorCode.ColorCodeTimeStamp = colorCodeTimeStamp;
             return colorCode;
         }
 
@@ -5570,6 +6257,30 @@ namespace RoadIt.Models
         private global::System.String _GPSCompactor;
         partial void OnGPSCompactorChanging(global::System.String value);
         partial void OnGPSCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ColorCodeTimeStamp
+        {
+            get
+            {
+                return _ColorCodeTimeStamp;
+            }
+            set
+            {
+                OnColorCodeTimeStampChanging(value);
+                ReportPropertyChanging("ColorCodeTimeStamp");
+                _ColorCodeTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ColorCodeTimeStamp");
+                OnColorCodeTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _ColorCodeTimeStamp;
+        partial void OnColorCodeTimeStampChanging(global::System.DateTime value);
+        partial void OnColorCodeTimeStampChanged();
 
         #endregion
 
@@ -5582,18 +6293,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Compactor_ibfk_1", "Compactor")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Compactor_ibfk_1", "Compactor")]
         public EntityCollection<Compactor> Compactors
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Compactor>("RoadItEntitiesModel.Compactor_ibfk_1", "Compactor");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Compactor>("roaditModel.Compactor_ibfk_1", "Compactor");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Compactor>("RoadItEntitiesModel.Compactor_ibfk_1", "Compactor", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Compactor>("roaditModel.Compactor_ibfk_1", "Compactor", value);
                 }
             }
         }
@@ -5605,7 +6316,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Compactor")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Compactor")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Compactor : EntityObject
@@ -5622,7 +6333,8 @@ namespace RoadIt.Models
         /// <param name="locationOfVibration">Initial value of the LocationOfVibration property.</param>
         /// <param name="colorCodeId">Initial value of the ColorCodeId property.</param>
         /// <param name="speedOfRollerCompactor">Initial value of the SpeedOfRollerCompactor property.</param>
-        public static Compactor CreateCompactor(global::System.Int32 compactorId, global::System.Int32 batchId, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 colorCodeId, global::System.Int32 speedOfRollerCompactor)
+        /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
+        public static Compactor CreateCompactor(global::System.Int32 compactorId, global::System.Int32 batchId, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 colorCodeId, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp)
         {
             Compactor compactor = new Compactor();
             compactor.CompactorId = compactorId;
@@ -5632,6 +6344,7 @@ namespace RoadIt.Models
             compactor.LocationOfVibration = locationOfVibration;
             compactor.ColorCodeId = colorCodeId;
             compactor.SpeedOfRollerCompactor = speedOfRollerCompactor;
+            compactor.CompactorTimeStamp = compactorTimeStamp;
             return compactor;
         }
 
@@ -5809,6 +6522,30 @@ namespace RoadIt.Models
         private global::System.Int32 _SpeedOfRollerCompactor;
         partial void OnSpeedOfRollerCompactorChanging(global::System.Int32 value);
         partial void OnSpeedOfRollerCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CompactorTimeStamp
+        {
+            get
+            {
+                return _CompactorTimeStamp;
+            }
+            set
+            {
+                OnCompactorTimeStampChanging(value);
+                ReportPropertyChanging("CompactorTimeStamp");
+                _CompactorTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CompactorTimeStamp");
+                OnCompactorTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _CompactorTimeStamp;
+        partial void OnCompactorTimeStampChanging(global::System.DateTime value);
+        partial void OnCompactorTimeStampChanged();
 
         #endregion
 
@@ -5821,16 +6558,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Compactor_ibfk_2", "BatchList")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Compactor_ibfk_2", "BatchList")]
         public BatchList BatchList
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BatchList>("RoadItEntitiesModel.Compactor_ibfk_2", "BatchList").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BatchList>("roaditModel.Compactor_ibfk_2", "BatchList").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BatchList>("RoadItEntitiesModel.Compactor_ibfk_2", "BatchList").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BatchList>("roaditModel.Compactor_ibfk_2", "BatchList").Value = value;
             }
         }
         /// <summary>
@@ -5842,13 +6579,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BatchList>("RoadItEntitiesModel.Compactor_ibfk_2", "BatchList");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BatchList>("roaditModel.Compactor_ibfk_2", "BatchList");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BatchList>("RoadItEntitiesModel.Compactor_ibfk_2", "BatchList", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BatchList>("roaditModel.Compactor_ibfk_2", "BatchList", value);
                 }
             }
         }
@@ -5859,16 +6596,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Compactor_ibfk_1", "ColorCode")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Compactor_ibfk_1", "ColorCode")]
         public ColorCode ColorCode
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ColorCode>("RoadItEntitiesModel.Compactor_ibfk_1", "ColorCode").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ColorCode>("roaditModel.Compactor_ibfk_1", "ColorCode").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ColorCode>("RoadItEntitiesModel.Compactor_ibfk_1", "ColorCode").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ColorCode>("roaditModel.Compactor_ibfk_1", "ColorCode").Value = value;
             }
         }
         /// <summary>
@@ -5880,13 +6617,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ColorCode>("RoadItEntitiesModel.Compactor_ibfk_1", "ColorCode");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ColorCode>("roaditModel.Compactor_ibfk_1", "ColorCode");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ColorCode>("RoadItEntitiesModel.Compactor_ibfk_1", "ColorCode", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ColorCode>("roaditModel.Compactor_ibfk_1", "ColorCode", value);
                 }
             }
         }
@@ -5898,7 +6635,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Composition")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Composition")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Composition : EntityObject
@@ -5918,7 +6655,8 @@ namespace RoadIt.Models
         /// <param name="filler">Initial value of the Filler property.</param>
         /// <param name="bitumen">Initial value of the Bitumen property.</param>
         /// <param name="additivesKg">Initial value of the AdditivesKg property.</param>
-        public static Composition CreateComposition(global::System.Int32 realCompositionId, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg)
+        /// <param name="compositionTimeStamp">Initial value of the CompositionTimeStamp property.</param>
+        public static Composition CreateComposition(global::System.Int32 realCompositionId, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp)
         {
             Composition composition = new Composition();
             composition.RealCompositionId = realCompositionId;
@@ -5931,6 +6669,7 @@ namespace RoadIt.Models
             composition.Filler = filler;
             composition.Bitumen = bitumen;
             composition.AdditivesKg = additivesKg;
+            composition.CompositionTimeStamp = compositionTimeStamp;
             return composition;
         }
 
@@ -6180,6 +6919,30 @@ namespace RoadIt.Models
         private global::System.Int32 _AdditivesKg;
         partial void OnAdditivesKgChanging(global::System.Int32 value);
         partial void OnAdditivesKgChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CompositionTimeStamp
+        {
+            get
+            {
+                return _CompositionTimeStamp;
+            }
+            set
+            {
+                OnCompositionTimeStampChanging(value);
+                ReportPropertyChanging("CompositionTimeStamp");
+                _CompositionTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CompositionTimeStamp");
+                OnCompositionTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _CompositionTimeStamp;
+        partial void OnCompositionTimeStampChanging(global::System.DateTime value);
+        partial void OnCompositionTimeStampChanged();
 
         #endregion
 
@@ -6192,18 +6955,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_5", "Silo")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_5", "Silo")]
         public EntityCollection<Silo> Silos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_5", "Silo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("roaditModel.Silo_ibfk_5", "Silo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_5", "Silo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("roaditModel.Silo_ibfk_5", "Silo", value);
                 }
             }
         }
@@ -6215,7 +6978,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Contractor")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Contractor")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Contractor : EntityObject
@@ -6227,11 +6990,13 @@ namespace RoadIt.Models
         /// </summary>
         /// <param name="contractorId">Initial value of the ContractorId property.</param>
         /// <param name="projectId">Initial value of the ProjectId property.</param>
-        public static Contractor CreateContractor(global::System.Int32 contractorId, global::System.Int32 projectId)
+        /// <param name="contractorTimeStamp">Initial value of the ContractorTimeStamp property.</param>
+        public static Contractor CreateContractor(global::System.Int32 contractorId, global::System.Int32 projectId, global::System.DateTime contractorTimeStamp)
         {
             Contractor contractor = new Contractor();
             contractor.ContractorId = contractorId;
             contractor.ProjectId = projectId;
+            contractor.ContractorTimeStamp = contractorTimeStamp;
             return contractor;
         }
 
@@ -6289,6 +7054,30 @@ namespace RoadIt.Models
         private global::System.Int32 _ProjectId;
         partial void OnProjectIdChanging(global::System.Int32 value);
         partial void OnProjectIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ContractorTimeStamp
+        {
+            get
+            {
+                return _ContractorTimeStamp;
+            }
+            set
+            {
+                OnContractorTimeStampChanging(value);
+                ReportPropertyChanging("ContractorTimeStamp");
+                _ContractorTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ContractorTimeStamp");
+                OnContractorTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _ContractorTimeStamp;
+        partial void OnContractorTimeStampChanging(global::System.DateTime value);
+        partial void OnContractorTimeStampChanged();
 
         #endregion
 
@@ -6301,16 +7090,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Contractor_ibfk_1", "Project")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Contractor_ibfk_1", "Project")]
         public Project Project
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.Contractor_ibfk_1", "Project").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.Contractor_ibfk_1", "Project").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.Contractor_ibfk_1", "Project").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.Contractor_ibfk_1", "Project").Value = value;
             }
         }
         /// <summary>
@@ -6322,13 +7111,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.Contractor_ibfk_1", "Project");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.Contractor_ibfk_1", "Project");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("RoadItEntitiesModel.Contractor_ibfk_1", "Project", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("roaditModel.Contractor_ibfk_1", "Project", value);
                 }
             }
         }
@@ -6340,7 +7129,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="ContractorVieuw")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ContractorVieuw")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ContractorVieuw : EntityObject
@@ -6350,61 +7139,70 @@ namespace RoadIt.Models
         /// <summary>
         /// Create a new ContractorVieuw object.
         /// </summary>
-        /// <param name="roadId">Initial value of the RoadId property.</param>
-        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
         /// <param name="layerThickness">Initial value of the LayerThickness property.</param>
         /// <param name="surface">Initial value of the Surface property.</param>
         /// <param name="tonPerDay">Initial value of the TonPerDay property.</param>
-        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
+        /// <param name="planningTimeStamp">Initial value of the PlanningTimeStamp property.</param>
         /// <param name="mixtureName">Initial value of the MixtureName property.</param>
+        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
         /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
         /// <param name="departureTime">Initial value of the DepartureTime property.</param>
         /// <param name="massTruck">Initial value of the MassTruck property.</param>
-        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
-        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
-        /// <param name="eTA">Initial value of the ETA property.</param>
-        /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
         /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
         /// <param name="deattachmentFinisherTime">Initial value of the DeattachmentFinisherTime property.</param>
         /// <param name="deattachmentFinisherPosition">Initial value of the DeattachmentFinisherPosition property.</param>
+        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
         /// <param name="attachmentToFinisherTime">Initial value of the AttachmentToFinisherTime property.</param>
         /// <param name="attachmentToFinisherPosition">Initial value of the AttachmentToFinisherPosition property.</param>
+        /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
         /// <param name="temp">Initial value of the Temp property.</param>
         /// <param name="tempTruckTimeStamp">Initial value of the TempTruckTimeStamp property.</param>
+        /// <param name="stopLocationUnforseenStop">Initial value of the StopLocationUnforseenStop property.</param>
+        /// <param name="stopTimeUnforseenStop">Initial value of the StopTimeUnforseenStop property.</param>
+        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
+        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
+        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
         /// <param name="actualPositionReturn">Initial value of the ActualPositionReturn property.</param>
         /// <param name="actualPositionReturnTimeStamp">Initial value of the ActualPositionReturnTimeStamp property.</param>
+        /// <param name="eTA">Initial value of the ETA property.</param>
+        /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
         /// <param name="eTAReturn">Initial value of the ETAReturn property.</param>
         /// <param name="eTAReturnTimeStamp">Initial value of the ETAReturnTimeStamp property.</param>
-        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
-        /// <param name="unforseenStopLocation">Initial value of the UnforseenStopLocation property.</param>
-        /// <param name="unforseenStopTime">Initial value of the UnforseenStopTime property.</param>
-        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
-        /// <param name="finisherSpeed">Initial value of the FinisherSpeed property.</param>
-        /// <param name="speedFinisherTimeStamp">Initial value of the SpeedFinisherTimeStamp property.</param>
-        /// <param name="angleLeft">Initial value of the AngleLeft property.</param>
-        /// <param name="angleRight">Initial value of the AngleRight property.</param>
-        /// <param name="width">Initial value of the Width property.</param>
-        /// <param name="thicknessLeft">Initial value of the ThicknessLeft property.</param>
-        /// <param name="thicknessMiddel">Initial value of the ThicknessMiddel property.</param>
-        /// <param name="thicknessRight">Initial value of the ThicknessRight property.</param>
         /// <param name="tranverseSlope">Initial value of the TranverseSlope property.</param>
-        /// <param name="stopLocation">Initial value of the StopLocation property.</param>
-        /// <param name="stopTime">Initial value of the StopTime property.</param>
-        /// <param name="stopTimeStamp">Initial value of the StopTimeStamp property.</param>
         /// <param name="precipation">Initial value of the Precipation property.</param>
+        /// <param name="asphaltTempAfterFinisherIrScanOrThermo">Initial value of the AsphaltTempAfterFinisherIrScanOrThermo property.</param>
+        /// <param name="finisherTimeStamp">Initial value of the FinisherTimeStamp property.</param>
+        /// <param name="leftTickness">Initial value of the LeftTickness property.</param>
+        /// <param name="middelThickness">Initial value of the MiddelThickness property.</param>
+        /// <param name="rightThickness">Initial value of the RightThickness property.</param>
+        /// <param name="thicknessTimeStamp">Initial value of the ThicknessTimeStamp property.</param>
         /// <param name="tempWeather">Initial value of the TempWeather property.</param>
         /// <param name="weatherTempTimeStamp">Initial value of the WeatherTempTimeStamp property.</param>
+        /// <param name="width">Initial value of the Width property.</param>
+        /// <param name="widthTimeStamp">Initial value of the WidthTimeStamp property.</param>
         /// <param name="windSpeed">Initial value of the WindSpeed property.</param>
         /// <param name="windTimeStamp">Initial value of the WindTimeStamp property.</param>
         /// <param name="airHumidity">Initial value of the AirHumidity property.</param>
         /// <param name="airHumidityTimeStamp">Initial value of the AirHumidityTimeStamp property.</param>
-        /// <param name="asphaltTempAfterFinisherIrScanOrThermo">Initial value of the AsphaltTempAfterFinisherIrScanOrThermo property.</param>
+        /// <param name="leftAngle">Initial value of the LeftAngle property.</param>
+        /// <param name="rightAngle">Initial value of the RightAngle property.</param>
+        /// <param name="angleTimestamp">Initial value of the AngleTimestamp property.</param>
+        /// <param name="speed">Initial value of the Speed property.</param>
+        /// <param name="speedFinisherTimeStamp">Initial value of the SpeedFinisherTimeStamp property.</param>
+        /// <param name="stopLocationLTS">Initial value of the StopLocationLTS property.</param>
+        /// <param name="stopTimeLTS">Initial value of the StopTimeLTS property.</param>
+        /// <param name="stopTimeStamp">Initial value of the StopTimeStamp property.</param>
+        /// <param name="gPS">Initial value of the GPS property.</param>
+        /// <param name="tempAsphalt">Initial value of the TempAsphalt property.</param>
+        /// <param name="asphaltTempTimeStamp">Initial value of the AsphaltTempTimeStamp property.</param>
+        /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
+        /// <param name="gPSCompactor">Initial value of the GPSCompactor property.</param>
+        /// <param name="colorCodeTimeStamp">Initial value of the ColorCodeTimeStamp property.</param>
         /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
         /// <param name="numberOfRollerCompactorPassages">Initial value of the NumberOfRollerCompactorPassages property.</param>
         /// <param name="locationOfVibration">Initial value of the LocationOfVibration property.</param>
-        /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
-        /// <param name="gPSCompactor">Initial value of the GPSCompactor property.</param>
         /// <param name="speedOfRollerCompactor">Initial value of the SpeedOfRollerCompactor property.</param>
+        /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
         /// <param name="complianceMixture">Initial value of the ComplianceMixture property.</param>
         /// <param name="samplesCopro">Initial value of the SamplesCopro property.</param>
         /// <param name="densityOfField">Initial value of the DensityOfField property.</param>
@@ -6413,64 +7211,78 @@ namespace RoadIt.Models
         /// <param name="skidresistance">Initial value of the Skidresistance property.</param>
         /// <param name="iri">Initial value of the Iri property.</param>
         /// <param name="extraTestsAskedBijClient">Initial value of the ExtraTestsAskedBijClient property.</param>
-        public static ContractorVieuw CreateContractorVieuw(global::System.Int32 roadId, global::System.String roadDescription, global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.String technicalDataSheet, global::System.String mixtureName, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String eTA, global::System.DateTime eTATimeStamp, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.String eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.DateTime arrivalAtPlant, global::System.String unforseenStopLocation, global::System.TimeSpan unforseenStopTime, global::System.DateTime unforseenStopTimeStamp, global::System.Int32 finisherSpeed, global::System.DateTime speedFinisherTimeStamp, global::System.Int32 angleLeft, global::System.Int32 angleRight, global::System.Int32 width, global::System.Int32 thicknessLeft, global::System.Int32 thicknessMiddel, global::System.Int32 thicknessRight, global::System.Int32 tranverseSlope, global::System.String stopLocation, global::System.TimeSpan stopTime, global::System.DateTime stopTimeStamp, global::System.String precipation, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.Int32 speedOfRollerCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient)
+        /// <param name="qualtityTimeStamp">Initial value of the QualtityTimeStamp property.</param>
+        /// <param name="roadId">Initial value of the RoadId property.</param>
+        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
+        /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
+        /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
+        public static ContractorVieuw CreateContractorVieuw(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp)
         {
             ContractorVieuw contractorVieuw = new ContractorVieuw();
-            contractorVieuw.RoadId = roadId;
-            contractorVieuw.RoadDescription = roadDescription;
             contractorVieuw.LayerThickness = layerThickness;
             contractorVieuw.Surface = surface;
             contractorVieuw.TonPerDay = tonPerDay;
-            contractorVieuw.TechnicalDataSheet = technicalDataSheet;
+            contractorVieuw.PlanningTimeStamp = planningTimeStamp;
             contractorVieuw.MixtureName = mixtureName;
+            contractorVieuw.TechnicalDataSheet = technicalDataSheet;
             contractorVieuw.TruckLicensPlate = truckLicensPlate;
             contractorVieuw.DepartureTime = departureTime;
             contractorVieuw.MassTruck = massTruck;
-            contractorVieuw.ActualPosition = actualPosition;
-            contractorVieuw.ActualPositionTimeStamp = actualPositionTimeStamp;
-            contractorVieuw.ETA = eTA;
-            contractorVieuw.ETATimeStamp = eTATimeStamp;
             contractorVieuw.RealArrivalTime = realArrivalTime;
             contractorVieuw.DeattachmentFinisherTime = deattachmentFinisherTime;
             contractorVieuw.DeattachmentFinisherPosition = deattachmentFinisherPosition;
+            contractorVieuw.ArrivalAtPlant = arrivalAtPlant;
             contractorVieuw.AttachmentToFinisherTime = attachmentToFinisherTime;
             contractorVieuw.AttachmentToFinisherPosition = attachmentToFinisherPosition;
+            contractorVieuw.TruckTimeStamp = truckTimeStamp;
             contractorVieuw.Temp = temp;
             contractorVieuw.TempTruckTimeStamp = tempTruckTimeStamp;
+            contractorVieuw.StopLocationUnforseenStop = stopLocationUnforseenStop;
+            contractorVieuw.StopTimeUnforseenStop = stopTimeUnforseenStop;
+            contractorVieuw.UnforseenStopTimeStamp = unforseenStopTimeStamp;
+            contractorVieuw.ActualPosition = actualPosition;
+            contractorVieuw.ActualPositionTimeStamp = actualPositionTimeStamp;
             contractorVieuw.ActualPositionReturn = actualPositionReturn;
             contractorVieuw.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
+            contractorVieuw.ETA = eTA;
+            contractorVieuw.ETATimeStamp = eTATimeStamp;
             contractorVieuw.ETAReturn = eTAReturn;
             contractorVieuw.ETAReturnTimeStamp = eTAReturnTimeStamp;
-            contractorVieuw.ArrivalAtPlant = arrivalAtPlant;
-            contractorVieuw.UnforseenStopLocation = unforseenStopLocation;
-            contractorVieuw.UnforseenStopTime = unforseenStopTime;
-            contractorVieuw.UnforseenStopTimeStamp = unforseenStopTimeStamp;
-            contractorVieuw.FinisherSpeed = finisherSpeed;
-            contractorVieuw.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
-            contractorVieuw.AngleLeft = angleLeft;
-            contractorVieuw.AngleRight = angleRight;
-            contractorVieuw.Width = width;
-            contractorVieuw.ThicknessLeft = thicknessLeft;
-            contractorVieuw.ThicknessMiddel = thicknessMiddel;
-            contractorVieuw.ThicknessRight = thicknessRight;
             contractorVieuw.TranverseSlope = tranverseSlope;
-            contractorVieuw.StopLocation = stopLocation;
-            contractorVieuw.StopTime = stopTime;
-            contractorVieuw.StopTimeStamp = stopTimeStamp;
             contractorVieuw.Precipation = precipation;
+            contractorVieuw.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
+            contractorVieuw.FinisherTimeStamp = finisherTimeStamp;
+            contractorVieuw.LeftTickness = leftTickness;
+            contractorVieuw.MiddelThickness = middelThickness;
+            contractorVieuw.RightThickness = rightThickness;
+            contractorVieuw.ThicknessTimeStamp = thicknessTimeStamp;
             contractorVieuw.TempWeather = tempWeather;
             contractorVieuw.WeatherTempTimeStamp = weatherTempTimeStamp;
+            contractorVieuw.Width = width;
+            contractorVieuw.WidthTimeStamp = widthTimeStamp;
             contractorVieuw.WindSpeed = windSpeed;
             contractorVieuw.WindTimeStamp = windTimeStamp;
             contractorVieuw.AirHumidity = airHumidity;
             contractorVieuw.AirHumidityTimeStamp = airHumidityTimeStamp;
-            contractorVieuw.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
+            contractorVieuw.LeftAngle = leftAngle;
+            contractorVieuw.RightAngle = rightAngle;
+            contractorVieuw.AngleTimestamp = angleTimestamp;
+            contractorVieuw.Speed = speed;
+            contractorVieuw.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
+            contractorVieuw.StopLocationLTS = stopLocationLTS;
+            contractorVieuw.StopTimeLTS = stopTimeLTS;
+            contractorVieuw.StopTimeStamp = stopTimeStamp;
+            contractorVieuw.GPS = gPS;
+            contractorVieuw.TempAsphalt = tempAsphalt;
+            contractorVieuw.AsphaltTempTimeStamp = asphaltTempTimeStamp;
+            contractorVieuw.GPSFinisher = gPSFinisher;
+            contractorVieuw.GPSCompactor = gPSCompactor;
+            contractorVieuw.ColorCodeTimeStamp = colorCodeTimeStamp;
             contractorVieuw.QrCodeCompactor = qrCodeCompactor;
             contractorVieuw.NumberOfRollerCompactorPassages = numberOfRollerCompactorPassages;
             contractorVieuw.LocationOfVibration = locationOfVibration;
-            contractorVieuw.GPSFinisher = gPSFinisher;
-            contractorVieuw.GPSCompactor = gPSCompactor;
             contractorVieuw.SpeedOfRollerCompactor = speedOfRollerCompactor;
+            contractorVieuw.CompactorTimeStamp = compactorTimeStamp;
             contractorVieuw.ComplianceMixture = complianceMixture;
             contractorVieuw.SamplesCopro = samplesCopro;
             contractorVieuw.DensityOfField = densityOfField;
@@ -6479,66 +7291,17 @@ namespace RoadIt.Models
             contractorVieuw.Skidresistance = skidresistance;
             contractorVieuw.Iri = iri;
             contractorVieuw.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
+            contractorVieuw.QualtityTimeStamp = qualtityTimeStamp;
+            contractorVieuw.RoadId = roadId;
+            contractorVieuw.RoadDescription = roadDescription;
+            contractorVieuw.RoadSectionTimeStamp = roadSectionTimeStamp;
+            contractorVieuw.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
             return contractorVieuw;
         }
 
         #endregion
 
         #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 RoadId
-        {
-            get
-            {
-                return _RoadId;
-            }
-            set
-            {
-                if (_RoadId != value)
-                {
-                    OnRoadIdChanging(value);
-                    ReportPropertyChanging("RoadId");
-                    _RoadId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RoadId");
-                    OnRoadIdChanged();
-                }
-            }
-        }
-        private global::System.Int32 _RoadId;
-        partial void OnRoadIdChanging(global::System.Int32 value);
-        partial void OnRoadIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String RoadDescription
-        {
-            get
-            {
-                return _RoadDescription;
-            }
-            set
-            {
-                if (_RoadDescription != value)
-                {
-                    OnRoadDescriptionChanging(value);
-                    ReportPropertyChanging("RoadDescription");
-                    _RoadDescription = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("RoadDescription");
-                    OnRoadDescriptionChanged();
-                }
-            }
-        }
-        private global::System.String _RoadDescription;
-        partial void OnRoadDescriptionChanging(global::System.String value);
-        partial void OnRoadDescriptionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6626,27 +7389,27 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String TechnicalDataSheet
+        public global::System.DateTime PlanningTimeStamp
         {
             get
             {
-                return _TechnicalDataSheet;
+                return _PlanningTimeStamp;
             }
             set
             {
-                if (_TechnicalDataSheet != value)
+                if (_PlanningTimeStamp != value)
                 {
-                    OnTechnicalDataSheetChanging(value);
-                    ReportPropertyChanging("TechnicalDataSheet");
-                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TechnicalDataSheet");
-                    OnTechnicalDataSheetChanged();
+                    OnPlanningTimeStampChanging(value);
+                    ReportPropertyChanging("PlanningTimeStamp");
+                    _PlanningTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("PlanningTimeStamp");
+                    OnPlanningTimeStampChanged();
                 }
             }
         }
-        private global::System.String _TechnicalDataSheet;
-        partial void OnTechnicalDataSheetChanging(global::System.String value);
-        partial void OnTechnicalDataSheetChanged();
+        private global::System.DateTime _PlanningTimeStamp;
+        partial void OnPlanningTimeStampChanging(global::System.DateTime value);
+        partial void OnPlanningTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6674,6 +7437,33 @@ namespace RoadIt.Models
         private global::System.String _MixtureName;
         partial void OnMixtureNameChanging(global::System.String value);
         partial void OnMixtureNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TechnicalDataSheet
+        {
+            get
+            {
+                return _TechnicalDataSheet;
+            }
+            set
+            {
+                if (_TechnicalDataSheet != value)
+                {
+                    OnTechnicalDataSheetChanging(value);
+                    ReportPropertyChanging("TechnicalDataSheet");
+                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TechnicalDataSheet");
+                    OnTechnicalDataSheetChanged();
+                }
+            }
+        }
+        private global::System.String _TechnicalDataSheet;
+        partial void OnTechnicalDataSheetChanging(global::System.String value);
+        partial void OnTechnicalDataSheetChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6761,114 +7551,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ActualPosition
-        {
-            get
-            {
-                return _ActualPosition;
-            }
-            set
-            {
-                if (_ActualPosition != value)
-                {
-                    OnActualPositionChanging(value);
-                    ReportPropertyChanging("ActualPosition");
-                    _ActualPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ActualPosition");
-                    OnActualPositionChanged();
-                }
-            }
-        }
-        private global::System.String _ActualPosition;
-        partial void OnActualPositionChanging(global::System.String value);
-        partial void OnActualPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ActualPositionTimeStamp
-        {
-            get
-            {
-                return _ActualPositionTimeStamp;
-            }
-            set
-            {
-                if (_ActualPositionTimeStamp != value)
-                {
-                    OnActualPositionTimeStampChanging(value);
-                    ReportPropertyChanging("ActualPositionTimeStamp");
-                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ActualPositionTimeStamp");
-                    OnActualPositionTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ActualPositionTimeStamp;
-        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
-        partial void OnActualPositionTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ETA
-        {
-            get
-            {
-                return _ETA;
-            }
-            set
-            {
-                if (_ETA != value)
-                {
-                    OnETAChanging(value);
-                    ReportPropertyChanging("ETA");
-                    _ETA = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ETA");
-                    OnETAChanged();
-                }
-            }
-        }
-        private global::System.String _ETA;
-        partial void OnETAChanging(global::System.String value);
-        partial void OnETAChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ETATimeStamp
-        {
-            get
-            {
-                return _ETATimeStamp;
-            }
-            set
-            {
-                if (_ETATimeStamp != value)
-                {
-                    OnETATimeStampChanging(value);
-                    ReportPropertyChanging("ETATimeStamp");
-                    _ETATimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ETATimeStamp");
-                    OnETATimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ETATimeStamp;
-        partial void OnETATimeStampChanging(global::System.DateTime value);
-        partial void OnETATimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.DateTime RealArrivalTime
         {
             get
@@ -6950,6 +7632,33 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.DateTime ArrivalAtPlant
+        {
+            get
+            {
+                return _ArrivalAtPlant;
+            }
+            set
+            {
+                if (_ArrivalAtPlant != value)
+                {
+                    OnArrivalAtPlantChanging(value);
+                    ReportPropertyChanging("ArrivalAtPlant");
+                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ArrivalAtPlant");
+                    OnArrivalAtPlantChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ArrivalAtPlant;
+        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
+        partial void OnArrivalAtPlantChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime AttachmentToFinisherTime
         {
             get
@@ -6998,6 +7707,33 @@ namespace RoadIt.Models
         private global::System.String _AttachmentToFinisherPosition;
         partial void OnAttachmentToFinisherPositionChanging(global::System.String value);
         partial void OnAttachmentToFinisherPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TruckTimeStamp
+        {
+            get
+            {
+                return _TruckTimeStamp;
+            }
+            set
+            {
+                if (_TruckTimeStamp != value)
+                {
+                    OnTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TruckTimeStamp");
+                    _TruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TruckTimeStamp");
+                    OnTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TruckTimeStamp;
+        partial void OnTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTruckTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7058,6 +7794,141 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.String StopLocationUnforseenStop
+        {
+            get
+            {
+                return _StopLocationUnforseenStop;
+            }
+            set
+            {
+                if (_StopLocationUnforseenStop != value)
+                {
+                    OnStopLocationUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopLocationUnforseenStop");
+                    _StopLocationUnforseenStop = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("StopLocationUnforseenStop");
+                    OnStopLocationUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.String _StopLocationUnforseenStop;
+        partial void OnStopLocationUnforseenStopChanging(global::System.String value);
+        partial void OnStopLocationUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan StopTimeUnforseenStop
+        {
+            get
+            {
+                return _StopTimeUnforseenStop;
+            }
+            set
+            {
+                if (_StopTimeUnforseenStop != value)
+                {
+                    OnStopTimeUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopTimeUnforseenStop");
+                    _StopTimeUnforseenStop = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeUnforseenStop");
+                    OnStopTimeUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _StopTimeUnforseenStop;
+        partial void OnStopTimeUnforseenStopChanging(global::System.TimeSpan value);
+        partial void OnStopTimeUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime UnforseenStopTimeStamp
+        {
+            get
+            {
+                return _UnforseenStopTimeStamp;
+            }
+            set
+            {
+                if (_UnforseenStopTimeStamp != value)
+                {
+                    OnUnforseenStopTimeStampChanging(value);
+                    ReportPropertyChanging("UnforseenStopTimeStamp");
+                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("UnforseenStopTimeStamp");
+                    OnUnforseenStopTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _UnforseenStopTimeStamp;
+        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
+        partial void OnUnforseenStopTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ActualPosition
+        {
+            get
+            {
+                return _ActualPosition;
+            }
+            set
+            {
+                if (_ActualPosition != value)
+                {
+                    OnActualPositionChanging(value);
+                    ReportPropertyChanging("ActualPosition");
+                    _ActualPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ActualPosition");
+                    OnActualPositionChanged();
+                }
+            }
+        }
+        private global::System.String _ActualPosition;
+        partial void OnActualPositionChanging(global::System.String value);
+        partial void OnActualPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ActualPositionTimeStamp
+        {
+            get
+            {
+                return _ActualPositionTimeStamp;
+            }
+            set
+            {
+                if (_ActualPositionTimeStamp != value)
+                {
+                    OnActualPositionTimeStampChanging(value);
+                    ReportPropertyChanging("ActualPositionTimeStamp");
+                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ActualPositionTimeStamp");
+                    OnActualPositionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ActualPositionTimeStamp;
+        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
+        partial void OnActualPositionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.String ActualPositionReturn
         {
             get
@@ -7112,7 +7983,61 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ETAReturn
+        public global::System.TimeSpan ETA
+        {
+            get
+            {
+                return _ETA;
+            }
+            set
+            {
+                if (_ETA != value)
+                {
+                    OnETAChanging(value);
+                    ReportPropertyChanging("ETA");
+                    _ETA = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETA");
+                    OnETAChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _ETA;
+        partial void OnETAChanging(global::System.TimeSpan value);
+        partial void OnETAChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ETATimeStamp
+        {
+            get
+            {
+                return _ETATimeStamp;
+            }
+            set
+            {
+                if (_ETATimeStamp != value)
+                {
+                    OnETATimeStampChanging(value);
+                    ReportPropertyChanging("ETATimeStamp");
+                    _ETATimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETATimeStamp");
+                    OnETATimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ETATimeStamp;
+        partial void OnETATimeStampChanging(global::System.DateTime value);
+        partial void OnETATimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan ETAReturn
         {
             get
             {
@@ -7124,14 +8049,14 @@ namespace RoadIt.Models
                 {
                     OnETAReturnChanging(value);
                     ReportPropertyChanging("ETAReturn");
-                    _ETAReturn = StructuralObject.SetValidValue(value, false);
+                    _ETAReturn = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("ETAReturn");
                     OnETAReturnChanged();
                 }
             }
         }
-        private global::System.String _ETAReturn;
-        partial void OnETAReturnChanging(global::System.String value);
+        private global::System.TimeSpan _ETAReturn;
+        partial void OnETAReturnChanging(global::System.TimeSpan value);
         partial void OnETAReturnChanged();
     
         /// <summary>
@@ -7166,330 +8091,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime ArrivalAtPlant
-        {
-            get
-            {
-                return _ArrivalAtPlant;
-            }
-            set
-            {
-                if (_ArrivalAtPlant != value)
-                {
-                    OnArrivalAtPlantChanging(value);
-                    ReportPropertyChanging("ArrivalAtPlant");
-                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ArrivalAtPlant");
-                    OnArrivalAtPlantChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ArrivalAtPlant;
-        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
-        partial void OnArrivalAtPlantChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String UnforseenStopLocation
-        {
-            get
-            {
-                return _UnforseenStopLocation;
-            }
-            set
-            {
-                if (_UnforseenStopLocation != value)
-                {
-                    OnUnforseenStopLocationChanging(value);
-                    ReportPropertyChanging("UnforseenStopLocation");
-                    _UnforseenStopLocation = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("UnforseenStopLocation");
-                    OnUnforseenStopLocationChanged();
-                }
-            }
-        }
-        private global::System.String _UnforseenStopLocation;
-        partial void OnUnforseenStopLocationChanging(global::System.String value);
-        partial void OnUnforseenStopLocationChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan UnforseenStopTime
-        {
-            get
-            {
-                return _UnforseenStopTime;
-            }
-            set
-            {
-                if (_UnforseenStopTime != value)
-                {
-                    OnUnforseenStopTimeChanging(value);
-                    ReportPropertyChanging("UnforseenStopTime");
-                    _UnforseenStopTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTime");
-                    OnUnforseenStopTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _UnforseenStopTime;
-        partial void OnUnforseenStopTimeChanging(global::System.TimeSpan value);
-        partial void OnUnforseenStopTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime UnforseenStopTimeStamp
-        {
-            get
-            {
-                return _UnforseenStopTimeStamp;
-            }
-            set
-            {
-                if (_UnforseenStopTimeStamp != value)
-                {
-                    OnUnforseenStopTimeStampChanging(value);
-                    ReportPropertyChanging("UnforseenStopTimeStamp");
-                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTimeStamp");
-                    OnUnforseenStopTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _UnforseenStopTimeStamp;
-        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
-        partial void OnUnforseenStopTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 FinisherSpeed
-        {
-            get
-            {
-                return _FinisherSpeed;
-            }
-            set
-            {
-                if (_FinisherSpeed != value)
-                {
-                    OnFinisherSpeedChanging(value);
-                    ReportPropertyChanging("FinisherSpeed");
-                    _FinisherSpeed = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("FinisherSpeed");
-                    OnFinisherSpeedChanged();
-                }
-            }
-        }
-        private global::System.Int32 _FinisherSpeed;
-        partial void OnFinisherSpeedChanging(global::System.Int32 value);
-        partial void OnFinisherSpeedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime SpeedFinisherTimeStamp
-        {
-            get
-            {
-                return _SpeedFinisherTimeStamp;
-            }
-            set
-            {
-                if (_SpeedFinisherTimeStamp != value)
-                {
-                    OnSpeedFinisherTimeStampChanging(value);
-                    ReportPropertyChanging("SpeedFinisherTimeStamp");
-                    _SpeedFinisherTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("SpeedFinisherTimeStamp");
-                    OnSpeedFinisherTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _SpeedFinisherTimeStamp;
-        partial void OnSpeedFinisherTimeStampChanging(global::System.DateTime value);
-        partial void OnSpeedFinisherTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AngleLeft
-        {
-            get
-            {
-                return _AngleLeft;
-            }
-            set
-            {
-                if (_AngleLeft != value)
-                {
-                    OnAngleLeftChanging(value);
-                    ReportPropertyChanging("AngleLeft");
-                    _AngleLeft = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AngleLeft");
-                    OnAngleLeftChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AngleLeft;
-        partial void OnAngleLeftChanging(global::System.Int32 value);
-        partial void OnAngleLeftChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AngleRight
-        {
-            get
-            {
-                return _AngleRight;
-            }
-            set
-            {
-                if (_AngleRight != value)
-                {
-                    OnAngleRightChanging(value);
-                    ReportPropertyChanging("AngleRight");
-                    _AngleRight = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AngleRight");
-                    OnAngleRightChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AngleRight;
-        partial void OnAngleRightChanging(global::System.Int32 value);
-        partial void OnAngleRightChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Width
-        {
-            get
-            {
-                return _Width;
-            }
-            set
-            {
-                if (_Width != value)
-                {
-                    OnWidthChanging(value);
-                    ReportPropertyChanging("Width");
-                    _Width = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Width");
-                    OnWidthChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Width;
-        partial void OnWidthChanging(global::System.Int32 value);
-        partial void OnWidthChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessLeft
-        {
-            get
-            {
-                return _ThicknessLeft;
-            }
-            set
-            {
-                if (_ThicknessLeft != value)
-                {
-                    OnThicknessLeftChanging(value);
-                    ReportPropertyChanging("ThicknessLeft");
-                    _ThicknessLeft = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessLeft");
-                    OnThicknessLeftChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessLeft;
-        partial void OnThicknessLeftChanging(global::System.Int32 value);
-        partial void OnThicknessLeftChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessMiddel
-        {
-            get
-            {
-                return _ThicknessMiddel;
-            }
-            set
-            {
-                if (_ThicknessMiddel != value)
-                {
-                    OnThicknessMiddelChanging(value);
-                    ReportPropertyChanging("ThicknessMiddel");
-                    _ThicknessMiddel = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessMiddel");
-                    OnThicknessMiddelChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessMiddel;
-        partial void OnThicknessMiddelChanging(global::System.Int32 value);
-        partial void OnThicknessMiddelChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessRight
-        {
-            get
-            {
-                return _ThicknessRight;
-            }
-            set
-            {
-                if (_ThicknessRight != value)
-                {
-                    OnThicknessRightChanging(value);
-                    ReportPropertyChanging("ThicknessRight");
-                    _ThicknessRight = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessRight");
-                    OnThicknessRightChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessRight;
-        partial void OnThicknessRightChanging(global::System.Int32 value);
-        partial void OnThicknessRightChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 TranverseSlope
         {
             get
@@ -7517,87 +8118,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String StopLocation
-        {
-            get
-            {
-                return _StopLocation;
-            }
-            set
-            {
-                if (_StopLocation != value)
-                {
-                    OnStopLocationChanging(value);
-                    ReportPropertyChanging("StopLocation");
-                    _StopLocation = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("StopLocation");
-                    OnStopLocationChanged();
-                }
-            }
-        }
-        private global::System.String _StopLocation;
-        partial void OnStopLocationChanging(global::System.String value);
-        partial void OnStopLocationChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan StopTime
-        {
-            get
-            {
-                return _StopTime;
-            }
-            set
-            {
-                if (_StopTime != value)
-                {
-                    OnStopTimeChanging(value);
-                    ReportPropertyChanging("StopTime");
-                    _StopTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("StopTime");
-                    OnStopTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _StopTime;
-        partial void OnStopTimeChanging(global::System.TimeSpan value);
-        partial void OnStopTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime StopTimeStamp
-        {
-            get
-            {
-                return _StopTimeStamp;
-            }
-            set
-            {
-                if (_StopTimeStamp != value)
-                {
-                    OnStopTimeStampChanging(value);
-                    ReportPropertyChanging("StopTimeStamp");
-                    _StopTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("StopTimeStamp");
-                    OnStopTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _StopTimeStamp;
-        partial void OnStopTimeStampChanging(global::System.DateTime value);
-        partial void OnStopTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String Precipation
         {
             get
@@ -7619,6 +8139,168 @@ namespace RoadIt.Models
         private global::System.String _Precipation;
         partial void OnPrecipationChanging(global::System.String value);
         partial void OnPrecipationChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AsphaltTempAfterFinisherIrScanOrThermo
+        {
+            get
+            {
+                return _AsphaltTempAfterFinisherIrScanOrThermo;
+            }
+            set
+            {
+                if (_AsphaltTempAfterFinisherIrScanOrThermo != value)
+                {
+                    OnAsphaltTempAfterFinisherIrScanOrThermoChanging(value);
+                    ReportPropertyChanging("AsphaltTempAfterFinisherIrScanOrThermo");
+                    _AsphaltTempAfterFinisherIrScanOrThermo = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("AsphaltTempAfterFinisherIrScanOrThermo");
+                    OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+                }
+            }
+        }
+        private global::System.String _AsphaltTempAfterFinisherIrScanOrThermo;
+        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanging(global::System.String value);
+        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FinisherTimeStamp
+        {
+            get
+            {
+                return _FinisherTimeStamp;
+            }
+            set
+            {
+                if (_FinisherTimeStamp != value)
+                {
+                    OnFinisherTimeStampChanging(value);
+                    ReportPropertyChanging("FinisherTimeStamp");
+                    _FinisherTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FinisherTimeStamp");
+                    OnFinisherTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _FinisherTimeStamp;
+        partial void OnFinisherTimeStampChanging(global::System.DateTime value);
+        partial void OnFinisherTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 LeftTickness
+        {
+            get
+            {
+                return _LeftTickness;
+            }
+            set
+            {
+                if (_LeftTickness != value)
+                {
+                    OnLeftTicknessChanging(value);
+                    ReportPropertyChanging("LeftTickness");
+                    _LeftTickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("LeftTickness");
+                    OnLeftTicknessChanged();
+                }
+            }
+        }
+        private global::System.Int32 _LeftTickness;
+        partial void OnLeftTicknessChanging(global::System.Int32 value);
+        partial void OnLeftTicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 MiddelThickness
+        {
+            get
+            {
+                return _MiddelThickness;
+            }
+            set
+            {
+                if (_MiddelThickness != value)
+                {
+                    OnMiddelThicknessChanging(value);
+                    ReportPropertyChanging("MiddelThickness");
+                    _MiddelThickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MiddelThickness");
+                    OnMiddelThicknessChanged();
+                }
+            }
+        }
+        private global::System.Int32 _MiddelThickness;
+        partial void OnMiddelThicknessChanging(global::System.Int32 value);
+        partial void OnMiddelThicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RightThickness
+        {
+            get
+            {
+                return _RightThickness;
+            }
+            set
+            {
+                if (_RightThickness != value)
+                {
+                    OnRightThicknessChanging(value);
+                    ReportPropertyChanging("RightThickness");
+                    _RightThickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RightThickness");
+                    OnRightThicknessChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RightThickness;
+        partial void OnRightThicknessChanging(global::System.Int32 value);
+        partial void OnRightThicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ThicknessTimeStamp
+        {
+            get
+            {
+                return _ThicknessTimeStamp;
+            }
+            set
+            {
+                if (_ThicknessTimeStamp != value)
+                {
+                    OnThicknessTimeStampChanging(value);
+                    ReportPropertyChanging("ThicknessTimeStamp");
+                    _ThicknessTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ThicknessTimeStamp");
+                    OnThicknessTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ThicknessTimeStamp;
+        partial void OnThicknessTimeStampChanging(global::System.DateTime value);
+        partial void OnThicknessTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7673,6 +8355,60 @@ namespace RoadIt.Models
         private global::System.DateTime _WeatherTempTimeStamp;
         partial void OnWeatherTempTimeStampChanging(global::System.DateTime value);
         partial void OnWeatherTempTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Width
+        {
+            get
+            {
+                return _Width;
+            }
+            set
+            {
+                if (_Width != value)
+                {
+                    OnWidthChanging(value);
+                    ReportPropertyChanging("Width");
+                    _Width = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Width");
+                    OnWidthChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Width;
+        partial void OnWidthChanging(global::System.Int32 value);
+        partial void OnWidthChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime WidthTimeStamp
+        {
+            get
+            {
+                return _WidthTimeStamp;
+            }
+            set
+            {
+                if (_WidthTimeStamp != value)
+                {
+                    OnWidthTimeStampChanging(value);
+                    ReportPropertyChanging("WidthTimeStamp");
+                    _WidthTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("WidthTimeStamp");
+                    OnWidthTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _WidthTimeStamp;
+        partial void OnWidthTimeStampChanging(global::System.DateTime value);
+        partial void OnWidthTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7787,27 +8523,378 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String AsphaltTempAfterFinisherIrScanOrThermo
+        public global::System.Int32 LeftAngle
         {
             get
             {
-                return _AsphaltTempAfterFinisherIrScanOrThermo;
+                return _LeftAngle;
             }
             set
             {
-                if (_AsphaltTempAfterFinisherIrScanOrThermo != value)
+                if (_LeftAngle != value)
                 {
-                    OnAsphaltTempAfterFinisherIrScanOrThermoChanging(value);
-                    ReportPropertyChanging("AsphaltTempAfterFinisherIrScanOrThermo");
-                    _AsphaltTempAfterFinisherIrScanOrThermo = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("AsphaltTempAfterFinisherIrScanOrThermo");
-                    OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+                    OnLeftAngleChanging(value);
+                    ReportPropertyChanging("LeftAngle");
+                    _LeftAngle = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("LeftAngle");
+                    OnLeftAngleChanged();
                 }
             }
         }
-        private global::System.String _AsphaltTempAfterFinisherIrScanOrThermo;
-        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanging(global::System.String value);
-        partial void OnAsphaltTempAfterFinisherIrScanOrThermoChanged();
+        private global::System.Int32 _LeftAngle;
+        partial void OnLeftAngleChanging(global::System.Int32 value);
+        partial void OnLeftAngleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RightAngle
+        {
+            get
+            {
+                return _RightAngle;
+            }
+            set
+            {
+                if (_RightAngle != value)
+                {
+                    OnRightAngleChanging(value);
+                    ReportPropertyChanging("RightAngle");
+                    _RightAngle = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RightAngle");
+                    OnRightAngleChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RightAngle;
+        partial void OnRightAngleChanging(global::System.Int32 value);
+        partial void OnRightAngleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AngleTimestamp
+        {
+            get
+            {
+                return _AngleTimestamp;
+            }
+            set
+            {
+                if (_AngleTimestamp != value)
+                {
+                    OnAngleTimestampChanging(value);
+                    ReportPropertyChanging("AngleTimestamp");
+                    _AngleTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AngleTimestamp");
+                    OnAngleTimestampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AngleTimestamp;
+        partial void OnAngleTimestampChanging(global::System.DateTime value);
+        partial void OnAngleTimestampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Speed
+        {
+            get
+            {
+                return _Speed;
+            }
+            set
+            {
+                if (_Speed != value)
+                {
+                    OnSpeedChanging(value);
+                    ReportPropertyChanging("Speed");
+                    _Speed = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Speed");
+                    OnSpeedChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Speed;
+        partial void OnSpeedChanging(global::System.Int32 value);
+        partial void OnSpeedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime SpeedFinisherTimeStamp
+        {
+            get
+            {
+                return _SpeedFinisherTimeStamp;
+            }
+            set
+            {
+                if (_SpeedFinisherTimeStamp != value)
+                {
+                    OnSpeedFinisherTimeStampChanging(value);
+                    ReportPropertyChanging("SpeedFinisherTimeStamp");
+                    _SpeedFinisherTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SpeedFinisherTimeStamp");
+                    OnSpeedFinisherTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _SpeedFinisherTimeStamp;
+        partial void OnSpeedFinisherTimeStampChanging(global::System.DateTime value);
+        partial void OnSpeedFinisherTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StopLocationLTS
+        {
+            get
+            {
+                return _StopLocationLTS;
+            }
+            set
+            {
+                if (_StopLocationLTS != value)
+                {
+                    OnStopLocationLTSChanging(value);
+                    ReportPropertyChanging("StopLocationLTS");
+                    _StopLocationLTS = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("StopLocationLTS");
+                    OnStopLocationLTSChanged();
+                }
+            }
+        }
+        private global::System.String _StopLocationLTS;
+        partial void OnStopLocationLTSChanging(global::System.String value);
+        partial void OnStopLocationLTSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan StopTimeLTS
+        {
+            get
+            {
+                return _StopTimeLTS;
+            }
+            set
+            {
+                if (_StopTimeLTS != value)
+                {
+                    OnStopTimeLTSChanging(value);
+                    ReportPropertyChanging("StopTimeLTS");
+                    _StopTimeLTS = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeLTS");
+                    OnStopTimeLTSChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _StopTimeLTS;
+        partial void OnStopTimeLTSChanging(global::System.TimeSpan value);
+        partial void OnStopTimeLTSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime StopTimeStamp
+        {
+            get
+            {
+                return _StopTimeStamp;
+            }
+            set
+            {
+                if (_StopTimeStamp != value)
+                {
+                    OnStopTimeStampChanging(value);
+                    ReportPropertyChanging("StopTimeStamp");
+                    _StopTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeStamp");
+                    OnStopTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _StopTimeStamp;
+        partial void OnStopTimeStampChanging(global::System.DateTime value);
+        partial void OnStopTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String GPS
+        {
+            get
+            {
+                return _GPS;
+            }
+            set
+            {
+                if (_GPS != value)
+                {
+                    OnGPSChanging(value);
+                    ReportPropertyChanging("GPS");
+                    _GPS = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPS");
+                    OnGPSChanged();
+                }
+            }
+        }
+        private global::System.String _GPS;
+        partial void OnGPSChanging(global::System.String value);
+        partial void OnGPSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TempAsphalt
+        {
+            get
+            {
+                return _TempAsphalt;
+            }
+            set
+            {
+                if (_TempAsphalt != value)
+                {
+                    OnTempAsphaltChanging(value);
+                    ReportPropertyChanging("TempAsphalt");
+                    _TempAsphalt = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TempAsphalt");
+                    OnTempAsphaltChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TempAsphalt;
+        partial void OnTempAsphaltChanging(global::System.Int32 value);
+        partial void OnTempAsphaltChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltTempTimeStamp
+        {
+            get
+            {
+                return _AsphaltTempTimeStamp;
+            }
+            set
+            {
+                if (_AsphaltTempTimeStamp != value)
+                {
+                    OnAsphaltTempTimeStampChanging(value);
+                    ReportPropertyChanging("AsphaltTempTimeStamp");
+                    _AsphaltTempTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltTempTimeStamp");
+                    OnAsphaltTempTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AsphaltTempTimeStamp;
+        partial void OnAsphaltTempTimeStampChanging(global::System.DateTime value);
+        partial void OnAsphaltTempTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String GPSFinisher
+        {
+            get
+            {
+                return _GPSFinisher;
+            }
+            set
+            {
+                if (_GPSFinisher != value)
+                {
+                    OnGPSFinisherChanging(value);
+                    ReportPropertyChanging("GPSFinisher");
+                    _GPSFinisher = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPSFinisher");
+                    OnGPSFinisherChanged();
+                }
+            }
+        }
+        private global::System.String _GPSFinisher;
+        partial void OnGPSFinisherChanging(global::System.String value);
+        partial void OnGPSFinisherChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String GPSCompactor
+        {
+            get
+            {
+                return _GPSCompactor;
+            }
+            set
+            {
+                if (_GPSCompactor != value)
+                {
+                    OnGPSCompactorChanging(value);
+                    ReportPropertyChanging("GPSCompactor");
+                    _GPSCompactor = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPSCompactor");
+                    OnGPSCompactorChanged();
+                }
+            }
+        }
+        private global::System.String _GPSCompactor;
+        partial void OnGPSCompactorChanging(global::System.String value);
+        partial void OnGPSCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ColorCodeTimeStamp
+        {
+            get
+            {
+                return _ColorCodeTimeStamp;
+            }
+            set
+            {
+                if (_ColorCodeTimeStamp != value)
+                {
+                    OnColorCodeTimeStampChanging(value);
+                    ReportPropertyChanging("ColorCodeTimeStamp");
+                    _ColorCodeTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ColorCodeTimeStamp");
+                    OnColorCodeTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ColorCodeTimeStamp;
+        partial void OnColorCodeTimeStampChanging(global::System.DateTime value);
+        partial void OnColorCodeTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7895,60 +8982,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String GPSFinisher
-        {
-            get
-            {
-                return _GPSFinisher;
-            }
-            set
-            {
-                if (_GPSFinisher != value)
-                {
-                    OnGPSFinisherChanging(value);
-                    ReportPropertyChanging("GPSFinisher");
-                    _GPSFinisher = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("GPSFinisher");
-                    OnGPSFinisherChanged();
-                }
-            }
-        }
-        private global::System.String _GPSFinisher;
-        partial void OnGPSFinisherChanging(global::System.String value);
-        partial void OnGPSFinisherChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String GPSCompactor
-        {
-            get
-            {
-                return _GPSCompactor;
-            }
-            set
-            {
-                if (_GPSCompactor != value)
-                {
-                    OnGPSCompactorChanging(value);
-                    ReportPropertyChanging("GPSCompactor");
-                    _GPSCompactor = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("GPSCompactor");
-                    OnGPSCompactorChanged();
-                }
-            }
-        }
-        private global::System.String _GPSCompactor;
-        partial void OnGPSCompactorChanging(global::System.String value);
-        partial void OnGPSCompactorChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 SpeedOfRollerCompactor
         {
             get
@@ -7970,6 +9003,33 @@ namespace RoadIt.Models
         private global::System.Int32 _SpeedOfRollerCompactor;
         partial void OnSpeedOfRollerCompactorChanging(global::System.Int32 value);
         partial void OnSpeedOfRollerCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CompactorTimeStamp
+        {
+            get
+            {
+                return _CompactorTimeStamp;
+            }
+            set
+            {
+                if (_CompactorTimeStamp != value)
+                {
+                    OnCompactorTimeStampChanging(value);
+                    ReportPropertyChanging("CompactorTimeStamp");
+                    _CompactorTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompactorTimeStamp");
+                    OnCompactorTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _CompactorTimeStamp;
+        partial void OnCompactorTimeStampChanging(global::System.DateTime value);
+        partial void OnCompactorTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8186,104 +9246,33 @@ namespace RoadIt.Models
         private global::System.String _ExtraTestsAskedBijClient;
         partial void OnExtraTestsAskedBijClientChanging(global::System.String value);
         partial void OnExtraTestsAskedBijClientChanged();
-
-        #endregion
-
-    
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Copro")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Copro : EntityObject
-    {
-        #region Factory Method
     
         /// <summary>
-        /// Create a new Copro object.
+        /// No Metadata Documentation available.
         /// </summary>
-        /// <param name="roadId">Initial value of the RoadId property.</param>
-        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
-        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
-        /// <param name="mixtureName">Initial value of the MixtureName property.</param>
-        /// <param name="typeOfAggregates">Initial value of the TypeOfAggregates property.</param>
-        /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
-        /// <param name="aggragationMaxTemp">Initial value of the AggragationMaxTemp property.</param>
-        /// <param name="aggragationMinTemp">Initial value of the AggragationMinTemp property.</param>
-        /// <param name="aggragationTimeStamp">Initial value of the AggragationTimeStamp property.</param>
-        /// <param name="bitumenMaxTemp">Initial value of the BitumenMaxTemp property.</param>
-        /// <param name="bitumenMinTemp">Initial value of the BitumenMinTemp property.</param>
-        /// <param name="bitumenTimeStamp">Initial value of the BitumenTimeStamp property.</param>
-        /// <param name="fillerRecup">Initial value of the FillerRecup property.</param>
-        /// <param name="fillerRecupTimeStamp">Initial value of the FillerRecupTimeStamp property.</param>
-        /// <param name="mixingTemp">Initial value of the MixingTemp property.</param>
-        /// <param name="mixingTime">Initial value of the MixingTime property.</param>
-        /// <param name="massOfAggregationBunker1">Initial value of the MassOfAggregationBunker1 property.</param>
-        /// <param name="massOfAggregationBunker2">Initial value of the MassOfAggregationBunker2 property.</param>
-        /// <param name="massOfAggregationBunker3">Initial value of the MassOfAggregationBunker3 property.</param>
-        /// <param name="massOfAggregationBunker4">Initial value of the MassOfAggregationBunker4 property.</param>
-        /// <param name="massOfAggregationBunker5">Initial value of the MassOfAggregationBunker5 property.</param>
-        /// <param name="massOfAggregationBunker6">Initial value of the MassOfAggregationBunker6 property.</param>
-        /// <param name="filler">Initial value of the Filler property.</param>
-        /// <param name="bitumen">Initial value of the Bitumen property.</param>
-        /// <param name="additivesKg">Initial value of the AdditivesKg property.</param>
-        /// <param name="tempSilo">Initial value of the TempSilo property.</param>
-        /// <param name="analysisComposition">Initial value of the AnalysisComposition property.</param>
-        /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
-        /// <param name="departureTime">Initial value of the DepartureTime property.</param>
-        /// <param name="massTruck">Initial value of the MassTruck property.</param>
-        /// <param name="temp">Initial value of the Temp property.</param>
-        /// <param name="tempTruckTimeStamp">Initial value of the TempTruckTimeStamp property.</param>
-        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
-        /// <param name="samplesCopro">Initial value of the SamplesCopro property.</param>
-        /// <param name="extraTestsAskedBijClient">Initial value of the ExtraTestsAskedBijClient property.</param>
-        public static Copro CreateCopro(global::System.Int32 roadId, global::System.String roadDescription, global::System.String technicalDataSheet, global::System.String mixtureName, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.Int32 bitumenMaxTemp, global::System.Int32 bitumenMinTemp, global::System.DateTime bitumenTimeStamp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String qrCodeCompactor, global::System.String samplesCopro, global::System.String extraTestsAskedBijClient)
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime QualtityTimeStamp
         {
-            Copro copro = new Copro();
-            copro.RoadId = roadId;
-            copro.RoadDescription = roadDescription;
-            copro.TechnicalDataSheet = technicalDataSheet;
-            copro.MixtureName = mixtureName;
-            copro.TypeOfAggregates = typeOfAggregates;
-            copro.MixtureChange = mixtureChange;
-            copro.AggragationMaxTemp = aggragationMaxTemp;
-            copro.AggragationMinTemp = aggragationMinTemp;
-            copro.AggragationTimeStamp = aggragationTimeStamp;
-            copro.BitumenMaxTemp = bitumenMaxTemp;
-            copro.BitumenMinTemp = bitumenMinTemp;
-            copro.BitumenTimeStamp = bitumenTimeStamp;
-            copro.FillerRecup = fillerRecup;
-            copro.FillerRecupTimeStamp = fillerRecupTimeStamp;
-            copro.MixingTemp = mixingTemp;
-            copro.MixingTime = mixingTime;
-            copro.MassOfAggregationBunker1 = massOfAggregationBunker1;
-            copro.MassOfAggregationBunker2 = massOfAggregationBunker2;
-            copro.MassOfAggregationBunker3 = massOfAggregationBunker3;
-            copro.MassOfAggregationBunker4 = massOfAggregationBunker4;
-            copro.MassOfAggregationBunker5 = massOfAggregationBunker5;
-            copro.MassOfAggregationBunker6 = massOfAggregationBunker6;
-            copro.Filler = filler;
-            copro.Bitumen = bitumen;
-            copro.AdditivesKg = additivesKg;
-            copro.TempSilo = tempSilo;
-            copro.AnalysisComposition = analysisComposition;
-            copro.TruckLicensPlate = truckLicensPlate;
-            copro.DepartureTime = departureTime;
-            copro.MassTruck = massTruck;
-            copro.Temp = temp;
-            copro.TempTruckTimeStamp = tempTruckTimeStamp;
-            copro.QrCodeCompactor = qrCodeCompactor;
-            copro.SamplesCopro = samplesCopro;
-            copro.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
-            return copro;
+            get
+            {
+                return _QualtityTimeStamp;
+            }
+            set
+            {
+                if (_QualtityTimeStamp != value)
+                {
+                    OnQualtityTimeStampChanging(value);
+                    ReportPropertyChanging("QualtityTimeStamp");
+                    _QualtityTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("QualtityTimeStamp");
+                    OnQualtityTimeStampChanged();
+                }
+            }
         }
-
-        #endregion
-
-        #region Primitive Properties
+        private global::System.DateTime _QualtityTimeStamp;
+        partial void OnQualtityTimeStampChanging(global::System.DateTime value);
+        partial void OnQualtityTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8344,54 +9333,166 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String TechnicalDataSheet
+        public global::System.DateTime RoadSectionTimeStamp
         {
             get
             {
-                return _TechnicalDataSheet;
+                return _RoadSectionTimeStamp;
             }
             set
             {
-                if (_TechnicalDataSheet != value)
+                if (_RoadSectionTimeStamp != value)
                 {
-                    OnTechnicalDataSheetChanging(value);
-                    ReportPropertyChanging("TechnicalDataSheet");
-                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TechnicalDataSheet");
-                    OnTechnicalDataSheetChanged();
+                    OnRoadSectionTimeStampChanging(value);
+                    ReportPropertyChanging("RoadSectionTimeStamp");
+                    _RoadSectionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadSectionTimeStamp");
+                    OnRoadSectionTimeStampChanged();
                 }
             }
         }
-        private global::System.String _TechnicalDataSheet;
-        partial void OnTechnicalDataSheetChanging(global::System.String value);
-        partial void OnTechnicalDataSheetChanged();
+        private global::System.DateTime _RoadSectionTimeStamp;
+        partial void OnRoadSectionTimeStampChanging(global::System.DateTime value);
+        partial void OnRoadSectionTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String MixtureName
+        public global::System.DateTime AsphaltMixPlantTimestamp
         {
             get
             {
-                return _MixtureName;
+                return _AsphaltMixPlantTimestamp;
             }
             set
             {
-                if (_MixtureName != value)
+                if (_AsphaltMixPlantTimestamp != value)
                 {
-                    OnMixtureNameChanging(value);
-                    ReportPropertyChanging("MixtureName");
-                    _MixtureName = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("MixtureName");
-                    OnMixtureNameChanged();
+                    OnAsphaltMixPlantTimestampChanging(value);
+                    ReportPropertyChanging("AsphaltMixPlantTimestamp");
+                    _AsphaltMixPlantTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltMixPlantTimestamp");
+                    OnAsphaltMixPlantTimestampChanged();
                 }
             }
         }
-        private global::System.String _MixtureName;
-        partial void OnMixtureNameChanging(global::System.String value);
-        partial void OnMixtureNameChanged();
+        private global::System.DateTime _AsphaltMixPlantTimestamp;
+        partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
+        partial void OnAsphaltMixPlantTimestampChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Copro")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Copro : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Copro object.
+        /// </summary>
+        /// <param name="typeOfAggregates">Initial value of the TypeOfAggregates property.</param>
+        /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
+        /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
+        /// <param name="aggragationMaxTemp">Initial value of the AggragationMaxTemp property.</param>
+        /// <param name="aggragationMinTemp">Initial value of the AggragationMinTemp property.</param>
+        /// <param name="aggragationTimeStamp">Initial value of the AggragationTimeStamp property.</param>
+        /// <param name="bitumenTimeStamp">Initial value of the BitumenTimeStamp property.</param>
+        /// <param name="bitumenMinTemp">Initial value of the BitumenMinTemp property.</param>
+        /// <param name="bitumenMaxTemp">Initial value of the BitumenMaxTemp property.</param>
+        /// <param name="fillerRecup">Initial value of the FillerRecup property.</param>
+        /// <param name="fillerRecupTimeStamp">Initial value of the FillerRecupTimeStamp property.</param>
+        /// <param name="massOfAggregationBunker1">Initial value of the MassOfAggregationBunker1 property.</param>
+        /// <param name="massOfAggregationBunker2">Initial value of the MassOfAggregationBunker2 property.</param>
+        /// <param name="massOfAggregationBunker3">Initial value of the MassOfAggregationBunker3 property.</param>
+        /// <param name="massOfAggregationBunker4">Initial value of the MassOfAggregationBunker4 property.</param>
+        /// <param name="massOfAggregationBunker5">Initial value of the MassOfAggregationBunker5 property.</param>
+        /// <param name="massOfAggregationBunker6">Initial value of the MassOfAggregationBunker6 property.</param>
+        /// <param name="filler">Initial value of the Filler property.</param>
+        /// <param name="bitumen">Initial value of the Bitumen property.</param>
+        /// <param name="additivesKg">Initial value of the AdditivesKg property.</param>
+        /// <param name="compositionTimeStamp">Initial value of the CompositionTimeStamp property.</param>
+        /// <param name="mixingTemp">Initial value of the MixingTemp property.</param>
+        /// <param name="mixingTime">Initial value of the MixingTime property.</param>
+        /// <param name="tempSilo">Initial value of the TempSilo property.</param>
+        /// <param name="analysisComposition">Initial value of the AnalysisComposition property.</param>
+        /// <param name="siloTimpStamp">Initial value of the SiloTimpStamp property.</param>
+        /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
+        /// <param name="departureTime">Initial value of the DepartureTime property.</param>
+        /// <param name="massTruck">Initial value of the MassTruck property.</param>
+        /// <param name="temp">Initial value of the Temp property.</param>
+        /// <param name="tempTruckTimeStamp">Initial value of the TempTruckTimeStamp property.</param>
+        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
+        /// <param name="samplesCopro">Initial value of the SamplesCopro property.</param>
+        /// <param name="extraTestsAskedBijClient">Initial value of the ExtraTestsAskedBijClient property.</param>
+        /// <param name="qualtityTimeStamp">Initial value of the QualtityTimeStamp property.</param>
+        /// <param name="roadId">Initial value of the RoadId property.</param>
+        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
+        /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
+        /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
+        /// <param name="mixtureName">Initial value of the MixtureName property.</param>
+        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
+        /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
+        public static Copro CreateCopro(global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String qrCodeCompactor, global::System.String samplesCopro, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime compactorTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.DateTime truckTimeStamp)
+        {
+            Copro copro = new Copro();
+            copro.TypeOfAggregates = typeOfAggregates;
+            copro.MixtureChange = mixtureChange;
+            copro.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
+            copro.AggragationMaxTemp = aggragationMaxTemp;
+            copro.AggragationMinTemp = aggragationMinTemp;
+            copro.AggragationTimeStamp = aggragationTimeStamp;
+            copro.BitumenTimeStamp = bitumenTimeStamp;
+            copro.BitumenMinTemp = bitumenMinTemp;
+            copro.BitumenMaxTemp = bitumenMaxTemp;
+            copro.FillerRecup = fillerRecup;
+            copro.FillerRecupTimeStamp = fillerRecupTimeStamp;
+            copro.MassOfAggregationBunker1 = massOfAggregationBunker1;
+            copro.MassOfAggregationBunker2 = massOfAggregationBunker2;
+            copro.MassOfAggregationBunker3 = massOfAggregationBunker3;
+            copro.MassOfAggregationBunker4 = massOfAggregationBunker4;
+            copro.MassOfAggregationBunker5 = massOfAggregationBunker5;
+            copro.MassOfAggregationBunker6 = massOfAggregationBunker6;
+            copro.Filler = filler;
+            copro.Bitumen = bitumen;
+            copro.AdditivesKg = additivesKg;
+            copro.CompositionTimeStamp = compositionTimeStamp;
+            copro.MixingTemp = mixingTemp;
+            copro.MixingTime = mixingTime;
+            copro.TempSilo = tempSilo;
+            copro.AnalysisComposition = analysisComposition;
+            copro.SiloTimpStamp = siloTimpStamp;
+            copro.TruckLicensPlate = truckLicensPlate;
+            copro.DepartureTime = departureTime;
+            copro.MassTruck = massTruck;
+            copro.Temp = temp;
+            copro.TempTruckTimeStamp = tempTruckTimeStamp;
+            copro.QrCodeCompactor = qrCodeCompactor;
+            copro.SamplesCopro = samplesCopro;
+            copro.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
+            copro.QualtityTimeStamp = qualtityTimeStamp;
+            copro.RoadId = roadId;
+            copro.RoadDescription = roadDescription;
+            copro.RoadSectionTimeStamp = roadSectionTimeStamp;
+            copro.CompactorTimeStamp = compactorTimeStamp;
+            copro.MixtureName = mixtureName;
+            copro.TechnicalDataSheet = technicalDataSheet;
+            copro.TruckTimeStamp = truckTimeStamp;
+            return copro;
+        }
+
+        #endregion
+
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8446,6 +9547,33 @@ namespace RoadIt.Models
         private global::System.String _MixtureChange;
         partial void OnMixtureChangeChanging(global::System.String value);
         partial void OnMixtureChangeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltMixPlantTimestamp
+        {
+            get
+            {
+                return _AsphaltMixPlantTimestamp;
+            }
+            set
+            {
+                if (_AsphaltMixPlantTimestamp != value)
+                {
+                    OnAsphaltMixPlantTimestampChanging(value);
+                    ReportPropertyChanging("AsphaltMixPlantTimestamp");
+                    _AsphaltMixPlantTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltMixPlantTimestamp");
+                    OnAsphaltMixPlantTimestampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AsphaltMixPlantTimestamp;
+        partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
+        partial void OnAsphaltMixPlantTimestampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8533,27 +9661,27 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 BitumenMaxTemp
+        public global::System.DateTime BitumenTimeStamp
         {
             get
             {
-                return _BitumenMaxTemp;
+                return _BitumenTimeStamp;
             }
             set
             {
-                if (_BitumenMaxTemp != value)
+                if (_BitumenTimeStamp != value)
                 {
-                    OnBitumenMaxTempChanging(value);
-                    ReportPropertyChanging("BitumenMaxTemp");
-                    _BitumenMaxTemp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("BitumenMaxTemp");
-                    OnBitumenMaxTempChanged();
+                    OnBitumenTimeStampChanging(value);
+                    ReportPropertyChanging("BitumenTimeStamp");
+                    _BitumenTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BitumenTimeStamp");
+                    OnBitumenTimeStampChanged();
                 }
             }
         }
-        private global::System.Int32 _BitumenMaxTemp;
-        partial void OnBitumenMaxTempChanging(global::System.Int32 value);
-        partial void OnBitumenMaxTempChanged();
+        private global::System.DateTime _BitumenTimeStamp;
+        partial void OnBitumenTimeStampChanging(global::System.DateTime value);
+        partial void OnBitumenTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8587,27 +9715,27 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime BitumenTimeStamp
+        public global::System.Int32 BitumenMaxTemp
         {
             get
             {
-                return _BitumenTimeStamp;
+                return _BitumenMaxTemp;
             }
             set
             {
-                if (_BitumenTimeStamp != value)
+                if (_BitumenMaxTemp != value)
                 {
-                    OnBitumenTimeStampChanging(value);
-                    ReportPropertyChanging("BitumenTimeStamp");
-                    _BitumenTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("BitumenTimeStamp");
-                    OnBitumenTimeStampChanged();
+                    OnBitumenMaxTempChanging(value);
+                    ReportPropertyChanging("BitumenMaxTemp");
+                    _BitumenMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BitumenMaxTemp");
+                    OnBitumenMaxTempChanged();
                 }
             }
         }
-        private global::System.DateTime _BitumenTimeStamp;
-        partial void OnBitumenTimeStampChanging(global::System.DateTime value);
-        partial void OnBitumenTimeStampChanged();
+        private global::System.Int32 _BitumenMaxTemp;
+        partial void OnBitumenMaxTempChanging(global::System.Int32 value);
+        partial void OnBitumenMaxTempChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8662,60 +9790,6 @@ namespace RoadIt.Models
         private global::System.DateTime _FillerRecupTimeStamp;
         partial void OnFillerRecupTimeStampChanging(global::System.DateTime value);
         partial void OnFillerRecupTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 MixingTemp
-        {
-            get
-            {
-                return _MixingTemp;
-            }
-            set
-            {
-                if (_MixingTemp != value)
-                {
-                    OnMixingTempChanging(value);
-                    ReportPropertyChanging("MixingTemp");
-                    _MixingTemp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MixingTemp");
-                    OnMixingTempChanged();
-                }
-            }
-        }
-        private global::System.Int32 _MixingTemp;
-        partial void OnMixingTempChanging(global::System.Int32 value);
-        partial void OnMixingTempChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan MixingTime
-        {
-            get
-            {
-                return _MixingTime;
-            }
-            set
-            {
-                if (_MixingTime != value)
-                {
-                    OnMixingTimeChanging(value);
-                    ReportPropertyChanging("MixingTime");
-                    _MixingTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MixingTime");
-                    OnMixingTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _MixingTime;
-        partial void OnMixingTimeChanging(global::System.TimeSpan value);
-        partial void OnMixingTimeChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8965,6 +10039,87 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.DateTime CompositionTimeStamp
+        {
+            get
+            {
+                return _CompositionTimeStamp;
+            }
+            set
+            {
+                if (_CompositionTimeStamp != value)
+                {
+                    OnCompositionTimeStampChanging(value);
+                    ReportPropertyChanging("CompositionTimeStamp");
+                    _CompositionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompositionTimeStamp");
+                    OnCompositionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _CompositionTimeStamp;
+        partial void OnCompositionTimeStampChanging(global::System.DateTime value);
+        partial void OnCompositionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 MixingTemp
+        {
+            get
+            {
+                return _MixingTemp;
+            }
+            set
+            {
+                if (_MixingTemp != value)
+                {
+                    OnMixingTempChanging(value);
+                    ReportPropertyChanging("MixingTemp");
+                    _MixingTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MixingTemp");
+                    OnMixingTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _MixingTemp;
+        partial void OnMixingTempChanging(global::System.Int32 value);
+        partial void OnMixingTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan MixingTime
+        {
+            get
+            {
+                return _MixingTime;
+            }
+            set
+            {
+                if (_MixingTime != value)
+                {
+                    OnMixingTimeChanging(value);
+                    ReportPropertyChanging("MixingTime");
+                    _MixingTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MixingTime");
+                    OnMixingTimeChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _MixingTime;
+        partial void OnMixingTimeChanging(global::System.TimeSpan value);
+        partial void OnMixingTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.Int32 TempSilo
         {
             get
@@ -9013,6 +10168,33 @@ namespace RoadIt.Models
         private global::System.String _AnalysisComposition;
         partial void OnAnalysisCompositionChanging(global::System.String value);
         partial void OnAnalysisCompositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime SiloTimpStamp
+        {
+            get
+            {
+                return _SiloTimpStamp;
+            }
+            set
+            {
+                if (_SiloTimpStamp != value)
+                {
+                    OnSiloTimpStampChanging(value);
+                    ReportPropertyChanging("SiloTimpStamp");
+                    _SiloTimpStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SiloTimpStamp");
+                    OnSiloTimpStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _SiloTimpStamp;
+        partial void OnSiloTimpStampChanging(global::System.DateTime value);
+        partial void OnSiloTimpStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9229,6 +10411,222 @@ namespace RoadIt.Models
         private global::System.String _ExtraTestsAskedBijClient;
         partial void OnExtraTestsAskedBijClientChanging(global::System.String value);
         partial void OnExtraTestsAskedBijClientChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime QualtityTimeStamp
+        {
+            get
+            {
+                return _QualtityTimeStamp;
+            }
+            set
+            {
+                if (_QualtityTimeStamp != value)
+                {
+                    OnQualtityTimeStampChanging(value);
+                    ReportPropertyChanging("QualtityTimeStamp");
+                    _QualtityTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("QualtityTimeStamp");
+                    OnQualtityTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _QualtityTimeStamp;
+        partial void OnQualtityTimeStampChanging(global::System.DateTime value);
+        partial void OnQualtityTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RoadId
+        {
+            get
+            {
+                return _RoadId;
+            }
+            set
+            {
+                if (_RoadId != value)
+                {
+                    OnRoadIdChanging(value);
+                    ReportPropertyChanging("RoadId");
+                    _RoadId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadId");
+                    OnRoadIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RoadId;
+        partial void OnRoadIdChanging(global::System.Int32 value);
+        partial void OnRoadIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RoadDescription
+        {
+            get
+            {
+                return _RoadDescription;
+            }
+            set
+            {
+                if (_RoadDescription != value)
+                {
+                    OnRoadDescriptionChanging(value);
+                    ReportPropertyChanging("RoadDescription");
+                    _RoadDescription = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("RoadDescription");
+                    OnRoadDescriptionChanged();
+                }
+            }
+        }
+        private global::System.String _RoadDescription;
+        partial void OnRoadDescriptionChanging(global::System.String value);
+        partial void OnRoadDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime RoadSectionTimeStamp
+        {
+            get
+            {
+                return _RoadSectionTimeStamp;
+            }
+            set
+            {
+                if (_RoadSectionTimeStamp != value)
+                {
+                    OnRoadSectionTimeStampChanging(value);
+                    ReportPropertyChanging("RoadSectionTimeStamp");
+                    _RoadSectionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadSectionTimeStamp");
+                    OnRoadSectionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _RoadSectionTimeStamp;
+        partial void OnRoadSectionTimeStampChanging(global::System.DateTime value);
+        partial void OnRoadSectionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CompactorTimeStamp
+        {
+            get
+            {
+                return _CompactorTimeStamp;
+            }
+            set
+            {
+                if (_CompactorTimeStamp != value)
+                {
+                    OnCompactorTimeStampChanging(value);
+                    ReportPropertyChanging("CompactorTimeStamp");
+                    _CompactorTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompactorTimeStamp");
+                    OnCompactorTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _CompactorTimeStamp;
+        partial void OnCompactorTimeStampChanging(global::System.DateTime value);
+        partial void OnCompactorTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String MixtureName
+        {
+            get
+            {
+                return _MixtureName;
+            }
+            set
+            {
+                if (_MixtureName != value)
+                {
+                    OnMixtureNameChanging(value);
+                    ReportPropertyChanging("MixtureName");
+                    _MixtureName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("MixtureName");
+                    OnMixtureNameChanged();
+                }
+            }
+        }
+        private global::System.String _MixtureName;
+        partial void OnMixtureNameChanging(global::System.String value);
+        partial void OnMixtureNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TechnicalDataSheet
+        {
+            get
+            {
+                return _TechnicalDataSheet;
+            }
+            set
+            {
+                if (_TechnicalDataSheet != value)
+                {
+                    OnTechnicalDataSheetChanging(value);
+                    ReportPropertyChanging("TechnicalDataSheet");
+                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TechnicalDataSheet");
+                    OnTechnicalDataSheetChanged();
+                }
+            }
+        }
+        private global::System.String _TechnicalDataSheet;
+        partial void OnTechnicalDataSheetChanging(global::System.String value);
+        partial void OnTechnicalDataSheetChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TruckTimeStamp
+        {
+            get
+            {
+                return _TruckTimeStamp;
+            }
+            set
+            {
+                if (_TruckTimeStamp != value)
+                {
+                    OnTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TruckTimeStamp");
+                    _TruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TruckTimeStamp");
+                    OnTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TruckTimeStamp;
+        partial void OnTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTruckTimeStampChanged();
 
         #endregion
 
@@ -9238,7 +10636,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="ETA")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ETA")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ETA : EntityObject
@@ -9251,7 +10649,7 @@ namespace RoadIt.Models
         /// <param name="eTAId">Initial value of the ETAId property.</param>
         /// <param name="eTA1">Initial value of the ETA1 property.</param>
         /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
-        public static ETA CreateETA(global::System.Int32 eTAId, global::System.String eTA1, global::System.DateTime eTATimeStamp)
+        public static ETA CreateETA(global::System.Int32 eTAId, global::System.TimeSpan eTA1, global::System.DateTime eTATimeStamp)
         {
             ETA eTA = new ETA();
             eTA.ETAId = eTAId;
@@ -9296,7 +10694,7 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ETA1
+        public global::System.TimeSpan ETA1
         {
             get
             {
@@ -9306,13 +10704,13 @@ namespace RoadIt.Models
             {
                 OnETA1Changing(value);
                 ReportPropertyChanging("ETA1");
-                _ETA1 = StructuralObject.SetValidValue(value, false);
+                _ETA1 = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ETA1");
                 OnETA1Changed();
             }
         }
-        private global::System.String _ETA1;
-        partial void OnETA1Changing(global::System.String value);
+        private global::System.TimeSpan _ETA1;
+        partial void OnETA1Changing(global::System.TimeSpan value);
         partial void OnETA1Changed();
     
         /// <summary>
@@ -9350,18 +10748,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_4", "Truck")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_4", "Truck")]
         public EntityCollection<Truck> Trucks
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_4", "Truck");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("roaditModel.Truck_ibfk_4", "Truck");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_4", "Truck", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("roaditModel.Truck_ibfk_4", "Truck", value);
                 }
             }
         }
@@ -9373,7 +10771,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="ETAReturn")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ETAReturn")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ETAReturn : EntityObject
@@ -9384,13 +10782,13 @@ namespace RoadIt.Models
         /// Create a new ETAReturn object.
         /// </summary>
         /// <param name="eTAReturnId">Initial value of the ETAReturnId property.</param>
-        /// <param name="eTA">Initial value of the ETA property.</param>
+        /// <param name="eTAReturn1">Initial value of the ETAReturn1 property.</param>
         /// <param name="eTAReturnTimeStamp">Initial value of the ETAReturnTimeStamp property.</param>
-        public static ETAReturn CreateETAReturn(global::System.Int32 eTAReturnId, global::System.String eTA, global::System.DateTime eTAReturnTimeStamp)
+        public static ETAReturn CreateETAReturn(global::System.Int32 eTAReturnId, global::System.TimeSpan eTAReturn1, global::System.DateTime eTAReturnTimeStamp)
         {
             ETAReturn eTAReturn = new ETAReturn();
             eTAReturn.ETAReturnId = eTAReturnId;
-            eTAReturn.ETA = eTA;
+            eTAReturn.ETAReturn1 = eTAReturn1;
             eTAReturn.ETAReturnTimeStamp = eTAReturnTimeStamp;
             return eTAReturn;
         }
@@ -9431,24 +10829,24 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ETA
+        public global::System.TimeSpan ETAReturn1
         {
             get
             {
-                return _ETA;
+                return _ETAReturn1;
             }
             set
             {
-                OnETAChanging(value);
-                ReportPropertyChanging("ETA");
-                _ETA = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("ETA");
-                OnETAChanged();
+                OnETAReturn1Changing(value);
+                ReportPropertyChanging("ETAReturn1");
+                _ETAReturn1 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ETAReturn1");
+                OnETAReturn1Changed();
             }
         }
-        private global::System.String _ETA;
-        partial void OnETAChanging(global::System.String value);
-        partial void OnETAChanged();
+        private global::System.TimeSpan _ETAReturn1;
+        partial void OnETAReturn1Changing(global::System.TimeSpan value);
+        partial void OnETAReturn1Changed();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9485,18 +10883,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_6", "Truck")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_6", "Truck")]
         public EntityCollection<Truck> Trucks
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_6", "Truck");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("roaditModel.Truck_ibfk_6", "Truck");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_6", "Truck", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("roaditModel.Truck_ibfk_6", "Truck", value);
                 }
             }
         }
@@ -9508,7 +10906,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Finisher")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Finisher")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Finisher : EntityObject
@@ -9531,7 +10929,8 @@ namespace RoadIt.Models
         /// <param name="airHumidityId">Initial value of the AirHumidityId property.</param>
         /// <param name="asphaltTempAfterFinisherIrScanOrThermo">Initial value of the AsphaltTempAfterFinisherIrScanOrThermo property.</param>
         /// <param name="asphaltTempId">Initial value of the AsphaltTempId property.</param>
-        public static Finisher CreateFinisher(global::System.Int32 finicherId, global::System.Int32 speedId, global::System.Int32 angleId, global::System.Int32 widthId, global::System.Int32 thicknessLayerId, global::System.Int32 tranverseSlope, global::System.Int32 locationAndTimeSpanId, global::System.String precipation, global::System.Int32 tempId, global::System.Int32 windId, global::System.Int32 airHumidityId, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.Int32 asphaltTempId)
+        /// <param name="finisherTimeStamp">Initial value of the FinisherTimeStamp property.</param>
+        public static Finisher CreateFinisher(global::System.Int32 finicherId, global::System.Int32 speedId, global::System.Int32 angleId, global::System.Int32 widthId, global::System.Int32 thicknessLayerId, global::System.Int32 tranverseSlope, global::System.Int32 locationAndTimeSpanId, global::System.String precipation, global::System.Int32 tempId, global::System.Int32 windId, global::System.Int32 airHumidityId, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.Int32 asphaltTempId, global::System.DateTime finisherTimeStamp)
         {
             Finisher finisher = new Finisher();
             finisher.FinicherId = finicherId;
@@ -9547,6 +10946,7 @@ namespace RoadIt.Models
             finisher.AirHumidityId = airHumidityId;
             finisher.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
             finisher.AsphaltTempId = asphaltTempId;
+            finisher.FinisherTimeStamp = finisherTimeStamp;
             return finisher;
         }
 
@@ -9868,6 +11268,30 @@ namespace RoadIt.Models
         private global::System.Int32 _AsphaltTempId;
         partial void OnAsphaltTempIdChanging(global::System.Int32 value);
         partial void OnAsphaltTempIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FinisherTimeStamp
+        {
+            get
+            {
+                return _FinisherTimeStamp;
+            }
+            set
+            {
+                OnFinisherTimeStampChanging(value);
+                ReportPropertyChanging("FinisherTimeStamp");
+                _FinisherTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FinisherTimeStamp");
+                OnFinisherTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _FinisherTimeStamp;
+        partial void OnFinisherTimeStampChanging(global::System.DateTime value);
+        partial void OnFinisherTimeStampChanged();
 
         #endregion
 
@@ -9880,16 +11304,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_7", "AirHumidity")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_7", "AirHumidity")]
         public AirHumidity AirHumidity
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AirHumidity>("RoadItEntitiesModel.Finisher_ibfk_7", "AirHumidity").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AirHumidity>("roaditModel.Finisher_ibfk_7", "AirHumidity").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AirHumidity>("RoadItEntitiesModel.Finisher_ibfk_7", "AirHumidity").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AirHumidity>("roaditModel.Finisher_ibfk_7", "AirHumidity").Value = value;
             }
         }
         /// <summary>
@@ -9901,13 +11325,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AirHumidity>("RoadItEntitiesModel.Finisher_ibfk_7", "AirHumidity");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AirHumidity>("roaditModel.Finisher_ibfk_7", "AirHumidity");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AirHumidity>("RoadItEntitiesModel.Finisher_ibfk_7", "AirHumidity", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AirHumidity>("roaditModel.Finisher_ibfk_7", "AirHumidity", value);
                 }
             }
         }
@@ -9918,16 +11342,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_2", "Angle")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_2", "Angle")]
         public Angle Angle
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Angle>("RoadItEntitiesModel.Finisher_ibfk_2", "Angle").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Angle>("roaditModel.Finisher_ibfk_2", "Angle").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Angle>("RoadItEntitiesModel.Finisher_ibfk_2", "Angle").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Angle>("roaditModel.Finisher_ibfk_2", "Angle").Value = value;
             }
         }
         /// <summary>
@@ -9939,13 +11363,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Angle>("RoadItEntitiesModel.Finisher_ibfk_2", "Angle");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Angle>("roaditModel.Finisher_ibfk_2", "Angle");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Angle>("RoadItEntitiesModel.Finisher_ibfk_2", "Angle", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Angle>("roaditModel.Finisher_ibfk_2", "Angle", value);
                 }
             }
         }
@@ -9956,16 +11380,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_8", "AsphaltTemp")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_8", "AsphaltTemp")]
         public AsphaltTemp AsphaltTemp
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltTemp>("RoadItEntitiesModel.Finisher_ibfk_8", "AsphaltTemp").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltTemp>("roaditModel.Finisher_ibfk_8", "AsphaltTemp").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltTemp>("RoadItEntitiesModel.Finisher_ibfk_8", "AsphaltTemp").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltTemp>("roaditModel.Finisher_ibfk_8", "AsphaltTemp").Value = value;
             }
         }
         /// <summary>
@@ -9977,13 +11401,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltTemp>("RoadItEntitiesModel.Finisher_ibfk_8", "AsphaltTemp");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltTemp>("roaditModel.Finisher_ibfk_8", "AsphaltTemp");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AsphaltTemp>("RoadItEntitiesModel.Finisher_ibfk_8", "AsphaltTemp", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AsphaltTemp>("roaditModel.Finisher_ibfk_8", "AsphaltTemp", value);
                 }
             }
         }
@@ -9994,16 +11418,38 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_1", "SpeedFinisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_4", "BatchList")]
+        public EntityCollection<BatchList> BatchLists
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_4", "BatchList");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_4", "BatchList", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_1", "SpeedFinisher")]
         public SpeedFinisher SpeedFinisher
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SpeedFinisher>("RoadItEntitiesModel.Finisher_ibfk_1", "SpeedFinisher").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SpeedFinisher>("roaditModel.Finisher_ibfk_1", "SpeedFinisher").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SpeedFinisher>("RoadItEntitiesModel.Finisher_ibfk_1", "SpeedFinisher").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SpeedFinisher>("roaditModel.Finisher_ibfk_1", "SpeedFinisher").Value = value;
             }
         }
         /// <summary>
@@ -10015,13 +11461,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SpeedFinisher>("RoadItEntitiesModel.Finisher_ibfk_1", "SpeedFinisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SpeedFinisher>("roaditModel.Finisher_ibfk_1", "SpeedFinisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SpeedFinisher>("RoadItEntitiesModel.Finisher_ibfk_1", "SpeedFinisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SpeedFinisher>("roaditModel.Finisher_ibfk_1", "SpeedFinisher", value);
                 }
             }
         }
@@ -10032,16 +11478,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_3", "LayerThickness")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_3", "LayerThickness")]
         public LayerThickness LayerThickness
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LayerThickness>("RoadItEntitiesModel.Finisher_ibfk_3", "LayerThickness").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LayerThickness>("roaditModel.Finisher_ibfk_3", "LayerThickness").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LayerThickness>("RoadItEntitiesModel.Finisher_ibfk_3", "LayerThickness").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LayerThickness>("roaditModel.Finisher_ibfk_3", "LayerThickness").Value = value;
             }
         }
         /// <summary>
@@ -10053,13 +11499,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LayerThickness>("RoadItEntitiesModel.Finisher_ibfk_3", "LayerThickness");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LayerThickness>("roaditModel.Finisher_ibfk_3", "LayerThickness");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<LayerThickness>("RoadItEntitiesModel.Finisher_ibfk_3", "LayerThickness", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<LayerThickness>("roaditModel.Finisher_ibfk_3", "LayerThickness", value);
                 }
             }
         }
@@ -10070,16 +11516,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_4", "LocationAndTimeSpan")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_4", "LocationAndTimeSpan")]
         public LocationAndTimeSpan LocationAndTimeSpan
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LocationAndTimeSpan>("RoadItEntitiesModel.Finisher_ibfk_4", "LocationAndTimeSpan").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LocationAndTimeSpan>("roaditModel.Finisher_ibfk_4", "LocationAndTimeSpan").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LocationAndTimeSpan>("RoadItEntitiesModel.Finisher_ibfk_4", "LocationAndTimeSpan").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LocationAndTimeSpan>("roaditModel.Finisher_ibfk_4", "LocationAndTimeSpan").Value = value;
             }
         }
         /// <summary>
@@ -10091,13 +11537,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LocationAndTimeSpan>("RoadItEntitiesModel.Finisher_ibfk_4", "LocationAndTimeSpan");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LocationAndTimeSpan>("roaditModel.Finisher_ibfk_4", "LocationAndTimeSpan");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<LocationAndTimeSpan>("RoadItEntitiesModel.Finisher_ibfk_4", "LocationAndTimeSpan", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<LocationAndTimeSpan>("roaditModel.Finisher_ibfk_4", "LocationAndTimeSpan", value);
                 }
             }
         }
@@ -10108,76 +11554,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_6", "Wind")]
-        public Wind Wind
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Wind>("RoadItEntitiesModel.Finisher_ibfk_6", "Wind").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Wind>("RoadItEntitiesModel.Finisher_ibfk_6", "Wind").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Wind> WindReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Wind>("RoadItEntitiesModel.Finisher_ibfk_6", "Wind");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Wind>("RoadItEntitiesModel.Finisher_ibfk_6", "Wind", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_4", "BatchList")]
-        public EntityCollection<BatchList> BatchLists
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_4", "BatchList");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_4", "BatchList", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_5", "WeatherTemp")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_5", "WeatherTemp")]
         public WeatherTemp WeatherTemp
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WeatherTemp>("RoadItEntitiesModel.Finisher_ibfk_5", "WeatherTemp").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WeatherTemp>("roaditModel.Finisher_ibfk_5", "WeatherTemp").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WeatherTemp>("RoadItEntitiesModel.Finisher_ibfk_5", "WeatherTemp").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WeatherTemp>("roaditModel.Finisher_ibfk_5", "WeatherTemp").Value = value;
             }
         }
         /// <summary>
@@ -10189,13 +11575,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WeatherTemp>("RoadItEntitiesModel.Finisher_ibfk_5", "WeatherTemp");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WeatherTemp>("roaditModel.Finisher_ibfk_5", "WeatherTemp");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<WeatherTemp>("RoadItEntitiesModel.Finisher_ibfk_5", "WeatherTemp", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<WeatherTemp>("roaditModel.Finisher_ibfk_5", "WeatherTemp", value);
                 }
             }
         }
@@ -10206,16 +11592,54 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_9", "Width")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_6", "Wind")]
+        public Wind Wind
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Wind>("roaditModel.Finisher_ibfk_6", "Wind").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Wind>("roaditModel.Finisher_ibfk_6", "Wind").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Wind> WindReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Wind>("roaditModel.Finisher_ibfk_6", "Wind");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Wind>("roaditModel.Finisher_ibfk_6", "Wind", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_9", "Width")]
         public Width Width
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Width>("RoadItEntitiesModel.Finisher_ibfk_9", "Width").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Width>("roaditModel.Finisher_ibfk_9", "Width").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Width>("RoadItEntitiesModel.Finisher_ibfk_9", "Width").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Width>("roaditModel.Finisher_ibfk_9", "Width").Value = value;
             }
         }
         /// <summary>
@@ -10227,13 +11651,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Width>("RoadItEntitiesModel.Finisher_ibfk_9", "Width");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Width>("roaditModel.Finisher_ibfk_9", "Width");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Width>("RoadItEntitiesModel.Finisher_ibfk_9", "Width", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Width>("roaditModel.Finisher_ibfk_9", "Width", value);
                 }
             }
         }
@@ -10245,7 +11669,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="LayerThickness")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="LayerThickness")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class LayerThickness : EntityObject
@@ -10256,16 +11680,18 @@ namespace RoadIt.Models
         /// Create a new LayerThickness object.
         /// </summary>
         /// <param name="layerThicknessId">Initial value of the LayerThicknessId property.</param>
-        /// <param name="left">Initial value of the Left property.</param>
-        /// <param name="middel">Initial value of the Middel property.</param>
-        /// <param name="right">Initial value of the Right property.</param>
-        public static LayerThickness CreateLayerThickness(global::System.Int32 layerThicknessId, global::System.Int32 left, global::System.Int32 middel, global::System.Int32 right)
+        /// <param name="leftTickness">Initial value of the LeftTickness property.</param>
+        /// <param name="middelThickness">Initial value of the MiddelThickness property.</param>
+        /// <param name="rightThickness">Initial value of the RightThickness property.</param>
+        /// <param name="thicknessTimeStamp">Initial value of the ThicknessTimeStamp property.</param>
+        public static LayerThickness CreateLayerThickness(global::System.Int32 layerThicknessId, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp)
         {
             LayerThickness layerThickness = new LayerThickness();
             layerThickness.LayerThicknessId = layerThicknessId;
-            layerThickness.Left = left;
-            layerThickness.Middel = middel;
-            layerThickness.Right = right;
+            layerThickness.LeftTickness = leftTickness;
+            layerThickness.MiddelThickness = middelThickness;
+            layerThickness.RightThickness = rightThickness;
+            layerThickness.ThicknessTimeStamp = thicknessTimeStamp;
             return layerThickness;
         }
 
@@ -10305,72 +11731,96 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Left
+        public global::System.Int32 LeftTickness
         {
             get
             {
-                return _Left;
+                return _LeftTickness;
             }
             set
             {
-                OnLeftChanging(value);
-                ReportPropertyChanging("Left");
-                _Left = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Left");
-                OnLeftChanged();
+                OnLeftTicknessChanging(value);
+                ReportPropertyChanging("LeftTickness");
+                _LeftTickness = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LeftTickness");
+                OnLeftTicknessChanged();
             }
         }
-        private global::System.Int32 _Left;
-        partial void OnLeftChanging(global::System.Int32 value);
-        partial void OnLeftChanged();
+        private global::System.Int32 _LeftTickness;
+        partial void OnLeftTicknessChanging(global::System.Int32 value);
+        partial void OnLeftTicknessChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Middel
+        public global::System.Int32 MiddelThickness
         {
             get
             {
-                return _Middel;
+                return _MiddelThickness;
             }
             set
             {
-                OnMiddelChanging(value);
-                ReportPropertyChanging("Middel");
-                _Middel = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Middel");
-                OnMiddelChanged();
+                OnMiddelThicknessChanging(value);
+                ReportPropertyChanging("MiddelThickness");
+                _MiddelThickness = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MiddelThickness");
+                OnMiddelThicknessChanged();
             }
         }
-        private global::System.Int32 _Middel;
-        partial void OnMiddelChanging(global::System.Int32 value);
-        partial void OnMiddelChanged();
+        private global::System.Int32 _MiddelThickness;
+        partial void OnMiddelThicknessChanging(global::System.Int32 value);
+        partial void OnMiddelThicknessChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Right
+        public global::System.Int32 RightThickness
         {
             get
             {
-                return _Right;
+                return _RightThickness;
             }
             set
             {
-                OnRightChanging(value);
-                ReportPropertyChanging("Right");
-                _Right = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Right");
-                OnRightChanged();
+                OnRightThicknessChanging(value);
+                ReportPropertyChanging("RightThickness");
+                _RightThickness = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RightThickness");
+                OnRightThicknessChanged();
             }
         }
-        private global::System.Int32 _Right;
-        partial void OnRightChanging(global::System.Int32 value);
-        partial void OnRightChanged();
+        private global::System.Int32 _RightThickness;
+        partial void OnRightThicknessChanging(global::System.Int32 value);
+        partial void OnRightThicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ThicknessTimeStamp
+        {
+            get
+            {
+                return _ThicknessTimeStamp;
+            }
+            set
+            {
+                OnThicknessTimeStampChanging(value);
+                ReportPropertyChanging("ThicknessTimeStamp");
+                _ThicknessTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ThicknessTimeStamp");
+                OnThicknessTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _ThicknessTimeStamp;
+        partial void OnThicknessTimeStampChanging(global::System.DateTime value);
+        partial void OnThicknessTimeStampChanged();
 
         #endregion
 
@@ -10383,18 +11833,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_3", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_3", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_3", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_3", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_3", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_3", "Finisher", value);
                 }
             }
         }
@@ -10406,7 +11856,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="ListFillerRecup")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ListFillerRecup")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ListFillerRecup : EntityObject
@@ -10518,18 +11968,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_4", "Silo")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_4", "Silo")]
         public EntityCollection<Silo> Silos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_4", "Silo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Silo>("roaditModel.Silo_ibfk_4", "Silo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("RoadItEntitiesModel.Silo_ibfk_4", "Silo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Silo>("roaditModel.Silo_ibfk_4", "Silo", value);
                 }
             }
         }
@@ -10541,7 +11991,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="LocationAndTimeSpan")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="LocationAndTimeSpan")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class LocationAndTimeSpan : EntityObject
@@ -10552,15 +12002,15 @@ namespace RoadIt.Models
         /// Create a new LocationAndTimeSpan object.
         /// </summary>
         /// <param name="locationAndTimeSpanId">Initial value of the LocationAndTimeSpanId property.</param>
-        /// <param name="stopLocation">Initial value of the StopLocation property.</param>
-        /// <param name="stopTime">Initial value of the StopTime property.</param>
+        /// <param name="stopLocationLTS">Initial value of the StopLocationLTS property.</param>
+        /// <param name="stopTimeLTS">Initial value of the StopTimeLTS property.</param>
         /// <param name="stopTimeStamp">Initial value of the StopTimeStamp property.</param>
-        public static LocationAndTimeSpan CreateLocationAndTimeSpan(global::System.Int32 locationAndTimeSpanId, global::System.String stopLocation, global::System.TimeSpan stopTime, global::System.DateTime stopTimeStamp)
+        public static LocationAndTimeSpan CreateLocationAndTimeSpan(global::System.Int32 locationAndTimeSpanId, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp)
         {
             LocationAndTimeSpan locationAndTimeSpan = new LocationAndTimeSpan();
             locationAndTimeSpan.LocationAndTimeSpanId = locationAndTimeSpanId;
-            locationAndTimeSpan.StopLocation = stopLocation;
-            locationAndTimeSpan.StopTime = stopTime;
+            locationAndTimeSpan.StopLocationLTS = stopLocationLTS;
+            locationAndTimeSpan.StopTimeLTS = stopTimeLTS;
             locationAndTimeSpan.StopTimeStamp = stopTimeStamp;
             return locationAndTimeSpan;
         }
@@ -10601,48 +12051,48 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String StopLocation
+        public global::System.String StopLocationLTS
         {
             get
             {
-                return _StopLocation;
+                return _StopLocationLTS;
             }
             set
             {
-                OnStopLocationChanging(value);
-                ReportPropertyChanging("StopLocation");
-                _StopLocation = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("StopLocation");
-                OnStopLocationChanged();
+                OnStopLocationLTSChanging(value);
+                ReportPropertyChanging("StopLocationLTS");
+                _StopLocationLTS = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("StopLocationLTS");
+                OnStopLocationLTSChanged();
             }
         }
-        private global::System.String _StopLocation;
-        partial void OnStopLocationChanging(global::System.String value);
-        partial void OnStopLocationChanged();
+        private global::System.String _StopLocationLTS;
+        partial void OnStopLocationLTSChanging(global::System.String value);
+        partial void OnStopLocationLTSChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.TimeSpan StopTime
+        public global::System.TimeSpan StopTimeLTS
         {
             get
             {
-                return _StopTime;
+                return _StopTimeLTS;
             }
             set
             {
-                OnStopTimeChanging(value);
-                ReportPropertyChanging("StopTime");
-                _StopTime = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("StopTime");
-                OnStopTimeChanged();
+                OnStopTimeLTSChanging(value);
+                ReportPropertyChanging("StopTimeLTS");
+                _StopTimeLTS = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("StopTimeLTS");
+                OnStopTimeLTSChanged();
             }
         }
-        private global::System.TimeSpan _StopTime;
-        partial void OnStopTimeChanging(global::System.TimeSpan value);
-        partial void OnStopTimeChanged();
+        private global::System.TimeSpan _StopTimeLTS;
+        partial void OnStopTimeLTSChanging(global::System.TimeSpan value);
+        partial void OnStopTimeLTSChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10679,18 +12129,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_4", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_4", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_4", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_4", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_4", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_4", "Finisher", value);
                 }
             }
         }
@@ -10702,7 +12152,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Planning")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Planning")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Planning : EntityObject
@@ -10717,7 +12167,8 @@ namespace RoadIt.Models
         /// <param name="surface">Initial value of the Surface property.</param>
         /// <param name="tonPerDay">Initial value of the TonPerDay property.</param>
         /// <param name="projectId">Initial value of the ProjectId property.</param>
-        public static Planning CreatePlanning(global::System.Int32 planningId, global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.Int32 projectId)
+        /// <param name="planningTimeStamp">Initial value of the PlanningTimeStamp property.</param>
+        public static Planning CreatePlanning(global::System.Int32 planningId, global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.Int32 projectId, global::System.DateTime planningTimeStamp)
         {
             Planning planning = new Planning();
             planning.PlanningId = planningId;
@@ -10725,6 +12176,7 @@ namespace RoadIt.Models
             planning.Surface = surface;
             planning.TonPerDay = tonPerDay;
             planning.ProjectId = projectId;
+            planning.PlanningTimeStamp = planningTimeStamp;
             return planning;
         }
 
@@ -10854,6 +12306,30 @@ namespace RoadIt.Models
         private global::System.Int32 _ProjectId;
         partial void OnProjectIdChanging(global::System.Int32 value);
         partial void OnProjectIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime PlanningTimeStamp
+        {
+            get
+            {
+                return _PlanningTimeStamp;
+            }
+            set
+            {
+                OnPlanningTimeStampChanging(value);
+                ReportPropertyChanging("PlanningTimeStamp");
+                _PlanningTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PlanningTimeStamp");
+                OnPlanningTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _PlanningTimeStamp;
+        partial void OnPlanningTimeStampChanging(global::System.DateTime value);
+        partial void OnPlanningTimeStampChanged();
 
         #endregion
 
@@ -10866,16 +12342,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Planning_ibfk_1", "Project")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Planning_ibfk_1", "Project")]
         public Project Project
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.Planning_ibfk_1", "Project").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.Planning_ibfk_1", "Project").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.Planning_ibfk_1", "Project").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.Planning_ibfk_1", "Project").Value = value;
             }
         }
         /// <summary>
@@ -10887,13 +12363,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.Planning_ibfk_1", "Project");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.Planning_ibfk_1", "Project");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("RoadItEntitiesModel.Planning_ibfk_1", "Project", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("roaditModel.Planning_ibfk_1", "Project", value);
                 }
             }
         }
@@ -10905,7 +12381,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Project")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Project")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Project : EntityObject
@@ -10916,10 +12392,12 @@ namespace RoadIt.Models
         /// Create a new Project object.
         /// </summary>
         /// <param name="projectId">Initial value of the ProjectId property.</param>
-        public static Project CreateProject(global::System.Int32 projectId)
+        /// <param name="projectTimeStamp">Initial value of the ProjectTimeStamp property.</param>
+        public static Project CreateProject(global::System.Int32 projectId, global::System.DateTime projectTimeStamp)
         {
             Project project = new Project();
             project.ProjectId = projectId;
+            project.ProjectTimeStamp = projectTimeStamp;
             return project;
         }
 
@@ -10953,6 +12431,30 @@ namespace RoadIt.Models
         private global::System.Int32 _ProjectId;
         partial void OnProjectIdChanging(global::System.Int32 value);
         partial void OnProjectIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ProjectTimeStamp
+        {
+            get
+            {
+                return _ProjectTimeStamp;
+            }
+            set
+            {
+                OnProjectTimeStampChanging(value);
+                ReportPropertyChanging("ProjectTimeStamp");
+                _ProjectTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ProjectTimeStamp");
+                OnProjectTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _ProjectTimeStamp;
+        partial void OnProjectTimeStampChanging(global::System.DateTime value);
+        partial void OnProjectTimeStampChanged();
 
         #endregion
 
@@ -10965,18 +12467,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_1", "BatchList")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_1", "BatchList")]
         public EntityCollection<BatchList> BatchLists
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_1", "BatchList");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_1", "BatchList");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_1", "BatchList", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_1", "BatchList", value);
                 }
             }
         }
@@ -10987,18 +12489,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Contractor_ibfk_1", "Contractor")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Contractor_ibfk_1", "Contractor")]
         public EntityCollection<Contractor> Contractors
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contractor>("RoadItEntitiesModel.Contractor_ibfk_1", "Contractor");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contractor>("roaditModel.Contractor_ibfk_1", "Contractor");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contractor>("RoadItEntitiesModel.Contractor_ibfk_1", "Contractor", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contractor>("roaditModel.Contractor_ibfk_1", "Contractor", value);
                 }
             }
         }
@@ -11009,18 +12511,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Planning_ibfk_1", "Planning")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Planning_ibfk_1", "Planning")]
         public EntityCollection<Planning> Plannings
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Planning>("RoadItEntitiesModel.Planning_ibfk_1", "Planning");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Planning>("roaditModel.Planning_ibfk_1", "Planning");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Planning>("RoadItEntitiesModel.Planning_ibfk_1", "Planning", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Planning>("roaditModel.Planning_ibfk_1", "Planning", value);
                 }
             }
         }
@@ -11031,18 +12533,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "QualityControl_ibfk_1", "QualityControl")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "QualityControl_ibfk_1", "QualityControl")]
         public EntityCollection<QualityControl> QualityControls
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<QualityControl>("RoadItEntitiesModel.QualityControl_ibfk_1", "QualityControl");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<QualityControl>("roaditModel.QualityControl_ibfk_1", "QualityControl");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QualityControl>("RoadItEntitiesModel.QualityControl_ibfk_1", "QualityControl", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QualityControl>("roaditModel.QualityControl_ibfk_1", "QualityControl", value);
                 }
             }
         }
@@ -11053,18 +12555,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "RoadSection_ibfk_1", "RoadSection")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "RoadSection_ibfk_1", "RoadSection")]
         public EntityCollection<RoadSection> RoadSections
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RoadSection>("RoadItEntitiesModel.RoadSection_ibfk_1", "RoadSection");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RoadSection>("roaditModel.RoadSection_ibfk_1", "RoadSection");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RoadSection>("RoadItEntitiesModel.RoadSection_ibfk_1", "RoadSection", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RoadSection>("roaditModel.RoadSection_ibfk_1", "RoadSection", value);
                 }
             }
         }
@@ -11076,7 +12578,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="QualityControl")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="QualityControl")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class QualityControl : EntityObject
@@ -11096,7 +12598,8 @@ namespace RoadIt.Models
         /// <param name="iri">Initial value of the Iri property.</param>
         /// <param name="extraTestsAskedBijClient">Initial value of the ExtraTestsAskedBijClient property.</param>
         /// <param name="projectId">Initial value of the ProjectId property.</param>
-        public static QualityControl CreateQualityControl(global::System.Int32 controlId, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.Int32 projectId)
+        /// <param name="qualtityTimeStamp">Initial value of the QualtityTimeStamp property.</param>
+        public static QualityControl CreateQualityControl(global::System.Int32 controlId, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.Int32 projectId, global::System.DateTime qualtityTimeStamp)
         {
             QualityControl qualityControl = new QualityControl();
             qualityControl.ControlId = controlId;
@@ -11109,6 +12612,7 @@ namespace RoadIt.Models
             qualityControl.Iri = iri;
             qualityControl.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
             qualityControl.ProjectId = projectId;
+            qualityControl.QualtityTimeStamp = qualtityTimeStamp;
             return qualityControl;
         }
 
@@ -11358,6 +12862,30 @@ namespace RoadIt.Models
         private global::System.Int32 _ProjectId;
         partial void OnProjectIdChanging(global::System.Int32 value);
         partial void OnProjectIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime QualtityTimeStamp
+        {
+            get
+            {
+                return _QualtityTimeStamp;
+            }
+            set
+            {
+                OnQualtityTimeStampChanging(value);
+                ReportPropertyChanging("QualtityTimeStamp");
+                _QualtityTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("QualtityTimeStamp");
+                OnQualtityTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _QualtityTimeStamp;
+        partial void OnQualtityTimeStampChanging(global::System.DateTime value);
+        partial void OnQualtityTimeStampChanged();
 
         #endregion
 
@@ -11370,16 +12898,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "QualityControl_ibfk_1", "Project")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "QualityControl_ibfk_1", "Project")]
         public Project Project
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.QualityControl_ibfk_1", "Project").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.QualityControl_ibfk_1", "Project").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.QualityControl_ibfk_1", "Project").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.QualityControl_ibfk_1", "Project").Value = value;
             }
         }
         /// <summary>
@@ -11391,13 +12919,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.QualityControl_ibfk_1", "Project");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.QualityControl_ibfk_1", "Project");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("RoadItEntitiesModel.QualityControl_ibfk_1", "Project", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("roaditModel.QualityControl_ibfk_1", "Project", value);
                 }
             }
         }
@@ -11409,7 +12937,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="RoadSection")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="RoadSection")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class RoadSection : EntityObject
@@ -11422,12 +12950,14 @@ namespace RoadIt.Models
         /// <param name="roadId">Initial value of the RoadId property.</param>
         /// <param name="projectId">Initial value of the ProjectId property.</param>
         /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
-        public static RoadSection CreateRoadSection(global::System.Int32 roadId, global::System.Int32 projectId, global::System.String roadDescription)
+        /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
+        public static RoadSection CreateRoadSection(global::System.Int32 roadId, global::System.Int32 projectId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp)
         {
             RoadSection roadSection = new RoadSection();
             roadSection.RoadId = roadId;
             roadSection.ProjectId = projectId;
             roadSection.RoadDescription = roadDescription;
+            roadSection.RoadSectionTimeStamp = roadSectionTimeStamp;
             return roadSection;
         }
 
@@ -11509,6 +13039,30 @@ namespace RoadIt.Models
         private global::System.String _RoadDescription;
         partial void OnRoadDescriptionChanging(global::System.String value);
         partial void OnRoadDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime RoadSectionTimeStamp
+        {
+            get
+            {
+                return _RoadSectionTimeStamp;
+            }
+            set
+            {
+                OnRoadSectionTimeStampChanging(value);
+                ReportPropertyChanging("RoadSectionTimeStamp");
+                _RoadSectionTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RoadSectionTimeStamp");
+                OnRoadSectionTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _RoadSectionTimeStamp;
+        partial void OnRoadSectionTimeStampChanging(global::System.DateTime value);
+        partial void OnRoadSectionTimeStampChanged();
 
         #endregion
 
@@ -11521,16 +13075,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "RoadSection_ibfk_1", "Project")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "RoadSection_ibfk_1", "Project")]
         public Project Project
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.RoadSection_ibfk_1", "Project").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.RoadSection_ibfk_1", "Project").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.RoadSection_ibfk_1", "Project").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.RoadSection_ibfk_1", "Project").Value = value;
             }
         }
         /// <summary>
@@ -11542,13 +13096,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("RoadItEntitiesModel.RoadSection_ibfk_1", "Project");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Project>("roaditModel.RoadSection_ibfk_1", "Project");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("RoadItEntitiesModel.RoadSection_ibfk_1", "Project", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Project>("roaditModel.RoadSection_ibfk_1", "Project", value);
                 }
             }
         }
@@ -11560,7 +13114,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Role")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Role")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Role : EntityObject
@@ -11646,18 +13200,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Users_ibfk_1", "User")]
-        public EntityCollection<Users> Users
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Users_ibfk_1", "Users")]
+        public EntityCollection<User> Users
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Users>("RoadItEntitiesModel.Users_ibfk_1", "User");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User>("roaditModel.Users_ibfk_1", "Users");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Users>("RoadItEntitiesModel.Users_ibfk_1", "User", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User>("roaditModel.Users_ibfk_1", "Users", value);
                 }
             }
         }
@@ -11669,7 +13223,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Silo")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Silo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Silo : EntityObject
@@ -11689,7 +13243,8 @@ namespace RoadIt.Models
         /// <param name="realCompositionId">Initial value of the RealCompositionId property.</param>
         /// <param name="tempSilo">Initial value of the TempSilo property.</param>
         /// <param name="analysisComposition">Initial value of the AnalysisComposition property.</param>
-        public static Silo CreateSilo(global::System.Int32 siloId, global::System.Int32 centralId, global::System.Int32 aggregationId, global::System.Int32 bitumenId, global::System.Int32 listRecupFillerId, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 realCompositionId, global::System.Int32 tempSilo, global::System.String analysisComposition)
+        /// <param name="siloTimpStamp">Initial value of the SiloTimpStamp property.</param>
+        public static Silo CreateSilo(global::System.Int32 siloId, global::System.Int32 centralId, global::System.Int32 aggregationId, global::System.Int32 bitumenId, global::System.Int32 listRecupFillerId, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 realCompositionId, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp)
         {
             Silo silo = new Silo();
             silo.SiloId = siloId;
@@ -11702,6 +13257,7 @@ namespace RoadIt.Models
             silo.RealCompositionId = realCompositionId;
             silo.TempSilo = tempSilo;
             silo.AnalysisComposition = analysisComposition;
+            silo.SiloTimpStamp = siloTimpStamp;
             return silo;
         }
 
@@ -11951,6 +13507,30 @@ namespace RoadIt.Models
         private global::System.String _AnalysisComposition;
         partial void OnAnalysisCompositionChanging(global::System.String value);
         partial void OnAnalysisCompositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime SiloTimpStamp
+        {
+            get
+            {
+                return _SiloTimpStamp;
+            }
+            set
+            {
+                OnSiloTimpStampChanging(value);
+                ReportPropertyChanging("SiloTimpStamp");
+                _SiloTimpStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("SiloTimpStamp");
+                OnSiloTimpStampChanged();
+            }
+        }
+        private global::System.DateTime _SiloTimpStamp;
+        partial void OnSiloTimpStampChanging(global::System.DateTime value);
+        partial void OnSiloTimpStampChanged();
 
         #endregion
 
@@ -11963,16 +13543,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_2", "Aggragation")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_2", "Aggragation")]
         public Aggragation Aggragation
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Aggragation>("RoadItEntitiesModel.Silo_ibfk_2", "Aggragation").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Aggragation>("roaditModel.Silo_ibfk_2", "Aggragation").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Aggragation>("RoadItEntitiesModel.Silo_ibfk_2", "Aggragation").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Aggragation>("roaditModel.Silo_ibfk_2", "Aggragation").Value = value;
             }
         }
         /// <summary>
@@ -11984,13 +13564,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Aggragation>("RoadItEntitiesModel.Silo_ibfk_2", "Aggragation");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Aggragation>("roaditModel.Silo_ibfk_2", "Aggragation");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Aggragation>("RoadItEntitiesModel.Silo_ibfk_2", "Aggragation", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Aggragation>("roaditModel.Silo_ibfk_2", "Aggragation", value);
                 }
             }
         }
@@ -12001,16 +13581,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_1", "AsphaltMixPlant")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_1", "AsphaltMixPlant")]
         public AsphaltMixPlant AsphaltMixPlant
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltMixPlant>("RoadItEntitiesModel.Silo_ibfk_1", "AsphaltMixPlant").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltMixPlant>("roaditModel.Silo_ibfk_1", "AsphaltMixPlant").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltMixPlant>("RoadItEntitiesModel.Silo_ibfk_1", "AsphaltMixPlant").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltMixPlant>("roaditModel.Silo_ibfk_1", "AsphaltMixPlant").Value = value;
             }
         }
         /// <summary>
@@ -12022,13 +13602,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltMixPlant>("RoadItEntitiesModel.Silo_ibfk_1", "AsphaltMixPlant");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AsphaltMixPlant>("roaditModel.Silo_ibfk_1", "AsphaltMixPlant");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AsphaltMixPlant>("RoadItEntitiesModel.Silo_ibfk_1", "AsphaltMixPlant", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AsphaltMixPlant>("roaditModel.Silo_ibfk_1", "AsphaltMixPlant", value);
                 }
             }
         }
@@ -12039,18 +13619,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_2", "BatchList")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_2", "BatchList")]
         public EntityCollection<BatchList> BatchLists
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_2", "BatchList");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_2", "BatchList");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_2", "BatchList", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_2", "BatchList", value);
                 }
             }
         }
@@ -12061,16 +13641,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_3", "Bitumen")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_3", "Bitumen")]
         public Bituman Bituman
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bituman>("RoadItEntitiesModel.Silo_ibfk_3", "Bitumen").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bituman>("roaditModel.Silo_ibfk_3", "Bitumen").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bituman>("RoadItEntitiesModel.Silo_ibfk_3", "Bitumen").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bituman>("roaditModel.Silo_ibfk_3", "Bitumen").Value = value;
             }
         }
         /// <summary>
@@ -12082,13 +13662,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bituman>("RoadItEntitiesModel.Silo_ibfk_3", "Bitumen");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bituman>("roaditModel.Silo_ibfk_3", "Bitumen");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bituman>("RoadItEntitiesModel.Silo_ibfk_3", "Bitumen", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bituman>("roaditModel.Silo_ibfk_3", "Bitumen", value);
                 }
             }
         }
@@ -12099,16 +13679,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_5", "Composition")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_5", "Composition")]
         public Composition Composition
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Composition>("RoadItEntitiesModel.Silo_ibfk_5", "Composition").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Composition>("roaditModel.Silo_ibfk_5", "Composition").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Composition>("RoadItEntitiesModel.Silo_ibfk_5", "Composition").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Composition>("roaditModel.Silo_ibfk_5", "Composition").Value = value;
             }
         }
         /// <summary>
@@ -12120,13 +13700,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Composition>("RoadItEntitiesModel.Silo_ibfk_5", "Composition");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Composition>("roaditModel.Silo_ibfk_5", "Composition");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Composition>("RoadItEntitiesModel.Silo_ibfk_5", "Composition", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Composition>("roaditModel.Silo_ibfk_5", "Composition", value);
                 }
             }
         }
@@ -12137,16 +13717,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Silo_ibfk_4", "ListFillerRecup")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Silo_ibfk_4", "ListFillerRecup")]
         public ListFillerRecup ListFillerRecup
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ListFillerRecup>("RoadItEntitiesModel.Silo_ibfk_4", "ListFillerRecup").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ListFillerRecup>("roaditModel.Silo_ibfk_4", "ListFillerRecup").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ListFillerRecup>("RoadItEntitiesModel.Silo_ibfk_4", "ListFillerRecup").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ListFillerRecup>("roaditModel.Silo_ibfk_4", "ListFillerRecup").Value = value;
             }
         }
         /// <summary>
@@ -12158,13 +13738,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ListFillerRecup>("RoadItEntitiesModel.Silo_ibfk_4", "ListFillerRecup");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ListFillerRecup>("roaditModel.Silo_ibfk_4", "ListFillerRecup");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ListFillerRecup>("RoadItEntitiesModel.Silo_ibfk_4", "ListFillerRecup", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ListFillerRecup>("roaditModel.Silo_ibfk_4", "ListFillerRecup", value);
                 }
             }
         }
@@ -12176,7 +13756,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="SpeedFinisher")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="SpeedFinisher")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class SpeedFinisher : EntityObject
@@ -12288,18 +13868,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_1", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_1", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_1", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_1", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_1", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_1", "Finisher", value);
                 }
             }
         }
@@ -12311,7 +13891,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Truck")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Truck")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Truck : EntityObject
@@ -12337,7 +13917,8 @@ namespace RoadIt.Models
         /// <param name="unforseenStopId">Initial value of the UnforseenStopId property.</param>
         /// <param name="attachmentToFinisherTime">Initial value of the AttachmentToFinisherTime property.</param>
         /// <param name="attachmentToFinisherPosition">Initial value of the AttachmentToFinisherPosition property.</param>
-        public static Truck CreateTruck(global::System.Int32 truckId, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.Int32 actualPositionId, global::System.Int32 eTAId, global::System.Int32 truckTempId, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.Int32 actualPositionReturnId, global::System.Int32 eTAReturnId, global::System.DateTime arrivalAtPlant, global::System.Int32 unforseenStopId, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition)
+        /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
+        public static Truck CreateTruck(global::System.Int32 truckId, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.Int32 actualPositionId, global::System.Int32 eTAId, global::System.Int32 truckTempId, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.Int32 actualPositionReturnId, global::System.Int32 eTAReturnId, global::System.DateTime arrivalAtPlant, global::System.Int32 unforseenStopId, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp)
         {
             Truck truck = new Truck();
             truck.TruckId = truckId;
@@ -12356,6 +13937,7 @@ namespace RoadIt.Models
             truck.UnforseenStopId = unforseenStopId;
             truck.AttachmentToFinisherTime = attachmentToFinisherTime;
             truck.AttachmentToFinisherPosition = attachmentToFinisherPosition;
+            truck.TruckTimeStamp = truckTimeStamp;
             return truck;
         }
 
@@ -12749,6 +14331,30 @@ namespace RoadIt.Models
         private global::System.String _AttachmentToFinisherPosition;
         partial void OnAttachmentToFinisherPositionChanging(global::System.String value);
         partial void OnAttachmentToFinisherPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TruckTimeStamp
+        {
+            get
+            {
+                return _TruckTimeStamp;
+            }
+            set
+            {
+                OnTruckTimeStampChanging(value);
+                ReportPropertyChanging("TruckTimeStamp");
+                _TruckTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TruckTimeStamp");
+                OnTruckTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _TruckTimeStamp;
+        partial void OnTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTruckTimeStampChanged();
 
         #endregion
 
@@ -12761,16 +14367,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_3", "ActualPosition")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_3", "ActualPosition")]
         public ActualPosition ActualPosition
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPosition>("RoadItEntitiesModel.Truck_ibfk_3", "ActualPosition").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPosition>("roaditModel.Truck_ibfk_3", "ActualPosition").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPosition>("RoadItEntitiesModel.Truck_ibfk_3", "ActualPosition").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPosition>("roaditModel.Truck_ibfk_3", "ActualPosition").Value = value;
             }
         }
         /// <summary>
@@ -12782,13 +14388,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPosition>("RoadItEntitiesModel.Truck_ibfk_3", "ActualPosition");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPosition>("roaditModel.Truck_ibfk_3", "ActualPosition");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActualPosition>("RoadItEntitiesModel.Truck_ibfk_3", "ActualPosition", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActualPosition>("roaditModel.Truck_ibfk_3", "ActualPosition", value);
                 }
             }
         }
@@ -12799,16 +14405,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_5", "ActualPositionReturn")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_5", "ActualPositionReturn")]
         public ActualPositionReturn ActualPositionReturn
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPositionReturn>("RoadItEntitiesModel.Truck_ibfk_5", "ActualPositionReturn").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPositionReturn>("roaditModel.Truck_ibfk_5", "ActualPositionReturn").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPositionReturn>("RoadItEntitiesModel.Truck_ibfk_5", "ActualPositionReturn").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPositionReturn>("roaditModel.Truck_ibfk_5", "ActualPositionReturn").Value = value;
             }
         }
         /// <summary>
@@ -12820,13 +14426,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPositionReturn>("RoadItEntitiesModel.Truck_ibfk_5", "ActualPositionReturn");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActualPositionReturn>("roaditModel.Truck_ibfk_5", "ActualPositionReturn");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActualPositionReturn>("RoadItEntitiesModel.Truck_ibfk_5", "ActualPositionReturn", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActualPositionReturn>("roaditModel.Truck_ibfk_5", "ActualPositionReturn", value);
                 }
             }
         }
@@ -12837,18 +14443,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "BatchList_ibfk_3", "BatchList")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "BatchList_ibfk_3", "BatchList")]
         public EntityCollection<BatchList> BatchLists
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_3", "BatchList");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_3", "BatchList");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("RoadItEntitiesModel.BatchList_ibfk_3", "BatchList", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BatchList>("roaditModel.BatchList_ibfk_3", "BatchList", value);
                 }
             }
         }
@@ -12859,16 +14465,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_4", "ETA")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_4", "ETA")]
         public ETA ETA
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETA>("RoadItEntitiesModel.Truck_ibfk_4", "ETA").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETA>("roaditModel.Truck_ibfk_4", "ETA").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETA>("RoadItEntitiesModel.Truck_ibfk_4", "ETA").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETA>("roaditModel.Truck_ibfk_4", "ETA").Value = value;
             }
         }
         /// <summary>
@@ -12880,13 +14486,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETA>("RoadItEntitiesModel.Truck_ibfk_4", "ETA");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETA>("roaditModel.Truck_ibfk_4", "ETA");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ETA>("RoadItEntitiesModel.Truck_ibfk_4", "ETA", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ETA>("roaditModel.Truck_ibfk_4", "ETA", value);
                 }
             }
         }
@@ -12897,16 +14503,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_6", "ETAReturn")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_6", "ETAReturn")]
         public ETAReturn ETAReturn
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETAReturn>("RoadItEntitiesModel.Truck_ibfk_6", "ETAReturn").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETAReturn>("roaditModel.Truck_ibfk_6", "ETAReturn").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETAReturn>("RoadItEntitiesModel.Truck_ibfk_6", "ETAReturn").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETAReturn>("roaditModel.Truck_ibfk_6", "ETAReturn").Value = value;
             }
         }
         /// <summary>
@@ -12918,13 +14524,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETAReturn>("RoadItEntitiesModel.Truck_ibfk_6", "ETAReturn");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ETAReturn>("roaditModel.Truck_ibfk_6", "ETAReturn");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ETAReturn>("RoadItEntitiesModel.Truck_ibfk_6", "ETAReturn", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ETAReturn>("roaditModel.Truck_ibfk_6", "ETAReturn", value);
                 }
             }
         }
@@ -12935,16 +14541,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_7", "TruckTemp")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_7", "TruckTemp")]
         public TruckTemp TruckTemp
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TruckTemp>("RoadItEntitiesModel.Truck_ibfk_7", "TruckTemp").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TruckTemp>("roaditModel.Truck_ibfk_7", "TruckTemp").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TruckTemp>("RoadItEntitiesModel.Truck_ibfk_7", "TruckTemp").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TruckTemp>("roaditModel.Truck_ibfk_7", "TruckTemp").Value = value;
             }
         }
         /// <summary>
@@ -12956,13 +14562,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TruckTemp>("RoadItEntitiesModel.Truck_ibfk_7", "TruckTemp");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TruckTemp>("roaditModel.Truck_ibfk_7", "TruckTemp");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TruckTemp>("RoadItEntitiesModel.Truck_ibfk_7", "TruckTemp", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TruckTemp>("roaditModel.Truck_ibfk_7", "TruckTemp", value);
                 }
             }
         }
@@ -12973,16 +14579,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_8", "UnforseenStop")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_8", "UnforseenStop")]
         public UnforseenStop UnforseenStop
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnforseenStop>("RoadItEntitiesModel.Truck_ibfk_8", "UnforseenStop").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnforseenStop>("roaditModel.Truck_ibfk_8", "UnforseenStop").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnforseenStop>("RoadItEntitiesModel.Truck_ibfk_8", "UnforseenStop").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnforseenStop>("roaditModel.Truck_ibfk_8", "UnforseenStop").Value = value;
             }
         }
         /// <summary>
@@ -12994,13 +14600,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnforseenStop>("RoadItEntitiesModel.Truck_ibfk_8", "UnforseenStop");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnforseenStop>("roaditModel.Truck_ibfk_8", "UnforseenStop");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UnforseenStop>("RoadItEntitiesModel.Truck_ibfk_8", "UnforseenStop", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UnforseenStop>("roaditModel.Truck_ibfk_8", "UnforseenStop", value);
                 }
             }
         }
@@ -13012,7 +14618,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Trucker")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Trucker")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Trucker : EntityObject
@@ -13022,115 +14628,67 @@ namespace RoadIt.Models
         /// <summary>
         /// Create a new Trucker object.
         /// </summary>
-        /// <param name="roadId">Initial value of the RoadId property.</param>
-        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
         /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
         /// <param name="departureTime">Initial value of the DepartureTime property.</param>
         /// <param name="massTruck">Initial value of the MassTruck property.</param>
-        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
-        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
-        /// <param name="eTA">Initial value of the ETA property.</param>
-        /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
         /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
         /// <param name="deattachmentFinisherTime">Initial value of the DeattachmentFinisherTime property.</param>
         /// <param name="deattachmentFinisherPosition">Initial value of the DeattachmentFinisherPosition property.</param>
+        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
         /// <param name="attachmentToFinisherTime">Initial value of the AttachmentToFinisherTime property.</param>
         /// <param name="attachmentToFinisherPosition">Initial value of the AttachmentToFinisherPosition property.</param>
+        /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
+        /// <param name="stopLocationUnforseenStop">Initial value of the StopLocationUnforseenStop property.</param>
+        /// <param name="stopTimeUnforseenStop">Initial value of the StopTimeUnforseenStop property.</param>
+        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
+        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
+        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
         /// <param name="actualPositionReturn">Initial value of the ActualPositionReturn property.</param>
         /// <param name="actualPositionReturnTimeStamp">Initial value of the ActualPositionReturnTimeStamp property.</param>
+        /// <param name="eTA">Initial value of the ETA property.</param>
+        /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
         /// <param name="eTAReturn">Initial value of the ETAReturn property.</param>
         /// <param name="eTAReturnTimeStamp">Initial value of the ETAReturnTimeStamp property.</param>
-        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
-        /// <param name="unforseenStopLocation">Initial value of the UnforseenStopLocation property.</param>
-        /// <param name="unforseenStopTime">Initial value of the UnforseenStopTime property.</param>
-        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
         /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
-        public static Trucker CreateTrucker(global::System.Int32 roadId, global::System.String roadDescription, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String eTA, global::System.DateTime eTATimeStamp, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.String eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.DateTime arrivalAtPlant, global::System.String unforseenStopLocation, global::System.TimeSpan unforseenStopTime, global::System.DateTime unforseenStopTimeStamp, global::System.String qrCodeCompactor)
+        /// <param name="roadId">Initial value of the RoadId property.</param>
+        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
+        /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
+        /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
+        public static Trucker CreateTrucker(global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime compactorTimeStamp)
         {
             Trucker trucker = new Trucker();
-            trucker.RoadId = roadId;
-            trucker.RoadDescription = roadDescription;
             trucker.TruckLicensPlate = truckLicensPlate;
             trucker.DepartureTime = departureTime;
             trucker.MassTruck = massTruck;
-            trucker.ActualPosition = actualPosition;
-            trucker.ActualPositionTimeStamp = actualPositionTimeStamp;
-            trucker.ETA = eTA;
-            trucker.ETATimeStamp = eTATimeStamp;
             trucker.RealArrivalTime = realArrivalTime;
             trucker.DeattachmentFinisherTime = deattachmentFinisherTime;
             trucker.DeattachmentFinisherPosition = deattachmentFinisherPosition;
+            trucker.ArrivalAtPlant = arrivalAtPlant;
             trucker.AttachmentToFinisherTime = attachmentToFinisherTime;
             trucker.AttachmentToFinisherPosition = attachmentToFinisherPosition;
+            trucker.TruckTimeStamp = truckTimeStamp;
+            trucker.StopLocationUnforseenStop = stopLocationUnforseenStop;
+            trucker.StopTimeUnforseenStop = stopTimeUnforseenStop;
+            trucker.UnforseenStopTimeStamp = unforseenStopTimeStamp;
+            trucker.ActualPosition = actualPosition;
+            trucker.ActualPositionTimeStamp = actualPositionTimeStamp;
             trucker.ActualPositionReturn = actualPositionReturn;
             trucker.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
+            trucker.ETA = eTA;
+            trucker.ETATimeStamp = eTATimeStamp;
             trucker.ETAReturn = eTAReturn;
             trucker.ETAReturnTimeStamp = eTAReturnTimeStamp;
-            trucker.ArrivalAtPlant = arrivalAtPlant;
-            trucker.UnforseenStopLocation = unforseenStopLocation;
-            trucker.UnforseenStopTime = unforseenStopTime;
-            trucker.UnforseenStopTimeStamp = unforseenStopTimeStamp;
             trucker.QrCodeCompactor = qrCodeCompactor;
+            trucker.RoadId = roadId;
+            trucker.RoadDescription = roadDescription;
+            trucker.RoadSectionTimeStamp = roadSectionTimeStamp;
+            trucker.CompactorTimeStamp = compactorTimeStamp;
             return trucker;
         }
 
         #endregion
 
         #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 RoadId
-        {
-            get
-            {
-                return _RoadId;
-            }
-            set
-            {
-                if (_RoadId != value)
-                {
-                    OnRoadIdChanging(value);
-                    ReportPropertyChanging("RoadId");
-                    _RoadId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RoadId");
-                    OnRoadIdChanged();
-                }
-            }
-        }
-        private global::System.Int32 _RoadId;
-        partial void OnRoadIdChanging(global::System.Int32 value);
-        partial void OnRoadIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String RoadDescription
-        {
-            get
-            {
-                return _RoadDescription;
-            }
-            set
-            {
-                if (_RoadDescription != value)
-                {
-                    OnRoadDescriptionChanging(value);
-                    ReportPropertyChanging("RoadDescription");
-                    _RoadDescription = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("RoadDescription");
-                    OnRoadDescriptionChanged();
-                }
-            }
-        }
-        private global::System.String _RoadDescription;
-        partial void OnRoadDescriptionChanging(global::System.String value);
-        partial void OnRoadDescriptionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -13218,114 +14776,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ActualPosition
-        {
-            get
-            {
-                return _ActualPosition;
-            }
-            set
-            {
-                if (_ActualPosition != value)
-                {
-                    OnActualPositionChanging(value);
-                    ReportPropertyChanging("ActualPosition");
-                    _ActualPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ActualPosition");
-                    OnActualPositionChanged();
-                }
-            }
-        }
-        private global::System.String _ActualPosition;
-        partial void OnActualPositionChanging(global::System.String value);
-        partial void OnActualPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ActualPositionTimeStamp
-        {
-            get
-            {
-                return _ActualPositionTimeStamp;
-            }
-            set
-            {
-                if (_ActualPositionTimeStamp != value)
-                {
-                    OnActualPositionTimeStampChanging(value);
-                    ReportPropertyChanging("ActualPositionTimeStamp");
-                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ActualPositionTimeStamp");
-                    OnActualPositionTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ActualPositionTimeStamp;
-        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
-        partial void OnActualPositionTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ETA
-        {
-            get
-            {
-                return _ETA;
-            }
-            set
-            {
-                if (_ETA != value)
-                {
-                    OnETAChanging(value);
-                    ReportPropertyChanging("ETA");
-                    _ETA = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ETA");
-                    OnETAChanged();
-                }
-            }
-        }
-        private global::System.String _ETA;
-        partial void OnETAChanging(global::System.String value);
-        partial void OnETAChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ETATimeStamp
-        {
-            get
-            {
-                return _ETATimeStamp;
-            }
-            set
-            {
-                if (_ETATimeStamp != value)
-                {
-                    OnETATimeStampChanging(value);
-                    ReportPropertyChanging("ETATimeStamp");
-                    _ETATimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ETATimeStamp");
-                    OnETATimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ETATimeStamp;
-        partial void OnETATimeStampChanging(global::System.DateTime value);
-        partial void OnETATimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.DateTime RealArrivalTime
         {
             get
@@ -13407,6 +14857,33 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.DateTime ArrivalAtPlant
+        {
+            get
+            {
+                return _ArrivalAtPlant;
+            }
+            set
+            {
+                if (_ArrivalAtPlant != value)
+                {
+                    OnArrivalAtPlantChanging(value);
+                    ReportPropertyChanging("ArrivalAtPlant");
+                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ArrivalAtPlant");
+                    OnArrivalAtPlantChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ArrivalAtPlant;
+        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
+        partial void OnArrivalAtPlantChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime AttachmentToFinisherTime
         {
             get
@@ -13455,6 +14932,168 @@ namespace RoadIt.Models
         private global::System.String _AttachmentToFinisherPosition;
         partial void OnAttachmentToFinisherPositionChanging(global::System.String value);
         partial void OnAttachmentToFinisherPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TruckTimeStamp
+        {
+            get
+            {
+                return _TruckTimeStamp;
+            }
+            set
+            {
+                if (_TruckTimeStamp != value)
+                {
+                    OnTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TruckTimeStamp");
+                    _TruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TruckTimeStamp");
+                    OnTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TruckTimeStamp;
+        partial void OnTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTruckTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StopLocationUnforseenStop
+        {
+            get
+            {
+                return _StopLocationUnforseenStop;
+            }
+            set
+            {
+                if (_StopLocationUnforseenStop != value)
+                {
+                    OnStopLocationUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopLocationUnforseenStop");
+                    _StopLocationUnforseenStop = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("StopLocationUnforseenStop");
+                    OnStopLocationUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.String _StopLocationUnforseenStop;
+        partial void OnStopLocationUnforseenStopChanging(global::System.String value);
+        partial void OnStopLocationUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan StopTimeUnforseenStop
+        {
+            get
+            {
+                return _StopTimeUnforseenStop;
+            }
+            set
+            {
+                if (_StopTimeUnforseenStop != value)
+                {
+                    OnStopTimeUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopTimeUnforseenStop");
+                    _StopTimeUnforseenStop = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeUnforseenStop");
+                    OnStopTimeUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _StopTimeUnforseenStop;
+        partial void OnStopTimeUnforseenStopChanging(global::System.TimeSpan value);
+        partial void OnStopTimeUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime UnforseenStopTimeStamp
+        {
+            get
+            {
+                return _UnforseenStopTimeStamp;
+            }
+            set
+            {
+                if (_UnforseenStopTimeStamp != value)
+                {
+                    OnUnforseenStopTimeStampChanging(value);
+                    ReportPropertyChanging("UnforseenStopTimeStamp");
+                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("UnforseenStopTimeStamp");
+                    OnUnforseenStopTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _UnforseenStopTimeStamp;
+        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
+        partial void OnUnforseenStopTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ActualPosition
+        {
+            get
+            {
+                return _ActualPosition;
+            }
+            set
+            {
+                if (_ActualPosition != value)
+                {
+                    OnActualPositionChanging(value);
+                    ReportPropertyChanging("ActualPosition");
+                    _ActualPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ActualPosition");
+                    OnActualPositionChanged();
+                }
+            }
+        }
+        private global::System.String _ActualPosition;
+        partial void OnActualPositionChanging(global::System.String value);
+        partial void OnActualPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ActualPositionTimeStamp
+        {
+            get
+            {
+                return _ActualPositionTimeStamp;
+            }
+            set
+            {
+                if (_ActualPositionTimeStamp != value)
+                {
+                    OnActualPositionTimeStampChanging(value);
+                    ReportPropertyChanging("ActualPositionTimeStamp");
+                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ActualPositionTimeStamp");
+                    OnActualPositionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ActualPositionTimeStamp;
+        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
+        partial void OnActualPositionTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -13515,7 +15154,61 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String ETAReturn
+        public global::System.TimeSpan ETA
+        {
+            get
+            {
+                return _ETA;
+            }
+            set
+            {
+                if (_ETA != value)
+                {
+                    OnETAChanging(value);
+                    ReportPropertyChanging("ETA");
+                    _ETA = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETA");
+                    OnETAChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _ETA;
+        partial void OnETAChanging(global::System.TimeSpan value);
+        partial void OnETAChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ETATimeStamp
+        {
+            get
+            {
+                return _ETATimeStamp;
+            }
+            set
+            {
+                if (_ETATimeStamp != value)
+                {
+                    OnETATimeStampChanging(value);
+                    ReportPropertyChanging("ETATimeStamp");
+                    _ETATimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ETATimeStamp");
+                    OnETATimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ETATimeStamp;
+        partial void OnETATimeStampChanging(global::System.DateTime value);
+        partial void OnETATimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan ETAReturn
         {
             get
             {
@@ -13527,14 +15220,14 @@ namespace RoadIt.Models
                 {
                     OnETAReturnChanging(value);
                     ReportPropertyChanging("ETAReturn");
-                    _ETAReturn = StructuralObject.SetValidValue(value, false);
+                    _ETAReturn = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("ETAReturn");
                     OnETAReturnChanged();
                 }
             }
         }
-        private global::System.String _ETAReturn;
-        partial void OnETAReturnChanging(global::System.String value);
+        private global::System.TimeSpan _ETAReturn;
+        partial void OnETAReturnChanging(global::System.TimeSpan value);
         partial void OnETAReturnChanged();
     
         /// <summary>
@@ -13569,114 +15262,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime ArrivalAtPlant
-        {
-            get
-            {
-                return _ArrivalAtPlant;
-            }
-            set
-            {
-                if (_ArrivalAtPlant != value)
-                {
-                    OnArrivalAtPlantChanging(value);
-                    ReportPropertyChanging("ArrivalAtPlant");
-                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ArrivalAtPlant");
-                    OnArrivalAtPlantChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ArrivalAtPlant;
-        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
-        partial void OnArrivalAtPlantChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String UnforseenStopLocation
-        {
-            get
-            {
-                return _UnforseenStopLocation;
-            }
-            set
-            {
-                if (_UnforseenStopLocation != value)
-                {
-                    OnUnforseenStopLocationChanging(value);
-                    ReportPropertyChanging("UnforseenStopLocation");
-                    _UnforseenStopLocation = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("UnforseenStopLocation");
-                    OnUnforseenStopLocationChanged();
-                }
-            }
-        }
-        private global::System.String _UnforseenStopLocation;
-        partial void OnUnforseenStopLocationChanging(global::System.String value);
-        partial void OnUnforseenStopLocationChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan UnforseenStopTime
-        {
-            get
-            {
-                return _UnforseenStopTime;
-            }
-            set
-            {
-                if (_UnforseenStopTime != value)
-                {
-                    OnUnforseenStopTimeChanging(value);
-                    ReportPropertyChanging("UnforseenStopTime");
-                    _UnforseenStopTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTime");
-                    OnUnforseenStopTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _UnforseenStopTime;
-        partial void OnUnforseenStopTimeChanging(global::System.TimeSpan value);
-        partial void OnUnforseenStopTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime UnforseenStopTimeStamp
-        {
-            get
-            {
-                return _UnforseenStopTimeStamp;
-            }
-            set
-            {
-                if (_UnforseenStopTimeStamp != value)
-                {
-                    OnUnforseenStopTimeStampChanging(value);
-                    ReportPropertyChanging("UnforseenStopTimeStamp");
-                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTimeStamp");
-                    OnUnforseenStopTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _UnforseenStopTimeStamp;
-        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
-        partial void OnUnforseenStopTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String QrCodeCompactor
         {
             get
@@ -13698,6 +15283,114 @@ namespace RoadIt.Models
         private global::System.String _QrCodeCompactor;
         partial void OnQrCodeCompactorChanging(global::System.String value);
         partial void OnQrCodeCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RoadId
+        {
+            get
+            {
+                return _RoadId;
+            }
+            set
+            {
+                if (_RoadId != value)
+                {
+                    OnRoadIdChanging(value);
+                    ReportPropertyChanging("RoadId");
+                    _RoadId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadId");
+                    OnRoadIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RoadId;
+        partial void OnRoadIdChanging(global::System.Int32 value);
+        partial void OnRoadIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RoadDescription
+        {
+            get
+            {
+                return _RoadDescription;
+            }
+            set
+            {
+                if (_RoadDescription != value)
+                {
+                    OnRoadDescriptionChanging(value);
+                    ReportPropertyChanging("RoadDescription");
+                    _RoadDescription = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("RoadDescription");
+                    OnRoadDescriptionChanged();
+                }
+            }
+        }
+        private global::System.String _RoadDescription;
+        partial void OnRoadDescriptionChanging(global::System.String value);
+        partial void OnRoadDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime RoadSectionTimeStamp
+        {
+            get
+            {
+                return _RoadSectionTimeStamp;
+            }
+            set
+            {
+                if (_RoadSectionTimeStamp != value)
+                {
+                    OnRoadSectionTimeStampChanging(value);
+                    ReportPropertyChanging("RoadSectionTimeStamp");
+                    _RoadSectionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadSectionTimeStamp");
+                    OnRoadSectionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _RoadSectionTimeStamp;
+        partial void OnRoadSectionTimeStampChanging(global::System.DateTime value);
+        partial void OnRoadSectionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CompactorTimeStamp
+        {
+            get
+            {
+                return _CompactorTimeStamp;
+            }
+            set
+            {
+                if (_CompactorTimeStamp != value)
+                {
+                    OnCompactorTimeStampChanging(value);
+                    ReportPropertyChanging("CompactorTimeStamp");
+                    _CompactorTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompactorTimeStamp");
+                    OnCompactorTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _CompactorTimeStamp;
+        partial void OnCompactorTimeStampChanging(global::System.DateTime value);
+        partial void OnCompactorTimeStampChanged();
 
         #endregion
 
@@ -13707,7 +15400,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="TruckTemp")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="TruckTemp")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TruckTemp : EntityObject
@@ -13819,18 +15512,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_7", "Truck")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_7", "Truck")]
         public EntityCollection<Truck> Trucks
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_7", "Truck");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("roaditModel.Truck_ibfk_7", "Truck");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_7", "Truck", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("roaditModel.Truck_ibfk_7", "Truck", value);
                 }
             }
         }
@@ -13842,7 +15535,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="UA")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="UA")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class UA : EntityObject
@@ -13852,25 +15545,37 @@ namespace RoadIt.Models
         /// <summary>
         /// Create a new UA object.
         /// </summary>
-        /// <param name="roadId">Initial value of the RoadId property.</param>
-        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
-        /// <param name="layerThickness">Initial value of the LayerThickness property.</param>
-        /// <param name="surface">Initial value of the Surface property.</param>
-        /// <param name="tonPerDay">Initial value of the TonPerDay property.</param>
-        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
-        /// <param name="mixtureName">Initial value of the MixtureName property.</param>
-        /// <param name="typeOfAggregates">Initial value of the TypeOfAggregates property.</param>
-        /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
+        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
+        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
+        /// <param name="actualPositionReturn">Initial value of the ActualPositionReturn property.</param>
+        /// <param name="actualPositionReturnTimeStamp">Initial value of the ActualPositionReturnTimeStamp property.</param>
         /// <param name="aggragationMaxTemp">Initial value of the AggragationMaxTemp property.</param>
         /// <param name="aggragationMinTemp">Initial value of the AggragationMinTemp property.</param>
         /// <param name="aggragationTimeStamp">Initial value of the AggragationTimeStamp property.</param>
-        /// <param name="bitumenMaxTemp">Initial value of the BitumenMaxTemp property.</param>
-        /// <param name="bitumenMinTemp">Initial value of the BitumenMinTemp property.</param>
+        /// <param name="airHumidity">Initial value of the AirHumidity property.</param>
+        /// <param name="airHumidityTimeStamp">Initial value of the AirHumidityTimeStamp property.</param>
+        /// <param name="leftAngle">Initial value of the LeftAngle property.</param>
+        /// <param name="rightAngle">Initial value of the RightAngle property.</param>
+        /// <param name="angleTimestamp">Initial value of the AngleTimestamp property.</param>
+        /// <param name="mixtureName">Initial value of the MixtureName property.</param>
+        /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
+        /// <param name="typeOfAggregates">Initial value of the TypeOfAggregates property.</param>
+        /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
+        /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
+        /// <param name="gPS">Initial value of the GPS property.</param>
+        /// <param name="tempAsphalt">Initial value of the TempAsphalt property.</param>
+        /// <param name="asphaltTempTimeStamp">Initial value of the AsphaltTempTimeStamp property.</param>
         /// <param name="bitumenTimeStamp">Initial value of the BitumenTimeStamp property.</param>
-        /// <param name="fillerRecup">Initial value of the FillerRecup property.</param>
-        /// <param name="fillerRecupTimeStamp">Initial value of the FillerRecupTimeStamp property.</param>
-        /// <param name="mixingTemp">Initial value of the MixingTemp property.</param>
-        /// <param name="mixingTime">Initial value of the MixingTime property.</param>
+        /// <param name="bitumenMinTemp">Initial value of the BitumenMinTemp property.</param>
+        /// <param name="bitumenMaxTemp">Initial value of the BitumenMaxTemp property.</param>
+        /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
+        /// <param name="gPSCompactor">Initial value of the GPSCompactor property.</param>
+        /// <param name="colorCodeTimeStamp">Initial value of the ColorCodeTimeStamp property.</param>
+        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
+        /// <param name="numberOfRollerCompactorPassages">Initial value of the NumberOfRollerCompactorPassages property.</param>
+        /// <param name="locationOfVibration">Initial value of the LocationOfVibration property.</param>
+        /// <param name="speedOfRollerCompactor">Initial value of the SpeedOfRollerCompactor property.</param>
+        /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
         /// <param name="massOfAggregationBunker1">Initial value of the MassOfAggregationBunker1 property.</param>
         /// <param name="massOfAggregationBunker2">Initial value of the MassOfAggregationBunker2 property.</param>
         /// <param name="massOfAggregationBunker3">Initial value of the MassOfAggregationBunker3 property.</param>
@@ -13880,56 +15585,28 @@ namespace RoadIt.Models
         /// <param name="filler">Initial value of the Filler property.</param>
         /// <param name="bitumen">Initial value of the Bitumen property.</param>
         /// <param name="additivesKg">Initial value of the AdditivesKg property.</param>
-        /// <param name="tempSilo">Initial value of the TempSilo property.</param>
-        /// <param name="analysisComposition">Initial value of the AnalysisComposition property.</param>
-        /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
-        /// <param name="departureTime">Initial value of the DepartureTime property.</param>
-        /// <param name="massTruck">Initial value of the MassTruck property.</param>
-        /// <param name="actualPosition">Initial value of the ActualPosition property.</param>
-        /// <param name="actualPositionTimeStamp">Initial value of the ActualPositionTimeStamp property.</param>
+        /// <param name="compositionTimeStamp">Initial value of the CompositionTimeStamp property.</param>
         /// <param name="eTA">Initial value of the ETA property.</param>
         /// <param name="eTATimeStamp">Initial value of the ETATimeStamp property.</param>
-        /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
-        /// <param name="deattachmentFinisherTime">Initial value of the DeattachmentFinisherTime property.</param>
-        /// <param name="deattachmentFinisherPosition">Initial value of the DeattachmentFinisherPosition property.</param>
-        /// <param name="attachmentToFinisherTime">Initial value of the AttachmentToFinisherTime property.</param>
-        /// <param name="attachmentToFinisherPosition">Initial value of the AttachmentToFinisherPosition property.</param>
-        /// <param name="temp">Initial value of the Temp property.</param>
-        /// <param name="tempTruckTimeStamp">Initial value of the TempTruckTimeStamp property.</param>
-        /// <param name="actualPositionReturn">Initial value of the ActualPositionReturn property.</param>
-        /// <param name="actualPositionReturnTimeStamp">Initial value of the ActualPositionReturnTimeStamp property.</param>
         /// <param name="eTAReturn">Initial value of the ETAReturn property.</param>
         /// <param name="eTAReturnTimeStamp">Initial value of the ETAReturnTimeStamp property.</param>
-        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
-        /// <param name="unforseenStopLocation">Initial value of the UnforseenStopLocation property.</param>
-        /// <param name="unforseenStopTime">Initial value of the UnforseenStopTime property.</param>
-        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
-        /// <param name="finisherSpeed">Initial value of the FinisherSpeed property.</param>
-        /// <param name="speedFinisherTimeStamp">Initial value of the SpeedFinisherTimeStamp property.</param>
-        /// <param name="angleLeft">Initial value of the AngleLeft property.</param>
-        /// <param name="angleRight">Initial value of the AngleRight property.</param>
-        /// <param name="width">Initial value of the Width property.</param>
-        /// <param name="thicknessLeft">Initial value of the ThicknessLeft property.</param>
-        /// <param name="thicknessMiddel">Initial value of the ThicknessMiddel property.</param>
-        /// <param name="thicknessRight">Initial value of the ThicknessRight property.</param>
         /// <param name="tranverseSlope">Initial value of the TranverseSlope property.</param>
-        /// <param name="stopLocation">Initial value of the StopLocation property.</param>
-        /// <param name="stopTime">Initial value of the StopTime property.</param>
-        /// <param name="stopTimeStamp">Initial value of the StopTimeStamp property.</param>
         /// <param name="precipation">Initial value of the Precipation property.</param>
-        /// <param name="tempWeather">Initial value of the TempWeather property.</param>
-        /// <param name="weatherTempTimeStamp">Initial value of the WeatherTempTimeStamp property.</param>
-        /// <param name="windSpeed">Initial value of the WindSpeed property.</param>
-        /// <param name="windTimeStamp">Initial value of the WindTimeStamp property.</param>
-        /// <param name="airHumidity">Initial value of the AirHumidity property.</param>
-        /// <param name="airHumidityTimeStamp">Initial value of the AirHumidityTimeStamp property.</param>
         /// <param name="asphaltTempAfterFinisherIrScanOrThermo">Initial value of the AsphaltTempAfterFinisherIrScanOrThermo property.</param>
-        /// <param name="qrCodeCompactor">Initial value of the QrCodeCompactor property.</param>
-        /// <param name="numberOfRollerCompactorPassages">Initial value of the NumberOfRollerCompactorPassages property.</param>
-        /// <param name="locationOfVibration">Initial value of the LocationOfVibration property.</param>
-        /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
-        /// <param name="gPSCompactor">Initial value of the GPSCompactor property.</param>
-        /// <param name="speedOfRollerCompactor">Initial value of the SpeedOfRollerCompactor property.</param>
+        /// <param name="finisherTimeStamp">Initial value of the FinisherTimeStamp property.</param>
+        /// <param name="leftTickness">Initial value of the LeftTickness property.</param>
+        /// <param name="middelThickness">Initial value of the MiddelThickness property.</param>
+        /// <param name="rightThickness">Initial value of the RightThickness property.</param>
+        /// <param name="thicknessTimeStamp">Initial value of the ThicknessTimeStamp property.</param>
+        /// <param name="fillerRecup">Initial value of the FillerRecup property.</param>
+        /// <param name="fillerRecupTimeStamp">Initial value of the FillerRecupTimeStamp property.</param>
+        /// <param name="stopLocationLTS">Initial value of the StopLocationLTS property.</param>
+        /// <param name="stopTimeLTS">Initial value of the StopTimeLTS property.</param>
+        /// <param name="stopTimeStamp">Initial value of the StopTimeStamp property.</param>
+        /// <param name="layerThickness">Initial value of the LayerThickness property.</param>
+        /// <param name="surface">Initial value of the Surface property.</param>
+        /// <param name="tonPerDay">Initial value of the TonPerDay property.</param>
+        /// <param name="planningTimeStamp">Initial value of the PlanningTimeStamp property.</param>
         /// <param name="complianceMixture">Initial value of the ComplianceMixture property.</param>
         /// <param name="samplesCopro">Initial value of the SamplesCopro property.</param>
         /// <param name="densityOfField">Initial value of the DensityOfField property.</param>
@@ -13938,28 +15615,72 @@ namespace RoadIt.Models
         /// <param name="skidresistance">Initial value of the Skidresistance property.</param>
         /// <param name="iri">Initial value of the Iri property.</param>
         /// <param name="extraTestsAskedBijClient">Initial value of the ExtraTestsAskedBijClient property.</param>
-        public static UA CreateUA(global::System.Int32 roadId, global::System.String roadDescription, global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.String technicalDataSheet, global::System.String mixtureName, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.Int32 bitumenMaxTemp, global::System.Int32 bitumenMinTemp, global::System.DateTime bitumenTimeStamp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String eTA, global::System.DateTime eTATimeStamp, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.String eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.DateTime arrivalAtPlant, global::System.String unforseenStopLocation, global::System.TimeSpan unforseenStopTime, global::System.DateTime unforseenStopTimeStamp, global::System.Int32 finisherSpeed, global::System.DateTime speedFinisherTimeStamp, global::System.Int32 angleLeft, global::System.Int32 angleRight, global::System.Int32 width, global::System.Int32 thicknessLeft, global::System.Int32 thicknessMiddel, global::System.Int32 thicknessRight, global::System.Int32 tranverseSlope, global::System.String stopLocation, global::System.TimeSpan stopTime, global::System.DateTime stopTimeStamp, global::System.String precipation, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.Int32 speedOfRollerCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient)
+        /// <param name="qualtityTimeStamp">Initial value of the QualtityTimeStamp property.</param>
+        /// <param name="roadId">Initial value of the RoadId property.</param>
+        /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
+        /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
+        /// <param name="mixingTemp">Initial value of the MixingTemp property.</param>
+        /// <param name="mixingTime">Initial value of the MixingTime property.</param>
+        /// <param name="tempSilo">Initial value of the TempSilo property.</param>
+        /// <param name="analysisComposition">Initial value of the AnalysisComposition property.</param>
+        /// <param name="siloTimpStamp">Initial value of the SiloTimpStamp property.</param>
+        /// <param name="speed">Initial value of the Speed property.</param>
+        /// <param name="speedFinisherTimeStamp">Initial value of the SpeedFinisherTimeStamp property.</param>
+        /// <param name="truckLicensPlate">Initial value of the TruckLicensPlate property.</param>
+        /// <param name="departureTime">Initial value of the DepartureTime property.</param>
+        /// <param name="massTruck">Initial value of the MassTruck property.</param>
+        /// <param name="realArrivalTime">Initial value of the RealArrivalTime property.</param>
+        /// <param name="deattachmentFinisherTime">Initial value of the DeattachmentFinisherTime property.</param>
+        /// <param name="deattachmentFinisherPosition">Initial value of the DeattachmentFinisherPosition property.</param>
+        /// <param name="arrivalAtPlant">Initial value of the ArrivalAtPlant property.</param>
+        /// <param name="attachmentToFinisherTime">Initial value of the AttachmentToFinisherTime property.</param>
+        /// <param name="attachmentToFinisherPosition">Initial value of the AttachmentToFinisherPosition property.</param>
+        /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
+        /// <param name="temp">Initial value of the Temp property.</param>
+        /// <param name="tempTruckTimeStamp">Initial value of the TempTruckTimeStamp property.</param>
+        /// <param name="stopLocationUnforseenStop">Initial value of the StopLocationUnforseenStop property.</param>
+        /// <param name="stopTimeUnforseenStop">Initial value of the StopTimeUnforseenStop property.</param>
+        /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
+        /// <param name="tempWeather">Initial value of the TempWeather property.</param>
+        /// <param name="weatherTempTimeStamp">Initial value of the WeatherTempTimeStamp property.</param>
+        /// <param name="width">Initial value of the Width property.</param>
+        /// <param name="widthTimeStamp">Initial value of the WidthTimeStamp property.</param>
+        /// <param name="windSpeed">Initial value of the WindSpeed property.</param>
+        /// <param name="windTimeStamp">Initial value of the WindTimeStamp property.</param>
+        public static UA CreateUA(global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp)
         {
             UA uA = new UA();
-            uA.RoadId = roadId;
-            uA.RoadDescription = roadDescription;
-            uA.LayerThickness = layerThickness;
-            uA.Surface = surface;
-            uA.TonPerDay = tonPerDay;
-            uA.TechnicalDataSheet = technicalDataSheet;
-            uA.MixtureName = mixtureName;
-            uA.TypeOfAggregates = typeOfAggregates;
-            uA.MixtureChange = mixtureChange;
+            uA.ActualPosition = actualPosition;
+            uA.ActualPositionTimeStamp = actualPositionTimeStamp;
+            uA.ActualPositionReturn = actualPositionReturn;
+            uA.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
             uA.AggragationMaxTemp = aggragationMaxTemp;
             uA.AggragationMinTemp = aggragationMinTemp;
             uA.AggragationTimeStamp = aggragationTimeStamp;
-            uA.BitumenMaxTemp = bitumenMaxTemp;
-            uA.BitumenMinTemp = bitumenMinTemp;
+            uA.AirHumidity = airHumidity;
+            uA.AirHumidityTimeStamp = airHumidityTimeStamp;
+            uA.LeftAngle = leftAngle;
+            uA.RightAngle = rightAngle;
+            uA.AngleTimestamp = angleTimestamp;
+            uA.MixtureName = mixtureName;
+            uA.TechnicalDataSheet = technicalDataSheet;
+            uA.TypeOfAggregates = typeOfAggregates;
+            uA.MixtureChange = mixtureChange;
+            uA.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
+            uA.GPS = gPS;
+            uA.TempAsphalt = tempAsphalt;
+            uA.AsphaltTempTimeStamp = asphaltTempTimeStamp;
             uA.BitumenTimeStamp = bitumenTimeStamp;
-            uA.FillerRecup = fillerRecup;
-            uA.FillerRecupTimeStamp = fillerRecupTimeStamp;
-            uA.MixingTemp = mixingTemp;
-            uA.MixingTime = mixingTime;
+            uA.BitumenMinTemp = bitumenMinTemp;
+            uA.BitumenMaxTemp = bitumenMaxTemp;
+            uA.GPSFinisher = gPSFinisher;
+            uA.GPSCompactor = gPSCompactor;
+            uA.ColorCodeTimeStamp = colorCodeTimeStamp;
+            uA.QrCodeCompactor = qrCodeCompactor;
+            uA.NumberOfRollerCompactorPassages = numberOfRollerCompactorPassages;
+            uA.LocationOfVibration = locationOfVibration;
+            uA.SpeedOfRollerCompactor = speedOfRollerCompactor;
+            uA.CompactorTimeStamp = compactorTimeStamp;
             uA.MassOfAggregationBunker1 = massOfAggregationBunker1;
             uA.MassOfAggregationBunker2 = massOfAggregationBunker2;
             uA.MassOfAggregationBunker3 = massOfAggregationBunker3;
@@ -13969,56 +15690,28 @@ namespace RoadIt.Models
             uA.Filler = filler;
             uA.Bitumen = bitumen;
             uA.AdditivesKg = additivesKg;
-            uA.TempSilo = tempSilo;
-            uA.AnalysisComposition = analysisComposition;
-            uA.TruckLicensPlate = truckLicensPlate;
-            uA.DepartureTime = departureTime;
-            uA.MassTruck = massTruck;
-            uA.ActualPosition = actualPosition;
-            uA.ActualPositionTimeStamp = actualPositionTimeStamp;
+            uA.CompositionTimeStamp = compositionTimeStamp;
             uA.ETA = eTA;
             uA.ETATimeStamp = eTATimeStamp;
-            uA.RealArrivalTime = realArrivalTime;
-            uA.DeattachmentFinisherTime = deattachmentFinisherTime;
-            uA.DeattachmentFinisherPosition = deattachmentFinisherPosition;
-            uA.AttachmentToFinisherTime = attachmentToFinisherTime;
-            uA.AttachmentToFinisherPosition = attachmentToFinisherPosition;
-            uA.Temp = temp;
-            uA.TempTruckTimeStamp = tempTruckTimeStamp;
-            uA.ActualPositionReturn = actualPositionReturn;
-            uA.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
             uA.ETAReturn = eTAReturn;
             uA.ETAReturnTimeStamp = eTAReturnTimeStamp;
-            uA.ArrivalAtPlant = arrivalAtPlant;
-            uA.UnforseenStopLocation = unforseenStopLocation;
-            uA.UnforseenStopTime = unforseenStopTime;
-            uA.UnforseenStopTimeStamp = unforseenStopTimeStamp;
-            uA.FinisherSpeed = finisherSpeed;
-            uA.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
-            uA.AngleLeft = angleLeft;
-            uA.AngleRight = angleRight;
-            uA.Width = width;
-            uA.ThicknessLeft = thicknessLeft;
-            uA.ThicknessMiddel = thicknessMiddel;
-            uA.ThicknessRight = thicknessRight;
             uA.TranverseSlope = tranverseSlope;
-            uA.StopLocation = stopLocation;
-            uA.StopTime = stopTime;
-            uA.StopTimeStamp = stopTimeStamp;
             uA.Precipation = precipation;
-            uA.TempWeather = tempWeather;
-            uA.WeatherTempTimeStamp = weatherTempTimeStamp;
-            uA.WindSpeed = windSpeed;
-            uA.WindTimeStamp = windTimeStamp;
-            uA.AirHumidity = airHumidity;
-            uA.AirHumidityTimeStamp = airHumidityTimeStamp;
             uA.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
-            uA.QrCodeCompactor = qrCodeCompactor;
-            uA.NumberOfRollerCompactorPassages = numberOfRollerCompactorPassages;
-            uA.LocationOfVibration = locationOfVibration;
-            uA.GPSFinisher = gPSFinisher;
-            uA.GPSCompactor = gPSCompactor;
-            uA.SpeedOfRollerCompactor = speedOfRollerCompactor;
+            uA.FinisherTimeStamp = finisherTimeStamp;
+            uA.LeftTickness = leftTickness;
+            uA.MiddelThickness = middelThickness;
+            uA.RightThickness = rightThickness;
+            uA.ThicknessTimeStamp = thicknessTimeStamp;
+            uA.FillerRecup = fillerRecup;
+            uA.FillerRecupTimeStamp = fillerRecupTimeStamp;
+            uA.StopLocationLTS = stopLocationLTS;
+            uA.StopTimeLTS = stopTimeLTS;
+            uA.StopTimeStamp = stopTimeStamp;
+            uA.LayerThickness = layerThickness;
+            uA.Surface = surface;
+            uA.TonPerDay = tonPerDay;
+            uA.PlanningTimeStamp = planningTimeStamp;
             uA.ComplianceMixture = complianceMixture;
             uA.SamplesCopro = samplesCopro;
             uA.DensityOfField = densityOfField;
@@ -14027,6 +15720,38 @@ namespace RoadIt.Models
             uA.Skidresistance = skidresistance;
             uA.Iri = iri;
             uA.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
+            uA.QualtityTimeStamp = qualtityTimeStamp;
+            uA.RoadId = roadId;
+            uA.RoadDescription = roadDescription;
+            uA.RoadSectionTimeStamp = roadSectionTimeStamp;
+            uA.MixingTemp = mixingTemp;
+            uA.MixingTime = mixingTime;
+            uA.TempSilo = tempSilo;
+            uA.AnalysisComposition = analysisComposition;
+            uA.SiloTimpStamp = siloTimpStamp;
+            uA.Speed = speed;
+            uA.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
+            uA.TruckLicensPlate = truckLicensPlate;
+            uA.DepartureTime = departureTime;
+            uA.MassTruck = massTruck;
+            uA.RealArrivalTime = realArrivalTime;
+            uA.DeattachmentFinisherTime = deattachmentFinisherTime;
+            uA.DeattachmentFinisherPosition = deattachmentFinisherPosition;
+            uA.ArrivalAtPlant = arrivalAtPlant;
+            uA.AttachmentToFinisherTime = attachmentToFinisherTime;
+            uA.AttachmentToFinisherPosition = attachmentToFinisherPosition;
+            uA.TruckTimeStamp = truckTimeStamp;
+            uA.Temp = temp;
+            uA.TempTruckTimeStamp = tempTruckTimeStamp;
+            uA.StopLocationUnforseenStop = stopLocationUnforseenStop;
+            uA.StopTimeUnforseenStop = stopTimeUnforseenStop;
+            uA.UnforseenStopTimeStamp = unforseenStopTimeStamp;
+            uA.TempWeather = tempWeather;
+            uA.WeatherTempTimeStamp = weatherTempTimeStamp;
+            uA.Width = width;
+            uA.WidthTimeStamp = widthTimeStamp;
+            uA.WindSpeed = windSpeed;
+            uA.WindTimeStamp = windTimeStamp;
             return uA;
         }
 
@@ -14039,243 +15764,108 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 RoadId
+        public global::System.String ActualPosition
         {
             get
             {
-                return _RoadId;
+                return _ActualPosition;
             }
             set
             {
-                if (_RoadId != value)
+                if (_ActualPosition != value)
                 {
-                    OnRoadIdChanging(value);
-                    ReportPropertyChanging("RoadId");
-                    _RoadId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RoadId");
-                    OnRoadIdChanged();
+                    OnActualPositionChanging(value);
+                    ReportPropertyChanging("ActualPosition");
+                    _ActualPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ActualPosition");
+                    OnActualPositionChanged();
                 }
             }
         }
-        private global::System.Int32 _RoadId;
-        partial void OnRoadIdChanging(global::System.Int32 value);
-        partial void OnRoadIdChanged();
+        private global::System.String _ActualPosition;
+        partial void OnActualPositionChanging(global::System.String value);
+        partial void OnActualPositionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String RoadDescription
+        public global::System.DateTime ActualPositionTimeStamp
         {
             get
             {
-                return _RoadDescription;
+                return _ActualPositionTimeStamp;
             }
             set
             {
-                if (_RoadDescription != value)
+                if (_ActualPositionTimeStamp != value)
                 {
-                    OnRoadDescriptionChanging(value);
-                    ReportPropertyChanging("RoadDescription");
-                    _RoadDescription = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("RoadDescription");
-                    OnRoadDescriptionChanged();
+                    OnActualPositionTimeStampChanging(value);
+                    ReportPropertyChanging("ActualPositionTimeStamp");
+                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ActualPositionTimeStamp");
+                    OnActualPositionTimeStampChanged();
                 }
             }
         }
-        private global::System.String _RoadDescription;
-        partial void OnRoadDescriptionChanging(global::System.String value);
-        partial void OnRoadDescriptionChanged();
+        private global::System.DateTime _ActualPositionTimeStamp;
+        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
+        partial void OnActualPositionTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 LayerThickness
+        public global::System.String ActualPositionReturn
         {
             get
             {
-                return _LayerThickness;
+                return _ActualPositionReturn;
             }
             set
             {
-                if (_LayerThickness != value)
+                if (_ActualPositionReturn != value)
                 {
-                    OnLayerThicknessChanging(value);
-                    ReportPropertyChanging("LayerThickness");
-                    _LayerThickness = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("LayerThickness");
-                    OnLayerThicknessChanged();
+                    OnActualPositionReturnChanging(value);
+                    ReportPropertyChanging("ActualPositionReturn");
+                    _ActualPositionReturn = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ActualPositionReturn");
+                    OnActualPositionReturnChanged();
                 }
             }
         }
-        private global::System.Int32 _LayerThickness;
-        partial void OnLayerThicknessChanging(global::System.Int32 value);
-        partial void OnLayerThicknessChanged();
+        private global::System.String _ActualPositionReturn;
+        partial void OnActualPositionReturnChanging(global::System.String value);
+        partial void OnActualPositionReturnChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Surface
+        public global::System.DateTime ActualPositionReturnTimeStamp
         {
             get
             {
-                return _Surface;
+                return _ActualPositionReturnTimeStamp;
             }
             set
             {
-                if (_Surface != value)
+                if (_ActualPositionReturnTimeStamp != value)
                 {
-                    OnSurfaceChanging(value);
-                    ReportPropertyChanging("Surface");
-                    _Surface = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Surface");
-                    OnSurfaceChanged();
+                    OnActualPositionReturnTimeStampChanging(value);
+                    ReportPropertyChanging("ActualPositionReturnTimeStamp");
+                    _ActualPositionReturnTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ActualPositionReturnTimeStamp");
+                    OnActualPositionReturnTimeStampChanged();
                 }
             }
         }
-        private global::System.Int32 _Surface;
-        partial void OnSurfaceChanging(global::System.Int32 value);
-        partial void OnSurfaceChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 TonPerDay
-        {
-            get
-            {
-                return _TonPerDay;
-            }
-            set
-            {
-                if (_TonPerDay != value)
-                {
-                    OnTonPerDayChanging(value);
-                    ReportPropertyChanging("TonPerDay");
-                    _TonPerDay = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("TonPerDay");
-                    OnTonPerDayChanged();
-                }
-            }
-        }
-        private global::System.Int32 _TonPerDay;
-        partial void OnTonPerDayChanging(global::System.Int32 value);
-        partial void OnTonPerDayChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String TechnicalDataSheet
-        {
-            get
-            {
-                return _TechnicalDataSheet;
-            }
-            set
-            {
-                if (_TechnicalDataSheet != value)
-                {
-                    OnTechnicalDataSheetChanging(value);
-                    ReportPropertyChanging("TechnicalDataSheet");
-                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TechnicalDataSheet");
-                    OnTechnicalDataSheetChanged();
-                }
-            }
-        }
-        private global::System.String _TechnicalDataSheet;
-        partial void OnTechnicalDataSheetChanging(global::System.String value);
-        partial void OnTechnicalDataSheetChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String MixtureName
-        {
-            get
-            {
-                return _MixtureName;
-            }
-            set
-            {
-                if (_MixtureName != value)
-                {
-                    OnMixtureNameChanging(value);
-                    ReportPropertyChanging("MixtureName");
-                    _MixtureName = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("MixtureName");
-                    OnMixtureNameChanged();
-                }
-            }
-        }
-        private global::System.String _MixtureName;
-        partial void OnMixtureNameChanging(global::System.String value);
-        partial void OnMixtureNameChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String TypeOfAggregates
-        {
-            get
-            {
-                return _TypeOfAggregates;
-            }
-            set
-            {
-                if (_TypeOfAggregates != value)
-                {
-                    OnTypeOfAggregatesChanging(value);
-                    ReportPropertyChanging("TypeOfAggregates");
-                    _TypeOfAggregates = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TypeOfAggregates");
-                    OnTypeOfAggregatesChanged();
-                }
-            }
-        }
-        private global::System.String _TypeOfAggregates;
-        partial void OnTypeOfAggregatesChanging(global::System.String value);
-        partial void OnTypeOfAggregatesChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String MixtureChange
-        {
-            get
-            {
-                return _MixtureChange;
-            }
-            set
-            {
-                if (_MixtureChange != value)
-                {
-                    OnMixtureChangeChanging(value);
-                    ReportPropertyChanging("MixtureChange");
-                    _MixtureChange = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("MixtureChange");
-                    OnMixtureChangeChanged();
-                }
-            }
-        }
-        private global::System.String _MixtureChange;
-        partial void OnMixtureChangeChanging(global::System.String value);
-        partial void OnMixtureChangeChanged();
+        private global::System.DateTime _ActualPositionReturnTimeStamp;
+        partial void OnActualPositionReturnTimeStampChanging(global::System.DateTime value);
+        partial void OnActualPositionReturnTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14363,54 +15953,351 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 BitumenMaxTemp
+        public global::System.Int32 AirHumidity
         {
             get
             {
-                return _BitumenMaxTemp;
+                return _AirHumidity;
             }
             set
             {
-                if (_BitumenMaxTemp != value)
+                if (_AirHumidity != value)
                 {
-                    OnBitumenMaxTempChanging(value);
-                    ReportPropertyChanging("BitumenMaxTemp");
-                    _BitumenMaxTemp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("BitumenMaxTemp");
-                    OnBitumenMaxTempChanged();
+                    OnAirHumidityChanging(value);
+                    ReportPropertyChanging("AirHumidity");
+                    _AirHumidity = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AirHumidity");
+                    OnAirHumidityChanged();
                 }
             }
         }
-        private global::System.Int32 _BitumenMaxTemp;
-        partial void OnBitumenMaxTempChanging(global::System.Int32 value);
-        partial void OnBitumenMaxTempChanged();
+        private global::System.Int32 _AirHumidity;
+        partial void OnAirHumidityChanging(global::System.Int32 value);
+        partial void OnAirHumidityChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 BitumenMinTemp
+        public global::System.DateTime AirHumidityTimeStamp
         {
             get
             {
-                return _BitumenMinTemp;
+                return _AirHumidityTimeStamp;
             }
             set
             {
-                if (_BitumenMinTemp != value)
+                if (_AirHumidityTimeStamp != value)
                 {
-                    OnBitumenMinTempChanging(value);
-                    ReportPropertyChanging("BitumenMinTemp");
-                    _BitumenMinTemp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("BitumenMinTemp");
-                    OnBitumenMinTempChanged();
+                    OnAirHumidityTimeStampChanging(value);
+                    ReportPropertyChanging("AirHumidityTimeStamp");
+                    _AirHumidityTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AirHumidityTimeStamp");
+                    OnAirHumidityTimeStampChanged();
                 }
             }
         }
-        private global::System.Int32 _BitumenMinTemp;
-        partial void OnBitumenMinTempChanging(global::System.Int32 value);
-        partial void OnBitumenMinTempChanged();
+        private global::System.DateTime _AirHumidityTimeStamp;
+        partial void OnAirHumidityTimeStampChanging(global::System.DateTime value);
+        partial void OnAirHumidityTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 LeftAngle
+        {
+            get
+            {
+                return _LeftAngle;
+            }
+            set
+            {
+                if (_LeftAngle != value)
+                {
+                    OnLeftAngleChanging(value);
+                    ReportPropertyChanging("LeftAngle");
+                    _LeftAngle = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("LeftAngle");
+                    OnLeftAngleChanged();
+                }
+            }
+        }
+        private global::System.Int32 _LeftAngle;
+        partial void OnLeftAngleChanging(global::System.Int32 value);
+        partial void OnLeftAngleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RightAngle
+        {
+            get
+            {
+                return _RightAngle;
+            }
+            set
+            {
+                if (_RightAngle != value)
+                {
+                    OnRightAngleChanging(value);
+                    ReportPropertyChanging("RightAngle");
+                    _RightAngle = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RightAngle");
+                    OnRightAngleChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RightAngle;
+        partial void OnRightAngleChanging(global::System.Int32 value);
+        partial void OnRightAngleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AngleTimestamp
+        {
+            get
+            {
+                return _AngleTimestamp;
+            }
+            set
+            {
+                if (_AngleTimestamp != value)
+                {
+                    OnAngleTimestampChanging(value);
+                    ReportPropertyChanging("AngleTimestamp");
+                    _AngleTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AngleTimestamp");
+                    OnAngleTimestampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AngleTimestamp;
+        partial void OnAngleTimestampChanging(global::System.DateTime value);
+        partial void OnAngleTimestampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String MixtureName
+        {
+            get
+            {
+                return _MixtureName;
+            }
+            set
+            {
+                if (_MixtureName != value)
+                {
+                    OnMixtureNameChanging(value);
+                    ReportPropertyChanging("MixtureName");
+                    _MixtureName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("MixtureName");
+                    OnMixtureNameChanged();
+                }
+            }
+        }
+        private global::System.String _MixtureName;
+        partial void OnMixtureNameChanging(global::System.String value);
+        partial void OnMixtureNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TechnicalDataSheet
+        {
+            get
+            {
+                return _TechnicalDataSheet;
+            }
+            set
+            {
+                if (_TechnicalDataSheet != value)
+                {
+                    OnTechnicalDataSheetChanging(value);
+                    ReportPropertyChanging("TechnicalDataSheet");
+                    _TechnicalDataSheet = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TechnicalDataSheet");
+                    OnTechnicalDataSheetChanged();
+                }
+            }
+        }
+        private global::System.String _TechnicalDataSheet;
+        partial void OnTechnicalDataSheetChanging(global::System.String value);
+        partial void OnTechnicalDataSheetChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TypeOfAggregates
+        {
+            get
+            {
+                return _TypeOfAggregates;
+            }
+            set
+            {
+                if (_TypeOfAggregates != value)
+                {
+                    OnTypeOfAggregatesChanging(value);
+                    ReportPropertyChanging("TypeOfAggregates");
+                    _TypeOfAggregates = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TypeOfAggregates");
+                    OnTypeOfAggregatesChanged();
+                }
+            }
+        }
+        private global::System.String _TypeOfAggregates;
+        partial void OnTypeOfAggregatesChanging(global::System.String value);
+        partial void OnTypeOfAggregatesChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String MixtureChange
+        {
+            get
+            {
+                return _MixtureChange;
+            }
+            set
+            {
+                if (_MixtureChange != value)
+                {
+                    OnMixtureChangeChanging(value);
+                    ReportPropertyChanging("MixtureChange");
+                    _MixtureChange = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("MixtureChange");
+                    OnMixtureChangeChanged();
+                }
+            }
+        }
+        private global::System.String _MixtureChange;
+        partial void OnMixtureChangeChanging(global::System.String value);
+        partial void OnMixtureChangeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltMixPlantTimestamp
+        {
+            get
+            {
+                return _AsphaltMixPlantTimestamp;
+            }
+            set
+            {
+                if (_AsphaltMixPlantTimestamp != value)
+                {
+                    OnAsphaltMixPlantTimestampChanging(value);
+                    ReportPropertyChanging("AsphaltMixPlantTimestamp");
+                    _AsphaltMixPlantTimestamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltMixPlantTimestamp");
+                    OnAsphaltMixPlantTimestampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AsphaltMixPlantTimestamp;
+        partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
+        partial void OnAsphaltMixPlantTimestampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String GPS
+        {
+            get
+            {
+                return _GPS;
+            }
+            set
+            {
+                if (_GPS != value)
+                {
+                    OnGPSChanging(value);
+                    ReportPropertyChanging("GPS");
+                    _GPS = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPS");
+                    OnGPSChanged();
+                }
+            }
+        }
+        private global::System.String _GPS;
+        partial void OnGPSChanging(global::System.String value);
+        partial void OnGPSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TempAsphalt
+        {
+            get
+            {
+                return _TempAsphalt;
+            }
+            set
+            {
+                if (_TempAsphalt != value)
+                {
+                    OnTempAsphaltChanging(value);
+                    ReportPropertyChanging("TempAsphalt");
+                    _TempAsphalt = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TempAsphalt");
+                    OnTempAsphaltChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TempAsphalt;
+        partial void OnTempAsphaltChanging(global::System.Int32 value);
+        partial void OnTempAsphaltChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AsphaltTempTimeStamp
+        {
+            get
+            {
+                return _AsphaltTempTimeStamp;
+            }
+            set
+            {
+                if (_AsphaltTempTimeStamp != value)
+                {
+                    OnAsphaltTempTimeStampChanging(value);
+                    ReportPropertyChanging("AsphaltTempTimeStamp");
+                    _AsphaltTempTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AsphaltTempTimeStamp");
+                    OnAsphaltTempTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AsphaltTempTimeStamp;
+        partial void OnAsphaltTempTimeStampChanging(global::System.DateTime value);
+        partial void OnAsphaltTempTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14444,108 +16331,270 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 FillerRecup
+        public global::System.Int32 BitumenMinTemp
         {
             get
             {
-                return _FillerRecup;
+                return _BitumenMinTemp;
             }
             set
             {
-                if (_FillerRecup != value)
+                if (_BitumenMinTemp != value)
                 {
-                    OnFillerRecupChanging(value);
-                    ReportPropertyChanging("FillerRecup");
-                    _FillerRecup = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("FillerRecup");
-                    OnFillerRecupChanged();
+                    OnBitumenMinTempChanging(value);
+                    ReportPropertyChanging("BitumenMinTemp");
+                    _BitumenMinTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BitumenMinTemp");
+                    OnBitumenMinTempChanged();
                 }
             }
         }
-        private global::System.Int32 _FillerRecup;
-        partial void OnFillerRecupChanging(global::System.Int32 value);
-        partial void OnFillerRecupChanged();
+        private global::System.Int32 _BitumenMinTemp;
+        partial void OnBitumenMinTempChanging(global::System.Int32 value);
+        partial void OnBitumenMinTempChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime FillerRecupTimeStamp
+        public global::System.Int32 BitumenMaxTemp
         {
             get
             {
-                return _FillerRecupTimeStamp;
+                return _BitumenMaxTemp;
             }
             set
             {
-                if (_FillerRecupTimeStamp != value)
+                if (_BitumenMaxTemp != value)
                 {
-                    OnFillerRecupTimeStampChanging(value);
-                    ReportPropertyChanging("FillerRecupTimeStamp");
-                    _FillerRecupTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("FillerRecupTimeStamp");
-                    OnFillerRecupTimeStampChanged();
+                    OnBitumenMaxTempChanging(value);
+                    ReportPropertyChanging("BitumenMaxTemp");
+                    _BitumenMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BitumenMaxTemp");
+                    OnBitumenMaxTempChanged();
                 }
             }
         }
-        private global::System.DateTime _FillerRecupTimeStamp;
-        partial void OnFillerRecupTimeStampChanging(global::System.DateTime value);
-        partial void OnFillerRecupTimeStampChanged();
+        private global::System.Int32 _BitumenMaxTemp;
+        partial void OnBitumenMaxTempChanging(global::System.Int32 value);
+        partial void OnBitumenMaxTempChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 MixingTemp
+        public global::System.String GPSFinisher
         {
             get
             {
-                return _MixingTemp;
+                return _GPSFinisher;
             }
             set
             {
-                if (_MixingTemp != value)
+                if (_GPSFinisher != value)
                 {
-                    OnMixingTempChanging(value);
-                    ReportPropertyChanging("MixingTemp");
-                    _MixingTemp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MixingTemp");
-                    OnMixingTempChanged();
+                    OnGPSFinisherChanging(value);
+                    ReportPropertyChanging("GPSFinisher");
+                    _GPSFinisher = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPSFinisher");
+                    OnGPSFinisherChanged();
                 }
             }
         }
-        private global::System.Int32 _MixingTemp;
-        partial void OnMixingTempChanging(global::System.Int32 value);
-        partial void OnMixingTempChanged();
+        private global::System.String _GPSFinisher;
+        partial void OnGPSFinisherChanging(global::System.String value);
+        partial void OnGPSFinisherChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.TimeSpan MixingTime
+        public global::System.String GPSCompactor
         {
             get
             {
-                return _MixingTime;
+                return _GPSCompactor;
             }
             set
             {
-                if (_MixingTime != value)
+                if (_GPSCompactor != value)
                 {
-                    OnMixingTimeChanging(value);
-                    ReportPropertyChanging("MixingTime");
-                    _MixingTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MixingTime");
-                    OnMixingTimeChanged();
+                    OnGPSCompactorChanging(value);
+                    ReportPropertyChanging("GPSCompactor");
+                    _GPSCompactor = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("GPSCompactor");
+                    OnGPSCompactorChanged();
                 }
             }
         }
-        private global::System.TimeSpan _MixingTime;
-        partial void OnMixingTimeChanging(global::System.TimeSpan value);
-        partial void OnMixingTimeChanged();
+        private global::System.String _GPSCompactor;
+        partial void OnGPSCompactorChanging(global::System.String value);
+        partial void OnGPSCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ColorCodeTimeStamp
+        {
+            get
+            {
+                return _ColorCodeTimeStamp;
+            }
+            set
+            {
+                if (_ColorCodeTimeStamp != value)
+                {
+                    OnColorCodeTimeStampChanging(value);
+                    ReportPropertyChanging("ColorCodeTimeStamp");
+                    _ColorCodeTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ColorCodeTimeStamp");
+                    OnColorCodeTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ColorCodeTimeStamp;
+        partial void OnColorCodeTimeStampChanging(global::System.DateTime value);
+        partial void OnColorCodeTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String QrCodeCompactor
+        {
+            get
+            {
+                return _QrCodeCompactor;
+            }
+            set
+            {
+                if (_QrCodeCompactor != value)
+                {
+                    OnQrCodeCompactorChanging(value);
+                    ReportPropertyChanging("QrCodeCompactor");
+                    _QrCodeCompactor = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("QrCodeCompactor");
+                    OnQrCodeCompactorChanged();
+                }
+            }
+        }
+        private global::System.String _QrCodeCompactor;
+        partial void OnQrCodeCompactorChanging(global::System.String value);
+        partial void OnQrCodeCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NumberOfRollerCompactorPassages
+        {
+            get
+            {
+                return _NumberOfRollerCompactorPassages;
+            }
+            set
+            {
+                if (_NumberOfRollerCompactorPassages != value)
+                {
+                    OnNumberOfRollerCompactorPassagesChanging(value);
+                    ReportPropertyChanging("NumberOfRollerCompactorPassages");
+                    _NumberOfRollerCompactorPassages = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("NumberOfRollerCompactorPassages");
+                    OnNumberOfRollerCompactorPassagesChanged();
+                }
+            }
+        }
+        private global::System.Int32 _NumberOfRollerCompactorPassages;
+        partial void OnNumberOfRollerCompactorPassagesChanging(global::System.Int32 value);
+        partial void OnNumberOfRollerCompactorPassagesChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LocationOfVibration
+        {
+            get
+            {
+                return _LocationOfVibration;
+            }
+            set
+            {
+                if (_LocationOfVibration != value)
+                {
+                    OnLocationOfVibrationChanging(value);
+                    ReportPropertyChanging("LocationOfVibration");
+                    _LocationOfVibration = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("LocationOfVibration");
+                    OnLocationOfVibrationChanged();
+                }
+            }
+        }
+        private global::System.String _LocationOfVibration;
+        partial void OnLocationOfVibrationChanging(global::System.String value);
+        partial void OnLocationOfVibrationChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 SpeedOfRollerCompactor
+        {
+            get
+            {
+                return _SpeedOfRollerCompactor;
+            }
+            set
+            {
+                if (_SpeedOfRollerCompactor != value)
+                {
+                    OnSpeedOfRollerCompactorChanging(value);
+                    ReportPropertyChanging("SpeedOfRollerCompactor");
+                    _SpeedOfRollerCompactor = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SpeedOfRollerCompactor");
+                    OnSpeedOfRollerCompactorChanged();
+                }
+            }
+        }
+        private global::System.Int32 _SpeedOfRollerCompactor;
+        partial void OnSpeedOfRollerCompactorChanging(global::System.Int32 value);
+        partial void OnSpeedOfRollerCompactorChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CompactorTimeStamp
+        {
+            get
+            {
+                return _CompactorTimeStamp;
+            }
+            set
+            {
+                if (_CompactorTimeStamp != value)
+                {
+                    OnCompactorTimeStampChanging(value);
+                    ReportPropertyChanging("CompactorTimeStamp");
+                    _CompactorTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompactorTimeStamp");
+                    OnCompactorTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _CompactorTimeStamp;
+        partial void OnCompactorTimeStampChanging(global::System.DateTime value);
+        partial void OnCompactorTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14795,196 +16844,34 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 TempSilo
+        public global::System.DateTime CompositionTimeStamp
         {
             get
             {
-                return _TempSilo;
+                return _CompositionTimeStamp;
             }
             set
             {
-                if (_TempSilo != value)
+                if (_CompositionTimeStamp != value)
                 {
-                    OnTempSiloChanging(value);
-                    ReportPropertyChanging("TempSilo");
-                    _TempSilo = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("TempSilo");
-                    OnTempSiloChanged();
+                    OnCompositionTimeStampChanging(value);
+                    ReportPropertyChanging("CompositionTimeStamp");
+                    _CompositionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("CompositionTimeStamp");
+                    OnCompositionTimeStampChanged();
                 }
             }
         }
-        private global::System.Int32 _TempSilo;
-        partial void OnTempSiloChanging(global::System.Int32 value);
-        partial void OnTempSiloChanged();
+        private global::System.DateTime _CompositionTimeStamp;
+        partial void OnCompositionTimeStampChanging(global::System.DateTime value);
+        partial void OnCompositionTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String AnalysisComposition
-        {
-            get
-            {
-                return _AnalysisComposition;
-            }
-            set
-            {
-                if (_AnalysisComposition != value)
-                {
-                    OnAnalysisCompositionChanging(value);
-                    ReportPropertyChanging("AnalysisComposition");
-                    _AnalysisComposition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("AnalysisComposition");
-                    OnAnalysisCompositionChanged();
-                }
-            }
-        }
-        private global::System.String _AnalysisComposition;
-        partial void OnAnalysisCompositionChanging(global::System.String value);
-        partial void OnAnalysisCompositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String TruckLicensPlate
-        {
-            get
-            {
-                return _TruckLicensPlate;
-            }
-            set
-            {
-                if (_TruckLicensPlate != value)
-                {
-                    OnTruckLicensPlateChanging(value);
-                    ReportPropertyChanging("TruckLicensPlate");
-                    _TruckLicensPlate = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TruckLicensPlate");
-                    OnTruckLicensPlateChanged();
-                }
-            }
-        }
-        private global::System.String _TruckLicensPlate;
-        partial void OnTruckLicensPlateChanging(global::System.String value);
-        partial void OnTruckLicensPlateChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime DepartureTime
-        {
-            get
-            {
-                return _DepartureTime;
-            }
-            set
-            {
-                if (_DepartureTime != value)
-                {
-                    OnDepartureTimeChanging(value);
-                    ReportPropertyChanging("DepartureTime");
-                    _DepartureTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("DepartureTime");
-                    OnDepartureTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _DepartureTime;
-        partial void OnDepartureTimeChanging(global::System.DateTime value);
-        partial void OnDepartureTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 MassTruck
-        {
-            get
-            {
-                return _MassTruck;
-            }
-            set
-            {
-                if (_MassTruck != value)
-                {
-                    OnMassTruckChanging(value);
-                    ReportPropertyChanging("MassTruck");
-                    _MassTruck = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MassTruck");
-                    OnMassTruckChanged();
-                }
-            }
-        }
-        private global::System.Int32 _MassTruck;
-        partial void OnMassTruckChanging(global::System.Int32 value);
-        partial void OnMassTruckChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ActualPosition
-        {
-            get
-            {
-                return _ActualPosition;
-            }
-            set
-            {
-                if (_ActualPosition != value)
-                {
-                    OnActualPositionChanging(value);
-                    ReportPropertyChanging("ActualPosition");
-                    _ActualPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ActualPosition");
-                    OnActualPositionChanged();
-                }
-            }
-        }
-        private global::System.String _ActualPosition;
-        partial void OnActualPositionChanging(global::System.String value);
-        partial void OnActualPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ActualPositionTimeStamp
-        {
-            get
-            {
-                return _ActualPositionTimeStamp;
-            }
-            set
-            {
-                if (_ActualPositionTimeStamp != value)
-                {
-                    OnActualPositionTimeStampChanging(value);
-                    ReportPropertyChanging("ActualPositionTimeStamp");
-                    _ActualPositionTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ActualPositionTimeStamp");
-                    OnActualPositionTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ActualPositionTimeStamp;
-        partial void OnActualPositionTimeStampChanging(global::System.DateTime value);
-        partial void OnActualPositionTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ETA
+        public global::System.TimeSpan ETA
         {
             get
             {
@@ -14996,14 +16883,14 @@ namespace RoadIt.Models
                 {
                     OnETAChanging(value);
                     ReportPropertyChanging("ETA");
-                    _ETA = StructuralObject.SetValidValue(value, false);
+                    _ETA = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("ETA");
                     OnETAChanged();
                 }
             }
         }
-        private global::System.String _ETA;
-        partial void OnETAChanging(global::System.String value);
+        private global::System.TimeSpan _ETA;
+        partial void OnETAChanging(global::System.TimeSpan value);
         partial void OnETAChanged();
     
         /// <summary>
@@ -15038,250 +16925,7 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime RealArrivalTime
-        {
-            get
-            {
-                return _RealArrivalTime;
-            }
-            set
-            {
-                if (_RealArrivalTime != value)
-                {
-                    OnRealArrivalTimeChanging(value);
-                    ReportPropertyChanging("RealArrivalTime");
-                    _RealArrivalTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RealArrivalTime");
-                    OnRealArrivalTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _RealArrivalTime;
-        partial void OnRealArrivalTimeChanging(global::System.DateTime value);
-        partial void OnRealArrivalTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime DeattachmentFinisherTime
-        {
-            get
-            {
-                return _DeattachmentFinisherTime;
-            }
-            set
-            {
-                if (_DeattachmentFinisherTime != value)
-                {
-                    OnDeattachmentFinisherTimeChanging(value);
-                    ReportPropertyChanging("DeattachmentFinisherTime");
-                    _DeattachmentFinisherTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("DeattachmentFinisherTime");
-                    OnDeattachmentFinisherTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _DeattachmentFinisherTime;
-        partial void OnDeattachmentFinisherTimeChanging(global::System.DateTime value);
-        partial void OnDeattachmentFinisherTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String DeattachmentFinisherPosition
-        {
-            get
-            {
-                return _DeattachmentFinisherPosition;
-            }
-            set
-            {
-                if (_DeattachmentFinisherPosition != value)
-                {
-                    OnDeattachmentFinisherPositionChanging(value);
-                    ReportPropertyChanging("DeattachmentFinisherPosition");
-                    _DeattachmentFinisherPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("DeattachmentFinisherPosition");
-                    OnDeattachmentFinisherPositionChanged();
-                }
-            }
-        }
-        private global::System.String _DeattachmentFinisherPosition;
-        partial void OnDeattachmentFinisherPositionChanging(global::System.String value);
-        partial void OnDeattachmentFinisherPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime AttachmentToFinisherTime
-        {
-            get
-            {
-                return _AttachmentToFinisherTime;
-            }
-            set
-            {
-                if (_AttachmentToFinisherTime != value)
-                {
-                    OnAttachmentToFinisherTimeChanging(value);
-                    ReportPropertyChanging("AttachmentToFinisherTime");
-                    _AttachmentToFinisherTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AttachmentToFinisherTime");
-                    OnAttachmentToFinisherTimeChanged();
-                }
-            }
-        }
-        private global::System.DateTime _AttachmentToFinisherTime;
-        partial void OnAttachmentToFinisherTimeChanging(global::System.DateTime value);
-        partial void OnAttachmentToFinisherTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String AttachmentToFinisherPosition
-        {
-            get
-            {
-                return _AttachmentToFinisherPosition;
-            }
-            set
-            {
-                if (_AttachmentToFinisherPosition != value)
-                {
-                    OnAttachmentToFinisherPositionChanging(value);
-                    ReportPropertyChanging("AttachmentToFinisherPosition");
-                    _AttachmentToFinisherPosition = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("AttachmentToFinisherPosition");
-                    OnAttachmentToFinisherPositionChanged();
-                }
-            }
-        }
-        private global::System.String _AttachmentToFinisherPosition;
-        partial void OnAttachmentToFinisherPositionChanging(global::System.String value);
-        partial void OnAttachmentToFinisherPositionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Temp
-        {
-            get
-            {
-                return _Temp;
-            }
-            set
-            {
-                if (_Temp != value)
-                {
-                    OnTempChanging(value);
-                    ReportPropertyChanging("Temp");
-                    _Temp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Temp");
-                    OnTempChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Temp;
-        partial void OnTempChanging(global::System.Int32 value);
-        partial void OnTempChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime TempTruckTimeStamp
-        {
-            get
-            {
-                return _TempTruckTimeStamp;
-            }
-            set
-            {
-                if (_TempTruckTimeStamp != value)
-                {
-                    OnTempTruckTimeStampChanging(value);
-                    ReportPropertyChanging("TempTruckTimeStamp");
-                    _TempTruckTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("TempTruckTimeStamp");
-                    OnTempTruckTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _TempTruckTimeStamp;
-        partial void OnTempTruckTimeStampChanging(global::System.DateTime value);
-        partial void OnTempTruckTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ActualPositionReturn
-        {
-            get
-            {
-                return _ActualPositionReturn;
-            }
-            set
-            {
-                if (_ActualPositionReturn != value)
-                {
-                    OnActualPositionReturnChanging(value);
-                    ReportPropertyChanging("ActualPositionReturn");
-                    _ActualPositionReturn = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("ActualPositionReturn");
-                    OnActualPositionReturnChanged();
-                }
-            }
-        }
-        private global::System.String _ActualPositionReturn;
-        partial void OnActualPositionReturnChanging(global::System.String value);
-        partial void OnActualPositionReturnChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime ActualPositionReturnTimeStamp
-        {
-            get
-            {
-                return _ActualPositionReturnTimeStamp;
-            }
-            set
-            {
-                if (_ActualPositionReturnTimeStamp != value)
-                {
-                    OnActualPositionReturnTimeStampChanging(value);
-                    ReportPropertyChanging("ActualPositionReturnTimeStamp");
-                    _ActualPositionReturnTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ActualPositionReturnTimeStamp");
-                    OnActualPositionReturnTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ActualPositionReturnTimeStamp;
-        partial void OnActualPositionReturnTimeStampChanging(global::System.DateTime value);
-        partial void OnActualPositionReturnTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ETAReturn
+        public global::System.TimeSpan ETAReturn
         {
             get
             {
@@ -15293,14 +16937,14 @@ namespace RoadIt.Models
                 {
                     OnETAReturnChanging(value);
                     ReportPropertyChanging("ETAReturn");
-                    _ETAReturn = StructuralObject.SetValidValue(value, false);
+                    _ETAReturn = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("ETAReturn");
                     OnETAReturnChanged();
                 }
             }
         }
-        private global::System.String _ETAReturn;
-        partial void OnETAReturnChanging(global::System.String value);
+        private global::System.TimeSpan _ETAReturn;
+        partial void OnETAReturnChanging(global::System.TimeSpan value);
         partial void OnETAReturnChanged();
     
         /// <summary>
@@ -15335,330 +16979,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime ArrivalAtPlant
-        {
-            get
-            {
-                return _ArrivalAtPlant;
-            }
-            set
-            {
-                if (_ArrivalAtPlant != value)
-                {
-                    OnArrivalAtPlantChanging(value);
-                    ReportPropertyChanging("ArrivalAtPlant");
-                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ArrivalAtPlant");
-                    OnArrivalAtPlantChanged();
-                }
-            }
-        }
-        private global::System.DateTime _ArrivalAtPlant;
-        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
-        partial void OnArrivalAtPlantChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String UnforseenStopLocation
-        {
-            get
-            {
-                return _UnforseenStopLocation;
-            }
-            set
-            {
-                if (_UnforseenStopLocation != value)
-                {
-                    OnUnforseenStopLocationChanging(value);
-                    ReportPropertyChanging("UnforseenStopLocation");
-                    _UnforseenStopLocation = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("UnforseenStopLocation");
-                    OnUnforseenStopLocationChanged();
-                }
-            }
-        }
-        private global::System.String _UnforseenStopLocation;
-        partial void OnUnforseenStopLocationChanging(global::System.String value);
-        partial void OnUnforseenStopLocationChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan UnforseenStopTime
-        {
-            get
-            {
-                return _UnforseenStopTime;
-            }
-            set
-            {
-                if (_UnforseenStopTime != value)
-                {
-                    OnUnforseenStopTimeChanging(value);
-                    ReportPropertyChanging("UnforseenStopTime");
-                    _UnforseenStopTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTime");
-                    OnUnforseenStopTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _UnforseenStopTime;
-        partial void OnUnforseenStopTimeChanging(global::System.TimeSpan value);
-        partial void OnUnforseenStopTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime UnforseenStopTimeStamp
-        {
-            get
-            {
-                return _UnforseenStopTimeStamp;
-            }
-            set
-            {
-                if (_UnforseenStopTimeStamp != value)
-                {
-                    OnUnforseenStopTimeStampChanging(value);
-                    ReportPropertyChanging("UnforseenStopTimeStamp");
-                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UnforseenStopTimeStamp");
-                    OnUnforseenStopTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _UnforseenStopTimeStamp;
-        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
-        partial void OnUnforseenStopTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 FinisherSpeed
-        {
-            get
-            {
-                return _FinisherSpeed;
-            }
-            set
-            {
-                if (_FinisherSpeed != value)
-                {
-                    OnFinisherSpeedChanging(value);
-                    ReportPropertyChanging("FinisherSpeed");
-                    _FinisherSpeed = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("FinisherSpeed");
-                    OnFinisherSpeedChanged();
-                }
-            }
-        }
-        private global::System.Int32 _FinisherSpeed;
-        partial void OnFinisherSpeedChanging(global::System.Int32 value);
-        partial void OnFinisherSpeedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime SpeedFinisherTimeStamp
-        {
-            get
-            {
-                return _SpeedFinisherTimeStamp;
-            }
-            set
-            {
-                if (_SpeedFinisherTimeStamp != value)
-                {
-                    OnSpeedFinisherTimeStampChanging(value);
-                    ReportPropertyChanging("SpeedFinisherTimeStamp");
-                    _SpeedFinisherTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("SpeedFinisherTimeStamp");
-                    OnSpeedFinisherTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _SpeedFinisherTimeStamp;
-        partial void OnSpeedFinisherTimeStampChanging(global::System.DateTime value);
-        partial void OnSpeedFinisherTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AngleLeft
-        {
-            get
-            {
-                return _AngleLeft;
-            }
-            set
-            {
-                if (_AngleLeft != value)
-                {
-                    OnAngleLeftChanging(value);
-                    ReportPropertyChanging("AngleLeft");
-                    _AngleLeft = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AngleLeft");
-                    OnAngleLeftChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AngleLeft;
-        partial void OnAngleLeftChanging(global::System.Int32 value);
-        partial void OnAngleLeftChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AngleRight
-        {
-            get
-            {
-                return _AngleRight;
-            }
-            set
-            {
-                if (_AngleRight != value)
-                {
-                    OnAngleRightChanging(value);
-                    ReportPropertyChanging("AngleRight");
-                    _AngleRight = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AngleRight");
-                    OnAngleRightChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AngleRight;
-        partial void OnAngleRightChanging(global::System.Int32 value);
-        partial void OnAngleRightChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Width
-        {
-            get
-            {
-                return _Width;
-            }
-            set
-            {
-                if (_Width != value)
-                {
-                    OnWidthChanging(value);
-                    ReportPropertyChanging("Width");
-                    _Width = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Width");
-                    OnWidthChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Width;
-        partial void OnWidthChanging(global::System.Int32 value);
-        partial void OnWidthChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessLeft
-        {
-            get
-            {
-                return _ThicknessLeft;
-            }
-            set
-            {
-                if (_ThicknessLeft != value)
-                {
-                    OnThicknessLeftChanging(value);
-                    ReportPropertyChanging("ThicknessLeft");
-                    _ThicknessLeft = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessLeft");
-                    OnThicknessLeftChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessLeft;
-        partial void OnThicknessLeftChanging(global::System.Int32 value);
-        partial void OnThicknessLeftChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessMiddel
-        {
-            get
-            {
-                return _ThicknessMiddel;
-            }
-            set
-            {
-                if (_ThicknessMiddel != value)
-                {
-                    OnThicknessMiddelChanging(value);
-                    ReportPropertyChanging("ThicknessMiddel");
-                    _ThicknessMiddel = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessMiddel");
-                    OnThicknessMiddelChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessMiddel;
-        partial void OnThicknessMiddelChanging(global::System.Int32 value);
-        partial void OnThicknessMiddelChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ThicknessRight
-        {
-            get
-            {
-                return _ThicknessRight;
-            }
-            set
-            {
-                if (_ThicknessRight != value)
-                {
-                    OnThicknessRightChanging(value);
-                    ReportPropertyChanging("ThicknessRight");
-                    _ThicknessRight = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ThicknessRight");
-                    OnThicknessRightChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ThicknessRight;
-        partial void OnThicknessRightChanging(global::System.Int32 value);
-        partial void OnThicknessRightChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 TranverseSlope
         {
             get
@@ -15680,87 +17000,6 @@ namespace RoadIt.Models
         private global::System.Int32 _TranverseSlope;
         partial void OnTranverseSlopeChanging(global::System.Int32 value);
         partial void OnTranverseSlopeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String StopLocation
-        {
-            get
-            {
-                return _StopLocation;
-            }
-            set
-            {
-                if (_StopLocation != value)
-                {
-                    OnStopLocationChanging(value);
-                    ReportPropertyChanging("StopLocation");
-                    _StopLocation = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("StopLocation");
-                    OnStopLocationChanged();
-                }
-            }
-        }
-        private global::System.String _StopLocation;
-        partial void OnStopLocationChanging(global::System.String value);
-        partial void OnStopLocationChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.TimeSpan StopTime
-        {
-            get
-            {
-                return _StopTime;
-            }
-            set
-            {
-                if (_StopTime != value)
-                {
-                    OnStopTimeChanging(value);
-                    ReportPropertyChanging("StopTime");
-                    _StopTime = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("StopTime");
-                    OnStopTimeChanged();
-                }
-            }
-        }
-        private global::System.TimeSpan _StopTime;
-        partial void OnStopTimeChanging(global::System.TimeSpan value);
-        partial void OnStopTimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime StopTimeStamp
-        {
-            get
-            {
-                return _StopTimeStamp;
-            }
-            set
-            {
-                if (_StopTimeStamp != value)
-                {
-                    OnStopTimeStampChanging(value);
-                    ReportPropertyChanging("StopTimeStamp");
-                    _StopTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("StopTimeStamp");
-                    OnStopTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _StopTimeStamp;
-        partial void OnStopTimeStampChanging(global::System.DateTime value);
-        partial void OnStopTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -15794,168 +17033,6 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 TempWeather
-        {
-            get
-            {
-                return _TempWeather;
-            }
-            set
-            {
-                if (_TempWeather != value)
-                {
-                    OnTempWeatherChanging(value);
-                    ReportPropertyChanging("TempWeather");
-                    _TempWeather = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("TempWeather");
-                    OnTempWeatherChanged();
-                }
-            }
-        }
-        private global::System.Int32 _TempWeather;
-        partial void OnTempWeatherChanging(global::System.Int32 value);
-        partial void OnTempWeatherChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime WeatherTempTimeStamp
-        {
-            get
-            {
-                return _WeatherTempTimeStamp;
-            }
-            set
-            {
-                if (_WeatherTempTimeStamp != value)
-                {
-                    OnWeatherTempTimeStampChanging(value);
-                    ReportPropertyChanging("WeatherTempTimeStamp");
-                    _WeatherTempTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("WeatherTempTimeStamp");
-                    OnWeatherTempTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _WeatherTempTimeStamp;
-        partial void OnWeatherTempTimeStampChanging(global::System.DateTime value);
-        partial void OnWeatherTempTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 WindSpeed
-        {
-            get
-            {
-                return _WindSpeed;
-            }
-            set
-            {
-                if (_WindSpeed != value)
-                {
-                    OnWindSpeedChanging(value);
-                    ReportPropertyChanging("WindSpeed");
-                    _WindSpeed = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("WindSpeed");
-                    OnWindSpeedChanged();
-                }
-            }
-        }
-        private global::System.Int32 _WindSpeed;
-        partial void OnWindSpeedChanging(global::System.Int32 value);
-        partial void OnWindSpeedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime WindTimeStamp
-        {
-            get
-            {
-                return _WindTimeStamp;
-            }
-            set
-            {
-                if (_WindTimeStamp != value)
-                {
-                    OnWindTimeStampChanging(value);
-                    ReportPropertyChanging("WindTimeStamp");
-                    _WindTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("WindTimeStamp");
-                    OnWindTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _WindTimeStamp;
-        partial void OnWindTimeStampChanging(global::System.DateTime value);
-        partial void OnWindTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 AirHumidity
-        {
-            get
-            {
-                return _AirHumidity;
-            }
-            set
-            {
-                if (_AirHumidity != value)
-                {
-                    OnAirHumidityChanging(value);
-                    ReportPropertyChanging("AirHumidity");
-                    _AirHumidity = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AirHumidity");
-                    OnAirHumidityChanged();
-                }
-            }
-        }
-        private global::System.Int32 _AirHumidity;
-        partial void OnAirHumidityChanging(global::System.Int32 value);
-        partial void OnAirHumidityChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime AirHumidityTimeStamp
-        {
-            get
-            {
-                return _AirHumidityTimeStamp;
-            }
-            set
-            {
-                if (_AirHumidityTimeStamp != value)
-                {
-                    OnAirHumidityTimeStampChanging(value);
-                    ReportPropertyChanging("AirHumidityTimeStamp");
-                    _AirHumidityTimeStamp = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AirHumidityTimeStamp");
-                    OnAirHumidityTimeStampChanged();
-                }
-            }
-        }
-        private global::System.DateTime _AirHumidityTimeStamp;
-        partial void OnAirHumidityTimeStampChanging(global::System.DateTime value);
-        partial void OnAirHumidityTimeStampChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String AsphaltTempAfterFinisherIrScanOrThermo
         {
             get
@@ -15983,162 +17060,378 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String QrCodeCompactor
+        public global::System.DateTime FinisherTimeStamp
         {
             get
             {
-                return _QrCodeCompactor;
+                return _FinisherTimeStamp;
             }
             set
             {
-                if (_QrCodeCompactor != value)
+                if (_FinisherTimeStamp != value)
                 {
-                    OnQrCodeCompactorChanging(value);
-                    ReportPropertyChanging("QrCodeCompactor");
-                    _QrCodeCompactor = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("QrCodeCompactor");
-                    OnQrCodeCompactorChanged();
+                    OnFinisherTimeStampChanging(value);
+                    ReportPropertyChanging("FinisherTimeStamp");
+                    _FinisherTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FinisherTimeStamp");
+                    OnFinisherTimeStampChanged();
                 }
             }
         }
-        private global::System.String _QrCodeCompactor;
-        partial void OnQrCodeCompactorChanging(global::System.String value);
-        partial void OnQrCodeCompactorChanged();
+        private global::System.DateTime _FinisherTimeStamp;
+        partial void OnFinisherTimeStampChanging(global::System.DateTime value);
+        partial void OnFinisherTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 NumberOfRollerCompactorPassages
+        public global::System.Int32 LeftTickness
         {
             get
             {
-                return _NumberOfRollerCompactorPassages;
+                return _LeftTickness;
             }
             set
             {
-                if (_NumberOfRollerCompactorPassages != value)
+                if (_LeftTickness != value)
                 {
-                    OnNumberOfRollerCompactorPassagesChanging(value);
-                    ReportPropertyChanging("NumberOfRollerCompactorPassages");
-                    _NumberOfRollerCompactorPassages = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("NumberOfRollerCompactorPassages");
-                    OnNumberOfRollerCompactorPassagesChanged();
+                    OnLeftTicknessChanging(value);
+                    ReportPropertyChanging("LeftTickness");
+                    _LeftTickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("LeftTickness");
+                    OnLeftTicknessChanged();
                 }
             }
         }
-        private global::System.Int32 _NumberOfRollerCompactorPassages;
-        partial void OnNumberOfRollerCompactorPassagesChanging(global::System.Int32 value);
-        partial void OnNumberOfRollerCompactorPassagesChanged();
+        private global::System.Int32 _LeftTickness;
+        partial void OnLeftTicknessChanging(global::System.Int32 value);
+        partial void OnLeftTicknessChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String LocationOfVibration
+        public global::System.Int32 MiddelThickness
         {
             get
             {
-                return _LocationOfVibration;
+                return _MiddelThickness;
             }
             set
             {
-                if (_LocationOfVibration != value)
+                if (_MiddelThickness != value)
                 {
-                    OnLocationOfVibrationChanging(value);
-                    ReportPropertyChanging("LocationOfVibration");
-                    _LocationOfVibration = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("LocationOfVibration");
-                    OnLocationOfVibrationChanged();
+                    OnMiddelThicknessChanging(value);
+                    ReportPropertyChanging("MiddelThickness");
+                    _MiddelThickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MiddelThickness");
+                    OnMiddelThicknessChanged();
                 }
             }
         }
-        private global::System.String _LocationOfVibration;
-        partial void OnLocationOfVibrationChanging(global::System.String value);
-        partial void OnLocationOfVibrationChanged();
+        private global::System.Int32 _MiddelThickness;
+        partial void OnMiddelThicknessChanging(global::System.Int32 value);
+        partial void OnMiddelThicknessChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String GPSFinisher
+        public global::System.Int32 RightThickness
         {
             get
             {
-                return _GPSFinisher;
+                return _RightThickness;
             }
             set
             {
-                if (_GPSFinisher != value)
+                if (_RightThickness != value)
                 {
-                    OnGPSFinisherChanging(value);
-                    ReportPropertyChanging("GPSFinisher");
-                    _GPSFinisher = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("GPSFinisher");
-                    OnGPSFinisherChanged();
+                    OnRightThicknessChanging(value);
+                    ReportPropertyChanging("RightThickness");
+                    _RightThickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RightThickness");
+                    OnRightThicknessChanged();
                 }
             }
         }
-        private global::System.String _GPSFinisher;
-        partial void OnGPSFinisherChanging(global::System.String value);
-        partial void OnGPSFinisherChanged();
+        private global::System.Int32 _RightThickness;
+        partial void OnRightThicknessChanging(global::System.Int32 value);
+        partial void OnRightThicknessChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String GPSCompactor
+        public global::System.DateTime ThicknessTimeStamp
         {
             get
             {
-                return _GPSCompactor;
+                return _ThicknessTimeStamp;
             }
             set
             {
-                if (_GPSCompactor != value)
+                if (_ThicknessTimeStamp != value)
                 {
-                    OnGPSCompactorChanging(value);
-                    ReportPropertyChanging("GPSCompactor");
-                    _GPSCompactor = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("GPSCompactor");
-                    OnGPSCompactorChanged();
+                    OnThicknessTimeStampChanging(value);
+                    ReportPropertyChanging("ThicknessTimeStamp");
+                    _ThicknessTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ThicknessTimeStamp");
+                    OnThicknessTimeStampChanged();
                 }
             }
         }
-        private global::System.String _GPSCompactor;
-        partial void OnGPSCompactorChanging(global::System.String value);
-        partial void OnGPSCompactorChanged();
+        private global::System.DateTime _ThicknessTimeStamp;
+        partial void OnThicknessTimeStampChanging(global::System.DateTime value);
+        partial void OnThicknessTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 SpeedOfRollerCompactor
+        public global::System.Int32 FillerRecup
         {
             get
             {
-                return _SpeedOfRollerCompactor;
+                return _FillerRecup;
             }
             set
             {
-                if (_SpeedOfRollerCompactor != value)
+                if (_FillerRecup != value)
                 {
-                    OnSpeedOfRollerCompactorChanging(value);
-                    ReportPropertyChanging("SpeedOfRollerCompactor");
-                    _SpeedOfRollerCompactor = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("SpeedOfRollerCompactor");
-                    OnSpeedOfRollerCompactorChanged();
+                    OnFillerRecupChanging(value);
+                    ReportPropertyChanging("FillerRecup");
+                    _FillerRecup = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FillerRecup");
+                    OnFillerRecupChanged();
                 }
             }
         }
-        private global::System.Int32 _SpeedOfRollerCompactor;
-        partial void OnSpeedOfRollerCompactorChanging(global::System.Int32 value);
-        partial void OnSpeedOfRollerCompactorChanged();
+        private global::System.Int32 _FillerRecup;
+        partial void OnFillerRecupChanging(global::System.Int32 value);
+        partial void OnFillerRecupChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FillerRecupTimeStamp
+        {
+            get
+            {
+                return _FillerRecupTimeStamp;
+            }
+            set
+            {
+                if (_FillerRecupTimeStamp != value)
+                {
+                    OnFillerRecupTimeStampChanging(value);
+                    ReportPropertyChanging("FillerRecupTimeStamp");
+                    _FillerRecupTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FillerRecupTimeStamp");
+                    OnFillerRecupTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _FillerRecupTimeStamp;
+        partial void OnFillerRecupTimeStampChanging(global::System.DateTime value);
+        partial void OnFillerRecupTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StopLocationLTS
+        {
+            get
+            {
+                return _StopLocationLTS;
+            }
+            set
+            {
+                if (_StopLocationLTS != value)
+                {
+                    OnStopLocationLTSChanging(value);
+                    ReportPropertyChanging("StopLocationLTS");
+                    _StopLocationLTS = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("StopLocationLTS");
+                    OnStopLocationLTSChanged();
+                }
+            }
+        }
+        private global::System.String _StopLocationLTS;
+        partial void OnStopLocationLTSChanging(global::System.String value);
+        partial void OnStopLocationLTSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan StopTimeLTS
+        {
+            get
+            {
+                return _StopTimeLTS;
+            }
+            set
+            {
+                if (_StopTimeLTS != value)
+                {
+                    OnStopTimeLTSChanging(value);
+                    ReportPropertyChanging("StopTimeLTS");
+                    _StopTimeLTS = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeLTS");
+                    OnStopTimeLTSChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _StopTimeLTS;
+        partial void OnStopTimeLTSChanging(global::System.TimeSpan value);
+        partial void OnStopTimeLTSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime StopTimeStamp
+        {
+            get
+            {
+                return _StopTimeStamp;
+            }
+            set
+            {
+                if (_StopTimeStamp != value)
+                {
+                    OnStopTimeStampChanging(value);
+                    ReportPropertyChanging("StopTimeStamp");
+                    _StopTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeStamp");
+                    OnStopTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _StopTimeStamp;
+        partial void OnStopTimeStampChanging(global::System.DateTime value);
+        partial void OnStopTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 LayerThickness
+        {
+            get
+            {
+                return _LayerThickness;
+            }
+            set
+            {
+                if (_LayerThickness != value)
+                {
+                    OnLayerThicknessChanging(value);
+                    ReportPropertyChanging("LayerThickness");
+                    _LayerThickness = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("LayerThickness");
+                    OnLayerThicknessChanged();
+                }
+            }
+        }
+        private global::System.Int32 _LayerThickness;
+        partial void OnLayerThicknessChanging(global::System.Int32 value);
+        partial void OnLayerThicknessChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Surface
+        {
+            get
+            {
+                return _Surface;
+            }
+            set
+            {
+                if (_Surface != value)
+                {
+                    OnSurfaceChanging(value);
+                    ReportPropertyChanging("Surface");
+                    _Surface = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Surface");
+                    OnSurfaceChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Surface;
+        partial void OnSurfaceChanging(global::System.Int32 value);
+        partial void OnSurfaceChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TonPerDay
+        {
+            get
+            {
+                return _TonPerDay;
+            }
+            set
+            {
+                if (_TonPerDay != value)
+                {
+                    OnTonPerDayChanging(value);
+                    ReportPropertyChanging("TonPerDay");
+                    _TonPerDay = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TonPerDay");
+                    OnTonPerDayChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TonPerDay;
+        partial void OnTonPerDayChanging(global::System.Int32 value);
+        partial void OnTonPerDayChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime PlanningTimeStamp
+        {
+            get
+            {
+                return _PlanningTimeStamp;
+            }
+            set
+            {
+                if (_PlanningTimeStamp != value)
+                {
+                    OnPlanningTimeStampChanging(value);
+                    ReportPropertyChanging("PlanningTimeStamp");
+                    _PlanningTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("PlanningTimeStamp");
+                    OnPlanningTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _PlanningTimeStamp;
+        partial void OnPlanningTimeStampChanging(global::System.DateTime value);
+        partial void OnPlanningTimeStampChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -16355,6 +17648,870 @@ namespace RoadIt.Models
         private global::System.String _ExtraTestsAskedBijClient;
         partial void OnExtraTestsAskedBijClientChanging(global::System.String value);
         partial void OnExtraTestsAskedBijClientChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime QualtityTimeStamp
+        {
+            get
+            {
+                return _QualtityTimeStamp;
+            }
+            set
+            {
+                if (_QualtityTimeStamp != value)
+                {
+                    OnQualtityTimeStampChanging(value);
+                    ReportPropertyChanging("QualtityTimeStamp");
+                    _QualtityTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("QualtityTimeStamp");
+                    OnQualtityTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _QualtityTimeStamp;
+        partial void OnQualtityTimeStampChanging(global::System.DateTime value);
+        partial void OnQualtityTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RoadId
+        {
+            get
+            {
+                return _RoadId;
+            }
+            set
+            {
+                if (_RoadId != value)
+                {
+                    OnRoadIdChanging(value);
+                    ReportPropertyChanging("RoadId");
+                    _RoadId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadId");
+                    OnRoadIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _RoadId;
+        partial void OnRoadIdChanging(global::System.Int32 value);
+        partial void OnRoadIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RoadDescription
+        {
+            get
+            {
+                return _RoadDescription;
+            }
+            set
+            {
+                if (_RoadDescription != value)
+                {
+                    OnRoadDescriptionChanging(value);
+                    ReportPropertyChanging("RoadDescription");
+                    _RoadDescription = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("RoadDescription");
+                    OnRoadDescriptionChanged();
+                }
+            }
+        }
+        private global::System.String _RoadDescription;
+        partial void OnRoadDescriptionChanging(global::System.String value);
+        partial void OnRoadDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime RoadSectionTimeStamp
+        {
+            get
+            {
+                return _RoadSectionTimeStamp;
+            }
+            set
+            {
+                if (_RoadSectionTimeStamp != value)
+                {
+                    OnRoadSectionTimeStampChanging(value);
+                    ReportPropertyChanging("RoadSectionTimeStamp");
+                    _RoadSectionTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RoadSectionTimeStamp");
+                    OnRoadSectionTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _RoadSectionTimeStamp;
+        partial void OnRoadSectionTimeStampChanging(global::System.DateTime value);
+        partial void OnRoadSectionTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 MixingTemp
+        {
+            get
+            {
+                return _MixingTemp;
+            }
+            set
+            {
+                if (_MixingTemp != value)
+                {
+                    OnMixingTempChanging(value);
+                    ReportPropertyChanging("MixingTemp");
+                    _MixingTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MixingTemp");
+                    OnMixingTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _MixingTemp;
+        partial void OnMixingTempChanging(global::System.Int32 value);
+        partial void OnMixingTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan MixingTime
+        {
+            get
+            {
+                return _MixingTime;
+            }
+            set
+            {
+                if (_MixingTime != value)
+                {
+                    OnMixingTimeChanging(value);
+                    ReportPropertyChanging("MixingTime");
+                    _MixingTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MixingTime");
+                    OnMixingTimeChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _MixingTime;
+        partial void OnMixingTimeChanging(global::System.TimeSpan value);
+        partial void OnMixingTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TempSilo
+        {
+            get
+            {
+                return _TempSilo;
+            }
+            set
+            {
+                if (_TempSilo != value)
+                {
+                    OnTempSiloChanging(value);
+                    ReportPropertyChanging("TempSilo");
+                    _TempSilo = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TempSilo");
+                    OnTempSiloChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TempSilo;
+        partial void OnTempSiloChanging(global::System.Int32 value);
+        partial void OnTempSiloChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AnalysisComposition
+        {
+            get
+            {
+                return _AnalysisComposition;
+            }
+            set
+            {
+                if (_AnalysisComposition != value)
+                {
+                    OnAnalysisCompositionChanging(value);
+                    ReportPropertyChanging("AnalysisComposition");
+                    _AnalysisComposition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("AnalysisComposition");
+                    OnAnalysisCompositionChanged();
+                }
+            }
+        }
+        private global::System.String _AnalysisComposition;
+        partial void OnAnalysisCompositionChanging(global::System.String value);
+        partial void OnAnalysisCompositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime SiloTimpStamp
+        {
+            get
+            {
+                return _SiloTimpStamp;
+            }
+            set
+            {
+                if (_SiloTimpStamp != value)
+                {
+                    OnSiloTimpStampChanging(value);
+                    ReportPropertyChanging("SiloTimpStamp");
+                    _SiloTimpStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SiloTimpStamp");
+                    OnSiloTimpStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _SiloTimpStamp;
+        partial void OnSiloTimpStampChanging(global::System.DateTime value);
+        partial void OnSiloTimpStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Speed
+        {
+            get
+            {
+                return _Speed;
+            }
+            set
+            {
+                if (_Speed != value)
+                {
+                    OnSpeedChanging(value);
+                    ReportPropertyChanging("Speed");
+                    _Speed = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Speed");
+                    OnSpeedChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Speed;
+        partial void OnSpeedChanging(global::System.Int32 value);
+        partial void OnSpeedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime SpeedFinisherTimeStamp
+        {
+            get
+            {
+                return _SpeedFinisherTimeStamp;
+            }
+            set
+            {
+                if (_SpeedFinisherTimeStamp != value)
+                {
+                    OnSpeedFinisherTimeStampChanging(value);
+                    ReportPropertyChanging("SpeedFinisherTimeStamp");
+                    _SpeedFinisherTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SpeedFinisherTimeStamp");
+                    OnSpeedFinisherTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _SpeedFinisherTimeStamp;
+        partial void OnSpeedFinisherTimeStampChanging(global::System.DateTime value);
+        partial void OnSpeedFinisherTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TruckLicensPlate
+        {
+            get
+            {
+                return _TruckLicensPlate;
+            }
+            set
+            {
+                if (_TruckLicensPlate != value)
+                {
+                    OnTruckLicensPlateChanging(value);
+                    ReportPropertyChanging("TruckLicensPlate");
+                    _TruckLicensPlate = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TruckLicensPlate");
+                    OnTruckLicensPlateChanged();
+                }
+            }
+        }
+        private global::System.String _TruckLicensPlate;
+        partial void OnTruckLicensPlateChanging(global::System.String value);
+        partial void OnTruckLicensPlateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DepartureTime
+        {
+            get
+            {
+                return _DepartureTime;
+            }
+            set
+            {
+                if (_DepartureTime != value)
+                {
+                    OnDepartureTimeChanging(value);
+                    ReportPropertyChanging("DepartureTime");
+                    _DepartureTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("DepartureTime");
+                    OnDepartureTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _DepartureTime;
+        partial void OnDepartureTimeChanging(global::System.DateTime value);
+        partial void OnDepartureTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 MassTruck
+        {
+            get
+            {
+                return _MassTruck;
+            }
+            set
+            {
+                if (_MassTruck != value)
+                {
+                    OnMassTruckChanging(value);
+                    ReportPropertyChanging("MassTruck");
+                    _MassTruck = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MassTruck");
+                    OnMassTruckChanged();
+                }
+            }
+        }
+        private global::System.Int32 _MassTruck;
+        partial void OnMassTruckChanging(global::System.Int32 value);
+        partial void OnMassTruckChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime RealArrivalTime
+        {
+            get
+            {
+                return _RealArrivalTime;
+            }
+            set
+            {
+                if (_RealArrivalTime != value)
+                {
+                    OnRealArrivalTimeChanging(value);
+                    ReportPropertyChanging("RealArrivalTime");
+                    _RealArrivalTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("RealArrivalTime");
+                    OnRealArrivalTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _RealArrivalTime;
+        partial void OnRealArrivalTimeChanging(global::System.DateTime value);
+        partial void OnRealArrivalTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DeattachmentFinisherTime
+        {
+            get
+            {
+                return _DeattachmentFinisherTime;
+            }
+            set
+            {
+                if (_DeattachmentFinisherTime != value)
+                {
+                    OnDeattachmentFinisherTimeChanging(value);
+                    ReportPropertyChanging("DeattachmentFinisherTime");
+                    _DeattachmentFinisherTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("DeattachmentFinisherTime");
+                    OnDeattachmentFinisherTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _DeattachmentFinisherTime;
+        partial void OnDeattachmentFinisherTimeChanging(global::System.DateTime value);
+        partial void OnDeattachmentFinisherTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String DeattachmentFinisherPosition
+        {
+            get
+            {
+                return _DeattachmentFinisherPosition;
+            }
+            set
+            {
+                if (_DeattachmentFinisherPosition != value)
+                {
+                    OnDeattachmentFinisherPositionChanging(value);
+                    ReportPropertyChanging("DeattachmentFinisherPosition");
+                    _DeattachmentFinisherPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("DeattachmentFinisherPosition");
+                    OnDeattachmentFinisherPositionChanged();
+                }
+            }
+        }
+        private global::System.String _DeattachmentFinisherPosition;
+        partial void OnDeattachmentFinisherPositionChanging(global::System.String value);
+        partial void OnDeattachmentFinisherPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ArrivalAtPlant
+        {
+            get
+            {
+                return _ArrivalAtPlant;
+            }
+            set
+            {
+                if (_ArrivalAtPlant != value)
+                {
+                    OnArrivalAtPlantChanging(value);
+                    ReportPropertyChanging("ArrivalAtPlant");
+                    _ArrivalAtPlant = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ArrivalAtPlant");
+                    OnArrivalAtPlantChanged();
+                }
+            }
+        }
+        private global::System.DateTime _ArrivalAtPlant;
+        partial void OnArrivalAtPlantChanging(global::System.DateTime value);
+        partial void OnArrivalAtPlantChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AttachmentToFinisherTime
+        {
+            get
+            {
+                return _AttachmentToFinisherTime;
+            }
+            set
+            {
+                if (_AttachmentToFinisherTime != value)
+                {
+                    OnAttachmentToFinisherTimeChanging(value);
+                    ReportPropertyChanging("AttachmentToFinisherTime");
+                    _AttachmentToFinisherTime = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AttachmentToFinisherTime");
+                    OnAttachmentToFinisherTimeChanged();
+                }
+            }
+        }
+        private global::System.DateTime _AttachmentToFinisherTime;
+        partial void OnAttachmentToFinisherTimeChanging(global::System.DateTime value);
+        partial void OnAttachmentToFinisherTimeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AttachmentToFinisherPosition
+        {
+            get
+            {
+                return _AttachmentToFinisherPosition;
+            }
+            set
+            {
+                if (_AttachmentToFinisherPosition != value)
+                {
+                    OnAttachmentToFinisherPositionChanging(value);
+                    ReportPropertyChanging("AttachmentToFinisherPosition");
+                    _AttachmentToFinisherPosition = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("AttachmentToFinisherPosition");
+                    OnAttachmentToFinisherPositionChanged();
+                }
+            }
+        }
+        private global::System.String _AttachmentToFinisherPosition;
+        partial void OnAttachmentToFinisherPositionChanging(global::System.String value);
+        partial void OnAttachmentToFinisherPositionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TruckTimeStamp
+        {
+            get
+            {
+                return _TruckTimeStamp;
+            }
+            set
+            {
+                if (_TruckTimeStamp != value)
+                {
+                    OnTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TruckTimeStamp");
+                    _TruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TruckTimeStamp");
+                    OnTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TruckTimeStamp;
+        partial void OnTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTruckTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Temp
+        {
+            get
+            {
+                return _Temp;
+            }
+            set
+            {
+                if (_Temp != value)
+                {
+                    OnTempChanging(value);
+                    ReportPropertyChanging("Temp");
+                    _Temp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Temp");
+                    OnTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Temp;
+        partial void OnTempChanging(global::System.Int32 value);
+        partial void OnTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime TempTruckTimeStamp
+        {
+            get
+            {
+                return _TempTruckTimeStamp;
+            }
+            set
+            {
+                if (_TempTruckTimeStamp != value)
+                {
+                    OnTempTruckTimeStampChanging(value);
+                    ReportPropertyChanging("TempTruckTimeStamp");
+                    _TempTruckTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TempTruckTimeStamp");
+                    OnTempTruckTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _TempTruckTimeStamp;
+        partial void OnTempTruckTimeStampChanging(global::System.DateTime value);
+        partial void OnTempTruckTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StopLocationUnforseenStop
+        {
+            get
+            {
+                return _StopLocationUnforseenStop;
+            }
+            set
+            {
+                if (_StopLocationUnforseenStop != value)
+                {
+                    OnStopLocationUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopLocationUnforseenStop");
+                    _StopLocationUnforseenStop = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("StopLocationUnforseenStop");
+                    OnStopLocationUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.String _StopLocationUnforseenStop;
+        partial void OnStopLocationUnforseenStopChanging(global::System.String value);
+        partial void OnStopLocationUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.TimeSpan StopTimeUnforseenStop
+        {
+            get
+            {
+                return _StopTimeUnforseenStop;
+            }
+            set
+            {
+                if (_StopTimeUnforseenStop != value)
+                {
+                    OnStopTimeUnforseenStopChanging(value);
+                    ReportPropertyChanging("StopTimeUnforseenStop");
+                    _StopTimeUnforseenStop = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StopTimeUnforseenStop");
+                    OnStopTimeUnforseenStopChanged();
+                }
+            }
+        }
+        private global::System.TimeSpan _StopTimeUnforseenStop;
+        partial void OnStopTimeUnforseenStopChanging(global::System.TimeSpan value);
+        partial void OnStopTimeUnforseenStopChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime UnforseenStopTimeStamp
+        {
+            get
+            {
+                return _UnforseenStopTimeStamp;
+            }
+            set
+            {
+                if (_UnforseenStopTimeStamp != value)
+                {
+                    OnUnforseenStopTimeStampChanging(value);
+                    ReportPropertyChanging("UnforseenStopTimeStamp");
+                    _UnforseenStopTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("UnforseenStopTimeStamp");
+                    OnUnforseenStopTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _UnforseenStopTimeStamp;
+        partial void OnUnforseenStopTimeStampChanging(global::System.DateTime value);
+        partial void OnUnforseenStopTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TempWeather
+        {
+            get
+            {
+                return _TempWeather;
+            }
+            set
+            {
+                if (_TempWeather != value)
+                {
+                    OnTempWeatherChanging(value);
+                    ReportPropertyChanging("TempWeather");
+                    _TempWeather = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TempWeather");
+                    OnTempWeatherChanged();
+                }
+            }
+        }
+        private global::System.Int32 _TempWeather;
+        partial void OnTempWeatherChanging(global::System.Int32 value);
+        partial void OnTempWeatherChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime WeatherTempTimeStamp
+        {
+            get
+            {
+                return _WeatherTempTimeStamp;
+            }
+            set
+            {
+                if (_WeatherTempTimeStamp != value)
+                {
+                    OnWeatherTempTimeStampChanging(value);
+                    ReportPropertyChanging("WeatherTempTimeStamp");
+                    _WeatherTempTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("WeatherTempTimeStamp");
+                    OnWeatherTempTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _WeatherTempTimeStamp;
+        partial void OnWeatherTempTimeStampChanging(global::System.DateTime value);
+        partial void OnWeatherTempTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Width
+        {
+            get
+            {
+                return _Width;
+            }
+            set
+            {
+                if (_Width != value)
+                {
+                    OnWidthChanging(value);
+                    ReportPropertyChanging("Width");
+                    _Width = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Width");
+                    OnWidthChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Width;
+        partial void OnWidthChanging(global::System.Int32 value);
+        partial void OnWidthChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime WidthTimeStamp
+        {
+            get
+            {
+                return _WidthTimeStamp;
+            }
+            set
+            {
+                if (_WidthTimeStamp != value)
+                {
+                    OnWidthTimeStampChanging(value);
+                    ReportPropertyChanging("WidthTimeStamp");
+                    _WidthTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("WidthTimeStamp");
+                    OnWidthTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _WidthTimeStamp;
+        partial void OnWidthTimeStampChanging(global::System.DateTime value);
+        partial void OnWidthTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 WindSpeed
+        {
+            get
+            {
+                return _WindSpeed;
+            }
+            set
+            {
+                if (_WindSpeed != value)
+                {
+                    OnWindSpeedChanging(value);
+                    ReportPropertyChanging("WindSpeed");
+                    _WindSpeed = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("WindSpeed");
+                    OnWindSpeedChanged();
+                }
+            }
+        }
+        private global::System.Int32 _WindSpeed;
+        partial void OnWindSpeedChanging(global::System.Int32 value);
+        partial void OnWindSpeedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime WindTimeStamp
+        {
+            get
+            {
+                return _WindTimeStamp;
+            }
+            set
+            {
+                if (_WindTimeStamp != value)
+                {
+                    OnWindTimeStampChanging(value);
+                    ReportPropertyChanging("WindTimeStamp");
+                    _WindTimeStamp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("WindTimeStamp");
+                    OnWindTimeStampChanged();
+                }
+            }
+        }
+        private global::System.DateTime _WindTimeStamp;
+        partial void OnWindTimeStampChanging(global::System.DateTime value);
+        partial void OnWindTimeStampChanged();
 
         #endregion
 
@@ -16364,7 +18521,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="UnforseenStop")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="UnforseenStop")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class UnforseenStop : EntityObject
@@ -16375,15 +18532,15 @@ namespace RoadIt.Models
         /// Create a new UnforseenStop object.
         /// </summary>
         /// <param name="unforseenStopId">Initial value of the UnforseenStopId property.</param>
-        /// <param name="stopLocation">Initial value of the StopLocation property.</param>
-        /// <param name="stopTime">Initial value of the StopTime property.</param>
+        /// <param name="stopLocationUnforseenStop">Initial value of the StopLocationUnforseenStop property.</param>
+        /// <param name="stopTimeUnforseenStop">Initial value of the StopTimeUnforseenStop property.</param>
         /// <param name="unforseenStopTimeStamp">Initial value of the UnforseenStopTimeStamp property.</param>
-        public static UnforseenStop CreateUnforseenStop(global::System.Int32 unforseenStopId, global::System.String stopLocation, global::System.TimeSpan stopTime, global::System.DateTime unforseenStopTimeStamp)
+        public static UnforseenStop CreateUnforseenStop(global::System.Int32 unforseenStopId, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp)
         {
             UnforseenStop unforseenStop = new UnforseenStop();
             unforseenStop.UnforseenStopId = unforseenStopId;
-            unforseenStop.StopLocation = stopLocation;
-            unforseenStop.StopTime = stopTime;
+            unforseenStop.StopLocationUnforseenStop = stopLocationUnforseenStop;
+            unforseenStop.StopTimeUnforseenStop = stopTimeUnforseenStop;
             unforseenStop.UnforseenStopTimeStamp = unforseenStopTimeStamp;
             return unforseenStop;
         }
@@ -16424,48 +18581,48 @@ namespace RoadIt.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String StopLocation
+        public global::System.String StopLocationUnforseenStop
         {
             get
             {
-                return _StopLocation;
+                return _StopLocationUnforseenStop;
             }
             set
             {
-                OnStopLocationChanging(value);
-                ReportPropertyChanging("StopLocation");
-                _StopLocation = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("StopLocation");
-                OnStopLocationChanged();
+                OnStopLocationUnforseenStopChanging(value);
+                ReportPropertyChanging("StopLocationUnforseenStop");
+                _StopLocationUnforseenStop = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("StopLocationUnforseenStop");
+                OnStopLocationUnforseenStopChanged();
             }
         }
-        private global::System.String _StopLocation;
-        partial void OnStopLocationChanging(global::System.String value);
-        partial void OnStopLocationChanged();
+        private global::System.String _StopLocationUnforseenStop;
+        partial void OnStopLocationUnforseenStopChanging(global::System.String value);
+        partial void OnStopLocationUnforseenStopChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.TimeSpan StopTime
+        public global::System.TimeSpan StopTimeUnforseenStop
         {
             get
             {
-                return _StopTime;
+                return _StopTimeUnforseenStop;
             }
             set
             {
-                OnStopTimeChanging(value);
-                ReportPropertyChanging("StopTime");
-                _StopTime = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("StopTime");
-                OnStopTimeChanged();
+                OnStopTimeUnforseenStopChanging(value);
+                ReportPropertyChanging("StopTimeUnforseenStop");
+                _StopTimeUnforseenStop = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("StopTimeUnforseenStop");
+                OnStopTimeUnforseenStopChanged();
             }
         }
-        private global::System.TimeSpan _StopTime;
-        partial void OnStopTimeChanging(global::System.TimeSpan value);
-        partial void OnStopTimeChanged();
+        private global::System.TimeSpan _StopTimeUnforseenStop;
+        partial void OnStopTimeUnforseenStopChanging(global::System.TimeSpan value);
+        partial void OnStopTimeUnforseenStopChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -16502,18 +18659,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Truck_ibfk_8", "Truck")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Truck_ibfk_8", "Truck")]
         public EntityCollection<Truck> Trucks
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_8", "Truck");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Truck>("roaditModel.Truck_ibfk_8", "Truck");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("RoadItEntitiesModel.Truck_ibfk_8", "Truck", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Truck>("roaditModel.Truck_ibfk_8", "Truck", value);
                 }
             }
         }
@@ -16525,30 +18682,30 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Users")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="User")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class Users : EntityObject
+    public partial class User : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new Users object.
+        /// Create a new User object.
         /// </summary>
         /// <param name="userId">Initial value of the UserId property.</param>
         /// <param name="name">Initial value of the Name property.</param>
         /// <param name="password">Initial value of the Password property.</param>
         /// <param name="roleId">Initial value of the RoleId property.</param>
         /// <param name="email">Initial value of the Email property.</param>
-        public static Users CreateUsers(global::System.Int32 userId, global::System.String name, global::System.String password, global::System.Int32 roleId, global::System.String email)
+        public static User CreateUser(global::System.Int32 userId, global::System.String name, global::System.String password, global::System.Int32 roleId, global::System.String email)
         {
-            Users users = new Users();
-            users.UserId = userId;
-            users.Name = name;
-            users.Password = password;
-            users.RoleId = roleId;
-            users.Email = email;
-            return users;
+            User user = new User();
+            user.UserId = userId;
+            user.Name = name;
+            user.Password = password;
+            user.RoleId = roleId;
+            user.Email = email;
+            return user;
         }
 
         #endregion
@@ -16689,16 +18846,16 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Users_ibfk_1", "Role")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Users_ibfk_1", "Roles")]
         public Role Role
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("roaditModel.Users_ibfk_1", "Roles").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("roaditModel.Users_ibfk_1", "Roles").Value = value;
             }
         }
         /// <summary>
@@ -16710,13 +18867,13 @@ namespace RoadIt.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Role>("roaditModel.Users_ibfk_1", "Roles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Role>("RoadItEntitiesModel.Users_ibfk_1", "Role", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Role>("roaditModel.Users_ibfk_1", "Roles", value);
                 }
             }
         }
@@ -16728,7 +18885,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="WeatherTemp")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="WeatherTemp")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class WeatherTemp : EntityObject
@@ -16840,18 +18997,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_5", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_5", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_5", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_5", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_5", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_5", "Finisher", value);
                 }
             }
         }
@@ -16863,7 +19020,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Width")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Width")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Width : EntityObject
@@ -16875,11 +19032,13 @@ namespace RoadIt.Models
         /// </summary>
         /// <param name="widthId">Initial value of the WidthId property.</param>
         /// <param name="width1">Initial value of the Width1 property.</param>
-        public static Width CreateWidth(global::System.Int32 widthId, global::System.Int32 width1)
+        /// <param name="widthTimeStamp">Initial value of the WidthTimeStamp property.</param>
+        public static Width CreateWidth(global::System.Int32 widthId, global::System.Int32 width1, global::System.DateTime widthTimeStamp)
         {
             Width width = new Width();
             width.WidthId = widthId;
             width.Width1 = width1;
+            width.WidthTimeStamp = widthTimeStamp;
             return width;
         }
 
@@ -16937,6 +19096,30 @@ namespace RoadIt.Models
         private global::System.Int32 _Width1;
         partial void OnWidth1Changing(global::System.Int32 value);
         partial void OnWidth1Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime WidthTimeStamp
+        {
+            get
+            {
+                return _WidthTimeStamp;
+            }
+            set
+            {
+                OnWidthTimeStampChanging(value);
+                ReportPropertyChanging("WidthTimeStamp");
+                _WidthTimeStamp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("WidthTimeStamp");
+                OnWidthTimeStampChanged();
+            }
+        }
+        private global::System.DateTime _WidthTimeStamp;
+        partial void OnWidthTimeStampChanging(global::System.DateTime value);
+        partial void OnWidthTimeStampChanged();
 
         #endregion
 
@@ -16949,18 +19132,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_9", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_9", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_9", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_9", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_9", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_9", "Finisher", value);
                 }
             }
         }
@@ -16972,7 +19155,7 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="RoadItEntitiesModel", Name="Wind")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="Wind")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Wind : EntityObject
@@ -17084,18 +19267,18 @@ namespace RoadIt.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("RoadItEntitiesModel", "Finisher_ibfk_6", "Finisher")]
+        [EdmRelationshipNavigationPropertyAttribute("roaditModel", "Finisher_ibfk_6", "Finisher")]
         public EntityCollection<Finisher> Finishers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_6", "Finisher");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_6", "Finisher");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("RoadItEntitiesModel.Finisher_ibfk_6", "Finisher", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Finisher>("roaditModel.Finisher_ibfk_6", "Finisher", value);
                 }
             }
         }
