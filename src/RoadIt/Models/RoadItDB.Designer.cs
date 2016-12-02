@@ -664,22 +664,6 @@ namespace RoadIt.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<ContractorVieuw> ContractorVieuws
-        {
-            get
-            {
-                if ((_ContractorVieuws == null))
-                {
-                    _ContractorVieuws = base.CreateObjectSet<ContractorVieuw>("ContractorVieuws");
-                }
-                return _ContractorVieuws;
-            }
-        }
-        private ObjectSet<ContractorVieuw> _ContractorVieuws;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<Copro> Coproes
         {
             get
@@ -724,6 +708,22 @@ namespace RoadIt.Models
             }
         }
         private ObjectSet<UA> _UAs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<ContractorView> ContractorView
+        {
+            get
+            {
+                if ((_ContractorView == null))
+                {
+                    _ContractorView = base.CreateObjectSet<ContractorView>("ContractorView");
+                }
+                return _ContractorView;
+            }
+        }
+        private ObjectSet<ContractorView> _ContractorView;
 
         #endregion
 
@@ -1010,14 +1010,6 @@ namespace RoadIt.Models
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the ContractorVieuws EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToContractorVieuws(ContractorVieuw contractorVieuw)
-        {
-            base.AddObject("ContractorVieuws", contractorVieuw);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the Coproes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToCoproes(Copro copro)
@@ -1039,6 +1031,14 @@ namespace RoadIt.Models
         public void AddToUAs(UA uA)
         {
             base.AddObject("UAs", uA);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ContractorView EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToContractorView(ContractorView contractorView)
+        {
+            base.AddObject("ContractorView", contractorView);
         }
 
         #endregion
@@ -7129,15 +7129,15 @@ namespace RoadIt.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ContractorVieuw")]
+    [EdmEntityTypeAttribute(NamespaceName="roaditModel", Name="ContractorView")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ContractorVieuw : EntityObject
+    public partial class ContractorView : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ContractorVieuw object.
+        /// Create a new ContractorView object.
         /// </summary>
         /// <param name="layerThickness">Initial value of the LayerThickness property.</param>
         /// <param name="surface">Initial value of the Surface property.</param>
@@ -7216,87 +7216,87 @@ namespace RoadIt.Models
         /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
         /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
         /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
-        public static ContractorVieuw CreateContractorVieuw(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp)
+        public static ContractorView CreateContractorView(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp)
         {
-            ContractorVieuw contractorVieuw = new ContractorVieuw();
-            contractorVieuw.LayerThickness = layerThickness;
-            contractorVieuw.Surface = surface;
-            contractorVieuw.TonPerDay = tonPerDay;
-            contractorVieuw.PlanningTimeStamp = planningTimeStamp;
-            contractorVieuw.MixtureName = mixtureName;
-            contractorVieuw.TechnicalDataSheet = technicalDataSheet;
-            contractorVieuw.TruckLicensPlate = truckLicensPlate;
-            contractorVieuw.DepartureTime = departureTime;
-            contractorVieuw.MassTruck = massTruck;
-            contractorVieuw.RealArrivalTime = realArrivalTime;
-            contractorVieuw.DeattachmentFinisherTime = deattachmentFinisherTime;
-            contractorVieuw.DeattachmentFinisherPosition = deattachmentFinisherPosition;
-            contractorVieuw.ArrivalAtPlant = arrivalAtPlant;
-            contractorVieuw.AttachmentToFinisherTime = attachmentToFinisherTime;
-            contractorVieuw.AttachmentToFinisherPosition = attachmentToFinisherPosition;
-            contractorVieuw.TruckTimeStamp = truckTimeStamp;
-            contractorVieuw.Temp = temp;
-            contractorVieuw.TempTruckTimeStamp = tempTruckTimeStamp;
-            contractorVieuw.StopLocationUnforseenStop = stopLocationUnforseenStop;
-            contractorVieuw.StopTimeUnforseenStop = stopTimeUnforseenStop;
-            contractorVieuw.UnforseenStopTimeStamp = unforseenStopTimeStamp;
-            contractorVieuw.ActualPosition = actualPosition;
-            contractorVieuw.ActualPositionTimeStamp = actualPositionTimeStamp;
-            contractorVieuw.ActualPositionReturn = actualPositionReturn;
-            contractorVieuw.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
-            contractorVieuw.ETA = eTA;
-            contractorVieuw.ETATimeStamp = eTATimeStamp;
-            contractorVieuw.ETAReturn = eTAReturn;
-            contractorVieuw.ETAReturnTimeStamp = eTAReturnTimeStamp;
-            contractorVieuw.TranverseSlope = tranverseSlope;
-            contractorVieuw.Precipation = precipation;
-            contractorVieuw.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
-            contractorVieuw.FinisherTimeStamp = finisherTimeStamp;
-            contractorVieuw.LeftTickness = leftTickness;
-            contractorVieuw.MiddelThickness = middelThickness;
-            contractorVieuw.RightThickness = rightThickness;
-            contractorVieuw.ThicknessTimeStamp = thicknessTimeStamp;
-            contractorVieuw.TempWeather = tempWeather;
-            contractorVieuw.WeatherTempTimeStamp = weatherTempTimeStamp;
-            contractorVieuw.Width = width;
-            contractorVieuw.WidthTimeStamp = widthTimeStamp;
-            contractorVieuw.WindSpeed = windSpeed;
-            contractorVieuw.WindTimeStamp = windTimeStamp;
-            contractorVieuw.AirHumidity = airHumidity;
-            contractorVieuw.AirHumidityTimeStamp = airHumidityTimeStamp;
-            contractorVieuw.LeftAngle = leftAngle;
-            contractorVieuw.RightAngle = rightAngle;
-            contractorVieuw.AngleTimestamp = angleTimestamp;
-            contractorVieuw.Speed = speed;
-            contractorVieuw.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
-            contractorVieuw.StopLocationLTS = stopLocationLTS;
-            contractorVieuw.StopTimeLTS = stopTimeLTS;
-            contractorVieuw.StopTimeStamp = stopTimeStamp;
-            contractorVieuw.GPS = gPS;
-            contractorVieuw.TempAsphalt = tempAsphalt;
-            contractorVieuw.AsphaltTempTimeStamp = asphaltTempTimeStamp;
-            contractorVieuw.GPSFinisher = gPSFinisher;
-            contractorVieuw.GPSCompactor = gPSCompactor;
-            contractorVieuw.ColorCodeTimeStamp = colorCodeTimeStamp;
-            contractorVieuw.QrCodeCompactor = qrCodeCompactor;
-            contractorVieuw.NumberOfRollerCompactorPassages = numberOfRollerCompactorPassages;
-            contractorVieuw.LocationOfVibration = locationOfVibration;
-            contractorVieuw.SpeedOfRollerCompactor = speedOfRollerCompactor;
-            contractorVieuw.CompactorTimeStamp = compactorTimeStamp;
-            contractorVieuw.ComplianceMixture = complianceMixture;
-            contractorVieuw.SamplesCopro = samplesCopro;
-            contractorVieuw.DensityOfField = densityOfField;
-            contractorVieuw.Cores = cores;
-            contractorVieuw.LengthwiseFlatness = lengthwiseFlatness;
-            contractorVieuw.Skidresistance = skidresistance;
-            contractorVieuw.Iri = iri;
-            contractorVieuw.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
-            contractorVieuw.QualtityTimeStamp = qualtityTimeStamp;
-            contractorVieuw.RoadId = roadId;
-            contractorVieuw.RoadDescription = roadDescription;
-            contractorVieuw.RoadSectionTimeStamp = roadSectionTimeStamp;
-            contractorVieuw.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
-            return contractorVieuw;
+            ContractorView contractorView = new ContractorView();
+            contractorView.LayerThickness = layerThickness;
+            contractorView.Surface = surface;
+            contractorView.TonPerDay = tonPerDay;
+            contractorView.PlanningTimeStamp = planningTimeStamp;
+            contractorView.MixtureName = mixtureName;
+            contractorView.TechnicalDataSheet = technicalDataSheet;
+            contractorView.TruckLicensPlate = truckLicensPlate;
+            contractorView.DepartureTime = departureTime;
+            contractorView.MassTruck = massTruck;
+            contractorView.RealArrivalTime = realArrivalTime;
+            contractorView.DeattachmentFinisherTime = deattachmentFinisherTime;
+            contractorView.DeattachmentFinisherPosition = deattachmentFinisherPosition;
+            contractorView.ArrivalAtPlant = arrivalAtPlant;
+            contractorView.AttachmentToFinisherTime = attachmentToFinisherTime;
+            contractorView.AttachmentToFinisherPosition = attachmentToFinisherPosition;
+            contractorView.TruckTimeStamp = truckTimeStamp;
+            contractorView.Temp = temp;
+            contractorView.TempTruckTimeStamp = tempTruckTimeStamp;
+            contractorView.StopLocationUnforseenStop = stopLocationUnforseenStop;
+            contractorView.StopTimeUnforseenStop = stopTimeUnforseenStop;
+            contractorView.UnforseenStopTimeStamp = unforseenStopTimeStamp;
+            contractorView.ActualPosition = actualPosition;
+            contractorView.ActualPositionTimeStamp = actualPositionTimeStamp;
+            contractorView.ActualPositionReturn = actualPositionReturn;
+            contractorView.ActualPositionReturnTimeStamp = actualPositionReturnTimeStamp;
+            contractorView.ETA = eTA;
+            contractorView.ETATimeStamp = eTATimeStamp;
+            contractorView.ETAReturn = eTAReturn;
+            contractorView.ETAReturnTimeStamp = eTAReturnTimeStamp;
+            contractorView.TranverseSlope = tranverseSlope;
+            contractorView.Precipation = precipation;
+            contractorView.AsphaltTempAfterFinisherIrScanOrThermo = asphaltTempAfterFinisherIrScanOrThermo;
+            contractorView.FinisherTimeStamp = finisherTimeStamp;
+            contractorView.LeftTickness = leftTickness;
+            contractorView.MiddelThickness = middelThickness;
+            contractorView.RightThickness = rightThickness;
+            contractorView.ThicknessTimeStamp = thicknessTimeStamp;
+            contractorView.TempWeather = tempWeather;
+            contractorView.WeatherTempTimeStamp = weatherTempTimeStamp;
+            contractorView.Width = width;
+            contractorView.WidthTimeStamp = widthTimeStamp;
+            contractorView.WindSpeed = windSpeed;
+            contractorView.WindTimeStamp = windTimeStamp;
+            contractorView.AirHumidity = airHumidity;
+            contractorView.AirHumidityTimeStamp = airHumidityTimeStamp;
+            contractorView.LeftAngle = leftAngle;
+            contractorView.RightAngle = rightAngle;
+            contractorView.AngleTimestamp = angleTimestamp;
+            contractorView.Speed = speed;
+            contractorView.SpeedFinisherTimeStamp = speedFinisherTimeStamp;
+            contractorView.StopLocationLTS = stopLocationLTS;
+            contractorView.StopTimeLTS = stopTimeLTS;
+            contractorView.StopTimeStamp = stopTimeStamp;
+            contractorView.GPS = gPS;
+            contractorView.TempAsphalt = tempAsphalt;
+            contractorView.AsphaltTempTimeStamp = asphaltTempTimeStamp;
+            contractorView.GPSFinisher = gPSFinisher;
+            contractorView.GPSCompactor = gPSCompactor;
+            contractorView.ColorCodeTimeStamp = colorCodeTimeStamp;
+            contractorView.QrCodeCompactor = qrCodeCompactor;
+            contractorView.NumberOfRollerCompactorPassages = numberOfRollerCompactorPassages;
+            contractorView.LocationOfVibration = locationOfVibration;
+            contractorView.SpeedOfRollerCompactor = speedOfRollerCompactor;
+            contractorView.CompactorTimeStamp = compactorTimeStamp;
+            contractorView.ComplianceMixture = complianceMixture;
+            contractorView.SamplesCopro = samplesCopro;
+            contractorView.DensityOfField = densityOfField;
+            contractorView.Cores = cores;
+            contractorView.LengthwiseFlatness = lengthwiseFlatness;
+            contractorView.Skidresistance = skidresistance;
+            contractorView.Iri = iri;
+            contractorView.ExtraTestsAskedBijClient = extraTestsAskedBijClient;
+            contractorView.QualtityTimeStamp = qualtityTimeStamp;
+            contractorView.RoadId = roadId;
+            contractorView.RoadDescription = roadDescription;
+            contractorView.RoadSectionTimeStamp = roadSectionTimeStamp;
+            contractorView.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
+            return contractorView;
         }
 
         #endregion

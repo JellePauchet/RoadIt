@@ -19,11 +19,11 @@ namespace RoadIt.Controllers
                 var entities = new roaditEntities();
                 ViewBag.error = "";
                 Session["Planning"] = GenerateTablePlanning(entities);
-                Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
+                /*Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
                 Session["Truck"] = GenerateTableTruck(entities);
                 Session["Finisher"] = GenerateTableFinisher(entities);
                 Session["Compactor"] = GenerateTableCompactor(entities);
-                Session["QualityControl"] = GenerateTableQualityControl(entities);
+                Session["QualityControl"] = GenerateTableQualityControl(entities);*/
                 return View();
             }
             catch
