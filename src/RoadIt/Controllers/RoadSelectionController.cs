@@ -12,7 +12,7 @@ namespace RoadIt.Controllers
     {
         public ActionResult Index()
         {
-            var entities = new roaditEntities();
+            var entities = new sammegf117_roaditEntities();
             Session["SelectList"] = GenerateSelectList(entities);
             return View();
         }
@@ -50,7 +50,7 @@ namespace RoadIt.Controllers
             return RedirectToAction("Index",pageRef);
         }
 
-        public string GenerateSelectList(roaditEntities entities)
+        public string GenerateSelectList(sammegf117_roaditEntities entities)
         {
             var DataList = new List<int>();
             DataList.Add(0);

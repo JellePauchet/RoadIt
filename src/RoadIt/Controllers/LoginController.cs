@@ -12,10 +12,10 @@ namespace RoadIt.Controllers
         //
         // GET: /Login/
 
-        roaditEntities entities;
+        sammegf117_roaditEntities entities;
         public ActionResult Index()
         {
-            entities = new roaditEntities();
+            entities = new sammegf117_roaditEntities();
             ViewBag.Error = Session["error"];
 
             //Session["password"] = ("test").GetHashCode().ToString();
@@ -26,7 +26,7 @@ namespace RoadIt.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
-            entities = new roaditEntities();
+            entities = new sammegf117_roaditEntities();
             var MailList = new List<string>();
             var PasswordList = new List<string>();
             var NameList = new List<string>();

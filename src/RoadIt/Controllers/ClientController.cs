@@ -17,10 +17,14 @@ namespace RoadIt.Controllers
         {
             try
             {
-                var entities = new roaditEntities();
+                var entities = new sammegf117_roaditEntities();
                 Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
                 Session["Truck"] = GenerateTableTruck(entities);
+                Session["TruckLocation"] = GenerateTableTruckLocation(entities);
                 Session["Finisher"] = GenerateTableFinisher(entities);
+                Session["FinisherSpeed"] = GenerateTableFinisherSpeed(entities);
+                Session["wheater"] = GenerateTableWheater(entities);
+                Session["FinisherStop"] = GenerateTableFinisherStops(entities);
                 Session["Compactor"] = GenerateTableCompactor(entities);
                 Session["QualityControl"] = GenerateTableQualityControl(entities);
                 return View();
@@ -34,7 +38,7 @@ namespace RoadIt.Controllers
         }
             
 
-        public string GenerateTableAsphaltMixPlant(roaditEntities entities) //RoadId nog toevoegen aan view
+        public string GenerateTableAsphaltMixPlant(sammegf117_roaditEntities entities) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Asphalt Mixure Plant</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
@@ -55,11 +59,11 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableTruck(roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
+        public string GenerateTableTruck(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
         {
             var table = "<h3>Transport</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
-            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th><th>Location Transport (every 30 sec)</th><th>ETA</th><th>Arrival time at site</th></tr>";
+            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th><th>Arrival time at site</th></tr>";
 
             foreach (var item in entities.Clients)
             {
@@ -67,7 +71,7 @@ namespace RoadIt.Controllers
                 {
                     if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + " " + item.ActualPositionTimeStamp + "</td><td>" + item.ETA + " " + item.ETATimeStamp + "</td><td>" + item.RealArrivalTime + "</td></tr>";
+                        table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.RealArrivalTime + "</td></tr>";
                     }
                 }
             }
@@ -78,11 +82,31 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableFinisher(roaditEntities entities)// batchId niet in view
+        public string GenerateTableTruckLocation(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
+        {
+            var table = "<div><h3>Transport location</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>Location Transport</th><th>Geschatte tijd van aankomst</th></tr>";
+
+            foreach (var item in entities.AsphaltProcucers)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.ActualPositionTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.ActualPositionTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>" + item.ActualPosition + " " + item.ActualPositionTimeStamp + "</td><td>" + item.ETA + "</td></tr>";
+                    }
+                }
+            }
+            table += "</table><br />";
+            return table;
+        }
+
+        public string GenerateTableFinisher(sammegf117_roaditEntities entities)// batchId niet in view
         {
             var table = "<h3>Finisher</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
-            table += "<th>Speed</th><th>Width</th><th>Angle Left</th><th>Angle Right</th><th>Thickness of the layer (Left)</th><th>Thickness of the layer (Middle)</th><th>Thickness of the layer (Right)</th><th>Tranverse slope</th><th>Time and location of stop</th><th>precipitation</th><th>Air temperature</th><th>Wind speed</th><th>Air humidity</th><th>Asphalt temperature after finisher</th></tr>";
+            table += "<th>Width</th><th>Angle Left</th><th>Angle Right</th><th>Thickness of the layer (Left)</th><th>Thickness of the layer (Middle)</th><th>Thickness of the layer (Right)</th><th>Tranverse slope</th><th>precipitation</th><th>Asphalt temperature after finisher</th></tr>";
 
             foreach (var item in entities.Clients)
             {
@@ -90,7 +114,7 @@ namespace RoadIt.Controllers
                 {
                     if (DateTime.Parse(item.FinisherTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.FinisherTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<td>" + item.Speed + "</td><td>" + item.Width + "</td><td>" + item.LeftAngle + "</td><td>" + item.RightAngle + "</td><td>" + item.LeftTickness + "</td><td>" + item.MiddelThickness + "</td><td>" + item.RightThickness + "</td><td>" + item.TranverseSlope + "</td><td>" + item.StopTimeLTS + " " + item.StopLocationLTS + " " + item.StopTimeStamp + "</td><td>" + item.Precipation + "</td><td>" + item.TempWeather + " " + item.WeatherTempTimeStamp + "</td><td>" + item.WindSpeed + " " + item.WindTimeStamp + "</td><td>" + item.AirHumidity + " " + item.AirHumidityTimeStamp + "</td><td>" + item.AsphaltTempAfterFinisherIrScanOrThermo + "</td></tr>";
+                        table += "<tr><td>" + item.Width + "m</td><td>" + item.LeftAngle + "°</td><td>" + item.RightAngle + "°</td><td>" + item.LeftTickness + "mm</td><td>" + item.MiddelThickness + "mm</td><td>" + item.RightThickness + "mm</td><td>" + item.TranverseSlope + "</td><td><a href=" + item.Precipation + ">download</a></td><td><a href=" + item.AsphaltTempAfterFinisherIrScanOrThermo + ">download</a></td></tr>";
                     }
                 }
             }
@@ -101,7 +125,76 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableCompactor(roaditEntities entities)// batchId niet in view
+        public string GenerateTableFinisherSpeed(sammegf117_roaditEntities entities)// batchId niet in view
+        {
+            var table = "<h3>Finisher speed</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>Speed</th></tr>";
+
+            foreach (var item in entities.Clients)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.SpeedFinisherTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.SpeedFinisherTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>" + item.Speed + "km/u</td></tr>";
+                    }
+                }
+            }
+
+
+            table += "</table><br />";
+
+            return table;
+        }
+
+        public string GenerateTableWheater(sammegf117_roaditEntities entities)// batchId niet in view
+        {
+            var table = "<h3>Wheater</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>Air temperature</th><th>Wind speed</th><th>Air humidity</th></tr>";
+
+            foreach (var item in entities.Clients)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.WeatherTempTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.WeatherTempTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>Temp: " + item.TempWeather + "°C Date: " + item.WeatherTempTimeStamp + "</td><td>Speed: " + item.WindSpeed + "km/u Date: " + item.WindTimeStamp + "</td><td>Humidity: " + item.AirHumidity + "% Date: " + item.AirHumidityTimeStamp + "</td></tr>";
+                    }
+                }
+            }
+
+
+            table += "</table><br />";
+
+            return table;
+        }
+
+        public string GenerateTableFinisherStops(sammegf117_roaditEntities entities)// batchId niet in view
+        {
+            var table = "<h3>Finisher stops</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>Time and location of stop</th></tr>";
+
+            foreach (var item in entities.Clients)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.StopTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.StopTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>Time: " + item.StopTimeLTS + " Coordinates: " + item.StopLocationLTS + " Date: " + item.StopTimeStamp + "</td></tr>";
+                    }
+                }
+            }
+
+
+            table += "</table><br />";
+
+            return table;
+        }
+
+        public string GenerateTableCompactor(sammegf117_roaditEntities entities)// batchId niet in view
         {
             var table = "<h3>Compactor</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
@@ -125,7 +218,7 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableQualityControl(roaditEntities entities)
+        public string GenerateTableQualityControl(sammegf117_roaditEntities entities)
         {
             var table = "<h3>Qualitie control</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
@@ -137,7 +230,7 @@ namespace RoadIt.Controllers
                 {
                     if (DateTime.Parse(item.QualtityTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.QualtityTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<tr><td><a href=" + item.ComplianceMixture + ">download</a></td><td><a href=" + item.SamplesCopro + ">download</a></td><td>" + item.AsphaltTempAfterFinisherIrScanOrThermo + "</td><td>" + item.Temp + "</td><td><a href=" + item.DensityOfField + ">download</a></td><td><a href=" + item.Cores + ">download</a></td><td><a href=" + item.LengthwiseFlatness + ">download</a></td><td><a href=" + item.Skidresistance + ">download</a></td><td><a href=" + item.Iri + ">download</a></td><td><a href=" + item.ExtraTestsAskedBijClient + ">download</a></td></tr>";
+                        table += "<tr><td><a href=" + item.ComplianceMixture + ">download</a></td><td><a href=" + item.SamplesCopro + ">download</a></td><td><a href=" + item.AsphaltTempAfterFinisherIrScanOrThermo + ">download</a></td><td>" + item.Temp + "°C</td><td><a href=" + item.DensityOfField + ">download</a></td><td><a href=" + item.Cores + ">download</a></td><td><a href=" + item.LengthwiseFlatness + ">download</a></td><td><a href=" + item.Skidresistance + ">download</a></td><td><a href=" + item.Iri + ">download</a></td><td><a href=" + item.ExtraTestsAskedBijClient + ">download</a></td></tr>";
                     }
                 }
             }

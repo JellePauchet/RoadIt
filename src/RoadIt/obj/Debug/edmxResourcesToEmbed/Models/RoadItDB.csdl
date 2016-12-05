@@ -36,7 +36,6 @@
     <EntitySet Name="Winds" EntityType="roaditModel.Wind" />
     <EntitySet Name="AsphaltProcucers" EntityType="roaditModel.AsphaltProcucer" />
     <EntitySet Name="Clients" EntityType="roaditModel.Client" />
-    <EntitySet Name="ContractorVieuws" EntityType="roaditModel.ContractorVieuw" />
     <EntitySet Name="Coproes" EntityType="roaditModel.Copro" />
     <EntitySet Name="Truckers" EntityType="roaditModel.Trucker" />
     <EntitySet Name="UAs" EntityType="roaditModel.UA" />
@@ -164,6 +163,7 @@
       <End Role="UnforseenStop" EntitySet="UnforseenStops" />
       <End Role="Truck" EntitySet="Trucks" />
     </AssociationSet>
+    <EntitySet Name="ContractorView" EntityType="roaditModel.ContractorView" />
   </EntityContainer>
   <EntityType Name="ActualPosition">
     <Key>
@@ -807,164 +807,6 @@
     <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
     <Property Name="TranverseSlope" Type="Int32" Nullable="false" />
     <Property Name="GPSFinisher" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="ContractorVieuw">
-    <Key>
-      <PropertyRef Name="LayerThickness" />
-      <PropertyRef Name="Surface" />
-      <PropertyRef Name="TonPerDay" />
-      <PropertyRef Name="PlanningTimeStamp" />
-      <PropertyRef Name="MixtureName" />
-      <PropertyRef Name="TechnicalDataSheet" />
-      <PropertyRef Name="TruckLicensPlate" />
-      <PropertyRef Name="DepartureTime" />
-      <PropertyRef Name="MassTruck" />
-      <PropertyRef Name="RealArrivalTime" />
-      <PropertyRef Name="DeattachmentFinisherTime" />
-      <PropertyRef Name="DeattachmentFinisherPosition" />
-      <PropertyRef Name="ArrivalAtPlant" />
-      <PropertyRef Name="AttachmentToFinisherTime" />
-      <PropertyRef Name="AttachmentToFinisherPosition" />
-      <PropertyRef Name="TruckTimeStamp" />
-      <PropertyRef Name="Temp" />
-      <PropertyRef Name="TempTruckTimeStamp" />
-      <PropertyRef Name="StopLocationUnforseenStop" />
-      <PropertyRef Name="StopTimeUnforseenStop" />
-      <PropertyRef Name="UnforseenStopTimeStamp" />
-      <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ActualPositionTimeStamp" />
-      <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ActualPositionReturnTimeStamp" />
-      <PropertyRef Name="ETA" />
-      <PropertyRef Name="ETATimeStamp" />
-      <PropertyRef Name="ETAReturn" />
-      <PropertyRef Name="ETAReturnTimeStamp" />
-      <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="Precipation" />
-      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
-      <PropertyRef Name="FinisherTimeStamp" />
-      <PropertyRef Name="LeftTickness" />
-      <PropertyRef Name="MiddelThickness" />
-      <PropertyRef Name="RightThickness" />
-      <PropertyRef Name="ThicknessTimeStamp" />
-      <PropertyRef Name="TempWeather" />
-      <PropertyRef Name="WeatherTempTimeStamp" />
-      <PropertyRef Name="Width" />
-      <PropertyRef Name="WidthTimeStamp" />
-      <PropertyRef Name="WindSpeed" />
-      <PropertyRef Name="WindTimeStamp" />
-      <PropertyRef Name="AirHumidity" />
-      <PropertyRef Name="AirHumidityTimeStamp" />
-      <PropertyRef Name="LeftAngle" />
-      <PropertyRef Name="RightAngle" />
-      <PropertyRef Name="AngleTimestamp" />
-      <PropertyRef Name="Speed" />
-      <PropertyRef Name="SpeedFinisherTimeStamp" />
-      <PropertyRef Name="StopLocationLTS" />
-      <PropertyRef Name="StopTimeLTS" />
-      <PropertyRef Name="StopTimeStamp" />
-      <PropertyRef Name="GPS" />
-      <PropertyRef Name="TempAsphalt" />
-      <PropertyRef Name="AsphaltTempTimeStamp" />
-      <PropertyRef Name="GPSFinisher" />
-      <PropertyRef Name="GPSCompactor" />
-      <PropertyRef Name="ColorCodeTimeStamp" />
-      <PropertyRef Name="QrCodeCompactor" />
-      <PropertyRef Name="NumberOfRollerCompactorPassages" />
-      <PropertyRef Name="LocationOfVibration" />
-      <PropertyRef Name="SpeedOfRollerCompactor" />
-      <PropertyRef Name="CompactorTimeStamp" />
-      <PropertyRef Name="ComplianceMixture" />
-      <PropertyRef Name="SamplesCopro" />
-      <PropertyRef Name="DensityOfField" />
-      <PropertyRef Name="Cores" />
-      <PropertyRef Name="LengthwiseFlatness" />
-      <PropertyRef Name="Skidresistance" />
-      <PropertyRef Name="Iri" />
-      <PropertyRef Name="ExtraTestsAskedBijClient" />
-      <PropertyRef Name="QualtityTimeStamp" />
-      <PropertyRef Name="RoadId" />
-      <PropertyRef Name="RoadDescription" />
-      <PropertyRef Name="RoadSectionTimeStamp" />
-      <PropertyRef Name="AsphaltMixPlantTimestamp" />
-    </Key>
-    <Property Name="LayerThickness" Type="Int32" Nullable="false" />
-    <Property Name="Surface" Type="Int32" Nullable="false" />
-    <Property Name="TonPerDay" Type="Int32" Nullable="false" />
-    <Property Name="PlanningTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
-    <Property Name="MassTruck" Type="Int32" Nullable="false" />
-    <Property Name="RealArrivalTime" Type="DateTime" Nullable="false" />
-    <Property Name="DeattachmentFinisherTime" Type="DateTime" Nullable="false" />
-    <Property Name="DeattachmentFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="ArrivalAtPlant" Type="DateTime" Nullable="false" />
-    <Property Name="AttachmentToFinisherTime" Type="DateTime" Nullable="false" />
-    <Property Name="AttachmentToFinisherPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="Temp" Type="Int32" Nullable="false" />
-    <Property Name="TempTruckTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="StopLocationUnforseenStop" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="StopTimeUnforseenStop" Type="Time" Nullable="false" />
-    <Property Name="UnforseenStopTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="ActualPosition" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="ActualPositionTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="ActualPositionReturn" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="ActualPositionReturnTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="ETA" Type="Time" Nullable="false" />
-    <Property Name="ETATimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="ETAReturn" Type="Time" Nullable="false" />
-    <Property Name="ETAReturnTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="TranverseSlope" Type="Int32" Nullable="false" />
-    <Property Name="Precipation" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="FinisherTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="LeftTickness" Type="Int32" Nullable="false" />
-    <Property Name="MiddelThickness" Type="Int32" Nullable="false" />
-    <Property Name="RightThickness" Type="Int32" Nullable="false" />
-    <Property Name="ThicknessTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="TempWeather" Type="Int32" Nullable="false" />
-    <Property Name="WeatherTempTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="Width" Type="Int32" Nullable="false" />
-    <Property Name="WidthTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="WindSpeed" Type="Int32" Nullable="false" />
-    <Property Name="WindTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="AirHumidity" Type="Int32" Nullable="false" />
-    <Property Name="AirHumidityTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="LeftAngle" Type="Int32" Nullable="false" />
-    <Property Name="RightAngle" Type="Int32" Nullable="false" />
-    <Property Name="AngleTimestamp" Type="DateTime" Nullable="false" />
-    <Property Name="Speed" Type="Int32" Nullable="false" />
-    <Property Name="SpeedFinisherTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="StopLocationLTS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="StopTimeLTS" Type="Time" Nullable="false" />
-    <Property Name="StopTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="GPS" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="TempAsphalt" Type="Int32" Nullable="false" />
-    <Property Name="AsphaltTempTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="GPSFinisher" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="GPSCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="ColorCodeTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="QrCodeCompactor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="NumberOfRollerCompactorPassages" Type="Int32" Nullable="false" />
-    <Property Name="LocationOfVibration" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="SpeedOfRollerCompactor" Type="Int32" Nullable="false" />
-    <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="ComplianceMixture" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="SamplesCopro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="DensityOfField" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="Cores" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="LengthwiseFlatness" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="Skidresistance" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="Iri" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="ExtraTestsAskedBijClient" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="RoadId" Type="Int32" Nullable="false" />
-    <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-    <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
-    <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" />
   </EntityType>
   <EntityType Name="Copro">
     <Key>
@@ -1690,4 +1532,162 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="ContractorView">
+    <Key>
+      <PropertyRef Name="LayerThickness" />
+      <PropertyRef Name="Surface" />
+      <PropertyRef Name="TonPerDay" />
+      <PropertyRef Name="PlanningTimeStamp" />
+      <PropertyRef Name="MixtureName" />
+      <PropertyRef Name="TechnicalDataSheet" />
+      <PropertyRef Name="TruckLicensPlate" />
+      <PropertyRef Name="DepartureTime" />
+      <PropertyRef Name="MassTruck" />
+      <PropertyRef Name="RealArrivalTime" />
+      <PropertyRef Name="DeattachmentFinisherTime" />
+      <PropertyRef Name="DeattachmentFinisherPosition" />
+      <PropertyRef Name="ArrivalAtPlant" />
+      <PropertyRef Name="AttachmentToFinisherTime" />
+      <PropertyRef Name="AttachmentToFinisherPosition" />
+      <PropertyRef Name="TruckTimeStamp" />
+      <PropertyRef Name="Temp" />
+      <PropertyRef Name="TempTruckTimeStamp" />
+      <PropertyRef Name="StopLocationUnforseenStop" />
+      <PropertyRef Name="StopTimeUnforseenStop" />
+      <PropertyRef Name="UnforseenStopTimeStamp" />
+      <PropertyRef Name="ActualPosition" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
+      <PropertyRef Name="ActualPositionReturn" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
+      <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
+      <PropertyRef Name="ETAReturn" />
+      <PropertyRef Name="ETAReturnTimeStamp" />
+      <PropertyRef Name="TranverseSlope" />
+      <PropertyRef Name="Precipation" />
+      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
+      <PropertyRef Name="FinisherTimeStamp" />
+      <PropertyRef Name="LeftTickness" />
+      <PropertyRef Name="MiddelThickness" />
+      <PropertyRef Name="RightThickness" />
+      <PropertyRef Name="ThicknessTimeStamp" />
+      <PropertyRef Name="TempWeather" />
+      <PropertyRef Name="WeatherTempTimeStamp" />
+      <PropertyRef Name="Width" />
+      <PropertyRef Name="WidthTimeStamp" />
+      <PropertyRef Name="WindSpeed" />
+      <PropertyRef Name="WindTimeStamp" />
+      <PropertyRef Name="AirHumidity" />
+      <PropertyRef Name="AirHumidityTimeStamp" />
+      <PropertyRef Name="LeftAngle" />
+      <PropertyRef Name="RightAngle" />
+      <PropertyRef Name="AngleTimestamp" />
+      <PropertyRef Name="Speed" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
+      <PropertyRef Name="StopLocationLTS" />
+      <PropertyRef Name="StopTimeLTS" />
+      <PropertyRef Name="StopTimeStamp" />
+      <PropertyRef Name="GPS" />
+      <PropertyRef Name="TempAsphalt" />
+      <PropertyRef Name="AsphaltTempTimeStamp" />
+      <PropertyRef Name="GPSFinisher" />
+      <PropertyRef Name="GPSCompactor" />
+      <PropertyRef Name="ColorCodeTimeStamp" />
+      <PropertyRef Name="QrCodeCompactor" />
+      <PropertyRef Name="NumberOfRollerCompactorPassages" />
+      <PropertyRef Name="LocationOfVibration" />
+      <PropertyRef Name="SpeedOfRollerCompactor" />
+      <PropertyRef Name="CompactorTimeStamp" />
+      <PropertyRef Name="ComplianceMixture" />
+      <PropertyRef Name="SamplesCopro" />
+      <PropertyRef Name="DensityOfField" />
+      <PropertyRef Name="Cores" />
+      <PropertyRef Name="LengthwiseFlatness" />
+      <PropertyRef Name="Skidresistance" />
+      <PropertyRef Name="Iri" />
+      <PropertyRef Name="ExtraTestsAskedBijClient" />
+      <PropertyRef Name="QualtityTimeStamp" />
+      <PropertyRef Name="RoadId" />
+      <PropertyRef Name="RoadDescription" />
+      <PropertyRef Name="RoadSectionTimeStamp" />
+      <PropertyRef Name="AsphaltMixPlantTimestamp" />
+    </Key>
+    <Property Type="Int32" Name="LayerThickness" Nullable="false" />
+    <Property Type="Int32" Name="Surface" Nullable="false" />
+    <Property Type="Int32" Name="TonPerDay" Nullable="false" />
+    <Property Type="DateTime" Name="PlanningTimeStamp" Nullable="false" />
+    <Property Type="String" Name="MixtureName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TechnicalDataSheet" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TruckLicensPlate" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DepartureTime" Nullable="false" />
+    <Property Type="Int32" Name="MassTruck" Nullable="false" />
+    <Property Type="DateTime" Name="RealArrivalTime" Nullable="false" />
+    <Property Type="DateTime" Name="DeattachmentFinisherTime" Nullable="false" />
+    <Property Type="String" Name="DeattachmentFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ArrivalAtPlant" Nullable="false" />
+    <Property Type="DateTime" Name="AttachmentToFinisherTime" Nullable="false" />
+    <Property Type="String" Name="AttachmentToFinisherPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TruckTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="Temp" Nullable="false" />
+    <Property Type="DateTime" Name="TempTruckTimeStamp" Nullable="false" />
+    <Property Type="String" Name="StopLocationUnforseenStop" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Time" Name="StopTimeUnforseenStop" Nullable="false" />
+    <Property Type="DateTime" Name="UnforseenStopTimeStamp" Nullable="false" />
+    <Property Type="String" Name="ActualPosition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ActualPositionTimeStamp" Nullable="false" />
+    <Property Type="String" Name="ActualPositionReturn" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ActualPositionReturnTimeStamp" Nullable="false" />
+    <Property Type="Time" Name="ETA" Nullable="false" />
+    <Property Type="DateTime" Name="ETATimeStamp" Nullable="false" />
+    <Property Type="Time" Name="ETAReturn" Nullable="false" />
+    <Property Type="DateTime" Name="ETAReturnTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="TranverseSlope" Nullable="false" />
+    <Property Type="String" Name="Precipation" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AsphaltTempAfterFinisherIrScanOrThermo" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FinisherTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="LeftTickness" Nullable="false" />
+    <Property Type="Int32" Name="MiddelThickness" Nullable="false" />
+    <Property Type="Int32" Name="RightThickness" Nullable="false" />
+    <Property Type="DateTime" Name="ThicknessTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="TempWeather" Nullable="false" />
+    <Property Type="DateTime" Name="WeatherTempTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="Width" Nullable="false" />
+    <Property Type="DateTime" Name="WidthTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="WindSpeed" Nullable="false" />
+    <Property Type="DateTime" Name="WindTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="AirHumidity" Nullable="false" />
+    <Property Type="DateTime" Name="AirHumidityTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="LeftAngle" Nullable="false" />
+    <Property Type="Int32" Name="RightAngle" Nullable="false" />
+    <Property Type="DateTime" Name="AngleTimestamp" Nullable="false" />
+    <Property Type="Int32" Name="Speed" Nullable="false" />
+    <Property Type="DateTime" Name="SpeedFinisherTimeStamp" Nullable="false" />
+    <Property Type="String" Name="StopLocationLTS" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Time" Name="StopTimeLTS" Nullable="false" />
+    <Property Type="DateTime" Name="StopTimeStamp" Nullable="false" />
+    <Property Type="String" Name="GPS" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TempAsphalt" Nullable="false" />
+    <Property Type="DateTime" Name="AsphaltTempTimeStamp" Nullable="false" />
+    <Property Type="String" Name="GPSFinisher" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GPSCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ColorCodeTimeStamp" Nullable="false" />
+    <Property Type="String" Name="QrCodeCompactor" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NumberOfRollerCompactorPassages" Nullable="false" />
+    <Property Type="String" Name="LocationOfVibration" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SpeedOfRollerCompactor" Nullable="false" />
+    <Property Type="DateTime" Name="CompactorTimeStamp" Nullable="false" />
+    <Property Type="String" Name="ComplianceMixture" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SamplesCopro" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DensityOfField" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cores" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LengthwiseFlatness" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Skidresistance" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Iri" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExtraTestsAskedBijClient" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="QualtityTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="RoadId" Nullable="false" />
+    <Property Type="String" Name="RoadDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RoadSectionTimeStamp" Nullable="false" />
+    <Property Type="DateTime" Name="AsphaltMixPlantTimestamp" Nullable="false" />
+  </EntityType>
 </Schema>

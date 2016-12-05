@@ -16,9 +16,12 @@ namespace RoadIt.Controllers
         {
             try
             {
-                var entities = new roaditEntities();
+                var entities = new sammegf117_roaditEntities();
                 Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
+                Session["Silo"] = GenerateTableSilo(entities);
+                Session["AggagaratesBitumenComposition"] = GenerateTableAggagaratesBitumenComposition(entities);
                 Session["Truck"] = GenerateTableTruck(entities);
+                Session["TruckTemp"] = GenerateTableTruckTemp(entities);
                 Session["Compactor"] = GenerateTableCompactor(entities);
                 Session["QualityControl"] = GenerateTableQualityControl(entities);
                 return View();
@@ -30,35 +33,70 @@ namespace RoadIt.Controllers
             }
         }
 
-        public string GenerateTableAsphaltMixPlant(roaditEntities entities) //RoadId nog toevoegen aan view
+        public string GenerateTableAsphaltMixPlant(sammegf117_roaditEntities entities) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Asphalt Mixure Plant</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr><th>Mixture name</th><th>Technical datasheet</th><th>Type of aggregates(+ quarry)</th><th>Aggregates: min. temperature</th><th>Aggregates: max. temperature</th><th>Aggregates: time</th><th>Bitumen: max. temperature</th><th>Bitumen: min. temperature</th><th>Bitumen: time</th><th>Use of filler recuperation</th><th>Mixing temperature</th><th>Mixing time</th><th>mass of aggregation bunker 1 (kg)</th><th>mass of aggregation bunker 2 (kg)</th><th>mass of aggregation bunker 3 (kg)</th><th>mass of aggregation bunker 4 (kg)</th><th>mass of aggregation bunker 5 (kg)</th><th>mass of aggregation bunker 6 (kg)</th><th>mass of filler (kg)</th><th>mass of bitumen (kg)</th><th>mass of additives (kg)</th><th>Temperature in silo</th><th>Analysis of composition(qualitycontrol)</th><th>Mixture change</th></tr>";
+            table += "<tr><th>Mixture name</th><th>Technical datasheet</th><th>Types of aggregates</th><th>Mixture change</th></tr>";
 
-            foreach (var item in entities.Coproes)
+            foreach (var item in entities.AsphaltProcucers)
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
                     if (DateTime.Parse(item.AsphaltMixPlantTimestamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.AsphaltMixPlantTimestamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<tr><td><a href=" + item.MixtureName + ">download</a></td><td><a href=" + item.TechnicalDataSheet + ">download</a><td><a href=" + item.TypeOfAggregates + ">download</a></td><td>" + item.AggragationMinTemp + "</td><td>" + item.AggragationMaxTemp + "</td><td>" + item.AggragationTimeStamp + "</td><td>" + item.BitumenMaxTemp + "</td><td>" + item.BitumenMinTemp + "</td><td>" + item.BitumenTimeStamp + "</td><td>" + item.FillerRecup + "</td><td>" + item.MixingTemp + "</td><td>" + item.MixingTime + "</td><td>" + item.MassOfAggregationBunker1 + "</td><td>" + item.MassOfAggregationBunker2 + "</td><td>" + item.MassOfAggregationBunker3 + "</td><td>" + item.MassOfAggregationBunker4 + "</td><td>" + item.MassOfAggregationBunker5 + "</td><td>" + item.MassOfAggregationBunker6 + "</td><td>" + item.Filler + "</td><td>" + item.Bitumen + "</td><td>" + item.AdditivesKg + "</td><td>" + item.TempSilo + "</td><td>" + item.AnalysisComposition + "</td><td>" + item.MixtureChange + "</td></tr>";
+                        table += "<tr><td><a href=" + item.MixtureName + ">download</a></td><td><a href=" + item.TechnicalDataSheet + ">download</a></td><td><a href=" + item.TypeOfAggregates + ">download</a></td><td><a href=" + item.MixtureChange + ">download</a></td></tr>";
                     }
                 }
-
             }
-
-
             table += "</table><br />";
-
             return table;
         }
 
-        public string GenerateTableTruck(roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
+        public string GenerateTableSilo(sammegf117_roaditEntities entities) //RoadId nog toevoegen aan view
+        {
+            var table = "<h3>Silo informatie</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
+            table += "<tr><th>Use of filler recuperation</th><th>Mixing temperature</th><th>Mixing time</th><th>Temperature in silo</th><th>Analysis of composition(qualitycontrol)</th></tr>";
+
+            foreach (var item in entities.AsphaltProcucers)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.SiloTimpStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.SiloTimpStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>" + item.FillerRecup + "</td><td>" + item.MixingTemp + "°C</td><td>" + item.MixingTime + "</td><td>" + item.TempSilo + "°C</td><td><a href=" + item.AnalysisComposition + ">download</a></td></tr>";
+                    }
+                }
+            }
+            table += "</table><br />";
+            return table;
+        }
+
+        public string GenerateTableAggagaratesBitumenComposition(sammegf117_roaditEntities entities)
+        {
+            var table = "<h3>Aggragates, bitumen en compositie</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
+            table += "<tr><th>Aggregates: min. temperature</th><th>Aggregates: max. temperature</th><th>Bitumen: max. temperature</th><th>Bitumen: min. temperature</th><th>mass of aggregation bunker 1 (kg)</th><th>mass of aggregation bunker 2 (kg)</th><th>mass of aggregation bunker 3 (kg)</th><th>mass of aggregation bunker 4 (kg)</th><th>mass of aggregation bunker 5 (kg)</th><th>mass of aggregation bunker 6 (kg)</th><th>mass of filler (kg)</th><th>mass of bitumen (kg)</th><th>mass of additives (kg)</th></tr>";
+            foreach (var item in entities.AsphaltProcucers)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.CompositionTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.CompositionTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>" + item.AggragationMinTemp + "°C</td><td>" + item.AggragationMaxTemp + "°C</td><td>" + item.BitumenMaxTemp + "°C</td><td>" + item.BitumenMinTemp + "°C</td><td>" + item.MassOfAggregationBunker1 + "</td><td>" + item.MassOfAggregationBunker2 + "</td><td>" + item.MassOfAggregationBunker3 + "</td><td>" + item.MassOfAggregationBunker4 + "</td><td>" + item.MassOfAggregationBunker5 + "</td><td>" + item.MassOfAggregationBunker6 + "</td><td>" + item.Filler + "</td><td>" + item.Bitumen + "</td><td>" + item.AdditivesKg + "</td>";
+                    }
+                }
+            }
+            table += "</table><br />";
+            return table;
+        }
+
+        public string GenerateTableTruck(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
         {
             var table = "<h3>Transport</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
-            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th><th>actual temperature asphalt in truck</th></tr>";
+            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th></tr>";
 
             foreach (var item in entities.Coproes)
             {
@@ -66,7 +104,7 @@ namespace RoadIt.Controllers
                 {
                     if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.Temp + " " + item.TempTruckTimeStamp + "</td></tr>";
+                        table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td></tr>";
                     }
                 }
             }
@@ -77,7 +115,28 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableCompactor(roaditEntities entities)// batchId niet in view
+        public string GenerateTableTruckTemp(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
+        {
+            var table = "<h3>Transport temperatuur</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>actual temperature asphalt in truck</th></tr>";
+
+            foreach (var item in entities.AsphaltProcucers)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.TempTruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TempTruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td> Temp: " + item.Temp + "°C Date: " + item.TempTruckTimeStamp + "</td></tr>";
+                    }
+                }
+            }
+            table += "</table><br />";
+
+            return table;
+        }
+
+        public string GenerateTableCompactor(sammegf117_roaditEntities entities)// batchId niet in view
         {
             var table = "<h3>Compactor</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
@@ -101,7 +160,7 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableQualityControl(roaditEntities entities)
+        public string GenerateTableQualityControl(sammegf117_roaditEntities entities)
         {
             var table = "<h3>Qualitie control</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";

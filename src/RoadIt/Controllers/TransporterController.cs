@@ -16,8 +16,11 @@ namespace RoadIt.Controllers
         {
             try
             {
-                var entities = new roaditEntities();
+                var entities = new sammegf117_roaditEntities();
                 Session["Truck"] = GenerateTableTruck(entities);
+                Session["TruckStop"] = GenerateTableTruckStops(entities);
+                Session["Position"] = GenerateTableTruckLocation(entities);
+                Session["PositionReturn"] = GenerateTableTruckLocationReturn(entities);
                 Session["Compactor"] = GenerateTableCompactor(entities);
                 return View();
             }
@@ -28,30 +31,88 @@ namespace RoadIt.Controllers
             }
         }
 
-        public string GenerateTableTruck(roaditEntities entities)//RoadId nog toevoegen aan view
+        public string GenerateTableTruck(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
         {
             var table = "<h3>Transport</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
-            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th><th>Location Transport (every 30 sec)</th><th>ETA</th><th>Arrival time at site</th><th>Time and location of attachment to finisher</th><th>Time and location of deattachment finisher</th><th>Actual position(GPS) (return)</th><th>ETA* (return)</th><th>Arrival at plant</th><th>Unforeseen stop ( > 10 min)</th></tr>";
+            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th><th>Arrival time at site</th><th>Time and location of attachment to finisher</th><th>Time and location of deattachment finisher</th><th>Arrival at plant</th></tr>";
 
-            foreach (var item in entities.Truckers)
+            foreach (var item in entities.AsphaltProcucers)
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
                     if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
-                    { 
-                        table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.ActualPosition + " " + item.ActualPositionTimeStamp + "</td><td>" + item.ETA + " " + item.ETATimeStamp + "</td><td>" + item.RealArrivalTime + "</td><td>" + item.AttachmentToFinisherPosition + " " + item.AttachmentToFinisherTime + "</td><td>" + item.DeattachmentFinisherPosition + " " + item.DeattachmentFinisherTime + "</td><td>" + item.ActualPositionReturn + " " + item.ActualPositionReturnTimeStamp + "</td><td>" + item.ETAReturn + " " + item.ETAReturnTimeStamp + "</td><td>" + item.ArrivalAtPlant + "</td><td>" + item.StopLocationUnforseenStop + " " + item.StopTimeUnforseenStop + " " + item.UnforseenStopTimeStamp + "</td></tr>";
+                    {
+                        table += "<tr><td>" + item.TruckLicensPlate + "</td><td>" + item.DepartureTime + "</td><td>" + item.MassTruck + "</td><td>" + item.RealArrivalTime + "</td><td>" + item.AttachmentToFinisherPosition + " " + item.AttachmentToFinisherTime + "</td><td>" + item.DeattachmentFinisherPosition + " " + item.DeattachmentFinisherTime + "</td><td>" + item.ArrivalAtPlant + "</td></tr>";
                     }
                 }
             }
-
-
             table += "</table><br />";
-
             return table;
         }
 
-        public string GenerateTableCompactor(roaditEntities entities)// ID niet in view
+        
+        public string GenerateTableTruckStops(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
+        {
+            var table = "<h3>Transport Stops</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>Unforeseen stop ( > 10 min)</th></tr>";
+
+            foreach (var item in entities.AsphaltProcucers)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.UnforseenStopTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.UnforseenStopTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td> Time: " + item.StopTimeUnforseenStop + " Coordinates: " + item.StopLocationUnforseenStop + " Date: " + item.UnforseenStopTimeStamp + "</td></tr>";
+                    }
+                }
+            }
+            table += "</table><br />";
+            return table;
+        }
+
+        public string GenerateTableTruckLocation(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
+        {
+            var table = "<div><h3>Transport location</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>Location Transport</th><th>Geschatte tijd van aankomst</th></tr>";
+
+            foreach (var item in entities.AsphaltProcucers)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.ActualPositionTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.ActualPositionTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>" + item.ActualPosition + " " + item.ActualPositionTimeStamp + "</td><td>" + item.ETA +  "</td></tr>";
+                    }
+                }
+            }
+            table += "</table><br />";
+            return table;
+        }
+
+        public string GenerateTableTruckLocationReturn(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
+        {
+            var table = "<h3>Transport location return</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
+            table += "<tr><th>Locatie truck (return)</th><th>Geschatte tijd van aankomst (return)</th></tr>";
+
+            foreach (var item in entities.AsphaltProcucers)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.ActualPositionReturnTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.ActualPositionReturnTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        table += "<tr><td>" + item.ActualPositionReturn + " " + item.ActualPositionReturnTimeStamp + "</td><td>" + item.ETAReturn + "</td></tr>";
+                    }
+                }
+            }
+            table += "</table><br /></div>";
+            return table;
+        }
+
+        public string GenerateTableCompactor(sammegf117_roaditEntities entities)// ID niet in view
         {
             var table = "<h3>Compactor</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
