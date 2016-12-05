@@ -8,10 +8,13 @@
 @{
     if (Session["RoleId"].ToString() == "3")
     {
-        if(Session["RoadId"].ToString() != "")
+        if (Session["RoadId"].ToString() != "")
         {
             <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
             @Html.Raw(Session["Truck"].ToString())
+            @Html.Raw(Session["TruckStop"].ToString())
+            @Html.Raw(Session["Position"].ToString())
+            @Html.Raw(Session["PositionReturn"].ToString())
             @Html.Raw(Session["Compactor"].ToString())
         }
         else

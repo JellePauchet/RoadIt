@@ -160,86 +160,86 @@
       `Client`.`GPSFinisher`
       FROM `Client` AS `Client`</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="ContractorVieuw" EntityType="roaditModel.Store.ContractorVieuw" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="ContractorVieuw">
+    <EntitySet Name="ContractorView" EntityType="roaditModel.Store.ContractorView" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="ContractorView">
       <DefiningQuery>SELECT
-      `ContractorVieuw`.`LayerThickness`, 
-      `ContractorVieuw`.`Surface`, 
-      `ContractorVieuw`.`TonPerDay`, 
-      `ContractorVieuw`.`PlanningTimeStamp`, 
-      `ContractorVieuw`.`MixtureName`, 
-      `ContractorVieuw`.`TechnicalDataSheet`, 
-      `ContractorVieuw`.`TruckLicensPlate`, 
-      `ContractorVieuw`.`DepartureTime`, 
-      `ContractorVieuw`.`MassTruck`, 
-      `ContractorVieuw`.`RealArrivalTime`, 
-      `ContractorVieuw`.`DeattachmentFinisherTime`, 
-      `ContractorVieuw`.`DeattachmentFinisherPosition`, 
-      `ContractorVieuw`.`ArrivalAtPlant`, 
-      `ContractorVieuw`.`AttachmentToFinisherTime`, 
-      `ContractorVieuw`.`AttachmentToFinisherPosition`, 
-      `ContractorVieuw`.`TruckTimeStamp`, 
-      `ContractorVieuw`.`Temp`, 
-      `ContractorVieuw`.`TempTruckTimeStamp`, 
-      `ContractorVieuw`.`StopLocationUnforseenStop`, 
-      `ContractorVieuw`.`StopTimeUnforseenStop`, 
-      `ContractorVieuw`.`UnforseenStopTimeStamp`, 
-      `ContractorVieuw`.`ActualPosition`, 
-      `ContractorVieuw`.`ActualPositionTimeStamp`, 
-      `ContractorVieuw`.`ActualPositionReturn`, 
-      `ContractorVieuw`.`ActualPositionReturnTimeStamp`, 
-      `ContractorVieuw`.`ETA`, 
-      `ContractorVieuw`.`ETATimeStamp`, 
-      `ContractorVieuw`.`ETAReturn`, 
-      `ContractorVieuw`.`ETAReturnTimeStamp`, 
-      `ContractorVieuw`.`TranverseSlope`, 
-      `ContractorVieuw`.`Precipation`, 
-      `ContractorVieuw`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
-      `ContractorVieuw`.`FinisherTimeStamp`, 
-      `ContractorVieuw`.`LeftTickness`, 
-      `ContractorVieuw`.`MiddelThickness`, 
-      `ContractorVieuw`.`RightThickness`, 
-      `ContractorVieuw`.`ThicknessTimeStamp`, 
-      `ContractorVieuw`.`TempWeather`, 
-      `ContractorVieuw`.`WeatherTempTimeStamp`, 
-      `ContractorVieuw`.`Width`, 
-      `ContractorVieuw`.`WidthTimeStamp`, 
-      `ContractorVieuw`.`WindSpeed`, 
-      `ContractorVieuw`.`WindTimeStamp`, 
-      `ContractorVieuw`.`AirHumidity`, 
-      `ContractorVieuw`.`AirHumidityTimeStamp`, 
-      `ContractorVieuw`.`LeftAngle`, 
-      `ContractorVieuw`.`RightAngle`, 
-      `ContractorVieuw`.`AngleTimestamp`, 
-      `ContractorVieuw`.`Speed`, 
-      `ContractorVieuw`.`SpeedFinisherTimeStamp`, 
-      `ContractorVieuw`.`StopLocationLTS`, 
-      `ContractorVieuw`.`StopTimeLTS`, 
-      `ContractorVieuw`.`StopTimeStamp`, 
-      `ContractorVieuw`.`GPS`, 
-      `ContractorVieuw`.`TempAsphalt`, 
-      `ContractorVieuw`.`AsphaltTempTimeStamp`, 
-      `ContractorVieuw`.`GPSFinisher`, 
-      `ContractorVieuw`.`GPSCompactor`, 
-      `ContractorVieuw`.`ColorCodeTimeStamp`, 
-      `ContractorVieuw`.`QrCodeCompactor`, 
-      `ContractorVieuw`.`NumberOfRollerCompactorPassages`, 
-      `ContractorVieuw`.`LocationOfVibration`, 
-      `ContractorVieuw`.`SpeedOfRollerCompactor`, 
-      `ContractorVieuw`.`CompactorTimeStamp`, 
-      `ContractorVieuw`.`ComplianceMixture`, 
-      `ContractorVieuw`.`SamplesCopro`, 
-      `ContractorVieuw`.`DensityOfField`, 
-      `ContractorVieuw`.`Cores`, 
-      `ContractorVieuw`.`LengthwiseFlatness`, 
-      `ContractorVieuw`.`Skidresistance`, 
-      `ContractorVieuw`.`Iri`, 
-      `ContractorVieuw`.`ExtraTestsAskedBijClient`, 
-      `ContractorVieuw`.`QualtityTimeStamp`, 
-      `ContractorVieuw`.`RoadId`, 
-      `ContractorVieuw`.`RoadDescription`, 
-      `ContractorVieuw`.`RoadSectionTimeStamp`, 
-      `ContractorVieuw`.`AsphaltMixPlantTimestamp`
-      FROM `ContractorVieuw` AS `ContractorVieuw`</DefiningQuery>
+      `ContractorView`.`LayerThickness`, 
+      `ContractorView`.`Surface`, 
+      `ContractorView`.`TonPerDay`, 
+      `ContractorView`.`PlanningTimeStamp`, 
+      `ContractorView`.`MixtureName`, 
+      `ContractorView`.`TechnicalDataSheet`, 
+      `ContractorView`.`TruckLicensPlate`, 
+      `ContractorView`.`DepartureTime`, 
+      `ContractorView`.`MassTruck`, 
+      `ContractorView`.`RealArrivalTime`, 
+      `ContractorView`.`DeattachmentFinisherTime`, 
+      `ContractorView`.`DeattachmentFinisherPosition`, 
+      `ContractorView`.`ArrivalAtPlant`, 
+      `ContractorView`.`AttachmentToFinisherTime`, 
+      `ContractorView`.`AttachmentToFinisherPosition`, 
+      `ContractorView`.`TruckTimeStamp`, 
+      `ContractorView`.`Temp`, 
+      `ContractorView`.`TempTruckTimeStamp`, 
+      `ContractorView`.`StopLocationUnforseenStop`, 
+      `ContractorView`.`StopTimeUnforseenStop`, 
+      `ContractorView`.`UnforseenStopTimeStamp`, 
+      `ContractorView`.`ActualPosition`, 
+      `ContractorView`.`ActualPositionTimeStamp`, 
+      `ContractorView`.`ActualPositionReturn`, 
+      `ContractorView`.`ActualPositionReturnTimeStamp`, 
+      `ContractorView`.`ETA`, 
+      `ContractorView`.`ETATimeStamp`, 
+      `ContractorView`.`ETAReturn`, 
+      `ContractorView`.`ETAReturnTimeStamp`, 
+      `ContractorView`.`TranverseSlope`, 
+      `ContractorView`.`Precipation`, 
+      `ContractorView`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
+      `ContractorView`.`FinisherTimeStamp`, 
+      `ContractorView`.`LeftTickness`, 
+      `ContractorView`.`MiddelThickness`, 
+      `ContractorView`.`RightThickness`, 
+      `ContractorView`.`ThicknessTimeStamp`, 
+      `ContractorView`.`TempWeather`, 
+      `ContractorView`.`WeatherTempTimeStamp`, 
+      `ContractorView`.`Width`, 
+      `ContractorView`.`WidthTimeStamp`, 
+      `ContractorView`.`WindSpeed`, 
+      `ContractorView`.`WindTimeStamp`, 
+      `ContractorView`.`AirHumidity`, 
+      `ContractorView`.`AirHumidityTimeStamp`, 
+      `ContractorView`.`LeftAngle`, 
+      `ContractorView`.`RightAngle`, 
+      `ContractorView`.`AngleTimestamp`, 
+      `ContractorView`.`Speed`, 
+      `ContractorView`.`SpeedFinisherTimeStamp`, 
+      `ContractorView`.`StopLocationLTS`, 
+      `ContractorView`.`StopTimeLTS`, 
+      `ContractorView`.`StopTimeStamp`, 
+      `ContractorView`.`GPS`, 
+      `ContractorView`.`TempAsphalt`, 
+      `ContractorView`.`AsphaltTempTimeStamp`, 
+      `ContractorView`.`GPSFinisher`, 
+      `ContractorView`.`GPSCompactor`, 
+      `ContractorView`.`ColorCodeTimeStamp`, 
+      `ContractorView`.`QrCodeCompactor`, 
+      `ContractorView`.`NumberOfRollerCompactorPassages`, 
+      `ContractorView`.`LocationOfVibration`, 
+      `ContractorView`.`SpeedOfRollerCompactor`, 
+      `ContractorView`.`CompactorTimeStamp`, 
+      `ContractorView`.`ComplianceMixture`, 
+      `ContractorView`.`SamplesCopro`, 
+      `ContractorView`.`DensityOfField`, 
+      `ContractorView`.`Cores`, 
+      `ContractorView`.`LengthwiseFlatness`, 
+      `ContractorView`.`Skidresistance`, 
+      `ContractorView`.`Iri`, 
+      `ContractorView`.`ExtraTestsAskedBijClient`, 
+      `ContractorView`.`QualtityTimeStamp`, 
+      `ContractorView`.`RoadId`, 
+      `ContractorView`.`RoadDescription`, 
+      `ContractorView`.`RoadSectionTimeStamp`, 
+      `ContractorView`.`AsphaltMixPlantTimestamp`
+      FROM `ContractorView` AS `ContractorView`</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Copro" EntityType="roaditModel.Store.Copro" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Copro">
       <DefiningQuery>SELECT
@@ -319,64 +319,6 @@
     </EntitySet>
     <EntitySet Name="UA" EntityType="roaditModel.Store.UA" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="UA">
       <DefiningQuery>SELECT
-      `UA`.`ActualPosition`, 
-      `UA`.`ActualPositionTimeStamp`, 
-      `UA`.`ActualPositionReturn`, 
-      `UA`.`ActualPositionReturnTimeStamp`, 
-      `UA`.`AggragationMaxTemp`, 
-      `UA`.`AggragationMinTemp`, 
-      `UA`.`AggragationTimeStamp`, 
-      `UA`.`AirHumidity`, 
-      `UA`.`AirHumidityTimeStamp`, 
-      `UA`.`LeftAngle`, 
-      `UA`.`RightAngle`, 
-      `UA`.`AngleTimestamp`, 
-      `UA`.`MixtureName`, 
-      `UA`.`TechnicalDataSheet`, 
-      `UA`.`TypeOfAggregates`, 
-      `UA`.`MixtureChange`, 
-      `UA`.`AsphaltMixPlantTimestamp`, 
-      `UA`.`GPS`, 
-      `UA`.`TempAsphalt`, 
-      `UA`.`AsphaltTempTimeStamp`, 
-      `UA`.`BitumenTimeStamp`, 
-      `UA`.`BitumenMinTemp`, 
-      `UA`.`BitumenMaxTemp`, 
-      `UA`.`GPSFinisher`, 
-      `UA`.`GPSCompactor`, 
-      `UA`.`ColorCodeTimeStamp`, 
-      `UA`.`QrCodeCompactor`, 
-      `UA`.`NumberOfRollerCompactorPassages`, 
-      `UA`.`LocationOfVibration`, 
-      `UA`.`SpeedOfRollerCompactor`, 
-      `UA`.`CompactorTimeStamp`, 
-      `UA`.`MassOfAggregationBunker1`, 
-      `UA`.`MassOfAggregationBunker2`, 
-      `UA`.`MassOfAggregationBunker3`, 
-      `UA`.`MassOfAggregationBunker4`, 
-      `UA`.`MassOfAggregationBunker5`, 
-      `UA`.`MassOfAggregationBunker6`, 
-      `UA`.`Filler`, 
-      `UA`.`Bitumen`, 
-      `UA`.`AdditivesKg`, 
-      `UA`.`CompositionTimeStamp`, 
-      `UA`.`ETA`, 
-      `UA`.`ETATimeStamp`, 
-      `UA`.`ETAReturn`, 
-      `UA`.`ETAReturnTimeStamp`, 
-      `UA`.`TranverseSlope`, 
-      `UA`.`Precipation`, 
-      `UA`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
-      `UA`.`FinisherTimeStamp`, 
-      `UA`.`LeftTickness`, 
-      `UA`.`MiddelThickness`, 
-      `UA`.`RightThickness`, 
-      `UA`.`ThicknessTimeStamp`, 
-      `UA`.`FillerRecup`, 
-      `UA`.`FillerRecupTimeStamp`, 
-      `UA`.`StopLocationLTS`, 
-      `UA`.`StopTimeLTS`, 
-      `UA`.`StopTimeStamp`, 
       `UA`.`LayerThickness`, 
       `UA`.`Surface`, 
       `UA`.`TonPerDay`, 
@@ -393,13 +335,36 @@
       `UA`.`RoadId`, 
       `UA`.`RoadDescription`, 
       `UA`.`RoadSectionTimeStamp`, 
-      `UA`.`MixingTemp`, 
-      `UA`.`MixingTime`, 
-      `UA`.`TempSilo`, 
-      `UA`.`AnalysisComposition`, 
-      `UA`.`SiloTimpStamp`, 
-      `UA`.`Speed`, 
-      `UA`.`SpeedFinisherTimeStamp`, 
+      `UA`.`GPSFinisher`, 
+      `UA`.`GPSCompactor`, 
+      `UA`.`ColorCodeTimeStamp`, 
+      `UA`.`QrCodeCompactor`, 
+      `UA`.`NumberOfRollerCompactorPassages`, 
+      `UA`.`LocationOfVibration`, 
+      `UA`.`SpeedOfRollerCompactor`, 
+      `UA`.`CompactorTimeStamp`, 
+      `UA`.`AggragationMaxTemp`, 
+      `UA`.`AggragationMinTemp`, 
+      `UA`.`BitumenTimeStamp`, 
+      `UA`.`BitumenMinTemp`, 
+      `UA`.`BitumenMaxTemp`, 
+      `UA`.`FillerRecup`, 
+      `UA`.`FillerRecupTimeStamp`, 
+      `UA`.`MassOfAggregationBunker1`, 
+      `UA`.`MassOfAggregationBunker2`, 
+      `UA`.`MassOfAggregationBunker3`, 
+      `UA`.`MassOfAggregationBunker4`, 
+      `UA`.`MassOfAggregationBunker5`, 
+      `UA`.`MassOfAggregationBunker6`, 
+      `UA`.`Filler`, 
+      `UA`.`Bitumen`, 
+      `UA`.`AdditivesKg`, 
+      `UA`.`CompositionTimeStamp`, 
+      `UA`.`MixtureName`, 
+      `UA`.`TechnicalDataSheet`, 
+      `UA`.`TypeOfAggregates`, 
+      `UA`.`MixtureChange`, 
+      `UA`.`AsphaltMixPlantTimestamp`, 
       `UA`.`TruckLicensPlate`, 
       `UA`.`DepartureTime`, 
       `UA`.`MassTruck`, 
@@ -410,17 +375,46 @@
       `UA`.`AttachmentToFinisherTime`, 
       `UA`.`AttachmentToFinisherPosition`, 
       `UA`.`TruckTimeStamp`, 
-      `UA`.`Temp`, 
-      `UA`.`TempTruckTimeStamp`, 
+      `UA`.`ActualPosition`, 
+      `UA`.`ActualPositionTimeStamp`, 
+      `UA`.`ActualPositionReturn`, 
+      `UA`.`ActualPositionReturnTimeStamp`, 
+      `UA`.`ETA`, 
+      `UA`.`ETATimeStamp`, 
+      `UA`.`ETAReturn`, 
+      `UA`.`ETAReturnTimeStamp`, 
       `UA`.`StopLocationUnforseenStop`, 
       `UA`.`StopTimeUnforseenStop`, 
       `UA`.`UnforseenStopTimeStamp`, 
+      `UA`.`Temp`, 
+      `UA`.`TempTruckTimeStamp`, 
+      `UA`.`TranverseSlope`, 
+      `UA`.`Precipation`, 
+      `UA`.`AsphaltTempAfterFinisherIrScanOrThermo`, 
+      `UA`.`FinisherTimeStamp`, 
+      `UA`.`Speed`, 
+      `UA`.`SpeedFinisherTimeStamp`, 
       `UA`.`TempWeather`, 
       `UA`.`WeatherTempTimeStamp`, 
       `UA`.`Width`, 
       `UA`.`WidthTimeStamp`, 
       `UA`.`WindSpeed`, 
-      `UA`.`WindTimeStamp`
+      `UA`.`WindTimeStamp`, 
+      `UA`.`StopLocationLTS`, 
+      `UA`.`StopTimeLTS`, 
+      `UA`.`StopTimeStamp`, 
+      `UA`.`GPS`, 
+      `UA`.`TempAsphalt`, 
+      `UA`.`AsphaltTempTimeStamp`, 
+      `UA`.`LeftTickness`, 
+      `UA`.`MiddelThickness`, 
+      `UA`.`RightThickness`, 
+      `UA`.`ThicknessTimeStamp`, 
+      `UA`.`AirHumidity`, 
+      `UA`.`AirHumidityTimeStamp`, 
+      `UA`.`LeftAngle`, 
+      `UA`.`RightAngle`, 
+      `UA`.`AngleTimestamp`
       FROM `UA` AS `UA`</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="BatchList_ibfk_1" Association="roaditModel.Store.BatchList_ibfk_1">
@@ -1136,9 +1130,9 @@
     <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'def.sammegf117_roadit.ContractorVieuw' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'def.sammegf117_roadit.ContractorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
-  <EntityType Name="ContractorVieuw">
+  <EntityType Name="ContractorView">
     <Key>
       <PropertyRef Name="LayerThickness" />
       <PropertyRef Name="Surface" />
@@ -1451,64 +1445,6 @@
       -->
   <EntityType Name="UA">
     <Key>
-      <PropertyRef Name="ActualPosition" />
-      <PropertyRef Name="ActualPositionTimeStamp" />
-      <PropertyRef Name="ActualPositionReturn" />
-      <PropertyRef Name="ActualPositionReturnTimeStamp" />
-      <PropertyRef Name="AggragationMaxTemp" />
-      <PropertyRef Name="AggragationMinTemp" />
-      <PropertyRef Name="AggragationTimeStamp" />
-      <PropertyRef Name="AirHumidity" />
-      <PropertyRef Name="AirHumidityTimeStamp" />
-      <PropertyRef Name="LeftAngle" />
-      <PropertyRef Name="RightAngle" />
-      <PropertyRef Name="AngleTimestamp" />
-      <PropertyRef Name="MixtureName" />
-      <PropertyRef Name="TechnicalDataSheet" />
-      <PropertyRef Name="TypeOfAggregates" />
-      <PropertyRef Name="MixtureChange" />
-      <PropertyRef Name="AsphaltMixPlantTimestamp" />
-      <PropertyRef Name="GPS" />
-      <PropertyRef Name="TempAsphalt" />
-      <PropertyRef Name="AsphaltTempTimeStamp" />
-      <PropertyRef Name="BitumenTimeStamp" />
-      <PropertyRef Name="BitumenMinTemp" />
-      <PropertyRef Name="BitumenMaxTemp" />
-      <PropertyRef Name="GPSFinisher" />
-      <PropertyRef Name="GPSCompactor" />
-      <PropertyRef Name="ColorCodeTimeStamp" />
-      <PropertyRef Name="QrCodeCompactor" />
-      <PropertyRef Name="NumberOfRollerCompactorPassages" />
-      <PropertyRef Name="LocationOfVibration" />
-      <PropertyRef Name="SpeedOfRollerCompactor" />
-      <PropertyRef Name="CompactorTimeStamp" />
-      <PropertyRef Name="MassOfAggregationBunker1" />
-      <PropertyRef Name="MassOfAggregationBunker2" />
-      <PropertyRef Name="MassOfAggregationBunker3" />
-      <PropertyRef Name="MassOfAggregationBunker4" />
-      <PropertyRef Name="MassOfAggregationBunker5" />
-      <PropertyRef Name="MassOfAggregationBunker6" />
-      <PropertyRef Name="Filler" />
-      <PropertyRef Name="Bitumen" />
-      <PropertyRef Name="AdditivesKg" />
-      <PropertyRef Name="CompositionTimeStamp" />
-      <PropertyRef Name="ETA" />
-      <PropertyRef Name="ETATimeStamp" />
-      <PropertyRef Name="ETAReturn" />
-      <PropertyRef Name="ETAReturnTimeStamp" />
-      <PropertyRef Name="TranverseSlope" />
-      <PropertyRef Name="Precipation" />
-      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
-      <PropertyRef Name="FinisherTimeStamp" />
-      <PropertyRef Name="LeftTickness" />
-      <PropertyRef Name="MiddelThickness" />
-      <PropertyRef Name="RightThickness" />
-      <PropertyRef Name="ThicknessTimeStamp" />
-      <PropertyRef Name="FillerRecup" />
-      <PropertyRef Name="FillerRecupTimeStamp" />
-      <PropertyRef Name="StopLocationLTS" />
-      <PropertyRef Name="StopTimeLTS" />
-      <PropertyRef Name="StopTimeStamp" />
       <PropertyRef Name="LayerThickness" />
       <PropertyRef Name="Surface" />
       <PropertyRef Name="TonPerDay" />
@@ -1525,13 +1461,36 @@
       <PropertyRef Name="RoadId" />
       <PropertyRef Name="RoadDescription" />
       <PropertyRef Name="RoadSectionTimeStamp" />
-      <PropertyRef Name="MixingTemp" />
-      <PropertyRef Name="MixingTime" />
-      <PropertyRef Name="TempSilo" />
-      <PropertyRef Name="AnalysisComposition" />
-      <PropertyRef Name="SiloTimpStamp" />
-      <PropertyRef Name="Speed" />
-      <PropertyRef Name="SpeedFinisherTimeStamp" />
+      <PropertyRef Name="GPSFinisher" />
+      <PropertyRef Name="GPSCompactor" />
+      <PropertyRef Name="ColorCodeTimeStamp" />
+      <PropertyRef Name="QrCodeCompactor" />
+      <PropertyRef Name="NumberOfRollerCompactorPassages" />
+      <PropertyRef Name="LocationOfVibration" />
+      <PropertyRef Name="SpeedOfRollerCompactor" />
+      <PropertyRef Name="CompactorTimeStamp" />
+      <PropertyRef Name="AggragationMaxTemp" />
+      <PropertyRef Name="AggragationMinTemp" />
+      <PropertyRef Name="BitumenTimeStamp" />
+      <PropertyRef Name="BitumenMinTemp" />
+      <PropertyRef Name="BitumenMaxTemp" />
+      <PropertyRef Name="FillerRecup" />
+      <PropertyRef Name="FillerRecupTimeStamp" />
+      <PropertyRef Name="MassOfAggregationBunker1" />
+      <PropertyRef Name="MassOfAggregationBunker2" />
+      <PropertyRef Name="MassOfAggregationBunker3" />
+      <PropertyRef Name="MassOfAggregationBunker4" />
+      <PropertyRef Name="MassOfAggregationBunker5" />
+      <PropertyRef Name="MassOfAggregationBunker6" />
+      <PropertyRef Name="Filler" />
+      <PropertyRef Name="Bitumen" />
+      <PropertyRef Name="AdditivesKg" />
+      <PropertyRef Name="CompositionTimeStamp" />
+      <PropertyRef Name="MixtureName" />
+      <PropertyRef Name="TechnicalDataSheet" />
+      <PropertyRef Name="TypeOfAggregates" />
+      <PropertyRef Name="MixtureChange" />
+      <PropertyRef Name="AsphaltMixPlantTimestamp" />
       <PropertyRef Name="TruckLicensPlate" />
       <PropertyRef Name="DepartureTime" />
       <PropertyRef Name="MassTruck" />
@@ -1542,76 +1501,47 @@
       <PropertyRef Name="AttachmentToFinisherTime" />
       <PropertyRef Name="AttachmentToFinisherPosition" />
       <PropertyRef Name="TruckTimeStamp" />
-      <PropertyRef Name="Temp" />
-      <PropertyRef Name="TempTruckTimeStamp" />
+      <PropertyRef Name="ActualPosition" />
+      <PropertyRef Name="ActualPositionTimeStamp" />
+      <PropertyRef Name="ActualPositionReturn" />
+      <PropertyRef Name="ActualPositionReturnTimeStamp" />
+      <PropertyRef Name="ETA" />
+      <PropertyRef Name="ETATimeStamp" />
+      <PropertyRef Name="ETAReturn" />
+      <PropertyRef Name="ETAReturnTimeStamp" />
       <PropertyRef Name="StopLocationUnforseenStop" />
       <PropertyRef Name="StopTimeUnforseenStop" />
       <PropertyRef Name="UnforseenStopTimeStamp" />
+      <PropertyRef Name="Temp" />
+      <PropertyRef Name="TempTruckTimeStamp" />
+      <PropertyRef Name="TranverseSlope" />
+      <PropertyRef Name="Precipation" />
+      <PropertyRef Name="AsphaltTempAfterFinisherIrScanOrThermo" />
+      <PropertyRef Name="FinisherTimeStamp" />
+      <PropertyRef Name="Speed" />
+      <PropertyRef Name="SpeedFinisherTimeStamp" />
       <PropertyRef Name="TempWeather" />
       <PropertyRef Name="WeatherTempTimeStamp" />
       <PropertyRef Name="Width" />
       <PropertyRef Name="WidthTimeStamp" />
       <PropertyRef Name="WindSpeed" />
       <PropertyRef Name="WindTimeStamp" />
+      <PropertyRef Name="StopLocationLTS" />
+      <PropertyRef Name="StopTimeLTS" />
+      <PropertyRef Name="StopTimeStamp" />
+      <PropertyRef Name="GPS" />
+      <PropertyRef Name="TempAsphalt" />
+      <PropertyRef Name="AsphaltTempTimeStamp" />
+      <PropertyRef Name="LeftTickness" />
+      <PropertyRef Name="MiddelThickness" />
+      <PropertyRef Name="RightThickness" />
+      <PropertyRef Name="ThicknessTimeStamp" />
+      <PropertyRef Name="AirHumidity" />
+      <PropertyRef Name="AirHumidityTimeStamp" />
+      <PropertyRef Name="LeftAngle" />
+      <PropertyRef Name="RightAngle" />
+      <PropertyRef Name="AngleTimestamp" />
     </Key>
-    <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="ActualPositionReturn" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ActualPositionReturnTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="AggragationMaxTemp" Type="int" Nullable="false" />
-    <Property Name="AggragationMinTemp" Type="int" Nullable="false" />
-    <Property Name="AggragationTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="AirHumidity" Type="int" Nullable="false" />
-    <Property Name="AirHumidityTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="LeftAngle" Type="int" Nullable="false" />
-    <Property Name="RightAngle" Type="int" Nullable="false" />
-    <Property Name="AngleTimestamp" Type="timestamp" Nullable="false" />
-    <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TechnicalDataSheet" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TypeOfAggregates" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="MixtureChange" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="AsphaltMixPlantTimestamp" Type="timestamp" Nullable="false" />
-    <Property Name="GPS" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TempAsphalt" Type="int" Nullable="false" />
-    <Property Name="AsphaltTempTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="BitumenTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="BitumenMinTemp" Type="int" Nullable="false" />
-    <Property Name="BitumenMaxTemp" Type="int" Nullable="false" />
-    <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="GPSCompactor" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ColorCodeTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="NumberOfRollerCompactorPassages" Type="int" Nullable="false" />
-    <Property Name="LocationOfVibration" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="SpeedOfRollerCompactor" Type="int" Nullable="false" />
-    <Property Name="CompactorTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="MassOfAggregationBunker1" Type="int" Nullable="false" />
-    <Property Name="MassOfAggregationBunker2" Type="int" Nullable="false" />
-    <Property Name="MassOfAggregationBunker3" Type="int" Nullable="false" />
-    <Property Name="MassOfAggregationBunker4" Type="int" Nullable="false" />
-    <Property Name="MassOfAggregationBunker5" Type="int" Nullable="false" />
-    <Property Name="MassOfAggregationBunker6" Type="int" Nullable="false" />
-    <Property Name="Filler" Type="int" Nullable="false" />
-    <Property Name="Bitumen" Type="int" Nullable="false" />
-    <Property Name="AdditivesKg" Type="int" Nullable="false" />
-    <Property Name="CompositionTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="ETA" Type="time" Nullable="false" />
-    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="ETAReturn" Type="time" Nullable="false" />
-    <Property Name="ETAReturnTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="TranverseSlope" Type="int" Nullable="false" />
-    <Property Name="Precipation" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="FinisherTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="LeftTickness" Type="int" Nullable="false" />
-    <Property Name="MiddelThickness" Type="int" Nullable="false" />
-    <Property Name="RightThickness" Type="int" Nullable="false" />
-    <Property Name="ThicknessTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="FillerRecup" Type="int" Nullable="false" />
-    <Property Name="FillerRecupTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="StopLocationLTS" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="StopTimeLTS" Type="time" Nullable="false" />
-    <Property Name="StopTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="LayerThickness" Type="int" Nullable="false" />
     <Property Name="Surface" Type="int" Nullable="false" />
     <Property Name="TonPerDay" Type="int" Nullable="false" />
@@ -1628,13 +1558,36 @@
     <Property Name="RoadId" Type="int" Nullable="false" />
     <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="RoadSectionTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="MixingTemp" Type="int" Nullable="false" />
-    <Property Name="MixingTime" Type="time" Nullable="false" />
-    <Property Name="TempSilo" Type="int" Nullable="false" />
-    <Property Name="AnalysisComposition" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="SiloTimpStamp" Type="timestamp" Nullable="false" />
-    <Property Name="Speed" Type="int" Nullable="false" />
-    <Property Name="SpeedFinisherTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="GPSCompactor" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ColorCodeTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="QrCodeCompactor" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="NumberOfRollerCompactorPassages" Type="int" Nullable="false" />
+    <Property Name="LocationOfVibration" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="SpeedOfRollerCompactor" Type="int" Nullable="false" />
+    <Property Name="CompactorTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="AggragationMaxTemp" Type="int" Nullable="false" />
+    <Property Name="AggragationMinTemp" Type="int" Nullable="false" />
+    <Property Name="BitumenTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="BitumenMinTemp" Type="int" Nullable="false" />
+    <Property Name="BitumenMaxTemp" Type="int" Nullable="false" />
+    <Property Name="FillerRecup" Type="int" Nullable="false" />
+    <Property Name="FillerRecupTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="MassOfAggregationBunker1" Type="int" Nullable="false" />
+    <Property Name="MassOfAggregationBunker2" Type="int" Nullable="false" />
+    <Property Name="MassOfAggregationBunker3" Type="int" Nullable="false" />
+    <Property Name="MassOfAggregationBunker4" Type="int" Nullable="false" />
+    <Property Name="MassOfAggregationBunker5" Type="int" Nullable="false" />
+    <Property Name="MassOfAggregationBunker6" Type="int" Nullable="false" />
+    <Property Name="Filler" Type="int" Nullable="false" />
+    <Property Name="Bitumen" Type="int" Nullable="false" />
+    <Property Name="AdditivesKg" Type="int" Nullable="false" />
+    <Property Name="CompositionTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TechnicalDataSheet" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TypeOfAggregates" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="MixtureChange" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="AsphaltMixPlantTimestamp" Type="timestamp" Nullable="false" />
     <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
     <Property Name="MassTruck" Type="int" Nullable="false" />
@@ -1645,17 +1598,46 @@
     <Property Name="AttachmentToFinisherTime" Type="timestamp" Nullable="false" />
     <Property Name="AttachmentToFinisherPosition" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="TruckTimeStamp" Type="timestamp" Nullable="false" />
-    <Property Name="Temp" Type="int" Nullable="false" />
-    <Property Name="TempTruckTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="ActualPosition" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ActualPositionTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="ActualPositionReturn" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ActualPositionReturnTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="ETA" Type="time" Nullable="false" />
+    <Property Name="ETATimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="ETAReturn" Type="time" Nullable="false" />
+    <Property Name="ETAReturnTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="StopLocationUnforseenStop" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="StopTimeUnforseenStop" Type="time" Nullable="false" />
     <Property Name="UnforseenStopTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="Temp" Type="int" Nullable="false" />
+    <Property Name="TempTruckTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="TranverseSlope" Type="int" Nullable="false" />
+    <Property Name="Precipation" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="AsphaltTempAfterFinisherIrScanOrThermo" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="FinisherTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="Speed" Type="int" Nullable="false" />
+    <Property Name="SpeedFinisherTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="TempWeather" Type="int" Nullable="false" />
     <Property Name="WeatherTempTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="Width" Type="int" Nullable="false" />
     <Property Name="WidthTimeStamp" Type="timestamp" Nullable="false" />
     <Property Name="WindSpeed" Type="int" Nullable="false" />
     <Property Name="WindTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="StopLocationLTS" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="StopTimeLTS" Type="time" Nullable="false" />
+    <Property Name="StopTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="GPS" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TempAsphalt" Type="int" Nullable="false" />
+    <Property Name="AsphaltTempTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="LeftTickness" Type="int" Nullable="false" />
+    <Property Name="MiddelThickness" Type="int" Nullable="false" />
+    <Property Name="RightThickness" Type="int" Nullable="false" />
+    <Property Name="ThicknessTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="AirHumidity" Type="int" Nullable="false" />
+    <Property Name="AirHumidityTimeStamp" Type="timestamp" Nullable="false" />
+    <Property Name="LeftAngle" Type="int" Nullable="false" />
+    <Property Name="RightAngle" Type="int" Nullable="false" />
+    <Property Name="AngleTimestamp" Type="timestamp" Nullable="false" />
   </EntityType>
   <Association Name="BatchList_ibfk_1">
     <End Role="Project" Type="roaditModel.Store.Project" Multiplicity="1" />

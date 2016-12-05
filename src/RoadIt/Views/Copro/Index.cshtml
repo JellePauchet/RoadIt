@@ -12,7 +12,10 @@
         {
             <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
             @Html.Raw(Session["AsphaltMixPlant"].ToString())
+            @Html.Raw(Session["Silo"].ToString())
+            @Html.Raw(Session["AggagaratesBitumenComposition"].ToString())
             @Html.Raw(Session["Truck"].ToString())
+            @Html.Raw(Session["TruckTemp"].ToString())
             @Html.Raw(Session["Compactor"].ToString())
             @Html.Raw(Session["QualityControl"].ToString())
         }

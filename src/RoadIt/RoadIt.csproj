@@ -78,12 +78,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\RoadItDB.Designer.cs">
+    <Compile Include="Models\RoadIt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RoadItDB.edmx</DependentUpon>
+      <DependentUpon>RoadIt.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
@@ -127,7 +127,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -173,9 +175,9 @@
     <Content Include="Views\Copro\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Transporter\Index.cshtml" />
-    <EntityDeploy Include="Models\RoadItDB.edmx">
+    <EntityDeploy Include="Models\RoadIt.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RoadItDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>RoadIt.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
