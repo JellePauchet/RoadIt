@@ -117,7 +117,8 @@ namespace RoadIt.Controllers
                 {
                     if (DateTime.Parse(item.CompactorTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.CompactorTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<tr><td><a href=" + item.QrCodeCompactor + ">link</a></td></tr>";
+                        string name = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + item.QrCodeCompactor.ToString();
+                        table += "<tr><td><img src='" + name + "' alt='QR code'></td></tr>";
                     }
                 }
             }

@@ -139,7 +139,8 @@ namespace RoadIt.Controllers
                 {
                     if (DateTime.Parse(item.CompactorTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.CompactorTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<tr><td><a href=" + item.QrCodeCompactor + ">link</a></td><td><a href=" + item.NumberOfRollerCompactorPassages + ">link</a></td><td><a href=" + item.LocationOfVibration + ">link</a></td><td>Finisher: " + item.GPSFinisher + " Compactor: " + item.GPSCompactor + "</td><td>" + item.SpeedOfRollerCompactor + "</td><td>" + item.GPSCompactor + "</td></tr>";
+                        string name = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + item.QrCodeCompactor.ToString();
+                        table += "<tr><td><img src='" + name + "' alt='QR code'></td><td> Finisher: " + item.GPS + " Compactor: " + item.GPSCompactor + "/></td><td><a href=" + item.NumberOfRollerCompactorPassages + ">link</a></td><td><a href=" + item.LocationOfVibration + ">link</a></td><td>Finisher: " + item.GPSFinisher + " Compactor: " + item.GPSCompactor + "</td><td>" + item.SpeedOfRollerCompactor + "</td><td>" + item.GPSCompactor + "</td></tr>";
                     }
                 }
             }
