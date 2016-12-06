@@ -5,9 +5,23 @@
     <title>@ViewBag.Title</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet">
 	<link href="@Url.Content("~/Content/styles.css")" rel="stylesheet">
+    <style>
+        @@media print {
+          body * {
+            visibility: hidden;
+          }
+          #section-to-print, #section-to-print * {
+            visibility: visible;
+          }
+          #section-to-print {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+    </style>
 </head>
 <body>
     <div class="page">
@@ -53,27 +67,32 @@
 				</div>
 			</div>
 		</div>
-        
-
         <div id="main">
             
-        <button type="button" class="btn btn-primary" id="cmd">generate PDF</button>
-        <button class="btn btn-primary" onclick="myFunction()">Print this page</button>
+        
 
-            <div class="container" id="jspdf">
-                @RenderBody()
-		    </div>
-
-            <div id="footer">
-                <div class="navbar navbar-inverse navbar-fixed-bottom">
-			        <div class="container">
-				        <p class="navbar-text">Deze site is gemaakt door Jelle Pauchet, Matthias Boen, Samme Robbroeckx</p>
-			        </div>
+            <div id="section-to-print">
+                <div class="container" id="jspdf">
+                    @RenderBody()
+                    <button type="button" class="btn btn-primary" id="cmd">generate PDF</button>
+                    <button class="btn btn-primary" onclick="myFunction()">Print this page</button>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
 		        </div>
             </div>
+		</div>
+
+        <div id="footer">
+            <div class="navbar navbar-inverse navbar-fixed-bottom">
+			    <div class="container">
+				    <p class="navbar-text">Deze site is gemaakt door Jelle Pauchet, Matthias Boen, Samme Robbroeckx</p>
+			    </div>
+            </div>
         </div>
-        <div id="editor"></div>
-    </div>
 
     <!--Fade Modals-->
     <div class="modal fade" id="contact" role="dialog">
