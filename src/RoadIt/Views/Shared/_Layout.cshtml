@@ -58,6 +58,7 @@
         <div id="main">
             
         <button type="button" class="btn btn-primary" id="cmd">generate PDF</button>
+        <button class="btn btn-primary" onclick="myFunction()">Print this page</button>
 
             <div class="container" id="jspdf">
                 @RenderBody()
@@ -106,7 +107,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.20/pdfmake.js"></script>
 	<script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
     <script src="@Url.Content("~/Scripts/html2canvas.js")"></script>
-
+    <script>
+        function myFunction() {
+            window.print();
+        }
+    </script>
     <script>
         $('#cmd').click(function () 
         {
