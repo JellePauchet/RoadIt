@@ -132,6 +132,112 @@
         }
     </script>
     <script>
+        var toggle1 = 0;
+        var toggle2 = 0;
+        var toggle3 = 0;
+        var toggle4 = 0;
+        var toggle5 = 0;
+        var toggle6 = 0;
+        var toggle7 = 0;
+
+        function showTable1()
+        {
+            if(toggle1 == 0)
+            {
+                $("#tableRow1").removeClass("hide");
+                toggle1 = 1;
+            }
+            else
+            {
+                $("#tableRow1").addClass("hide");
+                toggle1 = 0;
+            }           
+        }
+
+        function showTable2()
+        {
+            if(toggle2 == 0)
+            {
+                $("#tableRow2").removeClass("hide");
+                toggle2 = 1;
+            }
+            else
+            {
+                $("#tableRow2").addClass("hide");
+                toggle2 = 0;
+            }           
+        }
+
+        function showTable3()
+        {
+            if(toggle3 == 0)
+            {
+                $("#tableRow3").removeClass("hide");
+                toggle3 = 1;
+            }
+            else
+            {
+                $("#tableRow3").addClass("hide");
+                toggle3 = 0;
+            }           
+        }
+
+        function showTable4()
+        {
+            if(toggle4 == 0)
+            {
+                $("#tableRow4").removeClass("hide");
+                toggle4 = 1;
+            }
+            else
+            {
+                $("#tableRow4").addClass("hide");
+                toggle4 = 0;
+            }           
+        }
+
+        function showTable5()
+        {
+            if(toggle5 == 0)
+            {
+                $("#tableRow5").removeClass("hide");
+                toggle5 = 1;
+            }
+            else
+            {
+                $("#tableRow5").addClass("hide");
+                toggle5 = 0;
+            }           
+        }
+
+        function showTable6()
+        {
+            if(toggle6 == 0)
+            {
+                $("#tableRow6").removeClass("hide");
+                toggle6 = 1;
+            }
+            else
+            {
+                $("#tableRow6").addClass("hide");
+                toggle6 = 0;
+            }           
+        }
+
+        function showTable7()
+        {
+            if(toggle7 == 0)
+            {
+                $("#tableRow7").removeClass("hide");
+                toggle7 = 1;
+            }
+            else
+            {
+                $("#tableRow7").addClass("hide");
+                toggle7 = 0;
+            }           
+        }
+
         $('#cmd').click(function () 
         {
             html2canvas(document.getElementById('jspdf'), 

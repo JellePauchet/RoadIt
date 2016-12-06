@@ -47,6 +47,7 @@ namespace RoadIt.Controllers
                     pageRef = "UA";
                     break;
             }
+            pageRef = "Manager";
             return RedirectToAction("Index",pageRef);
         }
 

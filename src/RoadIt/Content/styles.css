@@ -11,3 +11,8 @@ textArea
 {
 	margin-bottom: 15px;
 }
+
+.hide
+{
+    display: hidden;    
+}

@@ -72,6 +72,7 @@
     <Compile Include="Controllers\CoproController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\RoadSelectionController.cs" />
     <Compile Include="Controllers\TransporterController.cs" />
     <Compile Include="Controllers\UAController.cs" />
@@ -180,6 +181,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RoadIt.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Views\Manager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
