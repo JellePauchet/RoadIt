@@ -22,20 +22,11 @@ namespace RoadIt.Controllers
             try
             {
                 var entities = new sammegf117_roaditEntities();
-                /*Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
-                Session["Truck"] = GenerateTableTruck(entities);
-                Session["TruckLocation"] = GenerateTableTruckLocation(entities);
-                Session["Finisher"] = GenerateTableFinisher(entities);
-                Session["FinisherSpeed"] = GenerateTableFinisherSpeed(entities);
-                Session["wheater"] = GenerateTableWheater(entities);
-                Session["FinisherStop"] = GenerateTableFinisherStops(entities);
-                Session["Compactor"] = GenerateTableCompactor(entities);
-                Session["QualityControl"] = GenerateTableQualityControl(entities);*/
-                Session["TransportList"] = (List<string[]>) GetTransportList(entities);
-                Session["TotalList"] = GetTotalList(entities);
-                Session["PlantList"] = GetPlantList(entities);
-                Session["MixtureList"] = GetMixtureList(entities);
-                return RedirectToAction("Index", "Manager");
+
+                ManagerController manager = new ManagerController(this.GetTransportList(entities), this.GetTotalList(entities), this.GetPlantList(entities), this.GetMixtureList(entities));
+
+                return RedirectToAction("Index", manager.Index());
+                //return View();
             }
             catch
             {

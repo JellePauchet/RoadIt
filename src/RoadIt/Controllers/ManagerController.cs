@@ -9,20 +9,72 @@ namespace RoadIt.Controllers
 {
     public class ManagerController : Controller
     {
-        //
-        // GET: /Manager/
-        
+        //variabelen
+        List<string[]> TransportList = null;
+        List<string[]> TotalList = null;
+        List<string[]> PlantList = null;
+        List<string[]> MixtureList = null;
+
+        //getters
+        public List<string[]> GetTransportList() 
+        {
+            return this.TransportList;
+        }
+
+        public List<string[]> GetTotalList()
+        {
+            return this.TotalList;
+        }
+
+        public List<string[]> GetPlantList()
+        {
+            return this.PlantList;
+        }
+
+        public List<string[]> GetMixtureList()
+        {
+            return this.MixtureList;
+        }
+
+        //setters
+        public void SetTransportList(List<string[]> input) 
+        {
+            this.TransportList = input;
+        }
+
+        public void SetTotalList(List<string[]> input)
+        {
+            this.TotalList = input;
+        }
+
+        public void SetPlantList(List<string[]> input)
+        {
+            this.PlantList = input;
+        }
+
+        public void SetMixtureList(List<string[]> input)
+        {
+            this.MixtureList = input;
+        }
+
+
+        public ManagerController(List<string[]> list1, List<string[]> list2, List<string[]> list3, List<string[]> list4) 
+        {
+            this.SetTransportList(list1);
+            this.SetTotalList(list2);
+            this.SetPlantList(list3);
+            this.SetMixtureList(list4);
+
+            Session["tableSpecifications"] = null;
+            Session["tableTransport"] = GenerateTableTransport(this.GetTransportList());
+            Session["tableTotal"] = null;
+            Session["tablePlants"] = null;
+            Session["tableMixture"] = null;
+        }
+
         public ActionResult Index()
         {
-            List<string[]> TransportList = (List<string[]>)TempData["TransportList"];
-            var TotalList = (List<string[]>)Session["TotalList"];
-            var PlantList = (List<string[]>)Session["PlantList"];
-            var MixtureList = (List<string[]>)Session["MixtureList"];
-            Session["tableSpecifications"] = GenerateTableSpecifications();
-            Session["tableTruck"] = GenerateTableTruck(TransportList);
-            /*Session["tableTotal"] = GenerateTableTotal(TotalList);
-            Session["tablePlants1"] = GenerateTablePlants1(PlantList);
-            Session["tablePlants2"] = GenerateTablePlants2(MixtureList);*/
+            
             return View();
             
         }
@@ -41,7 +93,7 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableTruck(List<string[]> ListValue) //RoadId nog toevoegen aan view
+        public string GenerateTableTransport(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Transport specifications</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
