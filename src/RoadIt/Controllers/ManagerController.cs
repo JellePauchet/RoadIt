@@ -86,7 +86,7 @@ namespace RoadIt.Controllers
             table += "<tr><td></td><td></td></tr>";
 
             table += "</tabel>";
-            return table;
+            return table
         } 
         
     }
