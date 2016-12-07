@@ -11,22 +11,17 @@ namespace RoadIt.Controllers
     {
         //
         // GET: /Client/
-        
-        List<string[]> TotalList = new List<string[]>();
-        List<string[]> PlantList = new List<string[]>();
-        List<string[]> MixtureList = new List<string[]>();
 
         public ActionResult Index()
         {
-            
+            var entities = new sammegf117_roaditEntities();
+            Session["tableTransport"] = GetTransportList(entities);
+     
             try
             {
-                var entities = new sammegf117_roaditEntities();
+                
 
-                ManagerController manager = new ManagerController(this.GetTransportList(entities), this.GetTotalList(entities), this.GetPlantList(entities), this.GetMixtureList(entities));
-
-                return RedirectToAction("Index", manager.Index());
-                //return View();
+                return View();
             }
             catch
             {
@@ -36,53 +31,88 @@ namespace RoadIt.Controllers
             
         }
 
-        public List<String[]> GetTransportList(sammegf117_roaditEntities entities)
+        public string GetTransportList(sammegf117_roaditEntities entities)
         {
-            List<string[]> TransportList = new List<string[]>();
+            var table = "<h3>Transport specifications</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
+            table += "<tr><th>Truck ID</th><th>Plant ID</th><th>Mixture</th><th>Mass(tons)</th><th>Temp.</th><th>Finisher ID</th><th>LocationFinisher</th><th>Accepted</th></tr>";
+                 
             foreach (var item in entities.Clients)
             {
-                String[] arrayValue = new String[6];
-                arrayValue[0] = item.TruckLicensPlate;
-                arrayValue[1] = "In db aanpassen";
-                arrayValue[2] = item.MixtureName;
-                arrayValue[3] = item.MassTruck.ToString();
-                arrayValue[4] = "";
-                arrayValue[5] = "";
-                arrayValue[6] = item.GPSFinisher;
-  
-                TransportList.Add(arrayValue);
+                table += "<tr>";
+                table += "<td>";
+                table += item.TruckLicensPlate; //DATA
+                table += "</td>";
+                table += "<td>";
+                table += "In db aanpassen"; //DATA
+                table += "</td>";
+                table += "<td>";
+                table += item.MixtureName; //DATA
+                table += "</td>";
+                table += "<td>";
+                table += item.MassTruck; //DATA
+                table += "</td>";
+                table += "<td>";
+                table += ""; //DATA
+                table += "</td>";
+                table += "<td>";
+                table += ""; //DATA
+                table += "</td>";
+                table += "<td>";
+                table += item.GPSFinisher; //DATA
+                table += "</td>";
+                table += "</tr>";
             }
-            return TransportList;
+                                   
+            table += "</table>";
+
+            return table;
         }
 
-        public List<String[]> GetTotalList(sammegf117_roaditEntities entities)
+        public string GetTotalList(sammegf117_roaditEntities entities)
         {
+            var table = "<h3>Totals today</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
+
             foreach (var item in entities.Clients)
             {
-                String[] arrayValue = new String[1];
-                arrayValue[0] = "In db aanpassen";
-
-                TotalList.Add(arrayValue);
+                table += "<tr><th></th><th>Totals</th><th></th><th></th></tr>";
+                table += "<tr><td>Accepted trucks</td><td></td><td></td><td></td></tr>";
+                table += "<tr><td>Rejected trucks</td><td></td><td></td><td></td></tr>";
+                table += "<tr><td>Accepted mass</td><td></td><td></td><td></td></tr>";
+                //arrayValue[0] = "In db aanpassen";
             }
-            return TotalList;
+            
+            table += "</table>";
+            return table; 
         }
+
         public List<String[]> GetPlantList(sammegf117_roaditEntities entities)
         {
+            List<string[]> PlantList = new List<string[]>();
             foreach (var item in entities.Clients)
             {
-                String[] arrayValue = new String[2];
+                String[] arrayValue = new String[7];
                 arrayValue[0] = "In db aanpassen";
+                arrayValue[1] = "";
+                arrayValue[2] = "";
+                arrayValue[3] = "";
+                arrayValue[4] = "";
+                arrayValue[5] = "";
                 arrayValue[6] = "volledige naam asphaltplant";
 
                 PlantList.Add(arrayValue);
             }
+             
             return PlantList;
         }
+
         public List<String[]> GetMixtureList(sammegf117_roaditEntities entities)
         {
+            List<string[]> MixtureList = new List<string[]>();
             foreach (var item in entities.Clients)
             {
-                String[] arrayValue = new String[2];
+                String[] arrayValue = new String[3];
                 arrayValue[0] = item.MixtureName;
                 arrayValue[1] = "MinTemp";
                 arrayValue[2] = "MaxTemp";
@@ -91,6 +121,44 @@ namespace RoadIt.Controllers
             }
             return MixtureList;
         }
+
+        public string GenerateTableSpecifications() //RoadId nog toevoegen aan view
+        {
+            var table = "<h3>Project & mixture specifications</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
+
+            table += "<tr><td><b>Construction site ID (road section ID):</b></td><td>" + Session["RoadID"] + "</td></tr>";
+            table += "<tr><td><b>Layer type:</b></td><td>Toplayer</td></tr>";
+            table += "<tr><td><b>Mixture type:</b></td><td></td></tr>";
+            table += "<tr><td><b>Accepted temperature range:</b></td><td></td></tr>";
+
+            table += "</table>";
+            return table;
+        }
+
+        public string GenerateTablePlants1(List<string[]> ListValue) //RoadId nog toevoegen aan view
+        {
+            var table = "<h3>Examples of plants, mixtures, temperatures</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
+
+            table += "<tr><th>Plants</th><th>Full name</th></tr>";
+            table += "<tr><td></td><td></td></tr>";
+
+            table += "</table>";
+            return table;
+        }
+
+        public string GenerateTablePlants2(List<string[]> ListValue) //RoadId nog toevoegen aan view
+        {
+            var table = "<h3>Examples of plants, mixtures, temperatures</h3>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
+
+            table += "<tr><th>Mixtures</th><th>Temperature Range</th></tr>";
+            table += "<tr><td></td><td></td></tr>";
+
+            table += "</table>";
+            return table;
+        } 
         /*
         public string GenerateTableAsphaltMixPlant(sammegf117_roaditEntities entities) //RoadId nog toevoegen aan view
         {

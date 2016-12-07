@@ -65,18 +65,17 @@ namespace RoadIt.Controllers
             this.SetPlantList(list3);
             this.SetMixtureList(list4);
 
-            Session["tableSpecifications"] = null;
+            //Session["tableSpecifications"] = null;
             Session["tableTransport"] = GenerateTableTransport(this.GetTransportList());
-            Session["tableTotal"] = null;
-            Session["tablePlants"] = null;
-            Session["tableMixture"] = null;
+            //Session["tableTotal"] = null;
+            //Session["tablePlants"] = null;
+            //Session["tableMixture"] = null;
         }
 
         public ActionResult Index()
         {
             
-            return View();
-            
+            return View();           
         }
 
         public string GenerateTableSpecifications() //RoadId nog toevoegen aan view
@@ -100,15 +99,15 @@ namespace RoadIt.Controllers
             table += "<tr><th></th><th>Truck ID</th><th>Plant ID</th><th>Mixture</th><th>Mass(tons)</th><th>Temp.</th><th>Finisher ID</th><th>LocationFinisher</th><th>Accepted</th></tr>";
 
             table += "<tr>";
-            for (int i = 0; i < ListValue.Count(); i++)
+
+            for (int i = 0; i < 1; i++)
             { 
-                var array = (string[])ListValue.ElementAt(0);
-                for (int a = 0; a < ListValue.ElementAt(i).Count(); i++)
+                for (int a = 0; a < 1; i++)
                 { 
                     table += "<td>";
-                    if (array[a] != "")
+                    if (ListValue.ElementAt(0)[0] != "")
                     {
-                        table += array[a].ToString();
+                        table += ListValue.ElementAt(0)[0];
                     }
                     table += "</td>";
                 }
