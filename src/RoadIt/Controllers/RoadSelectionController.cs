@@ -24,7 +24,31 @@ namespace RoadIt.Controllers
             var entities = new sammegf117_roaditEntities();
             Session["roadID"] = RoadSectionId;
             Session["StartDate"] = StartDate.Date.ToString("d");
-            Session["StopDate"] = StopDate.Date.ToString("d");           
+            Session["StopDate"] = StopDate.Date.ToString("d");
+            var roleId = Convert.ToInt32(Session["roadID"]);
+            /*var pageRef = "";
+            switch (roleId)
+            {
+                case 1:
+                    pageRef = "Client";
+                    break;
+                case 2:
+                    pageRef = "AsphaltProducer";
+                    break;
+                case 3:
+                    pageRef = "Transporter";
+                    break;
+                case 4:
+                    pageRef = "Contractor";
+                    break;
+                case 5:
+                    pageRef = "Copro";
+                    break;
+                case 6:
+                    pageRef = "UA";
+                    break;
+            }*/
+
             var pageRef = "Manager";
             return RedirectToAction("Index",pageRef);
         }

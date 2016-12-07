@@ -11,14 +11,20 @@ namespace RoadIt.Controllers
     {
         //
         // GET: /Manager/
-
+        
         public ActionResult Index()
         {
+            List<string[]> TransportList = (List<string[]>)TempData["TransportList"];
+            var TotalList = (List<string[]>)Session["TotalList"];
+            var PlantList = (List<string[]>)Session["PlantList"];
+            var MixtureList = (List<string[]>)Session["MixtureList"];
             Session["tableSpecifications"] = GenerateTableSpecifications();
-            Session["tableTruck"] = GenerateTableTruck();
-            Session["tableTotal"] = GenerateTableTotal();
-            Session["tablePlants1"] = GenerateTablePlants1();
-            Session["tablePlants2"] = GenerateTablePlants2();
+            Session["tableTruck"] = GenerateTableTruck(TransportList);
+            /*Session["tableTotal"] = GenerateTableTotal(TotalList);
+            Session["tablePlants1"] = GenerateTablePlants1(PlantList);
+            Session["tablePlants2"] = GenerateTablePlants2(MixtureList);*/
+            return View();
+            
         }
 
         public string GenerateTableSpecifications() //RoadId nog toevoegen aan view
@@ -35,84 +41,34 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTableTruck() //RoadId nog toevoegen aan view
+        public string GenerateTableTruck(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Transport specifications</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
             table += "<tr><th></th><th>Truck ID</th><th>Plant ID</th><th>Mixture</th><th>Mass(tons)</th><th>Temp.</th><th>Finisher ID</th><th>LocationFinisher</th><th>Accepted</th></tr>";
 
             table += "<tr>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
+            for (int i = 0; i < ListValue.Count(); i++)
+            { 
+                var array = (string[])ListValue.ElementAt(0);
+                for (int a = 0; a < ListValue.ElementAt(i).Count(); i++)
+                { 
+                    table += "<td>";
+                    if (array[a] != "")
+                    {
+                        table += array[a].ToString();
+                    }
+                    table += "</td>";
+                }
             }
-            table += "</td>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
-            table += "<td>";
-            if("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
-            table += "<td>";
-            if ("" == "")
-            {
-                table += "";
-            }
-            table += "</td>";
-
+                
             table += "</tr>";
             
             table += "</table>";
             return table;
-        } 
+        }
 
-        public string GenerateTableTotal() //RoadId nog toevoegen aan view
+        public string GenerateTableTotal(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Totals today</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
@@ -124,9 +80,9 @@ namespace RoadIt.Controllers
             
             table += "</table>";
             return table;
-        } 
+        }
 
-        public string GenerateTablePlants1() //RoadId nog toevoegen aan view
+        public string GenerateTablePlants1(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Examples of plants, mixtures, temperatures</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
@@ -138,7 +94,7 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public string GenerateTablePlants2() //RoadId nog toevoegen aan view
+        public string GenerateTablePlants2(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Examples of plants, mixtures, temperatures</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";

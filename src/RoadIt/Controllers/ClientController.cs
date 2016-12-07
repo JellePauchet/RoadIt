@@ -12,13 +12,17 @@ namespace RoadIt.Controllers
         //
         // GET: /Client/
         
+        List<string[]> TotalList = new List<string[]>();
+        List<string[]> PlantList = new List<string[]>();
+        List<string[]> MixtureList = new List<string[]>();
 
         public ActionResult Index()
         {
+            
             try
             {
                 var entities = new sammegf117_roaditEntities();
-                Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
+                /*Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
                 Session["Truck"] = GenerateTableTruck(entities);
                 Session["TruckLocation"] = GenerateTableTruckLocation(entities);
                 Session["Finisher"] = GenerateTableFinisher(entities);
@@ -26,8 +30,12 @@ namespace RoadIt.Controllers
                 Session["wheater"] = GenerateTableWheater(entities);
                 Session["FinisherStop"] = GenerateTableFinisherStops(entities);
                 Session["Compactor"] = GenerateTableCompactor(entities);
-                Session["QualityControl"] = GenerateTableQualityControl(entities);
-                return View();
+                Session["QualityControl"] = GenerateTableQualityControl(entities);*/
+                Session["TransportList"] = (List<string[]>) GetTransportList(entities);
+                Session["TotalList"] = GetTotalList(entities);
+                Session["PlantList"] = GetPlantList(entities);
+                Session["MixtureList"] = GetMixtureList(entities);
+                return RedirectToAction("Index", "Manager");
             }
             catch
             {
@@ -36,8 +44,63 @@ namespace RoadIt.Controllers
             }
             
         }
-            
 
+        public List<String[]> GetTransportList(sammegf117_roaditEntities entities)
+        {
+            List<string[]> TransportList = new List<string[]>();
+            foreach (var item in entities.Clients)
+            {
+                String[] arrayValue = new String[6];
+                arrayValue[0] = item.TruckLicensPlate;
+                arrayValue[1] = "In db aanpassen";
+                arrayValue[2] = item.MixtureName;
+                arrayValue[3] = item.MassTruck.ToString();
+                arrayValue[4] = "";
+                arrayValue[5] = "";
+                arrayValue[6] = item.GPSFinisher;
+  
+                TransportList.Add(arrayValue);
+            }
+            return TransportList;
+        }
+
+        public List<String[]> GetTotalList(sammegf117_roaditEntities entities)
+        {
+            foreach (var item in entities.Clients)
+            {
+                String[] arrayValue = new String[1];
+                arrayValue[0] = "In db aanpassen";
+
+                TotalList.Add(arrayValue);
+            }
+            return TotalList;
+        }
+        public List<String[]> GetPlantList(sammegf117_roaditEntities entities)
+        {
+            foreach (var item in entities.Clients)
+            {
+                String[] arrayValue = new String[2];
+                arrayValue[0] = "In db aanpassen";
+                arrayValue[6] = "volledige naam asphaltplant";
+
+                PlantList.Add(arrayValue);
+            }
+            return PlantList;
+        }
+        public List<String[]> GetMixtureList(sammegf117_roaditEntities entities)
+        {
+            foreach (var item in entities.Clients)
+            {
+                String[] arrayValue = new String[2];
+                arrayValue[0] = item.MixtureName;
+                arrayValue[1] = "MinTemp";
+                arrayValue[2] = "MaxTemp";
+
+                MixtureList.Add(arrayValue);
+            }
+            return MixtureList;
+        }
+        /*
         public string GenerateTableAsphaltMixPlant(sammegf117_roaditEntities entities) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Asphalt Mixure Plant</h3>";
@@ -239,6 +302,6 @@ namespace RoadIt.Controllers
             table += "</table><br />";
 
             return table;
-        }
+        }*/
     }
 }
