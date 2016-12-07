@@ -17,14 +17,19 @@ namespace RoadIt.Controllers
             try
             {
                 var entities = new sammegf117_roaditEntities();
-                Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
+
+                Session["arrayOfValues"] = entities.Coproes;
+
+                /*Session["AsphaltMixPlant"] = GenerateTableAsphaltMixPlant(entities);
                 Session["Silo"] = GenerateTableSilo(entities);
                 Session["AggagaratesBitumenComposition"] = GenerateTableAggagaratesBitumenComposition(entities);
                 Session["Truck"] = GenerateTableTruck(entities);
                 Session["TruckTemp"] = GenerateTableTruckTemp(entities);
                 Session["Compactor"] = GenerateTableCompactor(entities);
-                Session["QualityControl"] = GenerateTableQualityControl(entities);
-                return View();
+                Session["QualityControl"] = GenerateTableQualityControl(entities);*/
+
+                var pageRef = "Manager";
+                return RedirectToAction("Index", pageRef);
             }
             catch
             {
@@ -33,7 +38,7 @@ namespace RoadIt.Controllers
             }
         }
 
-        public string GenerateTableAsphaltMixPlant(sammegf117_roaditEntities entities) //RoadId nog toevoegen aan view
+        /*public string GenerateTableAsphaltMixPlant(sammegf117_roaditEntities entities) //RoadId nog toevoegen aan view
         {
             var table = "<h3>Asphalt Mixure Plant</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
@@ -57,7 +62,7 @@ namespace RoadIt.Controllers
         {
             var table = "<h3>Silo informatie</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr onClick='showTable1()><th>Use of filler recuperation</th><th>Mixing temperature</th><th>Mixing time</th><th>Temperature in silo</th><th>Analysis of composition(qualitycontrol)</th></tr>";
+            table += "<tr onClick='showTable2()'><th>Use of filler recuperation</th><th>Mixing temperature</th><th>Mixing time</th><th>Temperature in silo</th><th>Analysis of composition(qualitycontrol)</th></tr>";
 
             foreach (var item in entities.AsphaltProcucers)
             {
@@ -65,7 +70,7 @@ namespace RoadIt.Controllers
                 {
                     if (DateTime.Parse(item.SiloTimpStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.SiloTimpStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
                     {
-                        table += "<tr id='tableRow1' class='hide'><td>" + item.FillerRecup + "</td><td>" + item.MixingTemp + "°C</td><td>" + item.MixingTime + "</td><td>" + item.TempSilo + "°C</td><td><a href=" + item.AnalysisComposition + ">download</a></td></tr>";
+                        table += "<tr id='tableRow2' class='hide'><td>" + item.FillerRecup + "</td><td>" + item.MixingTemp + "°C</td><td>" + item.MixingTime + "</td><td>" + item.TempSilo + "°C</td><td><a href=" + item.AnalysisComposition + ">download</a></td></tr>";
                     }
                 }
             }
@@ -77,7 +82,7 @@ namespace RoadIt.Controllers
         {
             var table = "<h3>Aggragates, bitumen en compositie</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr onClick='showTable3()><th>Aggregates: min. temperature</th><th>Aggregates: max. temperature</th><th>Bitumen: max. temperature</th><th>Bitumen: min. temperature</th><th>mass of aggregation bunker 1 (kg)</th><th>mass of aggregation bunker 2 (kg)</th><th>mass of aggregation bunker 3 (kg)</th><th>mass of aggregation bunker 4 (kg)</th><th>mass of aggregation bunker 5 (kg)</th><th>mass of aggregation bunker 6 (kg)</th><th>mass of filler (kg)</th><th>mass of bitumen (kg)</th><th>mass of additives (kg)</th></tr>";
+            table += "<tr onClick='showTable3()'><th>Aggregates: min. temperature</th><th>Aggregates: max. temperature</th><th>Bitumen: max. temperature</th><th>Bitumen: min. temperature</th><th>mass of aggregation bunker 1 (kg)</th><th>mass of aggregation bunker 2 (kg)</th><th>mass of aggregation bunker 3 (kg)</th><th>mass of aggregation bunker 4 (kg)</th><th>mass of aggregation bunker 5 (kg)</th><th>mass of aggregation bunker 6 (kg)</th><th>mass of filler (kg)</th><th>mass of bitumen (kg)</th><th>mass of additives (kg)</th></tr>";
             foreach (var item in entities.AsphaltProcucers)
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
@@ -95,8 +100,8 @@ namespace RoadIt.Controllers
         public string GenerateTableTruck(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
         {
             var table = "<h3>Transport</h3>";
-            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
-            table += "<th onClick='showTable4()>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th></tr>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr onClick='showTable4()'>";
+            table += "<th>Truck ID</th><th>Departure Time</th><th>Mass (Ton)</th></tr>";
 
             foreach (var item in entities.Coproes)
             {
@@ -118,8 +123,8 @@ namespace RoadIt.Controllers
         public string GenerateTableTruckTemp(sammegf117_roaditEntities entities)//RoadId nog toevoegen aan view, geen toegang tot actualTemp via view, Time and location of attachment to finisher vergeten in DB
         {
             var table = "<h3>Transport temperatuur</h3>";
-            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
-            table += "<tr onClick='showTable5()><th>actual temperature asphalt in truck</th></tr>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr onClick='showTable5()'>";
+            table += "<th>actual temperature asphalt in truck</th></tr>";
 
             foreach (var item in entities.AsphaltProcucers)
             {
@@ -139,8 +144,8 @@ namespace RoadIt.Controllers
         public string GenerateTableCompactor(sammegf117_roaditEntities entities)// batchId niet in view
         {
             var table = "<h3>Compactor</h3>";
-            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr>";
-            table += "<th onClick='showTable6()>Compactor QR code</th></tr>";
+            table += "<table class='table table-bordered table-hover table-inverse table-responsive'><tr onClick='showTable6()'>";
+            table += "<th>Compactor QR code</th></tr>";
 
             foreach (var item in entities.Coproes)
             {
@@ -164,7 +169,7 @@ namespace RoadIt.Controllers
         {
             var table = "<h3>Qualitie control</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr onClick='showTable7()><th>Copro samples</th><th>Extra tests asked by client</th></tr>";
+            table += "<tr onClick='showTable7()'><th>Copro samples</th><th>Extra tests asked by client</th></tr>";
 
             foreach (var item in entities.Coproes)
             {
@@ -181,6 +186,6 @@ namespace RoadIt.Controllers
             table += "</table><br />";
 
             return table;
-        }
+        }*/
     }
 }

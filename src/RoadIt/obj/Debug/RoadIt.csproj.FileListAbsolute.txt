@@ -12,5 +12,3 @@ C:\Users\matbo\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\bi
 C:\Users\matbo\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\obj\Debug\RoadIt.csprojResolveAssemblyReference.cache
 C:\Users\matbo\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\obj\Debug\RoadIt.dll
 C:\Users\matbo\OneDrive\Documenten\AP\AP 2016-2017\CloudApp\RoadIt\src\RoadIt\obj\Debug\RoadIt.pdb
-C:\RoadIt\src\RoadIt\bin\System.Web.Mvc.dll
-C:\RoadIt\src\RoadIt\bin\System.Web.Mvc.xml
