@@ -15,21 +15,8 @@ namespace RoadIt.Controllers
         public ActionResult Index()
         {
             var entities = new sammegf117_roaditEntities();
-            //Session["tableTransport"] = GetTransportList(entities);
-            ManagerController manager = new ManagerController(GetPlantList(entities),GetTransportList(entities), GetPlantList(entities), GetMixtureList(entities));
-            return RedirectToAction("Index", "Manager");
-            /*try
-            {
-
-
-                
-            }
-            catch
-            {
-                ViewBag.error = "You are not authorized to view this page"; 
-                return View();
-            }*/
-            
+            ManagerController manager = new ManagerController(GetPlantList(entities), GetTransportList(entities), GetPlantList(entities), GetMixtureList(entities), GetSpecArray(entities));
+            return RedirectToAction("Index", "Manager");           
         }
 
 
@@ -38,57 +25,26 @@ namespace RoadIt.Controllers
             List<string[]> TransportList = new List<string[]>();
             foreach (var item in entities.Clients)
             {
-                string[] arrayValue = new string[7];
-                arrayValue[0] = item.TruckLicensPlate;
-                arrayValue[1] = item.CentralNameShort;
-                arrayValue[2] = item.CentralName;
-                arrayValue[3] = item.MassTruck.ToString();
-                arrayValue[4] = "";
-                arrayValue[5] = "";
-                arrayValue[6] = item.GPSFinisher;
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.AsphaltMixPlantTimestamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.AsphaltMixPlantTimestamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        string[] arrayValue = new string[7];
+                        arrayValue[0] = item.TruckLicensPlate;
+                        arrayValue[1] = item.CentralNameShort;
+                        arrayValue[2] = item.MixtureName;
+                        arrayValue[3] = item.MassTruck.ToString();
+                        arrayValue[4] = "";
+                        arrayValue[5] = "";
+                        arrayValue[6] = item.GPSFinisher;
 
-                TransportList.Add(arrayValue);
+                        TransportList.Add(arrayValue);
+                    }
+                } 
             }
 
             return TransportList;
         }
-        /*public string GetTransportList(sammegf117_roaditEntities entities)
-        {
-            var table = "<h3>Transport specifications</h3>";
-            table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr><th>Truck ID</th><th>Plant ID</th><th>Mixture</th><th>Mass(tons)</th><th>Temp.</th><th>Finisher ID</th><th>LocationFinisher</th><th>Accepted</th></tr>";
-                 
-            foreach (var item in entities.Clients)
-            {
-                table += "<tr>";
-                table += "<td>";
-                table += item.TruckLicensPlate; //DATA
-                table += "</td>";
-                table += "<td>";
-                table += "In db aanpassen"; //DATA
-                table += "</td>";
-                table += "<td>";
-                table += item.MixtureName; //DATA
-                table += "</td>";
-                table += "<td>";
-                table += item.MassTruck; //DATA
-                table += "</td>";
-                table += "<td>";
-                table += ""; //DATA
-                table += "</td>";
-                table += "<td>";
-                table += ""; //DATA
-                table += "</td>";
-                table += "<td>";
-                table += item.GPSFinisher; //DATA
-                table += "</td>";
-                table += "</tr>";
-            }
-                                   
-            table += "</table>";
-
-            return table;
-        }*/
 
         public string GetTotalList(sammegf117_roaditEntities entities)
         {
@@ -113,18 +69,12 @@ namespace RoadIt.Controllers
             List<string[]> PlantList = new List<string[]>();
             foreach (var item in entities.Clients)
             {
-                string[] arrayValue = new string[7];
-                arrayValue[0] = "In db aanpassen";
-                arrayValue[1] = "";
-                arrayValue[2] = "";
-                arrayValue[3] = "";
-                arrayValue[4] = "";
-                arrayValue[5] = "";
-                arrayValue[6] = "volledige naam asphaltplant";
+                string[] arrayValue = new string[2];
+                arrayValue[0] = item.CentralNameShort;
+                arrayValue[1] = item.CentralName;
 
                 PlantList.Add(arrayValue);
             }
-             
             return PlantList;
         }
 
@@ -135,12 +85,33 @@ namespace RoadIt.Controllers
             {
                 string[] arrayValue = new string[3];
                 arrayValue[0] = item.MixtureName;
-                arrayValue[1] = "MinTemp";
-                arrayValue[2] = "MaxTemp";
+                arrayValue[1] = item.BatchMinTemp.ToString();
+                arrayValue[2] = item.BatchMaxTemp.ToString();
 
                 MixtureList.Add(arrayValue);
             }
             return MixtureList;
+        }
+
+        public string[] GetSpecArray(sammegf117_roaditEntities entities)
+        {
+            string[] arrayValue = new string[5];
+            foreach (var item in entities.Clients)
+            {
+                if (item.RoadId.ToString() == Session["roadID"].ToString())
+                {
+                    if (DateTime.Parse(item.AsphaltMixPlantTimestamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.AsphaltMixPlantTimestamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    {
+                        arrayValue[0] = Session["roadID"].ToString();
+                        arrayValue[1] = item.LayerType;
+                        arrayValue[2] = item.MixtureName;
+                        arrayValue[3] = item.BatchMinTemp.ToString();
+                        arrayValue[4] = item.BatchMaxTemp.ToString();
+                        break;
+                    }
+                }
+            }
+            return arrayValue;
         }
 
         public string GenerateTableSpecifications() //RoadId nog toevoegen aan view
