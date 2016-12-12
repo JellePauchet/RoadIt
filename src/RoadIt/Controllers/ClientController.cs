@@ -15,23 +15,44 @@ namespace RoadIt.Controllers
         public ActionResult Index()
         {
             var entities = new sammegf117_roaditEntities();
-            Session["tableTransport"] = GetTransportList(entities);
-     
-            try
+            //Session["tableTransport"] = GetTransportList(entities);
+            ManagerController manager = new ManagerController(GetPlantList(entities),GetTransportList(entities), GetPlantList(entities), GetMixtureList(entities));
+            return RedirectToAction("Index", "Manager");
+            /*try
             {
-                
 
-                return View();
+
+                
             }
             catch
             {
                 ViewBag.error = "You are not authorized to view this page"; 
                 return View();
-            }
+            }*/
             
         }
 
-        public string GetTransportList(sammegf117_roaditEntities entities)
+
+        public List<string[]> GetTransportList(sammegf117_roaditEntities entities)
+        {
+            List<string[]> TransportList = new List<string[]>();
+            foreach (var item in entities.Clients)
+            {
+                string[] arrayValue = new string[7];
+                arrayValue[0] = item.TruckLicensPlate;
+                arrayValue[1] = item.CentralNameShort;
+                arrayValue[2] = item.CentralName;
+                arrayValue[3] = item.MassTruck.ToString();
+                arrayValue[4] = "";
+                arrayValue[5] = "";
+                arrayValue[6] = item.GPSFinisher;
+
+                TransportList.Add(arrayValue);
+            }
+
+            return TransportList;
+        }
+        /*public string GetTransportList(sammegf117_roaditEntities entities)
         {
             var table = "<h3>Transport specifications</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
@@ -67,7 +88,7 @@ namespace RoadIt.Controllers
             table += "</table>";
 
             return table;
-        }
+        }*/
 
         public string GetTotalList(sammegf117_roaditEntities entities)
         {
@@ -87,12 +108,12 @@ namespace RoadIt.Controllers
             return table; 
         }
 
-        public List<String[]> GetPlantList(sammegf117_roaditEntities entities)
+        public List<string[]> GetPlantList(sammegf117_roaditEntities entities)
         {
             List<string[]> PlantList = new List<string[]>();
             foreach (var item in entities.Clients)
             {
-                String[] arrayValue = new String[7];
+                string[] arrayValue = new string[7];
                 arrayValue[0] = "In db aanpassen";
                 arrayValue[1] = "";
                 arrayValue[2] = "";
@@ -107,12 +128,12 @@ namespace RoadIt.Controllers
             return PlantList;
         }
 
-        public List<String[]> GetMixtureList(sammegf117_roaditEntities entities)
+        public List<string[]> GetMixtureList(sammegf117_roaditEntities entities)
         {
             List<string[]> MixtureList = new List<string[]>();
             foreach (var item in entities.Clients)
             {
-                String[] arrayValue = new String[3];
+                string[] arrayValue = new string[3];
                 arrayValue[0] = item.MixtureName;
                 arrayValue[1] = "MinTemp";
                 arrayValue[2] = "MaxTemp";

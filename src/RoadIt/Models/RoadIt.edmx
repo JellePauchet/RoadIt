@@ -101,7 +101,12 @@
       `AsphaltProcucer`.`SiloTimpStamp`, 
       `AsphaltProcucer`.`PlanningTimeStamp`, 
       `AsphaltProcucer`.`CompactorTimeStamp`, 
-      `AsphaltProcucer`.`QualtityTimeStamp`
+      `AsphaltProcucer`.`QualtityTimeStamp`, 
+      `AsphaltProcucer`.`BatchMaxTemp`, 
+      `AsphaltProcucer`.`BatchMinTemp`, 
+      `AsphaltProcucer`.`LayerType`, 
+      `AsphaltProcucer`.`CentralName`, 
+      `AsphaltProcucer`.`CentralNameShort`
       FROM `AsphaltProcucer` AS `AsphaltProcucer`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Client" EntityType="sammegf117_roaditModel.Store.Client" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Client">
@@ -162,7 +167,12 @@
       `Client`.`TruckTimeStamp`, 
       `Client`.`CompactorTimeStamp`, 
       `Client`.`TranverseSlope`, 
-      `Client`.`GPSFinisher`
+      `Client`.`GPSFinisher`, 
+      `Client`.`BatchMaxTemp`, 
+      `Client`.`BatchMinTemp`, 
+      `Client`.`LayerType`, 
+      `Client`.`CentralName`, 
+      `Client`.`CentralNameShort`
       FROM `Client` AS `Client`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ContractorView" EntityType="sammegf117_roaditModel.Store.ContractorView" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="ContractorView">
@@ -243,7 +253,12 @@
       `ContractorView`.`RoadId`, 
       `ContractorView`.`RoadDescription`, 
       `ContractorView`.`RoadSectionTimeStamp`, 
-      `ContractorView`.`AsphaltMixPlantTimestamp`
+      `ContractorView`.`AsphaltMixPlantTimestamp`, 
+      `ContractorView`.`BatchMaxTemp`, 
+      `ContractorView`.`BatchMinTemp`, 
+      `ContractorView`.`LayerType`, 
+      `ContractorView`.`CentralName`, 
+      `ContractorView`.`CentralNameShort`
       FROM `ContractorView` AS `ContractorView`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Copro" EntityType="sammegf117_roaditModel.Store.Copro" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Copro">
@@ -289,7 +304,12 @@
       `Copro`.`CompactorTimeStamp`, 
       `Copro`.`MixtureName`, 
       `Copro`.`TechnicalDataSheet`, 
-      `Copro`.`TruckTimeStamp`
+      `Copro`.`TruckTimeStamp`, 
+      `Copro`.`BatchMaxTemp`, 
+      `Copro`.`BatchMinTemp`, 
+      `Copro`.`LayerType`, 
+      `Copro`.`CentralName`, 
+      `Copro`.`CentralNameShort`
       FROM `Copro` AS `Copro`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Trucker" EntityType="sammegf117_roaditModel.Store.Trucker" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Trucker">
@@ -319,7 +339,12 @@
       `Trucker`.`RoadId`, 
       `Trucker`.`RoadDescription`, 
       `Trucker`.`RoadSectionTimeStamp`, 
-      `Trucker`.`CompactorTimeStamp`
+      `Trucker`.`CompactorTimeStamp`, 
+      `Trucker`.`BatchMaxTemp`, 
+      `Trucker`.`BatchMinTemp`, 
+      `Trucker`.`LayerType`, 
+      `Trucker`.`CentralName`, 
+      `Trucker`.`CentralNameShort`
       FROM `Trucker` AS `Trucker`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="UA" EntityType="sammegf117_roaditModel.Store.UA" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="UA">
@@ -425,7 +450,12 @@
       `UA`.`AirHumidityTimeStamp`, 
       `UA`.`LeftAngle`, 
       `UA`.`RightAngle`, 
-      `UA`.`AngleTimestamp`
+      `UA`.`AngleTimestamp`, 
+      `UA`.`BatchMaxTemp`, 
+      `UA`.`BatchMinTemp`, 
+      `UA`.`LayerType`, 
+      `UA`.`CentralName`, 
+      `UA`.`CentralNameShort`
       FROM `UA` AS `UA`</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="BatchList_ibfk_1" Association="sammegf117_roaditModel.Store.BatchList_ibfk_1">
@@ -605,6 +635,8 @@
           <Property Name="TypeOfAggregates" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="MixtureChange" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="AsphaltMixPlantTimestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
         </EntityType>
         <EntityType Name="AsphaltTemp">
           <Key>
@@ -625,6 +657,9 @@
           <Property Name="TruckId" Type="int" Nullable="false" />
           <Property Name="FinisherId" Type="int" Nullable="false" />
           <Property Name="BatchListTimeStamp" Type="timestamp" StoreGeneratedPattern="Identity" />
+          <Property Name="BatchMaxTemp" Type="int" Nullable="false" />
+          <Property Name="BatchMinTemp" Type="int" Nullable="false" />
+          <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
         </EntityType>
         <EntityType Name="Bitumen">
           <Key>
@@ -956,6 +991,11 @@
             <PropertyRef Name="PlanningTimeStamp" />
             <PropertyRef Name="CompactorTimeStamp" />
             <PropertyRef Name="QualtityTimeStamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="TonPerDay" Type="int" Nullable="false" />
           <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
@@ -1018,6 +1058,11 @@
           <Property Name="PlanningTimeStamp" Type="timestamp" Nullable="false" />
           <Property Name="CompactorTimeStamp" Type="timestamp" Nullable="false" />
           <Property Name="QualtityTimeStamp" Type="timestamp" Nullable="false" />
+          <Property Name="BatchMaxTemp" Type="int" Nullable="false" />
+          <Property Name="BatchMinTemp" Type="int" Nullable="false" />
+          <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.Client' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1081,6 +1126,11 @@
             <PropertyRef Name="CompactorTimeStamp" />
             <PropertyRef Name="TranverseSlope" />
             <PropertyRef Name="GPSFinisher" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="TechnicalDataSheet" Type="varchar" Nullable="false" MaxLength="255" />
@@ -1139,6 +1189,11 @@
           <Property Name="CompactorTimeStamp" Type="timestamp" Nullable="false" />
           <Property Name="TranverseSlope" Type="int" Nullable="false" />
           <Property Name="GPSFinisher" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="BatchMaxTemp" Type="int" Nullable="false" />
+          <Property Name="BatchMinTemp" Type="int" Nullable="false" />
+          <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.ContractorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1222,6 +1277,11 @@
             <PropertyRef Name="RoadDescription" />
             <PropertyRef Name="RoadSectionTimeStamp" />
             <PropertyRef Name="AsphaltMixPlantTimestamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="LayerThickness" Type="int" Nullable="false" />
           <Property Name="Surface" Type="int" Nullable="false" />
@@ -1300,6 +1360,11 @@
           <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="RoadSectionTimeStamp" Type="timestamp" Nullable="false" />
           <Property Name="AsphaltMixPlantTimestamp" Type="timestamp" Nullable="false" />
+          <Property Name="BatchMaxTemp" Type="int" Nullable="false" />
+          <Property Name="BatchMinTemp" Type="int" Nullable="false" />
+          <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.Copro' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1348,6 +1413,11 @@
             <PropertyRef Name="MixtureName" />
             <PropertyRef Name="TechnicalDataSheet" />
             <PropertyRef Name="TruckTimeStamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="TypeOfAggregates" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="MixtureChange" Type="varchar" Nullable="false" MaxLength="255" />
@@ -1391,6 +1461,11 @@
           <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="TechnicalDataSheet" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="TruckTimeStamp" Type="timestamp" Nullable="false" />
+          <Property Name="BatchMaxTemp" Type="int" Nullable="false" />
+          <Property Name="BatchMinTemp" Type="int" Nullable="false" />
+          <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.Trucker' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1423,6 +1498,11 @@
             <PropertyRef Name="RoadDescription" />
             <PropertyRef Name="RoadSectionTimeStamp" />
             <PropertyRef Name="CompactorTimeStamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="TruckLicensPlate" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="DepartureTime" Type="timestamp" Nullable="false" />
@@ -1450,6 +1530,11 @@
           <Property Name="RoadDescription" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="RoadSectionTimeStamp" Type="timestamp" Nullable="false" />
           <Property Name="CompactorTimeStamp" Type="timestamp" Nullable="false" />
+          <Property Name="BatchMaxTemp" Type="int" Nullable="false" />
+          <Property Name="BatchMinTemp" Type="int" Nullable="false" />
+          <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.UA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1558,6 +1643,11 @@
             <PropertyRef Name="LeftAngle" />
             <PropertyRef Name="RightAngle" />
             <PropertyRef Name="AngleTimestamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="LayerThickness" Type="int" Nullable="false" />
           <Property Name="Surface" Type="int" Nullable="false" />
@@ -1661,6 +1751,11 @@
           <Property Name="LeftAngle" Type="int" Nullable="false" />
           <Property Name="RightAngle" Type="int" Nullable="false" />
           <Property Name="AngleTimestamp" Type="timestamp" Nullable="false" />
+          <Property Name="BatchMaxTemp" Type="int" Nullable="false" />
+          <Property Name="BatchMinTemp" Type="int" Nullable="false" />
+          <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
         </EntityType>
         <Association Name="BatchList_ibfk_1">
           <End Role="Project" Type="sammegf117_roaditModel.Store.Project" Multiplicity="1" />
@@ -2261,6 +2356,8 @@
           <Property Name="MixtureChange" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Silos" Relationship="sammegf117_roaditModel.Silo_ibfk_1" FromRole="AsphaltMixPlant" ToRole="Silo" />
+          <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="AsphaltTemp">
           <Key>
@@ -2287,6 +2384,9 @@
           <NavigationProperty Name="Truck" Relationship="sammegf117_roaditModel.BatchList_ibfk_3" FromRole="BatchList" ToRole="Truck" />
           <NavigationProperty Name="Finisher" Relationship="sammegf117_roaditModel.BatchList_ibfk_4" FromRole="BatchList" ToRole="Finisher" />
           <NavigationProperty Name="Compactors" Relationship="sammegf117_roaditModel.Compactor_ibfk_2" FromRole="BatchList" ToRole="Compactor" />
+          <Property Type="Int32" Name="BatchMaxTemp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMinTemp" Nullable="false" />
+          <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Bituman">
           <Key>
@@ -2665,6 +2765,11 @@
             <PropertyRef Name="PlanningTimeStamp" />
             <PropertyRef Name="CompactorTimeStamp" />
             <PropertyRef Name="QualtityTimeStamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="TonPerDay" Type="Int32" Nullable="false" />
           <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
@@ -2727,6 +2832,11 @@
           <Property Name="PlanningTimeStamp" Type="DateTime" Nullable="false" />
           <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
           <Property Name="QualtityTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Type="Int32" Name="BatchMaxTemp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMinTemp" Nullable="false" />
+          <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Client">
           <Key>
@@ -2787,6 +2897,11 @@
             <PropertyRef Name="CompactorTimeStamp" />
             <PropertyRef Name="TranverseSlope" />
             <PropertyRef Name="GPSFinisher" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
@@ -2845,6 +2960,11 @@
           <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
           <Property Name="TranverseSlope" Type="Int32" Nullable="false" />
           <Property Name="GPSFinisher" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="BatchMaxTemp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMinTemp" Nullable="false" />
+          <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ContractorView">
           <Key>
@@ -2925,6 +3045,11 @@
             <PropertyRef Name="RoadDescription" />
             <PropertyRef Name="RoadSectionTimeStamp" />
             <PropertyRef Name="AsphaltMixPlantTimestamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="LayerThickness" Type="Int32" Nullable="false" />
           <Property Name="Surface" Type="Int32" Nullable="false" />
@@ -3003,6 +3128,11 @@
           <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
           <Property Name="AsphaltMixPlantTimestamp" Type="DateTime" Nullable="false" />
+          <Property Type="Int32" Name="BatchMaxTemp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMinTemp" Nullable="false" />
+          <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Copro">
           <Key>
@@ -3048,6 +3178,11 @@
             <PropertyRef Name="MixtureName" />
             <PropertyRef Name="TechnicalDataSheet" />
             <PropertyRef Name="TruckTimeStamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="TypeOfAggregates" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="MixtureChange" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
@@ -3091,6 +3226,11 @@
           <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="TruckTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Type="Int32" Name="BatchMaxTemp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMinTemp" Nullable="false" />
+          <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Trucker">
           <Key>
@@ -3120,6 +3260,11 @@
             <PropertyRef Name="RoadDescription" />
             <PropertyRef Name="RoadSectionTimeStamp" />
             <PropertyRef Name="CompactorTimeStamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="TruckLicensPlate" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="DepartureTime" Type="DateTime" Nullable="false" />
@@ -3147,6 +3292,11 @@
           <Property Name="RoadDescription" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="RoadSectionTimeStamp" Type="DateTime" Nullable="false" />
           <Property Name="CompactorTimeStamp" Type="DateTime" Nullable="false" />
+          <Property Type="Int32" Name="BatchMaxTemp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMinTemp" Nullable="false" />
+          <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="UA">
           <Key>
@@ -3252,6 +3402,11 @@
             <PropertyRef Name="AnalysisComposition" />
             <PropertyRef Name="SiloTimpStamp" />
             <PropertyRef Name="AggragationTimeStamp" />
+            <PropertyRef Name="BatchMaxTemp" />
+            <PropertyRef Name="BatchMinTemp" />
+            <PropertyRef Name="LayerType" />
+            <PropertyRef Name="CentralName" />
+            <PropertyRef Name="CentralNameShort" />
           </Key>
           <Property Name="LayerThickness" Type="Int32" Nullable="false" />
           <Property Name="Surface" Type="Int32" Nullable="false" />
@@ -3355,6 +3510,11 @@
           <Property Type="String" Name="AnalysisComposition" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="SiloTimpStamp" Nullable="false" />
           <Property Type="DateTime" Name="AggragationTimeStamp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMaxTemp" Nullable="false" />
+          <Property Type="Int32" Name="BatchMinTemp" Nullable="false" />
+          <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="Truck_ibfk_3">
           <End Role="ActualPosition" Type="sammegf117_roaditModel.ActualPosition" Multiplicity="1" />
@@ -3784,6 +3944,8 @@
           <EntitySetMapping Name="AsphaltMixPlants">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.AsphaltMixPlant">
               <MappingFragment StoreEntitySet="AsphaltMixPlant">
+                <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
+                <ScalarProperty Name="CentralName" ColumnName="CentralName" />
                 <ScalarProperty Name="CentralId" ColumnName="CentralId" />
                 <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
                 <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
@@ -3806,6 +3968,9 @@
           <EntitySetMapping Name="BatchLists">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.BatchList">
               <MappingFragment StoreEntitySet="BatchList">
+                <ScalarProperty Name="LayerType" ColumnName="LayerType" />
+                <ScalarProperty Name="BatchMinTemp" ColumnName="BatchMinTemp" />
+                <ScalarProperty Name="BatchMaxTemp" ColumnName="BatchMaxTemp" />
                 <ScalarProperty Name="BatchId" ColumnName="BatchId" />
                 <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
                 <ScalarProperty Name="SiloId" ColumnName="SiloId" />
@@ -4107,6 +4272,11 @@
           <EntitySetMapping Name="AsphaltProcucers">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.AsphaltProcucer">
               <MappingFragment StoreEntitySet="AsphaltProcucer">
+                <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
+                <ScalarProperty Name="CentralName" ColumnName="CentralName" />
+                <ScalarProperty Name="LayerType" ColumnName="LayerType" />
+                <ScalarProperty Name="BatchMinTemp" ColumnName="BatchMinTemp" />
+                <ScalarProperty Name="BatchMaxTemp" ColumnName="BatchMaxTemp" />
                 <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
                 <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
                 <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
@@ -4174,6 +4344,11 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.Client">
               <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
+                <ScalarProperty Name="CentralName" ColumnName="CentralName" />
+                <ScalarProperty Name="LayerType" ColumnName="LayerType" />
+                <ScalarProperty Name="BatchMinTemp" ColumnName="BatchMinTemp" />
+                <ScalarProperty Name="BatchMaxTemp" ColumnName="BatchMaxTemp" />
                 <ScalarProperty Name="MixtureName" ColumnName="MixtureName" />
                 <ScalarProperty Name="TechnicalDataSheet" ColumnName="TechnicalDataSheet" />
                 <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
@@ -4237,6 +4412,11 @@
           <EntitySetMapping Name="ContractorViews">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.ContractorView">
               <MappingFragment StoreEntitySet="ContractorView">
+                <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
+                <ScalarProperty Name="CentralName" ColumnName="CentralName" />
+                <ScalarProperty Name="LayerType" ColumnName="LayerType" />
+                <ScalarProperty Name="BatchMinTemp" ColumnName="BatchMinTemp" />
+                <ScalarProperty Name="BatchMaxTemp" ColumnName="BatchMaxTemp" />
                 <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
                 <ScalarProperty Name="Surface" ColumnName="Surface" />
                 <ScalarProperty Name="TonPerDay" ColumnName="TonPerDay" />
@@ -4320,6 +4500,11 @@
           <EntitySetMapping Name="Coproes">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.Copro">
               <MappingFragment StoreEntitySet="Copro">
+                <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
+                <ScalarProperty Name="CentralName" ColumnName="CentralName" />
+                <ScalarProperty Name="LayerType" ColumnName="LayerType" />
+                <ScalarProperty Name="BatchMinTemp" ColumnName="BatchMinTemp" />
+                <ScalarProperty Name="BatchMaxTemp" ColumnName="BatchMaxTemp" />
                 <ScalarProperty Name="TypeOfAggregates" ColumnName="TypeOfAggregates" />
                 <ScalarProperty Name="MixtureChange" ColumnName="MixtureChange" />
                 <ScalarProperty Name="AsphaltMixPlantTimestamp" ColumnName="AsphaltMixPlantTimestamp" />
@@ -4368,6 +4553,11 @@
           <EntitySetMapping Name="Truckers">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.Trucker">
               <MappingFragment StoreEntitySet="Trucker">
+                <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
+                <ScalarProperty Name="CentralName" ColumnName="CentralName" />
+                <ScalarProperty Name="LayerType" ColumnName="LayerType" />
+                <ScalarProperty Name="BatchMinTemp" ColumnName="BatchMinTemp" />
+                <ScalarProperty Name="BatchMaxTemp" ColumnName="BatchMaxTemp" />
                 <ScalarProperty Name="TruckLicensPlate" ColumnName="TruckLicensPlate" />
                 <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
                 <ScalarProperty Name="MassTruck" ColumnName="MassTruck" />
@@ -4400,6 +4590,11 @@
           <EntitySetMapping Name="UAs">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.UA">
               <MappingFragment StoreEntitySet="UA">
+                <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
+                <ScalarProperty Name="CentralName" ColumnName="CentralName" />
+                <ScalarProperty Name="LayerType" ColumnName="LayerType" />
+                <ScalarProperty Name="BatchMinTemp" ColumnName="BatchMinTemp" />
+                <ScalarProperty Name="BatchMaxTemp" ColumnName="BatchMaxTemp" />
                 <ScalarProperty Name="AggragationTimeStamp" ColumnName="AggragationTimeStamp" />
                 <ScalarProperty Name="SiloTimpStamp" ColumnName="SiloTimpStamp" />
                 <ScalarProperty Name="AnalysisComposition" ColumnName="AnalysisComposition" />

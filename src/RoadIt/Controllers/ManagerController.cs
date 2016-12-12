@@ -9,11 +9,16 @@ namespace RoadIt.Controllers
 {
     public class ManagerController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         //variabelen
-        List<string[]> TransportList = null;
-        List<string[]> TotalList = null;
-        List<string[]> PlantList = null;
-        List<string[]> MixtureList = null;
+        public List<string[]> TransportList = new List<string[]>();
+        public List<string[]> TotalList = new List<string[]>();
+        public List<string[]> PlantList = new List<string[]>();
+        public List<string[]> MixtureList = new List<string[]>();
 
         //getters
         public List<string[]> GetTransportList() 
@@ -39,7 +44,9 @@ namespace RoadIt.Controllers
         //setters
         public void SetTransportList(List<string[]> input) 
         {
+            this.TransportList = null;
             this.TransportList = input;
+            
         }
 
         public void SetTotalList(List<string[]> input)
@@ -60,23 +67,20 @@ namespace RoadIt.Controllers
 
         public ManagerController(List<string[]> list1, List<string[]> list2, List<string[]> list3, List<string[]> list4) 
         {
-            this.SetTransportList(list1);
-            this.SetTotalList(list2);
+            this.SetTotalList(list1);
+            this.SetTransportList(list2);
             this.SetPlantList(list3);
             this.SetMixtureList(list4);
 
             //Session["tableSpecifications"] = null;
-            Session["tableTransport"] = GenerateTableTransport(this.GetTransportList());
+            //Session.Add("tableTransport", GenerateTableTransport(this.TransportList));
+            ViewBag.tableTransport = GenerateTableTransport(this.TransportList);
             //Session["tableTotal"] = null;
             //Session["tablePlants"] = null;
             //Session["tableMixture"] = null;
         }
 
-        public ActionResult Index()
-        {
-            
-            return View();           
-        }
+        
 
         public string GenerateTableSpecifications() //RoadId nog toevoegen aan view
         {
@@ -94,7 +98,8 @@ namespace RoadIt.Controllers
 
         public string GenerateTableTransport(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
-            var table = "<h3>Transport specifications</h3>";
+            string table = "";
+            table += "<h3>Transport specifications</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
             table += "<tr><th></th><th>Truck ID</th><th>Plant ID</th><th>Mixture</th><th>Mass(tons)</th><th>Temp.</th><th>Finisher ID</th><th>LocationFinisher</th><th>Accepted</th></tr>";
 
@@ -102,7 +107,7 @@ namespace RoadIt.Controllers
 
             for (int i = 0; i < 1; i++)
             { 
-                for (int a = 0; a < 1; i++)
+                for (int a = 0; a < 1; a++)
                 { 
                     table += "<td>";
                     if (ListValue.ElementAt(0)[0] != "")

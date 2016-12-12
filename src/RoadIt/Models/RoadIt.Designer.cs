@@ -1795,7 +1795,9 @@ namespace RoadIt.Models
         /// <param name="typeOfAggregates">Initial value of the TypeOfAggregates property.</param>
         /// <param name="mixtureChange">Initial value of the MixtureChange property.</param>
         /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
-        public static AsphaltMixPlant CreateAsphaltMixPlant(global::System.Int32 centralId, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp)
+        /// <param name="centralName">Initial value of the CentralName property.</param>
+        /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
+        public static AsphaltMixPlant CreateAsphaltMixPlant(global::System.Int32 centralId, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.String centralName, global::System.String centralNameShort)
         {
             AsphaltMixPlant asphaltMixPlant = new AsphaltMixPlant();
             asphaltMixPlant.CentralId = centralId;
@@ -1804,6 +1806,8 @@ namespace RoadIt.Models
             asphaltMixPlant.TypeOfAggregates = typeOfAggregates;
             asphaltMixPlant.MixtureChange = mixtureChange;
             asphaltMixPlant.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
+            asphaltMixPlant.CentralName = centralName;
+            asphaltMixPlant.CentralNameShort = centralNameShort;
             return asphaltMixPlant;
         }
 
@@ -1957,6 +1961,54 @@ namespace RoadIt.Models
         private global::System.DateTime _AsphaltMixPlantTimestamp;
         partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
         partial void OnAsphaltMixPlantTimestampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralName
+        {
+            get
+            {
+                return _CentralName;
+            }
+            set
+            {
+                OnCentralNameChanging(value);
+                ReportPropertyChanging("CentralName");
+                _CentralName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("CentralName");
+                OnCentralNameChanged();
+            }
+        }
+        private global::System.String _CentralName;
+        partial void OnCentralNameChanging(global::System.String value);
+        partial void OnCentralNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralNameShort
+        {
+            get
+            {
+                return _CentralNameShort;
+            }
+            set
+            {
+                OnCentralNameShortChanging(value);
+                ReportPropertyChanging("CentralNameShort");
+                _CentralNameShort = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("CentralNameShort");
+                OnCentralNameShortChanged();
+            }
+        }
+        private global::System.String _CentralNameShort;
+        partial void OnCentralNameShortChanging(global::System.String value);
+        partial void OnCentralNameShortChanged();
 
         #endregion
 
@@ -2063,7 +2115,12 @@ namespace RoadIt.Models
         /// <param name="planningTimeStamp">Initial value of the PlanningTimeStamp property.</param>
         /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
         /// <param name="qualtityTimeStamp">Initial value of the QualtityTimeStamp property.</param>
-        public static AsphaltProcucer CreateAsphaltProcucer(global::System.Int32 tonPerDay, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.DateTime planningTimeStamp, global::System.DateTime compactorTimeStamp, global::System.DateTime qualtityTimeStamp)
+        /// <param name="batchMaxTemp">Initial value of the BatchMaxTemp property.</param>
+        /// <param name="batchMinTemp">Initial value of the BatchMinTemp property.</param>
+        /// <param name="layerType">Initial value of the LayerType property.</param>
+        /// <param name="centralName">Initial value of the CentralName property.</param>
+        /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
+        public static AsphaltProcucer CreateAsphaltProcucer(global::System.Int32 tonPerDay, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.DateTime planningTimeStamp, global::System.DateTime compactorTimeStamp, global::System.DateTime qualtityTimeStamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
         {
             AsphaltProcucer asphaltProcucer = new AsphaltProcucer();
             asphaltProcucer.TonPerDay = tonPerDay;
@@ -2127,6 +2184,11 @@ namespace RoadIt.Models
             asphaltProcucer.PlanningTimeStamp = planningTimeStamp;
             asphaltProcucer.CompactorTimeStamp = compactorTimeStamp;
             asphaltProcucer.QualtityTimeStamp = qualtityTimeStamp;
+            asphaltProcucer.BatchMaxTemp = batchMaxTemp;
+            asphaltProcucer.BatchMinTemp = batchMinTemp;
+            asphaltProcucer.LayerType = layerType;
+            asphaltProcucer.CentralName = centralName;
+            asphaltProcucer.CentralNameShort = centralNameShort;
             return asphaltProcucer;
         }
 
@@ -3780,6 +3842,141 @@ namespace RoadIt.Models
         private global::System.DateTime _QualtityTimeStamp;
         partial void OnQualtityTimeStampChanging(global::System.DateTime value);
         partial void OnQualtityTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMaxTemp
+        {
+            get
+            {
+                return _BatchMaxTemp;
+            }
+            set
+            {
+                if (_BatchMaxTemp != value)
+                {
+                    OnBatchMaxTempChanging(value);
+                    ReportPropertyChanging("BatchMaxTemp");
+                    _BatchMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMaxTemp");
+                    OnBatchMaxTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMaxTemp;
+        partial void OnBatchMaxTempChanging(global::System.Int32 value);
+        partial void OnBatchMaxTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMinTemp
+        {
+            get
+            {
+                return _BatchMinTemp;
+            }
+            set
+            {
+                if (_BatchMinTemp != value)
+                {
+                    OnBatchMinTempChanging(value);
+                    ReportPropertyChanging("BatchMinTemp");
+                    _BatchMinTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMinTemp");
+                    OnBatchMinTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMinTemp;
+        partial void OnBatchMinTempChanging(global::System.Int32 value);
+        partial void OnBatchMinTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LayerType
+        {
+            get
+            {
+                return _LayerType;
+            }
+            set
+            {
+                if (_LayerType != value)
+                {
+                    OnLayerTypeChanging(value);
+                    ReportPropertyChanging("LayerType");
+                    _LayerType = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("LayerType");
+                    OnLayerTypeChanged();
+                }
+            }
+        }
+        private global::System.String _LayerType;
+        partial void OnLayerTypeChanging(global::System.String value);
+        partial void OnLayerTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralName
+        {
+            get
+            {
+                return _CentralName;
+            }
+            set
+            {
+                if (_CentralName != value)
+                {
+                    OnCentralNameChanging(value);
+                    ReportPropertyChanging("CentralName");
+                    _CentralName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralName");
+                    OnCentralNameChanged();
+                }
+            }
+        }
+        private global::System.String _CentralName;
+        partial void OnCentralNameChanging(global::System.String value);
+        partial void OnCentralNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralNameShort
+        {
+            get
+            {
+                return _CentralNameShort;
+            }
+            set
+            {
+                if (_CentralNameShort != value)
+                {
+                    OnCentralNameShortChanging(value);
+                    ReportPropertyChanging("CentralNameShort");
+                    _CentralNameShort = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralNameShort");
+                    OnCentralNameShortChanged();
+                }
+            }
+        }
+        private global::System.String _CentralNameShort;
+        partial void OnCentralNameShortChanging(global::System.String value);
+        partial void OnCentralNameShortChanged();
 
         #endregion
 
@@ -3965,7 +4162,10 @@ namespace RoadIt.Models
         /// <param name="siloId">Initial value of the SiloId property.</param>
         /// <param name="truckId">Initial value of the TruckId property.</param>
         /// <param name="finisherId">Initial value of the FinisherId property.</param>
-        public static BatchList CreateBatchList(global::System.Int32 batchId, global::System.Int32 projectId, global::System.Int32 siloId, global::System.Int32 truckId, global::System.Int32 finisherId)
+        /// <param name="batchMaxTemp">Initial value of the BatchMaxTemp property.</param>
+        /// <param name="batchMinTemp">Initial value of the BatchMinTemp property.</param>
+        /// <param name="layerType">Initial value of the LayerType property.</param>
+        public static BatchList CreateBatchList(global::System.Int32 batchId, global::System.Int32 projectId, global::System.Int32 siloId, global::System.Int32 truckId, global::System.Int32 finisherId, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType)
         {
             BatchList batchList = new BatchList();
             batchList.BatchId = batchId;
@@ -3973,6 +4173,9 @@ namespace RoadIt.Models
             batchList.SiloId = siloId;
             batchList.TruckId = truckId;
             batchList.FinisherId = finisherId;
+            batchList.BatchMaxTemp = batchMaxTemp;
+            batchList.BatchMinTemp = batchMinTemp;
+            batchList.LayerType = layerType;
             return batchList;
         }
 
@@ -4126,6 +4329,78 @@ namespace RoadIt.Models
         private Nullable<global::System.DateTime> _BatchListTimeStamp;
         partial void OnBatchListTimeStampChanging(Nullable<global::System.DateTime> value);
         partial void OnBatchListTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMaxTemp
+        {
+            get
+            {
+                return _BatchMaxTemp;
+            }
+            set
+            {
+                OnBatchMaxTempChanging(value);
+                ReportPropertyChanging("BatchMaxTemp");
+                _BatchMaxTemp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BatchMaxTemp");
+                OnBatchMaxTempChanged();
+            }
+        }
+        private global::System.Int32 _BatchMaxTemp;
+        partial void OnBatchMaxTempChanging(global::System.Int32 value);
+        partial void OnBatchMaxTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMinTemp
+        {
+            get
+            {
+                return _BatchMinTemp;
+            }
+            set
+            {
+                OnBatchMinTempChanging(value);
+                ReportPropertyChanging("BatchMinTemp");
+                _BatchMinTemp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BatchMinTemp");
+                OnBatchMinTempChanged();
+            }
+        }
+        private global::System.Int32 _BatchMinTemp;
+        partial void OnBatchMinTempChanging(global::System.Int32 value);
+        partial void OnBatchMinTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LayerType
+        {
+            get
+            {
+                return _LayerType;
+            }
+            set
+            {
+                OnLayerTypeChanging(value);
+                ReportPropertyChanging("LayerType");
+                _LayerType = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("LayerType");
+                OnLayerTypeChanged();
+            }
+        }
+        private global::System.String _LayerType;
+        partial void OnLayerTypeChanging(global::System.String value);
+        partial void OnLayerTypeChanged();
 
         #endregion
 
@@ -4541,7 +4816,12 @@ namespace RoadIt.Models
         /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
         /// <param name="tranverseSlope">Initial value of the TranverseSlope property.</param>
         /// <param name="gPSFinisher">Initial value of the GPSFinisher property.</param>
-        public static Client CreateClient(global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String mixtureChange, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.DateTime truckTimeStamp, global::System.DateTime compactorTimeStamp, global::System.Int32 tranverseSlope, global::System.String gPSFinisher)
+        /// <param name="batchMaxTemp">Initial value of the BatchMaxTemp property.</param>
+        /// <param name="batchMinTemp">Initial value of the BatchMinTemp property.</param>
+        /// <param name="layerType">Initial value of the LayerType property.</param>
+        /// <param name="centralName">Initial value of the CentralName property.</param>
+        /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
+        public static Client CreateClient(global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String mixtureChange, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.DateTime truckTimeStamp, global::System.DateTime compactorTimeStamp, global::System.Int32 tranverseSlope, global::System.String gPSFinisher, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
         {
             Client client = new Client();
             client.MixtureName = mixtureName;
@@ -4601,6 +4881,11 @@ namespace RoadIt.Models
             client.CompactorTimeStamp = compactorTimeStamp;
             client.TranverseSlope = tranverseSlope;
             client.GPSFinisher = gPSFinisher;
+            client.BatchMaxTemp = batchMaxTemp;
+            client.BatchMinTemp = batchMinTemp;
+            client.LayerType = layerType;
+            client.CentralName = centralName;
+            client.CentralNameShort = centralNameShort;
             return client;
         }
 
@@ -6146,6 +6431,141 @@ namespace RoadIt.Models
         private global::System.String _GPSFinisher;
         partial void OnGPSFinisherChanging(global::System.String value);
         partial void OnGPSFinisherChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMaxTemp
+        {
+            get
+            {
+                return _BatchMaxTemp;
+            }
+            set
+            {
+                if (_BatchMaxTemp != value)
+                {
+                    OnBatchMaxTempChanging(value);
+                    ReportPropertyChanging("BatchMaxTemp");
+                    _BatchMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMaxTemp");
+                    OnBatchMaxTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMaxTemp;
+        partial void OnBatchMaxTempChanging(global::System.Int32 value);
+        partial void OnBatchMaxTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMinTemp
+        {
+            get
+            {
+                return _BatchMinTemp;
+            }
+            set
+            {
+                if (_BatchMinTemp != value)
+                {
+                    OnBatchMinTempChanging(value);
+                    ReportPropertyChanging("BatchMinTemp");
+                    _BatchMinTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMinTemp");
+                    OnBatchMinTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMinTemp;
+        partial void OnBatchMinTempChanging(global::System.Int32 value);
+        partial void OnBatchMinTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LayerType
+        {
+            get
+            {
+                return _LayerType;
+            }
+            set
+            {
+                if (_LayerType != value)
+                {
+                    OnLayerTypeChanging(value);
+                    ReportPropertyChanging("LayerType");
+                    _LayerType = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("LayerType");
+                    OnLayerTypeChanged();
+                }
+            }
+        }
+        private global::System.String _LayerType;
+        partial void OnLayerTypeChanging(global::System.String value);
+        partial void OnLayerTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralName
+        {
+            get
+            {
+                return _CentralName;
+            }
+            set
+            {
+                if (_CentralName != value)
+                {
+                    OnCentralNameChanging(value);
+                    ReportPropertyChanging("CentralName");
+                    _CentralName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralName");
+                    OnCentralNameChanged();
+                }
+            }
+        }
+        private global::System.String _CentralName;
+        partial void OnCentralNameChanging(global::System.String value);
+        partial void OnCentralNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralNameShort
+        {
+            get
+            {
+                return _CentralNameShort;
+            }
+            set
+            {
+                if (_CentralNameShort != value)
+                {
+                    OnCentralNameShortChanging(value);
+                    ReportPropertyChanging("CentralNameShort");
+                    _CentralNameShort = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralNameShort");
+                    OnCentralNameShortChanged();
+                }
+            }
+        }
+        private global::System.String _CentralNameShort;
+        partial void OnCentralNameShortChanging(global::System.String value);
+        partial void OnCentralNameShortChanged();
 
         #endregion
 
@@ -7216,7 +7636,12 @@ namespace RoadIt.Models
         /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
         /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
         /// <param name="asphaltMixPlantTimestamp">Initial value of the AsphaltMixPlantTimestamp property.</param>
-        public static ContractorView CreateContractorView(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp)
+        /// <param name="batchMaxTemp">Initial value of the BatchMaxTemp property.</param>
+        /// <param name="batchMinTemp">Initial value of the BatchMinTemp property.</param>
+        /// <param name="layerType">Initial value of the LayerType property.</param>
+        /// <param name="centralName">Initial value of the CentralName property.</param>
+        /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
+        public static ContractorView CreateContractorView(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
         {
             ContractorView contractorView = new ContractorView();
             contractorView.LayerThickness = layerThickness;
@@ -7296,6 +7721,11 @@ namespace RoadIt.Models
             contractorView.RoadDescription = roadDescription;
             contractorView.RoadSectionTimeStamp = roadSectionTimeStamp;
             contractorView.AsphaltMixPlantTimestamp = asphaltMixPlantTimestamp;
+            contractorView.BatchMaxTemp = batchMaxTemp;
+            contractorView.BatchMinTemp = batchMinTemp;
+            contractorView.LayerType = layerType;
+            contractorView.CentralName = centralName;
+            contractorView.CentralNameShort = centralNameShort;
             return contractorView;
         }
 
@@ -9381,6 +9811,141 @@ namespace RoadIt.Models
         private global::System.DateTime _AsphaltMixPlantTimestamp;
         partial void OnAsphaltMixPlantTimestampChanging(global::System.DateTime value);
         partial void OnAsphaltMixPlantTimestampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMaxTemp
+        {
+            get
+            {
+                return _BatchMaxTemp;
+            }
+            set
+            {
+                if (_BatchMaxTemp != value)
+                {
+                    OnBatchMaxTempChanging(value);
+                    ReportPropertyChanging("BatchMaxTemp");
+                    _BatchMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMaxTemp");
+                    OnBatchMaxTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMaxTemp;
+        partial void OnBatchMaxTempChanging(global::System.Int32 value);
+        partial void OnBatchMaxTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMinTemp
+        {
+            get
+            {
+                return _BatchMinTemp;
+            }
+            set
+            {
+                if (_BatchMinTemp != value)
+                {
+                    OnBatchMinTempChanging(value);
+                    ReportPropertyChanging("BatchMinTemp");
+                    _BatchMinTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMinTemp");
+                    OnBatchMinTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMinTemp;
+        partial void OnBatchMinTempChanging(global::System.Int32 value);
+        partial void OnBatchMinTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LayerType
+        {
+            get
+            {
+                return _LayerType;
+            }
+            set
+            {
+                if (_LayerType != value)
+                {
+                    OnLayerTypeChanging(value);
+                    ReportPropertyChanging("LayerType");
+                    _LayerType = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("LayerType");
+                    OnLayerTypeChanged();
+                }
+            }
+        }
+        private global::System.String _LayerType;
+        partial void OnLayerTypeChanging(global::System.String value);
+        partial void OnLayerTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralName
+        {
+            get
+            {
+                return _CentralName;
+            }
+            set
+            {
+                if (_CentralName != value)
+                {
+                    OnCentralNameChanging(value);
+                    ReportPropertyChanging("CentralName");
+                    _CentralName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralName");
+                    OnCentralNameChanged();
+                }
+            }
+        }
+        private global::System.String _CentralName;
+        partial void OnCentralNameChanging(global::System.String value);
+        partial void OnCentralNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralNameShort
+        {
+            get
+            {
+                return _CentralNameShort;
+            }
+            set
+            {
+                if (_CentralNameShort != value)
+                {
+                    OnCentralNameShortChanging(value);
+                    ReportPropertyChanging("CentralNameShort");
+                    _CentralNameShort = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralNameShort");
+                    OnCentralNameShortChanged();
+                }
+            }
+        }
+        private global::System.String _CentralNameShort;
+        partial void OnCentralNameShortChanging(global::System.String value);
+        partial void OnCentralNameShortChanged();
 
         #endregion
 
@@ -9442,7 +10007,12 @@ namespace RoadIt.Models
         /// <param name="mixtureName">Initial value of the MixtureName property.</param>
         /// <param name="technicalDataSheet">Initial value of the TechnicalDataSheet property.</param>
         /// <param name="truckTimeStamp">Initial value of the TruckTimeStamp property.</param>
-        public static Copro CreateCopro(global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String qrCodeCompactor, global::System.String samplesCopro, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime compactorTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.DateTime truckTimeStamp)
+        /// <param name="batchMaxTemp">Initial value of the BatchMaxTemp property.</param>
+        /// <param name="batchMinTemp">Initial value of the BatchMinTemp property.</param>
+        /// <param name="layerType">Initial value of the LayerType property.</param>
+        /// <param name="centralName">Initial value of the CentralName property.</param>
+        /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
+        public static Copro CreateCopro(global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime aggragationTimeStamp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String qrCodeCompactor, global::System.String samplesCopro, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime compactorTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.DateTime truckTimeStamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
         {
             Copro copro = new Copro();
             copro.TypeOfAggregates = typeOfAggregates;
@@ -9487,6 +10057,11 @@ namespace RoadIt.Models
             copro.MixtureName = mixtureName;
             copro.TechnicalDataSheet = technicalDataSheet;
             copro.TruckTimeStamp = truckTimeStamp;
+            copro.BatchMaxTemp = batchMaxTemp;
+            copro.BatchMinTemp = batchMinTemp;
+            copro.LayerType = layerType;
+            copro.CentralName = centralName;
+            copro.CentralNameShort = centralNameShort;
             return copro;
         }
 
@@ -10627,6 +11202,141 @@ namespace RoadIt.Models
         private global::System.DateTime _TruckTimeStamp;
         partial void OnTruckTimeStampChanging(global::System.DateTime value);
         partial void OnTruckTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMaxTemp
+        {
+            get
+            {
+                return _BatchMaxTemp;
+            }
+            set
+            {
+                if (_BatchMaxTemp != value)
+                {
+                    OnBatchMaxTempChanging(value);
+                    ReportPropertyChanging("BatchMaxTemp");
+                    _BatchMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMaxTemp");
+                    OnBatchMaxTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMaxTemp;
+        partial void OnBatchMaxTempChanging(global::System.Int32 value);
+        partial void OnBatchMaxTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMinTemp
+        {
+            get
+            {
+                return _BatchMinTemp;
+            }
+            set
+            {
+                if (_BatchMinTemp != value)
+                {
+                    OnBatchMinTempChanging(value);
+                    ReportPropertyChanging("BatchMinTemp");
+                    _BatchMinTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMinTemp");
+                    OnBatchMinTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMinTemp;
+        partial void OnBatchMinTempChanging(global::System.Int32 value);
+        partial void OnBatchMinTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LayerType
+        {
+            get
+            {
+                return _LayerType;
+            }
+            set
+            {
+                if (_LayerType != value)
+                {
+                    OnLayerTypeChanging(value);
+                    ReportPropertyChanging("LayerType");
+                    _LayerType = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("LayerType");
+                    OnLayerTypeChanged();
+                }
+            }
+        }
+        private global::System.String _LayerType;
+        partial void OnLayerTypeChanging(global::System.String value);
+        partial void OnLayerTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralName
+        {
+            get
+            {
+                return _CentralName;
+            }
+            set
+            {
+                if (_CentralName != value)
+                {
+                    OnCentralNameChanging(value);
+                    ReportPropertyChanging("CentralName");
+                    _CentralName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralName");
+                    OnCentralNameChanged();
+                }
+            }
+        }
+        private global::System.String _CentralName;
+        partial void OnCentralNameChanging(global::System.String value);
+        partial void OnCentralNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralNameShort
+        {
+            get
+            {
+                return _CentralNameShort;
+            }
+            set
+            {
+                if (_CentralNameShort != value)
+                {
+                    OnCentralNameShortChanging(value);
+                    ReportPropertyChanging("CentralNameShort");
+                    _CentralNameShort = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralNameShort");
+                    OnCentralNameShortChanged();
+                }
+            }
+        }
+        private global::System.String _CentralNameShort;
+        partial void OnCentralNameShortChanging(global::System.String value);
+        partial void OnCentralNameShortChanged();
 
         #endregion
 
@@ -14654,7 +15364,12 @@ namespace RoadIt.Models
         /// <param name="roadDescription">Initial value of the RoadDescription property.</param>
         /// <param name="roadSectionTimeStamp">Initial value of the RoadSectionTimeStamp property.</param>
         /// <param name="compactorTimeStamp">Initial value of the CompactorTimeStamp property.</param>
-        public static Trucker CreateTrucker(global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime compactorTimeStamp)
+        /// <param name="batchMaxTemp">Initial value of the BatchMaxTemp property.</param>
+        /// <param name="batchMinTemp">Initial value of the BatchMinTemp property.</param>
+        /// <param name="layerType">Initial value of the LayerType property.</param>
+        /// <param name="centralName">Initial value of the CentralName property.</param>
+        /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
+        public static Trucker CreateTrucker(global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime compactorTimeStamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
         {
             Trucker trucker = new Trucker();
             trucker.TruckLicensPlate = truckLicensPlate;
@@ -14683,6 +15398,11 @@ namespace RoadIt.Models
             trucker.RoadDescription = roadDescription;
             trucker.RoadSectionTimeStamp = roadSectionTimeStamp;
             trucker.CompactorTimeStamp = compactorTimeStamp;
+            trucker.BatchMaxTemp = batchMaxTemp;
+            trucker.BatchMinTemp = batchMinTemp;
+            trucker.LayerType = layerType;
+            trucker.CentralName = centralName;
+            trucker.CentralNameShort = centralNameShort;
             return trucker;
         }
 
@@ -15391,6 +16111,141 @@ namespace RoadIt.Models
         private global::System.DateTime _CompactorTimeStamp;
         partial void OnCompactorTimeStampChanging(global::System.DateTime value);
         partial void OnCompactorTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMaxTemp
+        {
+            get
+            {
+                return _BatchMaxTemp;
+            }
+            set
+            {
+                if (_BatchMaxTemp != value)
+                {
+                    OnBatchMaxTempChanging(value);
+                    ReportPropertyChanging("BatchMaxTemp");
+                    _BatchMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMaxTemp");
+                    OnBatchMaxTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMaxTemp;
+        partial void OnBatchMaxTempChanging(global::System.Int32 value);
+        partial void OnBatchMaxTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMinTemp
+        {
+            get
+            {
+                return _BatchMinTemp;
+            }
+            set
+            {
+                if (_BatchMinTemp != value)
+                {
+                    OnBatchMinTempChanging(value);
+                    ReportPropertyChanging("BatchMinTemp");
+                    _BatchMinTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMinTemp");
+                    OnBatchMinTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMinTemp;
+        partial void OnBatchMinTempChanging(global::System.Int32 value);
+        partial void OnBatchMinTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LayerType
+        {
+            get
+            {
+                return _LayerType;
+            }
+            set
+            {
+                if (_LayerType != value)
+                {
+                    OnLayerTypeChanging(value);
+                    ReportPropertyChanging("LayerType");
+                    _LayerType = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("LayerType");
+                    OnLayerTypeChanged();
+                }
+            }
+        }
+        private global::System.String _LayerType;
+        partial void OnLayerTypeChanging(global::System.String value);
+        partial void OnLayerTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralName
+        {
+            get
+            {
+                return _CentralName;
+            }
+            set
+            {
+                if (_CentralName != value)
+                {
+                    OnCentralNameChanging(value);
+                    ReportPropertyChanging("CentralName");
+                    _CentralName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralName");
+                    OnCentralNameChanged();
+                }
+            }
+        }
+        private global::System.String _CentralName;
+        partial void OnCentralNameChanging(global::System.String value);
+        partial void OnCentralNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralNameShort
+        {
+            get
+            {
+                return _CentralNameShort;
+            }
+            set
+            {
+                if (_CentralNameShort != value)
+                {
+                    OnCentralNameShortChanging(value);
+                    ReportPropertyChanging("CentralNameShort");
+                    _CentralNameShort = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralNameShort");
+                    OnCentralNameShortChanged();
+                }
+            }
+        }
+        private global::System.String _CentralNameShort;
+        partial void OnCentralNameShortChanging(global::System.String value);
+        partial void OnCentralNameShortChanged();
 
         #endregion
 
@@ -15647,7 +16502,12 @@ namespace RoadIt.Models
         /// <param name="analysisComposition">Initial value of the AnalysisComposition property.</param>
         /// <param name="siloTimpStamp">Initial value of the SiloTimpStamp property.</param>
         /// <param name="aggragationTimeStamp">Initial value of the AggragationTimeStamp property.</param>
-        public static UA CreateUA(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.DateTime aggragationTimeStamp)
+        /// <param name="batchMaxTemp">Initial value of the BatchMaxTemp property.</param>
+        /// <param name="batchMinTemp">Initial value of the BatchMinTemp property.</param>
+        /// <param name="layerType">Initial value of the LayerType property.</param>
+        /// <param name="centralName">Initial value of the CentralName property.</param>
+        /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
+        public static UA CreateUA(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.DateTime aggragationTimeStamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
         {
             UA uA = new UA();
             uA.LayerThickness = layerThickness;
@@ -15752,6 +16612,11 @@ namespace RoadIt.Models
             uA.AnalysisComposition = analysisComposition;
             uA.SiloTimpStamp = siloTimpStamp;
             uA.AggragationTimeStamp = aggragationTimeStamp;
+            uA.BatchMaxTemp = batchMaxTemp;
+            uA.BatchMinTemp = batchMinTemp;
+            uA.LayerType = layerType;
+            uA.CentralName = centralName;
+            uA.CentralNameShort = centralNameShort;
             return uA;
         }
 
@@ -18512,6 +19377,141 @@ namespace RoadIt.Models
         private global::System.DateTime _AggragationTimeStamp;
         partial void OnAggragationTimeStampChanging(global::System.DateTime value);
         partial void OnAggragationTimeStampChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMaxTemp
+        {
+            get
+            {
+                return _BatchMaxTemp;
+            }
+            set
+            {
+                if (_BatchMaxTemp != value)
+                {
+                    OnBatchMaxTempChanging(value);
+                    ReportPropertyChanging("BatchMaxTemp");
+                    _BatchMaxTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMaxTemp");
+                    OnBatchMaxTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMaxTemp;
+        partial void OnBatchMaxTempChanging(global::System.Int32 value);
+        partial void OnBatchMaxTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BatchMinTemp
+        {
+            get
+            {
+                return _BatchMinTemp;
+            }
+            set
+            {
+                if (_BatchMinTemp != value)
+                {
+                    OnBatchMinTempChanging(value);
+                    ReportPropertyChanging("BatchMinTemp");
+                    _BatchMinTemp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BatchMinTemp");
+                    OnBatchMinTempChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BatchMinTemp;
+        partial void OnBatchMinTempChanging(global::System.Int32 value);
+        partial void OnBatchMinTempChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String LayerType
+        {
+            get
+            {
+                return _LayerType;
+            }
+            set
+            {
+                if (_LayerType != value)
+                {
+                    OnLayerTypeChanging(value);
+                    ReportPropertyChanging("LayerType");
+                    _LayerType = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("LayerType");
+                    OnLayerTypeChanged();
+                }
+            }
+        }
+        private global::System.String _LayerType;
+        partial void OnLayerTypeChanging(global::System.String value);
+        partial void OnLayerTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralName
+        {
+            get
+            {
+                return _CentralName;
+            }
+            set
+            {
+                if (_CentralName != value)
+                {
+                    OnCentralNameChanging(value);
+                    ReportPropertyChanging("CentralName");
+                    _CentralName = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralName");
+                    OnCentralNameChanged();
+                }
+            }
+        }
+        private global::System.String _CentralName;
+        partial void OnCentralNameChanging(global::System.String value);
+        partial void OnCentralNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CentralNameShort
+        {
+            get
+            {
+                return _CentralNameShort;
+            }
+            set
+            {
+                if (_CentralNameShort != value)
+                {
+                    OnCentralNameShortChanging(value);
+                    ReportPropertyChanging("CentralNameShort");
+                    _CentralNameShort = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("CentralNameShort");
+                    OnCentralNameShortChanged();
+                }
+            }
+        }
+        private global::System.String _CentralNameShort;
+        partial void OnCentralNameShortChanging(global::System.String value);
+        partial void OnCentralNameShortChanged();
 
         #endregion
 
