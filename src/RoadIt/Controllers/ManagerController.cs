@@ -101,9 +101,10 @@ namespace RoadIt.Controllers
             {
                 if(AcceptedList[i][0] == CentralName)
                 {
-                    int list = Convert.ToInt32(AcceptedList[i]);
-                    list =+ 1;
-                    AcceptedList[i].Insert(1, list.ToString());
+                    string list = AcceptedList[i][1];
+                    int tel = Convert.ToInt32(list);
+                    tel++;
+                    AcceptedList[i][1] = tel.ToString();
                 }
                 else
                 {
@@ -154,9 +155,10 @@ namespace RoadIt.Controllers
             {
                 if (TotalMasList[i][0] == CentralName)
                 {
-                    int list = Convert.ToInt32(RejectedList[i]);
-                    list =+  Mass;
-                    RejectedList[i].Insert(1, list.ToString());
+                    string list = TotalMasList[i][1];
+                    int tel = Convert.ToInt32(list);
+                    tel += Mass;
+                    TotalMasList[i][1] = tel.ToString();
                 }
                 else
                 {
