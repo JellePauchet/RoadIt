@@ -1,0 +1,1012 @@
+SET time_zone = "+00:00";
+CREATE DATABASE IF NOT EXISTS `sammegf117_roadit` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE sammegf117_roadit;
+
+DROP TABLE IF EXISTS `ActualPosition`;
+CREATE TABLE IF NOT EXISTS `ActualPosition` (
+  `ActualPositionId` int(255) NOT NULL AUTO_INCREMENT,
+  `ActualPosition` varchar(255) NOT NULL,
+  `ActualPositionTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ActualPositionId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `ActualPosition` (`ActualPositionId`, `ActualPosition`, `ActualPositionTimeStamp`) VALUES
+(1, '45.3554 ; 4.31351', '2016-11-25 12:04:30'),
+(2, '47.3513 ; 4.3513', '2016-11-25 12:29:42'),
+(3, '49.3155 ; 6.6512', '2016-11-28 07:05:15');
+
+DROP TABLE IF EXISTS `ActualPositionReturn`;
+CREATE TABLE IF NOT EXISTS `ActualPositionReturn` (
+  `ActualPositionReturnId` int(255) NOT NULL AUTO_INCREMENT,
+  `ActualPositionReturn` varchar(255) NOT NULL,
+  `ActualPositionReturnTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ActualPositionReturnId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `ActualPositionReturn` (`ActualPositionReturnId`, `ActualPositionReturn`, `ActualPositionReturnTimeStamp`) VALUES
+(1, '45.3515 ; 4.3515', '2016-11-25 12:15:34'),
+(2, '47.3515 ; 6.3515', '2016-11-25 12:30:10'),
+(3, '48.6512 ; 4.2165', '2016-11-28 07:38:39');
+
+DROP TABLE IF EXISTS `Aggragation`;
+CREATE TABLE IF NOT EXISTS `Aggragation` (
+  `AggragationId` int(255) NOT NULL AUTO_INCREMENT,
+  `AggragationMaxTemp` int(4) NOT NULL,
+  `AggragationMinTemp` int(4) NOT NULL,
+  `AggragationTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`AggragationId`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `Aggragation` (`AggragationId`, `AggragationMaxTemp`, `AggragationMinTemp`, `AggragationTimeStamp`) VALUES
+(1, 150, 145, '2016-11-25 11:51:39'),
+(2, 163, 105, '2016-11-28 07:02:53');
+
+DROP TABLE IF EXISTS `AirHumidity`;
+CREATE TABLE IF NOT EXISTS `AirHumidity` (
+  `AirHumidityId` int(255) NOT NULL AUTO_INCREMENT,
+  `AirHumidity` int(3) NOT NULL,
+  `AirHumidityTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`AirHumidityId`)
+) TYPE=InnoDB  AUTO_INCREMENT=12 ;
+
+INSERT INTO `AirHumidity` (`AirHumidityId`, `AirHumidity`, `AirHumidityTimeStamp`) VALUES
+(1, 40, '2016-11-25 12:24:58'),
+(2, 80, '2016-11-25 12:30:25'),
+(11, 60, '2016-11-28 07:08:38');
+
+DROP TABLE IF EXISTS `Angle`;
+CREATE TABLE IF NOT EXISTS `Angle` (
+  `AngleId` int(255) NOT NULL AUTO_INCREMENT,
+  `LeftAngle` int(3) NOT NULL,
+  `RightAngle` int(3) NOT NULL,
+  `AngleTimestamp` timestamp NOT NULL,
+  PRIMARY KEY (`AngleId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `Angle` (`AngleId`, `LeftAngle`, `RightAngle`, `AngleTimestamp`) VALUES
+(1, 85, 70, '2016-11-25 12:25:35'),
+(2, 45, 0, '2016-11-25 12:30:53'),
+(3, 30, 10, '2016-11-28 07:09:01');
+
+DROP TABLE IF EXISTS `AsphaltMixPlant`;
+CREATE TABLE IF NOT EXISTS `AsphaltMixPlant` (
+  `CentralId` int(255) NOT NULL AUTO_INCREMENT,
+  `MixtureName` varchar(255) NOT NULL,
+  `TechnicalDataSheet` varchar(255) NOT NULL,
+  `TypeOfAggregates` varchar(255) NOT NULL,
+  `MixtureChange` varchar(255) NOT NULL,
+  `AsphaltMixPlantTimestamp` timestamp NOT NULL,
+  `CentralName` varchar(255) NOT NULL,
+  `CentralNameShort` varchar(10) NOT NULL,
+  PRIMARY KEY (`CentralId`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `AsphaltMixPlant` (`CentralId`, `MixtureName`, `TechnicalDataSheet`, `TypeOfAggregates`, `MixtureChange`, `AsphaltMixPlantTimestamp`, `CentralName`, `CentralNameShort`) VALUES
+(1, 'AB-4D', 'TechnicalDataSheet.pdf', 'TypeOfAggregates.pdf', 'MixtureChange.pdf', '2016-11-25 20:55:38', 'Aswebo', 'AS1'),
+(2, 'AB-5D', 'TechnicalDataSheet2.pdf', 'TypeOfAggregates2.pdf', 'MixtureChange2.pdf', '2016-11-28 20:56:00', 'Van Wellen', 'VW1');
+DROP VIEW IF EXISTS `AsphaltProcucer`;
+CREATE TABLE IF NOT EXISTS `AsphaltProcucer` (
+`TonPerDay` int(10)
+,`TruckLicensPlate` varchar(255)
+,`DepartureTime` timestamp
+,`MassTruck` int(5)
+,`RealArrivalTime` timestamp
+,`DeattachmentFinisherTime` timestamp
+,`DeattachmentFinisherPosition` varchar(255)
+,`ArrivalAtPlant` timestamp
+,`AttachmentToFinisherTime` timestamp
+,`AttachmentToFinisherPosition` varchar(255)
+,`TruckTimeStamp` timestamp
+,`Temp` int(4)
+,`TempTruckTimeStamp` timestamp
+,`StopLocationUnforseenStop` varchar(255)
+,`StopTimeUnforseenStop` time
+,`UnforseenStopTimeStamp` timestamp
+,`ActualPosition` varchar(255)
+,`ActualPositionTimeStamp` timestamp
+,`ActualPositionReturn` varchar(255)
+,`ActualPositionReturnTimeStamp` timestamp
+,`ETA` time
+,`ETATimeStamp` timestamp
+,`ETAReturn` time
+,`ETAReturnTimeStamp` timestamp
+,`QrCodeCompactor` varchar(255)
+,`ComplianceMixture` varchar(255)
+,`SamplesCopro` varchar(255)
+,`RoadId` int(255)
+,`RoadDescription` varchar(255)
+,`RoadSectionTimeStamp` timestamp
+,`MixtureName` varchar(255)
+,`TechnicalDataSheet` varchar(255)
+,`TypeOfAggregates` varchar(255)
+,`MixtureChange` varchar(255)
+,`AsphaltMixPlantTimestamp` timestamp
+,`AggragationMaxTemp` int(4)
+,`AggragationMinTemp` int(4)
+,`AggragationTimeStamp` timestamp
+,`BitumenTimeStamp` timestamp
+,`BitumenMinTemp` int(4)
+,`BitumenMaxTemp` int(4)
+,`FillerRecup` int(3)
+,`FillerRecupTimeStamp` timestamp
+,`MassOfAggregationBunker1` int(10)
+,`MassOfAggregationBunker2` int(10)
+,`MassOfAggregationBunker3` int(10)
+,`MassOfAggregationBunker4` int(10)
+,`MassOfAggregationBunker5` int(10)
+,`MassOfAggregationBunker6` int(10)
+,`Filler` int(10)
+,`Bitumen` int(10)
+,`AdditivesKg` int(10)
+,`CompositionTimeStamp` timestamp
+,`MixingTemp` int(4)
+,`MixingTime` time
+,`TempSilo` int(4)
+,`AnalysisComposition` varchar(255)
+,`SiloTimpStamp` timestamp
+,`PlanningTimeStamp` timestamp
+,`CompactorTimeStamp` timestamp
+,`QualtityTimeStamp` timestamp
+,`BatchMaxTemp` int(4)
+,`BatchMinTemp` int(4)
+,`LayerType` varchar(255)
+,`CentralName` varchar(255)
+,`CentralNameShort` varchar(10)
+);
+DROP TABLE IF EXISTS `AsphaltTemp`;
+CREATE TABLE IF NOT EXISTS `AsphaltTemp` (
+  `AsphaltTempId` int(255) NOT NULL AUTO_INCREMENT,
+  `GPS` varchar(255) NOT NULL,
+  `TempAsphalt` int(4) NOT NULL,
+  `AsphaltTempTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`AsphaltTempId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `AsphaltTemp` (`AsphaltTempId`, `GPS`, `TempAsphalt`, `AsphaltTempTimeStamp`) VALUES
+(1, '50.3515 ; 4.9321', 75, '2016-11-25 12:24:36'),
+(2, '46.3533 ; 3.3548', 90, '2016-11-25 12:31:36'),
+(3, '46.2562 ; 5.2611', 75, '2016-11-28 07:38:02');
+
+DROP TABLE IF EXISTS `BatchList`;
+CREATE TABLE IF NOT EXISTS `BatchList` (
+  `BatchId` int(255) NOT NULL AUTO_INCREMENT,
+  `ProjectId` int(255) NOT NULL,
+  `SiloId` int(255) NOT NULL,
+  `TruckId` int(255) NOT NULL,
+  `FinisherId` int(255) NOT NULL,
+  `BatchListTimeStamp` timestamp NULL,
+  `BatchMaxTemp` int(4) NOT NULL,
+  `BatchMinTemp` int(4) NOT NULL,
+  `LayerType` varchar(255) NOT NULL,
+  PRIMARY KEY (`BatchId`),
+  KEY `SiloId` (`SiloId`),
+  KEY `TransportId` (`TruckId`),
+  KEY `ProjectId` (`ProjectId`),
+  KEY `FinisherId` (`FinisherId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `BatchList` (`BatchId`, `ProjectId`, `SiloId`, `TruckId`, `FinisherId`, `BatchListTimeStamp`, `BatchMaxTemp`, `BatchMinTemp`, `LayerType`) VALUES
+(1, 1, 1, 1, 1, '2016-11-25 19:32:25', 180, 120, 'Toplayer'),
+(3, 2, 3, 3, 2, '2016-11-28 19:32:54', 200, 150, 'Bottomlayer');
+
+DROP TABLE IF EXISTS `Bitumen`;
+CREATE TABLE IF NOT EXISTS `Bitumen` (
+  `BitumenId` int(255) NOT NULL AUTO_INCREMENT,
+  `BitumenTimeStamp` timestamp NOT NULL,
+  `BitumenMinTemp` int(4) NOT NULL,
+  `BitumenMaxTemp` int(4) NOT NULL,
+  PRIMARY KEY (`BitumenId`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `Bitumen` (`BitumenId`, `BitumenTimeStamp`, `BitumenMinTemp`, `BitumenMaxTemp`) VALUES
+(1, '2016-11-25 11:57:50', 120, 130),
+(2, '2016-11-28 07:03:06', 106, 161);
+DROP VIEW IF EXISTS `Client`;
+CREATE TABLE IF NOT EXISTS `Client` (
+`MixtureName` varchar(255)
+,`TechnicalDataSheet` varchar(255)
+,`MixtureChange` varchar(255)
+,`TruckLicensPlate` varchar(255)
+,`DepartureTime` timestamp
+,`MassTruck` int(5)
+,`RealArrivalTime` timestamp
+,`ActualPosition` varchar(255)
+,`ActualPositionTimeStamp` timestamp
+,`ETA` time
+,`ETATimeStamp` timestamp
+,`Precipation` varchar(255)
+,`AsphaltTempAfterFinisherIrScanOrThermo` varchar(255)
+,`FinisherTimeStamp` timestamp
+,`LeftTickness` int(5)
+,`MiddelThickness` int(5)
+,`RightThickness` int(5)
+,`ThicknessTimeStamp` timestamp
+,`TempWeather` int(4)
+,`WeatherTempTimeStamp` timestamp
+,`Width` int(3)
+,`WidthTimeStamp` timestamp
+,`WindSpeed` int(3)
+,`WindTimeStamp` timestamp
+,`AirHumidity` int(3)
+,`AirHumidityTimeStamp` timestamp
+,`LeftAngle` int(3)
+,`RightAngle` int(3)
+,`AngleTimestamp` timestamp
+,`Speed` int(3)
+,`SpeedFinisherTimeStamp` timestamp
+,`StopLocationLTS` varchar(255)
+,`StopTimeLTS` time
+,`StopTimeStamp` timestamp
+,`GPS` varchar(255)
+,`TempAsphalt` int(4)
+,`AsphaltTempTimeStamp` timestamp
+,`GPSCompactor` varchar(255)
+,`ColorCodeTimeStamp` timestamp
+,`QrCodeCompactor` varchar(255)
+,`ComplianceMixture` varchar(255)
+,`SamplesCopro` varchar(255)
+,`DensityOfField` varchar(255)
+,`Cores` varchar(255)
+,`LengthwiseFlatness` varchar(255)
+,`Skidresistance` varchar(255)
+,`Iri` varchar(255)
+,`ExtraTestsAskedBijClient` varchar(255)
+,`QualtityTimeStamp` timestamp
+,`RoadId` int(255)
+,`RoadDescription` varchar(255)
+,`RoadSectionTimeStamp` timestamp
+,`AsphaltMixPlantTimestamp` timestamp
+,`TruckTimeStamp` timestamp
+,`CompactorTimeStamp` timestamp
+,`TranverseSlope` int(3)
+,`GPSFinisher` varchar(255)
+,`BatchMaxTemp` int(4)
+,`BatchMinTemp` int(4)
+,`LayerType` varchar(255)
+,`CentralName` varchar(255)
+,`CentralNameShort` varchar(10)
+,`FinicherId` int(255)
+);
+DROP TABLE IF EXISTS `ColorCode`;
+CREATE TABLE IF NOT EXISTS `ColorCode` (
+  `ColorCodeID` int(255) NOT NULL AUTO_INCREMENT,
+  `GPSFinisher` varchar(255) NOT NULL,
+  `GPSCompactor` varchar(255) NOT NULL,
+  `ColorCodeTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ColorCodeID`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `ColorCode` (`ColorCodeID`, `GPSFinisher`, `GPSCompactor`, `ColorCodeTimeStamp`) VALUES
+(1, '51.093604 ; 5.063049', '51.122920 ; 4.955933', '2016-11-25 11:48:13'),
+(2, '49.6512 ; 4.6513', '50.6651 ; 5.6513', '2016-11-28 06:58:51');
+
+DROP TABLE IF EXISTS `Compactor`;
+CREATE TABLE IF NOT EXISTS `Compactor` (
+  `CompactorId` int(255) NOT NULL AUTO_INCREMENT COMMENT 'PK',
+  `BatchId` int(255) NOT NULL COMMENT 'FK',
+  `QrCodeCompactor` varchar(255) NOT NULL,
+  `NumberOfRollerCompactorPassages` int(255) NOT NULL,
+  `LocationOfVibration` varchar(255) NOT NULL,
+  `ColorCodeId` int(255) NOT NULL COMMENT 'FK',
+  `SpeedOfRollerCompactor` int(3) NOT NULL,
+  `CompactorTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`CompactorId`),
+  KEY `ColorCodeId` (`ColorCodeId`),
+  KEY `BatchId` (`BatchId`)
+) TYPE=InnoDB  AUTO_INCREMENT=5 ;
+
+INSERT INTO `Compactor` (`CompactorId`, `BatchId`, `QrCodeCompactor`, `NumberOfRollerCompactorPassages`, `LocationOfVibration`, `ColorCodeId`, `SpeedOfRollerCompactor`, `CompactorTimeStamp`) VALUES
+(3, 3, 'QrCodeCompactor.com', 20, 'middle', 2, 25, '2016-11-28 07:42:18'),
+(4, 1, 'QrCodeCompactor2.com', 25, 'Left', 1, 12, '2016-11-25 08:06:37');
+
+DROP TABLE IF EXISTS `Composition`;
+CREATE TABLE IF NOT EXISTS `Composition` (
+  `RealCompositionId` int(255) NOT NULL AUTO_INCREMENT,
+  `MassOfAggregationBunker1` int(10) NOT NULL,
+  `MassOfAggregationBunker2` int(10) NOT NULL,
+  `MassOfAggregationBunker3` int(10) NOT NULL,
+  `MassOfAggregationBunker4` int(10) NOT NULL,
+  `MassOfAggregationBunker5` int(10) NOT NULL,
+  `MassOfAggregationBunker6` int(10) NOT NULL,
+  `Filler` int(10) NOT NULL,
+  `Bitumen` int(10) NOT NULL,
+  `AdditivesKg` int(10) NOT NULL,
+  `CompositionTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`RealCompositionId`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `Composition` (`RealCompositionId`, `MassOfAggregationBunker1`, `MassOfAggregationBunker2`, `MassOfAggregationBunker3`, `MassOfAggregationBunker4`, `MassOfAggregationBunker5`, `MassOfAggregationBunker6`, `Filler`, `Bitumen`, `AdditivesKg`, `CompositionTimeStamp`) VALUES
+(1, 222, 215, 251, 201, 235, 245, 25, 80, 45, '2016-11-25 11:59:19'),
+(2, 203, 206, 216, 265, 191, 165, 20, 15, 46, '2016-11-28 07:00:58');
+
+DROP TABLE IF EXISTS `Contractor`;
+CREATE TABLE IF NOT EXISTS `Contractor` (
+  `ContractorId` int(255) NOT NULL AUTO_INCREMENT,
+  `ProjectId` int(255) NOT NULL,
+  `ContractorTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ContractorId`),
+  KEY `ProjectId` (`ProjectId`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `Contractor` (`ContractorId`, `ProjectId`, `ContractorTimeStamp`) VALUES
+(1, 1, '2016-11-25 11:38:16'),
+(2, 2, '2016-11-28 06:55:01');
+DROP VIEW IF EXISTS `ContractorView`;
+CREATE TABLE IF NOT EXISTS `ContractorView` (
+`LayerThickness` int(3)
+,`Surface` int(10)
+,`TonPerDay` int(10)
+,`PlanningTimeStamp` timestamp
+,`MixtureName` varchar(255)
+,`TechnicalDataSheet` varchar(255)
+,`TruckLicensPlate` varchar(255)
+,`DepartureTime` timestamp
+,`MassTruck` int(5)
+,`RealArrivalTime` timestamp
+,`DeattachmentFinisherTime` timestamp
+,`DeattachmentFinisherPosition` varchar(255)
+,`ArrivalAtPlant` timestamp
+,`AttachmentToFinisherTime` timestamp
+,`AttachmentToFinisherPosition` varchar(255)
+,`TruckTimeStamp` timestamp
+,`Temp` int(4)
+,`TempTruckTimeStamp` timestamp
+,`StopLocationUnforseenStop` varchar(255)
+,`StopTimeUnforseenStop` time
+,`UnforseenStopTimeStamp` timestamp
+,`ActualPosition` varchar(255)
+,`ActualPositionTimeStamp` timestamp
+,`ActualPositionReturn` varchar(255)
+,`ActualPositionReturnTimeStamp` timestamp
+,`ETA` time
+,`ETATimeStamp` timestamp
+,`ETAReturn` time
+,`ETAReturnTimeStamp` timestamp
+,`TranverseSlope` int(3)
+,`Precipation` varchar(255)
+,`AsphaltTempAfterFinisherIrScanOrThermo` varchar(255)
+,`FinisherTimeStamp` timestamp
+,`LeftTickness` int(5)
+,`MiddelThickness` int(5)
+,`RightThickness` int(5)
+,`ThicknessTimeStamp` timestamp
+,`TempWeather` int(4)
+,`WeatherTempTimeStamp` timestamp
+,`Width` int(3)
+,`WidthTimeStamp` timestamp
+,`WindSpeed` int(3)
+,`WindTimeStamp` timestamp
+,`AirHumidity` int(3)
+,`AirHumidityTimeStamp` timestamp
+,`LeftAngle` int(3)
+,`RightAngle` int(3)
+,`AngleTimestamp` timestamp
+,`Speed` int(3)
+,`SpeedFinisherTimeStamp` timestamp
+,`StopLocationLTS` varchar(255)
+,`StopTimeLTS` time
+,`StopTimeStamp` timestamp
+,`GPS` varchar(255)
+,`TempAsphalt` int(4)
+,`AsphaltTempTimeStamp` timestamp
+,`GPSFinisher` varchar(255)
+,`GPSCompactor` varchar(255)
+,`ColorCodeTimeStamp` timestamp
+,`QrCodeCompactor` varchar(255)
+,`NumberOfRollerCompactorPassages` int(255)
+,`LocationOfVibration` varchar(255)
+,`SpeedOfRollerCompactor` int(3)
+,`CompactorTimeStamp` timestamp
+,`ComplianceMixture` varchar(255)
+,`SamplesCopro` varchar(255)
+,`DensityOfField` varchar(255)
+,`Cores` varchar(255)
+,`LengthwiseFlatness` varchar(255)
+,`Skidresistance` varchar(255)
+,`Iri` varchar(255)
+,`ExtraTestsAskedBijClient` varchar(255)
+,`QualtityTimeStamp` timestamp
+,`RoadId` int(255)
+,`RoadDescription` varchar(255)
+,`RoadSectionTimeStamp` timestamp
+,`AsphaltMixPlantTimestamp` timestamp
+,`BatchMaxTemp` int(4)
+,`BatchMinTemp` int(4)
+,`LayerType` varchar(255)
+,`CentralName` varchar(255)
+,`CentralNameShort` varchar(10)
+,`FinicherId` int(255)
+);DROP VIEW IF EXISTS `Copro`;
+CREATE TABLE IF NOT EXISTS `Copro` (
+`TypeOfAggregates` varchar(255)
+,`MixtureChange` varchar(255)
+,`AsphaltMixPlantTimestamp` timestamp
+,`AggragationMaxTemp` int(4)
+,`AggragationMinTemp` int(4)
+,`AggragationTimeStamp` timestamp
+,`BitumenTimeStamp` timestamp
+,`BitumenMinTemp` int(4)
+,`BitumenMaxTemp` int(4)
+,`FillerRecup` int(3)
+,`FillerRecupTimeStamp` timestamp
+,`MassOfAggregationBunker1` int(10)
+,`MassOfAggregationBunker2` int(10)
+,`MassOfAggregationBunker3` int(10)
+,`MassOfAggregationBunker4` int(10)
+,`MassOfAggregationBunker5` int(10)
+,`MassOfAggregationBunker6` int(10)
+,`Filler` int(10)
+,`Bitumen` int(10)
+,`AdditivesKg` int(10)
+,`CompositionTimeStamp` timestamp
+,`MixingTemp` int(4)
+,`MixingTime` time
+,`TempSilo` int(4)
+,`AnalysisComposition` varchar(255)
+,`SiloTimpStamp` timestamp
+,`TruckLicensPlate` varchar(255)
+,`DepartureTime` timestamp
+,`MassTruck` int(5)
+,`Temp` int(4)
+,`TempTruckTimeStamp` timestamp
+,`QrCodeCompactor` varchar(255)
+,`SamplesCopro` varchar(255)
+,`ExtraTestsAskedBijClient` varchar(255)
+,`QualtityTimeStamp` timestamp
+,`RoadId` int(255)
+,`RoadDescription` varchar(255)
+,`RoadSectionTimeStamp` timestamp
+,`CompactorTimeStamp` timestamp
+,`MixtureName` varchar(255)
+,`TechnicalDataSheet` varchar(255)
+,`TruckTimeStamp` timestamp
+,`BatchMaxTemp` int(4)
+,`BatchMinTemp` int(4)
+,`LayerType` varchar(255)
+,`CentralName` varchar(255)
+,`CentralNameShort` varchar(10)
+);
+DROP TABLE IF EXISTS `ETA`;
+CREATE TABLE IF NOT EXISTS `ETA` (
+  `ETAId` int(255) NOT NULL AUTO_INCREMENT,
+  `ETA` time NOT NULL,
+  `ETATimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ETAId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `ETA` (`ETAId`, `ETA`, `ETATimeStamp`) VALUES
+(1, '01:20:00', '2016-11-25 12:14:02'),
+(2, '03:54:00', '2016-11-25 12:32:12'),
+(3, '02:05:10', '2016-11-28 07:04:39');
+
+DROP TABLE IF EXISTS `ETAReturn`;
+CREATE TABLE IF NOT EXISTS `ETAReturn` (
+  `ETAReturnId` int(255) NOT NULL AUTO_INCREMENT,
+  `ETAReturn` time NOT NULL,
+  `ETAReturnTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ETAReturnId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `ETAReturn` (`ETAReturnId`, `ETAReturn`, `ETAReturnTimeStamp`) VALUES
+(1, '03:30:00', '2016-11-25 12:15:50'),
+(2, '02:32:00', '2016-11-25 12:32:28'),
+(3, '02:50:14', '2016-11-28 07:38:53');
+
+DROP TABLE IF EXISTS `Finisher`;
+CREATE TABLE IF NOT EXISTS `Finisher` (
+  `FinicherId` int(255) NOT NULL AUTO_INCREMENT COMMENT 'PK',
+  `SpeedId` int(255) NOT NULL,
+  `AngleId` int(255) NOT NULL,
+  `WidthId` int(255) NOT NULL,
+  `ThicknessLayerId` int(255) NOT NULL,
+  `TranverseSlope` int(3) NOT NULL,
+  `LocationAndTimeSpanId` int(255) NOT NULL,
+  `Precipation` varchar(255) NOT NULL,
+  `TempId` int(255) NOT NULL,
+  `WindId` int(255) NOT NULL,
+  `AirHumidityId` int(255) NOT NULL,
+  `AsphaltTempAfterFinisherIrScanOrThermo` varchar(255) NOT NULL,
+  `AsphaltTempId` int(255) NOT NULL,
+  `FinisherTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`FinicherId`),
+  KEY `AngleId` (`AngleId`),
+  KEY `SpeedId` (`SpeedId`),
+  KEY `WidthId` (`WidthId`),
+  KEY `ThicknessLayerId` (`ThicknessLayerId`),
+  KEY `LocationAndTimeSpanId` (`LocationAndTimeSpanId`),
+  KEY `TempId` (`TempId`),
+  KEY `WindId` (`WindId`),
+  KEY `AirHumidityId` (`AirHumidityId`),
+  KEY `AsphaltTempId` (`AsphaltTempId`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `Finisher` (`FinicherId`, `SpeedId`, `AngleId`, `WidthId`, `ThicknessLayerId`, `TranverseSlope`, `LocationAndTimeSpanId`, `Precipation`, `TempId`, `WindId`, `AirHumidityId`, `AsphaltTempAfterFinisherIrScanOrThermo`, `AsphaltTempId`, `FinisherTimeStamp`) VALUES
+(1, 1, 1, 1, 1, 54, 1, 'Precipation.pdf', 1, 1, 1, 'AsphaltTempAfterFinisherIrScanOrThermo.pdf', 1, '2016-11-25 12:27:05'),
+(2, 3, 2, 3, 3, 25, 3, 'Precipation2.pdf', 2, 3, 11, 'AsphaltTempAfterFinisherIrScanOrThermo2.pdf', 3, '2016-11-28 07:38:15');
+
+DROP TABLE IF EXISTS `LayerThickness`;
+CREATE TABLE IF NOT EXISTS `LayerThickness` (
+  `LayerThicknessId` int(255) NOT NULL AUTO_INCREMENT,
+  `LeftTickness` int(5) NOT NULL,
+  `MiddelThickness` int(5) NOT NULL,
+  `RightThickness` int(5) NOT NULL,
+  `ThicknessTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`LayerThicknessId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `LayerThickness` (`LayerThicknessId`, `LeftTickness`, `MiddelThickness`, `RightThickness`, `ThicknessTimeStamp`) VALUES
+(1, 8, 10, 12, '2016-11-25 12:21:43'),
+(2, 8, 12, 10, '2016-11-25 12:32:47'),
+(3, 20, 19, 18, '2016-11-28 07:09:30');
+
+DROP TABLE IF EXISTS `ListFillerRecup`;
+CREATE TABLE IF NOT EXISTS `ListFillerRecup` (
+  `ListFillerRecupId` int(255) NOT NULL AUTO_INCREMENT,
+  `FillerRecup` int(3) NOT NULL,
+  `FillerRecupTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ListFillerRecupId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `ListFillerRecup` (`ListFillerRecupId`, `FillerRecup`, `FillerRecupTimeStamp`) VALUES
+(1, 55, '2016-11-25 11:59:36'),
+(2, 64, '2016-11-25 12:33:50'),
+(3, 30, '2016-11-28 07:01:15');
+
+DROP TABLE IF EXISTS `LocationAndTimeSpan`;
+CREATE TABLE IF NOT EXISTS `LocationAndTimeSpan` (
+  `LocationAndTimeSpanId` int(255) NOT NULL AUTO_INCREMENT,
+  `StopLocationLTS` varchar(255) NOT NULL,
+  `StopTimeLTS` time NOT NULL,
+  `StopTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`LocationAndTimeSpanId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `LocationAndTimeSpan` (`LocationAndTimeSpanId`, `StopLocationLTS`, `StopTimeLTS`, `StopTimeStamp`) VALUES
+(1, '49.3515 ; 5.3153', '00:16:00', '2016-11-25 12:24:06'),
+(2, '48.3512 ; 3.3533', '00:45:00', '2016-11-25 12:34:21'),
+(3, '48.6512 ; 6.8465', '00:20:00', '2016-11-28 07:10:19');
+
+DROP TABLE IF EXISTS `Planning`;
+CREATE TABLE IF NOT EXISTS `Planning` (
+  `PlanningId` int(255) NOT NULL AUTO_INCREMENT,
+  `LayerThickness` int(3) NOT NULL,
+  `Surface` int(10) NOT NULL,
+  `TonPerDay` int(10) NOT NULL,
+  `ProjectId` int(255) NOT NULL,
+  `PlanningTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`PlanningId`),
+  KEY `ProjectId` (`ProjectId`)
+) TYPE=InnoDB  AUTO_INCREMENT=12 ;
+
+INSERT INTO `Planning` (`PlanningId`, `LayerThickness`, `Surface`, `TonPerDay`, `ProjectId`, `PlanningTimeStamp`) VALUES
+(1, 10, 200, 150, 1, '2016-11-25 11:41:23'),
+(2, 20, 500, 250, 2, '2016-11-28 06:55:43');
+
+DROP TABLE IF EXISTS `Project`;
+CREATE TABLE IF NOT EXISTS `Project` (
+  `ProjectId` int(255) NOT NULL AUTO_INCREMENT,
+  `ProjectTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ProjectId`)
+) TYPE=InnoDB  AUTO_INCREMENT=5 ;
+
+INSERT INTO `Project` (`ProjectId`, `ProjectTimeStamp`) VALUES
+(1, '2016-11-25 11:36:04'),
+(2, '2016-11-28 06:54:45');
+
+DROP TABLE IF EXISTS `QualityControl`;
+CREATE TABLE IF NOT EXISTS `QualityControl` (
+  `ControlId` int(255) NOT NULL AUTO_INCREMENT,
+  `ComplianceMixture` varchar(255) NOT NULL,
+  `SamplesCopro` varchar(255) NOT NULL,
+  `DensityOfField` varchar(255) NOT NULL,
+  `Cores` varchar(255) NOT NULL,
+  `LengthwiseFlatness` varchar(255) NOT NULL,
+  `Skidresistance` varchar(255) NOT NULL,
+  `Iri` varchar(255) NOT NULL,
+  `ExtraTestsAskedBijClient` varchar(255) NOT NULL,
+  `ProjectId` int(255) NOT NULL,
+  `QualtityTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`ControlId`),
+  KEY `ProjectId` (`ProjectId`)
+) TYPE=InnoDB  AUTO_INCREMENT=3 ;
+
+INSERT INTO `QualityControl` (`ControlId`, `ComplianceMixture`, `SamplesCopro`, `DensityOfField`, `Cores`, `LengthwiseFlatness`, `Skidresistance`, `Iri`, `ExtraTestsAskedBijClient`, `ProjectId`, `QualtityTimeStamp`) VALUES
+(1, 'ComplianceMixture.pdf', 'SamplesCopro.pdf', 'DensityOfField.pdf', 'Cores.pdf', 'LengthwiseFlatness.pdf', 'Skidresistance.pdf', 'Iri.pdf', 'ExtraTestsAskedBijClient.pdf', 1, '2016-11-25 11:40:17'),
+(2, 'ComplianceMixture2.pdf', 'SamplesCopro2.pdf', 'DensityOfField2.pdf', 'Cores2.pdf', 'LengthwiseFlatness2.pdf', 'Skidresistance2.pdf', 'Iri2.pdf', 'ExtraTestsAskedBijClient2.pdf', 2, '2016-11-28 06:57:53');
+
+DROP TABLE IF EXISTS `RoadSection`;
+CREATE TABLE IF NOT EXISTS `RoadSection` (
+  `RoadId` int(255) NOT NULL AUTO_INCREMENT,
+  `ProjectId` int(255) NOT NULL,
+  `RoadDescription` varchar(255) NOT NULL,
+  `RoadSectionTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`RoadId`),
+  KEY `ProjectId` (`ProjectId`)
+) TYPE=InnoDB  AUTO_INCREMENT=6 ;
+
+INSERT INTO `RoadSection` (`RoadId`, `ProjectId`, `RoadDescription`, `RoadSectionTimeStamp`) VALUES
+(1, 1, 'E313 nabij kilometerpaal 25.3', '2016-11-25 11:37:52'),
+(2, 2, 'E17, bij kilometerpaal 6.2', '2016-11-28 06:56:31');
+
+DROP TABLE IF EXISTS `Roles`;
+CREATE TABLE IF NOT EXISTS `Roles` (
+  `RoleId` int(255) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(50) NOT NULL,
+  PRIMARY KEY (`RoleId`)
+) TYPE=InnoDB  AUTO_INCREMENT=7 ;
+
+INSERT INTO `Roles` (`RoleId`, `Name`) VALUES
+(1, 'Client'),
+(2, 'Asphalt procucer'),
+(3, 'Tranporters'),
+(4, 'Contractor'),
+(5, 'Copro'),
+(6, 'UA/OCW');
+
+DROP TABLE IF EXISTS `Silo`;
+CREATE TABLE IF NOT EXISTS `Silo` (
+  `SiloId` int(255) NOT NULL AUTO_INCREMENT,
+  `CentralId` int(255) NOT NULL COMMENT 'FK',
+  `AggregationId` int(255) NOT NULL COMMENT 'FK',
+  `BitumenId` int(255) NOT NULL COMMENT 'FK',
+  `ListRecupFillerId` int(255) NOT NULL COMMENT 'FK',
+  `MixingTemp` int(4) NOT NULL,
+  `MixingTime` time NOT NULL,
+  `RealCompositionId` int(255) NOT NULL COMMENT 'FK',
+  `TempSilo` int(4) NOT NULL,
+  `AnalysisComposition` varchar(255) NOT NULL,
+  `SiloTimpStamp` timestamp NOT NULL,
+  PRIMARY KEY (`SiloId`),
+  KEY `CentralId` (`CentralId`),
+  KEY `AggregationId` (`AggregationId`),
+  KEY `BitumenId` (`BitumenId`),
+  KEY `ListRecupFillerId` (`ListRecupFillerId`),
+  KEY `RealCompositionId` (`RealCompositionId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `Silo` (`SiloId`, `CentralId`, `AggregationId`, `BitumenId`, `ListRecupFillerId`, `MixingTemp`, `MixingTime`, `RealCompositionId`, `TempSilo`, `AnalysisComposition`, `SiloTimpStamp`) VALUES
+(1, 1, 1, 1, 1, 150, '20:15:00', 1, 125, 'AnalysisComposition.pdf', '2016-11-25 12:01:24'),
+(3, 2, 2, 2, 3, 150, '02:51:05', 2, 160, 'AnalysisComposition2.pdf', '2016-11-28 07:03:54');
+
+DROP TABLE IF EXISTS `SpeedFinisher`;
+CREATE TABLE IF NOT EXISTS `SpeedFinisher` (
+  `SpeedId` int(255) NOT NULL AUTO_INCREMENT,
+  `Speed` int(3) NOT NULL,
+  `SpeedFinisherTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`SpeedId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `SpeedFinisher` (`SpeedId`, `Speed`, `SpeedFinisherTimeStamp`) VALUES
+(1, 10, '2016-11-25 12:22:48'),
+(2, 12, '2016-11-25 12:34:40'),
+(3, 12, '2016-11-28 07:34:35');
+
+DROP TABLE IF EXISTS `Truck`;
+CREATE TABLE IF NOT EXISTS `Truck` (
+  `TruckId` int(255) NOT NULL AUTO_INCREMENT,
+  `TruckLicensPlate` varchar(255) NOT NULL,
+  `DepartureTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `MassTruck` int(5) NOT NULL,
+  `ActualPositionId` int(255) NOT NULL,
+  `ETAId` int(255) NOT NULL,
+  `TruckTempId` int(255) NOT NULL,
+  `RealArrivalTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `DeattachmentFinisherTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `DeattachmentFinisherPosition` varchar(255) NOT NULL,
+  `ActualPositionReturnId` int(255) NOT NULL,
+  `ETAReturnId` int(255) NOT NULL,
+  `ArrivalAtPlant` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `UnforseenStopId` int(255) NOT NULL,
+  `AttachmentToFinisherTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `AttachmentToFinisherPosition` varchar(255) NOT NULL,
+  `TruckTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`TruckId`),
+  KEY `ActualPositionId` (`ActualPositionId`),
+  KEY `ETAId` (`ETAId`),
+  KEY `ActualTempId` (`TruckTempId`),
+  KEY `ActualPositionReturnId` (`ActualPositionReturnId`),
+  KEY `ETAReturnId` (`ETAReturnId`),
+  KEY `UnforseenStopId` (`UnforseenStopId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `Truck` (`TruckId`, `TruckLicensPlate`, `DepartureTime`, `MassTruck`, `ActualPositionId`, `ETAId`, `TruckTempId`, `RealArrivalTime`, `DeattachmentFinisherTime`, `DeattachmentFinisherPosition`, `ActualPositionReturnId`, `ETAReturnId`, `ArrivalAtPlant`, `UnforseenStopId`, `AttachmentToFinisherTime`, `AttachmentToFinisherPosition`, `TruckTimeStamp`) VALUES
+(1, '1-jhv-355', '2016-11-25 06:00:00', 16, 1, 1, 1, '2016-11-25 09:00:00', '2016-11-25 11:00:00', '50.3535 ; 4.9315', 1, 1, '2016-11-25 14:00:00', 1, '2016-11-25 10:00:00', '50.3513 ; 5.0351', '2016-11-25 12:21:05'),
+(3, '1-jkh-651', '2016-11-28 05:30:00', 20, 3, 3, 3, '2016-11-28 11:00:00', '2016-11-28 12:00:00', '47.6515 ; 4.6521', 3, 3, '2016-11-28 11:24:00', 3, '2016-11-28 11:30:00', '46.1261 ; 5.2060', '2016-11-28 07:41:05');
+DROP VIEW IF EXISTS `Trucker`;
+CREATE TABLE IF NOT EXISTS `Trucker` (
+`TruckLicensPlate` varchar(255)
+,`DepartureTime` timestamp
+,`MassTruck` int(5)
+,`RealArrivalTime` timestamp
+,`DeattachmentFinisherTime` timestamp
+,`DeattachmentFinisherPosition` varchar(255)
+,`ArrivalAtPlant` timestamp
+,`AttachmentToFinisherTime` timestamp
+,`AttachmentToFinisherPosition` varchar(255)
+,`TruckTimeStamp` timestamp
+,`StopLocationUnforseenStop` varchar(255)
+,`StopTimeUnforseenStop` time
+,`UnforseenStopTimeStamp` timestamp
+,`ActualPosition` varchar(255)
+,`ActualPositionTimeStamp` timestamp
+,`ActualPositionReturn` varchar(255)
+,`ActualPositionReturnTimeStamp` timestamp
+,`ETA` time
+,`ETATimeStamp` timestamp
+,`ETAReturn` time
+,`ETAReturnTimeStamp` timestamp
+,`QrCodeCompactor` varchar(255)
+,`RoadId` int(255)
+,`RoadDescription` varchar(255)
+,`RoadSectionTimeStamp` timestamp
+,`CompactorTimeStamp` timestamp
+,`BatchMaxTemp` int(4)
+,`BatchMinTemp` int(4)
+,`LayerType` varchar(255)
+,`CentralName` varchar(255)
+,`CentralNameShort` varchar(10)
+);
+DROP TABLE IF EXISTS `TruckTemp`;
+CREATE TABLE IF NOT EXISTS `TruckTemp` (
+  `TruckTempId` int(255) NOT NULL AUTO_INCREMENT,
+  `Temp` int(4) NOT NULL,
+  `TempTruckTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`TruckTempId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `TruckTemp` (`TruckTempId`, `Temp`, `TempTruckTimeStamp`) VALUES
+(1, 90, '2016-11-25 12:14:52'),
+(2, 91, '2016-11-25 12:34:58'),
+(3, 105, '2016-11-28 07:07:28');
+DROP VIEW IF EXISTS `UA`;
+CREATE TABLE IF NOT EXISTS `UA` (
+`LayerThickness` int(3)
+,`Surface` int(10)
+,`TonPerDay` int(10)
+,`PlanningTimeStamp` timestamp
+,`ComplianceMixture` varchar(255)
+,`SamplesCopro` varchar(255)
+,`DensityOfField` varchar(255)
+,`Cores` varchar(255)
+,`LengthwiseFlatness` varchar(255)
+,`Skidresistance` varchar(255)
+,`Iri` varchar(255)
+,`ExtraTestsAskedBijClient` varchar(255)
+,`QualtityTimeStamp` timestamp
+,`RoadId` int(255)
+,`RoadDescription` varchar(255)
+,`RoadSectionTimeStamp` timestamp
+,`GPSFinisher` varchar(255)
+,`GPSCompactor` varchar(255)
+,`ColorCodeTimeStamp` timestamp
+,`QrCodeCompactor` varchar(255)
+,`NumberOfRollerCompactorPassages` int(255)
+,`LocationOfVibration` varchar(255)
+,`SpeedOfRollerCompactor` int(3)
+,`CompactorTimeStamp` timestamp
+,`AggragationMaxTemp` int(4)
+,`AggragationMinTemp` int(4)
+,`AggragationTimeStamp` timestamp
+,`BitumenTimeStamp` timestamp
+,`BitumenMinTemp` int(4)
+,`BitumenMaxTemp` int(4)
+,`FillerRecup` int(3)
+,`FillerRecupTimeStamp` timestamp
+,`MassOfAggregationBunker1` int(10)
+,`MassOfAggregationBunker2` int(10)
+,`MassOfAggregationBunker3` int(10)
+,`MassOfAggregationBunker4` int(10)
+,`MassOfAggregationBunker5` int(10)
+,`MassOfAggregationBunker6` int(10)
+,`Filler` int(10)
+,`Bitumen` int(10)
+,`AdditivesKg` int(10)
+,`CompositionTimeStamp` timestamp
+,`MixtureName` varchar(255)
+,`TechnicalDataSheet` varchar(255)
+,`TypeOfAggregates` varchar(255)
+,`MixtureChange` varchar(255)
+,`AsphaltMixPlantTimestamp` timestamp
+,`TruckLicensPlate` varchar(255)
+,`DepartureTime` timestamp
+,`MassTruck` int(5)
+,`RealArrivalTime` timestamp
+,`DeattachmentFinisherTime` timestamp
+,`DeattachmentFinisherPosition` varchar(255)
+,`ArrivalAtPlant` timestamp
+,`AttachmentToFinisherTime` timestamp
+,`AttachmentToFinisherPosition` varchar(255)
+,`TruckTimeStamp` timestamp
+,`ActualPosition` varchar(255)
+,`ActualPositionTimeStamp` timestamp
+,`ActualPositionReturn` varchar(255)
+,`ActualPositionReturnTimeStamp` timestamp
+,`ETA` time
+,`ETATimeStamp` timestamp
+,`ETAReturn` time
+,`ETAReturnTimeStamp` timestamp
+,`StopLocationUnforseenStop` varchar(255)
+,`StopTimeUnforseenStop` time
+,`UnforseenStopTimeStamp` timestamp
+,`Temp` int(4)
+,`TempTruckTimeStamp` timestamp
+,`TranverseSlope` int(3)
+,`Precipation` varchar(255)
+,`AsphaltTempAfterFinisherIrScanOrThermo` varchar(255)
+,`FinisherTimeStamp` timestamp
+,`MixingTemp` int(4)
+,`MixingTime` time
+,`TempSilo` int(4)
+,`AnalysisComposition` varchar(255)
+,`SiloTimpStamp` timestamp
+,`Speed` int(3)
+,`SpeedFinisherTimeStamp` timestamp
+,`TempWeather` int(4)
+,`WeatherTempTimeStamp` timestamp
+,`Width` int(3)
+,`WidthTimeStamp` timestamp
+,`WindSpeed` int(3)
+,`WindTimeStamp` timestamp
+,`StopLocationLTS` varchar(255)
+,`StopTimeLTS` time
+,`StopTimeStamp` timestamp
+,`GPS` varchar(255)
+,`TempAsphalt` int(4)
+,`AsphaltTempTimeStamp` timestamp
+,`LeftTickness` int(5)
+,`MiddelThickness` int(5)
+,`RightThickness` int(5)
+,`ThicknessTimeStamp` timestamp
+,`AirHumidity` int(3)
+,`AirHumidityTimeStamp` timestamp
+,`LeftAngle` int(3)
+,`RightAngle` int(3)
+,`AngleTimestamp` timestamp
+,`BatchMaxTemp` int(4)
+,`BatchMinTemp` int(4)
+,`LayerType` varchar(255)
+,`CentralName` varchar(255)
+,`CentralNameShort` varchar(10)
+,`FinicherId` int(255)
+);
+DROP TABLE IF EXISTS `UnforseenStop`;
+CREATE TABLE IF NOT EXISTS `UnforseenStop` (
+  `UnforseenStopId` int(255) NOT NULL AUTO_INCREMENT,
+  `StopLocationUnforseenStop` varchar(255) NOT NULL,
+  `StopTimeUnforseenStop` time NOT NULL,
+  `UnforseenStopTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`UnforseenStopId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `UnforseenStop` (`UnforseenStopId`, `StopLocationUnforseenStop`, `StopTimeUnforseenStop`, `UnforseenStopTimeStamp`) VALUES
+(1, '48.3513 ; 4.93513', '00:30:00', '2016-11-25 12:19:00'),
+(2, '46.6528 ; 6.6351', '00:12:00', '2016-11-25 12:35:34'),
+(3, '48.6351 ; 5.0515', '00:15:00', '2016-11-28 07:35:02');
+
+DROP TABLE IF EXISTS `Users`;
+CREATE TABLE IF NOT EXISTS `Users` (
+  `UserId` int(255) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(50) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `RoleId` int(255) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  PRIMARY KEY (`UserId`),
+  KEY `RoleId` (`RoleId`)
+) TYPE=InnoDB  AUTO_INCREMENT=13 ;
+
+INSERT INTO `Users` (`UserId`, `Name`, `Password`, `RoleId`, `Email`) VALUES
+(7, 'Jef', '-354185609', 1, 'jef@example.com'),
+(8, 'Jonas', '-354185609', 2, 'jonas@example.com'),
+(9, 'An', '-354185609', 3, 'an@example.com'),
+(10, 'Tim', '-354185609', 4, 'tim@example.com'),
+(11, 'Luc', '-354185609', 5, 'luc@example.com'),
+(12, 'Admin', '-354185609', 6, 'admin@example.com');
+
+DROP TABLE IF EXISTS `WeatherTemp`;
+CREATE TABLE IF NOT EXISTS `WeatherTemp` (
+  `TempId` int(255) NOT NULL AUTO_INCREMENT,
+  `TempWeather` int(4) NOT NULL,
+  `WeatherTempTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`TempId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `WeatherTemp` (`TempId`, `TempWeather`, `WeatherTempTimeStamp`) VALUES
+(1, 25, '2016-11-25 12:22:28'),
+(2, 10, '2016-11-25 12:35:45'),
+(3, 25, '2016-11-28 07:35:14');
+
+DROP TABLE IF EXISTS `Width`;
+CREATE TABLE IF NOT EXISTS `Width` (
+  `WidthId` int(255) NOT NULL AUTO_INCREMENT,
+  `Width` int(3) NOT NULL,
+  `WidthTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`WidthId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `Width` (`WidthId`, `Width`, `WidthTimeStamp`) VALUES
+(1, 8, '2016-11-25 12:22:18'),
+(2, 6, '2016-11-25 12:35:53'),
+(3, 25, '2016-11-28 07:35:28');
+
+DROP TABLE IF EXISTS `Wind`;
+CREATE TABLE IF NOT EXISTS `Wind` (
+  `WindId` int(255) NOT NULL AUTO_INCREMENT,
+  `WindSpeed` int(3) NOT NULL,
+  `WindTimeStamp` timestamp NOT NULL,
+  PRIMARY KEY (`WindId`)
+) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+
+INSERT INTO `Wind` (`WindId`, `WindSpeed`, `WindTimeStamp`) VALUES
+(1, 20, '2016-11-25 12:22:10'),
+(2, 40, '2016-11-25 12:36:03'),
+(3, 2, '2016-11-28 07:35:37');
+DROP TABLE IF EXISTS `AsphaltProcucer`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`sammegf117_road`@`10.3.0.204` SQL SECURITY DEFINER VIEW `AsphaltProcucer` AS select `P`.`TonPerDay` AS `TonPerDay`,`T`.`TruckLicensPlate` AS `TruckLicensPlate`,`T`.`DepartureTime` AS `DepartureTime`,`T`.`MassTruck` AS `MassTruck`,`T`.`RealArrivalTime` AS `RealArrivalTime`,`T`.`DeattachmentFinisherTime` AS `DeattachmentFinisherTime`,`T`.`DeattachmentFinisherPosition` AS `DeattachmentFinisherPosition`,`T`.`ArrivalAtPlant` AS `ArrivalAtPlant`,`T`.`AttachmentToFinisherTime` AS `AttachmentToFinisherTime`,`T`.`AttachmentToFinisherPosition` AS `AttachmentToFinisherPosition`,`T`.`TruckTimeStamp` AS `TruckTimeStamp`,`TT`.`Temp` AS `Temp`,`TT`.`TempTruckTimeStamp` AS `TempTruckTimeStamp`,`US`.`StopLocationUnforseenStop` AS `StopLocationUnforseenStop`,`US`.`StopTimeUnforseenStop` AS `StopTimeUnforseenStop`,`US`.`UnforseenStopTimeStamp` AS `UnforseenStopTimeStamp`,`AP`.`ActualPosition` AS `ActualPosition`,`AP`.`ActualPositionTimeStamp` AS `ActualPositionTimeStamp`,`APR`.`ActualPositionReturn` AS `ActualPositionReturn`,`APR`.`ActualPositionReturnTimeStamp` AS `ActualPositionReturnTimeStamp`,`ETA`.`ETA` AS `ETA`,`ETA`.`ETATimeStamp` AS `ETATimeStamp`,`ETAR`.`ETAReturn` AS `ETAReturn`,`ETAR`.`ETAReturnTimeStamp` AS `ETAReturnTimeStamp`,`CR`.`QrCodeCompactor` AS `QrCodeCompactor`,`Q`.`ComplianceMixture` AS `ComplianceMixture`,`Q`.`SamplesCopro` AS `SamplesCopro`,`R`.`RoadId` AS `RoadId`,`R`.`RoadDescription` AS `RoadDescription`,`R`.`RoadSectionTimeStamp` AS `RoadSectionTimeStamp`,`AM`.`MixtureName` AS `MixtureName`,`AM`.`TechnicalDataSheet` AS `TechnicalDataSheet`,`AM`.`TypeOfAggregates` AS `TypeOfAggregates`,`AM`.`MixtureChange` AS `MixtureChange`,`AM`.`AsphaltMixPlantTimestamp` AS `AsphaltMixPlantTimestamp`,`AG`.`AggragationMaxTemp` AS `AggragationMaxTemp`,`AG`.`AggragationMinTemp` AS `AggragationMinTemp`,`AG`.`AggragationTimeStamp` AS `AggragationTimeStamp`,`B`.`BitumenTimeStamp` AS `BitumenTimeStamp`,`B`.`BitumenMinTemp` AS `BitumenMinTemp`,`B`.`BitumenMaxTemp` AS `BitumenMaxTemp`,`LFR`.`FillerRecup` AS `FillerRecup`,`LFR`.`FillerRecupTimeStamp` AS `FillerRecupTimeStamp`,`C`.`MassOfAggregationBunker1` AS `MassOfAggregationBunker1`,`C`.`MassOfAggregationBunker2` AS `MassOfAggregationBunker2`,`C`.`MassOfAggregationBunker3` AS `MassOfAggregationBunker3`,`C`.`MassOfAggregationBunker4` AS `MassOfAggregationBunker4`,`C`.`MassOfAggregationBunker5` AS `MassOfAggregationBunker5`,`C`.`MassOfAggregationBunker6` AS `MassOfAggregationBunker6`,`C`.`Filler` AS `Filler`,`C`.`Bitumen` AS `Bitumen`,`C`.`AdditivesKg` AS `AdditivesKg`,`C`.`CompositionTimeStamp` AS `CompositionTimeStamp`,`S`.`MixingTemp` AS `MixingTemp`,`S`.`MixingTime` AS `MixingTime`,`S`.`TempSilo` AS `TempSilo`,`S`.`AnalysisComposition` AS `AnalysisComposition`,`S`.`SiloTimpStamp` AS `SiloTimpStamp`,`P`.`PlanningTimeStamp` AS `PlanningTimeStamp`,`CR`.`CompactorTimeStamp` AS `CompactorTimeStamp`,`Q`.`QualtityTimeStamp` AS `QualtityTimeStamp`,`BA`.`BatchMaxTemp` AS `BatchMaxTemp`,`BA`.`BatchMinTemp` AS `BatchMinTemp`,`BA`.`LayerType` AS `LayerType`,`AM`.`CentralName` AS `CentralName`,`AM`.`CentralNameShort` AS `CentralNameShort` from ((((((((((((((((((`AsphaltMixPlant` `AM` join `Silo` `S`) join `Aggragation` `AG`) join `Bitumen` `B`) join `ListFillerRecup` `LFR`) join `Composition` `C`) join `Truck` `T`) join `TruckTemp` `TT`) join `Compactor` `CR`) join `QualityControl` `Q`) join `Planning` `P`) join `ActualPosition` `AP`) join `ETA`) join `ActualPositionReturn` `APR`) join `ETAReturn` `ETAR`) join `RoadSection` `R`) join `UnforseenStop` `US`) join `Project` `PR`) join `BatchList` `BA`) where ((`R`.`ProjectId` = `PR`.`ProjectId`) and (`PR`.`ProjectId` = `P`.`ProjectId`) and (`Q`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`BatchId` = `CR`.`BatchId`) and (`AM`.`CentralId` = `S`.`CentralId`) and (`B`.`BitumenId` = `S`.`BitumenId`) and (`AG`.`AggragationId` = `S`.`AggregationId`) and (`LFR`.`ListFillerRecupId` = `S`.`ListRecupFillerId`) and (`BA`.`SiloId` = `S`.`SiloId`) and (`C`.`RealCompositionId` = `S`.`RealCompositionId`) and (`BA`.`TruckId` = `T`.`TruckId`) and (`T`.`TruckTempId` = `TT`.`TruckTempId`) and (`T`.`ActualPositionId` = `AP`.`ActualPositionId`) and (`T`.`ETAId` = `ETA`.`ETAId`) and (`T`.`ETAReturnId` = `ETAR`.`ETAReturnId`) and (`T`.`UnforseenStopId` = `US`.`UnforseenStopId`) and (`T`.`ActualPositionReturnId` = `APR`.`ActualPositionReturnId`));
+DROP TABLE IF EXISTS `Client`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`sammegf117_road`@`10.3.0.204` SQL SECURITY DEFINER VIEW `Client` AS select `AM`.`MixtureName` AS `MixtureName`,`AM`.`TechnicalDataSheet` AS `TechnicalDataSheet`,`AM`.`MixtureChange` AS `MixtureChange`,`T`.`TruckLicensPlate` AS `TruckLicensPlate`,`T`.`DepartureTime` AS `DepartureTime`,`T`.`MassTruck` AS `MassTruck`,`T`.`RealArrivalTime` AS `RealArrivalTime`,`AP`.`ActualPosition` AS `ActualPosition`,`AP`.`ActualPositionTimeStamp` AS `ActualPositionTimeStamp`,`ETA`.`ETA` AS `ETA`,`ETA`.`ETATimeStamp` AS `ETATimeStamp`,`F`.`Precipation` AS `Precipation`,`F`.`AsphaltTempAfterFinisherIrScanOrThermo` AS `AsphaltTempAfterFinisherIrScanOrThermo`,`F`.`FinisherTimeStamp` AS `FinisherTimeStamp`,`LT`.`LeftTickness` AS `LeftTickness`,`LT`.`MiddelThickness` AS `MiddelThickness`,`LT`.`RightThickness` AS `RightThickness`,`LT`.`ThicknessTimeStamp` AS `ThicknessTimeStamp`,`WT`.`TempWeather` AS `TempWeather`,`WT`.`WeatherTempTimeStamp` AS `WeatherTempTimeStamp`,`WH`.`Width` AS `Width`,`WH`.`WidthTimeStamp` AS `WidthTimeStamp`,`W`.`WindSpeed` AS `WindSpeed`,`W`.`WindTimeStamp` AS `WindTimeStamp`,`AH`.`AirHumidity` AS `AirHumidity`,`AH`.`AirHumidityTimeStamp` AS `AirHumidityTimeStamp`,`A`.`LeftAngle` AS `LeftAngle`,`A`.`RightAngle` AS `RightAngle`,`A`.`AngleTimestamp` AS `AngleTimestamp`,`SF`.`Speed` AS `Speed`,`SF`.`SpeedFinisherTimeStamp` AS `SpeedFinisherTimeStamp`,`LATS`.`StopLocationLTS` AS `StopLocationLTS`,`LATS`.`StopTimeLTS` AS `StopTimeLTS`,`LATS`.`StopTimeStamp` AS `StopTimeStamp`,`AT`.`GPS` AS `GPS`,`AT`.`TempAsphalt` AS `TempAsphalt`,`AT`.`AsphaltTempTimeStamp` AS `AsphaltTempTimeStamp`,`CC`.`GPSCompactor` AS `GPSCompactor`,`CC`.`ColorCodeTimeStamp` AS `ColorCodeTimeStamp`,`CR`.`QrCodeCompactor` AS `QrCodeCompactor`,`Q`.`ComplianceMixture` AS `ComplianceMixture`,`Q`.`SamplesCopro` AS `SamplesCopro`,`Q`.`DensityOfField` AS `DensityOfField`,`Q`.`Cores` AS `Cores`,`Q`.`LengthwiseFlatness` AS `LengthwiseFlatness`,`Q`.`Skidresistance` AS `Skidresistance`,`Q`.`Iri` AS `Iri`,`Q`.`ExtraTestsAskedBijClient` AS `ExtraTestsAskedBijClient`,`Q`.`QualtityTimeStamp` AS `QualtityTimeStamp`,`R`.`RoadId` AS `RoadId`,`R`.`RoadDescription` AS `RoadDescription`,`R`.`RoadSectionTimeStamp` AS `RoadSectionTimeStamp`,`AM`.`AsphaltMixPlantTimestamp` AS `AsphaltMixPlantTimestamp`,`T`.`TruckTimeStamp` AS `TruckTimeStamp`,`CR`.`CompactorTimeStamp` AS `CompactorTimeStamp`,`F`.`TranverseSlope` AS `TranverseSlope`,`CC`.`GPSFinisher` AS `GPSFinisher`,`BA`.`BatchMaxTemp` AS `BatchMaxTemp`,`BA`.`BatchMinTemp` AS `BatchMinTemp`,`BA`.`LayerType` AS `LayerType`,`AM`.`CentralName` AS `CentralName`,`AM`.`CentralNameShort` AS `CentralNameShort`,`F`.`FinicherId` AS `FinicherId` from ((((((((((((((((((((`Finisher` `F` join `SpeedFinisher` `SF`) join `Angle` `A`) join `Width` `WH`) join `LayerThickness` `LT`) join `LocationAndTimeSpan` `LATS`) join `WeatherTemp` `WT`) join `Wind` `W`) join `AirHumidity` `AH`) join `AsphaltMixPlant` `AM`) join `Truck` `T`) join `ActualPosition` `AP`) join `ETA`) join `Compactor` `CR`) join `QualityControl` `Q`) join `ColorCode` `CC`) join `RoadSection` `R`) join `AsphaltTemp` `AT`) join `Silo` `S`) join `BatchList` `BA`) join `Project` `PR`) where ((`R`.`ProjectId` = `PR`.`ProjectId`) and (`Q`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`BatchId` = `CR`.`BatchId`) and (`CR`.`ColorCodeId` = `CC`.`ColorCodeID`) and (`BA`.`TruckId` = `T`.`TruckId`) and (`T`.`ActualPositionId` = `AP`.`ActualPositionId`) and (`T`.`ETAId` = `ETA`.`ETAId`) and (`BA`.`FinisherId` = `F`.`FinicherId`) and (`F`.`WidthId` = `WH`.`WidthId`) and (`F`.`WindId` = `W`.`WindId`) and (`F`.`AngleId` = `A`.`AngleId`) and (`F`.`AirHumidityId` = `AH`.`AirHumidityId`) and (`F`.`TempId` = `WT`.`TempId`) and (`F`.`ThicknessLayerId` = `LT`.`LayerThicknessId`) and (`F`.`SpeedId` = `SF`.`SpeedId`) and (`F`.`AsphaltTempId` = `AT`.`AsphaltTempId`) and (`F`.`LocationAndTimeSpanId` = `LATS`.`LocationAndTimeSpanId`) and (`BA`.`SiloId` = `S`.`SiloId`) and (`S`.`CentralId` = `AM`.`CentralId`));
+DROP TABLE IF EXISTS `ContractorView`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`sammegf117_road`@`10.3.0.204` SQL SECURITY DEFINER VIEW `ContractorView` AS select `P`.`LayerThickness` AS `LayerThickness`,`P`.`Surface` AS `Surface`,`P`.`TonPerDay` AS `TonPerDay`,`P`.`PlanningTimeStamp` AS `PlanningTimeStamp`,`AM`.`MixtureName` AS `MixtureName`,`AM`.`TechnicalDataSheet` AS `TechnicalDataSheet`,`T`.`TruckLicensPlate` AS `TruckLicensPlate`,`T`.`DepartureTime` AS `DepartureTime`,`T`.`MassTruck` AS `MassTruck`,`T`.`RealArrivalTime` AS `RealArrivalTime`,`T`.`DeattachmentFinisherTime` AS `DeattachmentFinisherTime`,`T`.`DeattachmentFinisherPosition` AS `DeattachmentFinisherPosition`,`T`.`ArrivalAtPlant` AS `ArrivalAtPlant`,`T`.`AttachmentToFinisherTime` AS `AttachmentToFinisherTime`,`T`.`AttachmentToFinisherPosition` AS `AttachmentToFinisherPosition`,`T`.`TruckTimeStamp` AS `TruckTimeStamp`,`TT`.`Temp` AS `Temp`,`TT`.`TempTruckTimeStamp` AS `TempTruckTimeStamp`,`US`.`StopLocationUnforseenStop` AS `StopLocationUnforseenStop`,`US`.`StopTimeUnforseenStop` AS `StopTimeUnforseenStop`,`US`.`UnforseenStopTimeStamp` AS `UnforseenStopTimeStamp`,`AP`.`ActualPosition` AS `ActualPosition`,`AP`.`ActualPositionTimeStamp` AS `ActualPositionTimeStamp`,`APR`.`ActualPositionReturn` AS `ActualPositionReturn`,`APR`.`ActualPositionReturnTimeStamp` AS `ActualPositionReturnTimeStamp`,`ETA`.`ETA` AS `ETA`,`ETA`.`ETATimeStamp` AS `ETATimeStamp`,`ETAR`.`ETAReturn` AS `ETAReturn`,`ETAR`.`ETAReturnTimeStamp` AS `ETAReturnTimeStamp`,`F`.`TranverseSlope` AS `TranverseSlope`,`F`.`Precipation` AS `Precipation`,`F`.`AsphaltTempAfterFinisherIrScanOrThermo` AS `AsphaltTempAfterFinisherIrScanOrThermo`,`F`.`FinisherTimeStamp` AS `FinisherTimeStamp`,`LT`.`LeftTickness` AS `LeftTickness`,`LT`.`MiddelThickness` AS `MiddelThickness`,`LT`.`RightThickness` AS `RightThickness`,`LT`.`ThicknessTimeStamp` AS `ThicknessTimeStamp`,`WT`.`TempWeather` AS `TempWeather`,`WT`.`WeatherTempTimeStamp` AS `WeatherTempTimeStamp`,`WH`.`Width` AS `Width`,`WH`.`WidthTimeStamp` AS `WidthTimeStamp`,`W`.`WindSpeed` AS `WindSpeed`,`W`.`WindTimeStamp` AS `WindTimeStamp`,`AH`.`AirHumidity` AS `AirHumidity`,`AH`.`AirHumidityTimeStamp` AS `AirHumidityTimeStamp`,`A`.`LeftAngle` AS `LeftAngle`,`A`.`RightAngle` AS `RightAngle`,`A`.`AngleTimestamp` AS `AngleTimestamp`,`SF`.`Speed` AS `Speed`,`SF`.`SpeedFinisherTimeStamp` AS `SpeedFinisherTimeStamp`,`LATS`.`StopLocationLTS` AS `StopLocationLTS`,`LATS`.`StopTimeLTS` AS `StopTimeLTS`,`LATS`.`StopTimeStamp` AS `StopTimeStamp`,`AT`.`GPS` AS `GPS`,`AT`.`TempAsphalt` AS `TempAsphalt`,`AT`.`AsphaltTempTimeStamp` AS `AsphaltTempTimeStamp`,`CC`.`GPSFinisher` AS `GPSFinisher`,`CC`.`GPSCompactor` AS `GPSCompactor`,`CC`.`ColorCodeTimeStamp` AS `ColorCodeTimeStamp`,`CR`.`QrCodeCompactor` AS `QrCodeCompactor`,`CR`.`NumberOfRollerCompactorPassages` AS `NumberOfRollerCompactorPassages`,`CR`.`LocationOfVibration` AS `LocationOfVibration`,`CR`.`SpeedOfRollerCompactor` AS `SpeedOfRollerCompactor`,`CR`.`CompactorTimeStamp` AS `CompactorTimeStamp`,`Q`.`ComplianceMixture` AS `ComplianceMixture`,`Q`.`SamplesCopro` AS `SamplesCopro`,`Q`.`DensityOfField` AS `DensityOfField`,`Q`.`Cores` AS `Cores`,`Q`.`LengthwiseFlatness` AS `LengthwiseFlatness`,`Q`.`Skidresistance` AS `Skidresistance`,`Q`.`Iri` AS `Iri`,`Q`.`ExtraTestsAskedBijClient` AS `ExtraTestsAskedBijClient`,`Q`.`QualtityTimeStamp` AS `QualtityTimeStamp`,`R`.`RoadId` AS `RoadId`,`R`.`RoadDescription` AS `RoadDescription`,`R`.`RoadSectionTimeStamp` AS `RoadSectionTimeStamp`,`AM`.`AsphaltMixPlantTimestamp` AS `AsphaltMixPlantTimestamp`,`BA`.`BatchMaxTemp` AS `BatchMaxTemp`,`BA`.`BatchMinTemp` AS `BatchMinTemp`,`BA`.`LayerType` AS `LayerType`,`AM`.`CentralName` AS `CentralName`,`AM`.`CentralNameShort` AS `CentralNameShort`,`F`.`FinicherId` AS `FinicherId` from (((((((((((((((((((((((((`ActualPosition` `AP` join `ActualPositionReturn` `APR`) join `AirHumidity` `AH`) join `Angle` `A`) join `AsphaltTemp` `AT`) join `ColorCode` `CC`) join `Compactor` `CR`) join `ETA`) join `ETAReturn` `ETAR`) join `Finisher` `F`) join `LayerThickness` `LT`) join `LocationAndTimeSpan` `LATS`) join `Planning` `P`) join `QualityControl` `Q`) join `RoadSection` `R`) join `SpeedFinisher` `SF`) join `Truck` `T`) join `TruckTemp` `TT`) join `UnforseenStop` `US`) join `WeatherTemp` `WT`) join `Width` `WH`) join `Wind` `W`) join `AsphaltMixPlant` `AM`) join `BatchList` `BA`) join `Project` `PR`) join `Silo` `S`) where ((`R`.`ProjectId` = `PR`.`ProjectId`) and (`PR`.`ProjectId` = `P`.`ProjectId`) and (`Q`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`BatchId` = `CR`.`BatchId`) and (`CR`.`ColorCodeId` = `CC`.`ColorCodeID`) and (`BA`.`TruckId` = `T`.`TruckId`) and (`T`.`TruckTempId` = `TT`.`TruckTempId`) and (`T`.`ActualPositionId` = `AP`.`ActualPositionId`) and (`T`.`ETAId` = `ETA`.`ETAId`) and (`T`.`ETAReturnId` = `ETAR`.`ETAReturnId`) and (`T`.`UnforseenStopId` = `US`.`UnforseenStopId`) and (`T`.`ActualPositionReturnId` = `APR`.`ActualPositionReturnId`) and (`BA`.`FinisherId` = `F`.`FinicherId`) and (`F`.`WidthId` = `WH`.`WidthId`) and (`F`.`WindId` = `W`.`WindId`) and (`F`.`AngleId` = `A`.`AngleId`) and (`F`.`AirHumidityId` = `AH`.`AirHumidityId`) and (`F`.`TempId` = `WT`.`TempId`) and (`F`.`ThicknessLayerId` = `LT`.`LayerThicknessId`) and (`F`.`SpeedId` = `SF`.`SpeedId`) and (`F`.`AsphaltTempId` = `AT`.`AsphaltTempId`) and (`F`.`LocationAndTimeSpanId` = `LATS`.`LocationAndTimeSpanId`) and (`BA`.`SiloId` = `S`.`SiloId`) and (`S`.`CentralId` = `AM`.`CentralId`));
+DROP TABLE IF EXISTS `Copro`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`sammegf117_road`@`10.3.0.204` SQL SECURITY DEFINER VIEW `Copro` AS select `AM`.`TypeOfAggregates` AS `TypeOfAggregates`,`AM`.`MixtureChange` AS `MixtureChange`,`AM`.`AsphaltMixPlantTimestamp` AS `AsphaltMixPlantTimestamp`,`AG`.`AggragationMaxTemp` AS `AggragationMaxTemp`,`AG`.`AggragationMinTemp` AS `AggragationMinTemp`,`AG`.`AggragationTimeStamp` AS `AggragationTimeStamp`,`B`.`BitumenTimeStamp` AS `BitumenTimeStamp`,`B`.`BitumenMinTemp` AS `BitumenMinTemp`,`B`.`BitumenMaxTemp` AS `BitumenMaxTemp`,`LFR`.`FillerRecup` AS `FillerRecup`,`LFR`.`FillerRecupTimeStamp` AS `FillerRecupTimeStamp`,`C`.`MassOfAggregationBunker1` AS `MassOfAggregationBunker1`,`C`.`MassOfAggregationBunker2` AS `MassOfAggregationBunker2`,`C`.`MassOfAggregationBunker3` AS `MassOfAggregationBunker3`,`C`.`MassOfAggregationBunker4` AS `MassOfAggregationBunker4`,`C`.`MassOfAggregationBunker5` AS `MassOfAggregationBunker5`,`C`.`MassOfAggregationBunker6` AS `MassOfAggregationBunker6`,`C`.`Filler` AS `Filler`,`C`.`Bitumen` AS `Bitumen`,`C`.`AdditivesKg` AS `AdditivesKg`,`C`.`CompositionTimeStamp` AS `CompositionTimeStamp`,`S`.`MixingTemp` AS `MixingTemp`,`S`.`MixingTime` AS `MixingTime`,`S`.`TempSilo` AS `TempSilo`,`S`.`AnalysisComposition` AS `AnalysisComposition`,`S`.`SiloTimpStamp` AS `SiloTimpStamp`,`T`.`TruckLicensPlate` AS `TruckLicensPlate`,`T`.`DepartureTime` AS `DepartureTime`,`T`.`MassTruck` AS `MassTruck`,`TT`.`Temp` AS `Temp`,`TT`.`TempTruckTimeStamp` AS `TempTruckTimeStamp`,`CR`.`QrCodeCompactor` AS `QrCodeCompactor`,`Q`.`SamplesCopro` AS `SamplesCopro`,`Q`.`ExtraTestsAskedBijClient` AS `ExtraTestsAskedBijClient`,`Q`.`QualtityTimeStamp` AS `QualtityTimeStamp`,`R`.`RoadId` AS `RoadId`,`R`.`RoadDescription` AS `RoadDescription`,`R`.`RoadSectionTimeStamp` AS `RoadSectionTimeStamp`,`CR`.`CompactorTimeStamp` AS `CompactorTimeStamp`,`AM`.`MixtureName` AS `MixtureName`,`AM`.`TechnicalDataSheet` AS `TechnicalDataSheet`,`T`.`TruckTimeStamp` AS `TruckTimeStamp`,`BA`.`BatchMaxTemp` AS `BatchMaxTemp`,`BA`.`BatchMinTemp` AS `BatchMinTemp`,`BA`.`LayerType` AS `LayerType`,`AM`.`CentralName` AS `CentralName`,`AM`.`CentralNameShort` AS `CentralNameShort` from ((((((((((((`AsphaltMixPlant` `AM` join `Silo` `S`) join `Aggragation` `AG`) join `Bitumen` `B`) join `ListFillerRecup` `LFR`) join `Composition` `C`) join `Truck` `T`) join `TruckTemp` `TT`) join `Compactor` `CR`) join `QualityControl` `Q`) join `RoadSection` `R`) join `BatchList` `BA`) join `Project` `P`) where ((`AM`.`CentralId` = `S`.`CentralId`) and (`B`.`BitumenId` = `S`.`BitumenId`) and (`AG`.`AggragationId` = `S`.`AggregationId`) and (`LFR`.`ListFillerRecupId` = `S`.`ListRecupFillerId`) and (`BA`.`SiloId` = `S`.`SiloId`) and (`C`.`RealCompositionId` = `S`.`RealCompositionId`) and (`BA`.`ProjectId` = `P`.`ProjectId`) and (`R`.`ProjectId` = `P`.`ProjectId`) and (`BA`.`BatchId` = `CR`.`BatchId`) and (`Q`.`ProjectId` = `P`.`ProjectId`) and (`BA`.`TruckId` = `T`.`TruckId`) and (`T`.`TruckTempId` = `TT`.`TruckTempId`));
+DROP TABLE IF EXISTS `Trucker`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`sammegf117_road`@`10.3.0.204` SQL SECURITY DEFINER VIEW `Trucker` AS select `T`.`TruckLicensPlate` AS `TruckLicensPlate`,`T`.`DepartureTime` AS `DepartureTime`,`T`.`MassTruck` AS `MassTruck`,`T`.`RealArrivalTime` AS `RealArrivalTime`,`T`.`DeattachmentFinisherTime` AS `DeattachmentFinisherTime`,`T`.`DeattachmentFinisherPosition` AS `DeattachmentFinisherPosition`,`T`.`ArrivalAtPlant` AS `ArrivalAtPlant`,`T`.`AttachmentToFinisherTime` AS `AttachmentToFinisherTime`,`T`.`AttachmentToFinisherPosition` AS `AttachmentToFinisherPosition`,`T`.`TruckTimeStamp` AS `TruckTimeStamp`,`US`.`StopLocationUnforseenStop` AS `StopLocationUnforseenStop`,`US`.`StopTimeUnforseenStop` AS `StopTimeUnforseenStop`,`US`.`UnforseenStopTimeStamp` AS `UnforseenStopTimeStamp`,`AP`.`ActualPosition` AS `ActualPosition`,`AP`.`ActualPositionTimeStamp` AS `ActualPositionTimeStamp`,`APR`.`ActualPositionReturn` AS `ActualPositionReturn`,`APR`.`ActualPositionReturnTimeStamp` AS `ActualPositionReturnTimeStamp`,`ETA`.`ETA` AS `ETA`,`ETA`.`ETATimeStamp` AS `ETATimeStamp`,`ETAR`.`ETAReturn` AS `ETAReturn`,`ETAR`.`ETAReturnTimeStamp` AS `ETAReturnTimeStamp`,`CR`.`QrCodeCompactor` AS `QrCodeCompactor`,`R`.`RoadId` AS `RoadId`,`R`.`RoadDescription` AS `RoadDescription`,`R`.`RoadSectionTimeStamp` AS `RoadSectionTimeStamp`,`CR`.`CompactorTimeStamp` AS `CompactorTimeStamp`,`BA`.`BatchMaxTemp` AS `BatchMaxTemp`,`BA`.`BatchMinTemp` AS `BatchMinTemp`,`BA`.`LayerType` AS `LayerType`,`AM`.`CentralName` AS `CentralName`,`AM`.`CentralNameShort` AS `CentralNameShort` from (((((((((((`ActualPosition` `AP` join `ETA`) join `ActualPositionReturn` `APR`) join `ETAReturn` `ETAR`) join `Compactor` `CR`) join `RoadSection` `R`) join `UnforseenStop` `US`) join `Truck` `T`) join `BatchList` `BA`) join `Project` `PR`) join `AsphaltMixPlant` `AM`) join `Silo` `S`) where ((`R`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`BatchId` = `CR`.`BatchId`) and (`BA`.`TruckId` = `T`.`TruckId`) and (`T`.`ActualPositionId` = `AP`.`ActualPositionId`) and (`T`.`ETAId` = `ETA`.`ETAId`) and (`T`.`ETAReturnId` = `ETAR`.`ETAReturnId`) and (`T`.`UnforseenStopId` = `US`.`UnforseenStopId`) and (`T`.`ActualPositionReturnId` = `APR`.`ActualPositionReturnId`) and (`S`.`SiloId` = `BA`.`SiloId`) and (`AM`.`CentralId` = `S`.`CentralId`));
+DROP TABLE IF EXISTS `UA`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`sammegf117_road`@`10.3.0.204` SQL SECURITY DEFINER VIEW `UA` AS select `P`.`LayerThickness` AS `LayerThickness`,`P`.`Surface` AS `Surface`,`P`.`TonPerDay` AS `TonPerDay`,`P`.`PlanningTimeStamp` AS `PlanningTimeStamp`,`Q`.`ComplianceMixture` AS `ComplianceMixture`,`Q`.`SamplesCopro` AS `SamplesCopro`,`Q`.`DensityOfField` AS `DensityOfField`,`Q`.`Cores` AS `Cores`,`Q`.`LengthwiseFlatness` AS `LengthwiseFlatness`,`Q`.`Skidresistance` AS `Skidresistance`,`Q`.`Iri` AS `Iri`,`Q`.`ExtraTestsAskedBijClient` AS `ExtraTestsAskedBijClient`,`Q`.`QualtityTimeStamp` AS `QualtityTimeStamp`,`R`.`RoadId` AS `RoadId`,`R`.`RoadDescription` AS `RoadDescription`,`R`.`RoadSectionTimeStamp` AS `RoadSectionTimeStamp`,`CC`.`GPSFinisher` AS `GPSFinisher`,`CC`.`GPSCompactor` AS `GPSCompactor`,`CC`.`ColorCodeTimeStamp` AS `ColorCodeTimeStamp`,`CR`.`QrCodeCompactor` AS `QrCodeCompactor`,`CR`.`NumberOfRollerCompactorPassages` AS `NumberOfRollerCompactorPassages`,`CR`.`LocationOfVibration` AS `LocationOfVibration`,`CR`.`SpeedOfRollerCompactor` AS `SpeedOfRollerCompactor`,`CR`.`CompactorTimeStamp` AS `CompactorTimeStamp`,`AG`.`AggragationMaxTemp` AS `AggragationMaxTemp`,`AG`.`AggragationMinTemp` AS `AggragationMinTemp`,`AG`.`AggragationTimeStamp` AS `AggragationTimeStamp`,`B`.`BitumenTimeStamp` AS `BitumenTimeStamp`,`B`.`BitumenMinTemp` AS `BitumenMinTemp`,`B`.`BitumenMaxTemp` AS `BitumenMaxTemp`,`LFR`.`FillerRecup` AS `FillerRecup`,`LFR`.`FillerRecupTimeStamp` AS `FillerRecupTimeStamp`,`C`.`MassOfAggregationBunker1` AS `MassOfAggregationBunker1`,`C`.`MassOfAggregationBunker2` AS `MassOfAggregationBunker2`,`C`.`MassOfAggregationBunker3` AS `MassOfAggregationBunker3`,`C`.`MassOfAggregationBunker4` AS `MassOfAggregationBunker4`,`C`.`MassOfAggregationBunker5` AS `MassOfAggregationBunker5`,`C`.`MassOfAggregationBunker6` AS `MassOfAggregationBunker6`,`C`.`Filler` AS `Filler`,`C`.`Bitumen` AS `Bitumen`,`C`.`AdditivesKg` AS `AdditivesKg`,`C`.`CompositionTimeStamp` AS `CompositionTimeStamp`,`AM`.`MixtureName` AS `MixtureName`,`AM`.`TechnicalDataSheet` AS `TechnicalDataSheet`,`AM`.`TypeOfAggregates` AS `TypeOfAggregates`,`AM`.`MixtureChange` AS `MixtureChange`,`AM`.`AsphaltMixPlantTimestamp` AS `AsphaltMixPlantTimestamp`,`T`.`TruckLicensPlate` AS `TruckLicensPlate`,`T`.`DepartureTime` AS `DepartureTime`,`T`.`MassTruck` AS `MassTruck`,`T`.`RealArrivalTime` AS `RealArrivalTime`,`T`.`DeattachmentFinisherTime` AS `DeattachmentFinisherTime`,`T`.`DeattachmentFinisherPosition` AS `DeattachmentFinisherPosition`,`T`.`ArrivalAtPlant` AS `ArrivalAtPlant`,`T`.`AttachmentToFinisherTime` AS `AttachmentToFinisherTime`,`T`.`AttachmentToFinisherPosition` AS `AttachmentToFinisherPosition`,`T`.`TruckTimeStamp` AS `TruckTimeStamp`,`AP`.`ActualPosition` AS `ActualPosition`,`AP`.`ActualPositionTimeStamp` AS `ActualPositionTimeStamp`,`APR`.`ActualPositionReturn` AS `ActualPositionReturn`,`APR`.`ActualPositionReturnTimeStamp` AS `ActualPositionReturnTimeStamp`,`ETA`.`ETA` AS `ETA`,`ETA`.`ETATimeStamp` AS `ETATimeStamp`,`ETAR`.`ETAReturn` AS `ETAReturn`,`ETAR`.`ETAReturnTimeStamp` AS `ETAReturnTimeStamp`,`US`.`StopLocationUnforseenStop` AS `StopLocationUnforseenStop`,`US`.`StopTimeUnforseenStop` AS `StopTimeUnforseenStop`,`US`.`UnforseenStopTimeStamp` AS `UnforseenStopTimeStamp`,`TT`.`Temp` AS `Temp`,`TT`.`TempTruckTimeStamp` AS `TempTruckTimeStamp`,`F`.`TranverseSlope` AS `TranverseSlope`,`F`.`Precipation` AS `Precipation`,`F`.`AsphaltTempAfterFinisherIrScanOrThermo` AS `AsphaltTempAfterFinisherIrScanOrThermo`,`F`.`FinisherTimeStamp` AS `FinisherTimeStamp`,`S`.`MixingTemp` AS `MixingTemp`,`S`.`MixingTime` AS `MixingTime`,`S`.`TempSilo` AS `TempSilo`,`S`.`AnalysisComposition` AS `AnalysisComposition`,`S`.`SiloTimpStamp` AS `SiloTimpStamp`,`SF`.`Speed` AS `Speed`,`SF`.`SpeedFinisherTimeStamp` AS `SpeedFinisherTimeStamp`,`WT`.`TempWeather` AS `TempWeather`,`WT`.`WeatherTempTimeStamp` AS `WeatherTempTimeStamp`,`WH`.`Width` AS `Width`,`WH`.`WidthTimeStamp` AS `WidthTimeStamp`,`W`.`WindSpeed` AS `WindSpeed`,`W`.`WindTimeStamp` AS `WindTimeStamp`,`LATS`.`StopLocationLTS` AS `StopLocationLTS`,`LATS`.`StopTimeLTS` AS `StopTimeLTS`,`LATS`.`StopTimeStamp` AS `StopTimeStamp`,`AT`.`GPS` AS `GPS`,`AT`.`TempAsphalt` AS `TempAsphalt`,`AT`.`AsphaltTempTimeStamp` AS `AsphaltTempTimeStamp`,`LT`.`LeftTickness` AS `LeftTickness`,`LT`.`MiddelThickness` AS `MiddelThickness`,`LT`.`RightThickness` AS `RightThickness`,`LT`.`ThicknessTimeStamp` AS `ThicknessTimeStamp`,`AH`.`AirHumidity` AS `AirHumidity`,`AH`.`AirHumidityTimeStamp` AS `AirHumidityTimeStamp`,`A`.`LeftAngle` AS `LeftAngle`,`A`.`RightAngle` AS `RightAngle`,`A`.`AngleTimestamp` AS `AngleTimestamp`,`BA`.`BatchMaxTemp` AS `BatchMaxTemp`,`BA`.`BatchMinTemp` AS `BatchMinTemp`,`BA`.`LayerType` AS `LayerType`,`AM`.`CentralName` AS `CentralName`,`AM`.`CentralNameShort` AS `CentralNameShort`,`F`.`FinicherId` AS `FinicherId` from (((((((((((((((((((((((((((((`Planning` `P` join `QualityControl` `Q`) join `RoadSection` `R`) join `BatchList` `BA`) join `Project` `PR`) join `ColorCode` `CC`) join `Compactor` `CR`) join `AsphaltMixPlant` `AM`) join `Aggragation` `AG`) join `Bitumen` `B`) join `Composition` `C`) join `ListFillerRecup` `LFR`) join `Silo` `S`) join `ActualPosition` `AP`) join `ActualPositionReturn` `APR`) join `ETA`) join `ETAReturn` `ETAR`) join `Truck` `T`) join `TruckTemp` `TT`) join `UnforseenStop` `US`) join `AirHumidity` `AH`) join `Angle` `A`) join `Finisher` `F`) join `LayerThickness` `LT`) join `LocationAndTimeSpan` `LATS`) join `SpeedFinisher` `SF`) join `WeatherTemp` `WT`) join `Width` `WH`) join `Wind` `W`) join `AsphaltTemp` `AT`) where ((`R`.`ProjectId` = `PR`.`ProjectId`) and (`PR`.`ProjectId` = `P`.`ProjectId`) and (`Q`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`ProjectId` = `PR`.`ProjectId`) and (`BA`.`BatchId` = `CR`.`BatchId`) and (`CR`.`ColorCodeId` = `CC`.`ColorCodeID`) and (`AM`.`CentralId` = `S`.`CentralId`) and (`B`.`BitumenId` = `S`.`BitumenId`) and (`AG`.`AggragationId` = `S`.`AggregationId`) and (`LFR`.`ListFillerRecupId` = `S`.`ListRecupFillerId`) and (`BA`.`SiloId` = `S`.`SiloId`) and (`C`.`RealCompositionId` = `S`.`RealCompositionId`) and (`BA`.`TruckId` = `T`.`TruckId`) and (`T`.`TruckTempId` = `TT`.`TruckTempId`) and (`T`.`ActualPositionId` = `AP`.`ActualPositionId`) and (`T`.`ETAId` = `ETA`.`ETAId`) and (`T`.`ETAReturnId` = `ETAR`.`ETAReturnId`) and (`T`.`UnforseenStopId` = `US`.`UnforseenStopId`) and (`T`.`ActualPositionReturnId` = `APR`.`ActualPositionReturnId`) and (`BA`.`FinisherId` = `F`.`FinicherId`) and (`F`.`WidthId` = `WH`.`WidthId`) and (`F`.`WindId` = `W`.`WindId`) and (`F`.`AngleId` = `A`.`AngleId`) and (`F`.`AirHumidityId` = `AH`.`AirHumidityId`) and (`F`.`TempId` = `WT`.`TempId`) and (`F`.`ThicknessLayerId` = `LT`.`LayerThicknessId`) and (`F`.`SpeedId` = `SF`.`SpeedId`) and (`F`.`AsphaltTempId` = `AT`.`AsphaltTempId`) and (`F`.`LocationAndTimeSpanId` = `LATS`.`LocationAndTimeSpanId`));
+
+
+ALTER TABLE `BatchList`
+  ADD CONSTRAINT `BatchList_ibfk_1` FOREIGN KEY (`ProjectId`) REFERENCES `Project` (`ProjectId`),
+  ADD CONSTRAINT `BatchList_ibfk_2` FOREIGN KEY (`SiloId`) REFERENCES `Silo` (`SiloId`),
+  ADD CONSTRAINT `BatchList_ibfk_3` FOREIGN KEY (`TruckId`) REFERENCES `Truck` (`TruckId`),
+  ADD CONSTRAINT `BatchList_ibfk_4` FOREIGN KEY (`FinisherId`) REFERENCES `Finisher` (`FinicherId`);
+
+ALTER TABLE `Compactor`
+  ADD CONSTRAINT `Compactor_ibfk_1` FOREIGN KEY (`ColorCodeId`) REFERENCES `ColorCode` (`ColorCodeID`),
+  ADD CONSTRAINT `Compactor_ibfk_2` FOREIGN KEY (`BatchId`) REFERENCES `BatchList` (`BatchId`);
+
+ALTER TABLE `Contractor`
+  ADD CONSTRAINT `Contractor_ibfk_1` FOREIGN KEY (`ProjectId`) REFERENCES `Project` (`ProjectId`);
+
+ALTER TABLE `Finisher`
+  ADD CONSTRAINT `Finisher_ibfk_1` FOREIGN KEY (`SpeedId`) REFERENCES `SpeedFinisher` (`SpeedId`),
+  ADD CONSTRAINT `Finisher_ibfk_2` FOREIGN KEY (`AngleId`) REFERENCES `Angle` (`AngleId`),
+  ADD CONSTRAINT `Finisher_ibfk_3` FOREIGN KEY (`ThicknessLayerId`) REFERENCES `LayerThickness` (`LayerThicknessId`),
+  ADD CONSTRAINT `Finisher_ibfk_4` FOREIGN KEY (`LocationAndTimeSpanId`) REFERENCES `LocationAndTimeSpan` (`LocationAndTimeSpanId`),
+  ADD CONSTRAINT `Finisher_ibfk_5` FOREIGN KEY (`TempId`) REFERENCES `WeatherTemp` (`TempId`),
+  ADD CONSTRAINT `Finisher_ibfk_6` FOREIGN KEY (`WindId`) REFERENCES `Wind` (`WindId`),
+  ADD CONSTRAINT `Finisher_ibfk_7` FOREIGN KEY (`AirHumidityId`) REFERENCES `AirHumidity` (`AirHumidityId`),
+  ADD CONSTRAINT `Finisher_ibfk_8` FOREIGN KEY (`AsphaltTempId`) REFERENCES `AsphaltTemp` (`AsphaltTempId`),
+  ADD CONSTRAINT `Finisher_ibfk_9` FOREIGN KEY (`WidthId`) REFERENCES `Width` (`WidthId`);
+
+ALTER TABLE `Planning`
+  ADD CONSTRAINT `Planning_ibfk_1` FOREIGN KEY (`ProjectId`) REFERENCES `Project` (`ProjectId`);
+
+ALTER TABLE `QualityControl`
+  ADD CONSTRAINT `QualityControl_ibfk_1` FOREIGN KEY (`ProjectId`) REFERENCES `Project` (`ProjectId`);
+
+ALTER TABLE `RoadSection`
+  ADD CONSTRAINT `RoadSection_ibfk_1` FOREIGN KEY (`ProjectId`) REFERENCES `Project` (`ProjectId`);
+
+ALTER TABLE `Silo`
+  ADD CONSTRAINT `Silo_ibfk_1` FOREIGN KEY (`CentralId`) REFERENCES `AsphaltMixPlant` (`CentralId`),
+  ADD CONSTRAINT `Silo_ibfk_2` FOREIGN KEY (`AggregationId`) REFERENCES `Aggragation` (`AggragationId`),
+  ADD CONSTRAINT `Silo_ibfk_3` FOREIGN KEY (`BitumenId`) REFERENCES `Bitumen` (`BitumenId`),
+  ADD CONSTRAINT `Silo_ibfk_4` FOREIGN KEY (`ListRecupFillerId`) REFERENCES `ListFillerRecup` (`ListFillerRecupId`),
+  ADD CONSTRAINT `Silo_ibfk_5` FOREIGN KEY (`RealCompositionId`) REFERENCES `Composition` (`RealCompositionId`);
+
+ALTER TABLE `Truck`
+  ADD CONSTRAINT `Truck_ibfk_3` FOREIGN KEY (`ActualPositionId`) REFERENCES `ActualPosition` (`ActualPositionId`),
+  ADD CONSTRAINT `Truck_ibfk_4` FOREIGN KEY (`ETAId`) REFERENCES `ETA` (`ETAId`),
+  ADD CONSTRAINT `Truck_ibfk_5` FOREIGN KEY (`ActualPositionReturnId`) REFERENCES `ActualPositionReturn` (`ActualPositionReturnId`),
+  ADD CONSTRAINT `Truck_ibfk_6` FOREIGN KEY (`ETAReturnId`) REFERENCES `ETAReturn` (`ETAReturnId`),
+  ADD CONSTRAINT `Truck_ibfk_7` FOREIGN KEY (`TruckTempId`) REFERENCES `TruckTemp` (`TruckTempId`),
+  ADD CONSTRAINT `Truck_ibfk_8` FOREIGN KEY (`UnforseenStopId`) REFERENCES `UnforseenStop` (`UnforseenStopId`);
+
+ALTER TABLE `Users`
+  ADD CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`RoleId`) REFERENCES `Roles` (`RoleId`);
