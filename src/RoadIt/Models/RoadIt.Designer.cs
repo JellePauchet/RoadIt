@@ -4821,7 +4821,8 @@ namespace RoadIt.Models
         /// <param name="layerType">Initial value of the LayerType property.</param>
         /// <param name="centralName">Initial value of the CentralName property.</param>
         /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
-        public static Client CreateClient(global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String mixtureChange, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.DateTime truckTimeStamp, global::System.DateTime compactorTimeStamp, global::System.Int32 tranverseSlope, global::System.String gPSFinisher, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
+        /// <param name="finicherId">Initial value of the FinicherId property.</param>
+        public static Client CreateClient(global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String mixtureChange, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.DateTime truckTimeStamp, global::System.DateTime compactorTimeStamp, global::System.Int32 tranverseSlope, global::System.String gPSFinisher, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort, global::System.Int32 finicherId)
         {
             Client client = new Client();
             client.MixtureName = mixtureName;
@@ -4886,6 +4887,7 @@ namespace RoadIt.Models
             client.LayerType = layerType;
             client.CentralName = centralName;
             client.CentralNameShort = centralNameShort;
+            client.FinicherId = finicherId;
             return client;
         }
 
@@ -6566,6 +6568,33 @@ namespace RoadIt.Models
         private global::System.String _CentralNameShort;
         partial void OnCentralNameShortChanging(global::System.String value);
         partial void OnCentralNameShortChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 FinicherId
+        {
+            get
+            {
+                return _FinicherId;
+            }
+            set
+            {
+                if (_FinicherId != value)
+                {
+                    OnFinicherIdChanging(value);
+                    ReportPropertyChanging("FinicherId");
+                    _FinicherId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FinicherId");
+                    OnFinicherIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _FinicherId;
+        partial void OnFinicherIdChanging(global::System.Int32 value);
+        partial void OnFinicherIdChanged();
 
         #endregion
 
@@ -7641,7 +7670,8 @@ namespace RoadIt.Models
         /// <param name="layerType">Initial value of the LayerType property.</param>
         /// <param name="centralName">Initial value of the CentralName property.</param>
         /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
-        public static ContractorView CreateContractorView(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
+        /// <param name="finicherId">Initial value of the FinicherId property.</param>
+        public static ContractorView CreateContractorView(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.DateTime asphaltMixPlantTimestamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort, global::System.Int32 finicherId)
         {
             ContractorView contractorView = new ContractorView();
             contractorView.LayerThickness = layerThickness;
@@ -7726,6 +7756,7 @@ namespace RoadIt.Models
             contractorView.LayerType = layerType;
             contractorView.CentralName = centralName;
             contractorView.CentralNameShort = centralNameShort;
+            contractorView.FinicherId = finicherId;
             return contractorView;
         }
 
@@ -9946,6 +9977,33 @@ namespace RoadIt.Models
         private global::System.String _CentralNameShort;
         partial void OnCentralNameShortChanging(global::System.String value);
         partial void OnCentralNameShortChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 FinicherId
+        {
+            get
+            {
+                return _FinicherId;
+            }
+            set
+            {
+                if (_FinicherId != value)
+                {
+                    OnFinicherIdChanging(value);
+                    ReportPropertyChanging("FinicherId");
+                    _FinicherId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FinicherId");
+                    OnFinicherIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _FinicherId;
+        partial void OnFinicherIdChanging(global::System.Int32 value);
+        partial void OnFinicherIdChanged();
 
         #endregion
 
@@ -16507,7 +16565,8 @@ namespace RoadIt.Models
         /// <param name="layerType">Initial value of the LayerType property.</param>
         /// <param name="centralName">Initial value of the CentralName property.</param>
         /// <param name="centralNameShort">Initial value of the CentralNameShort property.</param>
-        public static UA CreateUA(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.DateTime aggragationTimeStamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort)
+        /// <param name="finicherId">Initial value of the FinicherId property.</param>
+        public static UA CreateUA(global::System.Int32 layerThickness, global::System.Int32 surface, global::System.Int32 tonPerDay, global::System.DateTime planningTimeStamp, global::System.String complianceMixture, global::System.String samplesCopro, global::System.String densityOfField, global::System.String cores, global::System.String lengthwiseFlatness, global::System.String skidresistance, global::System.String iri, global::System.String extraTestsAskedBijClient, global::System.DateTime qualtityTimeStamp, global::System.Int32 roadId, global::System.String roadDescription, global::System.DateTime roadSectionTimeStamp, global::System.String gPSFinisher, global::System.String gPSCompactor, global::System.DateTime colorCodeTimeStamp, global::System.String qrCodeCompactor, global::System.Int32 numberOfRollerCompactorPassages, global::System.String locationOfVibration, global::System.Int32 speedOfRollerCompactor, global::System.DateTime compactorTimeStamp, global::System.Int32 aggragationMaxTemp, global::System.Int32 aggragationMinTemp, global::System.DateTime bitumenTimeStamp, global::System.Int32 bitumenMinTemp, global::System.Int32 bitumenMaxTemp, global::System.Int32 fillerRecup, global::System.DateTime fillerRecupTimeStamp, global::System.Int32 massOfAggregationBunker1, global::System.Int32 massOfAggregationBunker2, global::System.Int32 massOfAggregationBunker3, global::System.Int32 massOfAggregationBunker4, global::System.Int32 massOfAggregationBunker5, global::System.Int32 massOfAggregationBunker6, global::System.Int32 filler, global::System.Int32 bitumen, global::System.Int32 additivesKg, global::System.DateTime compositionTimeStamp, global::System.String mixtureName, global::System.String technicalDataSheet, global::System.String typeOfAggregates, global::System.String mixtureChange, global::System.DateTime asphaltMixPlantTimestamp, global::System.String truckLicensPlate, global::System.DateTime departureTime, global::System.Int32 massTruck, global::System.DateTime realArrivalTime, global::System.DateTime deattachmentFinisherTime, global::System.String deattachmentFinisherPosition, global::System.DateTime arrivalAtPlant, global::System.DateTime attachmentToFinisherTime, global::System.String attachmentToFinisherPosition, global::System.DateTime truckTimeStamp, global::System.String actualPosition, global::System.DateTime actualPositionTimeStamp, global::System.String actualPositionReturn, global::System.DateTime actualPositionReturnTimeStamp, global::System.TimeSpan eTA, global::System.DateTime eTATimeStamp, global::System.TimeSpan eTAReturn, global::System.DateTime eTAReturnTimeStamp, global::System.String stopLocationUnforseenStop, global::System.TimeSpan stopTimeUnforseenStop, global::System.DateTime unforseenStopTimeStamp, global::System.Int32 temp, global::System.DateTime tempTruckTimeStamp, global::System.Int32 tranverseSlope, global::System.String precipation, global::System.String asphaltTempAfterFinisherIrScanOrThermo, global::System.DateTime finisherTimeStamp, global::System.Int32 speed, global::System.DateTime speedFinisherTimeStamp, global::System.Int32 tempWeather, global::System.DateTime weatherTempTimeStamp, global::System.Int32 width, global::System.DateTime widthTimeStamp, global::System.Int32 windSpeed, global::System.DateTime windTimeStamp, global::System.String stopLocationLTS, global::System.TimeSpan stopTimeLTS, global::System.DateTime stopTimeStamp, global::System.String gPS, global::System.Int32 tempAsphalt, global::System.DateTime asphaltTempTimeStamp, global::System.Int32 leftTickness, global::System.Int32 middelThickness, global::System.Int32 rightThickness, global::System.DateTime thicknessTimeStamp, global::System.Int32 airHumidity, global::System.DateTime airHumidityTimeStamp, global::System.Int32 leftAngle, global::System.Int32 rightAngle, global::System.DateTime angleTimestamp, global::System.Int32 mixingTemp, global::System.TimeSpan mixingTime, global::System.Int32 tempSilo, global::System.String analysisComposition, global::System.DateTime siloTimpStamp, global::System.DateTime aggragationTimeStamp, global::System.Int32 batchMaxTemp, global::System.Int32 batchMinTemp, global::System.String layerType, global::System.String centralName, global::System.String centralNameShort, global::System.Int32 finicherId)
         {
             UA uA = new UA();
             uA.LayerThickness = layerThickness;
@@ -16617,6 +16676,7 @@ namespace RoadIt.Models
             uA.LayerType = layerType;
             uA.CentralName = centralName;
             uA.CentralNameShort = centralNameShort;
+            uA.FinicherId = finicherId;
             return uA;
         }
 
@@ -19512,6 +19572,33 @@ namespace RoadIt.Models
         private global::System.String _CentralNameShort;
         partial void OnCentralNameShortChanging(global::System.String value);
         partial void OnCentralNameShortChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 FinicherId
+        {
+            get
+            {
+                return _FinicherId;
+            }
+            set
+            {
+                if (_FinicherId != value)
+                {
+                    OnFinicherIdChanging(value);
+                    ReportPropertyChanging("FinicherId");
+                    _FinicherId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FinicherId");
+                    OnFinicherIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _FinicherId;
+        partial void OnFinicherIdChanging(global::System.Int32 value);
+        partial void OnFinicherIdChanged();
 
         #endregion
 

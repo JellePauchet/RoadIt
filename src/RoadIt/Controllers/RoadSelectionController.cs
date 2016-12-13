@@ -25,7 +25,7 @@ namespace RoadIt.Controllers
             Session["roadID"] = RoadSectionId;
             Session["StartDate"] = StartDate.Date.ToString("d");
             Session["StopDate"] = StopDate.Date.ToString("d");
-            var roleId = Convert.ToInt32(Session["roadID"]);
+            var roleId = Convert.ToInt32(Session["RoleId"]);
             var pageRef = "";
             switch (roleId)
             {
@@ -49,7 +49,6 @@ namespace RoadIt.Controllers
                     break;
             }
 
-            //var pageRef = "Manager";
             return RedirectToAction("Index",pageRef);
         }
 

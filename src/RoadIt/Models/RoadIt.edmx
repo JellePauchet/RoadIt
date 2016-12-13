@@ -172,7 +172,8 @@
       `Client`.`BatchMinTemp`, 
       `Client`.`LayerType`, 
       `Client`.`CentralName`, 
-      `Client`.`CentralNameShort`
+      `Client`.`CentralNameShort`, 
+      `Client`.`FinicherId`
       FROM `Client` AS `Client`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ContractorView" EntityType="sammegf117_roaditModel.Store.ContractorView" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="ContractorView">
@@ -258,7 +259,8 @@
       `ContractorView`.`BatchMinTemp`, 
       `ContractorView`.`LayerType`, 
       `ContractorView`.`CentralName`, 
-      `ContractorView`.`CentralNameShort`
+      `ContractorView`.`CentralNameShort`, 
+      `ContractorView`.`FinicherId`
       FROM `ContractorView` AS `ContractorView`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Copro" EntityType="sammegf117_roaditModel.Store.Copro" store:Type="Views" store:Schema="sammegf117_roadit" store:Name="Copro">
@@ -455,7 +457,8 @@
       `UA`.`BatchMinTemp`, 
       `UA`.`LayerType`, 
       `UA`.`CentralName`, 
-      `UA`.`CentralNameShort`
+      `UA`.`CentralNameShort`, 
+      `UA`.`FinicherId`
       FROM `UA` AS `UA`</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="BatchList_ibfk_1" Association="sammegf117_roaditModel.Store.BatchList_ibfk_1">
@@ -1131,6 +1134,7 @@
             <PropertyRef Name="LayerType" />
             <PropertyRef Name="CentralName" />
             <PropertyRef Name="CentralNameShort" />
+            <PropertyRef Name="FinicherId" />
           </Key>
           <Property Name="MixtureName" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="TechnicalDataSheet" Type="varchar" Nullable="false" MaxLength="255" />
@@ -1194,6 +1198,7 @@
           <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="FinicherId" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.ContractorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1282,6 +1287,7 @@
             <PropertyRef Name="LayerType" />
             <PropertyRef Name="CentralName" />
             <PropertyRef Name="CentralNameShort" />
+            <PropertyRef Name="FinicherId" />
           </Key>
           <Property Name="LayerThickness" Type="int" Nullable="false" />
           <Property Name="Surface" Type="int" Nullable="false" />
@@ -1365,6 +1371,7 @@
           <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="FinicherId" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.sammegf117_roadit.Copro' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1648,6 +1655,7 @@
             <PropertyRef Name="LayerType" />
             <PropertyRef Name="CentralName" />
             <PropertyRef Name="CentralNameShort" />
+            <PropertyRef Name="FinicherId" />
           </Key>
           <Property Name="LayerThickness" Type="int" Nullable="false" />
           <Property Name="Surface" Type="int" Nullable="false" />
@@ -1756,6 +1764,7 @@
           <Property Name="LayerType" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="CentralName" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="CentralNameShort" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="FinicherId" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="BatchList_ibfk_1">
           <End Role="Project" Type="sammegf117_roaditModel.Store.Project" Multiplicity="1" />
@@ -2902,6 +2911,7 @@
             <PropertyRef Name="LayerType" />
             <PropertyRef Name="CentralName" />
             <PropertyRef Name="CentralNameShort" />
+            <PropertyRef Name="FinicherId" />
           </Key>
           <Property Name="MixtureName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="TechnicalDataSheet" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
@@ -2965,6 +2975,7 @@
           <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="FinicherId" Nullable="false" />
         </EntityType>
         <EntityType Name="ContractorView">
           <Key>
@@ -3050,6 +3061,7 @@
             <PropertyRef Name="LayerType" />
             <PropertyRef Name="CentralName" />
             <PropertyRef Name="CentralNameShort" />
+            <PropertyRef Name="FinicherId" />
           </Key>
           <Property Name="LayerThickness" Type="Int32" Nullable="false" />
           <Property Name="Surface" Type="Int32" Nullable="false" />
@@ -3133,6 +3145,7 @@
           <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="FinicherId" Nullable="false" />
         </EntityType>
         <EntityType Name="Copro">
           <Key>
@@ -3407,6 +3420,7 @@
             <PropertyRef Name="LayerType" />
             <PropertyRef Name="CentralName" />
             <PropertyRef Name="CentralNameShort" />
+            <PropertyRef Name="FinicherId" />
           </Key>
           <Property Name="LayerThickness" Type="Int32" Nullable="false" />
           <Property Name="Surface" Type="Int32" Nullable="false" />
@@ -3515,6 +3529,7 @@
           <Property Type="String" Name="LayerType" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="CentralName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="CentralNameShort" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="FinicherId" Nullable="false" />
         </EntityType>
         <Association Name="Truck_ibfk_3">
           <End Role="ActualPosition" Type="sammegf117_roaditModel.ActualPosition" Multiplicity="1" />
@@ -4344,6 +4359,7 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.Client">
               <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="FinicherId" ColumnName="FinicherId" />
                 <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
                 <ScalarProperty Name="CentralName" ColumnName="CentralName" />
                 <ScalarProperty Name="LayerType" ColumnName="LayerType" />
@@ -4412,6 +4428,7 @@
           <EntitySetMapping Name="ContractorViews">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.ContractorView">
               <MappingFragment StoreEntitySet="ContractorView">
+                <ScalarProperty Name="FinicherId" ColumnName="FinicherId" />
                 <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
                 <ScalarProperty Name="CentralName" ColumnName="CentralName" />
                 <ScalarProperty Name="LayerType" ColumnName="LayerType" />
@@ -4590,6 +4607,7 @@
           <EntitySetMapping Name="UAs">
             <EntityTypeMapping TypeName="sammegf117_roaditModel.UA">
               <MappingFragment StoreEntitySet="UA">
+                <ScalarProperty Name="FinicherId" ColumnName="FinicherId" />
                 <ScalarProperty Name="CentralNameShort" ColumnName="CentralNameShort" />
                 <ScalarProperty Name="CentralName" ColumnName="CentralName" />
                 <ScalarProperty Name="LayerType" ColumnName="LayerType" />

@@ -13,9 +13,9 @@
         <p>The next data that is showed is for roadsection: @Session["RoadID"].ToString()</p>
         @Html.Raw(ViewData["tableSpec"].ToString())
         @Html.Raw(ViewData["tableTransport"].ToString())
-        /*@Html.Raw(Session["tableTotal"].ToString())
-        @Html.Raw(Session["tablePlants1"].ToString())
-        @Html.Raw(Session["tablePlants2"].ToString())*/
+        @Html.Raw(ViewData["tableTotal"].ToString())
+        @Html.Raw(ViewData["tablePlant"].ToString())
+        @Html.Raw(ViewData["tableMix"].ToString())
     }
     else
     {

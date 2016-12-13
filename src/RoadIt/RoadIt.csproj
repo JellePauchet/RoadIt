@@ -162,21 +162,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Client\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\RoadSelection\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
-    <Content Include="Views\UA\Index.cshtml" />
-    <Content Include="Views\AsphaltProducer\Index.cshtml" />
-    <Content Include="Views\Contractor\Index.cshtml">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="Views\Copro\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Transporter\Index.cshtml" />
     <EntityDeploy Include="Models\RoadIt.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RoadIt.Designer.cs</LastGenOutput>

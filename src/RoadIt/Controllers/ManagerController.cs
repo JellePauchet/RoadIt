@@ -9,10 +9,17 @@ namespace RoadIt.Controllers
 {
     public class ManagerController : Controller
     {
-        public ActionResult Index(List<string[]> list1, List<string[]> list2, List<string[]> list3, List<string[]> list4)
+        public ActionResult Index()
         {
+            CounterA = 0;
+            CounterR = 0;
+            TotalMas = 0;
+            CountersReset();
             ViewData["tableSpec"] = GenerateTableSpecifications(SpecArray);
             ViewData["tableTransport"] = GenerateTableTransport(TransportList,SpecArray);
+            ViewData["tableTotal"] = GenerateTableTotal(TotalList);
+            ViewData["tablePlant"] = GenerateTablePlants1(PlantList);
+            ViewData["tableMix"] = GenerateTablePlants2(MixtureList);
             return View();
         }
 
@@ -22,6 +29,12 @@ namespace RoadIt.Controllers
         public static List<string[]> PlantList = new List<string[]>();
         public static List<string[]> MixtureList = new List<string[]>();
         public static string[] SpecArray = new string[5];
+        public static int CounterA = 0;
+        public static int CounterR = 0;
+        public static List<List<string>> AcceptedList = new List<List<string>>();
+        public static List<List<string>> RejectedList = new List<List<string>>();
+        public static List<List<string>> TotalMasList = new List<List<string>>();
+        public static int TotalMas = 0;
 
         
         //setters
@@ -68,6 +81,99 @@ namespace RoadIt.Controllers
             SetSpecArray(Specs);
         }
 
+        public static void CountersReset()
+        {
+            AcceptedList.Clear();
+            RejectedList.Clear();
+            TotalMasList.Clear();
+            List<string> nul = new List<string>();
+            nul.Add("");
+            nul.Add("");
+            AcceptedList.Add(nul);
+            RejectedList.Add(nul);
+            TotalMasList.Add(nul);
+        }
+
+        public static void CountAccepted(string CentralName)
+        {
+            int counter = 0;
+            for (int i = 0; i < AcceptedList.Count(); i++)
+            {
+                if(AcceptedList[i][0] == CentralName)
+                {
+                    int list = Convert.ToInt32(AcceptedList[i]);
+                    list =+ 1;
+                    AcceptedList[i].Insert(1, list.ToString());
+                }
+                else
+                {
+                    counter++;
+                }
+            }
+            if (counter == AcceptedList.Count())
+            {
+                AcceptedList.Clear();
+                List<string> list = new List<string>();
+                list.Add(CentralName);
+                list.Add("1");
+                AcceptedList.Add(list);
+            }
+        }
+
+        public static void CountRejected(string CentralName)
+        {
+            int counter = 0;
+            for (int i = 0; i < RejectedList.Count(); i++)
+            {
+                if (RejectedList[i][0] == CentralName)
+                {
+                    string list = RejectedList[i][1];
+                    int tel = Convert.ToInt32(list);
+                    tel ++;
+                    RejectedList[i][1] = tel.ToString();
+                }
+                else
+                {
+                    counter++;
+                }
+            }
+            if (counter == RejectedList.Count())
+            {
+                RejectedList.Clear();
+                List<string> list = new List<string>();
+                list.Add(CentralName);
+                list.Add("1");
+                RejectedList.Add(list);
+            }
+        
+        }
+        public static void CountTotalMas(string CentralName, int Mass)
+        {
+            int counter = 0;
+            for (int i = 0; i < TotalMasList.Count(); i++)
+            {
+                if (TotalMasList[i][0] == CentralName)
+                {
+                    int list = Convert.ToInt32(RejectedList[i]);
+                    list =+  Mass;
+                    RejectedList[i].Insert(1, list.ToString());
+                }
+                else
+                {
+                    counter++;
+                }
+            }
+            if (counter == TotalMasList.Count())
+            {
+                TotalMasList.Clear();
+                List<string> list = new List<string>();
+                list.Add(CentralName);
+                list.Add(Mass.ToString());
+                TotalMasList.Add(list);
+            }
+        }
+
+
         public string GenerateTableSpecifications(string[] ArraySpec) //RoadId nog toevoegen aan view
         {
             string table = "";
@@ -107,19 +213,24 @@ namespace RoadIt.Controllers
                     table += "</td>";
                 }
                 table += "<td>";
-                if(item[4] != "")
+                if (item[4] != "")
                 {
                     if (Convert.ToInt32(item[4]) >= Convert.ToInt32(ArraySpec[3]) && Convert.ToInt32(item[4]) <= Convert.ToInt32(ArraySpec[4]))
                     {
                         table += "Accepted";
+                        CounterA++;
+                        CountAccepted(item[1]);
+                        CountTotalMas(item[1], Convert.ToInt32(item[3]));
                     }
                     else
                     {
                         table += "Rejected";
+                        CounterR++;
+                        CountRejected(item[1]);
                     }
                 }
                 table += "</tr>";
-                 
+                TotalMas += Convert.ToInt32(item[3]);
             }            
             table += "</table>";
             return table;
@@ -127,13 +238,85 @@ namespace RoadIt.Controllers
 
         public static string GenerateTableTotal(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
-            var table = "<h3>Totals today</h3>";
+            int AcceptedC = 0;
+            int RejectedC = 0;
+            int MassC = 0;
+            string table = "";
+            table = "<h3>Totals today</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
 
             table += "<tr><th></th><th>Totals</th><th></th><th></th></tr>";
-            table += "<tr><td>Accepted trucks</td><td></td><td></td><td></td></tr>";
-            table += "<tr><td>Rejected trucks</td><td></td><td></td><td></td></tr>";
-            table += "<tr><td>Accepted mass</td><td></td><td></td><td></td></tr>";
+            table += "<tr><td>Accepted trucks</td>";
+            table += "<td>" + CounterA.ToString() + "</td>";
+            foreach (var item in AcceptedList)
+            {
+                AcceptedC++;
+                if (AcceptedC > 1)
+                {
+                    table += "<tr><td></td><td></td>";
+                }
+                for (int i = 0; i < 2; i++)
+                {
+                    table += "<td>";
+                    if (item[i] != "")
+                    {
+                        table += item[i];
+
+                    }
+                    table += "</td>";
+                }
+                table += "</tr>";
+            }
+           
+            table += "<tr><td>Rejected trucks</td>";
+            table += "<td>" + CounterR.ToString() + "</td>";
+            foreach (var item in RejectedList)
+            {
+                RejectedC++;
+                if (RejectedC > 1)
+                {
+                    table += "<tr><td></td><td></td>";
+                }
+                for (int i = 0; i < 2; i++)
+                {
+                    table += "<td>";
+                    if (item[i] != "")
+                    {
+                            table += item[i];
+
+                    }
+                    table += "</td>";
+                }
+                table += "</tr>";
+            }
+            table += "<tr><td>Accepted mass</td>";
+            if (AcceptedList.Count() > 2)
+            {
+                table += "<td>" + TotalMas.ToString() + "</td>";
+            }
+            else
+            {
+                table += "<td>0</td>";
+            }
+            foreach (var item in TotalMasList)
+            {
+                MassC++;
+                if (MassC > 1)
+                {
+                    table += "<tr><td></td><td></td>";
+                }
+                for (int i = 0; i < 2; i++)
+                {
+                    table += "<td>";
+                    if (item[i] != "")
+                    {
+                        table += item[i];
+
+                    }
+                    table += "</td>";
+                }
+                table += "</tr>";
+            }
             
             table += "</table>";
             return table;
@@ -141,23 +324,42 @@ namespace RoadIt.Controllers
 
         public static string GenerateTablePlants1(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
-            var table = "<h3>Examples of plants, mixtures, temperatures</h3>";
+            string table = "";
+            table = "<h3>Examples of plants, mixtures, temperatures</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-
             table += "<tr><th>Plants</th><th>Full name</th></tr>";
-            table += "<tr><td></td><td></td></tr>";
-            
+
+            foreach (var item in ListValue)
+            {
+                table += "<tr>";
+                for (int i = 0; i < 2; i++)
+                {
+                    table += "<td>";
+                    if (item[i] != "")
+                    {
+                        table += item[i];
+                    }
+                    table += "</td>";
+                }
+                table += "<tr>";
+            }
             table += "</table>";
             return table;
         }
 
         public static string GenerateTablePlants2(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
-            var table = "<h3>Examples of plants, mixtures, temperatures</h3>";
+            string table = "";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-
             table += "<tr><th>Mixtures</th><th>Temperature Range</th></tr>";
-            table += "<tr><td></td><td></td></tr>";
+
+            foreach (var item in ListValue)
+            {
+                table += "<tr>";
+                table += "<td>" + item[0] + "</td>";
+                table += "<td>" + item[1] + "°C - " + item[2] + "°C";
+                table += "</tr>";
+            }
 
             table += "</table>";
             return table;
