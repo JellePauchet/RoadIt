@@ -18,12 +18,13 @@ namespace RoadIt.Controllers
             ViewData["tableSpec"] = GenerateTableSpecifications(SpecArray);
             ViewData["tableTransport"] = GenerateTableTransport(TransportList,SpecArray);
             ViewData["tableTotal"] = GenerateTableTotal(TotalList);
-            ViewData["tablePlant"] = GenerateTablePlants1(PlantList);
-            ViewData["tableMix"] = GenerateTablePlants2(MixtureList);
+            ViewData["tablePlant"] = GenerateTablePlants(PlantList);
+            ViewData["tableMix"] = GenerateTableMixture(MixtureList);
             return View();
         }
 
-        //variabelen
+        #region variabelen
+
         public static List<string[]> TransportList = new List<string[]>();
         public static List<string[]> TotalList = new List<string[]>();
         public static List<string[]> PlantList = new List<string[]>();
@@ -35,14 +36,13 @@ namespace RoadIt.Controllers
         public static List<List<string>> RejectedList = new List<List<string>>();
         public static List<List<string>> TotalMasList = new List<List<string>>();
         public static int TotalMas = 0;
+        #endregion
 
-        
-        //setters
+        #region setters
         public static void SetTransportList(List<string[]> input) 
         {
             TransportList = null;
-            TransportList = input;
-            
+            TransportList = input; 
         }
 
         public static void SetTotalList(List<string[]> input)
@@ -68,6 +68,7 @@ namespace RoadIt.Controllers
             SpecArray = null;
             SpecArray = input;
         }
+        #endregion
 
         public  ManagerController()
         {}
@@ -81,6 +82,7 @@ namespace RoadIt.Controllers
             SetSpecArray(Specs);
         }
 
+        #region Counters
         public static void CountersReset()
         {
             AcceptedList.Clear();
@@ -148,6 +150,7 @@ namespace RoadIt.Controllers
             }
         
         }
+
         public static void CountTotalMas(string CentralName, int Mass)
         {
             int counter = 0;
@@ -174,8 +177,9 @@ namespace RoadIt.Controllers
                 TotalMasList.Add(list);
             }
         }
+        #endregion
 
-
+        #region Generators
         public string GenerateTableSpecifications(string[] ArraySpec) //RoadId nog toevoegen aan view
         {
             string table = "";
@@ -196,13 +200,12 @@ namespace RoadIt.Controllers
             string table = "";
             table += "<h3>Transport specifications</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr><th></th><th>Truck ID</th><th>Plant ID</th><th>Mixture</th><th>Mass(tons)</th><th>Temp.</th><th>Finisher ID</th><th>LocationFinisher</th><th>Accepted</th></tr>";
+            table += "<tr onClick='showTable1C()'><th></th><th>Truck ID</th><th>Plant ID</th><th>Mixture</th><th>Mass(tons)</th><th>Temp.</th><th>Finisher ID</th><th>LocationFinisher</th><th>Accepted</th></tr>";
 
-            
             int counter = 1;
             foreach (var item in ListValueTruck)
             {
-                table += "<tr>";
+                table += "<tr class='hide hideH tableRow1'>";
                 table += "<td>" + counter + "</td>";
                 counter++;
                 for (int i = 0; i < 7; i++)
@@ -210,7 +213,14 @@ namespace RoadIt.Controllers
                     table += "<td>";
                     if (item[i] != "")
                     {
-                        table += item[i];
+                        if (i == 4)
+                        {
+                            table += "<span style='color:red;'>" + item[i] + "</span>";
+                        }
+                        else
+                        {
+                            table += item[i];
+                        }
                     }
                     table += "</td>";
                 }
@@ -226,7 +236,7 @@ namespace RoadIt.Controllers
                     }
                     else
                     {
-                        table += "Rejected";
+                        table += "<span style='color:red;'>Rejected</span>";
                         CounterR++;
                         CountRejected(item[1]);
                     }
@@ -324,16 +334,16 @@ namespace RoadIt.Controllers
             return table;
         }
 
-        public static string GenerateTablePlants1(List<string[]> ListValue) //RoadId nog toevoegen aan view
+        public static string GenerateTablePlants(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
             string table = "";
             table = "<h3>Examples of plants, mixtures, temperatures</h3>";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr><th>Plants</th><th>Full name</th></tr>";
+            table += "<tr onClick='showTable2()'><th>Plants</th><th>Full name</th></tr>";
 
             foreach (var item in ListValue)
             {
-                table += "<tr>";
+                table += "<tr class='hide tableRow2'>";
                 for (int i = 0; i < 2; i++)
                 {
                     table += "<td>";
@@ -343,21 +353,21 @@ namespace RoadIt.Controllers
                     }
                     table += "</td>";
                 }
-                table += "<tr>";
+                table += "</tr>";
             }
             table += "</table>";
             return table;
         }
 
-        public static string GenerateTablePlants2(List<string[]> ListValue) //RoadId nog toevoegen aan view
+        public static string GenerateTableMixture(List<string[]> ListValue) //RoadId nog toevoegen aan view
         {
             string table = "";
             table += "<table class='table table-bordered table-hover table-inverse table-responsive'>";
-            table += "<tr><th>Mixtures</th><th>Temperature Range</th></tr>";
+            table += "<tr onClick='showTable3()'><th>Mixtures</th><th>Temperature Range</th></tr>";
 
             foreach (var item in ListValue)
             {
-                table += "<tr>";
+                table += "<tr class='hide tableRow3'>";
                 table += "<td>" + item[0] + "</td>";
                 table += "<td>" + item[1] + "°C - " + item[2] + "°C";
                 table += "</tr>";
@@ -365,7 +375,7 @@ namespace RoadIt.Controllers
 
             table += "</table>";
             return table;
-        } 
-        
+        }
+        #endregion
     }
 }

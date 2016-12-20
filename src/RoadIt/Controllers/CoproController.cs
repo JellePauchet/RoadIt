@@ -25,9 +25,7 @@ namespace RoadIt.Controllers
                 ViewBag.error = "You are not authorized to view this page";
                 return RedirectToAction("Index", "Manager");
             }
-
         }
-
 
         public List<string[]> GetTransportList(sammegf117_roaditEntities entities)
         {
@@ -36,7 +34,7 @@ namespace RoadIt.Controllers
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
-                    if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["EndDate"].ToString()))
                     {
                         string[] arrayValue = new string[7];
                         arrayValue[0] = item.TruckLicensPlate;
@@ -51,7 +49,6 @@ namespace RoadIt.Controllers
                     }
                 }
             }
-
             return TransportList;
         }
 
@@ -62,7 +59,7 @@ namespace RoadIt.Controllers
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
-                    if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["EndDate"].ToString()))
                     {
                         string[] arrayValue = new string[2];
                         arrayValue[0] = item.CentralNameShort;
@@ -111,7 +108,7 @@ namespace RoadIt.Controllers
             {
                 if (item.RoadId.ToString() == Session["roadID"].ToString())
                 {
-                    if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["StopDate"].ToString()))
+                    if (DateTime.Parse(item.TruckTimeStamp.ToString()) >= DateTime.Parse(Session["StartDate"].ToString()) && DateTime.Parse(item.TruckTimeStamp.ToString()) <= DateTime.Parse(Session["EndDate"].ToString()))
                     {
                         arrayValue[0] = Session["roadID"].ToString();
                         arrayValue[1] = item.LayerType;

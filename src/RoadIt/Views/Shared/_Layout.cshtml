@@ -68,14 +68,9 @@
 			</div>
 		</div>
         <div id="main">
-            
-        
-
             <div id="section-to-print">
                 <div class="container" id="jspdf">
                     @RenderBody()
-                    <button type="button" class="btn btn-primary" id="cmd">generate PDF</button>
-                    <button class="btn btn-primary" onclick="myFunction()">Print this page</button>
                     <br />
                     <br />
                     <br />
@@ -85,7 +80,6 @@
 		        </div>
             </div>
 		</div>
-
         <div id="footer">
             <div class="navbar navbar-inverse navbar-fixed-bottom">
 			    <div class="container">
@@ -116,13 +110,9 @@
 		</div>
 	</div>
 
-      
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.20/pdfmake.js"></script>
 	<script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
     <script src="@Url.Content("~/Scripts/html2canvas.js")"></script>
@@ -140,16 +130,16 @@
         var toggle6 = 0;
         var toggle7 = 0;
 
-        function showTable1()
+        function showTable1C()
         {
             if(toggle1 == 0)
             {
-                $("#tableRow1").removeClass("hide");
+                $(".tableRow1").removeClass("hide");
                 toggle1 = 1;
             }
             else
             {
-                $("#tableRow1").addClass("hide");
+                $(".tableRow1").addClass("hide");
                 toggle1 = 0;
             }           
         }
@@ -158,12 +148,12 @@
         {
             if(toggle2 == 0)
             {
-                $("#tableRow2").removeClass("hide");
+                $(".tableRow2").removeClass("hide");
                 toggle2 = 1;
             }
             else
             {
-                $("#tableRow2").addClass("hide");
+                $(".tableRow2").addClass("hide");
                 toggle2 = 0;
             }           
         }
@@ -172,69 +162,13 @@
         {
             if(toggle3 == 0)
             {
-                $("#tableRow3").removeClass("hide");
+                $(".tableRow3").removeClass("hide");
                 toggle3 = 1;
             }
             else
             {
-                $("#tableRow3").addClass("hide");
+                $(".tableRow3").addClass("hide");
                 toggle3 = 0;
-            }           
-        }
-
-        function showTable4()
-        {
-            if(toggle4 == 0)
-            {
-                $("#tableRow4").removeClass("hide");
-                toggle4 = 1;
-            }
-            else
-            {
-                $("#tableRow4").addClass("hide");
-                toggle4 = 0;
-            }           
-        }
-
-        function showTable5()
-        {
-            if(toggle5 == 0)
-            {
-                $("#tableRow5").removeClass("hide");
-                toggle5 = 1;
-            }
-            else
-            {
-                $("#tableRow5").addClass("hide");
-                toggle5 = 0;
-            }           
-        }
-
-        function showTable6()
-        {
-            if(toggle6 == 0)
-            {
-                $("#tableRow6").removeClass("hide");
-                toggle6 = 1;
-            }
-            else
-            {
-                $("#tableRow6").addClass("hide");
-                toggle6 = 0;
-            }           
-        }
-
-        function showTable7()
-        {
-            if(toggle7 == 0)
-            {
-                $("#tableRow7").removeClass("hide");
-                toggle7 = 1;
-            }
-            else
-            {
-                $("#tableRow7").addClass("hide");
-                toggle7 = 0;
             }           
         }
 

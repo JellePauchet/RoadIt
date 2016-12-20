@@ -4,7 +4,6 @@
     ViewBag.Title = "ManagerReport";
 }
 
-
 <h2>Report</h2>
 
 @{
@@ -16,6 +15,10 @@
         @Html.Raw(ViewData["tableTotal"].ToString())
         @Html.Raw(ViewData["tablePlant"].ToString())
         @Html.Raw(ViewData["tableMix"].ToString())
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" id="cmd">generate PDF</button>
+            <button class="btn btn-default" onclick="myFunction()">Print this page</button>
+        </div>
     }
     else
     {

@@ -17,14 +17,13 @@ namespace RoadIt.Controllers
             return View();
         }
 
-
         [HttpPost]
-        public ActionResult SelectSection(int RoadSectionId, DateTime StartDate ,DateTime StopDate) 
+        public ActionResult SelectSection(int RoadSectionId, DateTime StartDate ,DateTime EndDate) 
         {
             var entities = new sammegf117_roaditEntities();
             Session["roadID"] = RoadSectionId;
             Session["StartDate"] = StartDate.Date.ToString("d");
-            Session["StopDate"] = StopDate.Date.ToString("d");
+            Session["EndDate"] = EndDate.Date.ToString("d");
             var roleId = Convert.ToInt32(Session["RoleId"]);
             var pageRef = "";
             switch (roleId)
@@ -69,8 +68,8 @@ namespace RoadIt.Controllers
             }
             option += "</select><br><br><br><br><p>Choose a start and stop date to form a period to search.</p>";
             option += "<p>Start date: <input type='date' id='StartDate' name='StartDate'></p><br/>";
-            option += "<p>Stop date: <input type='date' id='StopDate' name='StopDate'></p>";
-            option += "<input type='submit' Text='Submit'/>";
+            option += "<p>Stop date: <input type='date' id='EndDate' name='EndDate'></p>";
+            option += "<input class='btn btn-default' type='submit' Text='Submit'/>";
             
             return option;
         }

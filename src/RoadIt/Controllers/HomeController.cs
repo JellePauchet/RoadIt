@@ -21,14 +21,5 @@ namespace RoadIt.Controllers
             
             return View();
         }
-
-        /*[HttpPost]
-        public ActionResult Form(string txtInput)
-        {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
-            Session["test"] = txtInput;
-            return View("Index");
-        }*/
-
     }
 }

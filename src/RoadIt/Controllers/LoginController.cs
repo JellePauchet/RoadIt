@@ -17,9 +17,6 @@ namespace RoadIt.Controllers
         {
             entities = new sammegf117_roaditEntities();
             ViewBag.Error = Session["error"];
-
-            //Session["password"] = ("test").GetHashCode().ToString();
-
             return View();
         }
 
@@ -53,11 +50,6 @@ namespace RoadIt.Controllers
                         Session["RoleId"] = RoleIDList[i];
                         return RedirectToAction("Index", "RoadSelection");
                     }
-                    /*else
-                    {
-                        Session["error"] = "The given email or password is wrong";
-                        return RedirectToAction("Index", "Login");
-                    }*/
                 }
             }
             Session["error"] = "The given email or password is wrong";
