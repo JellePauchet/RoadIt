@@ -215,7 +215,14 @@ namespace RoadIt.Controllers
                     {
                         if (i == 4)
                         {
-                            table += "<span style='color:red;'>" + item[i] + "</span>";
+                            if (Convert.ToInt32(item[4]) <= Convert.ToInt32(ArraySpec[3]) || Convert.ToInt32(item[4]) >= Convert.ToInt32(ArraySpec[4]))
+                            {
+                                table += "<span style='color:red;'>" + item[i] + "</span>";
+                            }
+                            else
+                            {
+                                table += item[i];
+                            }
                         }
                         else
                         {
