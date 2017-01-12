@@ -45,7 +45,6 @@ namespace RoadIt.Controllers
                         arrayValue[4] = "";
                         arrayValue[5] = "";
                         arrayValue[6] = "";
-
                         TransportList.Add(arrayValue);
                     }
                 }

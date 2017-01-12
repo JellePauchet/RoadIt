@@ -206,7 +206,8 @@ namespace RoadIt.Controllers
             foreach (var item in ListValueTruck)
             {
                 table += "<tr class='hide hideH tableRow1'>";
-                table += "<td>" + counter + "</td>";
+                //table += "<td>" + counter + "</td>";
+                table += "<td><img src='https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl="+item[0]+"&amp;choe=UTF-8' alt='QR code'></td>";
                 counter++;
                 for (int i = 0; i < 7; i++)
                 {
